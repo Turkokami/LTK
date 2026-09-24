@@ -1,0 +1,308 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/**
+ * DESIGN SYSTEM — "the label is the law"
+ *
+ * Every technician in America reads a pesticide label daily. The label is this trade's most
+ * universal artifact: dense, regimented, legally binding, all-caps section headers, hairline
+ * precautionary panels, a strict three-tier signal-word hierarchy, and mono registration numbers.
+ *
+ * We build the interface from it. To an insider it reads as instant competence; to a sponsor's
+ * brand-safety review it reads as regulatory seriousness. See docs/DESIGN.md.
+ *
+ * Use the semantic tokens. Never a raw hex in a component.
+ */
+
+@layer base {
+  :root {
+    /* ground — label stock, cool bone. Deliberately not warm cream. */
+    --stock: #f0efe9;
+    --stock-2: #e6e5dd;
+    --paper: #fbfbf8;
+
+    /* ink */
+    --ink: #16171a;
+    --ink-2: #4a4d54;
+    --ink-3: #7b7f87;
+
+    /* rules — labels are built from hairlines, not shadows */
+    --rule: #c9c7bd;
+    --rule-strong: #16171a;
+
+    /* signal-word hierarchy. Meaning, not decoration.
+       DANGER  → the single most important thing on a page. Once per page. Never twice.
+       WARNING → regulatory / state-specific flags.
+       CAUTION → advisory, secondary.                                        */
+    --signal-danger: #d13a1f;
+    --signal-warning: #e0a013;
+    --signal-caution: #b9b096;
+
+    /* field green — verified credentials, licensed status, anything earned */
+    --field: #1f4d3d;
+    --field-2: #2f6b56;
+    --field-tint: #e3ebe6;
+
+    --focus: #1f4d3d;
+
+    --measure: 68ch;
+  }
+
+  * {
+    border-color: var(--rule);
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background: var(--stock);
+    color: var(--ink);
+    font-family: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
+    font-size: 1rem;
+    line-height: 1.55;
+    font-synthesis-weight: none;
+  }
+
+  /* Keyboard focus is always visible. Quality floor, CLAUDE.md 2.6. */
+  :where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
+    outline: 2px solid var(--focus);
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  /* ---------------------------------------------------------------- type scale */
+
+  /* Section eyebrows. The one place uppercase is permitted. CLAUDE.md §6. */
+  .eyebrow {
+    font-family: var(--font-mono), ui-monospace, monospace;
+    font-size: 0.6875rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+  }
+
+  .display {
+    font-family: var(--font-archivo), sans-serif;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.02;
+    font-size: clamp(2.25rem, 6vw, 4rem);
+  }
+
+  /*
+     Lede. The answer-first opening paragraph on pages that are an argument rather than a
+     verified claim — investor and partner pages. Reference pages use the QuickAnswer
+     component instead, which carries named attribution. Sized between display and body so
+     it reads as the opening of an argument, not as a pull quote.
+  */
+  .lede {
+    font-size: clamp(1.0625rem, 0.95rem + 0.55vw, 1.3125rem);
+    line-height: 1.5;
+    max-width: 62ch;
+    color: var(--ink-2);
+  }
+
+  .h2 {
+    font-family: var(--font-archivo), sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.018em;
+    line-height: 1.12;
+    font-size: clamp(1.4rem, 3vw, 2rem);
+  }
+
+  .h3 {
+    font-family: var(--font-archivo), sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    font-size: 1.125rem;
+  }
+
+  /* Long-form reference reads as a technical bulletin, not a blog post. */
+  .prose-bulletin {
+    font-family: var(--font-newsreader), Georgia, serif;
+    font-size: 1.0625rem;
+    line-height: 1.66;
+    max-width: var(--measure);
+    color: var(--ink-2);
+  }
+  .prose-bulletin p {
+    margin-bottom: 0.9rem;
+  }
+  .prose-bulletin strong {
+    color: var(--ink);
+    font-weight: 600;
+  }
+  .prose-bulletin a {
+    color: var(--field);
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+  }
+
+  .mono {
+    font-family: var(--font-mono), ui-monospace, monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.02em;
+  }
+
+  /* ------------------------------------------------------------ label system */
+
+  /* THE SIGNATURE. A precautionary-statement panel. One component, three jobs:
+     regulatory facts, verified credentials, methodology disclosure. */
+  .label-panel {
+    background: var(--paper);
+    border: 1px solid var(--rule-strong);
+  }
+
+  .label-bar {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.4rem 0.75rem;
+    background: var(--ink);
+    color: var(--stock);
+    font-family: var(--font-mono), monospace;
+    font-size: 0.6875rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  .label-bar--danger {
+    background: var(--signal-danger);
+  }
+  .label-bar--warning {
+    background: var(--signal-warning);
+    color: var(--ink);
+  }
+  .label-bar--field {
+    background: var(--field);
+  }
+
+  /* Rigid key/value grid, exactly as a label sets its precautionary block. */
+  .spec-row {
+    display: grid;
+    grid-template-columns: 11rem 1fr;
+    gap: 0.75rem;
+    padding: 0.5rem 0.75rem;
+    border-top: 1px solid var(--rule);
+    font-size: 0.875rem;
+  }
+  .spec-row:first-child {
+    border-top: none;
+  }
+  .spec-row > dt {
+    font-family: var(--font-mono), monospace;
+    font-size: 0.6875rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    padding-top: 0.15rem;
+  }
+  @media (max-width: 40rem) {
+    .spec-row {
+      grid-template-columns: 1fr;
+      gap: 0.15rem;
+    }
+  }
+
+  /* Registry sentinel — impossible to miss in dev, impossible to ship to prod. */
+  .registry-stub {
+    background: repeating-linear-gradient(
+      45deg,
+      #fff3cd,
+      #fff3cd 6px,
+      #ffe9a8 6px,
+      #ffe9a8 12px
+    );
+    border: 1px solid var(--signal-warning);
+    color: #6b4e00;
+    font-family: var(--font-mono), monospace;
+    font-size: 0.6875rem;
+    padding: 0.1rem 0.35rem;
+  }
+
+  /* ---------------------------------------------------------------- layout */
+
+  .shell {
+    width: 100%;
+    max-width: 76rem;
+    margin-inline: auto;
+    padding-inline: 1.25rem;
+  }
+
+  /* The datasheet frame: content column plus a persistent mono spec gutter. */
+  .datasheet {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 15rem;
+    gap: 2.5rem;
+  }
+  @media (max-width: 60rem) {
+    .datasheet {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+
+  .rule-t {
+    border-top: 1px solid var(--rule);
+  }
+  .rule-b {
+    border-bottom: 1px solid var(--rule);
+  }
+
+  /* ---------------------------------------------------------------- controls */
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.1rem;
+    font-family: var(--font-mono), monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border: 1px solid var(--ink);
+    background: var(--ink);
+    color: var(--stock);
+    transition: background 0.12s ease, color 0.12s ease;
+  }
+  .btn:hover {
+    background: var(--field);
+    border-color: var(--field);
+  }
+  .btn--ghost {
+    background: transparent;
+    color: var(--ink);
+  }
+  .btn--ghost:hover {
+    background: var(--ink);
+    color: var(--stock);
+  }
+
+  .badge-verified {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.1rem 0.4rem;
+    background: var(--field-tint);
+    color: var(--field);
+    border: 1px solid var(--field-2);
+    font-family: var(--font-mono), monospace;
+    font-size: 0.625rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+}

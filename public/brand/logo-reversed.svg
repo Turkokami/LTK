@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 64" role="img" aria-label="THRESHOLD">
+  <title>THRESHOLD</title>
+  <!-- Reversed lockup for dark grounds: label bars, OG cards, print. -->
+  <rect width="64" height="64" fill="#f0efe9"/>
+  <path d="M8 34 H56" stroke="#e0a013" stroke-width="3" stroke-dasharray="6 5" stroke-linecap="square"/>
+  <path d="M10 52 C22 52 26 42 34 30 C40 21 48 15 54 12"
+        fill="none" stroke="#16171a" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="31.5" cy="34" r="6" fill="#f0efe9"/>
+  <circle cx="31.5" cy="34" r="4" fill="#e0a013"/>
+  <text x="82" y="36" font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-weight="800"
+        font-size="30" letter-spacing="-0.8" fill="#f0efe9">THRESHOLD</text>
+  <path d="M82 45 H300" stroke="#4a4d54" stroke-width="1"/>
+  <text x="82" y="57" font-family="JetBrains Mono, ui-monospace, monospace"
+        font-size="10.5" letter-spacing="2.6" fill="#9aa0a8">PEST MANAGEMENT PROFESSIONALS</text>
+</svg>
