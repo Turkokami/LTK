@@ -63,12 +63,17 @@ export async function generateMetadata({
       `${d.name} careers`,
       d.name,
     ]),
-    description: pickDescription(d.summary, [
-      d.licensingNote,
-      'What the work involves, who licenses it, and the realistic route in from where you are now.',
-      'Who licenses it, and the realistic route in.',
-      'Plus where it leads next.',
-    ]),
+    description: pickDescription(
+      `What ${d.name.toLowerCase()} work involves, who licenses it, and how people get in.`,
+      [
+        `Plus state-by-state licensing, BLS pay data and a crew to ask in the ${site.discord.name}.`,
+        `Plus state-by-state licensing and BLS pay data, with a crew to ask on Discord.`,
+        'Plus state-by-state licensing, national pay data and where it leads next.',
+        'Plus state-by-state licensing and national pay data.',
+        'Plus state licensing and national pay data.',
+        'Plus licensing and pay data.',
+      ],
+    ),
     path: `/fields/${d.slug}/`,
   });
 }

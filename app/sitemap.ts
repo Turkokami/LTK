@@ -3,6 +3,7 @@ import { abs } from '@/lib/site.config';
 import { HUBS, FORUM_CATEGORIES, type HubId } from '@/lib/content/hubs';
 import { PUBLISHED_STATES } from '@/lib/content/states';
 import { DISCIPLINES } from '@/lib/content/disciplines';
+import { ACE_MODULES, ACE_PATH } from '@/lib/content/ace';
 
 /**
  * Segmented sitemaps — one per hub, plus a `core` segment.
@@ -47,7 +48,13 @@ export default async function sitemap({
       return [
         entry('/academy/', 0.9),
         entry('/academy/ceu/', 0.8),
-        entry('/academy/licensing/', 0.8),
+        // No /academy/licensing/ index page exists yet — state pages only. Add it back when it ships.
+        entry(ACE_PATH, 0.9),
+        entry(`${ACE_PATH}practice-test/`, 0.8),
+        entry(`${ACE_PATH}flashcards/`, 0.7),
+        entry(`${ACE_PATH}glossary/`, 0.7),
+        entry(`${ACE_PATH}library/`, 0.7),
+        ...ACE_MODULES.map((m) => entry(`${ACE_PATH}${m.slug}/`, 0.8)),
         // Geo layers 1 and 2. Only verified states ship — CLAUDE.md 2.5.
         ...PUBLISHED_STATES.flatMap((s) => [
           entry(`/academy/ceu/${s.slug}/`, 0.7),

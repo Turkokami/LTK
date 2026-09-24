@@ -212,6 +212,14 @@ Each `/fields/:field/` guide covers the job, who licenses it, state-by-state lic
 state records only, matched by `categoryPattern`) and a route into the Discord. `/trade/paths/`
 301s here.
 
+### ACE Prep (`/academy/ace/`)
+
+The Academy's study track for ESA's ACE exam, ported from the owner's standalone ACE Prep app
+(github.com/Turkokami/ACEPrepApp). Content lives in `lib/content/ace/`; the two copies do not
+sync. Podcast MP3s and slide-deck PDFs (~380MB) stay hosted on `ace-prep-app.vercel.app`
+(`ACE_MEDIA_BASE`) — do not copy them into this repo. Study material is stamped "Updated",
+never "Verified". Quiz, flashcards and video loader are client leaves; everything else is SSR.
+
 ---
 
 ## 8. Scoring

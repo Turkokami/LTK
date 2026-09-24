@@ -51,10 +51,14 @@ export const HUBS: Hub[] = [
     title: 'Licensing, CEUs and training',
     path: '/academy/',
     blurb:
-      'Licensing requirements and continuing-education rules for every state, plus exam prep and live sessions with certified entomologists.',
+      'ACE exam prep with practice tests and flashcards, licensing requirements and continuing-education rules for every state, plus group training in the Discord.',
     job: 'Acquisition. This is the front door and the largest traffic driver.',
     primaryEntity: 'Course / Event / FAQPage',
     spokes: [
+      { pattern: '/academy/ace/', label: 'ACE exam prep', count: 1, live: true },
+      { pattern: '/academy/ace/practice-test/', label: 'ACE practice test', count: 1, live: true },
+      { pattern: '/academy/ace/flashcards/', label: 'ACE flashcards', count: 1, live: true },
+      { pattern: '/academy/ace/:module/', label: 'ACE study modules', count: 11 },
       { pattern: '/academy/licensing/:state/', label: 'State licensing', count: 50 },
       { pattern: '/academy/ceu/:state/', label: 'State CEU requirements', count: 50 },
       { pattern: '/academy/exam-prep/:category/', label: 'Exam prep by category', count: 12 },

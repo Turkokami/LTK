@@ -22,6 +22,7 @@ export function QuickAnswer({
   fact,
   verifiedOn,
   reviewer,
+  stampLabel = 'Verified',
 }: {
   question: string;
   answer: ReactNode;
@@ -29,12 +30,16 @@ export function QuickAnswer({
   /** ISO date. Must equal the schema dateModified. */
   verifiedOn: string;
   reviewer: { name: string; credential?: string; href: string };
+  /** "Verified" for regulatory records; "Updated" for study material that is not a verified claim. */
+  stampLabel?: 'Verified' | 'Updated';
 }) {
   return (
     <div className="label-panel">
       <div className="label-bar">
         <span>Quick answer</span>
-        <span className="opacity-80">Verified {formatVerified(verifiedOn)}</span>
+        <span className="opacity-80">
+          {stampLabel} {formatVerified(verifiedOn)}
+        </span>
       </div>
 
       <div className="py-5 pl-[1.35rem] pr-5">

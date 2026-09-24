@@ -54,9 +54,9 @@ const none: Citability = {
 export const CONTRACTS: PageContract[] = [
   {
     pattern: '/',
-    primaryAction: 'Verify my licence',
-    actionHref: '/join/',
-    secondary: ["Find my state's rules"],
+    primaryAction: 'Join the Discord',
+    actionHref: 'site.discord.invite',
+    secondary: ['Explore the fields'],
     snippetShape: 'paragraph',
     shapeMarkup: 'Answer-first opening paragraph, self-contained, directly after the H1.',
     citability: { ...none, statedPosition: true },
@@ -169,6 +169,31 @@ export const CONTRACTS: PageContract[] = [
     snippetShape: 'paragraph',
     shapeMarkup: 'Thesis paragraph, self-contained.',
     citability: { ...none, quantifiedSourcedFact: true, statedPosition: true },
+  },
+  {
+    pattern: '/fields/:field/',
+    primaryAction: 'Ask on Discord',
+    actionHref: 'site.discord.invite',
+    secondary: ['State licensing cards → /academy/licensing/:state/'],
+    snippetShape: 'paragraph',
+    shapeMarkup: 'QuickAnswer paragraph; state licensing as a real <ul> of verified states.',
+    citability: {
+      quantifiedSourcedFact: true,
+      outboundPrimaryAuthority: true,
+      statedPosition: true,
+      firstPartyData: false,
+    },
+    notes: 'Pay figures come only from NATIONAL_BASELINE (BLS) and each links to its source.',
+  },
+  {
+    pattern: '/academy/ace/:module/',
+    primaryAction: 'Grade my answers',
+    actionHref: '#quiz',
+    secondary: ['Ask the study group (Discord)'],
+    snippetShape: 'list',
+    shapeMarkup: 'Must-know facts, exam triggers and field takeaways as real <ul> lists.',
+    citability: { ...none, statedPosition: true, firstPartyData: true },
+    notes: 'Content ported from the owner’s ACE Prep app; stamped "Updated", never "Verified".',
   },
 ];
 
