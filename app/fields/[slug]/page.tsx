@@ -18,6 +18,8 @@ import {
 import { PUBLISHED_STATES, getRegulatory } from '@/lib/content/states';
 import { NATIONAL_BASELINE, PEST_CONTROL_WORKERS } from '@/lib/content/salary';
 import { PayHighlight } from '@/components/ui/PayHighlight';
+import { Photo } from '@/components/ui/Photo';
+import { fieldPhotos } from '@/lib/content/photos';
 import { abs, ID, site } from '@/lib/site.config';
 import { EDITOR } from '@/lib/content/editorial';
 
@@ -101,6 +103,7 @@ export default async function FieldPage({
   const group = FIELD_GROUPS.find((g) => g.id === d.group);
   const from = routesInto(d.slug);
   const to = d.movesTo.map(getDiscipline).filter(Boolean) as Discipline[];
+  const photos = fieldPhotos(d.slug);
   const isPesticide = d.licensing === 'state-pesticide';
   const states = isPesticide ? stateMatches(d) : [];
 
@@ -142,6 +145,8 @@ export default async function FieldPage({
           </p>
           <h1 className="display mb-6 max-w-[22ch]">{d.name}</h1>
 
+          {photos ? <Photo photo={photos.hero} priority className="mb-8" /> : null}
+
           <QuickAnswer
             question={`What is ${d.name.toLowerCase()} work?`}
             answer={<>{d.summary}</>}
@@ -160,7 +165,12 @@ export default async function FieldPage({
           </div>
 
           <h2 className="h2 mb-3 mt-12">What the job is really like</h2>
-          <p className="prose-bulletin">{d.dayToDay}</p>
+          <div className="grid gap-6 md:grid-cols-[1.1fr_1fr] md:items-start">
+            <p className="prose-bulletin">{d.dayToDay}</p>
+            {photos ? (
+              <Photo photo={photos.work} aspect="aspect-[4/3]" caption="On the job." />
+            ) : null}
+          </div>
 
           <h2 className="h2 mb-3 mt-12">How people get in</h2>
           <p className="prose-bulletin">{d.routeIn}</p>

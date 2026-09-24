@@ -8,7 +8,7 @@ import { LabelBlock } from '@/components/label/LabelBlock';
 export const metadata: Metadata = pageMeta({
   title: 'How licence verification works',
   description:
-    'We check every posting member’s applicator licence against the issuing state register. What we ask for, what we store, what we publish, and what we never do with it.',
+    'We check every posting member’s applicator licence against the state register. What we ask for, what we store, what we publish, and what we never do with it.',
   path: '/about/verification/',
 });
 

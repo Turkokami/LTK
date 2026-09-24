@@ -6,6 +6,8 @@ import { Breadcrumbs } from '@/components/site/Breadcrumbs';
 import { QuickAnswer } from '@/components/ui/QuickAnswer';
 import { DiscordButton } from '@/components/community/Discord';
 import { PayHighlight } from '@/components/ui/PayHighlight';
+import { PhotoCredit } from '@/components/ui/Photo';
+import { ALL_FIELD_PHOTOS, fieldPhotos } from '@/lib/content/photos';
 import {
   DISCIPLINES,
   FIELD_GROUPS,
@@ -124,7 +126,26 @@ export default function FieldsPage() {
             <ul className="grid gap-3 md:grid-cols-2 lg:grid-cols-3">
               {fields.map((d) => (
                 <li key={d.slug}>
-                  <a href={`/fields/${d.slug}/`} className="card group flex h-full flex-col p-5">
+                  <a href={`/fields/${d.slug}/`} className="card group flex h-full flex-col overflow-hidden">
+                    {fieldPhotos(d.slug) ? (
+                      <span className="block aspect-[16/9] overflow-hidden border-b border-rule bg-stock2">
+                        <img
+                          src={fieldPhotos(d.slug)!.hero.src}
+                          alt=""
+                          width={fieldPhotos(d.slug)!.hero.width}
+                          height={fieldPhotos(d.slug)!.hero.height}
+                          loading="lazy"
+                          decoding="async"
+                          className="h-full w-full object-cover opacity-90 transition duration-300 group-hover:scale-[1.03] group-hover:opacity-100 motion-reduce:transition-none motion-reduce:group-hover:scale-100"
+                          style={
+                            fieldPhotos(d.slug)!.hero.position
+                              ? { objectPosition: fieldPhotos(d.slug)!.hero.position }
+                              : undefined
+                          }
+                        />
+                      </span>
+                    ) : null}
+                    <span className="flex flex-1 flex-col p-5">
                     <span className="h3 mb-2 group-hover:text-blood">{d.name}</span>
                     <span className="mb-4 text-sm leading-relaxed text-ink2">{d.summary}</span>
                     <span className="mt-auto flex items-center justify-between gap-3">
@@ -132,6 +153,7 @@ export default function FieldsPage() {
                       <span aria-hidden="true" className="text-blood">
                         &rarr;
                       </span>
+                    </span>
                     </span>
                   </a>
                 </li>
@@ -154,6 +176,17 @@ export default function FieldsPage() {
           </a>{' '}
           and help us write it up.
         </p>
+
+        <details id="photo-credits" className="mt-8 scroll-mt-24 text-xs text-ink3">
+          <summary className="cursor-pointer text-ink2 hover:text-ink">Photo credits</summary>
+          <ul className="mt-3 grid gap-1.5 sm:grid-cols-2">
+            {ALL_FIELD_PHOTOS.map((p) => (
+              <li key={p.src}>
+                <PhotoCredit photo={p} />
+              </li>
+            ))}
+          </ul>
+        </details>
       </div>
     </>
   );

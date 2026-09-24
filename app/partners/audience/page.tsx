@@ -25,7 +25,7 @@ import { LabelBlock } from '@/components/label/LabelBlock';
 export const metadata: Metadata = pageMeta({
   title: 'Who you would be reaching',
   description:
-    'Audience composition, verification rate and reach for sponsors — taken from analytics and verified member records, never estimated. Updated quarterly and dated.',
+    'Audience composition, verification rate and reach for sponsors, from analytics and verified member records, never estimated. Updated quarterly and dated.',
   path: '/partners/audience/',
 });
 

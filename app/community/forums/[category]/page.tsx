@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { pageMeta, fitDescription } from '@/lib/seo/metadata';
+import { pageMeta, pickDescription } from '@/lib/seo/metadata';
 import { buildGraph } from '@/lib/schema/graph';
 import { JsonLd } from '@/components/JsonLd';
 import { Breadcrumbs } from '@/components/site/Breadcrumbs';
@@ -32,9 +32,17 @@ export async function generateMetadata({
   if (!cat) return {};
   return pageMeta({
     title: `${cat.name} — forum`.slice(0, 60),
-    description: fitDescription(
-      `${cat.name} discussion between licence-verified pest management professionals.`,
-      ['Free to read, verified applicators post.', 'Field experience, not marketing.'],
+    // "&" is written as &amp; in the meta tag and counts against the 160-char budget.
+    description: pickDescription(
+      `${cat.name.replace(/&/g, 'and')} discussion between licence-verified pest management professionals.`,
+      [
+        'Free to read; verified applicators post. Field experience and real answers, never marketing.',
+        'Free to read, and only verified applicators can post. Field experience, not marketing copy.',
+        'Free to read; only verified applicators post. Field experience, never marketing.',
+        'Free to read, verified applicators post. Field experience, not marketing copy.',
+        'Free to read, verified applicators post. Field experience, not marketing.',
+        'Free to read; verified applicators post. Real field experience.',
+      ],
     ),
     path: `/community/forums/${cat.slug}/`,
     ogTemplate: 'thread',

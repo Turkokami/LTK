@@ -8,6 +8,7 @@ import { site } from '@/lib/site.config';
 import { ASSETS } from '@/lib/brand';
 import { DiscordButton, DiscordChannels } from '@/components/community/Discord';
 import { FIELD_GROUPS, fieldsInGroup } from '@/lib/content/disciplines';
+import { FIELD_GALLERY, fieldPhotos } from '@/lib/content/photos';
 
 export const metadata: Metadata = pageMeta({
   title: 'Every field in pest control, plus the LTK Discord',
@@ -113,8 +114,26 @@ export default function HomePage() {
           </div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {FIELD_GROUPS.map((g) => (
-              <div key={g.id} className="card p-5">
+            {FIELD_GROUPS.map((g) => {
+              const lead = fieldsInGroup(g.id)[0];
+              const photo = lead ? fieldPhotos(lead.slug)?.hero : undefined;
+              return (
+              <div key={g.id} className="card overflow-hidden">
+                {photo ? (
+                  <div className="aspect-[16/8] overflow-hidden border-b border-rule bg-stock2">
+                    <img
+                      src={photo.src}
+                      alt={photo.alt}
+                      width={photo.width}
+                      height={photo.height}
+                      loading="lazy"
+                      decoding="async"
+                      className="h-full w-full object-cover opacity-90"
+                      style={photo.position ? { objectPosition: photo.position } : undefined}
+                    />
+                  </div>
+                ) : null}
+                <div className="p-5">
                 <h3 className="eyebrow mb-3">{g.name}</h3>
                 <ul className="space-y-1.5">
                   {fieldsInGroup(g.id).map((d) => (
@@ -131,9 +150,58 @@ export default function HomePage() {
                     </li>
                   ))}
                 </ul>
+                </div>
               </div>
-            ))}
+              );
+            })}
           </div>
+          <p className="mt-4 text-xs text-ink3">
+            Some photos are placeholders from Wikimedia Commons &mdash;{' '}
+            <a href="/fields/#photo-credits" className="underline-offset-2 hover:text-ink hover:underline">
+              photo credits
+            </a>
+            .
+          </p>
+        </div>
+      </section>
+
+      {/* From the field — real jobs from the crew. */}
+      <section className="rule-b" aria-labelledby="from-the-field">
+        <div className="shell py-14">
+          <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
+            <div>
+              <p className="eyebrow mb-2">From the field</p>
+              <h2 id="from-the-field" className="h2 mb-2 max-w-[26ch]">
+                This is what the work actually looks like.
+              </h2>
+              <p className="max-w-[60ch] text-ink2">
+                Crawlspaces, wasp nests, swarm calls and a trailer full of traps &mdash; shots
+                from real jobs by the crew.
+              </p>
+            </div>
+            <DiscordButton variant="ghost">Share your shots on Discord</DiscordButton>
+          </div>
+          <ul className="grid grid-cols-2 gap-3 md:grid-cols-4">
+            {FIELD_GALLERY.map((p) => (
+              <li key={p.src}>
+                <figure className="group relative m-0 h-full overflow-hidden rounded-[var(--radius)] border border-rule bg-stock2">
+                  <img
+                    src={p.src}
+                    alt={p.alt}
+                    width={p.width}
+                    height={p.height}
+                    loading="lazy"
+                    decoding="async"
+                    className="aspect-[4/5] h-full w-full object-cover transition duration-300 group-hover:scale-[1.03] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
+                    style={p.position ? { objectPosition: p.position } : undefined}
+                  />
+                  <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent px-3 pb-2.5 pt-8 text-sm font-semibold text-ink">
+                    {p.caption}
+                  </figcaption>
+                </figure>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 

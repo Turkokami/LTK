@@ -7,7 +7,7 @@ import { Breadcrumbs } from '@/components/site/Breadcrumbs';
 export const metadata: Metadata = pageMeta({
   title: 'Editorial standards',
   description:
-    'How regulatory content here is researched, sourced, reviewed, dated and corrected. Read by search engines, sponsors and journalists — so it is written for all three.',
+    'How regulatory content here is researched, sourced, reviewed, dated and corrected. Read by search engines, sponsors and journalists, so it is written for all.',
   path: '/about/editorial-standards/',
 });
 
