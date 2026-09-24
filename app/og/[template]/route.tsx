@@ -1,5 +1,6 @@
 import { ImageResponse } from 'next/og';
-import { site } from '@/lib/site.config';
+import { site, abs } from '@/lib/site.config';
+import { HEX, ASSETS } from '@/lib/brand';
 
 /**
  * Self-hosted OG cards, generated per template.
@@ -18,25 +19,26 @@ import { site } from '@/lib/site.config';
 
 export const runtime = 'edge';
 
-const STOCK = '#f0efe9';
-const PAPER = '#fbfbf8';
-const INK = '#16171a';
-const RULE = '#c9c7bd';
-const FIELD = '#1f4d3d';
-const WARNING = '#e0a013';
+const STOCK = HEX.stock;
+const PAPER = HEX.paper;
+const INK = HEX.ink;
+const RULE = HEX.rule;
+const FIELD = HEX.field;
+const WARNING = HEX.warning;
+const DANGER = HEX.danger;
 
 /** Signal colour per template. Same hierarchy as the on-site label system. */
 const SIGNAL: Record<string, string> = {
-  default: INK,
+  default: DANGER,
   state: WARNING,
   thread: FIELD,
-  lab: INK,
-  wire: INK,
+  lab: DANGER,
+  wire: DANGER,
   partners: FIELD,
 };
 
 const EYEBROW: Record<string, string> = {
-  default: 'For licensed pest management professionals',
+  default: 'Pest pros helping pest pros',
   state: 'Academy · State reference',
   thread: 'Community · Verified members only',
   lab: 'Lab · Independent review',
@@ -54,8 +56,9 @@ export async function GET(
 
   const title = searchParams.get('t') ?? site.tagline;
   const stamp = searchParams.get('s') ?? '';
-  const bar = SIGNAL[key] ?? INK;
-  const barText = key === 'state' ? INK : STOCK;
+  const bar = SIGNAL[key] ?? DANGER;
+  // Dark text on the light grounds (warning, green), bone on blood red.
+  const barText = bar === DANGER ? INK : STOCK;
 
   return new ImageResponse(
     (
@@ -124,9 +127,15 @@ export async function GET(
             color: INK,
           }}
         >
-          <span style={{ fontWeight: 800, letterSpacing: -0.5 }}>{site.name}</span>
-          <span style={{ color: '#7b7f87', letterSpacing: 2, textTransform: 'uppercase', fontSize: 18 }}>
-            Verified · dated · sourced
+          <span style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={abs(ASSETS.mark)} width={64} height={64} style={{ borderRadius: 32 }} alt="" />
+            <span style={{ fontWeight: 800, letterSpacing: -0.5, textTransform: 'uppercase' }}>
+              {site.name}
+            </span>
+          </span>
+          <span style={{ color: HEX.ink3, letterSpacing: 2, textTransform: 'uppercase', fontSize: 18 }}>
+            Join us on Discord
           </span>
         </div>
       </div>

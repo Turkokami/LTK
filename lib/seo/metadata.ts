@@ -87,14 +87,12 @@ export function fitDescription(base: string, tails: string[] = [], min = 140, ma
  * Returns the first candidate that fits, or the shortest candidate if none do.
  */
 /**
- * The layout applies `%s · ${site.name}`. The separator plus spaces is 3 characters, and the
- * brand name length is read from config rather than hardcoded so a rename cannot silently
- * push every title on the site over budget.
- *
- * REGISTRY: R-01. If THRESHOLD does not clear trademark, the replacement name changes this
- * number and every generated title re-fits automatically.
+ * The layout applies `%s · ${site.shortName}`. The separator plus spaces is 3 characters, and the
+ * suffix length is read from config rather than hardcoded so a rename cannot silently push
+ * every title on the site over budget. The short name ("LTK") is used rather than the full
+ * "Licensed to Kill" because the full name would eat a third of every title's 60 characters.
  */
-export const TITLE_SUFFIX_LENGTH = 3 + site.name.length;
+export const TITLE_SUFFIX_LENGTH = 3 + site.shortName.length;
 
 export function fitTitle(candidates: string[], max = 60 - TITLE_SUFFIX_LENGTH): string {
   const fits = candidates.find((c) => c.length <= max);

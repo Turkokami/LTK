@@ -4,13 +4,16 @@ import { buildGraph } from '@/lib/schema/graph';
 import { JsonLd } from '@/components/JsonLd';
 import { Breadcrumbs } from '@/components/site/Breadcrumbs';
 import { getHub } from '@/lib/content/hubs';
+import { HubSpokes } from '@/components/site/HubSpokes';
+import { site } from '@/lib/site.config';
+import { DiscordButton, DiscordChannels } from '@/components/community/Discord';
 
 const HUB = getHub('community');
 
 export const metadata: Metadata = pageMeta({
   title: 'Forums, chapters and members',
   description:
-    'Forums, state chapters and a member directory for licence-verified pest management professionals. Open to read, verified applicators only to post.',
+    `Join the ${site.discord.name} for shop talk, pest ID help, the podcast and group training, plus forums and state chapters for licence-verified pest management pros.`,
   path: HUB.path,
 });
 
@@ -31,23 +34,29 @@ export default function Page() {
       <div className="shell pb-16">
         <p className="eyebrow mb-3">{HUB.eyebrow}</p>
         <h1 className="display mb-5 max-w-[18ch]">{HUB.title}</h1>
-        <p className="prose-bulletin mb-10">{HUB.blurb}</p>
+        <p className="lede mb-8">
+          The forums and chapters on this site are still being built. The community itself
+          isn&rsquo;t waiting &mdash; it&rsquo;s already talking every day in the {site.discord.name}.
+        </p>
+        <div className="mb-14 flex flex-wrap gap-3">
+          <DiscordButton size="lg">Jump into the Discord</DiscordButton>
+          <a href="/join/" className="btn btn--ghost btn--lg">
+            Get verified
+          </a>
+        </div>
 
-        <p className="eyebrow mb-4">What lives here</p>
-        <ul className="grid gap-px bg-rule md:grid-cols-2">
-          {HUB.spokes.map((s) => (
-            <li key={s.pattern} className="bg-paper p-4">
-              <p className="h3 mb-1">{s.label}</p>
-              <p className="mono text-ink3">
-                {s.pattern}
-                {s.count ? ` \u00b7 ${s.count === 'open' ? 'open-ended' : s.count + ' pages'}` : ''}
-              </p>
-            </li>
-          ))}
-        </ul>
+        <section aria-labelledby="discord-inside" className="mb-14">
+          <h2 id="discord-inside" className="h2 mb-2">
+            What you&rsquo;ll find in there
+          </h2>
+          <p className="mb-6 max-w-[60ch] text-ink2">
+            Real techs, real questions, fast answers. Bring a photo of that bug, a pricing question
+            or an exam you&rsquo;re dreading &mdash; somebody&rsquo;s been there.
+          </p>
+          <DiscordChannels />
+        </section>
 
-        {/* TODO: replace the route inventory above with real spoke listings as each ships.
-            The inventory is deliberately visible during the build so gaps stay obvious. */}
+        <HubSpokes hub={HUB} />
       </div>
     </>
   );

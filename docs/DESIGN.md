@@ -1,32 +1,29 @@
 # DESIGN.md
 
-## Direction: the label is the law
+## Direction: night route
 
-Every technician in America reads a pesticide label daily. It is this trade's most universal
-artifact and the source of its most repeated sentence. The interface is built from it.
-
-To an insider, label typography reads as instant competence. To a sponsor's brand-safety review,
-it reads as regulatory seriousness. Neither is available from a generic SaaS look.
-
-Deliberately **not**: warm cream + serif + terracotta, near-black + acid green, or broadsheet
-hairline columns. Those are AI-design defaults, and this brief has its own material to work from.
+The palette is lifted from the LTK badge (`public/brand/ltk-badge.jpg`): the smoky green-black
+behind it, the bone of the scope ring and lettering, and the blood red of the ribbon and the
+rat's ears. The label system (signal bars, spec grids) stays — it is still the right way to show
+regulatory facts — but it now sits on a dark ground, with soft 10px corners and cards instead of
+hairline tables. Copy is warm and plain-spoken: a crew talking, not a database describing itself.
 
 ## Tokens
 
-Defined in `app/globals.css`. **Never a raw hex in a component.**
+Defined in `app/globals.css`, documented in `lib/brand.ts`. **Never a raw hex in a component.**
 
 | Token | Value | Use |
 |---|---|---|
-| `--stock` | `#f0efe9` | Page ground. Label stock, cool bone — not warm cream. |
-| `--paper` | `#fbfbf8` | Panels, cards, header, footer. |
-| `--ink` | `#16171a` | Body text, label bars, primary buttons. |
-| `--rule` | `#c9c7bd` | Hairlines. Labels are built from rules, not shadows. **No box-shadows anywhere.** |
-| `--signal-danger` | `#d13a1f` | DANGER. The single most important thing on a page. **Once per page, never twice.** |
+| `--stock` | `#121412` | Page ground. The smoke behind the badge. |
+| `--paper` | `#1a1c1a` | Panels, cards, footer. |
+| `--ink` | `#efe8d6` | Bone. Primary text. |
+| `--rule` | `#34362f` | Borders — the scope's crosshair lines. |
+| `--signal-danger` | `#b3141f` | Blood red. Primary buttons (the Discord CTA) and the brand accent. |
+| `--blood-text` | `#f05a63` | Red used as text on dark: links, highlights, the eyebrow dot. |
 | `--signal-warning` | `#e0a013` | WARNING. Regulatory and state-specific flags. |
-| `--field` | `#1f4d3d` | Verified credentials, licensed status, anything earned. |
+| `--field` | `#6cc49a` | Licensed green. Verified credentials, anything earned. |
 
-The signal-word hierarchy carries meaning exactly as it does on a real label. If you want a
-second DANGER on a page, one of the two is not the most important thing on the page.
+All text pairings pass WCAG AA; contrast ratios are recorded in `lib/brand.ts`.
 
 ## Type
 

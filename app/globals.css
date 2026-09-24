@@ -3,49 +3,54 @@
 @tailwind utilities;
 
 /**
- * DESIGN SYSTEM — "the label is the law"
+ * DESIGN SYSTEM — "night route"
  *
- * Every technician in America reads a pesticide label daily. The label is this trade's most
- * universal artifact: dense, regimented, legally binding, all-caps section headers, hairline
- * precautionary panels, a strict three-tier signal-word hierarchy, and mono registration numbers.
- *
- * We build the interface from it. To an insider it reads as instant competence; to a sponsor's
- * brand-safety review it reads as regulatory seriousness. See docs/DESIGN.md.
+ * The palette is lifted from the LTK badge: the smoky green-black behind it, the bone of the
+ * scope ring and the lettering, and the blood red of the ribbon and the rat's ears. The label
+ * system (signal bars, spec grids) survives from the first build because it is still the right
+ * way to show regulatory facts — it just lives on a dark ground now. See docs/DESIGN.md.
  *
  * Use the semantic tokens. Never a raw hex in a component.
  */
 
 @layer base {
   :root {
-    /* ground — label stock, cool bone. Deliberately not warm cream. */
-    --stock: #f0efe9;
-    --stock-2: #e6e5dd;
-    --paper: #fbfbf8;
+    color-scheme: dark;
 
-    /* ink */
-    --ink: #16171a;
-    --ink-2: #4a4d54;
-    --ink-3: #7b7f87;
+    /* ground — the smoke behind the badge */
+    --stock: #121412;
+    --stock-2: #232522;
+    --paper: #1a1c1a;
 
-    /* rules — labels are built from hairlines, not shadows */
-    --rule: #c9c7bd;
-    --rule-strong: #16171a;
+    /* ink — bone, from the scope ring and lettering */
+    --ink: #efe8d6;
+    --ink-2: #c7c0ae;
+    --ink-3: #948e80;
+
+    /* rules — the scope's crosshair lines */
+    --rule: #34362f;
+    --rule-strong: #4a4a42;
 
     /* signal-word hierarchy. Meaning, not decoration.
-       DANGER  → the single most important thing on a page. Once per page. Never twice.
+       DANGER  → blood red. Primary actions and the brand accent.
        WARNING → regulatory / state-specific flags.
        CAUTION → advisory, secondary.                                        */
-    --signal-danger: #d13a1f;
+    --signal-danger: #b3141f;
+    --signal-danger-hover: #d11a27;
     --signal-warning: #e0a013;
     --signal-caution: #b9b096;
 
-    /* field green — verified credentials, licensed status, anything earned */
-    --field: #1f4d3d;
-    --field-2: #2f6b56;
-    --field-tint: #e3ebe6;
+    /* red used as text on dark grounds */
+    --blood-text: #f05a63;
 
-    --focus: #1f4d3d;
+    /* licensed green — verified credentials, licensed status, anything earned */
+    --field: #6cc49a;
+    --field-2: #4f9f7b;
+    --field-tint: #1c2b24;
 
+    --focus: #f0c75e;
+
+    --radius: 10px;
     --measure: 68ch;
   }
 
@@ -58,7 +63,11 @@
   }
 
   body {
-    background: var(--stock);
+    background-color: var(--stock);
+    background-image:
+      radial-gradient(60rem 40rem at 85% -10%, rgba(179, 20, 31, 0.10), transparent 60%),
+      radial-gradient(50rem 35rem at -10% 20%, rgba(239, 232, 214, 0.04), transparent 60%);
+    background-attachment: fixed;
     color: var(--ink);
     font-family: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
     font-size: 1rem;
@@ -88,11 +97,23 @@
 
   /* Section eyebrows. The one place uppercase is permitted. CLAUDE.md §6. */
   .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
     font-family: var(--font-mono), ui-monospace, monospace;
     font-size: 0.6875rem;
     letter-spacing: 0.16em;
     text-transform: uppercase;
     color: var(--ink-3);
+  }
+  /* The red dot in the scope. Decorative — the text carries the meaning. */
+  .eyebrow::before {
+    content: '';
+    width: 0.4rem;
+    height: 0.4rem;
+    border-radius: 999px;
+    background: var(--blood-text);
+    flex: none;
   }
 
   .display {
@@ -147,7 +168,7 @@
     font-weight: 600;
   }
   .prose-bulletin a {
-    color: var(--field);
+    color: var(--blood-text);
     text-underline-offset: 3px;
     text-decoration-thickness: 1px;
   }
@@ -165,6 +186,8 @@
   .label-panel {
     background: var(--paper);
     border: 1px solid var(--rule-strong);
+    border-radius: var(--radius);
+    overflow: hidden;
   }
 
   .label-bar {
@@ -268,28 +291,83 @@
   .btn {
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
-    padding: 0.6rem 1.1rem;
-    font-family: var(--font-mono), monospace;
-    font-size: 0.75rem;
-    letter-spacing: 0.1em;
+    justify-content: center;
+    gap: 0.55rem;
+    padding: 0.7rem 1.2rem;
+    font-family: var(--font-archivo), sans-serif;
+    font-weight: 700;
+    font-size: 0.875rem;
+    letter-spacing: 0.04em;
     text-transform: uppercase;
-    border: 1px solid var(--ink);
-    background: var(--ink);
-    color: var(--stock);
-    transition: background 0.12s ease, color 0.12s ease;
+    border: 1px solid var(--signal-danger);
+    border-radius: 8px;
+    background: var(--signal-danger);
+    color: var(--ink);
+    transition: background 0.12s ease, border-color 0.12s ease, color 0.12s ease;
   }
   .btn:hover {
-    background: var(--field);
-    border-color: var(--field);
+    background: var(--signal-danger-hover);
+    border-color: var(--signal-danger-hover);
   }
   .btn--ghost {
     background: transparent;
+    border-color: var(--rule-strong);
     color: var(--ink);
   }
   .btn--ghost:hover {
-    background: var(--ink);
-    color: var(--stock);
+    background: var(--stock-2);
+    border-color: var(--ink-3);
+  }
+  .btn--lg {
+    padding: 0.95rem 1.6rem;
+    font-size: 1rem;
+  }
+
+  /* ---------------------------------------------------------------- cards */
+
+  .card {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    transition: border-color 0.12s ease, background 0.12s ease;
+  }
+  a.card:hover,
+  .card--link:hover {
+    border-color: var(--blood-text);
+    background: var(--stock-2);
+  }
+
+  /* The Discord band: the one CTA repeated on every page. */
+  .discord-band {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--rule-strong);
+    border-radius: calc(var(--radius) + 4px);
+    background:
+      radial-gradient(40rem 20rem at 100% 0%, rgba(179, 20, 31, 0.28), transparent 70%),
+      var(--paper);
+  }
+
+  /* Crosshair divider — the scope's horizontal line with its tick marks. */
+  .scope-rule {
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      var(--rule-strong) 15%,
+      var(--rule-strong) 85%,
+      transparent
+    );
+  }
+
+  .link {
+    color: var(--blood-text);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+  }
+  .link:hover {
+    color: var(--ink);
   }
 
   .badge-verified {
@@ -300,6 +378,7 @@
     background: var(--field-tint);
     color: var(--field);
     border: 1px solid var(--field-2);
+    border-radius: 4px;
     font-family: var(--font-mono), monospace;
     font-size: 0.625rem;
     letter-spacing: 0.1em;

@@ -190,20 +190,27 @@ Write from the technician's side of the screen.
 
 ## 7. The brand situation — read this before naming anything
 
-The parent brand in `lib/site.config.ts` is **PROVISIONAL**. It is a placeholder pending
-trademark clearance (`REGISTRY.md` R-01).
+**Owner decision, 2026-09-24:** the property is **LTK Community Hub** — Licensed to Kill — the
+same identity as the LTK Discord community and its badge logo (`public/brand/ltk-badge.jpg`).
+This supersedes the earlier THRESHOLD placeholder and the rule that confined "Licensed to Kill"
+to the Arena championship.
 
-**"Licensed to Kill" is not the parent brand.** It has three live collisions: an operating
-New Mexico pest control company using the name in commerce, the LTK creator-commerce platform
-which owns the acronym in search, and a heavily-defended film franchise — plus it is a
-brand-safety problem in every enterprise sponsorship conversation.
+- Full name comes from `site.name` (env `NEXT_PUBLIC_BRAND_NAME`). Short form `site.shortName`
+  ("LTK") is the `<title>` suffix, because the full name would eat a third of a 60-char title.
+- The owner's own mission text lives in `site.mission`. Quote it; do not paraphrase it.
+- The Discord invite (`site.discord.invite`) and LinkedIn (`site.social.linkedin`) are the only
+  social URLs. Every page should route people to the Discord — it is where the community lives.
+- The trademark collisions flagged in the audit (an operating New Mexico pest company, the
+  LikeToKnow.it "LTK" brand, the Bond franchise) are still open under `REGISTRY.md` R-01, which
+  is why `BRAND_STATUS` stays `PROVISIONAL` and the indexing gate stays shut.
 
-It survives as **the name of the Arena's flagship annual competition only**:
-`/arena/tournaments/licensed-to-kill-championship/`. The edge lands where it earns (culture,
-competition, identity) and stays off the contract, the invoice and the cap table.
+### Site structure: industry → fields → field guides
 
-Do not use "Licensed to Kill" or "LTK" as the site name, in the `<title>` of any page other
-than the championship pages, in schema `Organization.name`, or in any email address.
+`/fields/` is the spine: pest control as a whole, split into fields (general pest, termite,
+wildlife, exclusion, insulation, K9 …) grouped by `FIELD_GROUPS` in `lib/content/disciplines.ts`.
+Each `/fields/:field/` guide covers the job, who licenses it, state-by-state licensing (verified
+state records only, matched by `categoryPattern`) and a route into the Discord. `/trade/paths/`
+301s here.
 
 ---
 

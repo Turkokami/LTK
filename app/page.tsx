@@ -4,15 +4,35 @@ import { buildGraph } from '@/lib/schema/graph';
 import { JsonLd } from '@/components/JsonLd';
 import { HUBS } from '@/lib/content/hubs';
 import { WAVE_1, WAVE_2 } from '@/lib/content/states';
-import { LabelBlock } from '@/components/label/LabelBlock';
 import { site } from '@/lib/site.config';
+import { ASSETS } from '@/lib/brand';
+import { DiscordButton, DiscordChannels } from '@/components/community/Discord';
+import { FIELD_GROUPS, fieldsInGroup } from '@/lib/content/disciplines';
 
 export const metadata: Metadata = pageMeta({
-  title: 'Pest pros: forums, state CEU guides, tech reviews',
+  title: 'Every field in pest control, plus the LTK Discord',
   description:
-    'Licensing and CEU requirements for all 50 states, independent field reviews of the gear you actually use, and a private forum for working pest control pros.',
+    `Explore every field in pest control, from termite to wildlife to exclusion, with state licensing guides, then join the ${site.discord.name} for help and training.`,
   path: '/',
 });
+
+const STEPS = [
+  {
+    n: '01',
+    title: 'Pull up a chair on Discord',
+    body: 'Say hi, post the bug you can’t place, or just lurk for a week. Nobody checks your licence to join the conversation.',
+  },
+  {
+    n: '02',
+    title: 'Get your licence verified',
+    body: 'Verified members get a badge on every post, Arena entry, and a seat in the live training sessions.',
+  },
+  {
+    n: '03',
+    title: 'Level up with the crew',
+    body: 'Study groups for the exam, CEU nights, gear reviews from people who run it daily, and a league to see who’s sharpest.',
+  },
+];
 
 export default function HomePage() {
   const graph = buildGraph({
@@ -25,105 +45,209 @@ export default function HomePage() {
     <>
       <JsonLd graph={graph} />
 
-      {/* Hero. The thesis is the label: this is a regulated trade, and we treat it like one. */}
-      <section className="rule-b bg-paper">
-        <div className="shell grid gap-10 py-14 lg:grid-cols-[1.2fr_1fr] lg:py-20">
+      {/* Hero. The badge leads — this is a crew with an identity, not a directory. */}
+      <section className="rule-b">
+        <div className="shell grid items-center gap-12 py-14 lg:grid-cols-[1.25fr_1fr] lg:py-20">
           <div>
-            <p className="eyebrow mb-4">For licensed applicators only</p>
-            <h1 className="display max-w-[16ch]">
-              The community for people who actually do this work.
+            <p className="eyebrow mb-5">Pest pros helping pest pros</p>
+            <h1 className="display max-w-[15ch]">
+              Every field in pest control. One crew.
             </h1>
 
             {/* Answer-first. CLAUDE.md 2.3 — this paragraph must stand alone out of context. */}
-            <p className="prose-bulletin mt-6">
-              {site.name} is a professional community for licensed pest management technicians,
-              route managers and owner-operators. Members get state-by-state licensing and CEU
-              guidance, independent field reviews of equipment and software, live sessions with
-              board-certified entomologists, and a competitive league built for people who take
-              the craft seriously. Membership is free for verified working professionals.
+            <p className="lede mt-6">
+              {site.name} is a community for the whole pest control industry &mdash; general
+              pest, termite, wildlife, exclusion, insulation and every field in between. Learn what
+              each job really involves and what your state requires, then join the conversation
+              in our Discord: shop talk, pest ID help, the podcast and group training.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
-              <a href="/join/" className="btn">
-                Verify my licence
-              </a>
-              <a href="/academy/" className="btn btn--ghost">
-                Find my state&rsquo;s rules
+              <DiscordButton size="lg">Join the Discord &mdash; it&rsquo;s free</DiscordButton>
+              <a href="/fields/" className="btn btn--ghost btn--lg">
+                Explore the fields
               </a>
             </div>
 
-            <p className="mono mt-6 text-ink3">
-              Connect, compete, level up &mdash; in that order.
+            <p className="mt-6 text-sm text-ink3">
+              Already hanging out with us?{' '}
+              <a href="/join/" className="link">
+                Get your licence verified
+              </a>{' '}
+              to unlock posting and the Arena.
             </p>
           </div>
 
-          {/* Proof strip as a label panel. Nulls render honestly until REGISTRY R-17 lands. */}
-          <LabelBlock
-            title="Membership at a glance"
-            signal="field"
-            meta="Updated monthly"
-            specs={[
-              { label: 'Verified members', value: null },
-              { label: 'States covered', value: '50 · licensing and CEU' },
-              { label: 'Advisory board', value: null },
-              { label: 'CEU hours delivered', value: null },
-              { label: 'Cost to join', value: 'Free for verified professionals' },
-            ]}
-          >
-            Every posting member&rsquo;s licence is checked against the state register before they
-            can post. That is the whole difference between this and a Facebook group.{' '}
-            <a href="/about/verification/" className="text-field underline underline-offset-2">
-              How verification works
-            </a>
-          </LabelBlock>
+          <div className="relative mx-auto w-full max-w-[22rem]">
+            {/* Soft red glow behind the badge, like the dot in the scope. */}
+            <div
+              aria-hidden="true"
+              className="absolute inset-6 rounded-full bg-danger opacity-25 blur-3xl"
+            />
+            <img
+              src={ASSETS.mark}
+              alt={`${site.name} badge: a rat framed in a rifle scope above a ribbon reading Licensed to Kill`}
+              width={396}
+              height={396}
+              className="relative w-full rounded-full ring-1 ring-ruleStrong"
+            />
+          </div>
         </div>
       </section>
 
-      {/* The single most useful control on the site: pick your state. */}
+      {/* The industry map: Pest control → fields. The spine of the site. */}
       <section className="rule-b">
-        <div className="shell py-12">
+        <div className="shell py-14">
+          <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
+            <div>
+              <p className="eyebrow mb-2">Pest control, field by field</p>
+              <h2 className="h2 mb-2 max-w-[26ch]">It&rsquo;s not one job. It&rsquo;s fourteen.</h2>
+              <p className="max-w-[60ch] text-ink2">
+                Each field has its own regulator, its own skills and its own route in. Pick one to
+                see what the work is really like and what it takes to get licensed.
+              </p>
+            </div>
+            <a href="/fields/" className="btn btn--ghost">
+              See every field
+            </a>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {FIELD_GROUPS.map((g) => (
+              <div key={g.id} className="card p-5">
+                <h3 className="eyebrow mb-3">{g.name}</h3>
+                <ul className="space-y-1.5">
+                  {fieldsInGroup(g.id).map((d) => (
+                    <li key={d.slug}>
+                      <a
+                        href={`/fields/${d.slug}/`}
+                        className="group flex items-center justify-between gap-3 font-semibold hover:text-blood"
+                      >
+                        <span>{d.name}</span>
+                        <span aria-hidden="true" className="text-blood opacity-60 group-hover:opacity-100">
+                          &rarr;
+                        </span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* What the Discord is actually for. The community's centre of gravity. */}
+      <section className="rule-b">
+        <div className="shell py-14">
+          <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
+            <div>
+              <p className="eyebrow mb-2">Inside the {site.discord.name}</p>
+              <h2 className="h2 max-w-[24ch]">Where the crew hangs out between stops.</h2>
+            </div>
+            <DiscordButton variant="ghost">Take a look inside</DiscordButton>
+          </div>
+          <DiscordChannels />
+        </div>
+      </section>
+
+      {/* How it works — three plain steps instead of a feature matrix. */}
+      <section className="rule-b">
+        <div className="shell py-14">
+          <p className="eyebrow mb-2">How it works</p>
+          <h2 className="h2 mb-8">Show up, get verified, get better.</h2>
+          <ol className="grid gap-3 md:grid-cols-3">
+            {STEPS.map((s) => (
+              <li key={s.n} className="card p-6">
+                <p className="mono mb-3 text-blood">{s.n}</p>
+                <p className="h3 mb-2">{s.title}</p>
+                <p className="text-sm leading-relaxed text-ink2">{s.body}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      {/* The single most useful control on the reference side: pick your state. */}
+      <section className="rule-b">
+        <div className="shell py-14">
           <p className="eyebrow mb-2">Start here</p>
-          <h2 className="h2 mb-1">Licensing and CEU rules for your state</h2>
-          <p className="prose-bulletin mb-6">
-            Every state runs its own applicator scheme &mdash; different categories, different
-            exams, different renewal cycles, different accepted CEU formats. We publish each one
-            separately, verify it against the issuing agency, and date it.
+          <h2 className="h2 mb-2">What does your state actually require?</h2>
+          <p className="mb-6 max-w-[62ch] text-ink2">
+            Every state runs its own licensing &mdash; different categories, exams, renewal cycles
+            and CEU rules. We check each one against the state agency and date it, so you
+            don&rsquo;t have to dig through a PDF from 2014.
           </p>
 
-          <ul className="grid grid-cols-2 gap-px bg-rule sm:grid-cols-3 lg:grid-cols-5">
+          <ul className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-5">
             {[...WAVE_1, ...WAVE_2].map((s) => (
               <li key={s.code}>
                 <a
                   href={`/academy/ceu/${s.slug}/`}
-                  className="flex items-baseline justify-between bg-paper px-3 py-3 hover:bg-fieldTint"
+                  className="card flex items-baseline justify-between px-4 py-3"
                 >
-                  <span className="text-sm">{s.name}</span>
+                  <span className="text-sm font-medium">{s.name}</span>
                   <span className="mono text-ink3">{s.code}</span>
                 </a>
               </li>
             ))}
           </ul>
 
-          <p className="mono mt-4 text-ink3">
-            Remaining states publish as each record is verified. See{' '}
-            <a href="/academy/" className="text-field underline underline-offset-2">
-              the Academy
-            </a>
-            .
+          <p className="mt-4 text-sm text-ink3">
+            More states go up as each one is verified. Don&rsquo;t see yours? Ask in the{' '}
+            <a href={site.discord.invite} target="_blank" rel="noopener noreferrer" className="link">
+              Discord
+            </a>{' '}
+            &mdash; someone there has probably renewed in it.
           </p>
         </div>
       </section>
 
-      {/* Hub grid. Each card states the hub's job, not a slogan. */}
+      {/* Who we are — in the owner's own words (site.mission). */}
+      <section className="rule-b">
+        <div className="shell grid items-center gap-10 py-14 lg:grid-cols-[auto_1fr]">
+          <img
+            src={ASSETS.mark}
+            alt=""
+            width={200}
+            height={200}
+            className="mx-auto hidden rounded-full ring-1 ring-ruleStrong lg:block"
+          />
+          <div>
+            <p className="eyebrow mb-2">Who we are</p>
+            <h2 className="h2 mb-4 max-w-[28ch]">More than just another industry forum.</h2>
+            {site.mission.map((para) => (
+              <p key={para.slice(0, 24)} className="mb-4 max-w-[68ch] text-ink2">
+                {para}
+              </p>
+            ))}
+            <div className="mt-6 flex flex-wrap gap-3">
+              <DiscordButton>Join the Discord</DiscordButton>
+              <a
+                href={site.social.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn--ghost"
+              >
+                Follow LTK on LinkedIn
+                <span className="sr-only">(opens in a new tab)</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Hub grid. Each card says what you get, in plain words. */}
       <section>
-        <div className="shell py-12">
-          <p className="eyebrow mb-6">Eight places to go</p>
-          <ul className="grid gap-px bg-rule md:grid-cols-2">
+        <div className="shell py-14">
+          <p className="eyebrow mb-2">Around the site</p>
+          <h2 className="h2 mb-8">Everything else we&rsquo;re building.</h2>
+          <ul className="grid gap-3 md:grid-cols-2">
             {HUBS.map((hub) => (
               <li key={hub.id}>
-                <a href={hub.path} className="group block h-full bg-paper p-5 hover:bg-stock2">
+                <a href={hub.path} className="card group block h-full p-6">
                   <p className="eyebrow mb-2">{hub.eyebrow}</p>
-                  <h3 className="h3 mb-2 group-hover:text-field">{hub.title}</h3>
+                  <h3 className="h3 mb-2 group-hover:text-blood">{hub.title}</h3>
                   <p className="text-sm leading-relaxed text-ink2">{hub.blurb}</p>
                 </a>
               </li>

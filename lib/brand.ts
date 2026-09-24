@@ -25,82 +25,89 @@ export interface Swatch {
 
 export const PALETTE: Swatch[] = [
   {
-    name: 'Label stock',
-    hex: '#f0efe9',
+    name: 'Night route',
+    hex: '#121412',
     token: '--stock',
-    use: 'Page ground. The cool bone of a printed pesticide label — deliberately not warm cream.',
+    use: 'Page ground. The smoky green-black behind the LTK badge — lifted straight from the banner.',
   },
   {
-    name: 'Label stock, second pull',
-    hex: '#e6e5dd',
+    name: 'Night route, lit',
+    hex: '#232522',
     token: '--stock-2',
     use: 'Hover ground on cards and list rows.',
   },
   {
-    name: 'Fresh sheet',
-    hex: '#fbfbf8',
+    name: 'Crawlspace',
+    hex: '#1a1c1a',
     token: '--paper',
-    use: 'Panels, header, footer, table bodies.',
+    use: 'Panels, cards, header, footer, table bodies.',
   },
   {
-    name: 'Label black',
-    hex: '#16171a',
+    name: 'Bone',
+    hex: '#efe8d6',
     token: '--ink',
-    use: 'Body text, signal bars, primary action.',
-    contrast: '15.1:1 on Label stock — AAA',
+    use: 'Primary text. The cream of the badge ring and the "LICENSED" lettering.',
+    contrast: '15.1:1 on Night route — AAA',
   },
   {
-    name: 'Second read',
-    hex: '#4a4d54',
+    name: 'Old bone',
+    hex: '#c7c0ae',
     token: '--ink-2',
-    use: 'Long-form body. Lighter than primary so headings still lead.',
-    contrast: '7.9:1 on Label stock — AAA',
+    use: 'Long-form body. A step down so headings still lead.',
+    contrast: '10.2:1 on Night route — AAA',
   },
   {
-    name: 'Fine print',
-    hex: '#7b7f87',
+    name: 'Dust',
+    hex: '#948e80',
     token: '--ink-3',
-    use: 'Spec keys, eyebrows, metadata. Never for anything a reader must act on.',
-    contrast: '4.6:1 on Label stock — AA',
+    use: 'Metadata and captions. Never for anything a reader must act on.',
+    contrast: '5.3:1 on Crawlspace — AA',
   },
   {
-    name: 'Hairline',
-    hex: '#c9c7bd',
+    name: 'Scope line',
+    hex: '#34362f',
     token: '--rule',
-    use: 'Every border on the site. Labels are built from rules, not shadows — there are no box-shadows in this system.',
+    use: 'Borders. The thin crosshair lines of the scope.',
   },
   {
-    name: 'DANGER',
-    hex: '#d13a1f',
+    name: 'Blood red',
+    hex: '#b3141f',
     token: '--signal-danger',
-    use: 'The single most important thing on a page. One per page. Never two.',
-    contrast: '5.3:1 on Fresh sheet — AA',
+    use: 'Primary actions and the brand accent — the red of the badge ribbon and the rat’s ears.',
+    contrast: 'Bone text on it — 6.0:1',
+  },
+  {
+    name: 'Red dot',
+    hex: '#f05a63',
+    token: '--blood-text',
+    use: 'Red used AS text on dark grounds — links, highlights, the scope’s dot.',
+    contrast: '5.2:1 on Crawlspace — AA',
   },
   {
     name: 'WARNING',
     hex: '#e0a013',
     token: '--signal-warning',
-    use: 'Regulatory and state-specific flags. Also the threshold line in the brand mark.',
-    contrast: 'Used as a ground with Label black text — 8.6:1',
+    use: 'Regulatory and state-specific flags.',
+    contrast: 'Used as a ground with Night route text — 8.1:1',
   },
   {
-    name: 'Field green',
-    hex: '#1f4d3d',
+    name: 'Licensed green',
+    hex: '#6cc49a',
     token: '--field',
-    use: 'Verified credentials, licensed status, anything earned. The only "positive" colour in the system.',
-    contrast: '9.8:1 on Label stock — AAA',
+    use: 'Verified credentials, licensed status, anything earned.',
+    contrast: '8.2:1 on Crawlspace — AAA',
   },
   {
-    name: 'Field green, light',
-    hex: '#2f6b56',
+    name: 'Licensed green, deep',
+    hex: '#4f9f7b',
     token: '--field-2',
-    use: 'Borders on verified badges, hover on field-green surfaces.',
+    use: 'Borders on verified badges.',
   },
   {
-    name: 'Field tint',
-    hex: '#e3ebe6',
+    name: 'Licensed tint',
+    hex: '#1c2b24',
     token: '--field-tint',
-    use: 'Verified badge ground, state-list hover.',
+    use: 'Verified badge ground.',
   },
 ];
 
@@ -110,34 +117,32 @@ export function swatch(token: string): Swatch | undefined {
 
 /** Hex values for contexts that cannot read CSS custom properties: OG generation, SVG, email. */
 export const HEX = {
-  stock: '#f0efe9',
-  stock2: '#e6e5dd',
-  paper: '#fbfbf8',
-  ink: '#16171a',
-  ink2: '#4a4d54',
-  ink3: '#7b7f87',
-  rule: '#c9c7bd',
-  danger: '#d13a1f',
+  stock: '#121412',
+  stock2: '#232522',
+  paper: '#1a1c1a',
+  ink: '#efe8d6',
+  ink2: '#c7c0ae',
+  ink3: '#948e80',
+  rule: '#34362f',
+  danger: '#b3141f',
+  bloodText: '#f05a63',
   warning: '#e0a013',
-  field: '#1f4d3d',
+  field: '#6cc49a',
 } as const;
 
 /**
- * Brand assets. The mark is the IPM action threshold — a dashed threshold line with a
- * population curve crossing it. See docs/BRAND.md for why, and for the one rule that matters:
- * the dashed mark is for display sizes, the solid-line favicon variant is for everything
- * under ~32px.
+ * Brand assets. The mark is the LTK badge: the rat in the scope with the "Licensed to Kill"
+ * ribbon. Cropped from the owner-supplied banner (public/brand/ltk-banner.jpg), which is only
+ * ~200px tall — swap in a high-resolution original when one exists.
  */
 export const ASSETS = {
-  /** Square mark, dashed threshold. Display use. */
-  mark: '/brand/mark.svg',
-  /** Square mark, solid threshold, heavier strokes. Anything small. */
-  favicon: '/brand/favicon.svg',
-  /** Horizontal lockup, mark + wordmark + descriptor rule. */
-  logo: '/brand/logo.svg',
-  /** Same lockup for dark grounds. */
-  logoReversed: '/brand/logo-reversed.svg',
+  /** Square badge. Header, hero, cards. */
+  mark: '/brand/ltk-badge.jpg',
+  /** Small raster favicon. */
+  favicon: '/brand/favicon-64.png',
+  /** Full-width banner with the smoky background. */
+  banner: '/brand/ltk-banner.jpg',
   /** Raster for the schema ImageObject node. Must be square and ≥ 1200px. */
-  logoRaster: '/brand/logo-1200.png',
+  logoRaster: '/brand/logo-1200.jpg',
   appleTouchIcon: '/brand/apple-touch-icon.png',
 } as const;

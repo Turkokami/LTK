@@ -1,5 +1,7 @@
-import { site, BRAND_STATUS } from '@/lib/site.config';
+import { site } from '@/lib/site.config';
 import { HUBS } from '@/lib/content/hubs';
+import { ASSETS } from '@/lib/brand';
+import { DiscordButton } from '@/components/community/Discord';
 
 const TRUST = [
   { href: '/about/', label: 'About' },
@@ -14,33 +16,46 @@ const TRUST = [
 const COMMERCIAL = [
   { href: '/partners/', label: 'Sponsorship' },
   { href: '/partners/audience/', label: 'Who our members are' },
-  { href: '/partners/media-kit/', label: 'Media kit' },
   { href: '/investors/', label: 'Investors' },
 ];
 
 export function SiteFooter() {
   return (
-    <footer className="rule-t mt-20 bg-paper">
-      <div className="shell grid gap-8 py-10 md:grid-cols-4">
+    <footer className="rule-t mt-16 bg-paper">
+      <div className="shell grid gap-10 py-12 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
         <div>
-          <div className="font-sans text-base font-extrabold tracking-tight">{site.name}</div>
-          <p className="mono mt-2 max-w-[26ch] text-ink3">{site.tagline}</p>
-          {BRAND_STATUS === 'PROVISIONAL' ? (
-            <p className="registry-stub mt-3 inline-block">
-              R-01 brand name provisional
-            </p>
-          ) : null}
+          <div className="flex items-center gap-3">
+            <img src={ASSETS.mark} alt="" width={56} height={56} className="rounded-full" />
+            <div className="font-sans text-lg font-extrabold uppercase tracking-tight">
+              {site.name}
+            </div>
+          </div>
+          <p className="mt-3 max-w-[32ch] text-sm text-ink2">{site.tagline}</p>
+          <div className="mt-5 flex flex-wrap gap-2">
+            <DiscordButton variant="ghost">Hang out on Discord</DiscordButton>
+            <a
+              href={site.social.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn--ghost"
+            >
+              LinkedIn
+              <span className="sr-only">(opens in a new tab)</span>
+            </a>
+          </div>
         </div>
 
-        <FooterCol title="Hubs" links={HUBS.map((h) => ({ href: h.path, label: h.eyebrow }))} />
-        <FooterCol title="Trust" links={TRUST} />
+        <FooterCol title="Explore" links={HUBS.map((h) => ({ href: h.path, label: h.title }))} />
+        <FooterCol title="How we work" links={TRUST} />
         <FooterCol title="Partners" links={COMMERCIAL} />
       </div>
 
       <div className="rule-t">
         <div className="shell mono flex flex-wrap justify-between gap-3 py-4 text-ink3">
-          <span>© {new Date().getFullYear()} {site.name}</span>
-          <span>For licensed pest management professionals</span>
+          <span>
+            © {new Date().getFullYear()} {site.name}
+          </span>
+          <span>Built by and for pest management pros</span>
         </div>
       </div>
     </footer>
@@ -57,10 +72,10 @@ function FooterCol({
   return (
     <nav aria-label={title}>
       <h2 className="eyebrow mb-3">{title}</h2>
-      <ul className="space-y-1.5">
+      <ul className="space-y-2">
         {links.map((l) => (
           <li key={l.href}>
-            <a href={l.href} className="text-sm text-ink2 hover:text-ink">
+            <a href={l.href} className="text-sm text-ink2 transition-colors hover:text-blood">
               {l.label}
             </a>
           </li>

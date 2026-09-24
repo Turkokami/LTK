@@ -5,6 +5,7 @@ import { site, abs } from '@/lib/site.config';
 import { ASSETS } from '@/lib/brand';
 import { SiteHeader } from '@/components/site/Header';
 import { SiteFooter } from '@/components/site/Footer';
+import { DiscordBand } from '@/components/community/Discord';
 
 /**
  * Type pairing (docs/DESIGN.md):
@@ -39,19 +40,19 @@ export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
   viewportFit: 'cover',
-  themeColor: '#16171a',
+  themeColor: '#121412',
 };
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: 'Pest control pros: forums, state CEU guides & tech reviews',
-    template: `%s · ${site.name}`,
+    default: 'Pest control pros: Discord, state CEU guides & tech reviews',
+    template: `%s · ${site.shortName}`,
   },
   description: site.description,
   alternates: { canonical: abs('/') },
   icons: {
-    icon: [{ url: ASSETS.favicon, type: 'image/svg+xml' }],
+    icon: [{ url: ASSETS.favicon, type: 'image/png' }],
     apple: ASSETS.appleTouchIcon,
   },
 };
@@ -62,12 +63,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="min-h-screen antialiased">
         <a
           href="#main"
-          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:bg-ink focus:px-3 focus:py-2 focus:text-stock"
+          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded focus:bg-ink focus:px-3 focus:py-2 focus:text-stock"
         >
           Skip to content
         </a>
         <SiteHeader />
         <main id="main">{children}</main>
+        {/* Every page ends with the invite. The Discord is where the community lives today. */}
+        <div className="shell mt-16">
+          <DiscordBand />
+        </div>
         <SiteFooter />
       </body>
     </html>

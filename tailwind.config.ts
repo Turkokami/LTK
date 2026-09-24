@@ -17,6 +17,8 @@ const config: Config = {
         ink3: 'var(--ink-3)',
         rule: 'var(--rule)',
         danger: 'var(--signal-danger)',
+        blood: 'var(--blood-text)',
+        ruleStrong: 'var(--rule-strong)',
         warning: 'var(--signal-warning)',
         field: 'var(--field)',
         field2: 'var(--field-2)',

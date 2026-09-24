@@ -5,7 +5,11 @@ const nextConfig = {
   trailingSlash: true, // URL policy: canonical form has a trailing slash. See CLAUDE.md 2.7.
   async redirects() {
     // Routes never change silently. If a route must move, its 301 lands in the SAME commit.
-    return [];
+    return [
+      // Career routes became the Fields hub (2026-09-24), before first indexation.
+      { source: '/trade/paths/', destination: '/fields/', permanent: true },
+      { source: '/trade/paths/:slug/', destination: '/fields/:slug/', permanent: true },
+    ];
   },
   async headers() {
     return [

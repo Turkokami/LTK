@@ -4,6 +4,8 @@ import { buildGraph } from '@/lib/schema/graph';
 import { JsonLd } from '@/components/JsonLd';
 import { Breadcrumbs } from '@/components/site/Breadcrumbs';
 import { getHub } from '@/lib/content/hubs';
+import { site } from '@/lib/site.config';
+import { DiscordButton } from '@/components/community/Discord';
 
 const HUB = getHub('about');
 
@@ -85,6 +87,26 @@ export default function AboutPage() {
       <div className="shell pb-16">
         <p className="eyebrow mb-3">Trust</p>
         <h1 className="display mb-5 max-w-[16ch]">Who runs this and how it works</h1>
+        <div className="card mb-10 p-6">
+          <p className="eyebrow mb-3">About {site.shortName}</p>
+          {site.mission.map((para) => (
+            <p key={para.slice(0, 24)} className="mb-3 max-w-[70ch] text-ink2">
+              {para}
+            </p>
+          ))}
+          <div className="mt-4 flex flex-wrap gap-3">
+            <DiscordButton>Join the Discord</DiscordButton>
+            <a
+              href={site.social.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn--ghost"
+            >
+              LinkedIn
+              <span className="sr-only">(opens in a new tab)</span>
+            </a>
+          </div>
+        </div>
         <p className="prose-bulletin mb-10">
           This site publishes regulatory guidance that people act on and reviews that influence
           real purchase decisions. Everything about how that gets made — sourcing, review,
@@ -92,11 +114,11 @@ export default function AboutPage() {
           than assumed. If something below is vague, that is a defect and we want to hear about it.
         </p>
 
-        <ul className="grid gap-px bg-rule md:grid-cols-2">
+        <ul className="grid gap-3 md:grid-cols-2">
           {pages.map((p) => (
             <li key={p.href}>
-              <a href={p.href} className="group block h-full bg-paper p-5 hover:bg-stock2">
-                <h2 className="h3 mb-2 group-hover:text-field">{p.title}</h2>
+              <a href={p.href} className="card group block h-full p-5">
+                <h2 className="h3 mb-2 group-hover:text-blood">{p.title}</h2>
                 <p className="text-sm leading-relaxed text-ink2">{p.blurb}</p>
               </a>
             </li>

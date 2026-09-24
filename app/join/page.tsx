@@ -4,6 +4,8 @@ import { buildGraph } from '@/lib/schema/graph';
 import { JsonLd } from '@/components/JsonLd';
 import { Breadcrumbs } from '@/components/site/Breadcrumbs';
 import { LabelBlock } from '@/components/label/LabelBlock';
+import { site } from '@/lib/site.config';
+import { DiscordButton } from '@/components/community/Discord';
 
 export const metadata: Metadata = pageMeta({
   title: 'Join — verified pest management professionals only',
@@ -46,7 +48,15 @@ export default function JoinPage() {
           </p>
 
           {/* TODO(R-10): verification form. Server action, no client-side licence handling. */}
-          <p className="mono mt-8 text-ink3">Verification opens with the founding cohort.</p>
+          <div className="card mt-8 p-6">
+            <p className="eyebrow mb-2">While you wait</p>
+            <p className="h3 mb-2">Verification opens with the founding cohort.</p>
+            <p className="mb-5 text-sm leading-relaxed text-ink2">
+              You don&rsquo;t need to wait to join in. Hop into the {site.discord.name} now &mdash;
+              founding members there get first crack at verification when it opens.
+            </p>
+            <DiscordButton>Join the Discord now</DiscordButton>
+          </div>
         </div>
 
         <LabelBlock

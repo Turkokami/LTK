@@ -35,8 +35,53 @@ export type Regime =
   | 'contractor-or-trade'
   | 'none-or-varies';
 
+/** How the fields are grouped on /fields/. Editorial grouping, not a regulatory one. */
+export type FieldGroup = 'structural' | 'wildlife' | 'building' | 'outdoor' | 'specialty' | 'business';
+
+export const FIELD_GROUPS: { id: FieldGroup; name: string; blurb: string }[] = [
+  {
+    id: 'structural',
+    name: 'Structural pest control',
+    blurb: 'The routes most people start on — inside homes, businesses and the buildings around them.',
+  },
+  {
+    id: 'wildlife',
+    name: 'Wildlife and birds',
+    blurb: 'Vertebrates, not insects. Different animals, different rules, and usually a different regulator.',
+  },
+  {
+    id: 'building',
+    name: 'Exclusion and building work',
+    blurb: 'Keeping pests out for good, and fixing the damage they left behind.',
+  },
+  {
+    id: 'outdoor',
+    name: 'Outdoor and public health',
+    blurb: 'Lawns, landscapes and the mosquito programmes that protect whole neighbourhoods.',
+  },
+  {
+    id: 'specialty',
+    name: 'Detection',
+    blurb: 'Finding what the eye misses — with a trained nose on the other end of the leash.',
+  },
+  {
+    id: 'business',
+    name: 'Running the business',
+    blurb: 'Where a lot of techs end up: owning the trucks instead of driving one.',
+  },
+];
+
 export interface Discipline {
   slug: string;
+  /** Which group the field sits in on /fields/. */
+  group: FieldGroup;
+  /**
+   * Matches this field against the category names in VERIFIED state records, so a field page
+   * can say "in Texas this is licensed as ..." using the state's own words. Only ever matches
+   * real, verified category names — never used to invent one. Omit where the mapping is not
+   * clean (bed bugs usually sit inside general household, but not by name).
+   */
+  categoryPattern?: RegExp;
   name: string;
   /** One sentence, plain, for someone who has never heard of it. */
   summary: string;
@@ -65,6 +110,8 @@ export interface Discipline {
 export const DISCIPLINES: Discipline[] = [
   {
     slug: 'general-pest',
+    group: 'structural',
+    categoryPattern: /general|household/i,
     name: 'General pest control',
     summary: 'Routine prevention and treatment of household and commercial pests — ants, roaches, spiders, rodents, stored product pests.',
     licensing: 'state-pesticide',
@@ -78,6 +125,8 @@ export const DISCIPLINES: Discipline[] = [
   },
   {
     slug: 'termite-wdo',
+    group: 'structural',
+    categoryPattern: /termite|wood/i,
     name: 'Termite and wood-destroying organisms',
     summary: 'Inspection, treatment and reporting on termites, wood-boring beetles and decay fungi — including the inspection reports that real estate transactions depend on.',
     licensing: 'state-pesticide',
@@ -91,6 +140,7 @@ export const DISCIPLINES: Discipline[] = [
   },
   {
     slug: 'wildlife-control',
+    group: 'wildlife',
     name: 'Wildlife control',
     summary: 'Removal, exclusion and damage management for raccoons, squirrels, bats, snakes, birds and other vertebrates.',
     licensing: 'state-wildlife',
@@ -103,6 +153,7 @@ export const DISCIPLINES: Discipline[] = [
   },
   {
     slug: 'falconry-abatement',
+    group: 'wildlife',
     name: 'Falconry-based bird abatement',
     summary: 'Using trained raptors to move nuisance bird populations off landfills, vineyards, resorts, airports and distribution centres.',
     licensing: 'federal-and-state-wildlife',
@@ -115,6 +166,7 @@ export const DISCIPLINES: Discipline[] = [
   },
   {
     slug: 'bird-abatement',
+    group: 'wildlife',
     name: 'Bird management and exclusion',
     summary: 'Netting, spikes, wire, shock track, deterrents and clean-up for pest birds on commercial and industrial structures.',
     licensing: 'none-or-varies',
@@ -127,6 +179,7 @@ export const DISCIPLINES: Discipline[] = [
   },
   {
     slug: 'k9-detection',
+    group: 'specialty',
     name: 'K9 detection',
     summary: 'Handler and dog teams scent-detecting bed bugs, termites, rodents or invasive species — used where visual inspection is unreliable or too slow.',
     licensing: 'trade-certification',
@@ -139,6 +192,7 @@ export const DISCIPLINES: Discipline[] = [
   },
   {
     slug: 'exclusion',
+    group: 'building',
     name: 'Exclusion and pest-proofing',
     summary: 'Sealing structures so pests cannot get in — the permanent fix that chemical treatment alone never achieves.',
     licensing: 'contractor-or-trade',
@@ -151,6 +205,7 @@ export const DISCIPLINES: Discipline[] = [
   },
   {
     slug: 'insulation',
+    group: 'building',
     name: 'Insulation and attic restoration',
     summary: 'Removing contaminated insulation, decontaminating and re-insulating after infestation — usually sold alongside exclusion.',
     licensing: 'contractor-or-trade',
@@ -162,6 +217,8 @@ export const DISCIPLINES: Discipline[] = [
   },
   {
     slug: 'fumigation',
+    group: 'structural',
+    categoryPattern: /fumig/i,
     name: 'Fumigation',
     summary: 'Whole-structure and commodity fumigation — the highest-consequence work in the industry.',
     licensing: 'state-pesticide',
@@ -174,6 +231,7 @@ export const DISCIPLINES: Discipline[] = [
   },
   {
     slug: 'commercial-food-safety',
+    group: 'structural',
     name: 'Commercial and food safety',
     summary: 'Pest management inside audited environments — food processing, warehousing, pharmaceutical, hospitality — against AIB, SQF, BRC and similar schemes.',
     licensing: 'state-pesticide',
@@ -186,6 +244,8 @@ export const DISCIPLINES: Discipline[] = [
   },
   {
     slug: 'mosquito-vector',
+    group: 'outdoor',
+    categoryPattern: /mosquito|vector|public health/i,
     name: 'Mosquito and vector control',
     summary: 'Managing mosquitoes, ticks and other disease vectors — in private service and in public health districts.',
     licensing: 'state-pesticide',
@@ -197,6 +257,8 @@ export const DISCIPLINES: Discipline[] = [
   },
   {
     slug: 'turf-ornamental',
+    group: 'outdoor',
+    categoryPattern: /lawn|turf|ornamental/i,
     name: 'Turf and ornamental',
     summary: 'Pest, weed and disease management on lawns, trees and landscape plantings.',
     licensing: 'state-pesticide',
@@ -209,6 +271,7 @@ export const DISCIPLINES: Discipline[] = [
   },
   {
     slug: 'bed-bugs',
+    group: 'structural',
     name: 'Bed bug work',
     summary: 'Inspection, heat remediation and chemical treatment for bed bugs — in housing, hospitality, healthcare and transport.',
     licensing: 'state-pesticide',
@@ -220,6 +283,7 @@ export const DISCIPLINES: Discipline[] = [
   },
   {
     slug: 'ownership',
+    group: 'business',
     name: 'Ownership and running a branch',
     summary: 'Running the business — routing, hiring, pricing, compliance, and eventually selling or not selling to a roll-up.',
     licensing: 'state-pesticide',
@@ -232,6 +296,20 @@ export const DISCIPLINES: Discipline[] = [
     communityIsTheNetwork: false,
   },
 ];
+
+export function fieldsInGroup(group: FieldGroup): Discipline[] {
+  return DISCIPLINES.filter((d) => d.group === group);
+}
+
+/** Plain-words label for each licensing regime. */
+export const REGIME_LABEL: Record<Regime, string> = {
+  'state-pesticide': 'State pesticide licence',
+  'state-wildlife': 'State wildlife permit',
+  'federal-and-state-wildlife': 'Federal + state wildlife',
+  'trade-certification': 'Third-party certification',
+  'contractor-or-trade': 'Contractor / trade licence',
+  'none-or-varies': 'Varies — often none',
+};
 
 export function getDiscipline(slug: string): Discipline | undefined {
   return DISCIPLINES.find((d) => d.slug === slug);

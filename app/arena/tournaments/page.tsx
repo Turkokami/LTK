@@ -6,15 +6,15 @@ import { JsonLd } from '@/components/JsonLd';
 import { Breadcrumbs } from '@/components/site/Breadcrumbs';
 import { LabelBlock } from '@/components/label/LabelBlock';
 import { TOURNAMENTS } from '@/lib/content/arena';
+import { site } from '@/lib/site.config';
 
 /**
  * Arena → Tournaments.
  *
- * "Licensed to Kill" survives here and ONLY here, as the name of the championship — not as the
- * parent brand. That demotion is the resolution to the three-way collision flagged in the audit
- * (an operating NM pest company, the LikeToKnow.it "LTK" creator-commerce brand, and the Bond
- * franchise). As an event name inside a differently-named property it is a joke the industry
- * gets; as a company name it was a trademark problem and a search problem at once.
+ * The championship carries the parent brand's name (site.championship). The owner chose
+ * Licensed to Kill as the parent brand on 2026-09-24; the trademark collisions flagged in the
+ * audit (an operating NM pest company, the LikeToKnow.it "LTK" brand, the Bond franchise) are
+ * still open under REGISTRY R-01.
  *
  * R-18 BLOCKS THE FIRST REAL TOURNAMENT. Skill-based contest rules vary by state and prize
  * promotions can trip lottery statutes where consideration, chance and prize all coincide.
@@ -62,8 +62,9 @@ export default function TournamentsPage() {
             fun, in that order.
           </p>
           <LabelBlock title="The championship" signal="warning" meta="Annual">
-            The annual championship is called <strong>Licensed to Kill</strong>. It is the name of
-            the event, not the name of this organisation — and yes, that is deliberate.
+            The annual championship carries the crew&rsquo;s name: the{' '}
+            <strong>{site.championship.name}</strong>. Bragging rights, a belt-worthy title, and
+            a year of being the one everybody tags in the pest ID channel.
           </LabelBlock>
         </div>
 

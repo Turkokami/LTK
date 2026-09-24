@@ -2,6 +2,7 @@ import type { MetadataRoute } from 'next';
 import { abs } from '@/lib/site.config';
 import { HUBS, FORUM_CATEGORIES, type HubId } from '@/lib/content/hubs';
 import { PUBLISHED_STATES } from '@/lib/content/states';
+import { DISCIPLINES } from '@/lib/content/disciplines';
 
 /**
  * Segmented sitemaps — one per hub, plus a `core` segment.
@@ -35,6 +36,12 @@ export default async function sitemap({
   switch (id) {
     case 'core':
       return [entry('/', 1), entry('/join/', 0.8), entry('/investors/', 0.5)];
+
+    case 'fields':
+      return [
+        entry('/fields/', 0.9),
+        ...DISCIPLINES.map((d) => entry(`/fields/${d.slug}/`, 0.8)),
+      ];
 
     case 'academy':
       return [

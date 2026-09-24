@@ -10,8 +10,12 @@ export const BRAND_STATUS = (process.env.NEXT_PUBLIC_BRAND_STATUS ?? 'PROVISIONA
   | 'PROVISIONAL'
   | 'CLEARED';
 
-/** REGISTRY R-01. Placeholder until trademark clearance. */
-const BRAND_NAME = process.env.NEXT_PUBLIC_BRAND_NAME ?? 'THRESHOLD';
+/**
+ * Owner decision 2026-09-24: the property is LTK Community Hub — Licensed to Kill — matching the badge logo and
+ * the existing LTK Discord community. Trademark clearance (REGISTRY R-01) is still open, which is
+ * why BRAND_STATUS stays PROVISIONAL and the indexing gate below stays shut.
+ */
+const BRAND_NAME = process.env.NEXT_PUBLIC_BRAND_NAME ?? 'LTK Community Hub';
 
 /** REGISTRY R-03. Build fails against this value in production — see lib/utils.ts. */
 const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://example.com').replace(/\/$/, '');
@@ -42,20 +46,72 @@ export const INDEXABLE =
   !SITE_URL.includes('vercel.app');
 
 export const site = {
-  /** Parent brand. NOT "Licensed to Kill" — see CLAUDE.md §7. */
+  /** Parent brand. See CLAUDE.md §7. */
   name: BRAND_NAME,
+  shortName: 'LTK',
   /** REGISTRY R-02. */
   legalName: null as string | null,
   url: SITE_URL,
   locale: 'en-US',
 
-  tagline: 'The community for people who actually do this work.',
+  tagline: 'Pest pros helping pest pros. Pull up a chair.',
 
-  /** Used in meta descriptions and the Organization node. Audience-first, no filler. */
+  /** Used in meta descriptions and the Organization node. Condensed from the mission below. */
   description:
-    'A professional community for licensed pest management technicians and owner-operators. ' +
-    'State-by-state licensing and CEU guidance, independent field reviews, live sessions with ' +
-    'board-certified entomologists, and a competitive league.',
+    'Licensed To Kill (LTK) is a community for pest management professionals: a Discord ' +
+    'server, podcast, events and education connecting technicians, owners, manufacturers ' +
+    'and industry leaders.',
+
+  /** The owner's own words (2026-09-24). Used on the home page and About. Do not paraphrase. */
+  mission: [
+    'Licensed To Kill (LTK) is a community built for pest management professionals who want ' +
+      'more than just another industry forum. Through our Discord server, podcast, events, and ' +
+      'educational initiatives, we connect technicians, owners, manufacturers, and industry ' +
+      'leaders while creating opportunities to learn, network, and build lasting relationships.',
+    'From professional development to gaming tournaments and community outreach, LTK exists to ' +
+      'strengthen the pest control industry—one connection at a time.',
+  ],
+
+  /** Owner-supplied social profiles. Never add a guessed URL. */
+  social: {
+    linkedin: 'https://www.linkedin.com/in/ltk-licensed-to-kill-824690368/',
+  },
+
+  /**
+   * The LTK Discord — the live heart of the community. Every "come hang out" CTA on the site
+   * points here. Change the invite in this one place if it is ever rotated.
+   */
+  discord: {
+    invite: 'https://discord.com/invite/3DpNzdEtvs',
+    name: 'LTK Discord',
+    /** What actually happens in the server. Drives the Discord sections site-wide. */
+    channels: [
+      {
+        name: 'Shop talk',
+        blurb: 'Swap stories, war stories and workarounds with techs who run the same routes you do.',
+      },
+      {
+        name: 'Pest ID help',
+        blurb: 'Snap a photo, drop it in, and get a second (and third) set of eyes on it fast.',
+      },
+      {
+        name: 'The podcast',
+        blurb: 'Catch episodes as they drop, hang out in the live recordings, and pitch guests.',
+      },
+      {
+        name: 'Group training',
+        blurb: 'Study groups for the licensing exam, CEU sessions and hands-on technique walkthroughs.',
+      },
+      {
+        name: 'Business & sales',
+        blurb: 'Pricing, hiring, routing, marketing. Owners and managers comparing real numbers.',
+      },
+      {
+        name: 'And more',
+        blurb: 'Gear talk, job leads, rookie questions, and the occasional rodent meme.',
+      },
+    ],
+  },
 
   /**
    * The Arena's flagship competition. This is the ONLY place the LTK name is permitted.
@@ -77,13 +133,16 @@ export const site = {
 
   /** Brand mark. Square raster ≥1200px for the schema ImageObject node. See lib/brand.ts. */
   logo: {
-    path: '/brand/logo-1200.png',
+    path: '/brand/logo-1200.jpg',
     width: 1200,
     height: 1200,
   },
 
-  /** sameAs targets. Empty until R-03 resolves — never ship a guessed social URL. */
-  sameAs: [] as string[],
+  /** sameAs targets. Owner-supplied URLs only — never ship a guessed social URL. */
+  sameAs: [
+    'https://discord.com/invite/3DpNzdEtvs',
+    'https://www.linkedin.com/in/ltk-licensed-to-kill-824690368/',
+  ] as string[],
 
   /**
    * knowsAbout feeds the Organization node. These are the topical claims the entity makes,

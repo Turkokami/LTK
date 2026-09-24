@@ -6,6 +6,7 @@
  */
 
 export type HubId =
+  | 'fields'
   | 'academy'
   | 'community'
   | 'lab'
@@ -28,10 +29,22 @@ export interface Hub {
   /** Primary schema entity for spoke templates in this hub. */
   primaryEntity: string;
   /** Spoke route patterns. `:param` marks a dynamic segment. */
-  spokes: { pattern: string; label: string; count?: number | 'open' }[];
+  /** `live: true` marks a static spoke whose page has shipped, so hub indexes can link to it. */
+  spokes: { pattern: string; label: string; count?: number | 'open'; live?: boolean }[];
 }
 
 export const HUBS: Hub[] = [
+  {
+    id: 'fields',
+    eyebrow: 'Fields',
+    title: 'Every field in pest control',
+    path: '/fields/',
+    blurb:
+      'Pest control is fourteen trades sharing one customer. General pest, termite, wildlife, exclusion, insulation, K9 detection and more: what each job is, who licenses it, and how people get in.',
+    job: 'The front door. Educates people about each field and routes them to the people doing it in the Discord.',
+    primaryEntity: 'ItemList / Article',
+    spokes: [{ pattern: '/fields/:field/', label: 'Field guides', count: 14 }],
+  },
   {
     id: 'academy',
     eyebrow: 'Academy',
@@ -140,8 +153,8 @@ export const HUBS: Hub[] = [
     job: 'Sponsor conversion. Do not open this funnel before the Academy produces traffic.',
     primaryEntity: 'Offer / Organization',
     spokes: [
-      { pattern: '/partners/audience/', label: 'Audience data', count: 1 },
-      { pattern: '/partners/sponsorship/', label: 'Tiers and pricing', count: 1 },
+      { pattern: '/partners/audience/', label: 'Audience data', count: 1, live: true },
+      { pattern: '/partners/sponsorship/', label: 'Tiers and pricing', count: 1, live: true },
       { pattern: '/partners/inventory/', label: 'Sponsorable inventory', count: 1 },
       { pattern: '/partners/:brand/', label: 'Partner pages', count: 'open' },
       { pattern: '/partners/media-kit/', label: 'Media kit', count: 1 },
@@ -158,13 +171,13 @@ export const HUBS: Hub[] = [
     primaryEntity: 'AboutPage / Person',
     spokes: [
       { pattern: '/about/team/:slug/', label: 'Team', count: 'open' },
-      { pattern: '/about/advisory-board/', label: 'Advisory board', count: 1 },
-      { pattern: '/about/editorial-standards/', label: 'Editorial standards', count: 1 },
-      { pattern: '/about/review-methodology/', label: 'Review methodology', count: 1 },
-      { pattern: '/about/sponsorship-policy/', label: 'Sponsorship policy', count: 1 },
-      { pattern: '/about/verification/', label: 'License verification', count: 1 },
-      { pattern: '/about/code-of-conduct/', label: 'Code of conduct', count: 1 },
-      { pattern: '/about/press/', label: 'Press', count: 1 },
+      { pattern: '/about/advisory-board/', label: 'Advisory board', count: 1, live: true },
+      { pattern: '/about/editorial-standards/', label: 'Editorial standards', count: 1, live: true },
+      { pattern: '/about/review-methodology/', label: 'Review methodology', count: 1, live: true },
+      { pattern: '/about/sponsorship-policy/', label: 'Sponsorship policy', count: 1, live: true },
+      { pattern: '/about/verification/', label: 'License verification', count: 1, live: true },
+      { pattern: '/about/code-of-conduct/', label: 'Code of conduct', count: 1, live: true },
+      { pattern: '/about/press/', label: 'Press', count: 1, live: true },
     ],
   },
 ];
@@ -176,7 +189,7 @@ export function getHub(id: HubId): Hub {
 }
 
 /** Primary nav. Partners and About live in the footer — the three funnels stay separated. */
-export const PRIMARY_NAV: HubId[] = ['academy', 'community', 'lab', 'arena', 'trade', 'wire'];
+export const PRIMARY_NAV: HubId[] = ['fields', 'academy', 'community', 'lab', 'arena', 'trade', 'wire'];
 
 /** Forum categories. Ordered by expected thread volume, not alphabetically. */
 export const FORUM_CATEGORIES = [
