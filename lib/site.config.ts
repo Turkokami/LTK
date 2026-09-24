@@ -84,7 +84,7 @@ export const site = {
   discord: {
     invite: 'https://discord.com/invite/3DpNzdEtvs',
     name: 'LTK Discord',
-    /** What actually happens in the server. Drives the Discord sections site-wide. */
+    /** What actually happens in the server. Drives the Discord sections site-wide. `href` links a card to its page on this site. */
     channels: [
       {
         name: 'Shop talk',
@@ -97,6 +97,7 @@ export const site = {
       {
         name: 'The podcast',
         blurb: 'Catch episodes as they drop, hang out in the live recordings, and pitch guests.',
+        href: '/community/podcast/',
       },
       {
         name: 'Group training',
@@ -159,7 +160,15 @@ export const site = {
     'Field service management software',
   ],
 
+  /** Year of the site build. The LTK Discord itself predates it (it was featured on a podcast in
+   *  May 2025) — confirm the community's real founding year with Marcus and update this. */
   founded: '2026',
+
+  /** Source: his May 2025 podcast appearance (lib/content/podcast.ts). Add more only from him. */
+  founder: {
+    name: 'Marcus Scruggs',
+    role: 'Pest technician and creator of the LTK Discord',
+  },
 } as const;
 
 /** Absolute URL for any path. Always use this — never string-concatenate the domain. */

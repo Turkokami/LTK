@@ -94,6 +94,15 @@ export default function AboutPage() {
               {para}
             </p>
           ))}
+          <p className="mb-3 max-w-[70ch] text-ink2">
+            LTK was started by <strong className="text-ink">{site.founder.name}</strong>, a pest
+            technician who built the Discord as a place for people in the trade to meet, talk shop
+            and game together.{' '}
+            <a href="/community/podcast/" className="link">
+              Hear him tell the story on the podcast
+            </a>
+            .
+          </p>
           <div className="mt-4 flex flex-wrap gap-3">
             <DiscordButton>Join the Discord</DiscordButton>
             <a

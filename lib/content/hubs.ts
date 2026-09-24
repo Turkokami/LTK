@@ -77,6 +77,7 @@ export const HUBS: Hub[] = [
     job: 'The moat. Self-producing indexable content.',
     primaryEntity: 'DiscussionForumPosting / ProfilePage',
     spokes: [
+      { pattern: '/community/podcast/', label: 'The LTK podcast', count: 1, live: true },
       { pattern: '/community/forums/:category/', label: 'Forum categories', count: 13 },
       { pattern: '/community/forums/:category/:thread/', label: 'Threads', count: 'open' },
       { pattern: '/community/chapters/:state/', label: 'State chapters', count: 50 },
@@ -110,7 +111,8 @@ export const HUBS: Hub[] = [
     job: 'Retention, and the most cleanly sponsorable inventory on the site.',
     primaryEntity: 'Event / ItemList',
     spokes: [
-      { pattern: '/arena/games/:slug/', label: 'Games', count: 10 },
+      { pattern: '/arena/games/speed-round/', label: 'ACE Speed Round', count: 1, live: true },
+      { pattern: '/arena/games/:slug/', label: 'More games', count: 10 },
       { pattern: '/arena/tournaments/:slug/', label: 'Tournaments', count: 16 },
       { pattern: '/arena/leaderboards/', label: 'National leaderboard', count: 1 },
       { pattern: '/arena/leaderboards/:state/', label: 'State leaderboards', count: 50 },

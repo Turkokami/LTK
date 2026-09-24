@@ -65,6 +65,7 @@ export default async function sitemap({
     case 'community':
       return [
         entry('/community/', 0.9),
+        entry('/community/podcast/', 0.8),
         ...FORUM_CATEGORIES.map((c) => entry(`/community/forums/${c.slug}/`, 0.7)),
         // TODO(R-09): thread and member URLs come from the forum backend once it exists.
       ];
@@ -87,8 +88,10 @@ export default async function sitemap({
 
     // Hubs whose spokes have not shipped yet. Index only — do not pad a sitemap with
     // routes that 404. Add spokes here as each phase lands.
-    case 'lab':
     case 'arena':
+      return [entry('/arena/', 0.8), entry('/arena/games/speed-round/', 0.8)];
+
+    case 'lab':
     case 'trade':
     case 'wire':
       return [entry(`/${id}/`, 0.8)];

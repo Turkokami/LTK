@@ -289,6 +289,13 @@ export default function HomePage() {
                 {para}
               </p>
             ))}
+            <p className="mb-4 max-w-[68ch] text-sm text-ink3">
+              Started by {site.founder.name}, a pest technician.{' '}
+              <a href="/community/podcast/" className="link">
+                Watch him tell the story
+              </a>
+              .
+            </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <DiscordButton>Join the Discord</DiscordButton>
               <a

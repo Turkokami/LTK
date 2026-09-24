@@ -36,6 +36,8 @@ const ROUTES = [
   '/academy/ace/flashcards/',
   '/academy/ace/glossary/',
   '/academy/ace/library/',
+  '/community/podcast/',
+  '/arena/games/speed-round/',
   '/fields/',
   '/fields/general-pest/',
   '/fields/termite-wdo/',

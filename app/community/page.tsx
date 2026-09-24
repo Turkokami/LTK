@@ -6,6 +6,7 @@ import { Breadcrumbs } from '@/components/site/Breadcrumbs';
 import { getHub } from '@/lib/content/hubs';
 import { HubSpokes } from '@/components/site/HubSpokes';
 import { site } from '@/lib/site.config';
+import { EPISODES, PODCAST_PATH } from '@/lib/content/podcast';
 import { DiscordButton, DiscordChannels } from '@/components/community/Discord';
 
 const HUB = getHub('community');
@@ -55,6 +56,25 @@ export default function Page() {
           </p>
           <DiscordChannels />
         </section>
+
+        {EPISODES[0] ? (
+        <a href={PODCAST_PATH} className="card group mb-14 grid items-center gap-5 p-5 sm:grid-cols-[auto_1fr_auto]">
+          <img
+            src={`https://i.ytimg.com/vi/${EPISODES[0].youtubeId}/hqdefault.jpg`}
+            alt=""
+            width={480}
+            height={360}
+            loading="lazy"
+            className="hidden aspect-video w-44 rounded-md object-cover sm:block"
+          />
+          <span>
+            <span className="eyebrow mb-1">The podcast</span>
+            <span className="h3 block group-hover:text-blood">{EPISODES[0].title}</span>
+            <span className="mt-1 block text-sm text-ink2">{EPISODES[0].hook}</span>
+          </span>
+          <span className="btn btn--ghost">Watch</span>
+        </a>
+        ) : null}
 
         <HubSpokes hub={HUB} />
       </div>

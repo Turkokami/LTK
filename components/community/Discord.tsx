@@ -57,12 +57,20 @@ export function DiscordButton({
 export function DiscordChannels({ className }: { className?: string }) {
   return (
     <ul className={cx('grid gap-3 sm:grid-cols-2 lg:grid-cols-3', className)}>
-      {site.discord.channels.map((c) => (
-        <li key={c.name} className="card p-5">
-          <p className="h3 mb-1.5">{c.name}</p>
-          <p className="text-sm leading-relaxed text-ink2">{c.blurb}</p>
-        </li>
-      ))}
+      {site.discord.channels.map((c) => {
+        const href = 'href' in c ? c.href : undefined;
+        return (
+          <li key={c.name} className="card flex flex-col p-5">
+            <p className="h3 mb-1.5">{c.name}</p>
+            <p className="text-sm leading-relaxed text-ink2">{c.blurb}</p>
+            {href ? (
+              <a href={href} className="link mt-3 text-sm">
+                Watch the episodes &rarr;
+              </a>
+            ) : null}
+          </li>
+        );
+      })}
     </ul>
   );
 }

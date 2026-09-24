@@ -14,7 +14,7 @@ Runs in parallel with Phase 1. Mostly not code.
 - [ ] ◆ **R-01** Trademark clearance on three parent-name candidates (USPTO classes 35/41/42, state, common-law)
 - [ ] ◆ **R-03** Register apex domain + social handles
 - [ ] ◆ **R-05** Confirm 3–5 advisory board entomologists (ACE/BCE). **Longest lead time on the plan — start day one.**
-- [ ] ○ Vercel project + preview deployments + branch protection on `main`
+- [x] ★ Vercel project + preview deployments (branch protection on `main` still to do)
 - [ ] ○ Record baseline rankings for the 20 Wave-1 geo queries (before any page ships)
 - [ ] ○ Page-level re-verification of the nine benchmark properties from the audit
 
@@ -38,7 +38,7 @@ The whole point: a crawlable, entity-anchored shell before a single word of cont
 - [x] ★ Eight hub index routes, server-rendered
 - [x] ★ `app/robots.ts` hardening + per-hub segmented sitemaps (`generateSitemaps`, one segment per hub + `core`)
 - [x] ★ `public/llms.txt` and `public/llms-full.txt`
-- [ ] ○ `npm run audit:smartsite` script (see `CLAUDE.md` §5)
+- [x] ★ `npm run audit:smartsite` script (see `CLAUDE.md` §5)
 - [x] ★ OG image generation route `app/og/[template]/route.tsx` (self-hosted, per-template, label design language)
 - [x] ★ Analytics: three-funnel event taxonomy (`lib/analytics/events.ts`) + `TrackView` leaf. **Vendor impl is R-13.**
 
@@ -107,8 +107,8 @@ These pages establish the entity. They ship **before** content, not after.
 The differentiator. Also the hardest technical requirement — **prototype game one early; it decides
 whether this stays on Next.js or needs a separate app surface.**
 
-- [ ] ○ Game engine shell + scoring + anti-cheat baseline
-- [ ] ○ Game 1: pest ID speed round
+- [x] ★ Game shell + scoring (client leaf on Next.js — it suffices for quiz-style games; anti-cheat waits for server-side leaderboards)
+- [x] ★ Game 1: ACE Speed Round `/arena/games/speed-round/` (photo-based pest ID round still to build — needs an ID photo set)
 - [ ] ○ Game 2: label literacy challenge
 - [ ] ○ `/arena/tournaments/[slug]/` with `Event` schema
 - [ ] ○ `/arena/leaderboards/` national + `[state]`
@@ -139,6 +139,18 @@ Open sponsor conversations **only now**. Not before the Academy produces traffic
 - [ ] ○ PestWorld 2026 — **Oct 20–23, Gaylord Texan, Grapevine TX.** Lands inside this window. Highest-density founding-member recruitment and sponsor-conversation opportunity of the year.
 
 ---
+
+## Added 2026-09-24 (owner direction)
+
+- [x] ★ Rebrand to LTK Community Hub; night-route palette from the badge; Discord funnel site-wide
+- [x] ★ `/fields/` hub + 14 field guides with state-by-state licensing and BLS pay (sourced)
+- [x] ★ ACE Prep `/academy/ace/` — 11 modules, practice test, flashcards, glossary, library
+- [x] ★ Field photography registry, owner photos, "From the field" gallery
+- [x] ★ `/community/podcast/` — episode 1: Marcus Scruggs on starting LTK
+- [x] ★ `/search/` (noindex), mobile menu, branded 404
+- [ ] ◆ Replace every `placeholder: true` photo in `lib/content/photos.ts` before launch
+- [ ] ◆ K9 detection photos (owner supplying)
+- [ ] ◆ Podcast transcripts (R-11), founding year of the LTK Discord (confirm with Marcus)
 
 ## Standing workstreams
 
