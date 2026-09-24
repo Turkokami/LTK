@@ -61,18 +61,46 @@ export interface Role {
 export const NATIONAL_BASELINE = {
   source: 'US Bureau of Labor Statistics, Occupational Employment and Wage Statistics (OEWS)',
   sourceUrl: 'https://www.bls.gov/ooh/building-and-grounds-cleaning/pest-control-workers.htm',
-  referencePeriod: 'May 2024',
-  verifiedOn: '2026-09-23',
+  /**
+   * Every figure below links to one of these. Checked in a browser against bls.gov on
+   * 2026-09-24 (BLS blocks automated fetches, so re-verify by hand when the next release lands).
+   */
+  sources: {
+    pay: {
+      label: 'BLS Occupational Outlook Handbook: Pest Control Workers — Pay',
+      url: 'https://www.bls.gov/ooh/building-and-grounds-cleaning/pest-control-workers.htm#tab-5',
+    },
+    outlook: {
+      label: 'BLS Occupational Outlook Handbook: Pest Control Workers — Job Outlook',
+      url: 'https://www.bls.gov/ooh/building-and-grounds-cleaning/pest-control-workers.htm#tab-6',
+    },
+    oews: {
+      label: 'BLS OEWS May 2025 occupation profiles',
+      url: 'https://www.bls.gov/oes/2025/may/oes_stru.htm',
+    },
+  },
+  referencePeriod: 'May 2025',
+  verifiedOn: '2026-09-24',
   occupations: [
     {
       socCode: '37-2021',
       name: 'Pest control workers',
-      medianAnnualUsd: 44730,
+      medianAnnualUsd: 45250,
+      medianHourlyUsd: 21.75,
+      /** Lowest 10% earned less than this. */
+      p10AnnualUsd: 34680,
+      /** Highest 10% earned more than this. */
+      p90AnnualUsd: 61890,
       /** For context, not comparison — BLS all-occupation median in the same period. */
-      allOccupationMedianUsd: 49500,
-      projectedGrowthPercent: 5,
-      projectionWindow: '2024–2034',
-      annualOpenings: 13400,
+      allOccupationMedianUsd: 50980,
+      /** Median inside the industry most techs actually work in. */
+      industryMedian: { name: 'Exterminating and pest control services', usd: 44930 },
+      employment: 108700,
+      employmentYear: 2025,
+      projectedGrowthPercent: 6,
+      allOccupationGrowthPercent: 3,
+      projectionWindow: '2025–2035',
+      annualOpenings: 13700,
       note:
         'Grows faster than the all-occupation average, but sits below the all-occupation median ' +
         'wage. Both facts are true and the industry usually quotes only the flattering one.',
@@ -92,6 +120,9 @@ export const NATIONAL_BASELINE = {
     'Overtime and seasonal variation (annual figures assume 2,080 hours)',
   ],
 } as const;
+
+/** The pest control workers row, typed narrowly for pages that show the headline numbers. */
+export const PEST_CONTROL_WORKERS = NATIONAL_BASELINE.occupations[0];
 
 /**
  * Tier 2 — member-reported. Still empty, still gated the same way: a Dataset node describing

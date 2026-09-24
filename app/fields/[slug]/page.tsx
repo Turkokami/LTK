@@ -16,7 +16,8 @@ import {
   type Discipline,
 } from '@/lib/content/disciplines';
 import { PUBLISHED_STATES, getRegulatory } from '@/lib/content/states';
-import { NATIONAL_BASELINE } from '@/lib/content/salary';
+import { NATIONAL_BASELINE, PEST_CONTROL_WORKERS } from '@/lib/content/salary';
+import { PayHighlight } from '@/components/ui/PayHighlight';
 import { abs, ID, site } from '@/lib/site.config';
 import { EDITOR } from '@/lib/content/editorial';
 
@@ -33,8 +34,9 @@ import { EDITOR } from '@/lib/content/editorial';
  * so plainly rather than pointing at a pesticide licence that does not apply.
  *
  * DELIBERATELY NOT HERE:
- *   - Pay per field. BLS figures exist for two SOC codes and nothing credible for the rest.
- *     Pay shows only where a SOC code genuinely applies, labelled as national.
+ *   - Invented pay per field. BLS publishes pest control worker figures (SOC 37-2021); fields
+ *     counted there show them as their own, every other field shows them labelled as the
+ *     nearest benchmark. Every number links to its BLS source.
  *   - Occupation schema. It needs real regional salary data; emitting it without that is
  *     fabrication with a schema wrapper around it.
  */
@@ -97,12 +99,8 @@ export default async function FieldPage({
   const isPesticide = d.licensing === 'state-pesticide';
   const states = isPesticide ? stateMatches(d) : [];
 
-  // Pay only where a SOC code genuinely maps. Most of these have no clean mapping and we say so.
-  const pay = d.socCode
-    ? NATIONAL_BASELINE.occupations.find(
-        (o) => o.socCode === d.socCode && o.medianAnnualUsd !== null,
-      )
-    : undefined;
+  // BLS counts this field under pest control workers only where the SOC code says so.
+  const paysAsPestControl = d.socCode === PEST_CONTROL_WORKERS.socCode;
 
   const crumbs = [
     { name: 'Home', href: '/' },
@@ -162,44 +160,20 @@ export default async function FieldPage({
           <h2 className="h2 mb-3 mt-12">How people get in</h2>
           <p className="prose-bulletin">{d.routeIn}</p>
 
-          <div className="mt-8 grid gap-6 md:grid-cols-2">
-            <LabelBlock
-              title="Who licenses it"
-              signal={d.licensing === 'federal-and-state-wildlife' ? 'danger' : 'warning'}
-              meta={REGIME_LABEL[d.licensing]}
-              specs={[
-                { label: 'In plain words', value: d.licensingNote },
-                { label: 'SOC code', value: d.socCode ?? 'No clean BLS mapping' },
-              ]}
-            />
+          <LabelBlock
+            className="mt-8"
+            title="Who licenses it"
+            signal={d.licensing === 'federal-and-state-wildlife' ? 'danger' : 'warning'}
+            meta={REGIME_LABEL[d.licensing]}
+            specs={[
+              { label: 'In plain words', value: d.licensingNote },
+              { label: 'SOC code', value: d.socCode ?? 'No clean BLS mapping' },
+            ]}
+          />
 
-            {pay ? (
-              <LabelBlock
-                title="National pay"
-                meta={`BLS ${NATIONAL_BASELINE.referencePeriod}`}
-                specs={[
-                  {
-                    label: 'Median annual',
-                    value: `$${pay.medianAnnualUsd!.toLocaleString()} (national)`,
-                  },
-                  {
-                    label: 'All occupations',
-                    value:
-                      'allOccupationMedianUsd' in pay && pay.allOccupationMedianUsd
-                        ? `$${pay.allOccupationMedianUsd.toLocaleString()}`
-                        : null,
-                  },
-                  { label: 'Excludes', value: NATIONAL_BASELINE.excludes.join('; ') },
-                ]}
-              />
-            ) : (
-              <LabelBlock title="Pay" meta="Not published">
-                We don&rsquo;t have credible pay data for this field yet, and we&rsquo;d rather say
-                nothing than publish a range somebody quotes at a job interview. Know the real
-                numbers? Share them in the Discord.
-              </LabelBlock>
-            )}
-          </div>
+          {/* Pay: this field's own BLS figures where it is counted as pest control workers,
+              otherwise the same figures clearly labelled as the nearest benchmark. */}
+          <PayHighlight className="mt-6" fieldName={d.name} benchmark={!paysAsPestControl} />
 
           {/* State by state. */}
           <h2 className="h2 mb-3 mt-12">State-by-state licensing</h2>

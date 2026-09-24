@@ -5,6 +5,7 @@ import { JsonLd } from '@/components/JsonLd';
 import { Breadcrumbs } from '@/components/site/Breadcrumbs';
 import { QuickAnswer } from '@/components/ui/QuickAnswer';
 import { DiscordButton } from '@/components/community/Discord';
+import { PayHighlight } from '@/components/ui/PayHighlight';
 import {
   DISCIPLINES,
   FIELD_GROUPS,
@@ -139,6 +140,11 @@ export default function FieldsPage() {
           </section>
         );
       })}
+
+      <section className="shell py-8" aria-label="Industry pay and outlook">
+        <div className="scope-rule mb-8" />
+        <PayHighlight fieldName="pest control" industry />
+      </section>
 
       <div className="shell pt-4">
         <p className="text-sm text-ink3">

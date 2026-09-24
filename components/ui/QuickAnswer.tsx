@@ -37,21 +37,22 @@ export function QuickAnswer({
         <span className="opacity-80">Verified {formatVerified(verifiedOn)}</span>
       </div>
 
-      <div className="px-4 py-4">
-        <h2 className="h3 mb-2">{question}</h2>
-        <p className="prose-bulletin !mb-0 text-ink">{answer}</p>
+      <div className="py-5 pl-[1.35rem] pr-5">
+        <h2 className="h3 mb-2 text-xl">{question}</h2>
+        <p className="!mb-0 text-[1.0625rem] leading-relaxed text-ink">{answer}</p>
 
         {fact ? (
-          <p className="mono mt-3 border-l-2 border-[var(--signal-warning)] pl-3 text-ink2">
+          <p className="mt-4 rounded-md border border-ruleStrong bg-stock px-3 py-2 text-sm text-ink2">
+            <span className="mr-2 font-semibold uppercase tracking-wide text-blood">Key fact</span>
             {fact}
           </p>
         ) : null}
       </div>
 
-      <div className="rule-t px-4 py-2">
-        <span className="mono text-ink3">
+      <div className="rule-t py-2.5 pl-[1.35rem] pr-5">
+        <span className="text-xs text-ink3">
           Reviewed by{' '}
-          <a href={reviewer.href} className="text-field underline underline-offset-2">
+          <a href={reviewer.href} className="link">
             {reviewer.name}
           </a>
           {reviewer.credential ? `, ${reviewer.credential}` : null}

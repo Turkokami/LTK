@@ -69,7 +69,11 @@ export function LabelBlock({
         </dl>
       ) : null}
 
-      {children ? <div className="px-3 py-3 text-sm text-ink2">{children}</div> : null}
+      {children ? (
+        <div className="py-4 pl-[1.35rem] pr-5 text-[0.9375rem] leading-relaxed text-ink2">
+          {children}
+        </div>
+      ) : null}
     </section>
   );
 }
@@ -81,7 +85,7 @@ export function LabelBlock({
 function SpecValue({ value }: { value: ReactNode | null }) {
   if (value === null || value === undefined) {
     return (
-      <span className="mono text-ink3">
+      <span className="text-sm italic text-ink3">
         Not yet published — verifying with the state agency
       </span>
     );

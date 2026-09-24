@@ -181,65 +181,128 @@
 
   /* ------------------------------------------------------------ label system */
 
-  /* THE SIGNATURE. A precautionary-statement panel. One component, three jobs:
-     regulatory facts, verified credentials, methodology disclosure. */
+  /* THE SIGNATURE. A precautionary-statement panel, restyled for the night-route palette:
+     a dark card with a coloured accent rail and a red-dot header, so the key facts on a page
+     read as the highlight rather than as a pasted-in form. The signal colour is always paired
+     with a word in the header — colour is never the only carrier of meaning. */
   .label-panel {
-    background: var(--paper);
+    --accent: var(--blood-text);
+    position: relative;
+    background:
+      radial-gradient(30rem 12rem at 0% 0%, color-mix(in srgb, var(--accent) 10%, transparent), transparent 70%),
+      var(--paper);
     border: 1px solid var(--rule-strong);
     border-radius: var(--radius);
     overflow: hidden;
   }
+  .label-panel::before {
+    content: '';
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 3px;
+    background: var(--accent);
+  }
+  .label-panel:has(.label-bar--warning) {
+    --accent: var(--signal-warning);
+  }
+  .label-panel:has(.label-bar--field) {
+    --accent: var(--field);
+  }
 
   .label-bar {
     display: flex;
-    align-items: baseline;
+    align-items: center;
     justify-content: space-between;
-    gap: 1rem;
-    padding: 0.4rem 0.75rem;
-    background: var(--ink);
-    color: var(--stock);
-    font-family: var(--font-mono), monospace;
-    font-size: 0.6875rem;
-    letter-spacing: 0.16em;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+    padding: 0.85rem 1.1rem 0.7rem 1.35rem;
+    border-bottom: 1px solid var(--rule);
+    color: var(--ink);
+    font-family: var(--font-archivo), sans-serif;
+    font-weight: 700;
+    font-size: 0.8125rem;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
   }
-
-  .label-bar--danger {
-    background: var(--signal-danger);
+  .label-bar > span:first-child {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
   }
-  .label-bar--warning {
-    background: var(--signal-warning);
+  .label-bar > span:first-child::before {
+    content: '';
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 999px;
+    background: var(--accent, var(--blood-text));
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent, var(--blood-text)) 22%, transparent);
+    flex: none;
+  }
+  /* The meta slot becomes a small pill: a date, a source, a regime. */
+  .label-bar > span:nth-child(2) {
+    font-family: var(--font-mono), monospace;
+    font-weight: 500;
+    font-size: 0.625rem;
+    letter-spacing: 0.1em;
+    color: var(--ink-2);
+    border: 1px solid var(--rule-strong);
+    border-radius: 999px;
+    padding: 0.2rem 0.6rem;
+    opacity: 1 !important;
+  }
+  .label-bar--danger,
+  .label-bar--warning,
+  .label-bar--field {
+    background: transparent;
     color: var(--ink);
   }
-  .label-bar--field {
-    background: var(--field);
-  }
 
-  /* Rigid key/value grid, exactly as a label sets its precautionary block. */
   .spec-row {
     display: grid;
-    grid-template-columns: 11rem 1fr;
-    gap: 0.75rem;
-    padding: 0.5rem 0.75rem;
+    grid-template-columns: 9.5rem 1fr;
+    gap: 1rem;
+    padding: 0.8rem 1.1rem 0.8rem 1.35rem;
     border-top: 1px solid var(--rule);
-    font-size: 0.875rem;
+    font-size: 0.9375rem;
+    line-height: 1.5;
+    color: var(--ink);
   }
   .spec-row:first-child {
     border-top: none;
   }
   .spec-row > dt {
-    font-family: var(--font-mono), monospace;
-    font-size: 0.6875rem;
-    letter-spacing: 0.1em;
+    font-family: var(--font-archivo), sans-serif;
+    font-weight: 600;
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--ink-3);
-    padding-top: 0.15rem;
+    padding-top: 0.2rem;
   }
   @media (max-width: 40rem) {
     .spec-row {
       grid-template-columns: 1fr;
-      gap: 0.15rem;
+      gap: 0.2rem;
     }
+  }
+
+  /* Headline numbers — pay, growth, openings. The figure leads, the source sits right under it. */
+  .stat {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+  .stat-value {
+    font-family: var(--font-archivo), sans-serif;
+    font-weight: 800;
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    letter-spacing: -0.02em;
+    line-height: 1;
+    color: var(--ink);
+  }
+  .stat-label {
+    font-size: 0.8125rem;
+    color: var(--ink-2);
   }
 
   /* Registry sentinel — impossible to miss in dev, impossible to ship to prod. */
