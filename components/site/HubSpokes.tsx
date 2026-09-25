@@ -2,8 +2,9 @@ import type { Hub } from '@/lib/content/hubs';
 import { site } from '@/lib/site.config';
 
 /**
- * The "what's in this section" grid on every hub index. Shipped spokes (`live: true` in
- * hubs.ts) link straight through; everything else reads as rolling out, with a nudge to the Discord
+ * The "what's in this section" grid on every hub index. Shipped spokes (`live: true`, or an
+ * `index` listing page for templated ones) link straight through; everything else reads as
+ * rolling out, with a nudge to the Discord
  * where members can ask for the one they need next. No route patterns are shown to readers.
  */
 export function HubSpokes({ hub }: { hub: Hub }) {
@@ -16,8 +17,8 @@ export function HubSpokes({ hub }: { hub: Hub }) {
         {hub.spokes.map((s) => {
           return (
             <li key={s.pattern}>
-              {s.live ? (
-                <a href={s.pattern} className="card group flex h-full items-center justify-between gap-4 p-5">
+              {s.live || s.index ? (
+                <a href={s.index ?? s.pattern} className="card group flex h-full items-center justify-between gap-4 p-5">
                   <span className="h3 group-hover:text-blood">{s.label}</span>
                   <span aria-hidden="true" className="text-blood">
                     &rarr;

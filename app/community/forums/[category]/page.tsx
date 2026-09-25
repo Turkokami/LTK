@@ -5,8 +5,9 @@ import { buildGraph } from '@/lib/schema/graph';
 import { JsonLd } from '@/components/JsonLd';
 import { Breadcrumbs } from '@/components/site/Breadcrumbs';
 import { LabelBlock } from '@/components/label/LabelBlock';
+import { DiscordButton } from '@/components/community/Discord';
 import { FORUM_CATEGORIES } from '@/lib/content/hubs';
-import { abs, ID } from '@/lib/site.config';
+import { abs, ID, site } from '@/lib/site.config';
 
 /**
  * Forum category index. The parent node every thread's DiscussionForumPosting references via
@@ -100,11 +101,19 @@ export default async function ForumCategoryPage({
           room with nobody in it teaches the first twenty people that nobody is here.
         </LabelBlock>
 
+        <div className="card mt-8 flex flex-wrap items-center justify-between gap-4 p-5">
+          <p className="max-w-[46ch] text-ink2">
+            <span className="font-semibold text-ink">Got a {cat.name.toLowerCase()} question today?</span>{' '}
+            The same conversation is already running in the {site.discord.name}.
+          </p>
+          <DiscordButton>Ask it on Discord</DiscordButton>
+        </div>
+
         <div className="rule-t mt-10 pt-6">
           <p className="text-sm text-ink2">
             Reading is open to everyone. Posting needs a verified applicator licence.
           </p>
-          <a href="/join/" className="btn mt-3">
+          <a href="/join/" className="btn btn--ghost mt-3">
             Verify my licence
           </a>
         </div>

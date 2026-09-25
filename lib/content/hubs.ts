@@ -29,8 +29,11 @@ export interface Hub {
   /** Primary schema entity for spoke templates in this hub. */
   primaryEntity: string;
   /** Spoke route patterns. `:param` marks a dynamic segment. */
-  /** `live: true` marks a static spoke whose page has shipped, so hub indexes can link to it. */
-  spokes: { pattern: string; label: string; count?: number | 'open'; live?: boolean }[];
+  /**
+   * `live: true` marks a static spoke whose page has shipped, so hub indexes can link to it.
+   * `index` is the listing page for a templated spoke whose pages have shipped.
+   */
+  spokes: { pattern: string; label: string; count?: number | 'open'; live?: boolean; index?: string }[];
 }
 
 export const HUBS: Hub[] = [
@@ -43,7 +46,7 @@ export const HUBS: Hub[] = [
       'Pest control is fourteen trades sharing one customer. General pest, termite, wildlife, exclusion, insulation, K9 detection and more: what each job is, who licenses it, and how people get in.',
     job: 'The front door. Educates people about each field and routes them to the people doing it in the Discord.',
     primaryEntity: 'ItemList / Article',
-    spokes: [{ pattern: '/fields/:field/', label: 'Field guides', count: 14 }],
+    spokes: [{ pattern: '/fields/:field/', label: 'Field guides', count: 14, index: '/fields/' }],
   },
   {
     id: 'academy',
@@ -58,10 +61,10 @@ export const HUBS: Hub[] = [
       { pattern: '/academy/ace/', label: 'ACE exam prep', count: 1, live: true },
       { pattern: '/academy/ace/practice-test/', label: 'ACE practice test', count: 1, live: true },
       { pattern: '/academy/ace/flashcards/', label: 'ACE flashcards', count: 1, live: true },
-      { pattern: '/academy/ace/:module/', label: 'ACE study modules', count: 11 },
-      { pattern: '/academy/licensing/:state/', label: 'State licensing', count: 50 },
-      { pattern: '/academy/ceu/:state/', label: 'State CEU requirements', count: 50 },
-      { pattern: '/academy/exam-prep/:category/', label: 'Exam prep by category', count: 12 },
+      { pattern: '/academy/ace/:module/', label: 'ACE study modules', count: 11, index: '/academy/ace/' },
+      { pattern: '/academy/licensing/:state/', label: 'State licensing', count: 50, index: '/academy/licensing/' },
+      { pattern: '/academy/ceu/:state/', label: 'State CEU requirements', count: 50, index: '/academy/ceu/' },
+      { pattern: '/academy/exam-prep/:category/', label: 'Exam prep by category', count: 5, index: '/academy/exam-prep/' },
       { pattern: '/academy/courses/:slug/', label: 'On-demand courses', count: 30 },
       { pattern: '/academy/sessions/:slug/', label: 'Live sessions', count: 36 },
       { pattern: '/academy/instructors/:slug/', label: 'Instructors', count: 12 },
@@ -78,9 +81,9 @@ export const HUBS: Hub[] = [
     primaryEntity: 'DiscussionForumPosting / ProfilePage',
     spokes: [
       { pattern: '/community/podcast/', label: 'The LTK podcast', count: 1, live: true },
-      { pattern: '/community/forums/:category/', label: 'Forum categories', count: 13 },
+      { pattern: '/community/forums/:category/', label: 'Forum categories', count: 13, index: '/community/forums/' },
       { pattern: '/community/forums/:category/:thread/', label: 'Threads', count: 'open' },
-      { pattern: '/community/chapters/:state/', label: 'State chapters', count: 50 },
+      { pattern: '/community/chapters/:state/', label: 'State chapters', count: 50, index: '/community/chapters/' },
       { pattern: '/community/members/:handle/', label: 'Member profiles', count: 'open' },
     ],
   },
@@ -94,7 +97,7 @@ export const HUBS: Hub[] = [
     job: 'Commercial intent. The hub that makes manufacturers take your call.',
     primaryEntity: 'Product / Review / ItemList',
     spokes: [
-      { pattern: '/lab/technology/:slug/', label: 'Technology explainers', count: 25 },
+      { pattern: '/lab/technology/:slug/', label: 'Technology explainers', count: 25, index: '/lab/technology/' },
       { pattern: '/lab/reviews/:product/', label: 'Product reviews', count: 60 },
       { pattern: '/lab/software/:slug/', label: 'Software reviews', count: 18 },
       { pattern: '/lab/compare/:slug/', label: 'Head-to-head comparisons', count: 24 },
@@ -129,7 +132,7 @@ export const HUBS: Hub[] = [
     job: 'Career mobility for members; recruiting inventory for operators.',
     primaryEntity: 'JobPosting / Dataset',
     spokes: [
-      { pattern: '/trade/jobs/:state/', label: 'Jobs by state', count: 50 },
+      { pattern: '/trade/jobs/:state/', label: 'Jobs by state', count: 50, index: '/trade/jobs/' },
       { pattern: '/trade/salary/:role/', label: 'Pay data by role', count: 12 },
       { pattern: '/trade/start/:state/', label: 'Starting a company', count: 50 },
       { pattern: '/trade/owners/:slug/', label: 'Owner topics', count: 18 },
@@ -146,7 +149,7 @@ export const HUBS: Hub[] = [
     primaryEntity: 'NewsArticle',
     spokes: [
       { pattern: '/wire/:slug/', label: 'Articles', count: 'open' },
-      { pattern: '/wire/regulatory/:state/', label: 'State regulatory', count: 50 },
+      { pattern: '/wire/regulatory/:state/', label: 'State regulatory', count: 50, index: '/wire/regulatory/' },
     ],
   },
   {

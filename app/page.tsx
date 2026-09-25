@@ -50,7 +50,7 @@ export default function HomePage() {
       <section className="rule-b">
         <div className="shell grid items-center gap-12 py-14 lg:grid-cols-[1.25fr_1fr] lg:py-20">
           <div>
-            <p className="eyebrow mb-5">Pest pros helping pest pros</p>
+            <p className="eyebrow mb-5">Pest Pros helping Pest Pros</p>
             <h1 className="display max-w-[15ch]">
               Every field in pest control. One crew.
             </h1>

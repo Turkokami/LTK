@@ -5,6 +5,8 @@ import { buildGraph } from '@/lib/schema/graph';
 import { JsonLd } from '@/components/JsonLd';
 import { Breadcrumbs } from '@/components/site/Breadcrumbs';
 import { LabelBlock } from '@/components/label/LabelBlock';
+import { DiscordButton } from '@/components/community/Discord';
+import { site } from '@/lib/site.config';
 import { STATES, getState } from '@/lib/content/states';
 
 /**
@@ -80,11 +82,21 @@ export default async function ChapterPage({ params }: { params: Promise<{ state:
             with the logistics and the invitations.
           </LabelBlock>
 
-          <div className="rule-t mt-10 pt-6">
-            <a href="/join/" className="btn">
-              Verify my licence
-            </a>
+          <div className="card mt-10 flex flex-wrap items-center justify-between gap-4 p-5">
+            <p className="max-w-[46ch] text-ink2">
+              <span className="font-semibold text-ink">Working in {st.name}?</span> Say so in the{' '}
+              {site.discord.name} &mdash; the {st.name} chapter starts with the first few people who
+              raise their hand.
+            </p>
+            <DiscordButton>Start the {st.name} chapter</DiscordButton>
           </div>
+          <p className="mt-4 text-sm text-ink3">
+            Hold a licence here?{' '}
+            <a href="/join/" className="link">
+              Get verified
+            </a>{' '}
+            so your posts carry the badge.
+          </p>
         </article>
 
         <aside className="mono space-y-6 pt-10 text-ink3">

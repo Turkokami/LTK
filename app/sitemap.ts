@@ -4,6 +4,8 @@ import { HUBS, FORUM_CATEGORIES, type HubId } from '@/lib/content/hubs';
 import { PUBLISHED_STATES } from '@/lib/content/states';
 import { DISCIPLINES } from '@/lib/content/disciplines';
 import { ACE_MODULES, ACE_PATH } from '@/lib/content/ace';
+import { EXAM_CATEGORIES } from '@/lib/content/exam-prep';
+import { TECHNOLOGY } from '@/lib/content/lab';
 
 /**
  * Segmented sitemaps — one per hub, plus a `core` segment.
@@ -48,7 +50,9 @@ export default async function sitemap({
       return [
         entry('/academy/', 0.9),
         entry('/academy/ceu/', 0.8),
-        // No /academy/licensing/ index page exists yet — state pages only. Add it back when it ships.
+        entry('/academy/licensing/', 0.8),
+        entry('/academy/exam-prep/', 0.8),
+        ...EXAM_CATEGORIES.map((c) => entry(`/academy/exam-prep/${c.slug}/`, 0.7)),
         entry(ACE_PATH, 0.9),
         entry(`${ACE_PATH}practice-test/`, 0.8),
         entry(`${ACE_PATH}flashcards/`, 0.7),
@@ -66,6 +70,8 @@ export default async function sitemap({
       return [
         entry('/community/', 0.9),
         entry('/community/podcast/', 0.8),
+        entry('/community/forums/', 0.7),
+        entry('/community/chapters/', 0.6),
         ...FORUM_CATEGORIES.map((c) => entry(`/community/forums/${c.slug}/`, 0.7)),
         // TODO(R-09): thread and member URLs come from the forum backend once it exists.
       ];
@@ -91,10 +97,18 @@ export default async function sitemap({
     case 'arena':
       return [entry('/arena/', 0.8), entry('/arena/games/speed-round/', 0.8)];
 
-    case 'lab':
     case 'trade':
+      return [entry('/trade/', 0.8), entry('/trade/jobs/', 0.7)];
+
     case 'wire':
-      return [entry(`/${id}/`, 0.8)];
+      return [entry('/wire/', 0.8), entry('/wire/regulatory/', 0.7)];
+
+    case 'lab':
+      return [
+        entry('/lab/', 0.8),
+        entry('/lab/technology/', 0.7),
+        ...TECHNOLOGY.map((t) => entry(`/lab/technology/${t.slug}/`, 0.7)),
+      ];
 
     default:
       return [];

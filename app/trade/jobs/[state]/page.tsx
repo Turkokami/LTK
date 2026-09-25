@@ -8,6 +8,7 @@ import { Breadcrumbs } from '@/components/site/Breadcrumbs';
 import { LabelBlock } from '@/components/label/LabelBlock';
 import { STATES, getState } from '@/lib/content/states';
 import { JOBS, jobsForState } from '@/lib/content/jobs';
+import { site } from '@/lib/site.config';
 
 /**
  * Geo layer 4 — jobs by state. The only page type on this site eligible for Google for Jobs,
@@ -105,9 +106,15 @@ export default async function StateJobsPage({ params }: { params: Promise<{ stat
               three months ago.
               <br />
               <br />
-              <a href="/partners/" className="text-field underline underline-offset-2">
-                Post a role
-              </a>
+              Hiring or looking? Job leads get shared in the{' '}
+              <a href={site.discord.invite} target="_blank" rel="noopener noreferrer" className="link">
+                {site.discord.name}
+              </a>{' '}
+              today, or{' '}
+              <a href="/partners/" className="link">
+                post a role
+              </a>{' '}
+              here.
             </LabelBlock>
           ) : (
             /* SNIPPET SHAPE: list. Real <ul>, one <li> per posting. */
