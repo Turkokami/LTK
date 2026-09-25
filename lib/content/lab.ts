@@ -367,6 +367,299 @@ export const TECHNOLOGY: TechnologyTopic[] = [
     reviewer: EDITOR_REVIEWER,
     verifiedOn: '2026-09-23',
   },
+
+  {
+    slug: 'insect-monitoring-networks',
+    name: 'Insect monitoring networks',
+    definition:
+      'Traps and sensors that count or photograph insects and send the data off site: camera ' +
+      'sticky traps, pheromone traps with electronic counters, acoustic probes in grain, and ' +
+      'circuit sensors in termite stations. They report what reached the device, and when. ' +
+      'They do not tell you how many insects are in the building.',
+    fits: [
+      'Large stored-product facilities where reading dozens of traps is the labour cost. The ' +
+      'published case for camera-equipped traps is continuous, simultaneous records from many ' +
+      'traps with little labour, and remote checks that cut site visits.',
+      'Bulk grain where the problem is hidden inside the kernel. Acoustic systems can detect ' +
+      'larvae feeding inside grain, and immature insects there may outnumber the adults a ' +
+      'surface trap would ever catch.',
+      'Seeing a rebound after a fumigation, not just a single count. In the flour-mill work, ' +
+      'manual trap counts climbed again within a few weeks of fumigation, a sign that beetles ' +
+      'had survived or moved back in. Our read: a network that reports daily would surface that ' +
+      'kind of rebound as it starts, instead of at the next service visit.',
+      'Termite stations at sites that are hard to reach. A datalogged circuit sensor can check ' +
+      'every few hours for termites breaking a circuit, so the monthly visit goes to the stations ' +
+      'that have activity.',
+    ],
+    doesNotFit: [
+      'As a population estimate. The flour-mill researchers say it directly: trapping is a ' +
+      'relative tool, and only direct sampling of the commodity or space measures the ' +
+      'population. An electronic counter makes the trap catch more precise. It does not change ' +
+      'what a trap catch is.',
+      'Dusty or heavily cleaned plants, unless someone still services the traps. In the same ' +
+      'mills, trap oil reservoirs were so full of flour dust they could not have killed any ' +
+      'insects, and areas cleaned daily with compressed air caught far fewer beetles than areas ' +
+      'cleaned weekly. A sensor on a trap full of dust reports a true zero for that trap, and ' +
+      'nothing at all about the mill.',
+      'Long deployments with no one checking the sensors themselves. In the first computerised ' +
+      'termite-monitoring field test, wooden sensors failed after about 4.4 months with no ' +
+      'termites present, and accuracy six months after installation fell to 41-79%. A later ' +
+      'polyethylene sensor lasted 11.7 months on average. Ask the vendor for field data on how ' +
+      'long their sensor lasts before you trust a quiet dashboard.',
+      'Acoustic monitoring in noisy plants, or on a tight budget. Researchers still list telling ' +
+      'insect sounds apart from background noise as unsolved, and say costs have been hard to ' +
+      'bring down. Sound rates vary so much between insects that estimating density takes a large ' +
+      'number of samples.',
+      'Camera traps sold as fit-and-forget. The main review of camera-equipped traps names high ' +
+      'cost, short battery life and poor image quality on some prototypes as limitations, and ' +
+      'says fully automated pest detection still needs work. Budget for someone to check the ' +
+      'images.',
+    ],
+    sources: [
+      {
+        label:
+          'Insect pest monitoring with camera-equipped traps: strengths and limitations — Journal of Pest Science (2020), repository record',
+        url: 'https://orbi.uliege.be/handle/2268/261623',
+      },
+      {
+        label:
+          'Automated Applications of Acoustics for Stored Product Insect Detection, Monitoring, and Management — Insects (2021), PMC8003406',
+        url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC8003406/',
+      },
+      {
+        label:
+          'Trapping Tribolium castaneum and Other Beetles in Flourmills: Evaluating Fumigation Efficacy and Estimating Population Density — Insects (2021), PMC7915626',
+        url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC7915626/',
+      },
+      {
+        label:
+          'A Computerized System for Remote Monitoring of Subterranean Termites near Structures — Journal of Economic Entomology (2001)',
+        url: 'https://academic.oup.com/jee/article-abstract/94/6/1518/2217547',
+      },
+      {
+        label:
+          'Dimensionally Stable Sensors for a Continuous Monitoring Program to Detect Subterranean Termite Activity — Journal of Economic Entomology (2002)',
+        url: 'https://complete.bioone.org/journals/journal-of-economic-entomology/volume-95/issue-5/0022-0493-95.5.975/Dimensionally-Stable-Sensors-for-a-Continuous-Monitoring-Program-to-Detect/10.1603/0022-0493-95.5.975.short',
+      },
+    ],
+    reviewer: EDITOR_REVIEWER,
+    verifiedOn: '2026-09-25',
+  },
+  {
+    slug: 'drone-and-pole-camera-inspection',
+    name: 'Drone and pole-camera inspection',
+    definition:
+      'Cameras used to see places a technician cannot easily reach: small drones for roofs and ' +
+      'high eaves, pole cameras for nests and soffits, and borescopes pushed through a drilled ' +
+      'hole into wall voids. They find places worth checking. ' +
+      'They do not confirm what is there, and a drone flown for business needs an FAA-certificated ' +
+      'pilot.',
+    fits: [
+      'Rooftop surveys across many buildings, where getting up there is most of the cost. In a ' +
+      'two-year municipal study, drones surveyed 4,700 rooftops for water-holding containers at ' +
+      'an average of 22.2 minutes per 100 rooftops, and cut field workload by 67.7% compared ' +
+      'with traditional inspection.',
+      'Checking whether a nest is in use before anyone removes it. Federal guidance defines an ' +
+      'in-use nest as one with viable eggs or nestlings, and puts the job of confirming that on ' +
+      'the person destroying it. A pole camera that sees into the cup gives you that check ' +
+      'without a ladder.',
+      'Wall voids with little insulation or clutter, checked by an experienced inspector, where ' +
+      'the infestation is big enough to leave pellets or dead alates. That is the specific ' +
+      'situation the drywood-termite borescope trial found it useful for.',
+      'Tall structures. Part 107 caps altitude at 400 feet above ground, but allows higher flight ' +
+      'within a 400-foot radius of a structure, up to 400 feet above its highest point. That is ' +
+      'the rule that makes high-rise facade and roof-edge work possible.',
+    ],
+    doesNotFit: [
+      'As confirmation. In the rooftop study the drone found containers; it could not show ' +
+      'whether they held larvae, and ground crews had to check. Roof structures, vegetation and ' +
+      'obstructions also meant small or hidden containers were likely missed. The image tells ' +
+      'you where to go, not what you will find.',
+      'Borescope inspection as the only basis for a termite finding. Overall identification ' +
+      'accuracy in the trial was 80.6%, but individual inspectors in the simulated field ranged ' +
+      'from 35.7% to 78.6%. Several fell below 50% where voids held insulation, and the test ' +
+      'samples included seeds, sugar and sand chosen because they look like pellets. The authors ' +
+      'say it should not be relied on alone.',
+      'A technician with a drone and no Remote Pilot Certificate. The FAA requires one to fly ' +
+      'under Part 107. Getting it means being at least 16, passing the FAA knowledge test and ' +
+      'clearing a TSA security check. Keeping it means completing online recurrent training every ' +
+      '24 calendar months. Without it, the inspection flight is not a legal commercial operation.',
+      'Solo flights to the far side of a roof. Part 107 requires the pilot or a visual observer ' +
+      'to keep the drone in sight, without aids other than corrective lenses, for the whole ' +
+      'flight. If the ridge blocks your view, you need a second person or an FAA waiver, not a ' +
+      'better camera.',
+      'Treating a camera view of a nest as clearance to remove it. The same federal guidance ' +
+      'warns that nesting behaviour can make it hard to tell whether a nest is in use, especially ' +
+      'for colonial, burrowing and secretive species. Eagle nests and nests of species also listed ' +
+      'under the Endangered Species Act stay protected even when inactive.',
+    ],
+    sources: [
+      {
+        label: 'Become a Certificated Remote Pilot — Federal Aviation Administration',
+        url: 'https://www.faa.gov/uas/commercial_operators/become_a_drone_pilot',
+      },
+      {
+        label: '14 CFR Part 107 — Small Unmanned Aircraft Systems (§107.31 visual line of sight, §107.51 operating limitations) — eCFR',
+        url: 'https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-107',
+      },
+      {
+        label:
+          'Unmanned Aerial Vehicle Surveillance of Rooftop Aedes Breeding Sites Before Dengue Season, Dongguan, 2024–2025 — China CDC Weekly (2026), PMC13056549',
+        url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC13056549/',
+      },
+      {
+        label:
+          'Borescope-Aided Inspection May Be Useful in Some Drywood Termite Detection Situations — Forest Products Journal (2014)',
+        url: 'https://ucanr.edu/sites/default/files/2015-07/216853.pdf',
+      },
+      {
+        label:
+          'Migratory Bird Permit Memorandum MBPM-2-02: Authorizations to take migratory bird nests and contents — U.S. Fish & Wildlife Service (2025)',
+        url: 'https://www.fws.gov/sites/default/files/documents/2025-01/mbpm-2-nest-memorandum-2025.pdf',
+      },
+    ],
+    reviewer: EDITOR_REVIEWER,
+    verifiedOn: '2026-09-25',
+  },
+  {
+    slug: 'rnai-and-biologicals',
+    name: 'RNAi pesticides and biological controls',
+    definition:
+      'Two groups of actives that work through biology rather than broad nerve toxicity. RNA ' +
+      'interference products are double-stranded RNA that shuts off one essential gene in the ' +
+      'target pest. Biologicals are living or natural agents, such as Bti bacteria against ' +
+      'mosquito larvae and Beauveria fungus against bed bugs. Both act narrowly, and both have ' +
+      'hard limits.',
+    fits: [
+      'Mosquito larvae in standing water where non-target exposure matters. EPA describes Bti as ' +
+      'a soil bacterium whose toxins affect only the larvae of mosquitoes, black flies and fungus ' +
+      'gnats. EPA also reports minimal toxicity to honey bees, none to people, and no documented ' +
+      'resistance to Bti as a larvicide.',
+      'Bed bug programmes that need a residual barrier with a different mode of action. Beauveria ' +
+      'spores are applied as bands that bugs walk across on their way to a host. In lab testing ' +
+      'over residues of 22 insecticides, bed bug kill seven weeks after application was not ' +
+      'harmed overall, even where the residues cut spore viability.',
+      'Knowing what the first registered RNAi spray actually covers. EPA registered ledprona in ' +
+      'December 2023 for three years. It is a sprayable double-stranded RNA that kills Colorado ' +
+      'potato beetle by silencing the gene for one protein, PSMB5. EPA found no risk of concern ' +
+      'to human health or the environment, including listed species.',
+      'Resistance-management planning. EPA gives resistance management as one reason it supports ' +
+      'the technology, because a gene-silencing active does not share a mode of action with ' +
+      'conventional insecticides.',
+    ],
+    doesNotFit: [
+      'Assuming RNAi cannot be resisted. Researchers selected a Colorado potato beetle population ' +
+      'in about nine rounds of selection that survived more than 11,100 times the dose that killed ' +
+      'susceptible beetles. The resistance also covered a second, different dsRNA target, which ' +
+      'means it blocks the RNAi mechanism in general, not just one gene. Rotating to another dsRNA ' +
+      'may not help.',
+      'Structural or urban use today. The registered RNAi spray is labelled for Colorado potato ' +
+      'beetle on potatoes, and the label is the law. A structural RNAi product is something to ' +
+      'watch for, not something you can buy and apply.',
+      'Fungal biocontrol of subterranean termites. In 50 years of attempts, mostly with ' +
+      'Metarhizium, no successful field use has been reported. Colonies eat infected nestmates ' +
+      'when deaths are low and bury them when deaths are higher, so the fungus never produces ' +
+      'spores. Overwhelming that took spore densities two to three orders of magnitude above what ' +
+      'occurs naturally in soil.',
+      'Adult mosquito complaints. Bti works only on larvae that eat it in the water. It does ' +
+      'nothing to the adults biting the customer tonight.',
+      'Fungal barriers on bare wood, or over old DIY sprays, if you expect them to keep working. ' +
+      'Spore germination on wood fell to 29% by seven weeks, compared with 64–69% on fabric. ' +
+      'Residues of 12 of the 22 insecticides tested significantly reduced spore viability at five ' +
+      'weeks.',
+    ],
+    sources: [
+      {
+        label: 'EPA Registers Novel Pesticide Technology for Potato Crops — U.S. EPA (2023)',
+        url: 'https://www.epa.gov/pesticides/epa-registers-novel-pesticide-technology-potato-crops',
+      },
+      {
+        label: 'Bti for Mosquito Control — U.S. EPA',
+        url: 'https://www.epa.gov/mosquitocontrol/bti-mosquito-control',
+      },
+      {
+        label:
+          'Selection for high levels of resistance to double-stranded RNA (dsRNA) in Colorado potato beetle using non-transgenic foliar delivery — Scientific Reports (2021), PMC7985369',
+        url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC7985369/',
+      },
+      {
+        label:
+          'When Subterranean Termites Challenge the Rules of Fungal Epizootics — PLOS One (2012), PMC3314638',
+        url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC3314638/',
+      },
+      {
+        label:
+          'Effects of Chemical Insecticide Residues and Household Surface Type on a Beauveria bassiana-Based Biopesticide for Bed Bug Management — Insects (2021), PMC7998477',
+        url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC7998477/',
+      },
+    ],
+    reviewer: EDITOR_REVIEWER,
+    verifiedOn: '2026-09-25',
+  },
+  {
+    slug: 'digital-service-records',
+    name: 'Digital service records',
+    definition:
+      'Software that records each service visit electronically: products and amounts applied, ' +
+      'device checks, pest sightings and site maps, which the office and the client can then ' +
+      'pull up. It can make regulatory and audit records complete and searchable. It does not ' +
+      'set what a record must contain. Your state and the client\'s audit scheme do that.',
+    fits: [
+      'Restricted-use applications, where required fields can be made mandatory. Federal rules ' +
+      'require state plans to make certified commercial applicators keep restricted-use records ' +
+      'for at least two years. The required fields include customer, location, area treated, ' +
+      'site, time and date, product, EPA registration number, amount per location, and the ' +
+      'applicator\'s certification number.',
+      'Food-plant accounts that have to show trends. The SQF Food Manufacturing code requires the ' +
+      'pest programme to record sightings and trend pest activity to target applications, and to ' +
+      'measure effectiveness and identify trends. That is hard to do from a stack of paper ' +
+      'tickets.',
+      'Keeping the device map current. SQF requires the site map to show the identification, ' +
+      'location, number and type of every pest control and monitoring device. When devices are ' +
+      'recorded at each check, the map changes with the account.',
+      'Long retention periods and fast retrieval. Minnesota requires structural application ' +
+      'records to be kept for five years. SQF requires records to be readily accessible, ' +
+      'retrievable and securely stored against loss or unauthorised access.',
+    ],
+    doesNotFit: [
+      'As proof of compliance on its own. The federal restricted-use list is a minimum that states ' +
+      'must meet or exceed. Minnesota\'s structural record adds the target pest, and temperature ' +
+      'and exposure time for fumigations. It must be completed within five days of application. ' +
+      'A national template that does not match your state\'s fields produces a tidy record that is ' +
+      'still missing required fields.',
+      'Records the technician did not actually confirm. SQF requires records to be confirmed by ' +
+      'the person doing the monitoring. Federal rules require states to be able to suspend or ' +
+      'revoke certification for falsified records. Pre-filled "no activity" entries and ' +
+      'copy-forward visit notes are exactly what an auditor or an inspector will test.',
+      'Replacing what has to happen at the site. In a rented apartment, Minnesota requires the ' +
+      'applicator to post a list of the label\'s post-application precautions in a conspicuous ' +
+      'place inside the unit. SQF requires contractors to report to a responsible authorised ' +
+      'person on arrival and after the work. A PDF emailed to the office covers neither.',
+      'Platforms where the records cannot leave with the account. SQF retention follows customer, ' +
+      'legal and regulatory requirements, with the product\'s shelf life as the minimum. State ' +
+      'retention can run to five years. If you cannot export the full history in a usable format ' +
+      'when you change software, or when the client changes contractor, the records are not ' +
+      '"readily accessible" when an audit asks for them.',
+    ],
+    sources: [
+      {
+        label:
+          '40 CFR 171.303 — Requirements for State certification plans (restricted-use pesticide recordkeeping) — eCFR',
+        url: 'https://www.ecfr.gov/current/title-40/chapter-I/subchapter-E/part-171/subpart-D/section-171.303',
+      },
+      {
+        label: 'Minnesota Statutes §18B.37 — Pesticide application records — Minnesota Office of the Revisor of Statutes',
+        url: 'https://www.revisor.mn.gov/statutes/cite/18b.37',
+      },
+      {
+        label:
+          'SQF Food Safety Code: Food Manufacturing, Edition 9 (2.2.3 Records; 11.2.4 Pest Prevention) — SQFI (check for a newer edition before an audit)',
+        url: 'https://www.sqfi.com/docs/sqfilibraries/code-documents/edition-9/code-pdfs/20227fmin_foodmanufacturing_v3-2-final-w-links.pdf?sfvrsn=7f70c75a_8',
+      },
+    ],
+    reviewer: EDITOR_REVIEWER,
+    verifiedOn: '2026-09-25',
+  },
 ];
 
 export function getTechnology(slug: string): TechnologyTopic | undefined {
