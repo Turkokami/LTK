@@ -19,6 +19,7 @@ import { PUBLISHED_STATES, getRegulatory } from '@/lib/content/states';
 import { NATIONAL_BASELINE, PEST_CONTROL_WORKERS } from '@/lib/content/salary';
 import { PayHighlight } from '@/components/ui/PayHighlight';
 import { Photo } from '@/components/ui/Photo';
+import { WildlifeRules, hasWildlifeRules } from '@/components/fields/WildlifeRules';
 import { fieldPhotos } from '@/lib/content/photos';
 import { abs, ID, site } from '@/lib/site.config';
 import { EDITOR } from '@/lib/content/editorial';
@@ -105,6 +106,14 @@ export default async function FieldPage({
   const to = d.movesTo.map(getDiscipline).filter(Boolean) as Discipline[];
   const photos = fieldPhotos(d.slug);
   const isPesticide = d.licensing === 'state-pesticide';
+  const wildlifeView =
+    d.slug === 'wildlife-control'
+      ? ('wildlife' as const)
+      : d.slug === 'bird-abatement'
+        ? ('birds' as const)
+        : d.slug === 'falconry-abatement'
+          ? ('falconry' as const)
+          : null;
   const states = isPesticide ? stateMatches(d) : [];
 
   // BLS counts this field under pest control workers only where the SOC code says so.
@@ -224,6 +233,24 @@ export default async function FieldPage({
                   Ask in the Discord
                 </a>{' '}
                 &mdash; someone there has licensed in it.
+              </p>
+            </>
+          ) : wildlifeView && hasWildlifeRules() ? (
+            <>
+              <p className="prose-bulletin">
+                This field is not licensed through the pesticide programme. Permits come from each
+                state&rsquo;s wildlife agency, and bird work also falls under federal law. Here&rsquo;s
+                what we&rsquo;ve verified so far.
+              </p>
+              <div className="mt-5">
+                <WildlifeRules show={wildlifeView} />
+              </div>
+              <p className="mt-4 text-sm text-ink3">
+                Your state not here yet?{' '}
+                <a href={site.discord.invite} target="_blank" rel="noopener noreferrer" className="link">
+                  Ask in the Discord
+                </a>{' '}
+                &mdash; someone there already holds the permit.
               </p>
             </>
           ) : (
