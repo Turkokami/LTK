@@ -238,9 +238,11 @@ export default async function FieldPage({
           ) : wildlifeView && hasWildlifeRules() ? (
             <>
               <p className="prose-bulletin">
-                This field is not licensed through the pesticide programme. Permits come from each
-                state&rsquo;s wildlife agency, and bird work also falls under federal law. Here&rsquo;s
-                what we&rsquo;ve verified so far.
+                Wildlife and bird work is regulated mainly by each state&rsquo;s wildlife agency, and
+                bird work also falls under federal law. But the line with pest control licensing
+                moves by state: in Texas, Florida and California the structural pest control law
+                reaches parts of this work even without pesticides. Each state card below says
+                where the line falls.
               </p>
               <div className="mt-5">
                 <WildlifeRules show={wildlifeView} />

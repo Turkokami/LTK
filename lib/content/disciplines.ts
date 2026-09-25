@@ -145,7 +145,7 @@ export const DISCIPLINES: Discipline[] = [
     summary: 'Removal, exclusion and damage management for raccoons, squirrels, bats, snakes, birds and other vertebrates.',
     licensing: 'state-wildlife',
     licensingNote:
-      'Usually a state wildlife or nuisance-animal permit, NOT the pesticide licence — a genuinely different agency in most states, and the single most common thing people get wrong when they try to add wildlife work.',
+      'Mainly the state wildlife agency, not the pesticide programme — but the line moves by state. Some states license wildlife control operators, some license nobody, and in several the structural pest control law still covers pesticide use, rodents or birds. Getting this line wrong is the most common mistake when adding wildlife work.',
     routeIn: 'Often from general pest, often from trapping or hunting backgrounds, sometimes straight in. Bat work in particular has hard seasonal legal restrictions you learn before anything else.',
     dayToDay: 'Ladders, roofs, attics and live animals. Physically the hardest lane in the industry and the one with the most variable hours — animals do not respect a route schedule.',
     movesTo: ['exclusion', 'bird-abatement', 'falconry-abatement', 'ownership'],

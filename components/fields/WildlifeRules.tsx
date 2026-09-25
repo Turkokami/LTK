@@ -48,7 +48,11 @@ export function WildlifeRules({ show }: { show: 'wildlife' | 'birds' | 'falconry
 
       {(show === 'birds' || show === 'falconry') && fed ? (
         <LabelBlock title="Federal: Migratory Bird Treaty Act" signal="warning" meta="Applies everywhere">
-          <p>{fed.mbta.summary}</p>
+          {fed.mbta.summary.split('\n').map((para) => (
+            <p key={para.slice(0, 32)} className="mb-2">
+              {para}
+            </p>
+          ))}
           {fed.mbta.unprotectedExamples.length ? (
             <p className="mt-2">
               <strong className="text-ink">Not protected under the Act:</strong>{' '}
@@ -61,30 +65,42 @@ export function WildlifeRules({ show }: { show: 'wildlife' | 'birds' | 'falconry
 
       {show === 'falconry' && fed ? (
         <LabelBlock title="Federal: falconry abatement" signal="danger" meta="Federal permit">
-          <p>{fed.falconryAbatement.summary}</p>
+          {fed.falconryAbatement.summary.split('\n').map((para) => (
+            <p key={para.slice(0, 32)} className="mb-2">
+              {para}
+            </p>
+          ))}
           <Sources citations={fed.falconryAbatement.citations} />
         </LabelBlock>
       ) : null}
 
       {show !== 'falconry' && WILDLIFE_STATES.length ? (
         <ul className="grid gap-3">
+          <li className="text-xs text-ink3">Tap your state for the details.</li>
           {WILDLIFE_STATES.map((r) => {
             const st = STATES.find((s) => s.code === r.code);
             return (
-              <li key={r.code} className="card p-5">
-                <div className="flex items-baseline justify-between gap-3">
-                  <p className="h3">{st?.name ?? r.code}</p>
-                  <p className="mono text-ink3">{r.code}</p>
-                </div>
-                <p className="mt-1 text-xs text-ink3">
-                  <a href={r.agencyUrl} target="_blank" rel="noopener noreferrer" className="link">
-                    {r.agency}
+              <li key={r.code}>
+                <details className="card group p-5 [&[open]]:border-ruleStrong">
+                <summary className="flex cursor-pointer list-none items-start justify-between gap-3 [&::-webkit-details-marker]:hidden">
+                  <span>
+                    <span className="h3 block group-hover:text-blood">{st?.name ?? r.code}</span>
+                    <span className="mt-1 block text-sm text-ink2">
+                      {r.permitName ?? 'No state licence for this work'}
+                    </span>
+                  </span>
+                  <span className="mono shrink-0 text-ink3">
+                    {r.code}{' '}
+                    <span aria-hidden="true" className="inline-block transition-transform group-open:rotate-90">&rsaquo;</span>
+                  </span>
+                </summary>
+                <p className="mt-1 text-xs leading-relaxed text-ink3">
+                  {r.agency}{' '}
+                  <a href={r.agencyUrl} target="_blank" rel="noopener noreferrer" className="link whitespace-nowrap">
+                    Agency page<span className="sr-only"> (opens in a new tab)</span>
                   </a>
                 </p>
-                <p className="mt-3 text-sm font-semibold text-ink">
-                  {r.permitName ?? 'No single named permit — see notes'}
-                </p>
-                <p className="mt-1 text-sm text-ink2">{r.whoNeedsIt}</p>
+                <p className="mt-4 text-sm text-ink">{r.whoNeedsIt}</p>
                 {r.requirements.length ? (
                   <ul className="mt-3 list-disc space-y-1 pl-5 text-sm text-ink2">
                     {r.requirements.map((x) => (
@@ -93,9 +109,13 @@ export function WildlifeRules({ show }: { show: 'wildlife' | 'birds' | 'falconry
                   </ul>
                 ) : null}
                 {r.restrictions.length ? (
-                  <div className="mt-3 rounded-md border border-ruleStrong bg-stock px-3 py-2 text-sm text-ink2">
-                    <span className="mr-2 font-semibold uppercase tracking-wide text-blood">Watch for</span>
-                    {r.restrictions.join(' ')}
+                  <div className="mt-3 rounded-md border border-ruleStrong bg-stock px-4 py-3 text-sm text-ink2">
+                    <p className="mb-2 font-semibold uppercase tracking-wide text-blood">Watch for</p>
+                    <ul className="list-disc space-y-1.5 pl-5">
+                      {r.restrictions.map((x) => (
+                        <li key={x}>{x}</li>
+                      ))}
+                    </ul>
                   </div>
                 ) : null}
                 {r.pesticideLicenceAlsoNeeded ? (
@@ -103,8 +123,14 @@ export function WildlifeRules({ show }: { show: 'wildlife' | 'birds' | 'falconry
                     <strong className="text-ink">Pesticide licence too:</strong> {r.pesticideLicenceAlsoNeeded}
                   </p>
                 ) : null}
-                {r.notes ? <p className="mt-3 text-xs italic text-ink3">{r.notes}</p> : null}
+                {r.readerNote ? (
+                  <p className="mt-3 text-xs leading-relaxed text-ink3">
+                    <span className="font-semibold text-ink2">Before you rely on this: </span>
+                    {r.readerNote}
+                  </p>
+                ) : null}
                 <Sources citations={r.citations} />
+                </details>
               </li>
             );
           })}
