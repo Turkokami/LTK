@@ -95,11 +95,11 @@ export default function AboutPage() {
             </p>
           ))}
           <p className="mb-3 max-w-[70ch] text-ink2">
-            LTK was started by <strong className="text-ink">{site.founder.name}</strong>, a pest
-            technician who built the Discord as a place for people in the trade to meet, talk shop
-            and game together.{' '}
+            LTK was started by <strong className="text-ink">{site.founder.name}</strong>, who built
+            the Discord as a place for people in the trade to meet, talk shop and game together, and
+            hosts the Licensed to Kill Podcast. {site.founder.bio}{' '}
             <a href="/community/podcast/" className="link">
-              Hear him tell the story on the podcast
+              Hear him on the podcast
             </a>
             .
           </p>

@@ -5,7 +5,7 @@ import { JsonLd } from '@/components/JsonLd';
 import { Breadcrumbs } from '@/components/site/Breadcrumbs';
 import { DiscordButton } from '@/components/community/Discord';
 import { VideoEmbed } from '@/components/ace/VideoEmbed';
-import { EPISODES, PODCAST_PATH, formatLength, isoDuration } from '@/lib/content/podcast';
+import { EPISODES, LTK_SHOW, PODCAST_PATH, formatLength, isoDuration } from '@/lib/content/podcast';
 import { abs, ID, site } from '@/lib/site.config';
 
 /**
@@ -68,6 +68,42 @@ export default function PodcastPage() {
           happen in the {site.discord.name}.
         </p>
 
+        <section aria-labelledby="ltk-show" className="discord-band mb-14 p-6 sm:p-8">
+          <div className="grid gap-6 lg:grid-cols-[1fr_1.2fr] lg:items-center">
+            <div>
+              <p className="eyebrow mb-2">Our show</p>
+              <h2 id="ltk-show" className="h2 mb-2">
+                {LTK_SHOW.name}
+              </h2>
+              <p className="mb-4 text-ink2">{LTK_SHOW.blurb}</p>
+              <p className="mb-5 text-sm text-ink3">
+                Start with episode one,{' '}
+                <a href={LTK_SHOW.firstEpisode.url} target="_blank" rel="noopener noreferrer" className="link">
+                  &ldquo;{LTK_SHOW.firstEpisode.title}&rdquo;
+                </a>
+                .
+              </p>
+              <div className="flex flex-wrap gap-2">
+                <a href={LTK_SHOW.spotifyUrl} target="_blank" rel="noopener noreferrer" className="btn">
+                  Listen on Spotify<span className="sr-only"> (opens in a new tab)</span>
+                </a>
+                <DiscordButton variant="ghost">Join the live recordings</DiscordButton>
+              </div>
+            </div>
+            <iframe
+              title={`${LTK_SHOW.name} on Spotify`}
+              src={`https://open.spotify.com/embed/show/${LTK_SHOW.spotifyId}?theme=0`}
+              width="100%"
+              height="232"
+              loading="lazy"
+              allow="clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              className="w-full rounded-[var(--radius)] border-0"
+            />
+          </div>
+        </section>
+
+        <h2 className="h2 mb-5">Marcus on other shows</h2>
+
         {featured ? (
           <section aria-labelledby={featured.slug} className="grid gap-8 lg:grid-cols-[1.4fr_1fr] lg:items-start">
             <VideoEmbed id={featured.youtubeId} title={featured.title} duration={formatLength(featured.lengthSeconds)} />
@@ -91,6 +127,15 @@ export default function PodcastPage() {
                     {featured.show}
                   </a>{' '}
                   &middot; {dateFmt.format(new Date(featured.published))}
+                  {featured.alsoAt?.map((a) => (
+                    <span key={a.url}>
+                      {' '}
+                      &middot;{' '}
+                      <a href={a.url} target="_blank" rel="noopener noreferrer" className="link">
+                        {a.label}
+                      </a>
+                    </span>
+                  ))}
                 </p>
                 <div className="flex flex-wrap gap-2">
                   <DiscordButton>Talk about it on Discord</DiscordButton>
@@ -111,12 +156,22 @@ export default function PodcastPage() {
         {rest.length ? (
           <section aria-labelledby="more-episodes" className="mt-14">
             <h2 id="more-episodes" className="h2 mb-5">
-              More episodes
+              More interviews
             </h2>
             <ul className="grid gap-3 md:grid-cols-2 lg:grid-cols-3">
               {rest.map((e) => (
-                <li key={e.slug}>
+                <li key={e.slug} className="flex flex-col gap-3">
                   <VideoEmbed id={e.youtubeId} title={e.title} duration={formatLength(e.lengthSeconds)} />
+                  <div className="px-1">
+                    <p className="text-sm text-ink2">{e.hook}</p>
+                    <p className="mt-1 text-xs text-ink3">
+                      On{' '}
+                      <a href={e.showUrl} target="_blank" rel="noopener noreferrer" className="link">
+                        {e.show}
+                      </a>{' '}
+                      &middot; {dateFmt.format(new Date(e.published))}
+                    </p>
+                  </div>
                 </li>
               ))}
             </ul>

@@ -18,7 +18,7 @@ function rootNodes(): SchemaNode[] {
     logo: { '@id': ID.logo },
     description: site.description,
     foundingDate: site.founded,
-    founder: { '@type': 'Person', name: site.founder.name, jobTitle: site.founder.role },
+    founder: { '@type': 'Person', name: site.founder.name, jobTitle: site.founder.role, description: site.founder.bio },
     knowsAbout: [...site.knowsAbout],
   };
 

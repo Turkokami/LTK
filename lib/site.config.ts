@@ -75,6 +75,7 @@ export const site = {
   /** Owner-supplied social profiles. Never add a guessed URL. */
   social: {
     linkedin: 'https://www.linkedin.com/in/ltk-licensed-to-kill-824690368/',
+    spotify: 'https://open.spotify.com/show/032iBDHKytatvGWMxtj20h',
   },
 
   /**
@@ -143,6 +144,7 @@ export const site = {
   sameAs: [
     'https://discord.com/invite/3DpNzdEtvs',
     'https://www.linkedin.com/in/ltk-licensed-to-kill-824690368/',
+    'https://open.spotify.com/show/032iBDHKytatvGWMxtj20h',
   ] as string[],
 
   /**
@@ -160,14 +162,16 @@ export const site = {
     'Field service management software',
   ],
 
-  /** Year of the site build. The LTK Discord itself predates it (it was featured on a podcast in
-   *  May 2025) — confirm the community's real founding year with Marcus and update this. */
-  founded: '2026',
+  /** The LTK Discord server's creation date, decoded from its server ID (a Discord snowflake:
+   *  (id >> 22) + 1420070400000 ms). The community predates this website. */
+  founded: '2024-12-14',
 
   /** Source: his May 2025 podcast appearance (lib/content/podcast.ts). Add more only from him. */
   founder: {
     name: 'Marcus Scruggs',
-    role: 'Pest technician and creator of the LTK Discord',
+    role: 'Pest management professional and creator and host of Licensed to Kill',
+    /** From his Pest Perspectives EP 36 bio (lib/content/podcast.ts). */
+    bio: 'More than ten years as a pest management professional, specializing in food safety, audits, sanitation and public health, and a certified applicator.',
   },
 } as const;
 

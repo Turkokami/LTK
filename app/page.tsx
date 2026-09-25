@@ -304,7 +304,7 @@ export default function HomePage() {
               </p>
             ))}
             <p className="mb-4 max-w-[68ch] text-sm text-ink3">
-              Started by {site.founder.name}, a pest technician.{' '}
+              Started by {site.founder.name}, a pest management pro with 10+ years in food safety and audits.{' '}
               <a href="/community/podcast/" className="link">
                 Watch him tell the story
               </a>

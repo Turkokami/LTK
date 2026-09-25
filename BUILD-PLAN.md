@@ -150,7 +150,7 @@ Open sponsor conversations **only now**. Not before the Academy produces traffic
 - [x] ★ `/search/` (noindex), mobile menu, branded 404
 - [ ] ◆ Replace every `placeholder: true` photo in `lib/content/photos.ts` before launch
 - [ ] ◆ K9 detection photos (owner supplying)
-- [ ] ◆ Podcast transcripts (R-11), founding year of the LTK Discord (confirm with Marcus)
+- [ ] ◆ Podcast transcripts (R-11). Founding date set to 2024-12-14 from the Discord server ID — Marcus can correct it
 
 ## Standing workstreams
 

@@ -45,6 +45,16 @@ The LTK Discord pack (photos, gear talk, job leads, pay/pricing talk, ID notes, 
 owner. 52 of 324 photos were excluded in review (people, plates, business names, graphic,
 screenshots, blur, duplicates). Job leads are 2026 posts only and need a monthly prune.
 
+### Crew picks product links and images (2026-09-25)
+
+`lib/content/gear-images.ts` holds a product page and an official image for 34 of 38 picks.
+Owner decision: manufacturer/retailer images, credited "Image: <brand>" and linked. Take down
+any image a brand objects to. Several models are the closest match to what a member described,
+not a confirmed model. Ask the poster to confirm: Lesco (SiteOne 190723), AlienTabi, Dinftin,
+Birchmeier backpack (REC 15 AC1), Thorogood (804-3898), KORE, FLIR (C5), Hilti (TE 30-22),
+roofing anchor (Malta Dynamics, example only). No image: sheet-metal bender, gloves tip, green
+laser (no brand named), Pomerix (SVG only).
+
 ## Not researchable — needs a person
 
 These stay "Rolling out" until the owner or Marcus decides or supplies them:

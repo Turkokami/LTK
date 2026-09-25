@@ -9,7 +9,7 @@ import { CommunityGallery } from '@/components/community/CommunityGallery';
 import { CHEM_TALK, CREW_PICKS, pickId } from '@/lib/content/community';
 import { VotesProvider, VoteButtons } from '@/components/community/Votes';
 import { photosFor } from '@/lib/content/community-photos';
-import { GEAR_IMAGES } from '@/lib/content/gear-images';
+import { GEAR_IMAGES, GEAR_LINKS } from '@/lib/content/gear-images';
 import { site } from '@/lib/site.config';
 
 /**
@@ -82,12 +82,14 @@ export default function CrewPicksPage() {
             <ul className="grid gap-3 md:grid-cols-2">
               {g.picks.map((p) => {
                 const img = GEAR_IMAGES[p.product];
+                const link = GEAR_LINKS[p.product]?.url ?? p.link;
+                const also = GEAR_LINKS[p.product]?.alsoLinks?.length ? GEAR_LINKS[p.product]!.alsoLinks : p.alsoLinks;
                 return (
                   <li key={p.product} className="card flex h-full flex-col overflow-hidden">
                     {img ? (
                       <figure className="m-0 border-b border-rule">
                         <a
-                          href={p.link ?? img.sourceUrl}
+                          href={link ?? img.sourceUrl}
                           target="_blank"
                           rel="noopener noreferrer nofollow"
                           className="flex aspect-[4/3] items-center justify-center bg-white p-4"
@@ -109,9 +111,9 @@ export default function CrewPicksPage() {
                     <div className="flex flex-1 flex-col p-5">
                       <p className="h3 mb-2">{p.product}</p>
                       <p className="mb-4 text-[0.9375rem] leading-relaxed text-ink2">{p.said}</p>
-                      {p.alsoLinks?.length ? (
+                      {also?.length ? (
                         <ul className="mb-4 flex flex-wrap gap-x-4 gap-y-1 text-sm">
-                          {p.alsoLinks.map((l) => (
+                          {also.map((l) => (
                             <li key={l.url}>
                               <a href={l.url} target="_blank" rel="noopener noreferrer nofollow" className="link">
                                 {l.label}
@@ -128,8 +130,8 @@ export default function CrewPicksPage() {
                         <span>
                           {p.who} &middot; {p.when}
                         </span>
-                        {p.link ? (
-                          <a href={p.link} target="_blank" rel="noopener noreferrer nofollow" className="btn btn--ghost !px-3 !py-1.5 !text-xs">
+                        {link ? (
+                          <a href={link} target="_blank" rel="noopener noreferrer nofollow" className="btn btn--ghost !px-3 !py-1.5 !text-xs">
                             View product<span className="sr-only"> (opens in a new tab)</span>
                           </a>
                         ) : null}
