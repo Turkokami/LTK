@@ -1,0 +1,2270 @@
+{
+ "stinging-insects/p1.jpg": {
+  "alt": "Dozens of yellow-and-black yellowjackets crawling over exposed paper comb with capped white cells in a cavity.",
+  "caption": "Yellowjacket colony in wall void",
+  "id": "yellowjackets (Vespula)",
+  "featured": true,
+  "issue": null
+ },
+ "stinging-insects/p2-1.jpg": {
+  "alt": "Removed gray paper wasp comb with hexagonal cells laid on a white roof next to a hand for scale.",
+  "caption": "Removed comb with hand for scale",
+  "id": "wasp nest comb",
+  "featured": false,
+  "issue": null
+ },
+ "stinging-insects/p2-2.jpg": {
+  "alt": "Dozens of dead wasps scattered on a white flat roof around the base of an HVAC unit.",
+  "caption": "Dead wasps around rooftop HVAC",
+  "id": "wasps",
+  "featured": false,
+  "issue": null
+ },
+ "stinging-insects/p11-1.jpg": {
+  "alt": "Large golden honeycomb sheets hanging inside an opened wall cavity next to pink insulation, lit by flashlight.",
+  "caption": "Honey bee comb inside a wall",
+  "id": "honey bee comb",
+  "featured": false,
+  "issue": null
+ },
+ "stinging-insects/p11-2.jpg": {
+  "alt": "Multiple parallel sheets of yellow wax honeycomb built between wall studs beside pink fiberglass insulation.",
+  "caption": "Established honey bee colony in wall",
+  "id": "honey bee comb",
+  "featured": true,
+  "issue": null
+ },
+ "stinging-insects/p33-1.jpg": {
+  "alt": "Porch column with siding removed revealing a large gray paper nest built inside the wooden framing.",
+  "caption": "Paper nest inside porch column",
+  "id": "wasp nest",
+  "featured": true,
+  "issue": "Has a Snapchat caption overlay across the image"
+ },
+ "stinging-insects/p33-2.jpg": {
+  "alt": "Opened porch column showing bare wood framing after a paper nest was removed, next to a front door.",
+  "caption": "Porch column after nest removal",
+  "id": "wasp nest (removed)",
+  "featured": false,
+  "issue": null
+ },
+ "stinging-insects/p79.jpg": {
+  "alt": "Pale green luna moth with long tail streamers hanging beneath a dark metal ledge.",
+  "caption": "Luna moth under a ledge",
+  "id": "luna moth",
+  "featured": false,
+  "issue": "Mis-sorted: luna moth is not a stinging insect"
+ },
+ "stinging-insects/p80-1.jpg": {
+  "alt": "Black wasp with pale yellow bands and smoky dark wings standing on diamond-plate metal.",
+  "caption": "Black-and-yellow wasp on tread plate",
+  "id": "wasp",
+  "featured": false,
+  "issue": null
+ },
+ "stinging-insects/p80-2.jpg": {
+  "alt": "Close view of a black wasp with cream abdominal bands and dark raised wings on diamond plate.",
+  "caption": "Banded black wasp close-up",
+  "id": "wasp",
+  "featured": false,
+  "issue": null
+ },
+ "stinging-insects/p80-3.jpg": {
+  "alt": "Black wasp with yellow bands on its abdomen walking across dark diamond-plate metal.",
+  "caption": "Banded wasp on truck plate",
+  "id": "wasp",
+  "featured": false,
+  "issue": null
+ },
+ "stinging-insects/p86.jpg": {
+  "alt": "Gray papery nest material wedged between split logs in a stacked firewood pile.",
+  "caption": "Paper nest in a woodpile",
+  "id": "wasp nest",
+  "featured": false,
+  "issue": null
+ },
+ "stinging-insects/p205.jpg": {
+  "alt": "Dead black-and-yellow wasp with a long thin waist and yellow legs lying on a stucco surface.",
+  "caption": "Mud dauber specimen",
+  "id": "mud dauber",
+  "featured": false,
+  "issue": null
+ },
+ "stinging-insects/p306.jpg": {
+  "alt": "Open gray paper comb with white capped cells and two emerging wasps attached to a stone surface.",
+  "caption": "Paper wasp nest with capped brood",
+  "id": "paper wasp nest (Polistes)",
+  "featured": true,
+  "issue": null
+ },
+ "stinging-insects/p522-1.jpg": {
+  "alt": "Excavated clump of round yellow-orange wax brood cells and cocoons lying on green lawn grass.",
+  "caption": "Dug-out bumble bee nest",
+  "id": "bumble bee nest",
+  "featured": true,
+  "issue": null
+ },
+ "stinging-insects/p522-2.jpg": {
+  "alt": "Cluster of waxy orange cocoons and opened cells pulled from the ground and resting on grass.",
+  "caption": "Bumble bee brood clump on lawn",
+  "id": "bumble bee nest",
+  "featured": false,
+  "issue": null
+ },
+ "stinging-insects/p563-1.jpg": {
+  "alt": "Dead mouse with dust-matted fur caught in a Victor snap trap on a tiled floor.",
+  "caption": "Mouse in a snap trap",
+  "id": "mouse",
+  "featured": false,
+  "issue": "Mis-sorted: rodent, belongs in rodents"
+ },
+ "stinging-insects/p563-2.jpg": {
+  "alt": "Reddish-brown bed bug on a white mattress seam near a cast skin and dark fecal spots.",
+  "caption": "Bed bug with cast skin and spotting",
+  "id": "bed bug",
+  "featured": false,
+  "issue": "Mis-sorted: bed bug, belongs in bed-bugs"
+ },
+ "stinging-insects/p563-3.jpg": {
+  "alt": "Black spiny larva with orange markings crawling on a dry brown leaf over pavement.",
+  "caption": "Lady beetle larva on a leaf",
+  "id": "lady beetle larva",
+  "featured": false,
+  "issue": "Mis-sorted: beetle larva, not a stinging insect"
+ },
+ "stinging-insects/p563-4.jpg": {
+  "alt": "Paper wasp with long dangling legs and yellow-banded abdomen perched on a white car door.",
+  "caption": "Paper wasp on a vehicle",
+  "id": "paper wasp (Polistes)",
+  "featured": false,
+  "issue": null
+ },
+ "stinging-insects/p563-5.jpg": {
+  "alt": "Small black long-legged ant walking on a speckled concrete surface near a crack.",
+  "caption": "Single ant on concrete",
+  "id": "ants",
+  "featured": false,
+  "issue": "Mis-sorted: appears to be an ant, belongs in ants; also slightly soft focus"
+ },
+ "cockroaches/p4.jpg": {
+  "alt": "Side view of a light brown cockroach carrying a long ridged egg case on a gridded glue board.",
+  "caption": "German cockroach female with ootheca",
+  "id": "German cockroach",
+  "featured": true,
+  "issue": null
+ },
+ "cockroaches/p7-1.jpg": {
+  "alt": "Dense cluster of bed bugs with eggs, cast skins and heavy black fecal spotting on a wood joint.",
+  "caption": "Heavy bed bug harborage",
+  "id": "bed bug",
+  "featured": true,
+  "issue": "Mis-sorted: bed bugs, belongs in bed-bugs"
+ },
+ "cockroaches/p7-2.jpg": {
+  "alt": "Clump of bed bugs and cast skins at the top corner of a wooden panel with fecal spots.",
+  "caption": "Bed bug cluster on furniture corner",
+  "id": "bed bug",
+  "featured": false,
+  "issue": "Mis-sorted: bed bugs, belongs in bed-bugs"
+ },
+ "cockroaches/p454.jpg": {
+  "alt": "Screenshot of a social media post showing several small cockroach nymphs and droppings on a wall.",
+  "caption": "Cockroach nymphs posted for ID",
+  "id": "cockroach nymphs",
+  "featured": false,
+  "issue": "Screenshot of a Facebook group post with visible post text and group name"
+ },
+ "cockroaches/t25.jpg": {
+  "alt": "Glue trap covered with dozens of tan adult and nymph cockroaches around a bait packet.",
+  "caption": "Loaded glue trap of German roaches",
+  "id": "German cockroach",
+  "featured": false,
+  "issue": "Appears to be a screenshot or video frame with letterbox border; lower resolution"
+ },
+ "spiders-scorpions/p12.jpg": {
+  "alt": "Brown widow spider beside a cluster of tan, spiky round egg sacs in webbing on a white window frame.",
+  "caption": "Brown widow with spiky egg sacs",
+  "id": "brown widow (Latrodectus geometricus)",
+  "featured": true,
+  "issue": null
+ },
+ "spiders-scorpions/p14.jpg": {
+  "alt": "Glossy black spider with red markings on its round abdomen hanging in web among dry grass.",
+  "caption": "Widow spider with red markings",
+  "id": "widow spider (Latrodectus)",
+  "featured": true,
+  "issue": null
+ },
+ "spiders-scorpions/p15.jpg": {
+  "alt": "Glue board inside a monitoring station holding several long-legged spiders, ground beetles and a cricket.",
+  "caption": "Spiders and beetles on a glue board",
+  "id": "spiders",
+  "featured": false,
+  "issue": "Competitor-branded (Orkin) station label is readable"
+ },
+ "spiders-scorpions/p81.jpg": {
+  "alt": "Orange moth with cream-spotted, orange-veined wings resting on a dark surface.",
+  "caption": "Large moth on a vehicle",
+  "id": "moth",
+  "featured": false,
+  "issue": "Mis-sorted: moth, not a spider or scorpion"
+ },
+ "spiders-scorpions/p82.jpg": {
+  "alt": "Hairy tan spider with spiny legs facing the camera on a sunlit stone ledge.",
+  "caption": "Orb weaver on stone ledge",
+  "id": "orb weaver spider",
+  "featured": false,
+  "issue": null
+ },
+ "spiders-scorpions/p92.jpg": {
+  "alt": "Small black hairy jumping spider with an orange spot on its abdomen on speckled granite.",
+  "caption": "Jumping spider on granite",
+  "id": "jumping spider",
+  "featured": false,
+  "issue": null
+ },
+ "spiders-scorpions/p119-1.jpg": {
+  "alt": "Mottled tan spider with long banded legs spread sideways on a dark speckled surface.",
+  "caption": "Long-legged spider under light",
+  "id": "spider",
+  "featured": false,
+  "issue": "Phone screenshot with large black letterbox bars; low resolution"
+ },
+ "spiders-scorpions/p119-2.jpg": {
+  "alt": "Brown hairy spider hunched on sandy ground beside a scrap of green paper.",
+  "caption": "Spider in a dirt corner",
+  "id": "spider",
+  "featured": false,
+  "issue": "Blurry"
+ },
+ "spiders-scorpions/p121.jpg": {
+  "alt": "Dark silhouette of a large long-legged spider gripping a window screen from the underside.",
+  "caption": "Large spider on window screen",
+  "id": "spider",
+  "featured": false,
+  "issue": null
+ },
+ "spiders-scorpions/p174.jpg": {
+  "alt": "Close-up of a fuzzy gray-and-white jumping spider with large forward-facing eyes on a mesh screen.",
+  "caption": "Jumping spider eyes close-up",
+  "id": "jumping spider",
+  "featured": true,
+  "issue": null
+ },
+ "spiders-scorpions/p194.jpg": {
+  "alt": "Shiny dark brown spider with a round abdomen on a textured light gray wall.",
+  "caption": "Cobweb spider on stucco",
+  "id": "cobweb spider (Theridiidae)",
+  "featured": false,
+  "issue": null
+ },
+ "spiders-scorpions/p498.jpg": {
+  "alt": "Pale tan scorpion with a dark back caught on a glue board next to a U.S. quarter for scale.",
+  "caption": "Scorpion on glue board with quarter",
+  "id": "scorpion",
+  "featured": true,
+  "issue": null
+ },
+ "spiders-scorpions/p499.jpg": {
+  "alt": "Tan scorpion with a dark body and hairy tail stuck to a glue board beside a coin.",
+  "caption": "Scorpion captured on glue board",
+  "id": "scorpion",
+  "featured": false,
+  "issue": null
+ },
+ "ants/p16.jpg": {
+  "alt": "Weathered, splintered wooden board with small bored holes and channels along the grain, held above a patio.",
+  "caption": "Damaged wood with gallery holes",
+  "id": "wood damage",
+  "featured": false,
+  "issue": "Unclear whether ant, termite or beetle damage; may belong in termites-wdo"
+ },
+ "ants/p64.jpg": {
+  "alt": "Two winged reddish-brown insects with clear wings resting on a white sticky trap surface.",
+  "caption": "Winged swarmers on a sticky trap",
+  "id": "winged ants (alates)",
+  "featured": false,
+  "issue": null
+ },
+ "ants/p65.jpg": {
+  "alt": "Close view of a reddish winged ant with elbowed antennae and clear wings stuck to a white glue board.",
+  "caption": "Winged ant alate on glue board",
+  "id": "winged ant (alate)",
+  "featured": false,
+  "issue": null
+ },
+ "ants/p88-1.jpg": {
+  "alt": "Small reddish-brown ant with a dark rounded gaster standing in the palm of a hand.",
+  "caption": "Fire ant worker in palm",
+  "id": "fire ant (Solenopsis)",
+  "featured": false,
+  "issue": null
+ },
+ "ants/p88-2.jpg": {
+  "alt": "Tiny reddish ant walking across the palm of an open hand in bright sunlight.",
+  "caption": "Fire ant worker for scale",
+  "id": "fire ant (Solenopsis)",
+  "featured": false,
+  "issue": null
+ },
+ "ants/p88-3.jpg": {
+  "alt": "A small reddish ant on a finger near a blue silicone ring, showing its tiny size.",
+  "caption": "Worker ant on finger for scale",
+  "id": "fire ant (Solenopsis)",
+  "featured": false,
+  "issue": null
+ },
+ "ants/p88-4.jpg": {
+  "alt": "Reddish ant with a darker abdomen crossing the lower palm of a hand.",
+  "caption": "Fire ant worker close-up",
+  "id": "fire ant (Solenopsis)",
+  "featured": false,
+  "issue": null
+ },
+ "ants/p97-1.jpg": {
+  "alt": "Dense mass of orange worker ants tending white brood in soil at the bottom of a teal plant pot.",
+  "caption": "Ant colony with brood in a pot",
+  "id": "fire ants (Solenopsis)",
+  "featured": false,
+  "issue": null
+ },
+ "ants/p97-2.jpg": {
+  "alt": "Orange worker ants of varied sizes swarming over white larvae and pupae in potting soil inside a teal container.",
+  "caption": "Polymorphic workers tending brood",
+  "id": "fire ants (Solenopsis)",
+  "featured": true,
+  "issue": null
+ },
+ "ants/p175.jpg": {
+  "alt": "Hundreds of tiny yellow-and-black spiderlings clustered on silk webbing in a corner.",
+  "caption": "Spiderling cluster on silk",
+  "id": "spiderlings",
+  "featured": false,
+  "issue": "Mis-sorted: shows spiderlings, not ants; belongs in spiders-scorpions"
+ },
+ "ants/p176.jpg": {
+  "alt": "A tight clump of reddish-brown ants balled together on wet, gravelly pavement.",
+  "caption": "Ant cluster on wet pavement",
+  "id": "ants",
+  "featured": false,
+  "issue": null
+ },
+ "ants/p177.jpg": {
+  "alt": "Ants gathered in a dense, tangled ball on damp asphalt with scattered stones.",
+  "caption": "Clumped ants after rain",
+  "id": "ants",
+  "featured": false,
+  "issue": null
+ },
+ "ants/p207.jpg": {
+  "alt": "Reddish-brown ants trailing along a caulk seam where a textured wall meets white trim.",
+  "caption": "Ant trail along a trim seam",
+  "id": "ants",
+  "featured": false,
+  "issue": null
+ },
+ "ants/p213.jpg": {
+  "alt": "Macro view of glossy red ants with large heads crawling over pale pupae and larvae in a nest.",
+  "caption": "Workers over pupae in the nest",
+  "id": "ants",
+  "featured": true,
+  "issue": null
+ },
+ "ants/p231.jpg": {
+  "alt": "Dozens of long-legged ants swarming a bait placement at the base of a black door frame.",
+  "caption": "Ants swarming bait at a door",
+  "id": "ants",
+  "featured": false,
+  "issue": null
+ },
+ "ants/p280.jpg": {
+  "alt": "Many small reddish-brown ants crowding across crumbly sandy soil beside a blade of grass.",
+  "caption": "Active ant mound surface",
+  "id": "ants",
+  "featured": false,
+  "issue": null
+ },
+ "ants/p307.jpg": {
+  "alt": "Single reddish ant with a dark abdomen walking on a light wood-grain laminate floor.",
+  "caption": "Worker ant on indoor flooring",
+  "id": "ants",
+  "featured": false,
+  "issue": null
+ },
+ "ants/p310-1.jpg": {
+  "alt": "Blurry pale-orange winged insect with detached-looking wings on a light textured surface.",
+  "caption": "Winged swarmer indoors",
+  "id": "winged ant (alate)",
+  "featured": false,
+  "issue": "Blurry, low detail"
+ },
+ "ants/p310-2.jpg": {
+  "alt": "Pale orange winged ant with translucent wings on a light gray textured surface near a rim.",
+  "caption": "Winged ant swarmer indoors",
+  "id": "winged ant (alate)",
+  "featured": false,
+  "issue": "Soft focus"
+ },
+ "ants/p332.jpg": {
+  "alt": "Small dark ants tending large white pupae and larvae on a reddish plant-pot saucer.",
+  "caption": "Nest with brood under a saucer",
+  "id": "ants",
+  "featured": true,
+  "issue": null
+ },
+ "ants/p353-1.jpg": {
+  "alt": "Two ants with red thoraxes and black abdomens walking on gray painted siding.",
+  "caption": "Carpenter ants on siding",
+  "id": "carpenter ants (Camponotus)",
+  "featured": false,
+  "issue": null
+ },
+ "ants/p353-2.jpg": {
+  "alt": "Red-and-black ants foraging on gray painted wood siding beside a white trim board.",
+  "caption": "Foraging carpenter ants",
+  "id": "carpenter ants (Camponotus)",
+  "featured": false,
+  "issue": "Slightly blurry"
+ },
+ "ants/p353-3.jpg": {
+  "alt": "Two large ants with reddish bodies and black gasters crossing gray siding near a corner.",
+  "caption": "Carpenter ant foragers",
+  "id": "carpenter ants (Camponotus)",
+  "featured": false,
+  "issue": null
+ },
+ "ants/p354.jpg": {
+  "alt": "Pair of red-bodied ants with black abdomens on gray exterior siding next to white trim.",
+  "caption": "Red-and-black ants on exterior",
+  "id": "carpenter ants (Camponotus)",
+  "featured": false,
+  "issue": null
+ },
+ "ants/p545-1.jpg": {
+  "alt": "Glossy black ant with a large abdomen walking on a white paper surface.",
+  "caption": "Black worker ant close-up",
+  "id": "ants",
+  "featured": false,
+  "issue": null
+ },
+ "ants/p545-2.jpg": {
+  "alt": "Shiny black ant on white paper just below a fingertip for scale.",
+  "caption": "Black ant with finger for scale",
+  "id": "ants",
+  "featured": false,
+  "issue": null
+ },
+ "ants/p545-3.jpg": {
+  "alt": "Small black ant moving along a dusty white wall edge with scattered lint.",
+  "caption": "Black ant on interior wall",
+  "id": "ants",
+  "featured": false,
+  "issue": null
+ },
+ "ants/p545-4.jpg": {
+  "alt": "Tiny dark ant on a glossy white surface such as a sink or counter.",
+  "caption": "Small ant on white surface",
+  "id": "ants",
+  "featured": false,
+  "issue": null
+ },
+ "ants/p572-1.jpg": {
+  "alt": "Wall stud and paper-faced insulation covered with earthen mud tubes above a plastic vapor barrier.",
+  "caption": "Mud tubes on wall framing",
+  "id": "termite damage",
+  "featured": false,
+  "issue": "Mis-sorted: shows termite damage with mud tubes, belongs in termites-wdo"
+ },
+ "ants/p572-2.jpg": {
+  "alt": "Hand holding a piece of wood hollowed into layered galleries beside damaged framing under a window.",
+  "caption": "Galleried wood from wall framing",
+  "id": "termite damage",
+  "featured": false,
+  "issue": "Mis-sorted: shows termite damage with mud tubes, belongs in termites-wdo"
+ },
+ "ants/p572-3.jpg": {
+  "alt": "Deteriorated, layered wood stud next to torn fiberglass insulation inside an opened wall.",
+  "caption": "Damaged stud behind insulation",
+  "id": "termite damage",
+  "featured": false,
+  "issue": "Mis-sorted: shows termite damage with mud tubes, belongs in termites-wdo"
+ },
+ "ants/p572-4.jpg": {
+  "alt": "Soil, mud and crumbled wood debris packed at the base of an opened wall cavity.",
+  "caption": "Soil packing at sill plate",
+  "id": "termite damage",
+  "featured": false,
+  "issue": "Mis-sorted: shows termite damage with mud tubes, belongs in termites-wdo"
+ },
+ "ants/p572-5.jpg": {
+  "alt": "Wall stud and paper-faced insulation covered with earthen mud tubes above a plastic vapor barrier.",
+  "caption": "Mud tubes on wall framing",
+  "id": "termite damage",
+  "featured": false,
+  "issue": "Mis-sorted: shows termite damage with mud tubes, belongs in termites-wdo; exact duplicate of p572-1"
+ },
+ "ants/p572-6.jpg": {
+  "alt": "Hand holding a piece of wood hollowed into layered galleries beside damaged framing under a window.",
+  "caption": "Galleried wood from wall framing",
+  "id": "termite damage",
+  "featured": false,
+  "issue": "Mis-sorted: shows termite damage with mud tubes, belongs in termites-wdo; exact duplicate of p572-2"
+ },
+ "ants/p572-7.jpg": {
+  "alt": "Deteriorated, layered wood stud next to torn fiberglass insulation inside an opened wall.",
+  "caption": "Damaged stud behind insulation",
+  "id": "termite damage",
+  "featured": false,
+  "issue": "Mis-sorted: shows termite damage with mud tubes, belongs in termites-wdo; exact duplicate of p572-3"
+ },
+ "ants/p572-8.jpg": {
+  "alt": "Soil, mud and crumbled wood debris packed at the base of an opened wall cavity.",
+  "caption": "Soil packing at sill plate",
+  "id": "termite damage",
+  "featured": false,
+  "issue": "Mis-sorted: shows termite damage with mud tubes, belongs in termites-wdo; exact duplicate of p572-4"
+ },
+ "bed-bugs/p110.jpg": {
+  "alt": "Small reddish-brown striped bed bug lying on a speckled gray floor surface.",
+  "caption": "Bed bug on floor",
+  "id": "bed bug",
+  "featured": false,
+  "issue": "Slightly blurry"
+ },
+ "bed-bugs/p172.jpg": {
+  "alt": "Macro view of an adult bed bug with pale nymphs on gray carpet fibers.",
+  "caption": "Adult bed bug with nymphs",
+  "id": "bed bug",
+  "featured": true,
+  "issue": null
+ },
+ "bed-bugs/p230.jpg": {
+  "alt": "Technician in a white protective suit spraying an upright mattress using a hose and wheeled gas cylinder.",
+  "caption": "Mattress treatment in progress",
+  "id": "bed bug treatment",
+  "featured": false,
+  "issue": "Technician's face visible in profile at right edge; confirm consent or crop"
+ },
+ "fabric-pests/p37.jpg": {
+  "alt": "Small tan moth with long curved antennae and folded wings under magnification on a white surface.",
+  "caption": "Small moth under magnification",
+  "id": "moth",
+  "featured": false,
+  "issue": null
+ },
+ "flies-gnats/p132.jpg": {
+  "alt": "Tiny tan fly with iridescent wings and a humped thorax on a textured surface.",
+  "caption": "Small fly with iridescent wings",
+  "id": "small fly",
+  "featured": true,
+  "issue": null
+ },
+ "flies-gnats/p249.jpg": {
+  "alt": "Decomposed lizard carcass with droppings on a ceiling tile above pink attic insulation and wiring.",
+  "caption": "Carcass in a drop ceiling",
+  "id": "dead lizard",
+  "featured": false,
+  "issue": "Possibly mis-sorted: dead animal/carcass may belong in wildlife or sanitation-conducive"
+ },
+ "flies-gnats/p283.jpg": {
+  "alt": "Several small dark winged insects clustered along the edge of a white wall or ceiling.",
+  "caption": "Gnats gathered at a ceiling edge",
+  "id": "gnats",
+  "featured": false,
+  "issue": "Blurry; insects not identifiable"
+ },
+ "flies-gnats/p298-1.jpg": {
+  "alt": "Dead dark gnat with long pale legs and wings lying on the palm of a hand.",
+  "caption": "Dead gnat in palm",
+  "id": "gnat",
+  "featured": false,
+  "issue": null
+ },
+ "flies-gnats/p298-2.jpg": {
+  "alt": "Small gray gnat with long thin legs resting on the palm of a hand.",
+  "caption": "Gnat specimen on hand",
+  "id": "gnat",
+  "featured": false,
+  "issue": null
+ },
+ "flies-gnats/p298-3.jpg": {
+  "alt": "Crumpled dead gnat with long legs on the skin of a palm, slightly out of focus.",
+  "caption": "Gnat specimen close-up",
+  "id": "gnat",
+  "featured": false,
+  "issue": "Soft focus"
+ },
+ "mosquito-vector/p288.jpg": {
+  "alt": "Upturned irrigation valve box lid with every grid cell holding standing rainwater and leaves.",
+  "caption": "Valve box lid holding water",
+  "id": "mosquito breeding site",
+  "featured": true,
+  "issue": null
+ },
+ "mosquito-vector/p375-1.jpg": {
+  "alt": "Broken buried drain pipe exposed in soil with debris and standing water inside.",
+  "caption": "Broken drain pipe holding water",
+  "id": "mosquito breeding site",
+  "featured": false,
+  "issue": null
+ },
+ "mosquito-vector/p375-2.jpg": {
+  "alt": "Discarded blue foil bag and an old ball in leaf litter behind a chain-link fence.",
+  "caption": "Litter that can hold water",
+  "id": "mosquito breeding site",
+  "featured": false,
+  "issue": null
+ },
+ "mosquito-vector/p375-3.jpg": {
+  "alt": "Rotted rafter tails and roof decking exposed under an open soffit on a sided house.",
+  "caption": "Rotted eave and open soffit",
+  "id": "wood rot",
+  "featured": false,
+  "issue": "Possibly mis-sorted: moisture/wood-rot damage fits exclusion or conducive conditions better"
+ },
+ "ticks/p101.jpg": {
+  "alt": "Magnified tick with an ornate cream-and-reddish patterned back on a white background.",
+  "caption": "Ornate dog tick under magnification",
+  "id": "Dermacentor tick (dog tick)",
+  "featured": true,
+  "issue": null
+ },
+ "termites-wdo/p158-1.jpg": {
+  "alt": "Large bullet-shaped mottled brown and black beetle with big eyes resting on a textured white wall.",
+  "caption": "Metallic wood-boring beetle on siding",
+  "id": "metallic wood-boring beetle (Buprestidae)",
+  "featured": false,
+  "issue": null
+ },
+ "termites-wdo/p158-2.jpg": {
+  "alt": "Close view of a sculptured brown and black wood-boring beetle clinging to painted stucco near the ground.",
+  "caption": "Buprestid beetle, closer look",
+  "id": "metallic wood-boring beetle (Buprestidae)",
+  "featured": false,
+  "issue": null
+ },
+ "termites-wdo/p158-3.jpg": {
+  "alt": "Top-down view of a ridged brown and black wood-boring beetle on a pale wall above gravel, photographer's shadow below.",
+  "caption": "Wood-boring beetle, dorsal view",
+  "id": "metallic wood-boring beetle (Buprestidae)",
+  "featured": true,
+  "issue": null
+ },
+ "termites-wdo/p164-1.jpg": {
+  "alt": "Small brown fly with clear veined wings and long legs stuck on a white sticky trap card.",
+  "caption": "Small fly on sticky card",
+  "id": "small fly",
+  "featured": false,
+  "issue": "Flies on a light-trap glue card, not termites; likely belongs in flies-gnats"
+ },
+ "termites-wdo/p164-2.jpg": {
+  "alt": "Fingers holding the edge of a white plug-in light trap with small flies stuck to its glue insert.",
+  "caption": "Light trap catch, small flies",
+  "id": "small flies",
+  "featured": false,
+  "issue": "Flies on a light-trap glue card, not termites; likely belongs in flies-gnats"
+ },
+ "termites-wdo/p164-3.jpg": {
+  "alt": "Branded purple-printed glue insert from a plug-in trap covered with dozens of small flies.",
+  "caption": "Loaded fly trap insert",
+  "id": "small flies",
+  "featured": false,
+  "issue": "Flies on a branded light-trap insert, not termites; likely belongs in flies-gnats"
+ },
+ "termites-wdo/p296.jpg": {
+  "alt": "Core-drilled hole in a concrete slab beside the removed concrete core and a red drill bit housing.",
+  "caption": "Slab core drilled for treatment",
+  "id": null,
+  "featured": false,
+  "issue": null
+ },
+ "termites-wdo/p356-1.jpg": {
+  "alt": "Broken-open mud tube at the base of a brick foundation exposing pale termite workers under a flashlight.",
+  "caption": "Live subterranean termites in tube",
+  "id": "subterranean termites",
+  "featured": true,
+  "issue": null
+ },
+ "termites-wdo/p356-2.jpg": {
+  "alt": "Technician in a cap and gloves kneeling on grass, shining a flashlight along a brick foundation.",
+  "caption": "Flashlight inspection at the foundation",
+  "id": null,
+  "featured": false,
+  "issue": "Person is the subject; face partly visible in profile"
+ },
+ "termites-wdo/p358.jpg": {
+  "alt": "Massive free-standing mud tube rising from a wood floor to the bottom of an interior door casing.",
+  "caption": "Huge interior termite mud tube",
+  "id": "subterranean termites",
+  "featured": true,
+  "issue": null
+ },
+ "termites-wdo/t1.jpg": {
+  "alt": "Dozens of pale cream termites swarming over an opened gallery in soil and debris in sunlight.",
+  "caption": "Exposed termite colony activity",
+  "id": "subterranean termites",
+  "featured": true,
+  "issue": null
+ },
+ "termites-wdo/t2-1.jpg": {
+  "alt": "Thin mud tube climbing a concrete foundation corner up to wood framing, with a second tube patch nearby.",
+  "caption": "Mud tube up to the framing",
+  "id": "subterranean termites",
+  "featured": true,
+  "issue": null
+ },
+ "termites-wdo/t2-2.jpg": {
+  "alt": "Close view of branching mud tubes running across a gray concrete foundation edge beside painted siding.",
+  "caption": "Branching tubes on slab edge",
+  "id": "subterranean termites",
+  "featured": false,
+  "issue": null
+ },
+ "termites-wdo/t3-1.jpg": {
+  "alt": "White interior door jamb dotted with small dark mud spots along its length beside a hinge.",
+  "caption": "Mud spotting on a door jamb",
+  "id": "subterranean termite evidence",
+  "featured": true,
+  "issue": null
+ },
+ "termites-wdo/t3-2.jpg": {
+  "alt": "Line of small dark mud spots running down an interior wall corner below crown molding.",
+  "caption": "Mud spots in a wall corner",
+  "id": "subterranean termite evidence",
+  "featured": false,
+  "issue": null
+ },
+ "termites-wdo/t4.jpg": {
+  "alt": "Dark mud tube spreading up a concrete foundation from a mulch bed at the soil line.",
+  "caption": "Tube coming out of the mulch",
+  "id": "subterranean termites",
+  "featured": false,
+  "issue": null
+ },
+ "termites-wdo/t5.jpg": {
+  "alt": "Mud tube running up a concrete foundation from soil and fallen oak leaves.",
+  "caption": "Foundation tube at soil line",
+  "id": "subterranean termites",
+  "featured": false,
+  "issue": null
+ },
+ "termites-wdo/t7-1.jpg": {
+  "alt": "Freshly dug trench of sandy soil along a brick foundation with the white slab edge exposed.",
+  "caption": "Trench for liquid termiticide",
+  "id": null,
+  "featured": false,
+  "issue": null
+ },
+ "termites-wdo/t7-2.jpg": {
+  "alt": "Long view of a trench dug along a red brick wall exposing the slab edge next to a hose bib.",
+  "caption": "Foundation trench ready to treat",
+  "id": null,
+  "featured": false,
+  "issue": null
+ },
+ "termites-wdo/t8-1.jpg": {
+  "alt": "Door jamb with painted trim peeled back revealing wood hollowed into layered galleries and packed soil.",
+  "caption": "Termite-gutted door jamb",
+  "id": "termite damage",
+  "featured": false,
+  "issue": null
+ },
+ "termites-wdo/t8-2.jpg": {
+  "alt": "Close view of a door frame opened up to show wood eaten into thin layers lined with soil.",
+  "caption": "Layered gallery damage in trim",
+  "id": "termite damage",
+  "featured": true,
+  "issue": null
+ },
+ "termites-wdo/t9-1.jpg": {
+  "alt": "Wide reddish-brown mud tube running vertically over a rough gray concrete surface.",
+  "caption": "Wide mud tube on concrete",
+  "id": "subterranean termites",
+  "featured": false,
+  "issue": null
+ },
+ "termites-wdo/t9-2.jpg": {
+  "alt": "Flashlight illuminating a mud tube running down a block foundation wall below dark insulation.",
+  "caption": "Tube on block wall, crawlspace",
+  "id": "subterranean termites",
+  "featured": false,
+  "issue": null
+ },
+ "termites-wdo/t9-3.jpg": {
+  "alt": "Mud tube climbing the inside corner of a block foundation up to the wood sill.",
+  "caption": "Corner tube to the sill plate",
+  "id": "subterranean termites",
+  "featured": false,
+  "issue": null
+ },
+ "termites-wdo/t9-4.jpg": {
+  "alt": "Soil and debris packed where a round timber and sill meet a rusty metal termite shield.",
+  "caption": "Soil bridging the termite shield",
+  "id": "subterranean termite evidence",
+  "featured": true,
+  "issue": null
+ },
+ "termites-wdo/p530-1.jpg": {
+  "alt": "Porch column with its cladding removed, exposing a large gray papery nest built inside the framing.",
+  "caption": "Nest inside a porch column",
+  "id": "stinging insect nest (paper nest)",
+  "featured": false,
+  "issue": "Wasp/hornet paper nest, not termites; mis-sorted (stinging-insects). Snapchat-style caption overlay on image"
+ },
+ "termites-wdo/p530-2.jpg": {
+  "alt": "Same opened porch column after cleanout, showing bare studs and sheathing under the soffit.",
+  "caption": "Porch column after nest removal",
+  "id": null,
+  "featured": false,
+  "issue": "Follow-up to a wasp/hornet nest removal, not termites; mis-sorted (stinging-insects)"
+ },
+ "termites-wdo/p534.jpg": {
+  "alt": "Kitchen wall behind a pulled-out appliance heavily speckled with dark spots around an outlet and cord outline.",
+  "caption": "Heavy spotting behind an appliance",
+  "id": null,
+  "featured": false,
+  "issue": "Evidence type unclear (not obviously termite); possibly cockroach spotting, may be mis-sorted"
+ },
+ "stored-product-pests/p70-1.jpg": {
+  "alt": "Slender brown beetle with ridged wing covers and toothed thorax edges on a pink surface.",
+  "caption": "Saw-toothed thorax up close",
+  "id": "Oryzaephilus grain beetle (sawtoothed or merchant)",
+  "featured": false,
+  "issue": null
+ },
+ "stored-product-pests/p70-2.jpg": {
+  "alt": "Flattened brown grain beetle with beaded antennae and a toothed thorax on a pink background.",
+  "caption": "Oryzaephilus beetle, dorsal view",
+  "id": "Oryzaephilus grain beetle (sawtoothed or merchant)",
+  "featured": false,
+  "issue": null
+ },
+ "stored-product-pests/p71.jpg": {
+  "alt": "Sharp macro of a slender reddish-brown beetle with six teeth on each side of its thorax.",
+  "caption": "Grain beetle thorax teeth",
+  "id": "Oryzaephilus grain beetle (sawtoothed or merchant)",
+  "featured": true,
+  "issue": null
+ },
+ "stored-product-pests/p167-1.jpg": {
+  "alt": "Tiny cylindrical dark brown beetle with its head tucked under the thorax on a blue glove.",
+  "caption": "Bostrichid beetle on a glove",
+  "id": "bostrichid beetle (consistent with lesser grain borer)",
+  "featured": false,
+  "issue": null
+ },
+ "stored-product-pests/p167-2.jpg": {
+  "alt": "Small dark cylindrical beetle lying on its side on a blue nitrile glove.",
+  "caption": "Grain borer, side view",
+  "id": "bostrichid beetle (consistent with lesser grain borer)",
+  "featured": false,
+  "issue": null
+ },
+ "stored-product-pests/p167-3.jpg": {
+  "alt": "Small cylindrical beetle seen from above on a blue glove, pitted wing covers visible.",
+  "caption": "Grain borer from above",
+  "id": "bostrichid beetle (consistent with lesser grain borer)",
+  "featured": false,
+  "issue": null
+ },
+ "stored-product-pests/p169-1.jpg": {
+  "alt": "Reddish-brown cylindrical beetle with a rounded hooded thorax and clubbed antennae on a blue glove.",
+  "caption": "Hooded thorax of a grain borer",
+  "id": "bostrichid beetle (consistent with lesser grain borer)",
+  "featured": false,
+  "issue": null
+ },
+ "stored-product-pests/p169-2.jpg": {
+  "alt": "Small brown cylindrical beetle walking across a creased blue glove.",
+  "caption": "Grain borer on the glove",
+  "id": "bostrichid beetle (consistent with lesser grain borer)",
+  "featured": false,
+  "issue": null
+ },
+ "stored-product-pests/p169-3.jpg": {
+  "alt": "Brown cylindrical beetle on a blue glove with a dark background behind the hand.",
+  "caption": "Grain borer specimen",
+  "id": "bostrichid beetle (consistent with lesser grain borer)",
+  "featured": false,
+  "issue": null
+ },
+ "stored-product-pests/p170-1.jpg": {
+  "alt": "Clear view of a reddish-brown cylindrical beetle with pitted wing covers on a blue glove.",
+  "caption": "Lesser grain borer type beetle",
+  "id": "bostrichid beetle (consistent with lesser grain borer)",
+  "featured": true,
+  "issue": null
+ },
+ "stored-product-pests/p170-2.jpg": {
+  "alt": "Same reddish-brown cylindrical beetle on a blue glove, slightly different angle.",
+  "caption": "Grain borer, second angle",
+  "id": "bostrichid beetle (consistent with lesser grain borer)",
+  "featured": false,
+  "issue": null
+ },
+ "stored-product-pests/p170-3.jpg": {
+  "alt": "Small reddish cylindrical beetle on a pale gray-green surface, slightly out of focus.",
+  "caption": "Grain borer on a light surface",
+  "id": "bostrichid beetle (consistent with lesser grain borer)",
+  "featured": false,
+  "issue": null
+ },
+ "stored-product-pests/p181-1.jpg": {
+  "alt": "Dark brown oval beetle with long legs walking on a white textured paper towel.",
+  "caption": "Dark beetle on paper towel",
+  "id": "beetle (unconfirmed)",
+  "featured": false,
+  "issue": null
+ },
+ "stored-product-pests/p181-2.jpg": {
+  "alt": "Elongate dark brown beetle on its side on a white paper towel, legs raised.",
+  "caption": "Unknown dark beetle, side view",
+  "id": "beetle (unconfirmed)",
+  "featured": false,
+  "issue": "Soft focus; ID features not visible"
+ },
+ "stored-product-pests/p181-3.jpg": {
+  "alt": "Slender dark beetle with long antennae crawling on a white paper towel.",
+  "caption": "Dark beetle for ID",
+  "id": "beetle (unconfirmed)",
+  "featured": false,
+  "issue": null
+ },
+ "stored-product-pests/p250.jpg": {
+  "alt": "Blurry dark brown beetle with sparse pale hairs on a white textured surface.",
+  "caption": "Dark beetle, needs a better shot",
+  "id": "beetle (unconfirmed)",
+  "featured": false,
+  "issue": "Blurry; ID not possible from this image"
+ },
+ "stored-product-pests/p251.jpg": {
+  "alt": "Small dark brown oblong beetle with pale-tipped antennae on white fabric.",
+  "caption": "Small dark beetle",
+  "id": "beetle (unconfirmed)",
+  "featured": false,
+  "issue": "Very low resolution (225px); may be a web/reference image rather than a member photo"
+ },
+ "stored-product-pests/p254.jpg": {
+  "alt": "Digital microscope screen showing two hairy, segmented tan beetle larvae side by side.",
+  "caption": "Dermestid larvae under the scope",
+  "id": "dermestid larvae",
+  "featured": true,
+  "issue": null
+ },
+ "stored-product-pests/p256-1.jpg": {
+  "alt": "Hairy tan larvae, shed skins and powdery debris scattered along a painted wall-floor edge.",
+  "caption": "Larvae and frass along a baseboard",
+  "id": "dermestid larvae",
+  "featured": false,
+  "issue": null
+ },
+ "stored-product-pests/p256-2.jpg": {
+  "alt": "Single hairy oval tan larva on a glossy white painted surface near debris.",
+  "caption": "Hairy larva on shelf",
+  "id": "dermestid larva",
+  "featured": false,
+  "issue": null
+ },
+ "stored-product-pests/p256-3.jpg": {
+  "alt": "Cluster of hairy tan larvae with bristly tails on a white painted surface.",
+  "caption": "Dermestid larvae cluster",
+  "id": "dermestid larvae",
+  "featured": true,
+  "issue": null
+ },
+ "stored-product-pests/p380-1.jpg": {
+  "alt": "Tiny slender brown beetle with a toothed thorax on white plastic between gloved fingers.",
+  "caption": "Grain beetle on inspection sheet",
+  "id": "Oryzaephilus grain beetle (sawtoothed or merchant)",
+  "featured": false,
+  "issue": null
+ },
+ "stored-product-pests/p380-2.jpg": {
+  "alt": "Slender dark grain beetle with a toothed thorax crawling on a white surface.",
+  "caption": "Saw-toothed grain beetle type",
+  "id": "Oryzaephilus grain beetle (sawtoothed or merchant)",
+  "featured": false,
+  "issue": null
+ },
+ "stored-product-pests/p381.jpg": {
+  "alt": "Zoomed phone image of a slender grain beetle with a red arrow pointing just behind its eye.",
+  "caption": "Check the temple behind the eye",
+  "id": "Oryzaephilus grain beetle (sawtoothed or merchant)",
+  "featured": false,
+  "issue": "Phone screenshot with drawn arrow annotation and navigation bar"
+ },
+ "occasional-invaders/p52.jpg": {
+  "alt": "Fuzzy bright yellow caterpillar crawling across gravelly asphalt.",
+  "caption": "Hairy yellow caterpillar",
+  "id": "caterpillar (moth larva)",
+  "featured": false,
+  "issue": null
+ },
+ "occasional-invaders/p74-1.jpg": {
+  "alt": "Cluster of pale green eggs each held up on a thin silk stalk on a red door.",
+  "caption": "Lacewing eggs on stalks",
+  "id": "green lacewing eggs",
+  "featured": true,
+  "issue": null
+ },
+ "occasional-invaders/p74-2.jpg": {
+  "alt": "Wider view of a red front door showing a small egg cluster above the doorknobs.",
+  "caption": "Egg cluster on the front door",
+  "id": "green lacewing eggs",
+  "featured": false,
+  "issue": null
+ },
+ "occasional-invaders/p75.jpg": {
+  "alt": "Orange and black true bug beside a dust-covered insect on a Catchmaster glue board.",
+  "caption": "True bugs on a glue board",
+  "id": "true bugs (Hemiptera)",
+  "featured": false,
+  "issue": null
+ },
+ "occasional-invaders/p100-1.jpg": {
+  "alt": "Orange long-legged bug nymph with white spots walking on a gray foundation wall.",
+  "caption": "Assassin bug nymph on foundation",
+  "id": "assassin bug nymph",
+  "featured": false,
+  "issue": null
+ },
+ "occasional-invaders/p100-2.jpg": {
+  "alt": "Close view of a bright orange bug nymph with white bumps and long black legs on stone.",
+  "caption": "Orange assassin bug nymph",
+  "id": "assassin bug nymph",
+  "featured": false,
+  "issue": null
+ },
+ "occasional-invaders/p100-3.jpg": {
+  "alt": "Sharp close-up of an orange assassin bug nymph with white tubercles and slender black legs.",
+  "caption": "Assassin bug nymph close-up",
+  "id": "assassin bug nymph",
+  "featured": true,
+  "issue": null
+ },
+ "occasional-invaders/p100-4.jpg": {
+  "alt": "Orange bug nymph partly cropped at the bottom of the frame on a gray wall edge.",
+  "caption": "Nymph at the wall edge",
+  "id": "assassin bug nymph",
+  "featured": false,
+  "issue": null
+ },
+ "occasional-invaders/p100-5.jpg": {
+  "alt": "Small orange long-legged nymph climbing where a stone wall meets a gray panel.",
+  "caption": "Nymph climbing the corner",
+  "id": "assassin bug nymph",
+  "featured": false,
+  "issue": null
+ },
+ "occasional-invaders/p100-6.jpg": {
+  "alt": "Orange white-spotted bug nymph with long black legs on a gray painted wall.",
+  "caption": "Assassin bug nymph, full body",
+  "id": "assassin bug nymph",
+  "featured": false,
+  "issue": null
+ },
+ "occasional-invaders/p100-7.jpg": {
+  "alt": "Orange long-legged nymph on a gray wall next to rough stonework.",
+  "caption": "Nymph beside stonework",
+  "id": "assassin bug nymph",
+  "featured": false,
+  "issue": null
+ },
+ "occasional-invaders/p111.jpg": {
+  "alt": "Brown moth-like insect with very long antennae and tented wings on a white surface.",
+  "caption": "Caddisfly indoors",
+  "id": "caddisfly",
+  "featured": false,
+  "issue": null
+ },
+ "occasional-invaders/p112.jpg": {
+  "alt": "Tan caddisfly with long antennae resting on a pale wall under ceiling light reflections.",
+  "caption": "Caddisfly on the wall",
+  "id": "caddisfly",
+  "featured": false,
+  "issue": null
+ },
+ "occasional-invaders/p171.jpg": {
+  "alt": "Brown elongate true bug with long antennae and legs on a textured white wall.",
+  "caption": "True bug on a textured wall",
+  "id": "true bug (Hemiptera)",
+  "featured": false,
+  "issue": null
+ },
+ "occasional-invaders/p179-1.jpg": {
+  "alt": "Weevil with orange and black striped wing covers and a speckled green thorax on clear plastic.",
+  "caption": "Striped weevil",
+  "id": "weevil",
+  "featured": false,
+  "issue": null
+ },
+ "occasional-invaders/p179-2.jpg": {
+  "alt": "Striped orange and black weevil with long legs on shiny plastic sheeting.",
+  "caption": "Striped weevil, top view",
+  "id": "weevil",
+  "featured": false,
+  "issue": null
+ },
+ "occasional-invaders/p189-1.jpg": {
+  "alt": "Tan longhorned beetle held between fingertips over khaki trousers, antennae curled.",
+  "caption": "Longhorned beetle in hand",
+  "id": "longhorned beetle (Cerambycidae)",
+  "featured": false,
+  "issue": null
+ },
+ "occasional-invaders/p189-2.jpg": {
+  "alt": "Head-on view of a tan longhorned beetle perched on a fingertip inside a vehicle.",
+  "caption": "Longhorned beetle, head-on",
+  "id": "longhorned beetle (Cerambycidae)",
+  "featured": false,
+  "issue": null
+ },
+ "occasional-invaders/p189-3.jpg": {
+  "alt": "Side view of a tan longhorned beetle with long segmented antennae pinched between two fingers.",
+  "caption": "Longhorned beetle, side profile",
+  "id": "longhorned beetle (Cerambycidae)",
+  "featured": true,
+  "issue": null
+ },
+ "occasional-invaders/p189-4.jpg": {
+  "alt": "Tan longhorned beetle with pale dots on its wing covers held between thumb and finger.",
+  "caption": "Longhorned beetle wing covers",
+  "id": "longhorned beetle (Cerambycidae)",
+  "featured": false,
+  "issue": null
+ },
+ "occasional-invaders/p189-5.jpg": {
+  "alt": "Longhorned beetle held on a fingertip with its long antenna raised, vehicle console behind.",
+  "caption": "Longhorn on a fingertip",
+  "id": "longhorned beetle (Cerambycidae)",
+  "featured": false,
+  "issue": null
+ },
+ "occasional-invaders/p189-6.jpg": {
+  "alt": "Tan longhorned beetle clinging to a thumb above khaki pants inside a work truck.",
+  "caption": "Longhorned beetle in the truck",
+  "id": "longhorned beetle (Cerambycidae)",
+  "featured": false,
+  "issue": null
+ },
+ "occasional-invaders/p189-7.jpg": {
+  "alt": "Longhorned beetle lying on its back on khaki fabric showing its underside and legs.",
+  "caption": "Longhorned beetle underside",
+  "id": "longhorned beetle (Cerambycidae)",
+  "featured": false,
+  "issue": null
+ },
+ "occasional-invaders/p189-8.jpg": {
+  "alt": "Tan longhorned beetle held upright on a fingertip beside a vehicle center console.",
+  "caption": "Longhorned beetle, another angle",
+  "id": "longhorned beetle (Cerambycidae)",
+  "featured": false,
+  "issue": null
+ },
+ "occasional-invaders/p309.jpg": {
+  "alt": "Many tiny pale orange soft-bodied insects scattered across a gray speckled surface.",
+  "caption": "Tiny pale insects on a surface",
+  "id": "small insects (unconfirmed)",
+  "featured": false,
+  "issue": "Soft focus; insects too small and blurry to identify"
+ },
+ "occasional-invaders/p505.jpg": {
+  "alt": "Dead Jerusalem cricket lying on its back on concrete, showing its large head and banded abdomen.",
+  "caption": "Jerusalem cricket on the slab",
+  "id": "Jerusalem cricket",
+  "featured": true,
+  "issue": null
+ },
+ "fumigation/p345-1.jpg": {
+  "alt": "Rubble stone foundation wall with a gap in the mortar holding a dark object and debris.",
+  "caption": "Gap in a stone foundation",
+  "id": null,
+  "featured": false,
+  "issue": "No fumigation content visible; looks like rodent entry/exclusion, likely mis-sorted"
+ },
+ "fumigation/p345-2.jpg": {
+  "alt": "Smiling man in a hoodie holding up a snap trap with a caught rat on a snowy street.",
+  "caption": "Rat caught in a snap trap",
+  "id": "rat",
+  "featured": false,
+  "issue": "Person's face is the subject; houses and vehicle visible; mis-sorted (rodents)"
+ },
+ "fumigation/p346.jpg": {
+  "alt": "Phone screenshot of a roofline showing a gap where the fascia meets red shingle siding.",
+  "caption": "Gap at the roof eave",
+  "id": null,
+  "featured": false,
+  "issue": "Screenshot of an Instagram photo; no fumigation content, likely mis-sorted (exclusion/wildlife)"
+ },
+ "fumigation/p347.jpg": {
+  "alt": "Rows of wrapped palletized bags inside a green tarp fumigation enclosure, two workers at the far end.",
+  "caption": "Tarped pallets under fumigation",
+  "id": null,
+  "featured": true,
+  "issue": null
+ },
+ "fumigation/p598.jpg": {
+  "alt": "Shrink-wrapped pallets of bagged product labelled oat allergen inside a green fumigation tarp tunnel.",
+  "caption": "Commodity fumigation under tarp",
+  "id": null,
+  "featured": false,
+  "issue": null
+ },
+ "rodents/p186-1.jpg": {
+  "alt": "Gray mouse caught on the glue board inside an open metal multi-catch trap on a desk.",
+  "caption": "Mouse on a multi-catch glue board",
+  "id": "mouse",
+  "featured": true,
+  "issue": null
+ },
+ "rodents/p186-2.jpg": {
+  "alt": "Close view of a gray mouse stuck to the glue insert of a metal multi-catch trap.",
+  "caption": "Glue insert catch, close up",
+  "id": "mouse",
+  "featured": false,
+  "issue": null
+ },
+ "rodents/p186-3.jpg": {
+  "alt": "Overhead view of an open metal multi-catch trap with one mouse on the glue board.",
+  "caption": "Multi-catch trap from above",
+  "id": "mouse",
+  "featured": false,
+  "issue": null
+ },
+ "rodents/p232.jpg": {
+  "alt": "Open black tamper-resistant bait station against a wall with one bait block on a rod.",
+  "caption": "Bait station service check",
+  "id": "bait station",
+  "featured": false,
+  "issue": null
+ },
+ "rodents/p233.jpg": {
+  "alt": "Pale dead mouse inside an open gray bait station with partly eaten bait blocks.",
+  "caption": "Mouse found in a bait station",
+  "id": "mouse",
+  "featured": false,
+  "issue": null
+ },
+ "rodents/p290.jpg": {
+  "alt": "Two dark rodent droppings resting on a coarse fiber doormat.",
+  "caption": "Rodent droppings on a doormat",
+  "id": "rodent droppings",
+  "featured": false,
+  "issue": null
+ },
+ "rodents/p291.jpg": {
+  "alt": "Rodent droppings on a fiber doormat with a bare hand beside them for scale.",
+  "caption": "Droppings with a hand for scale",
+  "id": "rodent droppings",
+  "featured": false,
+  "issue": null
+ },
+ "rodents/p324.jpg": {
+  "alt": "Dead mouse caught in a Victor snap trap set on blown-in attic insulation.",
+  "caption": "Snap trap catch in attic insulation",
+  "id": "mouse",
+  "featured": false,
+  "issue": null
+ },
+ "rodents/p325.jpg": {
+  "alt": "Open bait station on gravel holding a row of bait blocks secured on a metal rod.",
+  "caption": "Bait blocks secured on the rod",
+  "id": "bait station",
+  "featured": true,
+  "issue": null
+ },
+ "rodents/p326.jpg": {
+  "alt": "Small dead rodent lying on the lid of a black trap on a concrete surface.",
+  "caption": "Rodent catch at an exterior trap",
+  "id": "rodent",
+  "featured": false,
+  "issue": null
+ },
+ "rodents/p362-1.jpg": {
+  "alt": "Mouse caught in a Victor snap trap placed on a board in an insulated attic.",
+  "caption": "Attic snap trap on a board",
+  "id": "mouse",
+  "featured": false,
+  "issue": null
+ },
+ "rodents/p362-2.jpg": {
+  "alt": "Wider attic view of a snap trap with a catch on a board among loose insulation.",
+  "caption": "Attic trap placement, wide view",
+  "id": "mouse",
+  "featured": false,
+  "issue": null
+ },
+ "rodents/p495.jpg": {
+  "alt": "Two dead rats laid on a truck tailgate beside a blue-gloved hand for size comparison.",
+  "caption": "Rat catch with a glove for scale",
+  "id": "rat",
+  "featured": true,
+  "issue": null
+ },
+ "rodents/p500.jpg": {
+  "alt": "A large pale rat and a smaller rodent laid side by side on a truck bed liner.",
+  "caption": "Size comparison of two rodents",
+  "id": "rodent",
+  "featured": false,
+  "issue": null
+ },
+ "rodents/p502.jpg": {
+  "alt": "Blue-gloved hand beside a dead rat with a visible wound lying on a black bait station lid.",
+  "caption": "Rat recovered at a bait station",
+  "id": "rat",
+  "featured": false,
+  "issue": "Bait station carries another pest company's branded label with name, website and phone number readable; visible open wound on the rat"
+ },
+ "rodents/p508.jpg": {
+  "alt": "Dead gray squirrel lying inside an open black bait station on a concrete sidewalk.",
+  "caption": "Squirrel inside a rodent bait station",
+  "id": "gray squirrel",
+  "featured": true,
+  "issue": "Non-target animal in a rodenticide station; sensitive framing for public use"
+ },
+ "rodents/p509.jpg": {
+  "alt": "Three dead dark-furred mice lying together on a dirt and concrete floor.",
+  "caption": "Three mice from one cleanout",
+  "id": "mouse",
+  "featured": false,
+  "issue": null
+ },
+ "rodents/p510-1.jpg": {
+  "alt": "Two rats caught in black plastic snap traps on a concrete slab by a block wall.",
+  "caption": "Two rats in plastic snap traps",
+  "id": "rat",
+  "featured": true,
+  "issue": null
+ },
+ "rodents/p510-2.jpg": {
+  "alt": "Close view of a round metal fan grille with dust and debris behind the guard.",
+  "caption": "Fan housing checked for activity",
+  "id": "rodent inspection",
+  "featured": false,
+  "issue": "Unclear relevance; no rodent sign clearly visible"
+ },
+ "rodents/p512.jpg": {
+  "alt": "Dead rat on dark asphalt next to a blue-gloved hand for size reference.",
+  "caption": "Rat laid out for scale",
+  "id": "rat",
+  "featured": false,
+  "issue": null
+ },
+ "rodents/p516.jpg": {
+  "alt": "Dead opossum lying inside an open black rodent trap station.",
+  "caption": "Opossum inside a trap station",
+  "id": "opossum",
+  "featured": false,
+  "issue": "Likely mis-sorted: opossum is wildlife, not a rodent"
+ },
+ "rodents/p539.jpg": {
+  "alt": "Rat held belly up in a Victor rat trap above an attic hatch and pull-down ladder.",
+  "caption": "Attic rat on a snap trap",
+  "id": "rat",
+  "featured": false,
+  "issue": null
+ },
+ "rodents/p540.jpg": {
+  "alt": "Three dead rats of different sizes laid on a black truck bed liner.",
+  "caption": "Three rats from one job",
+  "id": "rat",
+  "featured": false,
+  "issue": null
+ },
+ "rodents/p541-1.jpg": {
+  "alt": "White bucket filled with dead mice on a bathroom floor beside a sink cabinet.",
+  "caption": "Bucket of mice from one cleanout",
+  "id": "mouse",
+  "featured": false,
+  "issue": null
+ },
+ "rodents/p541-2.jpg": {
+  "alt": "Second view of a white bucket full of dead mice next to a sink cabinet.",
+  "caption": "Mouse cleanout bucket, second angle",
+  "id": "mouse",
+  "featured": false,
+  "issue": "Near-duplicate of p541-1"
+ },
+ "rodents/p542.jpg": {
+  "alt": "Red bucket and an open multi-catch trap on terracotta tile in a commercial kitchen.",
+  "caption": "Multi-catch trap in a commercial kitchen",
+  "id": "multi-catch trap",
+  "featured": false,
+  "issue": null
+ },
+ "rodents/p555.jpg": {
+  "alt": "Dark rat caught in a Victor snap trap on a wood floor scattered with gnawed debris.",
+  "caption": "Rat caught amid gnawing debris",
+  "id": "rat",
+  "featured": true,
+  "issue": null
+ },
+ "rodents/p556.jpg": {
+  "alt": "Two dead rats caught in Victor snap traps on a tile floor with blood stains.",
+  "caption": "Two rats in snap traps",
+  "id": "rat",
+  "featured": false,
+  "issue": "graphic: visible blood on traps and floor"
+ },
+ "rodents/p571.jpg": {
+  "alt": "Damaged black car with its front wheel removed and a bait station set by the brake rotor.",
+  "caption": "Bait station beside a damaged car",
+  "id": "bait station",
+  "featured": false,
+  "issue": "Likely off-topic: vehicle collision damage, rodent link not visible"
+ },
+ "rodents/t33-1.jpg": {
+  "alt": "Rodent burrow opening in bare soil at the base of a stucco wall with creeping fig.",
+  "caption": "Burrow at a foundation wall",
+  "id": "rodent burrow",
+  "featured": true,
+  "issue": null
+ },
+ "rodents/t33-2.jpg": {
+  "alt": "Burrow entrance under tangled shrub roots and debris in loose soil.",
+  "caption": "Burrow under shrub roots",
+  "id": "rodent burrow",
+  "featured": false,
+  "issue": null
+ },
+ "rodents/t33-3.jpg": {
+  "alt": "Burrow openings among exposed roots at the edge of a concrete slab.",
+  "caption": "Burrows along a slab edge",
+  "id": "rodent burrow",
+  "featured": false,
+  "issue": null
+ },
+ "rodents/t33-4.jpg": {
+  "alt": "Several burrow holes in soil among roots beside a stucco foundation wall.",
+  "caption": "Multiple burrow holes by a foundation",
+  "id": "rodent burrow",
+  "featured": false,
+  "issue": null
+ },
+ "rodents/t33-5.jpg": {
+  "alt": "Burrow holes in dry soil between shrubs along a stucco wall.",
+  "caption": "Burrows hidden under shrubs",
+  "id": "rodent burrow",
+  "featured": false,
+  "issue": null
+ },
+ "rodents/t33-6.jpg": {
+  "alt": "Narrow planting bed with a burrow opening in soil along a stucco wall.",
+  "caption": "Burrow in a narrow planting bed",
+  "id": "rodent burrow",
+  "featured": false,
+  "issue": null
+ },
+ "rodents/t33-7.jpg": {
+  "alt": "Leaf-covered dark soil beneath a concrete slab edge showing a burrow opening.",
+  "caption": "Burrow under a slab edge",
+  "id": "rodent burrow",
+  "featured": false,
+  "issue": null
+ },
+ "rodents/t33-8.jpg": {
+  "alt": "Street view of a federal courthouse building and light rail stop with parked vehicles.",
+  "caption": "Downtown job site context",
+  "id": "site context",
+  "featured": false,
+  "issue": "Off-topic street scene of an identifiable public building; no pest content; possibly mis-sorted"
+ },
+ "rodents/t34-1.jpg": {
+  "alt": "Inspection mirror and flashlight used to check soil and debris at a foundation edge.",
+  "caption": "Mirror check at the foundation",
+  "id": "rodent inspection",
+  "featured": false,
+  "issue": null
+ },
+ "rodents/t34-2.jpg": {
+  "alt": "Dark rub marks and a gap at the corner where wood framing meets masonry.",
+  "caption": "Rub marks at a framing gap",
+  "id": "rodent entry point",
+  "featured": false,
+  "issue": null
+ },
+ "rodents/t34-3.jpg": {
+  "alt": "Round hole through a dirty masonry or concrete surface lit by a flashlight.",
+  "caption": "Hole through the foundation",
+  "id": "rodent entry point",
+  "featured": false,
+  "issue": null
+ },
+ "rodents/t34-4.jpg": {
+  "alt": "Flashlight lighting a gap in damaged siding beside a white post.",
+  "caption": "Gap in siding under a flashlight",
+  "id": "rodent entry point",
+  "featured": false,
+  "issue": null
+ },
+ "rodents/t34-5.jpg": {
+  "alt": "Opening beneath fiberglass insulation and a wood joist above a concrete foundation.",
+  "caption": "Void under insulation at the sill",
+  "id": "rodent entry point",
+  "featured": false,
+  "issue": null
+ },
+ "wildlife/p236.jpg": {
+  "alt": "Young raccoon inside a green wire cage trap resting on attic insulation.",
+  "caption": "Juvenile raccoon in a cage trap",
+  "id": "raccoon",
+  "featured": true,
+  "issue": null
+ },
+ "wildlife/p237.jpg": {
+  "alt": "Raccoon peering out from between pink insulation batts at the attic eave.",
+  "caption": "Raccoon hiding at the attic eave",
+  "id": "raccoon",
+  "featured": true,
+  "issue": null
+ },
+ "wildlife/p268.jpg": {
+  "alt": "Wire cage trap with animals inside sitting on attic decking under a flashlight.",
+  "caption": "Attic cage trap under flashlight",
+  "id": "raccoon",
+  "featured": false,
+  "issue": null
+ },
+ "wildlife/p269.jpg": {
+  "alt": "Wider view of a wire cage trap holding animals on attic flooring with loose insulation.",
+  "caption": "Attic trap set, wide view",
+  "id": "raccoon",
+  "featured": false,
+  "issue": null
+ },
+ "wildlife/p272-1.jpg": {
+  "alt": "Clumped animal droppings on yellow fiberglass insulation beside attic wiring.",
+  "caption": "Wildlife droppings in attic insulation",
+  "id": "wildlife droppings",
+  "featured": false,
+  "issue": null
+ },
+ "wildlife/p272-2.jpg": {
+  "alt": "Animal droppings on compressed yellow insulation near cables under a flashlight.",
+  "caption": "Latrine spot near attic cables",
+  "id": "wildlife droppings",
+  "featured": false,
+  "issue": null
+ },
+ "wildlife/p276.jpg": {
+  "alt": "Coiled brown patterned snake beside torn rodent soft bait packets in a station.",
+  "caption": "Snake found in a bait station",
+  "id": "snake",
+  "featured": true,
+  "issue": null
+ },
+ "wildlife/p277.jpg": {
+  "alt": "Small black snake with light speckled bands inside a white plastic container.",
+  "caption": "Snake removed in a container",
+  "id": "snake",
+  "featured": false,
+  "issue": null
+ },
+ "wildlife/p315.jpg": {
+  "alt": "Brown banded snake coiled on concrete next to a work boot.",
+  "caption": "Snake found beside a work boot",
+  "id": "snake",
+  "featured": false,
+  "issue": null
+ },
+ "wildlife/p363.jpg": {
+  "alt": "Opossum caught in a pole-mounted catch basket above a wire trap in a garage.",
+  "caption": "Opossum caught in a garage",
+  "id": "opossum",
+  "featured": false,
+  "issue": null
+ },
+ "wildlife/p504.jpg": {
+  "alt": "Dead bat with wings spread lying on asphalt roof shingles.",
+  "caption": "Dead bat on a roof",
+  "id": "bat",
+  "featured": false,
+  "issue": "Dead animal; likely belongs in bats-birds section"
+ },
+ "wildlife/p546-1.jpg": {
+  "alt": "Gray-furred animal inside a black wire cage trap viewed from above.",
+  "caption": "Animal in a cage trap",
+  "id": "trapped wildlife",
+  "featured": false,
+  "issue": null
+ },
+ "wildlife/p546-2.jpg": {
+  "alt": "Stack of black wire cage traps under a tarp with an animal partly visible.",
+  "caption": "Stacked cage traps",
+  "id": "trapped wildlife",
+  "featured": false,
+  "issue": "Dark and cluttered; animal hard to see"
+ },
+ "wildlife/p546-3.jpg": {
+  "alt": "Raccoon face looking out through the mesh of a black wire cage trap.",
+  "caption": "Raccoon behind cage mesh",
+  "id": "raccoon",
+  "featured": true,
+  "issue": null
+ },
+ "wildlife/p546-4.jpg": {
+  "alt": "Four black wire cage traps with trapped animals set on snow-covered ground.",
+  "caption": "Four traps on snow",
+  "id": "raccoon",
+  "featured": false,
+  "issue": null
+ },
+ "wildlife/p546-5.jpg": {
+  "alt": "Furred animal inside a rusty wire cage trap in the back of a work truck.",
+  "caption": "Trapped animal in the truck",
+  "id": "trapped wildlife",
+  "featured": false,
+  "issue": null
+ },
+ "wildlife/p546-6.jpg": {
+  "alt": "Two wire cage traps holding animals, one raccoon face visible, with snow on the floor.",
+  "caption": "Two raccoons ready for transport",
+  "id": "raccoon",
+  "featured": false,
+  "issue": null
+ },
+ "bats-birds/p394-1.jpg": {
+  "alt": "Dark droppings and smear stains on white trim just above a brick wall ledge.",
+  "caption": "Dropping stains below an eave gap",
+  "id": "droppings staining",
+  "featured": true,
+  "issue": null
+ },
+ "bats-birds/p394-2.jpg": {
+  "alt": "Streaked droppings staining on white trim above a row of bricks.",
+  "caption": "Staining at a trim gap",
+  "id": "droppings staining",
+  "featured": false,
+  "issue": null
+ },
+ "bats-birds/p394-3.jpg": {
+  "alt": "Two patches of dropping stains on eave trim above a brick wall under the roofline.",
+  "caption": "Two stain spots along the eave",
+  "id": "droppings staining",
+  "featured": false,
+  "issue": null
+ },
+ "bats-birds/p396.jpg": {
+  "alt": "Dropping stains on trim with a green hand-drawn circle marking a gap above them.",
+  "caption": "Marked entry gap above staining",
+  "id": "droppings staining",
+  "featured": false,
+  "issue": null
+ },
+ "bats-birds/p478.jpg": {
+  "alt": "Steel and glass canopy structure with lattice beams and light poles against a cloudy sky.",
+  "caption": "Canopy structure with roost ledges",
+  "id": "bird roost site",
+  "featured": false,
+  "issue": "No birds or droppings visible; unclear relevance"
+ },
+ "bats-birds/p479.jpg": {
+  "alt": "Underside of a paneled canopy with a displaced light fixture cover along the ceiling.",
+  "caption": "Canopy fixture gap",
+  "id": "bird roost site",
+  "featured": false,
+  "issue": "No birds or droppings visible; unclear relevance"
+ },
+ "bats-birds/p483.jpg": {
+  "alt": "Black sedan heavily streaked with bird droppings parked on a residential street.",
+  "caption": "Car coated in bird droppings",
+  "id": "bird droppings",
+  "featured": true,
+  "issue": "Licence plate partly readable; second car and residential buildings in frame"
+ },
+ "exclusion/p424.jpg": {
+  "alt": "White PVC pipe entering painted brick through an unsealed gap around the penetration.",
+  "caption": "Unsealed pipe penetration",
+  "id": "exclusion work",
+  "featured": false,
+  "issue": null
+ },
+ "exclusion/p425.jpg": {
+  "alt": "White PVC elbow entering a painted brick wall with a gap around the opening.",
+  "caption": "Gap around a pipe entry",
+  "id": "exclusion work",
+  "featured": false,
+  "issue": null
+ },
+ "exclusion/p426.jpg": {
+  "alt": "Gap where a roof return meets dark siding above white trim.",
+  "caption": "Open gap at a roof return",
+  "id": "exclusion work",
+  "featured": false,
+  "issue": null
+ },
+ "exclusion/p427.jpg": {
+  "alt": "Gap between a downspout, trim and brick at a house corner.",
+  "caption": "Corner gap behind a downspout",
+  "id": "exclusion work",
+  "featured": false,
+  "issue": null
+ },
+ "exclusion/p428.jpg": {
+  "alt": "Soffit and painted brick with bare tree branches reaching the roofline.",
+  "caption": "Branches bridging to the soffit",
+  "id": "exclusion work",
+  "featured": false,
+  "issue": null
+ },
+ "exclusion/p429.jpg": {
+  "alt": "Broken window pane patched with plastic sheeting above a stained sill.",
+  "caption": "Broken window as an entry point",
+  "id": "exclusion work",
+  "featured": false,
+  "issue": null
+ },
+ "exclusion/p430.jpg": {
+  "alt": "Gap at the base of a door jamb where trim meets a stained concrete step.",
+  "caption": "Gap at a door jamb base",
+  "id": "exclusion work",
+  "featured": false,
+  "issue": null
+ },
+ "exclusion/p431.jpg": {
+  "alt": "Gap between window framing and trim at ground level beside a dark door frame.",
+  "caption": "Gap at window framing",
+  "id": "exclusion work",
+  "featured": false,
+  "issue": null
+ },
+ "exclusion/p473.jpg": {
+  "alt": "Hole in a white wall covered with wire mesh and sealed around the edges with foam.",
+  "caption": "Mesh and foam patch",
+  "id": "exclusion work",
+  "featured": true,
+  "issue": null
+ },
+ "exclusion/p474.jpg": {
+  "alt": "Wall opening covered with square wire mesh set in expanding foam beside a pipe.",
+  "caption": "Mesh-and-foam pipe seal",
+  "id": "exclusion work",
+  "featured": true,
+  "issue": null
+ },
+ "exclusion/p475.jpg": {
+  "alt": "Patio ceiling beams with small nests tucked along the rafters.",
+  "caption": "Nests along patio rafters",
+  "id": "bird nests",
+  "featured": false,
+  "issue": null
+ },
+ "exclusion/p476.jpg": {
+  "alt": "Bird spikes on a patio beam with nesting material caught among them.",
+  "caption": "Bird spikes with nest debris",
+  "id": "bird exclusion",
+  "featured": false,
+  "issue": null
+ },
+ "exclusion/p477.jpg": {
+  "alt": "Wall vent covered with galvanized mesh and a metal plate around several line sets.",
+  "caption": "Screened vent at the line set",
+  "id": "exclusion work",
+  "featured": true,
+  "issue": null
+ },
+ "exclusion/p549-1.jpg": {
+  "alt": "Roof return corner above brick siding with the gap closed off in white trim.",
+  "caption": "Sealed roof return",
+  "id": "exclusion work",
+  "featured": false,
+  "issue": null
+ },
+ "exclusion/p549-2.jpg": {
+  "alt": "Roof return above a brick wall finished with white trim closing the opening.",
+  "caption": "Roof return closed out",
+  "id": "exclusion work",
+  "featured": false,
+  "issue": null
+ },
+ "exclusion/p549-3.jpg": {
+  "alt": "White metal flashing installed along a garage door jamb down to the slab.",
+  "caption": "Garage jamb flashing",
+  "id": "exclusion work",
+  "featured": false,
+  "issue": null
+ },
+ "exclusion/p549-4.jpg": {
+  "alt": "White metal flashing covering the lower garage door jamb beside brick.",
+  "caption": "Jamb covered at the slab",
+  "id": "exclusion work",
+  "featured": false,
+  "issue": null
+ },
+ "exclusion/p549-5.jpg": {
+  "alt": "Metal closure installed where a roof return meets brick beside a downspout.",
+  "caption": "Closure at a roof return",
+  "id": "exclusion work",
+  "featured": true,
+  "issue": null
+ },
+ "exclusion/p549-6.jpg": {
+  "alt": "Metal flashing sealing a gap between fascia and gutter at an eave corner.",
+  "caption": "Sheet metal at an eave corner",
+  "id": "exclusion work",
+  "featured": false,
+  "issue": null
+ },
+ "exclusion/p549-7.jpg": {
+  "alt": "Roof return and gutter from below showing the closed-in joint at the fascia.",
+  "caption": "Finished roof return from below",
+  "id": "exclusion work",
+  "featured": false,
+  "issue": null
+ },
+ "exclusion/p549-8.jpg": {
+  "alt": "Sheet metal plate sealed around conduit and insulated lines entering a brick wall.",
+  "caption": "Metal plate around a line set",
+  "id": "exclusion work",
+  "featured": true,
+  "issue": null
+ },
+ "exclusion/p551-1.jpg": {
+  "alt": "Damaged opening where a roof return meets the shingles below a white fascia.",
+  "caption": "Open roof return gap",
+  "id": "exclusion work",
+  "featured": false,
+  "issue": "Letterboxed screenshot with black bars; crop before use"
+ },
+ "exclusion/p551-2.jpg": {
+  "alt": "Roof return corner at a dormer with a dark gap at the shingle line.",
+  "caption": "Dormer return gap",
+  "id": "exclusion work",
+  "featured": false,
+  "issue": "Letterboxed screenshot with black bars; crop before use"
+ },
+ "exclusion/p552-1.jpg": {
+  "alt": "Dormer roof return with fascia and shingles against a blue sky.",
+  "caption": "Dormer return check",
+  "id": "exclusion work",
+  "featured": false,
+  "issue": "Letterboxed screenshot with black bars; crop before use"
+ },
+ "exclusion/p552-2.jpg": {
+  "alt": "Fascia and roof edge meeting shingles against a pale sky.",
+  "caption": "Fascia and shingle junction",
+  "id": "exclusion work",
+  "featured": false,
+  "issue": "Letterboxed screenshot with black bars; crop before use"
+ },
+ "crawlspace/p238.jpg": {
+  "alt": "Crawlspace floor joist lit by flashlight, annotated with an arrow reading soaked floor joist.",
+  "caption": "Soaked floor joist in a crawlspace",
+  "id": "moisture damage",
+  "featured": false,
+  "issue": null
+ },
+ "crawlspace/p503.jpg": {
+  "alt": "Crawlspace with free-standing mud tubes rising from soil to a wooden beam beside block piers.",
+  "caption": "Drop tubes reaching a beam",
+  "id": "subterranean termite shelter tubes",
+  "featured": true,
+  "issue": null
+ },
+ "sanitation-conducive/p378.jpg": {
+  "alt": "Dim warehouse interior stacked high with cardboard cases, loose pallets, and blue racking.",
+  "caption": "Cluttered warehouse stacks",
+  "id": "cluttered pallet and box storage",
+  "featured": false,
+  "issue": "partial supplier/business name legible on a box (\"...FOODS LLC\")"
+ },
+ "sanitation-conducive/p405-1.jpg": {
+  "alt": "Gap between stainless kitchen equipment coated in dark grease buildup above a red tile floor.",
+  "caption": "Grease in the equipment gap",
+  "id": "grease buildup between kitchen equipment",
+  "featured": true,
+  "issue": null
+ },
+ "sanitation-conducive/p405-2.jpg": {
+  "alt": "Close view of thick black grease and food residue caked on the sides of kitchen equipment.",
+  "caption": "Caked grease up close",
+  "id": "grease buildup on equipment sides",
+  "featured": false,
+  "issue": null
+ },
+ "sanitation-conducive/p405-3.jpg": {
+  "alt": "Stainless equipment sides coated in yellow-brown grease film with a narrow gap to the tile floor.",
+  "caption": "Grease film down the sides",
+  "id": "grease buildup between kitchen equipment",
+  "featured": false,
+  "issue": null
+ },
+ "sanitation-conducive/p405-4.jpg": {
+  "alt": "Grease-coated edge of a stainless cooking station beside a pan of raw meat in a commercial kitchen.",
+  "caption": "Grease beside the prep line",
+  "id": "grease buildup on cooking station",
+  "featured": false,
+  "issue": null
+ },
+ "sanitation-conducive/p405-5.jpg": {
+  "alt": "Underside of a kitchen prep line with grimy trays, food containers, and grease on tile flooring.",
+  "caption": "Under the line",
+  "id": "grease and debris under equipment",
+  "featured": false,
+  "issue": null
+ },
+ "sanitation-conducive/p408.jpg": {
+  "alt": "Tiled hallway floor littered with debris and droppings near a doorway and cluttered bags.",
+  "caption": "Debris along the hallway",
+  "id": "debris and droppings on floor",
+  "featured": false,
+  "issue": null
+ },
+ "sanitation-conducive/p409.jpg": {
+  "alt": "Tiled room floor scattered with dirt and debris near a vacuum, wooden doors, and a rug.",
+  "caption": "Floor debris throughout",
+  "id": "debris on tiled floor",
+  "featured": false,
+  "issue": null
+ },
+ "sanitation-conducive/p410.jpg": {
+  "alt": "Small tiled room with droppings and debris scattered across the floor and piled at a door hinge.",
+  "caption": "Droppings in the corner",
+  "id": "droppings and debris on floor",
+  "featured": false,
+  "issue": null
+ },
+ "sanitation-conducive/p411.jpg": {
+  "alt": "Grimy plastic drawer unit in a corner with dirt, debris, and a broom on a stained tile floor.",
+  "caption": "Grime behind the drawers",
+  "id": "debris and grime in corner storage",
+  "featured": false,
+  "issue": null
+ },
+ "sanitation-conducive/p413.jpg": {
+  "alt": "Kitchen base cabinets and sink with debris and dirt scattered across the tile floor beneath them.",
+  "caption": "Debris under the sink cabinets",
+  "id": "debris along kitchen cabinets",
+  "featured": false,
+  "issue": null
+ },
+ "sanitation-conducive/p446.jpg": {
+  "alt": "Shredded insulation packed along the base of a metal wall above sawdust and debris on concrete.",
+  "caption": "Nest material along the wall base",
+  "id": "shredded insulation and nesting debris",
+  "featured": true,
+  "issue": null
+ },
+ "sanitation-conducive/p449.jpg": {
+  "alt": "Floor sink basin coated in dark sludge, rust, and trapped food debris and wrappers.",
+  "caption": "Floor drain full of sludge",
+  "id": "organic buildup in floor sink",
+  "featured": true,
+  "issue": null
+ },
+ "sanitation-conducive/p453.jpg": {
+  "alt": "Narrow closet with a dirty covered litter box, food bowls, paper plates, and debris on the floor.",
+  "caption": "Pet feeding and litter closet",
+  "id": "pet food and litter debris",
+  "featured": false,
+  "issue": null
+ },
+ "sanitation-conducive/p459.jpg": {
+  "alt": "Open rodent bait station overflowing with chewed bait blocks, wrappers, and debris.",
+  "caption": "Station packed with old bait",
+  "id": "overfilled bait station with chewed bait",
+  "featured": false,
+  "issue": "possibly mis-sorted (monitoring device rather than sanitation); screenshot icon in corner"
+ },
+ "sanitation-conducive/p461.jpg": {
+  "alt": "Commercial kitchen aisle with stainless equipment and a scattered pile of food debris on the gray floor.",
+  "caption": "Food spill in the kitchen aisle",
+  "id": "food debris on kitchen floor",
+  "featured": false,
+  "issue": null
+ },
+ "commercial-monitoring/p264.jpg": {
+  "alt": "Small pale scorpion on a piece of cardboard with red printed box markings and tape.",
+  "caption": "Scorpion on a cardboard box",
+  "id": "scorpion on cardboard",
+  "featured": false,
+  "issue": "mis-sorted: scorpion sighting, not a commercial monitoring program"
+ },
+ "commercial-monitoring/p265-1.jpg": {
+  "alt": "House foundation bed with a wire cage trap and cardboard set beside a basement window well.",
+  "caption": "Cage trap at the foundation",
+  "id": "cage trap along foundation",
+  "featured": false,
+  "issue": "mis-sorted: residential wildlife trapping, not commercial monitoring"
+ },
+ "commercial-monitoring/p265-2.jpg": {
+  "alt": "Squirrel peering from a roof edge beside a cage trap mounted at the gutter line.",
+  "caption": "Squirrel eyeing the roof trap",
+  "id": "cage trap at roofline",
+  "featured": false,
+  "issue": "mis-sorted: residential wildlife trapping, not commercial monitoring"
+ },
+ "commercial-monitoring/p265-3.jpg": {
+  "alt": "Snow-covered yard with a wire mesh exclusion fence and one-way trap box set along a house wall.",
+  "caption": "Exclusion fence and trap in snow",
+  "id": "wire mesh exclusion with trap box",
+  "featured": false,
+  "issue": "mis-sorted: residential wildlife exclusion, not commercial monitoring"
+ },
+ "commercial-monitoring/p265-4.jpg": {
+  "alt": "Overhead view of wire mesh fencing and a trap box tucked against siding in deep snow.",
+  "caption": "Mesh run along the wall",
+  "id": "wire mesh exclusion with trap box",
+  "featured": false,
+  "issue": "mis-sorted: residential wildlife exclusion, not commercial monitoring"
+ },
+ "commercial-monitoring/p265-5.jpg": {
+  "alt": "Galvanized wire mesh wrapped over a roof vent stack on an asphalt shingle roof in winter.",
+  "caption": "Roof vent screened off",
+  "id": "roof vent covered with wire mesh",
+  "featured": false,
+  "issue": "mis-sorted: wildlife exclusion, not commercial monitoring"
+ },
+ "commercial-monitoring/p266-1.jpg": {
+  "alt": "Cage trap set against a mound of dug soil at the base of a wooden shed door.",
+  "caption": "Trap set at the burrow",
+  "id": "cage trap at burrow by shed",
+  "featured": false,
+  "issue": "mis-sorted: wildlife trapping, not commercial monitoring"
+ },
+ "commercial-monitoring/p266-2.jpg": {
+  "alt": "Extension ladder leaned against a two-story house with siding, electric meters, and a gable vent.",
+  "caption": "Ladder up to the gable",
+  "id": "ladder access to roofline",
+  "featured": false,
+  "issue": "mis-sorted: wildlife access work, not commercial monitoring"
+ },
+ "commercial-monitoring/p266-3.jpg": {
+  "alt": "Squirrel caught in a wire cage trap set on shingles near a roof ridge vent.",
+  "caption": "Squirrel caught on the roof",
+  "id": "cage trap with captured squirrel",
+  "featured": true,
+  "issue": "mis-sorted: wildlife trapping, not commercial monitoring"
+ },
+ "commercial-monitoring/p448.jpg": {
+  "alt": "Open black rodent bait station with two small bait blocks sitting on an attic floor near insulation.",
+  "caption": "Bait station in the attic",
+  "id": "bait station with bait blocks in attic",
+  "featured": false,
+  "issue": null
+ },
+ "commercial-monitoring/p471.jpg": {
+  "alt": "Open, dirty exterior bait station with two blue bait blocks on rods, anchored to a deck board.",
+  "caption": "Serviced exterior bait station",
+  "id": "exterior bait station with secured bait blocks",
+  "featured": true,
+  "issue": null
+ },
+ "gear/g1.jpg": {
+  "alt": "White Lesco backpack sprayer tank on display beside a second white jug in a supply store.",
+  "caption": "Lesco backpack sprayer on the shelf",
+  "id": "Lesco backpack sprayer",
+  "featured": false,
+  "issue": null
+ },
+ "gear/g3.jpg": {
+  "alt": "Online product listing for a 24-foot aluminum telescoping pole, showing rating and $53.97 price.",
+  "caption": "24-ft telescoping pole pick",
+  "id": "telescoping extension pole",
+  "featured": false,
+  "issue": "screenshot of a retail product listing, not a member photo"
+ },
+ "gear/g4-1.jpg": {
+  "alt": "Black LED headlamp with a Coast-branded strap resting on a technician's lap inside a truck cab.",
+  "caption": "Headlamp riding shotgun",
+  "id": "Coast headlamp",
+  "featured": false,
+  "issue": null
+ },
+ "gear/g4-2.jpg": {
+  "alt": "Tattooed hand holding a dual-LED Coast headlamp with its strap inside a vehicle cab.",
+  "caption": "Coast headlamp for dark crawlspaces",
+  "id": "Coast headlamp",
+  "featured": false,
+  "issue": null
+ },
+ "gear/g6.jpg": {
+  "alt": "Aprehend biological bed bug control kit bag and blue applicator gun with coiled hose in a truck bin.",
+  "caption": "Aprehend kit ready to roll",
+  "id": "Aprehend bed bug applicator kit",
+  "featured": true,
+  "issue": null
+ },
+ "gear/g7.jpg": {
+  "alt": "PT 221L pressurized insecticide can fitted with a coiled blue hose and delivery wand on a truck bed.",
+  "caption": "PT 221L with delivery wand",
+  "id": "PT 221L aerosol with delivery wand",
+  "featured": true,
+  "issue": null
+ },
+ "gear/g11.jpg": {
+  "alt": "Open rear doors of a cargo van showing a red ATV loaded inside with fuel cans and side shelving.",
+  "caption": "ATV loaded in the van",
+  "id": "cargo van with ATV",
+  "featured": false,
+  "issue": null
+ },
+ "gear/g12-1.jpg": {
+  "alt": "Person in a full white bee suit and square veiled hood striking a pointing pose in a living room.",
+  "caption": "Trying on the new bee suit",
+  "id": "bee suit",
+  "featured": false,
+  "issue": "person is the subject; face partly visible through veil; private home interior"
+ },
+ "gear/g12-2.jpg": {
+  "alt": "Person in a white bee suit and veiled hood doing a dab pose inside a home, with a dog nearby.",
+  "caption": "Bee suit fit check",
+  "id": "bee suit",
+  "featured": false,
+  "issue": "person is the subject in a private home; novelty pose"
+ },
+ "gear/g12-3.jpg": {
+  "alt": "Person wearing a white bee suit and veiled hood standing sideways in a living room, a dog on the floor.",
+  "caption": "Bee suit, side view",
+  "id": "bee suit",
+  "featured": false,
+  "issue": "person is the subject in a private home"
+ },
+ "gear/g12-4.jpg": {
+  "alt": "Person in a white bee suit and veil walking across a carpeted living room while a small black dog watches.",
+  "caption": "Breaking in the bee suit",
+  "id": "bee suit",
+  "featured": false,
+  "issue": "person is the subject in a private home"
+ },
+ "gear/g12-5.jpg": {
+  "alt": "Person in a white bee suit with hands on hips, face clearly visible through the veil, in a living room.",
+  "caption": "Full bee suit, front view",
+  "id": "bee suit",
+  "featured": false,
+  "issue": "person's face clearly visible as the subject"
+ },
+ "gear/g13.jpg": {
+  "alt": "Hand holding a sealed bag containing a chrome multi-socket utility key for opening service cabinets and boxes.",
+  "caption": "Multi-key for locked stations",
+  "id": "multi-socket utility key",
+  "featured": false,
+  "issue": null
+ },
+ "gear/g14-1.jpg": {
+  "alt": "Blue rotary hammer drill standing on a long bit beside a garage wall, next to a broom and roll.",
+  "caption": "Rotary hammer set for slab drilling",
+  "id": "rotary hammer drill",
+  "featured": false,
+  "issue": null
+ },
+ "gear/g14-2.jpg": {
+  "alt": "Bosch rotary hammer drilling holes into a concrete slab along an interior wall, with dust around the bit.",
+  "caption": "Drilling the slab with the Bosch",
+  "id": "Bosch rotary hammer drill",
+  "featured": true,
+  "issue": null
+ },
+ "gear/g19.jpg": {
+  "alt": "Hand holding a can of Nisus Bac-Azap bio-sanitation liquid inside a vehicle cab.",
+  "caption": "Bac-Azap for organic buildup",
+  "id": "Nisus Bac-Azap bio-sanitation aerosol",
+  "featured": false,
+  "issue": null
+ },
+ "gear/g26-1.jpg": {
+  "alt": "Cluttered garage floor with crates of product bottles, buckets, totes, and equipment spread out for sorting.",
+  "caption": "Sorting the chemical and gear stash",
+  "id": "gear and product storage",
+  "featured": false,
+  "issue": null
+ },
+ "gear/g26-2.jpg": {
+  "alt": "Garage floor crowded with milk crates of bottles, buckets, bags, and sprayer wands mid-reorganization.",
+  "caption": "Mid-reorg of the gear room",
+  "id": "gear and product storage",
+  "featured": false,
+  "issue": null
+ },
+ "gear/g27.jpg": {
+  "alt": "Product image of a white and green Lesco backpack sprayer with brass-tipped wand on a white background.",
+  "caption": "Lesco backpack sprayer",
+  "id": "Lesco backpack sprayer",
+  "featured": false,
+  "issue": "stock/manufacturer product image"
+ },
+ "gear/g30-1.jpg": {
+  "alt": "Black blower nozzle with a slotted grille and orange spinning atomizer inside, lying in a wet truck bed.",
+  "caption": "Mosquito mister attachment up close",
+  "id": "backpack mister mosquito attachment",
+  "featured": true,
+  "issue": null
+ },
+ "gear/g30-2.jpg": {
+  "alt": "Blower nozzle with its slotted grille removed, exposing an orange atomizer, on a dirty truck bed.",
+  "caption": "Mister head with the grille off",
+  "id": "backpack mister mosquito attachment",
+  "featured": false,
+  "issue": null
+ },
+ "gear/g31.jpg": {
+  "alt": "Hand dispensing PU foam from a gun can into wire mesh stuffed against a house foundation gap.",
+  "caption": "Foam and mesh on a gap",
+  "id": "foam gun with mesh",
+  "featured": true,
+  "issue": null
+ },
+ "gear/g34.jpg": {
+  "alt": "Hand holding a bagged brass spray wand and trigger beside a coiled red hose on a tile floor.",
+  "caption": "New brass wand and hose",
+  "id": "brass spray wand and hose",
+  "featured": false,
+  "issue": null
+ },
+ "gear/g35.jpg": {
+  "alt": "Close view of a spring-guarded brass hose fitting inside a plastic bag, attached to a red hose.",
+  "caption": "Checking the hose fitting",
+  "id": "hose fitting with spring guard",
+  "featured": false,
+  "issue": "dim, cramped close-up; limited instructional value"
+ },
+ "gear/g37.jpg": {
+  "alt": "Green and white battery backpack sprayer with a handheld mister gun connected by hose on asphalt.",
+  "caption": "Battery backpack mister on the driveway",
+  "id": "battery backpack mister sprayer",
+  "featured": true,
+  "issue": null
+ },
+ "gear/g38.jpg": {
+  "alt": "Green and white backpack sprayer buckled into a truck's passenger seat with its corrugated blower hose.",
+  "caption": "Sprayer belted in for the ride",
+  "id": "backpack mister sprayer",
+  "featured": false,
+  "issue": null
+ },
+ "gear/g39.jpg": {
+  "alt": "Clear plastic canister of dark foam cubes with an alien-creature toy clinging to its side on concrete.",
+  "caption": "Alien hitchhiker on the canister",
+  "id": "novelty canister with toy",
+  "featured": false,
+  "issue": "novelty/joke image; screenshot framing with black bars; likely mis-sorted"
+ },
+ "gear/g46.jpg": {
+  "alt": "Close view of a black plastic rodent bait station lid embossed with two cartoon mice, held in hand.",
+  "caption": "Rodent station, mouse-embossed lid",
+  "id": "rodent bait station",
+  "featured": false,
+  "issue": "possibly mis-sorted (rodent device rather than gear)"
+ },
+ "gear/g47-1.jpg": {
+  "alt": "Dead mouse caught in a black plastic snap trap on a weathered, painted wooden surface.",
+  "caption": "Snap trap did its job",
+  "id": "snap trap with mouse catch",
+  "featured": false,
+  "issue": "screenshot framing with black bars; likely mis-sorted (rodent catch, not gear)"
+ },
+ "gear/g47-2.jpg": {
+  "alt": "Two black plastic snap traps beside a dead mouse on a dusty wooden plank floor.",
+  "caption": "Two snaps, one mouse",
+  "id": "snap traps with mouse catch",
+  "featured": false,
+  "issue": "screenshot framing with black bars; likely mis-sorted (rodent catch, not gear)"
+ },
+ "gear/g48.jpg": {
+  "alt": "Four backpack sprayers in red, white, and green lined up in a pickup bed in front of a garage door.",
+  "caption": "Backpack sprayer lineup in the bed",
+  "id": "backpack sprayers in truck bed",
+  "featured": true,
+  "issue": null
+ }
+}

@@ -6,6 +6,7 @@ import { DISCIPLINES } from '@/lib/content/disciplines';
 import { ACE_MODULES, ACE_PATH } from '@/lib/content/ace';
 import { EXAM_CATEGORIES } from '@/lib/content/exam-prep';
 import { TECHNOLOGY } from '@/lib/content/lab';
+import { PEST_GROUPS, PEST_ID_PATH } from '@/lib/content/pest-library';
 
 /**
  * Segmented sitemaps — one per hub, plus a `core` segment.
@@ -53,6 +54,9 @@ export default async function sitemap({
         entry('/academy/licensing/', 0.8),
         entry('/academy/exam-prep/', 0.8),
         ...EXAM_CATEGORIES.map((c) => entry(`/academy/exam-prep/${c.slug}/`, 0.7)),
+        entry(PEST_ID_PATH, 0.9),
+        ...PEST_GROUPS.map((g) => entry(`${PEST_ID_PATH}${g.slug}/`, 0.8)),
+        entry('/academy/resources/', 0.6),
         entry(ACE_PATH, 0.9),
         entry(`${ACE_PATH}practice-test/`, 0.8),
         entry(`${ACE_PATH}flashcards/`, 0.7),
@@ -95,10 +99,10 @@ export default async function sitemap({
     // Hubs whose spokes have not shipped yet. Index only — do not pad a sitemap with
     // routes that 404. Add spokes here as each phase lands.
     case 'arena':
-      return [entry('/arena/', 0.8), entry('/arena/games/speed-round/', 0.8)];
+      return [entry('/arena/', 0.8), entry('/arena/games/speed-round/', 0.8), entry('/arena/field-challenges/', 0.7)];
 
     case 'trade':
-      return [entry('/trade/', 0.8), entry('/trade/jobs/', 0.7)];
+      return [entry('/trade/', 0.8), entry('/trade/jobs/', 0.7), entry('/trade/pay-and-pricing/', 0.7)];
 
     case 'wire':
       return [entry('/wire/', 0.8), entry('/wire/regulatory/', 0.7)];
@@ -107,6 +111,7 @@ export default async function sitemap({
       return [
         entry('/lab/', 0.8),
         entry('/lab/technology/', 0.7),
+        entry('/lab/crew-picks/', 0.8),
         ...TECHNOLOGY.map((t) => entry(`/lab/technology/${t.slug}/`, 0.7)),
       ];
 

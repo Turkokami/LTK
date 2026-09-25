@@ -36,7 +36,7 @@ export function SiteHeader() {
             <span className="block font-sans text-[0.9375rem] font-extrabold uppercase leading-tight tracking-tight sm:text-lg">
               {site.name}
             </span>
-            <span className="mono mt-1 hidden text-ink3 sm:block">Pest Pros helping Pest Pros</span>
+            <span className="mono mt-1 hidden text-ink3 sm:block">Pest pros helping pest pros</span>
           </span>
         </a>
 

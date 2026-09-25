@@ -34,6 +34,20 @@ export default function Page() {
         <h1 className="display mb-5 max-w-[18ch]">{HUB.title}</h1>
         <p className="lede mb-10">{HUB.blurb}</p>
 
+        <a href="/lab/crew-picks/" className="discord-band group mb-12 block">
+          <div className="grid items-center gap-6 p-6 sm:p-8 md:grid-cols-[1fr_auto]">
+            <div>
+              <p className="eyebrow mb-2">From the Discord</p>
+              <p className="h2 mb-2 group-hover:text-blood">Crew picks: the gear members run</p>
+              <p className="max-w-[60ch] text-ink2">
+                Sprayers ranked by people who have burned through six of them, foggers, exclusion
+                hardware, traps and boots &mdash; credited and dated, straight from #the-arsenal.
+              </p>
+            </div>
+            <span className="btn btn--lg">See the picks</span>
+          </div>
+        </a>
+
         <HubSpokes hub={HUB} />
       </div>
     </>

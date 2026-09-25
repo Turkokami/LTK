@@ -50,7 +50,7 @@ export default function HomePage() {
       <section className="rule-b">
         <div className="shell grid items-center gap-12 py-14 lg:grid-cols-[1.25fr_1fr] lg:py-20">
           <div>
-            <p className="eyebrow mb-5">Pest Pros helping Pest Pros</p>
+            <p className="eyebrow mb-5">Pest pros helping pest pros</p>
             <h1 className="display max-w-[15ch]">
               Every field in pest control. One crew.
             </h1>
@@ -202,6 +202,20 @@ export default function HomePage() {
               </li>
             ))}
           </ul>
+          <div className="mt-6 grid gap-3 sm:grid-cols-3">
+            <a href="/academy/pest-id/" className="card group p-5">
+              <span className="eyebrow">Pest ID library</span>
+              <span className="h3 mt-1 block group-hover:text-blood">Hundreds of member photos, by pest</span>
+            </a>
+            <a href="/lab/crew-picks/" className="card group p-5">
+              <span className="eyebrow">Crew picks</span>
+              <span className="h3 mt-1 block group-hover:text-blood">The gear the crew actually runs</span>
+            </a>
+            <a href="/trade/jobs/#leads" className="card group p-5">
+              <span className="eyebrow">Job leads</span>
+              <span className="h3 mt-1 block group-hover:text-blood">Roles posted in the Discord</span>
+            </a>
+          </div>
         </div>
       </section>
 

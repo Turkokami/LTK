@@ -58,10 +58,12 @@ export const HUBS: Hub[] = [
     job: 'Acquisition. This is the front door and the largest traffic driver.',
     primaryEntity: 'Course / Event / FAQPage',
     spokes: [
+      { pattern: '/academy/pest-id/', label: 'Pest ID library (field photos)', count: 1, live: true },
       { pattern: '/academy/ace/', label: 'ACE exam prep', count: 1, live: true },
       { pattern: '/academy/ace/practice-test/', label: 'ACE practice test', count: 1, live: true },
       { pattern: '/academy/ace/flashcards/', label: 'ACE flashcards', count: 1, live: true },
       { pattern: '/academy/ace/:module/', label: 'ACE study modules', count: 11, index: '/academy/ace/' },
+      { pattern: '/academy/resources/', label: 'Resources the crew recommends', count: 1, live: true },
       { pattern: '/academy/licensing/:state/', label: 'State licensing', count: 50, index: '/academy/licensing/' },
       { pattern: '/academy/ceu/:state/', label: 'State CEU requirements', count: 50, index: '/academy/ceu/' },
       { pattern: '/academy/exam-prep/:category/', label: 'Exam prep by category', count: 5, index: '/academy/exam-prep/' },
@@ -97,6 +99,7 @@ export const HUBS: Hub[] = [
     job: 'Commercial intent. The hub that makes manufacturers take your call.',
     primaryEntity: 'Product / Review / ItemList',
     spokes: [
+      { pattern: '/lab/crew-picks/', label: 'Crew picks: gear members run', count: 1, live: true },
       { pattern: '/lab/technology/:slug/', label: 'Technology explainers', count: 25, index: '/lab/technology/' },
       { pattern: '/lab/reviews/:product/', label: 'Product reviews', count: 60 },
       { pattern: '/lab/software/:slug/', label: 'Software reviews', count: 18 },
@@ -115,6 +118,7 @@ export const HUBS: Hub[] = [
     primaryEntity: 'Event / ItemList',
     spokes: [
       { pattern: '/arena/games/speed-round/', label: 'ACE Speed Round', count: 1, live: true },
+      { pattern: '/arena/field-challenges/', label: 'Field challenges', count: 1, live: true },
       { pattern: '/arena/games/:slug/', label: 'More games', count: 10 },
       { pattern: '/arena/tournaments/:slug/', label: 'Tournaments', count: 16 },
       { pattern: '/arena/leaderboards/', label: 'National leaderboard', count: 1 },
@@ -132,6 +136,7 @@ export const HUBS: Hub[] = [
     job: 'Career mobility for members; recruiting inventory for operators.',
     primaryEntity: 'JobPosting / Dataset',
     spokes: [
+      { pattern: '/trade/pay-and-pricing/', label: 'Pay and pricing talk', count: 1, live: true },
       { pattern: '/trade/jobs/:state/', label: 'Jobs by state', count: 50, index: '/trade/jobs/' },
       { pattern: '/trade/salary/:role/', label: 'Pay data by role', count: 12 },
       { pattern: '/trade/start/:state/', label: 'Starting a company', count: 50 },

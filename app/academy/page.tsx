@@ -53,6 +53,15 @@ export default function Page() {
           </div>
         </a>
 
+        <a href="/academy/pest-id/" className="card group mb-12 flex flex-wrap items-center justify-between gap-4 p-6">
+          <span>
+            <span className="eyebrow mb-1">Pest ID library</span>
+            <span className="h2 block group-hover:text-blood">Real field photos, sorted by pest</span>
+            <span className="mt-1 block max-w-[60ch] text-ink2">Posted by the crew, with the ID notes the community&rsquo;s entomologists confirmed.</span>
+          </span>
+          <span className="btn btn--ghost btn--lg">Browse the library</span>
+        </a>
+
         <HubSpokes hub={HUB} />
       </div>
     </>

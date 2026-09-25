@@ -35,6 +35,16 @@ with a source URL beside every claim and the date you verified it.
 | 8 | Wire articles | `lib/content/wire.ts` | Editorial lead (R-06) | News with a primary source per item: EPA actions, label changes, state rule changes, recalls. Ongoing, 2×/week. |
 | 9 | Pest ID photo set for a photo Speed Round | Arena game 2 | Owner photos, or CC-licensed with credit | ~40 labelled species photos, CC0/CC BY/CC BY-SA with author and licence, or owner-supplied. |
 
+## Discord content pack (integrated 2026-09-25)
+
+The LTK Discord pack (photos, gear talk, job leads, pay/pricing talk, ID notes, resources) is live:
+`lib/content/community.ts`, `lib/content/community-photos.ts` (generated — see
+`scripts/community/`), `/academy/pest-id/`, `/lab/crew-picks/`, `/academy/resources/`,
+`/trade/pay-and-pricing/`, `/arena/field-challenges/`, job leads on `/trade/jobs/`, and
+"From the crew" galleries on field guides. Community approval for photo use confirmed by the
+owner. 52 of 324 photos were excluded in review (people, plates, business names, graphic,
+screenshots, blur, duplicates). Job leads are 2026 posts only and need a monthly prune.
+
 ## Not researchable — needs a person
 
 These stay "Rolling out" until the owner or Marcus decides or supplies them:

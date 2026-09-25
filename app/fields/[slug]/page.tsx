@@ -20,6 +20,9 @@ import { NATIONAL_BASELINE, PEST_CONTROL_WORKERS } from '@/lib/content/salary';
 import { PayHighlight } from '@/components/ui/PayHighlight';
 import { Photo } from '@/components/ui/Photo';
 import { WildlifeRules, hasWildlifeRules } from '@/components/fields/WildlifeRules';
+import { CommunityGallery } from '@/components/community/CommunityGallery';
+import { photosFor } from '@/lib/content/community-photos';
+import { PEST_ID_PATH } from '@/lib/content/pest-library';
 import { fieldPhotos } from '@/lib/content/photos';
 import { abs, ID, site } from '@/lib/site.config';
 import { EDITOR } from '@/lib/content/editorial';
@@ -43,6 +46,20 @@ import { EDITOR } from '@/lib/content/editorial';
  *   - Occupation schema. It needs real regional salary data; emitting it without that is
  *     fabrication with a schema wrapper around it.
  */
+
+/** Which Discord photo-pack sections illustrate each field. */
+const FIELD_PHOTO_SECTIONS: Record<string, string[]> = {
+  'general-pest': ['ants', 'cockroaches', 'spiders-scorpions', 'stinging-insects'],
+  'termite-wdo': ['termites-wdo'],
+  'wildlife-control': ['wildlife'],
+  'bird-abatement': ['bats-birds'],
+  exclusion: ['exclusion'],
+  insulation: ['crawlspace'],
+  fumigation: ['fumigation'],
+  'commercial-food-safety': ['commercial-monitoring', 'stored-product-pests', 'sanitation-conducive'],
+  'mosquito-vector': ['mosquito-vector', 'flies-gnats'],
+  'bed-bugs': ['bed-bugs'],
+};
 
 export function generateStaticParams() {
   return DISCIPLINES.map((d) => ({ slug: d.slug }));
@@ -105,6 +122,7 @@ export default async function FieldPage({
   const from = routesInto(d.slug);
   const to = d.movesTo.map(getDiscipline).filter(Boolean) as Discipline[];
   const photos = fieldPhotos(d.slug);
+  const crewPhotos = photosFor(...(FIELD_PHOTO_SECTIONS[d.slug] ?? []));
   const isPesticide = d.licensing === 'state-pesticide';
   const wildlifeView =
     d.slug === 'wildlife-control'
@@ -269,6 +287,22 @@ export default async function FieldPage({
               introduce you to them. You meet them or you don&rsquo;t &mdash; and the{' '}
               {site.discord.name} is where you meet them.
             </LabelBlock>
+          ) : null}
+
+          {crewPhotos.length ? (
+            <section aria-labelledby="crew-photos" className="mt-12">
+              <h2 id="crew-photos" className="h2 mb-1">
+                From the crew
+              </h2>
+              <p className="mb-5 text-sm text-ink3">
+                Photos members posted in the {site.discord.name}, credited by handle.{' '}
+                <a href={PEST_ID_PATH} className="link">
+                  Browse the pest ID library
+                </a>
+                .
+              </p>
+              <CommunityGallery photos={crewPhotos} limit={8} className="lg:grid-cols-4" />
+            </section>
           ) : null}
 
           {from.length || to.length ? (

@@ -10,6 +10,8 @@ import { ACE_MODULES, ACE_PATH, aceGlossaryTerms, storedProductFlashcards } from
 import { PUBLISHED_STATES } from '@/lib/content/states';
 import { EPISODES, PODCAST_PATH } from '@/lib/content/podcast';
 import { site } from '@/lib/site.config';
+import { PEST_GROUPS, PEST_ID_PATH } from '@/lib/content/pest-library';
+import { CREW_PICKS } from '@/lib/content/community';
 
 /**
  * /search/ — noindex utility. The index is assembled here from the content registries, so a
@@ -52,6 +54,10 @@ function buildIndex(): SearchItem[] {
       { title: `${s.name} pest control licensing`, text: `Licence categories, exams and the agency in ${s.name} (${s.code}).`, href: `/academy/licensing/${s.slug}/`, kind: 'State' },
       { title: `${s.name} CEU requirements`, text: `Continuing education hours and renewal rules in ${s.name} (${s.code}).`, href: `/academy/ceu/${s.slug}/`, kind: 'State' },
     ]),
+    ...PEST_GROUPS.map((g) => ({ title: `${g.name} — pest ID photos`, text: g.blurb, href: `${PEST_ID_PATH}${g.slug}/`, kind: 'Pest ID' })),
+    ...CREW_PICKS.flatMap((g) => g.picks.map((p) => ({ title: p.product, text: p.said, href: `/lab/crew-picks/#${g.id}`, kind: 'Crew pick' }))),
+    { title: 'Pay and pricing talk', text: 'What members report about technician pay and pricing specialty work.', href: '/trade/pay-and-pricing/', kind: 'Trade' },
+    { title: 'Field challenges', text: 'Photo hunts from real routes: conducive conditions, harborage, monitoring placement.', href: '/arena/field-challenges/', kind: 'Arena' },
     ...EPISODES.map((e) => ({ title: e.title, text: e.summary, href: PODCAST_PATH, kind: 'Podcast' })),
     { title: 'ACE Speed Round', text: 'A 60-second ACE quiz game. Build a streak and beat your best.', href: '/arena/games/speed-round/', kind: 'Game' },
     { title: `Join the ${site.discord.name}`, text: 'Shop talk, pest ID help, the podcast and group training.', href: site.discord.invite, kind: 'Discord' },
