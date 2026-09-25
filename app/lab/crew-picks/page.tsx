@@ -6,8 +6,10 @@ import { Breadcrumbs } from '@/components/site/Breadcrumbs';
 import { LabelBlock } from '@/components/label/LabelBlock';
 import { DiscordButton } from '@/components/community/Discord';
 import { CommunityGallery } from '@/components/community/CommunityGallery';
-import { CHEM_TALK, CREW_PICKS } from '@/lib/content/community';
+import { CHEM_TALK, CREW_PICKS, pickId } from '@/lib/content/community';
+import { VotesProvider, VoteButtons } from '@/components/community/Votes';
 import { photosFor } from '@/lib/content/community-photos';
+import { GEAR_IMAGES } from '@/lib/content/gear-images';
 import { site } from '@/lib/site.config';
 
 /**
@@ -51,7 +53,8 @@ export default function CrewPicksPage() {
         <LabelBlock title="Member reports, not Lab reviews" signal="warning" meta="Credited and dated" className="mb-10 max-w-[52rem]">
           Everything below is what a member posted, credited by Discord handle with the month they
           said it. Prices are what they paid or quoted at the time. Nothing here has been tested by
-          the Lab &mdash; when it has, it moves to a review with published criteria.{' '}
+          the Lab &mdash; when it has, it moves to a review with published criteria. The thumbs
+          are community votes, one per device, not verified ratings.{' '}
           <a href="/about/review-methodology/" className="link">
             How Lab reviews work
           </a>
@@ -69,6 +72,7 @@ export default function CrewPicksPage() {
           </a>
         </nav>
 
+        <VotesProvider ids={CREW_PICKS.flatMap((g) => g.picks.map((p) => pickId(p.product)))}>
         {CREW_PICKS.map((g) => (
           <section key={g.id} id={g.id} aria-labelledby={`${g.id}-h`} className="mb-14 scroll-mt-24">
             <h2 id={`${g.id}-h`} className="h2 mb-1">
@@ -76,25 +80,69 @@ export default function CrewPicksPage() {
             </h2>
             <p className="mb-5 text-ink2">{g.blurb}</p>
             <ul className="grid gap-3 md:grid-cols-2">
-              {g.picks.map((p) => (
-                <li key={p.product} className="card flex h-full flex-col p-5">
-                  <p className="h3 mb-2">{p.product}</p>
-                  <p className="mb-4 text-[0.9375rem] leading-relaxed text-ink2">{p.said}</p>
-                  <p className="mt-auto flex flex-wrap items-center justify-between gap-2 text-xs text-ink3">
-                    <span>
-                      {p.who} &middot; {p.when}
-                    </span>
-                    {p.link ? (
-                      <a href={p.link} target="_blank" rel="noopener noreferrer nofollow" className="link">
-                        Link a member shared<span className="sr-only"> (opens in a new tab)</span>
-                      </a>
+              {g.picks.map((p) => {
+                const img = GEAR_IMAGES[p.product];
+                return (
+                  <li key={p.product} className="card flex h-full flex-col overflow-hidden">
+                    {img ? (
+                      <figure className="m-0 border-b border-rule">
+                        <a
+                          href={p.link ?? img.sourceUrl}
+                          target="_blank"
+                          rel="noopener noreferrer nofollow"
+                          className="flex aspect-[4/3] items-center justify-center bg-white p-4"
+                        >
+                          <img
+                            src={img.src}
+                            alt={`${p.product}, product image`}
+                            width={img.width}
+                            height={img.height}
+                            loading="lazy"
+                            decoding="async"
+                            className="max-h-full max-w-full object-contain"
+                          />
+                          <span className="sr-only"> (opens the product page in a new tab)</span>
+                        </a>
+                        <figcaption className="px-5 pt-2 text-[0.6875rem] text-ink3">Image: {img.credit}</figcaption>
+                      </figure>
                     ) : null}
-                  </p>
-                </li>
-              ))}
+                    <div className="flex flex-1 flex-col p-5">
+                      <p className="h3 mb-2">{p.product}</p>
+                      <p className="mb-4 text-[0.9375rem] leading-relaxed text-ink2">{p.said}</p>
+                      {p.alsoLinks?.length ? (
+                        <ul className="mb-4 flex flex-wrap gap-x-4 gap-y-1 text-sm">
+                          {p.alsoLinks.map((l) => (
+                            <li key={l.url}>
+                              <a href={l.url} target="_blank" rel="noopener noreferrer nofollow" className="link">
+                                {l.label}
+                                <span className="sr-only"> (opens in a new tab)</span>
+                              </a>
+                            </li>
+                          ))}
+                        </ul>
+                      ) : null}
+                      <div className="mb-3 mt-auto">
+                        <VoteButtons id={pickId(p.product)} label={p.product} />
+                      </div>
+                      <p className="flex flex-wrap items-center justify-between gap-2 text-xs text-ink3">
+                        <span>
+                          {p.who} &middot; {p.when}
+                        </span>
+                        {p.link ? (
+                          <a href={p.link} target="_blank" rel="noopener noreferrer nofollow" className="btn btn--ghost !px-3 !py-1.5 !text-xs">
+                            View product<span className="sr-only"> (opens in a new tab)</span>
+                          </a>
+                        ) : null}
+                      </p>
+                    </div>
+                  </li>
+                );
+              })}
             </ul>
           </section>
         ))}
+
+        </VotesProvider>
 
         <section id="chemistry" aria-labelledby="chem-h" className="mb-14 scroll-mt-24">
           <h2 id="chem-h" className="h2 mb-1">

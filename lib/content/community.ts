@@ -27,8 +27,10 @@ export interface CrewPick extends Credit {
   product: string;
   /** What members said, paraphrased from the post. Quotes are marked with quotation marks. */
   said: string;
-  /** Product or source link a member shared. */
+  /** Product page: the member's link, else the manufacturer's page, else a major retailer. */
   link?: string;
+  /** Extra links for generic picks (e.g. a category with several brands). */
+  alsoLinks?: { label: string; url: string }[];
 }
 
 export interface CrewPickGroup {
@@ -36,6 +38,16 @@ export interface CrewPickGroup {
   name: string;
   blurb: string;
   picks: CrewPick[];
+}
+
+/** Stable vote id for a pick. Never change a pick's product name without migrating its votes. */
+export function pickId(product: string): string {
+  return product
+    .toLowerCase()
+    .normalize('NFKD')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '')
+    .slice(0, 80);
 }
 
 export const CREW_PICKS: CrewPickGroup[] = [
