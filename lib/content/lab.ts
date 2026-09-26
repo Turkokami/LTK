@@ -1000,6 +1000,347 @@ export const TECHNOLOGY: TechnologyTopic[] = [
     reviewer: EDITOR_REVIEWER,
     verifiedOn: '2026-09-26',
   },
+
+  {
+    slug: 'insect-light-traps',
+    name: 'Insect light traps',
+    definition:
+      'Wall- or ceiling-mounted units that draw flying insects with ultraviolet light, then hold ' +
+      'them on a glue board or kill them on an electric grid. In food plants and kitchens they ' +
+      'catch flies and night-flying insects such as moths that got past exclusion. They add to ' +
+      'sanitation and exclusion. They do not replace either.',
+    fits: [
+      'Food-handling areas where insect fragments are the real risk. Glue-board traps were ' +
+      'developed because electrocution blew visible fly particles away from the trap and also ' +
+      'produced small airborne particles that could carry bacteria and viruses. In a controlled ' +
+      'test, flies sprayed with bacteria or a virus released about one in every 10,000 of those ' +
+      'microbes when electrocuted. A glue board holds the insect whole.',
+      'Low wall mounting along fly routes. In open poultry houses, traps with the bottom edge ' +
+      'about 10 cm above the ground caught 10 times more flies than traps mounted 1.5 m up. ' +
+      'Evidence also suggests floor-level traps out-catch traps at 2 m, though the review says ' +
+      'more work is needed. The UV-safety study describes low ' +
+      'wall-mounted units as the accepted layout for flies and night-flying insects, with ' +
+      'ceiling-hung units useful where night fliers such as moths are the main concern.',
+      'Bottlenecks and flyways away from where people work: next to doorways, ' +
+      'in vestibules, and along the route between dumpsters and the areas being protected. That ' +
+      'was where the UV-safety researchers found traps installed. Measured UV exposure at ' +
+      'realistic distances was well below human guidelines, and no unit exceeded the 8-hour UV-A ' +
+      'limit beyond 60 cm.',
+      'Accounts that need a serviced, dated catch record. The house fly review describes the ' +
+      'usual commercial service as monthly: replace the glue board, check operation, clean the ' +
+      'unit, and replace the bulb every six months. Our read: the used glue board is a record of ' +
+      'what was flying there since the last visit, and that is what makes it useful for audits ' +
+      'and trend checks.',
+    ],
+    doesNotFit: [
+      'Over a food preparation area, whatever the trap type. The FDA Food Code (6-202.13) ' +
+      'requires electrocution or stun devices to retain the insect inside the device. It also ' +
+      'requires all insect control devices to be installed away from food preparation areas, so ' +
+      'dead insects and fragments cannot fall or be thrown onto exposed food, clean equipment, ' +
+      'utensils, linens or unwrapped single-use items. The code restricts grid units. It does not ' +
+      'ban them, despite what trade copy often says.',
+      'High above or facing an entry door. A trap mounted high over a restaurant entrance tends ' +
+      'to draw flies to the door, where they may get inside. Put the unit where it pulls insects ' +
+      'away from food and toward the trap, not toward the opening.',
+      'As a substitute for sanitation and exclusion. The Food Code annex calls electrocution ' +
+      'devices supplemental to good sanitation, and the house fly review puts keeping flies out ' +
+      'first: air curtains, screens, slat doors and closed entry doors. In urban sites the flies ' +
+      'usually come from somewhere else, so a unit that keeps catching is pointing you at a door ' +
+      'or a source. It is not the fix.',
+      'Paying extra for glue-board add-ons or colours on the promise of higher catch. Glue boards ' +
+      'with pheromones or other attractants added showed no benefit in laboratory studies, and ' +
+      'most climate-controlled businesses have five to eight complete air changes an hour, which ' +
+      'clears most odours anyway. In field studies, black glue boards cut fly catch by as much as ' +
+      '50% compared with white.',
+      'Buying LED units on published efficacy. As of the 2021 review, the authors could not find ' +
+      'published accounts of successful LED traps. Most evaluated units use fluorescent blacklight ' +
+      'tubes. Lamps are replaced on a schedule because output is highest when they are new; the ' +
+      'UV-safety study measured freshly installed lamps as its worst case for that reason. We ' +
+      'found no peer-reviewed figure for how fast output falls, so follow the manufacturer\'s ' +
+      'replacement interval.',
+    ],
+    sources: [
+      {
+        label:
+          'Food Code 2022, 6-202.13 Insect control devices, design and installation, and Annex 3 — U.S. Food and Drug Administration (2022)',
+        url: 'https://www.fda.gov/media/164194/download',
+      },
+      {
+        label: 'A Review of Alternative Controls for House Flies — Insects (2021), PMC8617729',
+        url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC8617729/',
+      },
+      {
+        label: 'Killing of flies in electrocuting insect traps releases bacteria and viruses — Current Microbiology (2000)',
+        url: 'https://doi.org/10.1007/s002840010132',
+      },
+      {
+        label: 'Ultraviolet safety assessments of insect light traps — Journal of Occupational and Environmental Hygiene (2016), PMC4867860 — co-authored by a light-trap manufacturer',
+        url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC4867860/',
+      },
+    ],
+    reviewer: EDITOR_REVIEWER,
+    verifiedOn: '2026-09-26',
+  },
+  {
+    slug: 'moisture-meters-and-thermal-imaging',
+    name: 'Moisture meters and thermal imaging',
+    definition:
+      'Hand tools for termite and conducive-condition inspections that do not open the structure. ' +
+      'Moisture meters read wood moisture content, infrared cameras show surface temperature ' +
+      'differences, and microwave and acoustic devices pick up movement or feeding. They tell you ' +
+      'where to look. An infrared image shows a temperature pattern, not termites.',
+    fits: [
+      'Putting a number on moist wood, one of the main conducive conditions. Mississippi State ' +
+      'extension lists moist wood from plumbing leaks, roof leaks or condensation as a major ' +
+      'condition that makes a building more likely to be attacked. The USDA Wood Handbook ' +
+      'describes electric meters as fast and able to measure wood already installed in a ' +
+      'building, without cutting it beyond the pin holes of a resistance meter.',
+      'Screening walls for subterranean termite moisture. Subterranean termites, especially ' +
+      'Formosan, build galleries and carton with wet mud and water. That wood ends up at a ' +
+      'different temperature from dry framing, which an infrared camera can pick up. The ' +
+      'University of Mississippi patent treats infrared as the first screen, with a second method ' +
+      'used to confirm.',
+      'Confirming activity in one suspect drywood board. After the California field trials, the ' +
+      'researchers\' next-best option to opening the wall was an acoustic emission sensor screwed ' +
+      'into the board, then a microwave motion sensor on a tripod to locate the galleries. In the ' +
+      'test structure, every board both methods called active was confirmed active when it was ' +
+      'cut open.',
+      'Checking behind drywall for movement. In laboratory work, a low-energy microwave device ' +
+      'produced detectable signals from a single drywood termite through drywall. The maximum ' +
+      'reliable wood depth was 5 cm.',
+    ],
+    doesNotFit: [
+      'An infrared image as a termite finding. The patent background calls infrared a ' +
+      'nonspecific method that produces many false positives. It lists uneven insulation, ' +
+      'air-conditioning ducts, leaks, air moving through wall cracks and moisture problems as ' +
+      'other causes of temperature differences. It says results still need walls opened to ' +
+      'verify, and that the method needs a high degree of operator skill. A warm or cool patch ' +
+      'is a reason to probe, nothing more.',
+      'Drywood termites, with infrared. In the California trials, images at room temperature ' +
+      'showed no pattern of damage. After boards were heated for 5-10 seconds at 540 °C, the ' +
+      'patterns turned out to be knots, peeling paint and chips, not galleries. Behind paneling, ' +
+      'drywall or stucco, no damage could be seen at all. Drywood termites do not use water to ' +
+      'build, so there is no moisture gradient to image.',
+      'Reading a moisture meter above about 30%. The Wood Handbook gives a reliable range of ' +
+      'about 6-30% for resistance meters and 4-30% for dielectric meters, and says readings above ' +
+      '30% are qualitative only. Resistance readings need a temperature correction of about 0.5% ' +
+      'for every 10 °F away from calibration, plus a species correction. Uninsulated pins read the ' +
+      'wettest wood along their length, so rain-wetted surfaces can read high. Pinless readings ' +
+      'are driven mostly by the surface layers.',
+      'Microwave or acoustic tools as a whole-structure clearance. In the field trials the ' +
+      'microwave device was reliable over an area of only 5 by 6.5 cm, 3.5 cm deep. Wind and ' +
+      'foot traffic produced background motion that could cause false positives. Wall coverings ' +
+      'got in the way of both microwave and acoustic tools. In the laboratory study, termite ' +
+      'numbers did not predict signal strength, so a strong signal does not mean a large ' +
+      'infestation.',
+      'Replacing an experienced inspector. The California report, which was not peer reviewed, ' +
+      'could not recommend any single device that reliably shows termites are active in walls, ' +
+      'especially up high or behind coverings. Its best option was a trained inspector with 20 ' +
+      'years of field experience and permission to open walls.',
+    ],
+    sources: [
+      {
+        label:
+          'Assessment of Devices and Techniques for Improving Inspection and Evaluation of Treatments for Inaccessible Drywood Termite Infestations, final report — California Structural Pest Control Board / UC Berkeley (c. 2009, not peer reviewed)',
+        url: 'https://www.pestboard.ca.gov/howdoi/research/ucbfinal.pdf',
+      },
+      {
+        label:
+          'Wood Handbook, Chapter 13: Drying and Control of Moisture Content and Dimensional Changes — USDA Forest Products Laboratory, FPL-GTR-282 (2021)',
+        url: 'https://www.fpl.fs.usda.gov/documnts/fplgtr/fplgtr282/chapter_13_fpl_gtr282.pdf',
+      },
+      {
+        label:
+          'US Patent 7,434,990 — Method to detect termite infestation in a structure (documents infrared false positives and the need to verify) (2008)',
+        url: 'https://patents.google.com/patent/US7434990B2/en',
+      },
+      {
+        label:
+          'Evaluation of Low-Energy Microwaves Technology (Termatrac) for Detecting Western Drywood Termite in a Simulated Drywall System — Journal of Economic Entomology (2018)',
+        url: 'https://academic.oup.com/jee/article/111/3/1323/4942029',
+      },
+      {
+        label: 'Conducive Conditions (Common Termite Risk Factors) — Mississippi State University Extension',
+        url: 'https://extension.msstate.edu/insects/termites/conducive-conditions-common-termite-risk-factors',
+      },
+    ],
+    reviewer: EDITOR_REVIEWER,
+    verifiedOn: '2026-09-26',
+  },
+  {
+    slug: 'mosquito-surveillance-traps',
+    name: 'Mosquito surveillance traps',
+    definition:
+      'Traps that sample mosquitoes so a program can see which species are present, how many, ' +
+      'and whether they carry virus. CO2-baited light traps catch host-seeking females, gravid ' +
+      'traps catch egg-laying Culex, BG-Sentinel traps target container Aedes, and ovitraps ' +
+      'collect eggs. Each samples a different slice of the population. None counts it.',
+    fits: [
+      'West Nile virus testing in urban Culex. CDC calls gravid traps useful for Culex pipiens and ' +
+      'Cx. quinquefasciatus, especially in urban areas. Gravid females have already taken a blood ' +
+      'meal, which makes it more likely the trap catches infected mosquitoes. California\'s plan ' +
+      'notes gravid-trap catches may have a higher infection rate than CO2-trap catches, and the ' +
+      'mosquitoes arrive alive for virus testing.',
+      'A broad picture of the biting population. CDC light traps baited with dry ice catch a wide ' +
+      'range of Aedes, Anopheles and Culex. CDC advises setting them at dusk, collecting after ' +
+      'dawn, and hanging them about 5 feet off the ground. In New Orleans surveillance data they ' +
+      'gave the highest species diversity of the three trap types and caught Culex salinarius and Aedes vexans more often ' +
+      'than BG-Sentinel traps.',
+      'Aedes aegypti and Ae. albopictus. CDC names BG-Sentinel traps and gravid traps such as the ' +
+      'autocidal gravid ovitrap as the most commonly used adult traps for these species. ' +
+      'BG-Sentinels collect females in all physiological states, and gravid traps are cheaper and ' +
+      'easier to run. In Puerto Rico, local chikungunya transmission dropped significantly when ' +
+      'Ae. aegypti fell below three females per sticky gravid trap per week.',
+      'Cheap presence checks with ovitraps. CDC says a small number of ovitraps is usually enough ' +
+      'to show the vector is present, and fewer than 100 can reliably estimate abundance in a ' +
+      'large urban neighbourhood, usually one per city block. Traps must be serviced at least ' +
+      'weekly, because an ovitrap left out longer can become a larval site and start producing ' +
+      'adults.',
+      'Turning counts into action. California compares adult Culex abundance with the five-year ' +
+      'average for the same area and two-week period, scores it in bands from under 50% to over ' +
+      '300%, and combines it with the minimum infection rate per 1,000 females tested. CDC\'s ' +
+      'vector index multiplies the average catch per trap night by the proportion infected, giving ' +
+      'infected mosquitoes per trap night.',
+    ],
+    doesNotFit: [
+      'Using CDC light traps or Culex gravid traps to monitor Aedes aegypti or Ae. albopictus. ' +
+      'CDC says these species are not efficiently captured by the CDC miniature light trap, the ' +
+      'CDC gravid trap or the New Jersey light trap. A zero from the wrong trap is not a zero.',
+      'Estimating Culex infection from light-trap catches alone. CDC warns that light traps may ' +
+      'collect fewer Cx. pipiens or Cx. quinquefasciatus, which gives small samples and less ' +
+      'accurate infection rates. California notes that more than half of a CO2 trap\'s catch is ' +
+      'newly emerged females that have never fed, and that these traps do not collect males or ' +
+      'blood-fed and gravid females.',
+      'Comparing numbers across trap types, or reading a count as the population. CDC describes ' +
+      'abundance as the relative number of mosquitoes in an area during a sampling period. In New ' +
+      'Orleans, trap type significantly changed estimates of abundance, richness and species mix. ' +
+      'California asks for at least two years, preferably five, of history per trap type before ' +
+      'calling a count above or below normal.',
+      'Judging a source-reduction campaign by ovitrap counts. After source reduction, gravid ' +
+      'females have fewer places to lay and put a larger share of eggs in the ovitraps. That can ' +
+      'make the program look like it failed when it worked. CDC also says larval and pupal ' +
+      'indices may not match adult abundance, and that thresholds should be set by each local ' +
+      'program. State or national figures should be used with caution.',
+      'New Jersey light traps near other lights, or for virus work. California lists them as ' +
+      'ineffective where there are competing light sources. They select for night-active insects ' +
+      'drawn to light, take a long time to sort because of by-catch, and deliver dead specimens ' +
+      'that are less useful for virus detection.',
+    ],
+    sources: [
+      {
+        label: 'Mosquito Surveillance Traps — U.S. Centers for Disease Control and Prevention (2024)',
+        url: 'https://www.cdc.gov/mosquitoes/php/toolkit/mosquito-surveillance-traps.html',
+      },
+      {
+        label: 'Surveillance and Control of Aedes aegypti and Aedes albopictus in the United States — U.S. Centers for Disease Control and Prevention (undated)',
+        url: 'https://www.cdc.gov/mosquitoes/pdfs/mosquito-control-508.pdf',
+      },
+      {
+        label: 'West Nile Virus Surveillance and Control Guidelines — U.S. Centers for Disease Control and Prevention (2024)',
+        url: 'https://www.cdc.gov/west-nile-virus/php/surveillance-and-control-guidelines/index.html',
+      },
+      {
+        label:
+          'California Mosquito-Borne Virus Surveillance & Response Plan — California Department of Public Health, MVCAC and University of California (2026)',
+        url: 'https://westnile.ca.gov/pdfs/CAMosquitoSurveillanceResponsePlan.pdf',
+      },
+      {
+        label:
+          'Mosquito seasonality and trap type evaluation using routine surveillance data from New Orleans, Louisiana, United States — PLOS One (2026), PMC12788643',
+        url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC12788643/',
+      },
+    ],
+    reviewer: EDITOR_REVIEWER,
+    verifiedOn: '2026-09-26',
+  },
+  {
+    slug: 'fumigant-monitoring',
+    name: 'Fumigant monitoring and clearance',
+    definition:
+      'Measuring fumigant gas during and after a fumigation to protect people and document the ' +
+      'job. For sulfuryl fluoride, a clearance device must read 1 ppm or less in each room\'s ' +
+      'breathing zone before re-entry. Phosphine labels require a written fumigation management ' +
+      'plan, monitoring, and aeration to 0.3 ppm. A clearance reading describes the air, not every ' +
+      'void.',
+    fits: [
+      'Residential sulfuryl fluoride clearance. EPA requires the level inside the structure to be ' +
+      'under 1 ppm, confirmed by a reading of 1 ppm or less in the breathing zone of each room. ' +
+      'The certified operator posts clearance notices at every entry point and tells the resident. ' +
+      'The device must tell concentrations apart at 0.5 ppm steps at minimum and be calibrated ' +
+      'within the manufacturer\'s re-calibration interval.',
+      'A written record of each residential fumigation. EPA\'s site-specific structural ' +
+      'fumigation log, required on residential sulfuryl fluoride labels in states without their ' +
+      'own specifications, records dosing conditions, fumigant release time, who started ' +
+      'aeration and when, the date and time final clearance testing was completed, and the ' +
+      'clearance device model used.',
+      'Phosphine fumigations of any kind. Labels require a fumigation management plan written ' +
+      'before every treatment, including a monitoring plan showing that nearby workers, bystanders ' +
+      'and residents are not exposed above allowed limits. EPA\'s 2024 interim decision adds ' +
+      'instructions to monitor phosphine inside the enclosure before aeration and record it in ' +
+      'the plan, to decide whether an aeration buffer zone is needed. The plan and monitoring records must be kept on site ' +
+      'during the job and for at least two years.',
+      'Knowing when people can go back in after phosphine. Fumigated structures must be aerated ' +
+      'to 0.3 ppm or less before re-entry unless approved respiratory protection is worn. Labels ' +
+      'allow no more than 0.3 ppm as an 8-hour average, or 1.0 ppm over 15 minutes, without ' +
+      'respiratory protection. A self-contained breathing apparatus is required when levels are ' +
+      'unknown or above that short-term limit.',
+      'Continuous readings in bins and other long fumigations. In farm-bin trials, wireless ' +
+      'phosphine sensors tracked hand-held meter readings as levels changed and showed swings ' +
+      'tied to the recirculation fan that manual sampling missed.',
+    ],
+    doesNotFit: [
+      'Treating clearance as the end of exposure. In California from 2003 to 2014, there were 59 ' +
+      'reported sulfuryl fluoride illness incidents after structural fumigation, seven of them ' +
+      'fatal. Over half involved people exposed after the structure had been cleared, though none ' +
+      'of the deaths did. Wall voids, sockets, crawl spaces and cabinets can trap gas, and ' +
+      'household materials absorb and release it. In one home, 11 breathing-zone samples were ' +
+      'clear while the air cells of a mattress held 2.4 ppm weeks after fumigation.',
+      'Any gas analyser that happens to read sulfuryl fluoride. EPA tested five clearance device ' +
+      'models and found two ineffective. Its performance bar is a false-negative rate ' +
+      '(reading 0 ppm on a test standard) under 30%, and more than 70% of readings on a 1 ppm ' +
+      'standard actually showing 1 ppm. In one serious poisoning case the operator had no working clearance ' +
+      'device. An uncalibrated or unlisted meter gives a number, not a clearance.',
+      'Phosphine anywhere people live. The model fumigation management plan language prohibits ' +
+      'use on single- and multi-family homes, nursing homes, schools, daycare facilities and ' +
+      'hospitals. The exception that lets occupants stay in a building inside an aeration buffer ' +
+      'zone, with continuous real-time monitoring at 0.3 ppm or less, applies only to occupational ' +
+      'workers, never to homes, apartments, schools or hospitals.',
+      'Reading 0.3 ppm phosphine as a safe level. It is the label re-entry level and matches the ' +
+      'OSHA and NIOSH 8-hour limits, and the label is the law. EPA\'s own review also notes that ' +
+      'ACGIH recommends a lower threshold of 0.05 ppm as an 8-hour average and 0.15 ppm short ' +
+      'term. Those are recommendations only, but they are the reason to keep exposure well under ' +
+      'the legal figure, not up to it.',
+      'One sensor as proof the whole commodity was treated. The same bin study found ' +
+      'concentration can vary considerably with depth in the grain, so a single sensor cannot show ' +
+      'the fumigant reached everywhere it needed to.',
+    ],
+    sources: [
+      {
+        label: 'Sulfuryl Fluoride Clearance Devices — U.S. Environmental Protection Agency (updated 2026)',
+        url: 'https://www.epa.gov/ingredients-used-pesticide-products/sulfuryl-fluoride-clearance-devices',
+      },
+      {
+        label: 'Sulfuryl Fluoride Site-Specific Structural Fumigation Site Log — U.S. Environmental Protection Agency',
+        url: 'https://www.epa.gov/ingredients-used-pesticide-products/sulfuryl-fluoride-site-specific-structural-fumigation-site-log',
+      },
+      {
+        label:
+          'Aluminum Phosphide, Magnesium Phosphide, and Phosphine Interim Registration Review Decision, EPA-HQ-OPP-2013-0081 — U.S. EPA (2024), copy hosted by the Penn State Center for Agricultural and Shale Law',
+        url: 'https://aglaw.psu.edu/wp-content/uploads/2024/07/5-Phosphine-Phosphides-6.24.24.pdf',
+      },
+      {
+        label:
+          'Sulfuryl Fluoride Poisonings in Structural Fumigation, a Highly Regulated Industry — Potential Causes and Solutions — International Journal of Environmental Research and Public Health (2019), PMC6603922',
+        url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC6603922/',
+      },
+      {
+        label: 'Evaluation of Wireless Phosphine Sensors for Monitoring Fumigation Gas in Wheat Stored in Farm Bins — Insects (2019), PMC6572082',
+        url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC6572082/',
+      },
+    ],
+    reviewer: EDITOR_REVIEWER,
+    verifiedOn: '2026-09-26',
+  },
 ];
 
 export function getTechnology(slug: string): TechnologyTopic | undefined {

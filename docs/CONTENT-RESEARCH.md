@@ -85,3 +85,13 @@ TX, WA, FL, CA, SC live, from `lib/content/start-company.ts`. Open gaps before t
 - FL: unclear whether the $300 fee is per location; 5E-14 F.A.C. not re-read.
 - CA: SPCB page says "$500,000 general liability" but s.8692 sets $500k BI + $500k PD per occurrence (statute used). Branch fee unknown (form 43L-15 404s).
 - SC: DPR words the DCA experience test two ways (Licensing page vs FAQ). Page tells readers to confirm with DPR 864-646-2150.
+
+## Lab explainers batches 2–3 — merged 2026-09-26
+
+16 explainers live. Recheck items:
+- rodenticide-formulations: EPA interim decision still pending (Nov 2025 page). Murray 2020 hawk figures are abstract-only. The automated-bait-stations entry says EPA *proposed* RUP for SGARs (Mass. report); confirm against the interim decision when it lands.
+- bed-bug-heat-vs-chemical: resistance ratios are Dang 2017's citations of earlier studies. "Heat leaves no residual" is an inference (Virginia Tech implies it; J IPM review states it and could be swapped in).
+- insect-growth-regulators: EPA IGR fact sheet is from 2001, UC fleas page from 2010; K-State MF3094 is greenhouse-focused (flagged in text).
+- insect-light-traps: no peer-reviewed figure for UV lamp output decay. Sliney 2016 has manufacturer co-authors (disclosed in label). The 2021 LED-trap finding hasn't been checked for newer work.
+- moisture-meters-and-thermal-imaging: the UC Berkeley / SPCB report is not peer reviewed (stated in text).
+- fumigant-monitoring: SF aeration hours not sourced. July 2024 SF label approval and the OIG report of 11 deaths were left out to stay at 5 sources.
