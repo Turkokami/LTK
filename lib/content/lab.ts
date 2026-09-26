@@ -660,6 +660,346 @@ export const TECHNOLOGY: TechnologyTopic[] = [
     reviewer: EDITOR_REVIEWER,
     verifiedOn: '2026-09-25',
   },
+
+  {
+    slug: 'exclusion-materials',
+    name: 'Rodent exclusion materials',
+    definition:
+      'Physical materials used to close the gaps rodents use to enter a building: metal wools and ' +
+      'meshes, hardware cloth, sheet metal, concrete, and the sealants and door hardware around ' +
+      'them. What decides whether a repair holds is gauge, mesh size and a hard, flat surface ' +
+      'with no edge to bite. Foam, rubber, vinyl and plastic do not stop gnawing.',
+    fits: [
+      'Holes sized to the animal. Rats can get through any opening wider than 1/2 inch, and mice ' +
+      'through anything wider than 1/4 inch. A pencil or ball-point pen (3/16 to 3/8 inch across) ' +
+      'is a quick gauge: if it fits, a mouse can get in. Measure the gap before you choose the ' +
+      'material.',
+      'Hardware cloth that matches the target species. The published specification is woven ' +
+      '19-gauge, 1/2 x 1/2-inch mesh to exclude rats and 24-gauge, 1/4 x 1/4-inch mesh to exclude ' +
+      'mice. Use woven or welded cloth. Cloth that is neither breaks easily, while woven or ' +
+      'welded cloth keeps its shape when cut to fit around pipes. Holes 3 inches or more across ' +
+      'should be backed with 1/4-inch cloth before patching.',
+      'Galvanized sheet metal and concrete where gnawing pressure is high. The same specification ' +
+      'calls for 24-gauge or heavier galvanized sheet for wall and pipe barriers, 22-gauge or ' +
+      'heavier for kick plates and door edging, and 14-gauge for perforated grills. Concrete ' +
+      'should be at least 2 inches thick if reinforced and 3 3/4 inches if not. Rodent incisors ' +
+      'curve slightly inward, so a flat, hard surface is difficult to start on.',
+      'Copper or stainless steel wool packed into small gaps. For openings under 3/4 inch that ' +
+      'cannot be closed any other way, Nebraska Extension says to wedge copper or stainless steel ' +
+      'wool tightly into the gap. For a long-term repair, work a quick-drying patching plaster ' +
+      'into the copper wad before pushing it in, then smooth the outside over.',
+      'Doors, which are among the most common entry points. The gap between the door bottom and ' +
+      'the threshold should not exceed 1/4 inch. On softwood doors, fit metal flashing or a metal ' +
+      'channel to the lower edge, finished to within 1/8 inch of the edge at the sides and bottom.',
+    ],
+    doesNotFit: [
+      'Foam as the barrier. UC IPM lists insulating (expanding) foam among the materials that are ' +
+      'ineffective for plugging mouse holes, alongside plastic screening, rubber, vinyl and wood. ' +
+      'The federal wildlife damage handbook says spray-in-place foam and neoprene seals are not ' +
+      'rodent-proof, and Nebraska Extension adds that sunlight degrades foam. CDC consumer ' +
+      'guidance still suggests caulk or spray foam to hold steel wool in place. Treat foam as an ' +
+      'air seal or a retainer, never as the thing stopping the rodent.',
+      'Plain steel wool as a permanent repair. Every source that recommends it calls it ' +
+      'temporary. UC IPM says it may rust over time, the federal handbook warns of rust stains, ' +
+      'and Nebraska Extension says coarse steel wool will eventually rust. On a job you are ' +
+      'warrantying, specify copper or stainless and back the patch properly.',
+      'Rubber and vinyl door sweeps and weather stops on accounts with active rats. Rats and mice ' +
+      'can quickly gnaw through rubber or vinyl weather stops, and the federal handbook ' +
+      'photographs a large hole Norway rats chewed through a warehouse door weather strip. A ' +
+      'sweep seals a gap. It does not stop gnawing unless it is protected by metal. A plastic door ' +
+      'boot is only described as working where a door gets little use and its edges are hard for ' +
+      'rodents to reach.',
+      'Lightweight metals and screen as rodent-proofing. Rats can gnaw through lead and aluminum ' +
+      'sheeting, window screen, fiberglass, plastic and low-quality concrete or concrete block. ' +
+      'Aluminum flashing and insect screen have their uses, but neither is a rat barrier unless ' +
+      'it meets the gauges above. On vents, go no finer than you need: small mesh screens can clog ' +
+      'with dust or freeze over, and 1/2 x 1/2-inch cloth is the published compromise between ' +
+      'airflow and rodent control.',
+      'Metal-to-concrete details that are left to rust. Metal siding resting directly on concrete ' +
+      'can rust and corrode faster, and siding should be installed with openings no wider than ' +
+      '1/8 inch. An exclusion job that corrodes open at the slab line in a few seasons has only ' +
+      'delayed the callback.',
+    ],
+    sources: [
+      {
+        label:
+          'Rodent-Proof Construction and Exclusion Methods — Prevention and Control of Wildlife Damage, USDA APHIS Animal Damage Control / University of Nebraska (1994)',
+        url: 'https://icwdm.org/wp-content/uploads/2023/04/1994RodentProofConstructionBaker.pdf',
+      },
+      {
+        label: 'Rodent-Proof Construction — Structural (G1530) — Nebraska Extension (rev. 2009)',
+        url: 'https://extensionpubs.unl.edu/publication/g1530/2003/html/view',
+      },
+      {
+        label: 'Pest Notes: House Mouse — UC Statewide IPM Program (2025)',
+        url: 'https://ipm.ucanr.edu/PMG/PESTNOTES/pn7483.html',
+      },
+      {
+        label: 'Pest Notes: Rats — UC Statewide IPM Program (2025)',
+        url: 'https://ipm.ucanr.edu/home-and-landscape/rats/pest-notes/',
+      },
+      {
+        label: 'How to Seal Up to Prevent Rodents — Centers for Disease Control and Prevention',
+        url: 'https://www.cdc.gov/healthy-pets/rodent-control/seal-up.html',
+      },
+    ],
+    reviewer: EDITOR_REVIEWER,
+    verifiedOn: '2026-09-26',
+  },
+  {
+    slug: 'rodenticide-formulations',
+    name: 'Rodenticide formulations',
+    definition:
+      'Rodent baits built on anticoagulants, which block vitamin K recycling so clotting fails ' +
+      'and signs are delayed by days; cholecalciferol (vitamin D3), which overwhelms calcium ' +
+      'regulation; or bromethalin, which stops nerve cells producing energy. Second-generation ' +
+      'anticoagulants can kill from one feeding and persist in tissue, so EPA keeps them out of ' +
+      'consumer products.',
+    fits: [
+      'First-generation anticoagulants where rodents will feed on the bait over several days. EPA ' +
+      'describes warfarin-type compounds as much more toxic when feeding occurs on several ' +
+      'successive days than on one day only. Second-generation compounds tend to stay in animal ' +
+      'tissue longer than first-generation ones, so a multiple-feed active is the lower-residue ' +
+      'choice where the programme can wait.',
+      'Second-generation anticoagulants in professional programmes only. Brodifacoum, ' +
+      'bromadiolone, difenacoum and difethialone are registered only for the commercial and ' +
+      'structural pest control markets, in containers of at least 16 pounds of bait (8 pounds for ' +
+      'agricultural buildings). EPA describes them as more likely to kill after a single ' +
+      'night\'s feeding. That potency is also the reason for the restriction.',
+      'Tamper-resistant stations as a label requirement, not an upgrade. Labels require ' +
+      'tamper-resistant bait stations for outdoor above-ground placements and where children ' +
+      'under six or pets may reach the bait. UC IPM adds nontarget mammals and birds to that list. ' +
+      'Consumer products since the 2008 decision must be block or paste bait sold in a station. ' +
+      'Loose pellets are not permitted.',
+      'Accounts where accidental human exposure is the main worry. Anticoagulant poisoning has a ' +
+      'specific antidote, phytonadione (vitamin K1). EPA\'s clinical manual warns that vitamin K3 ' +
+      'and K4 do not work, and that large second-generation ingestions may need treatment for as ' +
+      'long as three or four months. Bromethalin has no known antidote and treatment is ' +
+      'supportive only.',
+    ],
+    doesNotFit: [
+      'Treating secondary poisoning as theoretical. In liver samples from 43 red-tailed hawks ' +
+      'admitted to a Massachusetts wildlife clinic from 2017 to 2019, every bird was positive for ' +
+      'anticoagulant rodenticides, 91% carried two to four different compounds, and 14 were ' +
+      'diagnosed with anticoagulant toxicosis. Brodifacoum, bromadiolone and difethialone were ' +
+      'the compounds found most often. A predator that eats many poisoned rodents can build up a ' +
+      'toxic dose over time.',
+      'Bromethalin as the automatically "safer" swap in homes with pets and children. It is one ' +
+      'of only three actives allowed in consumer bait stations, but it has no antidote. In people ' +
+      'and animals it causes cerebral oedema, and EPA\'s manual lists stupor, coma and possible ' +
+      'seizures. Pick the active for the exposure risk at that site, not for how it is marketed.',
+      'Anywhere state law is stricter than the federal label. California now prohibits most uses ' +
+      'of brodifacoum, bromadiolone and difethialone, and of the first-generation compounds ' +
+      'diphacinone, chlorophacinone and warfarin. Almost all bait used in and around structures ' +
+      'there must be in stations within 50 feet of a structure. A national protocol is not ' +
+      'compliant in California.',
+      'Assuming the federal rules are settled. EPA\'s November 2024 final biological evaluation ' +
+      'covered 11 rodenticides. It found currently labelled uses likely to adversely affect 1-8% ' +
+      'of listed species. Its mitigation is geographically specific and tied to application ' +
+      'method (bait station, in-burrow or broadcast). It will reach you through label language, ' +
+      'terms of registration or Bulletins Live! Two. Carcass searches are held back for sites ' +
+      'where other measures are not practical. Check the bulletin for the county before you bait.',
+      'Leaving dead and dying rodents on site. EPA\'s own reasoning for its mitigation is that ' +
+      'some rodenticides stay in target animals long enough to affect the predators and ' +
+      'scavengers that eat them. A baiting programme with no carcass pickup is a secondary ' +
+      'exposure programme.',
+    ],
+    sources: [
+      {
+        label: 'Restrictions on Rodenticide Products — U.S. EPA (2008 risk mitigation decision; page updated 2026)',
+        url: 'https://www.epa.gov/rodenticides/restrictions-rodenticide-products',
+      },
+      {
+        label:
+          'EPA Releases Rodenticide Strategy, Including Final Biological Evaluation on the Effects of 11 Rodenticides on Endangered Species — U.S. EPA (2024)',
+        url: 'https://www.epa.gov/pesticides/epa-releases-rodenticide-strategy-including-final-biological-evaluation-effects-11',
+      },
+      {
+        label:
+          'Recognition and Management of Pesticide Poisonings, Chapter 18: Rodenticides — U.S. EPA (6th edition)',
+        url: 'https://www.epa.gov/sites/default/files/documents/rmpp_6thed_ch18_rodenticides.pdf',
+      },
+      {
+        label:
+          'Continued Anticoagulant Rodenticide Exposure of Red-tailed Hawks in the Northeastern United States with an Evaluation of Serum for Biomonitoring — Environmental Toxicology and Chemistry (2020)',
+        url: 'https://academic.oup.com/etc/article-abstract/39/11/2325/7735613',
+      },
+      {
+        label: 'Pest Notes: Rats — UC Statewide IPM Program (2025), California anticoagulant restrictions',
+        url: 'https://ipm.ucanr.edu/home-and-landscape/rats/pest-notes/',
+      },
+    ],
+    reviewer: EDITOR_REVIEWER,
+    verifiedOn: '2026-09-26',
+  },
+  {
+    slug: 'bed-bug-heat-vs-chemical',
+    name: 'Bed bug control: heat, chemical or both',
+    definition:
+      'Heat, residual insecticides, or both. Heat can kill every life stage in one visit, but ' +
+      'survivors are common and it leaves no residual. Residual insecticides keep working after ' +
+      'you leave but meet widespread pyrethroid resistance. Combined programmes use heat or other ' +
+      'non-chemical methods for the kill and a residual, often a desiccant dust, for survivors.',
+    fits: [
+      'Heat, where every hiding place can actually be brought to temperature. The commercial ' +
+      'heat study recommends at least 48°C for 71.5 minutes, or stopping only once 50°C or more ' +
+      'has been reached in every place bed bugs may hide. That is a harborage temperature, not ' +
+      'an air temperature.',
+      'Desiccant dusts where resistance has made sprays unreliable. EPA notes that desiccants ' +
+      'work by a physical mode of action, so bed bugs cannot become resistant to them the way ' +
+      'they can to other modes. Use only desiccants registered and labelled for bed bugs. EPA ' +
+      'warns that food-grade and pool-grade products pose an increased inhalation risk.',
+      'Heat followed by a residual in the places heat reaches worst. Virginia Tech says a few ' +
+      'survivors after a heat treatment are very common. It recommends residual applications at ' +
+      'floor-wall junctions, voids behind drywall, closet floors, inside electrical wall sockets ' +
+      'and anywhere clothing had been stacked.',
+      'Non-chemical programmes that add a dust. In 21 New Jersey apartments followed for six ' +
+      'months, non-chemical methods plus silica gel dust cut bed bug counts by 99% against 89% ' +
+      'for non-chemical methods alone. 90% of the dusted units were down to one bed bug or none, ' +
+      'against 46% of the others. The non-chemical arm used steam, vacuuming, encasements and ' +
+      'interceptors, not whole-room heat.',
+      'Rotating classes rather than repeating one. EPA lists seven registered chemical classes ' +
+      'for bed bugs: pyrethrins, pyrethroids, desiccants, biochemicals, pyrroles, neonicotinoids ' +
+      'and insect growth regulators. For resistant strains it points to switching classes or ' +
+      'using combination products.',
+    ],
+    doesNotFit: [
+      'Pyrethroid-only programmes. Published resistance ratios for US field strains include more ' +
+      'than 12,765-fold to deltamethrin in Cincinnati and more than 9,375-fold in New York City, ' +
+      'with lambda-cyhalothrin ratios above 6,000 in both cities. EPA itself states that some ' +
+      'populations are resistant to pyrethrins and pyrethroids. A label rate cannot overcome ' +
+      'thousand-fold resistance.',
+      'Assuming a pyrethroid-neonicotinoid mix solves resistance. Bed bugs collected from homes ' +
+      'in Cincinnati and Michigan showed moderate to high tolerance or resistance to several ' +
+      'neonicotinoids, probably through increased detoxification enzyme activity. A combination ' +
+      'product helps only while both halves still work on that population.',
+      'Heat jobs run to the air temperature. Virginia Tech notes that many crews aim for 135°F ' +
+      'ambient and hold for four to five hours, and that bed bugs escape into cooler cracks and ' +
+      'crevices during treatment. Egg death points are higher than adult ones: 122°F against ' +
+      '118°F in the Virginia Tech figures. Under whole-room ramp rates the study measured 99% egg ' +
+      'kill at 54.8°C. At 45°C, 99% egg kill took 428.5 minutes.',
+      'Heat alone, sold as a single guaranteed visit. Virginia Tech says even the best heat ' +
+      'treatment cannot be expected to succeed every time, calls heat not a "once and done" ' +
+      'method, and recommends a long-lasting desiccant dust afterwards for any bugs or eggs that ' +
+      'survived. A quote with no follow-up and no residual step sets up the callback.',
+      'Desiccants for fast relief. EPA describes the mode of action as destroying the protective ' +
+      'waxy coating, after which bed bugs slowly dehydrate and die. Dust is a long game. The ' +
+      'occupant who needs the biting to stop this week needs the kill step as well.',
+    ],
+    sources: [
+      {
+        label:
+          'Temperature and Time Requirements for Controlling Bed Bugs (Cimex lectularius) under Commercial Heat Treatment Conditions — Insects (2011), PMC4553552',
+        url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC4553552/',
+      },
+      {
+        label: 'Bed Bug Heat Treatments — What you need to know! (ENTO-583) — Virginia Cooperative Extension (2024)',
+        url: 'https://www.pubs.ext.vt.edu/ENTO/ento-583/ento-583.html',
+      },
+      {
+        label:
+          'Insecticide resistance and resistance mechanisms in bed bugs, Cimex spp. (Hemiptera: Cimicidae) — Parasites & Vectors (2017), PMC5492349',
+        url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC5492349/',
+      },
+      {
+        label: 'Pesticides to Control Bed Bugs — U.S. EPA',
+        url: 'https://www.epa.gov/bedbugs/pesticides-control-bed-bugs',
+      },
+      {
+        label:
+          'Evaluation of a Non-Chemical Compared to a Non-Chemical Plus Silica Gel Approach to Bed Bug Management — Insects (2020), PMC7411924',
+        url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC7411924/',
+      },
+    ],
+    reviewer: EDITOR_REVIEWER,
+    verifiedOn: '2026-09-26',
+  },
+  {
+    slug: 'insect-growth-regulators',
+    name: 'Insect growth regulators',
+    definition:
+      'Insecticides that disrupt insect development rather than killing on contact. Juvenile ' +
+      'hormone analogs such as methoprene, hydroprene and pyriproxyfen keep immatures from ' +
+      'becoming reproducing adults. Chitin synthesis inhibitors block the exoskeleton, so ' +
+      'insects die in an immature stage. Adults usually survive, so an IGR alone gives no quick ' +
+      'knockdown.',
+    fits: [
+      'Breaking the next generation while something else handles the current one. Juvenile ' +
+      'hormone analogs let a larva grow and pupate, but the pupa never emerges as an adult. ' +
+      'Chitin synthesis inhibitors interfere with building the exoskeleton, so insects die ' +
+      'immature or mature into sterile adults. Some IGRs also cut egg viability and adult ' +
+      'reproduction, which reduces the number of generations you have to treat.',
+      'Indoor cockroach work, including food-handling sites. EPA\'s IGR fact sheet lists ' +
+      'S-hydroprene for indoor use as a fogger, spray or impregnated disc, including in food ' +
+      'handling establishments but not applied directly to food, and names the roach as a major ' +
+      'target pest. Check the current label before you rely on a 2001 use summary.',
+      'Flea programmes, on the animal and in the room. Methoprene and pyriproxyfen are designed ' +
+      'for long-term control of flea eggs and immatures in the environment. UC IPM describes an ' +
+      'on-pet product that does not kill adult fleas but does prevent them reproducing. Where a ' +
+      'pet sleeps outside under heavy pressure, UC IPM says those areas can be treated with ' +
+      'pyriproxyfen.',
+      'Stored-product facilities, paired with a knockdown active. Methoprene is labelled for ' +
+      'direct application to stored grain, as a residual contact spray and as an aerosol. In ' +
+      'aerosol tests with synergized pyrethrin plus methoprene, fewer than 2% of red flour beetle ' +
+      'larvae on treated flour or packaging emerged as normal adults. The pyrethrin gives the ' +
+      'immediate adult control that the IGR cannot.',
+      'Sites that are also heat-treated. Methoprene stayed stable for 48 hours on concrete held ' +
+      'at 65°C and on wheat held at 46°C. The authors conclude it is stable at the high ' +
+      'temperatures reached during insecticidal heat treatments of structures.',
+    ],
+    doesNotFit: [
+      'Any customer who needs fewer insects this week. IGRs do not kill insects directly. ' +
+      'Extension guidance puts death at 3 to 14 days depending on product, pest and stage, and ' +
+      'adults usually survive. With fleas, an indoor IGR treatment kills larvae but not pupae, ' +
+      'so adults may keep emerging for up to two weeks. At cool temperatures, fully formed fleas ' +
+      'can wait in the cocoon for up to 12 months.',
+      'Infestations with every life stage present, treated once. IGRs work only when a ' +
+      'susceptible stage is there. Kansas State Extension says they are less effective when ' +
+      'generations overlap, and that residual activity is brief enough that repeat applications ' +
+      'are usually warranted. That publication is written for greenhouse pests, but the timing ' +
+      'problem is the same one you meet in a structure.',
+      'Unsealed concrete as a long-residual surface. Methoprene on varnished wood allowed no red ' +
+      'flour beetle emergence 24 weeks after treatment at any temperature tested. On unsealed ' +
+      'concrete, emergence rose over time. Flour on the surface reduced efficacy further on ' +
+      'concrete but not on wood. The substrate mattered more than the temperature.',
+      'Assuming one IGR works equally on closely related pests. In the same aerosol work, the ' +
+      'confused flour beetle was clearly more tolerant than the red flour beetle. On packaging ' +
+      'treated at the lower pyrethrin rate, 29.7% to 49.0% of its larvae emerged as ' +
+      'normal-looking adults, depending on the surface. Identify the species before you count on ' +
+      'the growth regulator.',
+      'Treating low aquatic risk as no aquatic risk. EPA expects none of the juvenile hormone ' +
+      'analogs it reviewed to harm people or wildlife when used as labelled. It also notes that ' +
+      'methoprene and S-methoprene show some toxicity to certain fish and aquatic invertebrates ' +
+      'in laboratory tests. Keep outdoor applications away from water the label does not cover.',
+    ],
+    sources: [
+      {
+        label: 'Insect Growth Regulators for Use in Greenhouses (MF3094) — Kansas State University Research and Extension (2013)',
+        url: 'https://bookstore.ksre.ksu.edu/pubs/insect-growth-regulators-for-use-in-greenhouses_MF3094.pdf',
+      },
+      {
+        label:
+          'Biopesticides Fact Sheet — Insect Growth Regulators: S-Hydroprene, S-Kinoprene, Methoprene, S-Methoprene — U.S. EPA (2001)',
+        url: 'https://www3.epa.gov/pesticides/chem_search/reg_actions/registration/fs_G-107_06-Dec-01.pdf',
+      },
+      {
+        label: 'Pest Notes: Fleas — UC Statewide IPM Program (2010)',
+        url: 'https://ipm.ucanr.edu/PMG/PESTNOTES/pn7419.html',
+      },
+      {
+        label:
+          'Residual efficacy of synergized pyrethrin + methoprene aerosol against larvae of Tribolium castaneum and Tribolium confusum — Journal of Stored Products Research (2011)',
+        url: 'https://www.ars.usda.gov/ARSUserFiles/30200530/pdf/1162_2011.pdf',
+      },
+      {
+        label:
+          'Residual Efficacy of Methoprene for Control of Tribolium castaneum Larvae at Different Temperatures on Varnished Wood, Concrete, and Wheat — Journal of Economic Entomology (2012)',
+        url: 'https://academic.oup.com/jee/article/105/2/718/898152',
+      },
+    ],
+    reviewer: EDITOR_REVIEWER,
+    verifiedOn: '2026-09-26',
+  },
 ];
 
 export function getTechnology(slug: string): TechnologyTopic | undefined {

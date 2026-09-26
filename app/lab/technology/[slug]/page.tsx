@@ -46,9 +46,10 @@ export async function generateMetadata({
       t.name,
     ]),
     description: pickDescription(
-      `What ${t.name.toLowerCase()} actually does, the jobs it suits, and the jobs it does not.`,
+      `${t.name} — how it works, the jobs it suits, and the jobs it does not.`,
       [
         'Written against published research and patent filings rather than vendor marketing.',
+        'Written against published research and field studies, not vendor marketing.',
         'Written against published research, not vendor marketing.',
         'Sourced, dated, and specific about the limits.',
       ],
