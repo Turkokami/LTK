@@ -50,6 +50,8 @@ const ROUTES = [
   '/academy/resources/',
   '/lab/crew-picks/',
   '/trade/pay-and-pricing/',
+  '/trade/start/',
+  '/trade/start/texas/',
   '/arena/field-challenges/',
   '/arena/games/photo-id-sprint/',
   '/about/team/marcus-scruggs/',

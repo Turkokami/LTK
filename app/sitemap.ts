@@ -104,7 +104,7 @@ export default async function sitemap({
       return [entry('/arena/', 0.8), entry('/arena/games/speed-round/', 0.8), entry('/arena/games/photo-id-sprint/', 0.8), entry('/arena/field-challenges/', 0.7)];
 
     case 'trade':
-      return [entry('/trade/', 0.8), entry('/trade/jobs/', 0.7), entry('/trade/pay-and-pricing/', 0.7)];
+      return [entry('/trade/', 0.8), entry('/trade/jobs/', 0.7), entry('/trade/pay-and-pricing/', 0.7), entry('/trade/start/', 0.7), ...['texas', 'washington', 'florida', 'california', 'south-carolina'].map((s) => entry(`/trade/start/${s}/`, 0.6))];
 
     case 'wire':
       return [entry('/wire/', 0.8), entry('/wire/regulatory/', 0.7)];

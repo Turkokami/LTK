@@ -76,3 +76,12 @@ These stay "Rolling out" until the owner or Marcus decides or supplies them:
 - [ ] Plain practitioner voice. No "exterminator", no marketing words (seamless, revolutionary, unlock, empower, cutting-edge).
 - [ ] Delivered as data in the named shape, not as finished HTML.
 - [ ] Reviewed by a person before it is merged. Research never auto-publishes.
+
+## Starting a company (/trade/start/) — researched 2026-09-26
+
+TX, WA, FL, CA, SC live, from `lib/content/start-company.ts`. Open gaps before these can be called fully verified:
+- TX: Occupations Code ch. 1951 unreadable (JS-only statute site); insurance figures rest on TDA pages. SPC-401 (rev. 05/15/18) lists SPT-430/SPT-002 while the web page says SPC-002/SPC-003. Confirm current form numbers.
+- WA: RCW 17.21 / WAC 16-228 sites refused connections; figures from WSDA pages. No experience rule found, which doesn't prove there is none.
+- FL: unclear whether the $300 fee is per location; 5E-14 F.A.C. not re-read.
+- CA: SPCB page says "$500,000 general liability" but s.8692 sets $500k BI + $500k PD per occurrence (statute used). Branch fee unknown (form 43L-15 404s).
+- SC: DPR words the DCA experience test two ways (Licensing page vs FAQ). Page tells readers to confirm with DPR 864-646-2150.
