@@ -11,7 +11,7 @@
  * signed a participation agreement and their credential has been checked.
  */
 
-export type PersonRole = 'advisor' | 'editorial' | 'moderator' | 'instructor';
+export type PersonRole = 'founder' | 'advisor' | 'editorial' | 'moderator' | 'instructor';
 
 export interface SitePerson {
   slug: string;
@@ -31,12 +31,29 @@ export interface SitePerson {
   sameAs?: string[];
   /** 2-4 sentences. What they actually know, not a career summary. */
   bio: string;
+  /** 140-160 characters, for the page's meta description. */
+  metaDescription: string;
   /** Which hubs their name appears on, for cross-linking. */
   covers?: string[];
 }
 
-/** REGISTRY R-05 / R-06. Empty until real, verified, consenting humans exist. */
-export const PEOPLE: SitePerson[] = [];
+/**
+ * REGISTRY R-05 / R-06 still gate advisors and the editorial lead. The founder is listed from
+ * his own public bio (Pest Perspectives EP 36, 2025); no credential number is published.
+ */
+export const PEOPLE: SitePerson[] = [
+  {
+    slug: 'marcus-scruggs',
+    name: 'Marcus Scruggs',
+    role: 'founder',
+    jobTitle: 'Founder, Licensed to Kill',
+    bio:
+      'Pest management professional with more than ten years in the trade, specializing in food safety, audits, sanitation and public health, and a certified applicator. Created the Licensed to Kill Discord and hosts The Licensed to Kill Podcast.',
+    metaDescription:
+      'Marcus Scruggs founded Licensed to Kill: 10+ years in pest management, specializing in food safety, audits and sanitation. Hear him on the podcast and Discord.',
+    covers: ['community'],
+  },
+];
 
 export function getPerson(slug: string): SitePerson | undefined {
   return PEOPLE.find((p) => p.slug === slug);

@@ -6,6 +6,7 @@ import { DISCIPLINES } from '@/lib/content/disciplines';
 import { ACE_MODULES, ACE_PATH } from '@/lib/content/ace';
 import { EXAM_CATEGORIES } from '@/lib/content/exam-prep';
 import { TECHNOLOGY } from '@/lib/content/lab';
+import { PEOPLE } from '@/lib/content/people';
 import { PEST_GROUPS, PEST_ID_PATH } from '@/lib/content/pest-library';
 
 /**
@@ -83,6 +84,7 @@ export default async function sitemap({
     case 'about':
       return [
         entry('/about/', 0.7),
+        ...PEOPLE.map((p) => entry(`/about/team/${p.slug}/`, 0.6)),
         entry('/about/editorial-standards/', 0.6),
         entry('/about/review-methodology/', 0.6),
         entry('/about/sponsorship-policy/', 0.6),

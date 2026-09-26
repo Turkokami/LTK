@@ -84,7 +84,7 @@ export const HUBS: Hub[] = [
     spokes: [
       { pattern: '/community/podcast/', label: 'The LTK podcast', count: 1, live: true },
       { pattern: '/community/forums/:category/', label: 'Forum categories', count: 13, index: '/community/forums/' },
-      { pattern: '/community/forums/:category/:thread/', label: 'Threads', count: 'open' },
+      { pattern: '/community/forums/:category/:thread/', label: 'Forum threads', count: 'open' },
       { pattern: '/community/chapters/:state/', label: 'State chapters', count: 50, index: '/community/chapters/' },
       { pattern: '/community/members/:handle/', label: 'Member profiles', count: 'open' },
     ],
@@ -120,7 +120,7 @@ export const HUBS: Hub[] = [
       { pattern: '/arena/games/speed-round/', label: 'ACE Speed Round', count: 1, live: true },
       { pattern: '/arena/field-challenges/', label: 'Field challenges', count: 1, live: true },
       { pattern: '/arena/games/:slug/', label: 'More games', count: 10 },
-      { pattern: '/arena/tournaments/:slug/', label: 'Tournaments', count: 16 },
+      { pattern: '/arena/tournaments/:slug/', label: 'Tournaments and the championship', count: 16, index: '/arena/tournaments/' },
       { pattern: '/arena/leaderboards/', label: 'National leaderboard', count: 1 },
       { pattern: '/arena/leaderboards/:state/', label: 'State leaderboards', count: 50 },
       { pattern: '/arena/season/:n/', label: 'Season archives', count: 'open' },
@@ -138,7 +138,7 @@ export const HUBS: Hub[] = [
     spokes: [
       { pattern: '/trade/pay-and-pricing/', label: 'Pay and pricing talk', count: 1, live: true },
       { pattern: '/trade/jobs/:state/', label: 'Jobs by state', count: 50, index: '/trade/jobs/' },
-      { pattern: '/trade/salary/:role/', label: 'Pay data by role', count: 12 },
+      { pattern: '/trade/salary/:role/', label: 'Pay data by role', count: 12, index: '/trade/pay-and-pricing/' },
       { pattern: '/trade/start/:state/', label: 'Starting a company', count: 50 },
       { pattern: '/trade/owners/:slug/', label: 'Owner topics', count: 18 },
     ],
@@ -153,7 +153,7 @@ export const HUBS: Hub[] = [
     job: 'News velocity. The fastest route to habitual return visits.',
     primaryEntity: 'NewsArticle',
     spokes: [
-      { pattern: '/wire/:slug/', label: 'Articles', count: 'open' },
+      { pattern: '/wire/:slug/', label: 'News articles', count: 'open' },
       { pattern: '/wire/regulatory/:state/', label: 'State regulatory', count: 50, index: '/wire/regulatory/' },
     ],
   },
@@ -184,7 +184,7 @@ export const HUBS: Hub[] = [
     job: 'E-E-A-T anchor. These pages ship before content, not after.',
     primaryEntity: 'AboutPage / Person',
     spokes: [
-      { pattern: '/about/team/:slug/', label: 'Team', count: 'open' },
+      { pattern: '/about/team/marcus-scruggs/', label: 'Founder: Marcus Scruggs', count: 1, live: true },
       { pattern: '/about/advisory-board/', label: 'Advisory board', count: 1, live: true },
       { pattern: '/about/editorial-standards/', label: 'Editorial standards', count: 1, live: true },
       { pattern: '/about/review-methodology/', label: 'Review methodology', count: 1, live: true },

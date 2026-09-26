@@ -13,6 +13,24 @@ export const metadata: Metadata = pageMeta({
   path: '/about/contact/',
 });
 
+/** Email once REGISTRY R-07 lands; until then the channel that actually reaches someone. */
+function route(email: string | null, fallback: 'discord' | 'linkedin', label: string) {
+  if (email) {
+    return (
+      <a href={`mailto:${email}`} className="link">
+        {email}
+      </a>
+    );
+  }
+  const href = fallback === 'discord' ? site.discord.invite : site.social.linkedin;
+  return (
+    <a href={href} target="_blank" rel="noopener noreferrer" className="link">
+      {label}
+      <span className="sr-only"> (opens in a new tab)</span>
+    </a>
+  );
+}
+
 export default function ContactPage() {
   const crumbs = [
     { name: 'Home', href: '/' },
@@ -32,17 +50,18 @@ export default function ContactPage() {
         <p className="eyebrow mb-3">Trust</p>
         <h1 className="display mb-6">Contact</h1>
         <p className="prose-bulletin mb-8">
-          Four routes, kept separate on purpose. A sponsor question and a verification question
-          need different people and different response times.
+          Kept separate on purpose — a sponsor question and a membership question need different
+          people. The fastest way to reach anyone at LTK today is the Discord.
         </p>
 
         <LabelBlock
           title="Where to write"
           specs={[
-            { label: 'Membership', value: site.contact.membership },
-            { label: 'Sponsorship', value: site.contact.sponsorship },
-            { label: 'Press', value: site.contact.press },
-            { label: 'Investors', value: site.contact.investors },
+            { label: 'Membership', value: route(site.contact.membership, 'discord', 'Message the crew in the Discord') },
+            { label: 'Sponsorship', value: route(site.contact.sponsorship, 'linkedin', 'Message LTK on LinkedIn') },
+            { label: 'Press', value: route(site.contact.press, 'linkedin', 'Message LTK on LinkedIn') },
+            { label: 'Investors', value: route(site.contact.investors, 'linkedin', 'Message LTK on LinkedIn') },
+            { label: 'Corrections', value: route(null, 'discord', 'Flag it in the Discord') },
           ]}
         >
           Correcting something we published? Say which page and what is wrong — corrections go in

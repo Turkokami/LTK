@@ -98,6 +98,10 @@ export default function AboutPage() {
             LTK was started by <strong className="text-ink">{site.founder.name}</strong>, who built
             the Discord as a place for people in the trade to meet, talk shop and game together, and
             hosts the Licensed to Kill Podcast. {site.founder.bio}{' '}
+            <a href="/about/team/marcus-scruggs/" className="link">
+              More about Marcus
+            </a>{' '}
+            &middot;{' '}
             <a href="/community/podcast/" className="link">
               Hear him on the podcast
             </a>

@@ -5,6 +5,7 @@ import { JsonLd } from '@/components/JsonLd';
 import { Breadcrumbs } from '@/components/site/Breadcrumbs';
 import { LabelBlock } from '@/components/label/LabelBlock';
 import { site } from '@/lib/site.config';
+import { EPISODES } from '@/lib/content/podcast';
 
 export const metadata: Metadata = pageMeta({
   title: 'Press',
@@ -67,9 +68,41 @@ export default function PressPage() {
           <LabelBlock
             title="Media contact"
             specs={[
-              { label: 'Email', value: site.contact.press },
-              { label: 'Brand assets', value: null },
-              { label: 'Coverage', value: null },
+              {
+                label: 'Contact',
+                value: site.contact.press ? (
+                  <a href={`mailto:${site.contact.press}`} className="link">{site.contact.press}</a>
+                ) : (
+                  <a href={site.social.linkedin} target="_blank" rel="noopener noreferrer" className="link">
+                    Message LTK on LinkedIn<span className="sr-only"> (opens in a new tab)</span>
+                  </a>
+                ),
+              },
+              {
+                label: 'Brand assets',
+                value: (
+                  <>
+                    <a href="/brand/logo-1200.jpg" className="link">Badge logo, 1200px</a>
+                    {' · '}
+                    <a href="/brand/ltk-banner.jpg" className="link">Banner</a>
+                  </>
+                ),
+              },
+              {
+                label: 'Coverage',
+                value: (
+                  <>
+                    {EPISODES.map((e, i) => (
+                      <span key={e.slug}>
+                        {i ? ' · ' : ''}
+                        <a href={`https://www.youtube.com/watch?v=${e.youtubeId}`} target="_blank" rel="noopener noreferrer" className="link">
+                          {e.show}
+                        </a>
+                      </span>
+                    ))}
+                  </>
+                ),
+              },
             ]}
           />
         </aside>

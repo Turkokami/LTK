@@ -86,7 +86,7 @@ function SpecValue({ value }: { value: ReactNode | null }) {
   if (value === null || value === undefined) {
     return (
       <span className="text-sm italic text-ink3">
-        Not yet published — verifying with the state agency
+        Not verified yet — we only publish it once it is
       </span>
     );
   }
