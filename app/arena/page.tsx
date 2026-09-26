@@ -50,6 +50,15 @@ export default function Page() {
           </div>
         </a>
 
+        <a href="/arena/games/photo-id-sprint/" className="card group mb-12 flex flex-wrap items-center justify-between gap-4 p-6">
+          <span>
+            <span className="eyebrow mb-1">Game 2</span>
+            <span className="h2 block group-hover:text-blood">Photo ID Sprint</span>
+            <span className="mt-1 block max-w-[60ch] text-ink2">Real job photos from the crew. Name the pest group before the clock runs out.</span>
+          </span>
+          <span className="btn btn--ghost btn--lg">Play</span>
+        </a>
+
         <HubSpokes hub={HUB} />
       </div>
     </>

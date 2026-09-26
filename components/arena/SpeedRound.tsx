@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { cx } from '@/lib/utils';
+import { Leaderboard } from '@/components/arena/Leaderboard';
 
 /**
  * ACE Speed Round — Arena game 1. A client leaf: 60 seconds, as many ACE questions as you can,
@@ -181,6 +182,7 @@ export function SpeedRound({
   // ---------------------------------------------------------------- ready
   if (phase === 'ready') {
     return (
+      <>
       <div className="label-panel p-6 sm:p-8">
         <p className="eyebrow mb-3">Pick your round</p>
         <div className="mb-6 flex flex-wrap gap-2" role="group" aria-label="Choose questions">
@@ -203,6 +205,8 @@ export function SpeedRound({
           </p>
         </div>
       </div>
+      <Leaderboard game="speed-round" />
+      </>
     );
   }
 
@@ -210,6 +214,7 @@ export function SpeedRound({
   if (phase === 'done') {
     const accuracy = answered ? Math.round((correct / answered) * 100) : 0;
     return (
+      <>
       <div className="label-panel p-6 sm:p-8" aria-live="polite">
         <p className="eyebrow mb-2">{newBest ? 'New personal best' : 'Time'}</p>
         <p className="display mb-2">{score.toLocaleString('en-US')}</p>
@@ -252,6 +257,8 @@ export function SpeedRound({
           <p className="text-sm text-field">Clean round &mdash; nothing missed.</p>
         ) : null}
       </div>
+      <Leaderboard game="speed-round" finalScore={score} />
+      </>
     );
   }
 

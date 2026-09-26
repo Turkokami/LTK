@@ -51,6 +51,7 @@ const ROUTES = [
   '/lab/crew-picks/',
   '/trade/pay-and-pricing/',
   '/arena/field-challenges/',
+  '/arena/games/photo-id-sprint/',
   '/about/team/marcus-scruggs/',
   '/fields/',
   '/fields/general-pest/',

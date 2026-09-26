@@ -1,5 +1,3 @@
-import { createHash } from 'node:crypto';
-
 /**
  * /api/votes — community up/down votes for Crew picks.
  *
@@ -19,50 +17,15 @@ import { createHash } from 'node:crypto';
 
 export const dynamic = 'force-dynamic';
 
-const URL_ = process.env.KV_REST_API_URL ?? process.env.UPSTASH_REDIS_REST_URL;
-const TOKEN = process.env.KV_REST_API_TOKEN ?? process.env.UPSTASH_REDIS_REST_TOKEN;
+import { DEVICE_RE, json, overLimit, pairs, redis, redisConfigured, sha, type Cmd } from '@/lib/server/redis';
 
 const ID_RE = /^[a-z0-9-]{1,80}$/;
-const DEVICE_RE = /^[a-zA-Z0-9-]{16,64}$/;
 const MAX_IDS = 100;
 const WRITES_PER_MINUTE = 30;
 
-type Cmd = (string | number)[];
-
-async function redis(cmds: Cmd[]): Promise<unknown[]> {
-  const res = await fetch(`${URL_}/pipeline`, {
-    method: 'POST',
-    headers: { Authorization: `Bearer ${TOKEN}`, 'Content-Type': 'application/json' },
-    body: JSON.stringify(cmds),
-    cache: 'no-store',
-  });
-  if (!res.ok) throw new Error(`redis ${res.status}`);
-  const out = (await res.json()) as { result?: unknown; error?: string }[];
-  return out.map((r) => {
-    if (r.error) throw new Error(r.error);
-    return r.result;
-  });
-}
-
-const sha = (s: string) => createHash('sha256').update(s).digest('hex').slice(0, 32);
-
-function json(body: unknown, status = 200) {
-  return new Response(JSON.stringify(body), {
-    status,
-    headers: { 'Content-Type': 'application/json', 'Cache-Control': 'no-store' },
-  });
-}
-
-/** Redis HGETALL over REST returns a flat [field, value, …] array. */
-function pairs(raw: unknown): Record<string, string> {
-  const out: Record<string, string> = {};
-  if (Array.isArray(raw)) for (let i = 0; i + 1 < raw.length; i += 2) out[String(raw[i])] = String(raw[i + 1]);
-  return out;
-}
-
 /** GET /api/votes?ids=a,b,c&device=… → { counts: { id: { up, down } }, mine: { id: 1 | -1 } } */
 export async function GET(req: Request) {
-  if (!URL_ || !TOKEN) return json({ error: 'voting unavailable' }, 503);
+  if (!redisConfigured) return json({ error: 'voting unavailable' }, 503);
   const u = new URL(req.url);
   const ids = (u.searchParams.get('ids') ?? '')
     .split(',')
@@ -94,7 +57,7 @@ export async function GET(req: Request) {
 
 /** POST { id, device, vote: 1 | -1 | 0 } → { up, down, mine } */
 export async function POST(req: Request) {
-  if (!URL_ || !TOKEN) return json({ error: 'voting unavailable' }, 503);
+  if (!redisConfigured) return json({ error: 'voting unavailable' }, 503);
   let body: { id?: unknown; device?: unknown; vote?: unknown };
   try {
     body = await req.json();
@@ -108,19 +71,11 @@ export async function POST(req: Request) {
     return json({ error: 'bad request' }, 400);
   }
 
-  const ip = (req.headers.get('x-forwarded-for') ?? '').split(',')[0]?.trim() || 'unknown';
-  const minute = Math.floor(Date.now() / 60000);
-  const rlKey = `rl:${sha(ip)}:${minute}`;
   const dev = sha(device);
 
   try {
-    const [count, prevRaw] = await redis([
-      ['INCR', rlKey],
-      ['HGET', `voters:${id}`, dev],
-    ]);
-    if (Number(count) === 1) await redis([['EXPIRE', rlKey, 60]]);
-    if (Number(count) > WRITES_PER_MINUTE) return json({ error: 'slow down' }, 429);
-
+    if (await overLimit(req, 'votes', WRITES_PER_MINUTE)) return json({ error: 'slow down' }, 429);
+    const [prevRaw] = await redis([['HGET', `voters:${id}`, dev]]);
     const prev = Number(prevRaw ?? 0);
     const cmds: Cmd[] = [];
     if (prev === 1) cmds.push(['HINCRBY', `votes:${id}`, 'up', -1]);

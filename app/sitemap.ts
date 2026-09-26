@@ -101,7 +101,7 @@ export default async function sitemap({
     // Hubs whose spokes have not shipped yet. Index only — do not pad a sitemap with
     // routes that 404. Add spokes here as each phase lands.
     case 'arena':
-      return [entry('/arena/', 0.8), entry('/arena/games/speed-round/', 0.8), entry('/arena/field-challenges/', 0.7)];
+      return [entry('/arena/', 0.8), entry('/arena/games/speed-round/', 0.8), entry('/arena/games/photo-id-sprint/', 0.8), entry('/arena/field-challenges/', 0.7)];
 
     case 'trade':
       return [entry('/trade/', 0.8), entry('/trade/jobs/', 0.7), entry('/trade/pay-and-pricing/', 0.7)];
