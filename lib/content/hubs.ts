@@ -46,7 +46,7 @@ export const HUBS: Hub[] = [
       'Pest control is fourteen trades sharing one customer. General pest, termite, wildlife, exclusion, insulation, K9 detection and more: what each job is, who licenses it, and how people get in.',
     job: 'The front door. Educates people about each field and routes them to the people doing it in the Discord.',
     primaryEntity: 'ItemList / Article',
-    spokes: [{ pattern: '/fields/:field/', label: 'Field guides', count: 14, index: '/fields/' }],
+    spokes: [{ pattern: '/fields/:field/', label: 'Field guides', count: 16, index: '/fields/' }],
   },
   {
     id: 'academy',

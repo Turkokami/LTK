@@ -152,7 +152,7 @@ export default async function FieldPage({
         '@id': `${abs(path)}#article`,
         headline: `${d.name}: the job, the licence, and how people get in`,
         about: d.name,
-        author: { '@type': 'Person', name: EDITOR.name, url: abs(EDITOR.path) },
+        author: { '@id': ID.organization },
         publisher: { '@id': ID.organization },
       },
     ],
@@ -209,9 +209,23 @@ export default async function FieldPage({
             meta={REGIME_LABEL[d.licensing]}
             specs={[
               { label: 'In plain words', value: d.licensingNote },
-              { label: 'SOC code', value: d.socCode ?? 'No clean BLS mapping' },
+              {
+                label: 'Government pay data',
+                value: paysAsPestControl
+                  ? 'Counted as pest control workers by the Bureau of Labor Statistics'
+                  : 'Not tracked as its own job by the Bureau of Labor Statistics',
+              },
             ]}
           />
+          {d.group === 'business' ? (
+            <p className="mt-3 text-sm text-ink2">
+              State-by-state business licence, insurance and fee rules are in{' '}
+              <a href="/trade/start/" className="link">
+                Starting a pest control company
+              </a>
+              .
+            </p>
+          ) : null}
 
           {/* Pay: this field's own BLS figures where it is counted as pest control workers,
               otherwise the same figures clearly labelled as the nearest benchmark. */}

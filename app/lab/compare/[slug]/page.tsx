@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { personRef } from '@/lib/schema/entities';
 import { notFound } from 'next/navigation';
 import { pageMeta } from '@/lib/seo/metadata';
 import { buildGraph } from '@/lib/schema/graph';
@@ -101,7 +102,7 @@ export default async function ComparePage({ params }: { params: Promise<{ slug: 
         '@id': `${url}#article`,
         headline: c.title,
         mainEntityOfPage: { '@id': ID.webpage(url) },
-        author: { '@id': abs(c.reviewer.path) + '#person' },
+        author: personRef(c.reviewer),
         publisher: { '@id': ID.organization },
         dateModified: c.testedOn,
       },

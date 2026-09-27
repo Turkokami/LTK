@@ -119,7 +119,7 @@ export const DISCIPLINES: Discipline[] = [
       'State pesticide licence, usually an apprentice-to-technician-to-applicator ladder. The most common entry point in the industry.',
     routeIn: 'Hired with no experience, trained on the job, licensed within the first year. No degree required anywhere in the US.',
     dayToDay: 'A route. Eight to fifteen stops, mostly recurring, mostly residential. You work alone, you drive a lot, and you talk to people all day — the job is half technical and half customer relationship, which surprises people.',
-    movesTo: ['termite-wdo', 'commercial-food-safety', 'mosquito-vector', 'ownership'],
+    movesTo: ['termite-wdo', 'commercial-food-safety', 'mosquito-vector', 'management', 'ownership'],
     socCode: '37-2021',
     communityIsTheNetwork: false,
   },
@@ -134,7 +134,7 @@ export const DISCIPLINES: Discipline[] = [
       'A separate licence category in most states. Several states additionally regulate who may sign a WDI/WDO report, because a real estate transaction rests on it.',
     routeIn: 'Usually a lateral move from general pest after a year or two, adding the termite category. Some companies hire directly into termite.',
     dayToDay: 'Crawlspaces, attics, foundations and a lot of writing. The inspection report is a legal document and the liability is real, which is why it pays better than general pest.',
-    movesTo: ['fumigation', 'exclusion', 'ownership'],
+    movesTo: ['fumigation', 'exclusion', 'management', 'ownership'],
     socCode: '37-2021',
     communityIsTheNetwork: false,
   },
@@ -148,7 +148,7 @@ export const DISCIPLINES: Discipline[] = [
       'Mainly the state wildlife agency, not the pesticide programme — but the line moves by state. Some states license wildlife control operators, some license nobody, and in several the structural pest control law still covers pesticide use, rodents or birds. Getting this line wrong is the most common mistake when adding wildlife work.',
     routeIn: 'Often from general pest, often from trapping or hunting backgrounds, sometimes straight in. Bat work in particular has hard seasonal legal restrictions you learn before anything else.',
     dayToDay: 'Ladders, roofs, attics and live animals. Physically the hardest lane in the industry and the one with the most variable hours — animals do not respect a route schedule.',
-    movesTo: ['exclusion', 'bird-abatement', 'falconry-abatement', 'ownership'],
+    movesTo: ['exclusion', 'bird-abatement', 'falconry-abatement', 'management', 'ownership'],
     communityIsTheNetwork: false,
   },
   {
@@ -174,7 +174,7 @@ export const DISCIPLINES: Discipline[] = [
       'Often no pesticide licence at all, but protected-species law governs what you may touch and when. Nesting-season restrictions are federal.',
     routeIn: 'From wildlife, from exclusion, or from a rope-access or height-work background. Height certification matters more here than a pest licence.',
     dayToDay: 'Working at height, a lot of it. Closer to a specialist trade contractor than to a pest route.',
-    movesTo: ['exclusion', 'falconry-abatement', 'ownership'],
+    movesTo: ['exclusion', 'falconry-abatement', 'management', 'ownership'],
     communityIsTheNetwork: true,
   },
   {
@@ -187,7 +187,7 @@ export const DISCIPLINES: Discipline[] = [
       'No state licence governs detection work itself. Credibility rests on third-party certification of the team, and standards vary enormously between certifying bodies — which is the live argument inside this discipline.',
     routeIn: 'Either a pest professional who takes on a dog, or a dog handler who enters pest. Both routes exist and they produce very different practitioners.',
     dayToDay: 'You have a colleague who lives with you. Training never stops, the dog has good and bad days, and your results are only as good as your own handling — which is the part newcomers underestimate.',
-    movesTo: ['bed-bugs', 'ownership'],
+    movesTo: ['bed-bugs', 'management', 'ownership'],
     communityIsTheNetwork: true,
   },
   {
@@ -200,7 +200,7 @@ export const DISCIPLINES: Discipline[] = [
       'Often needs no pesticide licence, but may touch contractor licensing depending on the state and the scale of the work.',
     routeIn: 'From pest, from wildlife, or straight from construction. Construction people often become the best exclusion techs because they already understand how buildings are put together.',
     dayToDay: 'Hand tools, mesh, sealant, crawlspaces and roofs. Visible, permanent, physical work — genuinely satisfying in a way routine spraying is not, and people say so.',
-    movesTo: ['insulation', 'wildlife-control', 'ownership'],
+    movesTo: ['insulation', 'wildlife-control', 'management', 'ownership'],
     communityIsTheNetwork: false,
   },
   {
@@ -212,7 +212,7 @@ export const DISCIPLINES: Discipline[] = [
     licensingNote: 'Not a pesticide licence. Respiratory protection and confined-space practice matter far more here.',
     routeIn: 'Almost always from exclusion or wildlife, as an add-on service that becomes its own crew.',
     dayToDay: 'Hot attics, full PPE, heavy work — and the highest ticket value per job of anything in this list, which is why it keeps appearing on pest companies\' service menus.',
-    movesTo: ['exclusion', 'ownership'],
+    movesTo: ['exclusion', 'management', 'ownership'],
     communityIsTheNetwork: false,
   },
   {
@@ -226,7 +226,7 @@ export const DISCIPLINES: Discipline[] = [
       'A separate category everywhere, with additional prequalification. Texas, for example, requires 40 hours of training approved before you may even schedule the exam.',
     routeIn: 'Experienced applicators only. Nobody starts here and nobody should.',
     dayToDay: 'Procedure, monitoring, paperwork and absolute discipline. The margin for error is smaller than anywhere else in the industry and everything about the culture reflects that.',
-    movesTo: ['commercial-food-safety', 'ownership'],
+    movesTo: ['commercial-food-safety', 'management', 'ownership'],
     communityIsTheNetwork: true,
   },
   {
@@ -239,7 +239,7 @@ export const DISCIPLINES: Discipline[] = [
       'Standard licence, but the real gate is audit literacy. The scheme requirements, not the state, drive what you document and how.',
     routeIn: 'From general pest, usually by being the technician who did not mind the paperwork.',
     dayToDay: 'Documentation, trend analysis, device maps and auditors. More desk work than any other technical lane, and it pays accordingly.',
-    movesTo: ['fumigation', 'ownership'],
+    movesTo: ['fumigation', 'auditor', 'management', 'ownership'],
     communityIsTheNetwork: false,
   },
   {
@@ -252,7 +252,7 @@ export const DISCIPLINES: Discipline[] = [
     licensingNote: 'State licence; public-sector vector control adds a separate noncommercial or government applicator track.',
     routeIn: 'From general pest on the private side, or through a public health district on the government side. The two routes barely talk to each other.',
     dayToDay: 'Seasonal and weather-driven. Surveillance and mapping on the public health side; route work on the private side.',
-    movesTo: ['turf-ornamental', 'ownership'],
+    movesTo: ['turf-ornamental', 'management', 'ownership'],
     communityIsTheNetwork: false,
   },
   {
@@ -265,7 +265,7 @@ export const DISCIPLINES: Discipline[] = [
     licensingNote: 'Its own category almost everywhere, and in several states you may license through either a structural or an agricultural programme.',
     routeIn: 'From landscaping as often as from pest control. Horticultural knowledge matters more here than structural knowledge.',
     dayToDay: 'Outdoor, seasonal, plant-focused. Closer to horticulture than to pest control and it attracts a different person.',
-    movesTo: ['mosquito-vector', 'ownership'],
+    movesTo: ['mosquito-vector', 'management', 'ownership'],
     socCode: '37-3012',
     communityIsTheNetwork: false,
   },
@@ -278,19 +278,51 @@ export const DISCIPLINES: Discipline[] = [
     licensingNote: 'Standard licence. Heat remediation adds equipment competence that no licence tests.',
     routeIn: 'From general pest. Many companies run a dedicated bed bug crew because the work and the customer conversation are both unlike anything else.',
     dayToDay: 'Emotionally the hardest work in the industry. You are in people\'s bedrooms on the worst week of their year, and the customer management is as demanding as the treatment.',
-    movesTo: ['k9-detection', 'ownership'],
+    movesTo: ['k9-detection', 'management', 'ownership'],
+    communityIsTheNetwork: false,
+  },
+  {
+    slug: 'management',
+    group: 'business',
+    name: 'Management: branch, technical, safety and operations',
+    summary:
+      'The jobs between the truck and the owner — branch manager, technical director, safety manager and operations manager — keeping routes, people and compliance running.',
+    licensing: 'state-pesticide',
+    licensingNote:
+      'Often the licence the whole company hangs on. Most states make a named, certified person responsible for the business licence — Texas calls it the responsible certified applicator, Florida the certified operator in charge, California the qualifying manager — and that person is usually a branch or technical manager.',
+    routeIn:
+      'Almost always promoted from the route. Branch and operations managers come up as senior techs or service managers; technical directors are the people others already call with the hard ID or the odd callback, and many add the ACE credential. Safety managers often arrive through a company safety committee and OSHA training rather than a pest licence.',
+    dayToDay:
+      'Four different jobs under one title. A branch manager owns a territory: routes, hiring, customer escalations and the numbers. A technical director owns the right answer: training, label and treatment questions, callbacks and new products. A safety manager owns incidents, vehicle and chemical safety and training records. An operations manager owns scheduling, fleet, inventory and the software that ties it together. In smaller companies one person carries all four.',
+    movesTo: ['ownership', 'auditor'],
+    communityIsTheNetwork: false,
+  },
+  {
+    slug: 'auditor',
+    group: 'business',
+    name: 'Auditing and quality assurance',
+    summary:
+      'Checking pest control programmes against food-safety and customer standards — as a third-party auditor, a client’s QA lead, or a pest company’s own quality auditor.',
+    licensing: 'trade-certification',
+    licensingNote:
+      'Auditing a programme usually needs no pesticide licence, because the auditor treats nothing. Credibility comes from certifications instead: food-safety scheme auditor training (SQF, BRCGS, AIB International standards), FSMA Preventive Controls Qualified Individual (PCQI) training, and pest credentials such as ACE or BCE. Many auditors keep a licence anyway because they came off the route.',
+    routeIn:
+      'Mostly sideways from commercial and food-safety service, where you learn what an auditor looks for by being audited. The other route runs from the food plant’s own QA team into pest programme oversight. Internal auditor roles inside larger pest companies are the usual first step.',
+    dayToDay:
+      'Paperwork and walking. You check device maps against what is on the wall, read service reports and pest activity trends, confirm pesticide use records and labels are on file, then walk the site looking for the gaps the paperwork missed. The job is finding problems before the certification audit does, and being the person nobody is glad to see until the audit passes.',
+    movesTo: ['management', 'commercial-food-safety'],
     communityIsTheNetwork: false,
   },
   {
     slug: 'ownership',
     group: 'business',
-    name: 'Ownership and running a branch',
-    summary: 'Running the business — routing, hiring, pricing, compliance, and eventually selling or not selling to a roll-up.',
+    name: 'Owning a pest control company',
+    summary: 'Running your own company — licensing, insurance, pricing, hiring, cash flow, and eventually deciding whether to sell to a roll-up.',
     licensing: 'state-pesticide',
     licensingNote:
-      'A business licence plus a designated responsible certified applicator in most states, with insurance or bond minimums attached.',
+      'The company needs its own business licence on top of anyone’s applicator licence, a named certified person responsible for it, and insurance or bond minimums. The figures differ a lot by state — see Starting a company.',
     routeIn:
-      'Two routes, and they produce different companies: a technician who goes out on their own, or someone who buys in from outside the trade. The first knows the work and learns the business; the second is the reverse.',
+      'Two routes, and they produce different companies: a technician or manager who goes out on their own, or someone who buys in from outside the trade. The first knows the work and learns the business; the second is the reverse.',
     dayToDay: 'You stop doing pest control and start doing hiring, pricing, cash flow and compliance. The people who love it and the people who regret it are both very clear about why.',
     movesTo: [],
     communityIsTheNetwork: false,

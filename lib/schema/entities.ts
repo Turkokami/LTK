@@ -7,8 +7,24 @@
 
 import { abs, ID } from '@/lib/site.config';
 import type { SchemaNode, FaqItem, PersonRef } from './types';
+import { EDITOR, EDITOR_IS_NAMED } from '@/lib/content/editorial';
 
 /* ------------------------------------------------------------------ people */
+
+/**
+ * Until a named human holds the editor chair (R-06), the editorial byline is the team, and
+ * the team is the site Organization — not a Person, and not a second Organization node.
+ */
+export function isTeamByline(p: { path: string }): boolean {
+  return p.path === EDITOR.path && !EDITOR_IS_NAMED;
+}
+export function personRef(p: { path: string }): { '@id': string } {
+  return { '@id': isTeamByline(p) ? ID.organization : abs(p.path) + '#person' };
+}
+/** personNode, or nothing when the byline is the team (the Organization is already in the graph). */
+export function bylineNodes(p: PersonRef): SchemaNode[] {
+  return isTeamByline(p) ? [] : [personNode(p)];
+}
 
 export function personNode(p: PersonRef): SchemaNode {
   const node: SchemaNode = {
@@ -61,15 +77,15 @@ export function stateReferenceEntities(i: StateReferenceInput): SchemaNode[] {
     '@id': `${url}#article`,
     headline: i.headline,
     mainEntityOfPage: { '@id': ID.webpage(url) },
-    author: { '@id': abs(i.author.path) + '#person' },
+    author: personRef(i.author),
     publisher: { '@id': ID.organization },
     dateModified: i.dateModified,
     spatialCoverage: { '@type': 'State', name: i.stateName },
     about: { '@type': 'Thing', name: i.about },
   };
-  if (i.reviewedBy) article.reviewedBy = { '@id': abs(i.reviewedBy.path) + '#person' };
-  nodes.push(article, personNode(i.author));
-  if (i.reviewedBy) nodes.push(personNode(i.reviewedBy));
+  if (i.reviewedBy) article.reviewedBy = personRef(i.reviewedBy);
+  nodes.push(article, ...bylineNodes(i.author));
+  if (i.reviewedBy) nodes.push(...bylineNodes(i.reviewedBy));
 
   if (i.faq?.length) {
     nodes.push({
@@ -110,7 +126,7 @@ export function threadEntities(i: ThreadInput): SchemaNode[] {
     url,
     articleBody: i.body,
     datePublished: i.datePublished,
-    author: { '@id': abs(i.author.path) + '#person' },
+    author: personRef(i.author),
     isPartOf: { '@id': abs(i.forumPath) + '#forum' },
   };
 
@@ -137,7 +153,7 @@ export function threadEntities(i: ThreadInput): SchemaNode[] {
     }));
   }
 
-  return [post, personNode(i.author)];
+  return [post, ...bylineNodes(i.author)];
 }
 
 /* --------------------------------------------------------------- lab: reviews */

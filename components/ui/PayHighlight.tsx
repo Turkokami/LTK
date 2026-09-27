@@ -35,7 +35,7 @@ export function PayHighlight({
     <section className={cx('label-panel', className)} aria-label={title}>
       <header className="label-bar">
         <span>{title}</span>
-        <span>BLS {NATIONAL_BASELINE.referencePeriod}</span>
+        <span>Federal data &middot; {NATIONAL_BASELINE.referencePeriod}</span>
       </header>
 
       <div className="py-5 pl-[1.35rem] pr-5">
@@ -43,19 +43,19 @@ export function PayHighlight({
           {industry ? (
             <>
               National figures for <strong className="text-ink">pest control workers</strong>{' '}
-              (SOC {P.socCode}) &mdash; the federal category that covers most of the trade. About{' '}
+              &mdash; the government job category that covers most of the trade. About{' '}
               {P.employment.toLocaleString('en-US')} people held these jobs in {P.employmentYear}.
             </>
           ) : benchmark ? (
             <>
-              BLS doesn&rsquo;t publish separate figures for {fieldName.toLowerCase()}, so these are
+              The Bureau of Labor Statistics doesn&rsquo;t track this field as its own job, so these are
               the national numbers for <strong className="text-ink">pest control workers</strong>{' '}
               &mdash; the closest published benchmark, not this field&rsquo;s own pay.
             </>
           ) : (
             <>
               National figures for <strong className="text-ink">pest control workers</strong>{' '}
-              (SOC {P.socCode}), the federal category this field is counted under.
+              &mdash; the government job category this field is counted under.
             </>
           )}
         </p>

@@ -18,8 +18,8 @@ import type { PersonRef } from '@/lib/schema/types';
  */
 
 export const EDITOR: PersonRef = {
-  name: 'Editorial lead',
-  path: '/about/team/editorial-lead/',
+  name: 'LTK editorial team',
+  path: '/about/editorial-standards/',
   jobTitle: 'Editor',
 };
 
