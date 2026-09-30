@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useState, type ReactNode } from 'react';
 import { cx } from '@/lib/utils';
 
 /**
@@ -26,8 +26,20 @@ function device(): string | null {
   }
 }
 
-export function Leaderboard({ game, finalScore }: { game: string; finalScore?: number | null }) {
+export function Leaderboard({
+  game,
+  finalScore,
+  title = 'Leaderboard',
+  offline,
+}: {
+  game: string;
+  finalScore?: number | null;
+  title?: string;
+  /** Shown instead of nothing when the board is unavailable (storage not configured). */
+  offline?: ReactNode;
+}) {
   const [rows, setRows] = useState<Row[] | null>(null);
+  const [off, setOff] = useState(false);
   const [best, setBest] = useState<number | null>(null);
   const [name, setName] = useState('');
   const [status, setStatus] = useState<string | null>(null);
@@ -42,7 +54,10 @@ export function Leaderboard({ game, finalScore }: { game: string; finalScore?: n
         setRows(data.top);
         setBest(data.best);
       })
-      .catch(() => setRows(null));
+      .catch(() => {
+        setRows(null);
+        setOff(true);
+      });
   }, [game]);
 
   useEffect(() => {
@@ -56,7 +71,7 @@ export function Leaderboard({ game, finalScore }: { game: string; finalScore?: n
 
   useEffect(() => setPosted(false), [finalScore]);
 
-  if (rows === null) return null;
+  if (rows === null) return off && offline ? <>{offline}</> : null;
 
   const canPost = !!finalScore && finalScore > 0 && !posted && (best === null || finalScore > best);
 
@@ -89,7 +104,7 @@ export function Leaderboard({ game, finalScore }: { game: string; finalScore?: n
   return (
     <section aria-labelledby={`lb-${game}`} className="label-panel mt-8">
       <div className="label-bar">
-        <span id={`lb-${game}`}>Leaderboard</span>
+        <span id={`lb-${game}`}>{title}</span>
         <span>Honour system</span>
       </div>
       <div className="py-4 pl-[1.35rem] pr-5">

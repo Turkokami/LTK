@@ -52,6 +52,7 @@ const ROUTES = [
   '/trade/pay-and-pricing/',
   '/trade/start/',
   '/community/events/',
+  '/arena/leaderboards/',
   '/join/',
   '/trade/start/texas/',
   '/arena/field-challenges/',
