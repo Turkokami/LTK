@@ -223,6 +223,10 @@ export default async function FieldPage({
               <a href="/trade/start/" className="link">
                 Starting a pest control company
               </a>
+              ; hiring, insurance, OSHA and selling are in{' '}
+              <a href="/trade/owners/" className="link">
+                Running the business
+              </a>
               .
             </p>
           ) : null}

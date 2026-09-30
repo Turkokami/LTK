@@ -6,6 +6,7 @@ import { DISCIPLINES } from '@/lib/content/disciplines';
 import { ACE_MODULES, ACE_PATH } from '@/lib/content/ace';
 import { EXAM_CATEGORIES } from '@/lib/content/exam-prep';
 import { TECHNOLOGY } from '@/lib/content/lab';
+import { OWNER_TOPICS } from '@/lib/content/owner-topics';
 import { PEOPLE } from '@/lib/content/people';
 import { PEST_GROUPS, PEST_ID_PATH } from '@/lib/content/pest-library';
 
@@ -103,7 +104,7 @@ export default async function sitemap({
       return [entry('/arena/', 0.8), entry('/arena/games/speed-round/', 0.8), entry('/arena/games/photo-id-sprint/', 0.8), entry('/arena/field-challenges/', 0.7), entry('/arena/leaderboards/', 0.6)];
 
     case 'trade':
-      return [entry('/trade/', 0.8), entry('/trade/jobs/', 0.7), entry('/trade/pay-and-pricing/', 0.7), entry('/trade/start/', 0.7), ...['texas', 'washington', 'florida', 'california', 'south-carolina'].map((s) => entry(`/trade/start/${s}/`, 0.6))];
+      return [entry('/trade/', 0.8), entry('/trade/jobs/', 0.7), entry('/trade/pay-and-pricing/', 0.7), entry('/trade/start/', 0.7), entry('/trade/owners/', 0.7), ...OWNER_TOPICS.map((o) => entry(`/trade/owners/${o.slug}/`, 0.6)), ...['texas', 'washington', 'florida', 'california', 'south-carolina'].map((s) => entry(`/trade/start/${s}/`, 0.6))];
 
     case 'wire':
       return [entry('/wire/', 0.8), entry('/wire/regulatory/', 0.7)];

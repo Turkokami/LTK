@@ -139,7 +139,7 @@ export const HUBS: Hub[] = [
       { pattern: '/trade/jobs/:state/', label: 'Jobs by state', count: 50, index: '/trade/jobs/' },
       { pattern: '/trade/salary/:role/', label: 'Pay data by role', count: 12, index: '/trade/pay-and-pricing/' },
       { pattern: '/trade/start/:state/', label: 'Starting a company', count: 50, index: '/trade/start/' },
-      { pattern: '/trade/owners/:slug/', label: 'Owner topics', count: 18 },
+      { pattern: '/trade/owners/:slug/', label: 'Running a company', count: 18, index: '/trade/owners/' },
     ],
   },
   {

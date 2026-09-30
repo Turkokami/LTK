@@ -55,6 +55,8 @@ const ROUTES = [
   '/arena/leaderboards/',
   '/join/',
   '/trade/start/texas/',
+  '/trade/owners/',
+  '/trade/owners/buying-and-selling-a-company/',
   '/arena/field-challenges/',
   '/arena/games/photo-id-sprint/',
   '/about/team/marcus-scruggs/',

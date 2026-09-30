@@ -114,3 +114,13 @@ Open questions for Marcus:
 - Photo consent: permission yes, **written consent no**. Earlier approval (2026-09-25) stands, but written consent is the safer record.
 - The repo github.com/Turkokami/LTK is **public**; handles remain in git history. Make it private, or approve a history rewrite.
 - Channel list ("data can be ripped"), who to work with day to day, what would make it a failure: unanswered.
+
+## Owner topics (/trade/owners/) — merged 2026-09-30
+
+Six topics live; per-topic gaps are in each entry's `notes` in `lib/content/owner-topics.ts`. Recheck items:
+- DOL contractor rule: proposed 2026-02-26, no final rule yet.
+- OSHA heat standard: proposed only; heat NEP reissued 2026-04-10.
+- 7 CFR Part 110 rescinded effective 2025-07-11 (90 FR 20083). Federal floor is 40 CFR 171.303.
+- FTC v. Rollins non-compete order (2026-04-15, final 2026-06-22). The 2024 FTC rule was vacated and the appeal dropped 2025-09-05.
+- Texas insurance: a 2020 TDA PDF shows $200k/$300k, but the live TDA page (used on /trade/start/texas/) shows $500k/$1M. The owner topic cites the live page and states no Texas amount.
+- 7(i) commission exemption: whether pest control counts as a retail or service establishment is unresolved. The page tells owners to get a wage-hour attorney's opinion.
