@@ -140,7 +140,7 @@ export default async function StateJobsPage({ params }: { params: Promise<{ stat
               Post a role
             </a>
             <a href="/join/" className="btn-ghost ml-3">
-              Verify my licence
+              Join LTK
             </a>
           </div>
         </article>

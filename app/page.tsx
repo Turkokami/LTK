@@ -25,13 +25,13 @@ const STEPS = [
   },
   {
     n: '02',
-    title: 'Get your licence verified',
-    body: 'Verified members get a badge on every post, Arena entry, and a seat in the live training sessions.',
+    title: 'Show up to something',
+    body: 'Game nights, the championship, the podcast, specialist sessions and quarterly meetups. There’s usually something on.',
   },
   {
     n: '03',
     title: 'Level up with the crew',
-    body: 'Study groups for the exam, CEU nights, gear reviews from people who run it daily, and a league to see who’s sharpest.',
+    body: 'Bug ID help, treatment talk, gear reviews from people who run it daily, and a league to see who’s sharpest.',
   },
 ];
 
@@ -72,10 +72,10 @@ export default function HomePage() {
 
             <p className="mt-6 text-sm text-ink3">
               Already hanging out with us?{' '}
-              <a href="/join/" className="link">
-                Get your licence verified
+              <a href="/community/events/" className="link">
+                See what&rsquo;s on
               </a>{' '}
-              to unlock posting and the Arena.
+              &mdash; game nights, the championship and meetups.
             </p>
           </div>
 
@@ -237,7 +237,7 @@ export default function HomePage() {
       <section className="rule-b">
         <div className="shell py-14">
           <p className="eyebrow mb-2">How it works</p>
-          <h2 className="h2 mb-8">Show up, get verified, get better.</h2>
+          <h2 className="h2 mb-8">Show up, hang out, get better.</h2>
           <ol className="grid gap-3 md:grid-cols-3">
             {STEPS.map((s) => (
               <li key={s.n} className="card p-6">

@@ -42,9 +42,8 @@ export default function PressPage() {
           <div className="prose-bulletin">
             <h2 className="h2 mt-8 mb-3">In one line</h2>
             <p>
-              {site.name} is a professional community and continuing-education platform for
-              licensed pest management professionals in the United States, where posting requires
-              a verified applicator licence.
+              {site.name} is the public home of LTK, a free Discord community for people in pest
+              control. {site.community.origin}
             </p>
 
             <h2 className="h2 mt-10 mb-3">What we can speak to</h2>

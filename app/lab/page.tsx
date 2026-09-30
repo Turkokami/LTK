@@ -41,7 +41,7 @@ export default function Page() {
               <p className="h2 mb-2 group-hover:text-blood">Crew picks: the gear members run</p>
               <p className="max-w-[60ch] text-ink2">
                 Sprayers ranked by people who have burned through six of them, foggers, exclusion
-                hardware, traps and boots &mdash; credited and dated, straight from #the-arsenal.
+                hardware, traps and boots &mdash; dated, straight from #the-arsenal.
               </p>
             </div>
             <span className="btn btn--lg">See the picks</span>

@@ -51,6 +51,8 @@ const ROUTES = [
   '/lab/crew-picks/',
   '/trade/pay-and-pricing/',
   '/trade/start/',
+  '/community/events/',
+  '/join/',
   '/trade/start/texas/',
   '/arena/field-challenges/',
   '/arena/games/photo-id-sprint/',

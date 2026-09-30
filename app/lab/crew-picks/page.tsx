@@ -50,9 +50,9 @@ export default function CrewPicksPage() {
           save a day.
         </p>
 
-        <LabelBlock title="Member reports, not Lab reviews" signal="warning" meta="Credited and dated" className="mb-10 max-w-[52rem]">
-          Everything below is what a member posted, credited by Discord handle with the month they
-          said it. Prices are what they paid or quoted at the time. Nothing here has been tested by
+        <LabelBlock title="Member reports, not Lab reviews" signal="warning" meta="Dated, no names" className="mb-10 max-w-[52rem]">
+          Everything below is what a member posted, paraphrased and dated with the month they said
+          it. We don’t name members or quote the Discord word for word. Prices are what they paid or quoted at the time. Nothing here has been tested by
           the Lab &mdash; when it has, it moves to a review with published criteria. The thumbs
           are community votes, one per device, not verified ratings.{' '}
           <a href="/about/review-methodology/" className="link">

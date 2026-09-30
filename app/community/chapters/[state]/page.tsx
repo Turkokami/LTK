@@ -36,7 +36,7 @@ export async function generateMetadata({
     title: `${st.name} chapter`.slice(0, 60),
     description:
       `The ${st.name} chapter — local meetups, state association links, regional regulatory ` +
-      `updates and the verified members working in your area. Free to join.`,
+      `updates and the members working in your area. Free to join, always.`,
     path: `/community/chapters/${st.slug}/`,
   });
 }
@@ -91,11 +91,11 @@ export default async function ChapterPage({ params }: { params: Promise<{ state:
             <DiscordButton>Start the {st.name} chapter</DiscordButton>
           </div>
           <p className="mt-4 text-sm text-ink3">
-            Hold a licence here?{' '}
+            Work in {st.name}?{' '}
             <a href="/join/" className="link">
-              Get verified
+              Join LTK
             </a>{' '}
-            so your posts carry the badge.
+            &mdash; it&rsquo;s free and open to the trade.
           </p>
         </article>
 

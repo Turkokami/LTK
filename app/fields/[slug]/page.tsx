@@ -309,7 +309,7 @@ export default async function FieldPage({
                 From the crew
               </h2>
               <p className="mb-5 text-sm text-ink3">
-                Photos members posted in the {site.discord.name}, credited by handle.{' '}
+                Photos members posted in the {site.discord.name}, shared with the community’s okay.{' '}
                 <a href={PEST_ID_PATH} className="link">
                   Browse the pest ID library
                 </a>

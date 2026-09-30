@@ -86,8 +86,8 @@ export default function ReviewMethodologyPage() {
             <p>
               You will see two numbers and they never mix. The <strong>editorial assessment</strong>{' '}
               is one reviewer&rsquo;s judgement against published criteria, signed by name. The{' '}
-              <strong>member rating</strong> is an aggregate of ratings from licence-verified
-              members who have used the product in the field.
+              <strong>member rating</strong> is an aggregate of ratings from members who have
+              used the product in the field.
             </p>
             <p>
               Only the member rating is published as a machine-readable aggregate rating. An
@@ -122,7 +122,7 @@ export default function ReviewMethodologyPage() {
             title="Scoring inputs"
             specs={[
               { label: 'Editorial score', value: 'One named reviewer, published criteria' },
-              { label: 'Member rating', value: 'Verified members only, field use' },
+              { label: 'Member rating', value: 'Members, field use' },
               { label: 'Marked up as rating', value: 'Member rating only' },
               { label: 'Sponsor influence', value: 'None, at any tier' },
             ]}

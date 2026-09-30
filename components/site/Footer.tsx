@@ -8,7 +8,7 @@ const TRUST = [
   { href: '/about/editorial-standards/', label: 'Editorial standards' },
   { href: '/about/review-methodology/', label: 'Review methodology' },
   { href: '/about/sponsorship-policy/', label: 'Sponsorship policy' },
-  { href: '/about/verification/', label: 'How verification works' },
+  { href: '/join/', label: 'Who can join' },
   { href: '/about/code-of-conduct/', label: 'Code of conduct' },
 ];
 

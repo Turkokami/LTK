@@ -39,13 +39,13 @@ for r in rows:
     out.append({'src':f"/photos/community/{f}",'section':sec,'key':r['key'],
       'alt':c.get('alt') or f"Member photo from the {sec.replace('-',' ')} channel",
       'caption':c.get('caption') or '','id':c.get('id') or '','featured':bool(c.get('featured')),
-      'width':w,'height':h,'credit':r['posted_by_discord_user'],'date':r['date'],'note':None})
+      'width':w,'height':h,'credit':'LTK member','date':r['date'],'note':None})
 missing=[r['file'] for r in rows if r['file'] not in caps]
 tpl=open('registry_template.ts',encoding='utf-8').read() if False else None
 head='''/**
  * community-photos.ts — GENERATED from the LTK Discord photo pack (credits.csv + caption review).
- * Do not hand-edit; regenerate with the build script. Photos are credited by Discord handle; the
- * community approved their use (owner, 2026-09-25). Excluded during review: identifiable people,
+ * Do not hand-edit; regenerate with the build script. Photos are credited as "LTK member" (no handles, per the owner
+ * questionnaire of 2026-09-29); the community approved their use (owner, 2026-09-25). Excluded during review: identifiable people,
  * plates, business names and competitor labels, graphic content, screenshots/stock images,
  * blurry or off-topic shots. Mis-sorted photos were moved to the right section.
  */

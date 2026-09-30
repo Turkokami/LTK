@@ -35,14 +35,14 @@ export async function generateMetadata({
     title: `${cat.name} — forum`.slice(0, 60),
     // "&" is written as &amp; in the meta tag and counts against the 160-char budget.
     description: pickDescription(
-      `${cat.name.replace(/&/g, 'and')} discussion between licence-verified pest management professionals.`,
+      `${cat.name.replace(/&/g, 'and')} talk between pest management pros in the LTK Discord.`,
       [
-        'Free to read; verified applicators post. Field experience and real answers, never marketing.',
-        'Free to read, and only verified applicators can post. Field experience, not marketing copy.',
-        'Free to read; only verified applicators post. Field experience, never marketing.',
-        'Free to read, verified applicators post. Field experience, not marketing copy.',
-        'Free to read, verified applicators post. Field experience, not marketing.',
-        'Free to read; verified applicators post. Real field experience.',
+        'Free to join, open invite. Field experience and real answers from people doing the work.',
+        'Free to join. Field experience and real answers from people doing the work.',
+        'Free to join. Field experience, never marketing.',
+        'Free to join. Field experience, not marketing copy.',
+        'Free to join. Real field experience.',
+        'Free to join.',
       ],
     ),
     path: `/community/forums/${cat.slug}/`,
@@ -111,10 +111,10 @@ export default async function ForumCategoryPage({
 
         <div className="rule-t mt-10 pt-6">
           <p className="text-sm text-ink2">
-            Reading is open to everyone. Posting needs a verified applicator licence.
+            Joining is free and open to anyone in the trade &mdash; no licence check.
           </p>
           <a href="/join/" className="btn btn--ghost mt-3">
-            Verify my licence
+            How to join
           </a>
         </div>
 

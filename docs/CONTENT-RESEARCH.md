@@ -95,3 +95,22 @@ TX, WA, FL, CA, SC live, from `lib/content/start-company.ts`. Open gaps before t
 - insect-light-traps: no peer-reviewed figure for UV lamp output decay. Sliney 2016 has manufacturer co-authors (disclosed in label). The 2021 LED-trap finding hasn't been checked for newer work.
 - moisture-meters-and-thermal-imaging: the UC Berkeley / SPCB report is not peer reviewed (stated in text).
 - fumigant-monitoring: SF aeration hours not sourced. July 2024 SF label approval and the OIG report of 11 deaths were left out to stay at 5 sources.
+
+## Owner questionnaire — Marcus Scruggs, 2026-09-29 (handwritten PDF)
+
+Applied to the site:
+- Founded 1 Jan 2025 (not the 2024-12-14 Discord snowflake). Origin: the need for pest pros to get to know each other; started as a video game group.
+- 545 members / 25–35 weekly active (Sept 2026). Open public invite, **no verification**. Roles: owner → admins → mods → members.
+- Name stays: members are very attached ("the name is the hook"); Q5 **No** to a differently-named parent hub.
+- Boundaries (hard rules): never say LTK is accredited or a formal org; no doxing, personal or slanderous info; **no public Discord quotes**; **no member names unless self-identified**. Only Marcus named publicly.
+  → removed all Discord handles and verbatim quotes from the site; `scripts/community/credits.csv` untracked.
+  → removed /about/verification/ and /about/advisory-board/ (301s), rewrote /join/ and the code of conduct from the real handbook answers.
+- Events page built from Section 5. Prizes (small merch, collectables, petty cash) exist but are not promoted (R-18).
+
+Open questions for Marcus:
+- Facebook and Instagram URLs (he lists both; sameAs only takes owner-supplied URLs).
+- Membership split (142 owners, 33 entomologists, 30 sales reps, 48 office, 377 techs) sums to 630, not 545. Role tags overlapping? Not published until clarified.
+- Sponsors named: Polaris, Swarm PCM, Pest Patrol, "Visus"(?), SiteOne, Skyhawk. Confirm spellings and whether each agrees to be listed publicly.
+- Photo consent: permission yes, **written consent no**. Earlier approval (2026-09-25) stands, but written consent is the safer record.
+- The repo github.com/Turkokami/LTK is **public**; handles remain in git history. Make it private, or approve a history rewrite.
+- Channel list ("data can be ripped"), who to work with day to day, what would make it a failure: unanswered.

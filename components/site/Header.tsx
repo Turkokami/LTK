@@ -88,7 +88,7 @@ export function SiteHeader() {
               <div className="grid gap-2 border-t border-rule pt-3">
                 <DiscordButton className="w-full">Join the Discord</DiscordButton>
                 <a href="/join/" className="btn btn--ghost w-full">
-                  Get verified
+                  How to join
                 </a>
               </div>
             </div>

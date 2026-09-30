@@ -199,7 +199,7 @@ export default async function ComparePage({ params }: { params: Promise<{ slug: 
           </table>
         </div>
         <p className="mono mt-2 text-ink3">
-          Member ratings come from licence-verified members reporting field use. Editorial
+          Member ratings come from members reporting field use. Editorial
           assessment and member rating are separate numbers and never blended.
         </p>
 

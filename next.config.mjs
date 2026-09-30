@@ -9,6 +9,9 @@ const nextConfig = {
       // Career routes became the Fields hub (2026-09-24), before first indexation.
       { source: '/trade/paths/', destination: '/fields/', permanent: true },
       { source: '/trade/paths/:slug/', destination: '/fields/:slug/', permanent: true },
+      // LTK does not verify licences or run an advisory board (owner questionnaire, 2026-09-29).
+      { source: '/about/verification/', destination: '/join/', permanent: true },
+      { source: '/about/advisory-board/', destination: '/about/', permanent: true },
     ];
   },
   async headers() {

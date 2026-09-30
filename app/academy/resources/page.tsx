@@ -11,7 +11,7 @@ const PATH = '/academy/resources/';
 
 export const metadata: Metadata = pageMeta({
   title: 'Pest control training resources the crew recommends',
-  description: `Podcasts, certifications, courses, apps and field tools that pest control pros in the ${site.discord.name} point each other to, credited to who shared them.`,
+  description: `Podcasts, certifications, courses, apps and field tools that pest control pros in the ${site.discord.name} point each other to, each dated to when it was shared.`,
   path: PATH,
 });
 
@@ -33,7 +33,7 @@ export default function ResourcesPage() {
         <h1 className="display mb-4 max-w-[18ch]">Where the crew goes to learn.</h1>
         <p className="lede mb-10">
           Podcasts, certifications, courses and tools members of the {site.discord.name} recommend
-          to each other. Shared by the crew, credited to whoever posted it.
+          to each other. Shared by the crew and dated. We don’t name members.
         </p>
 
         <ul className="mb-12 grid gap-3 md:grid-cols-2">
@@ -51,7 +51,7 @@ export default function ResourcesPage() {
               </p>
               <p className="mb-4 text-[0.9375rem] leading-relaxed text-ink2">{r.what}</p>
               <p className="mt-auto text-xs text-ink3">
-                Shared by {r.who} &middot; {r.when}
+                Shared by {r.who === 'LTK Director' ? 'the LTK Director' : r.who.startsWith('#') ? `the crew in ${r.who}` : 'an LTK member'} &middot; {r.when}
               </p>
             </li>
           ))}
@@ -64,7 +64,7 @@ export default function ResourcesPage() {
           </div>
           <div className="py-4 pl-[1.35rem] pr-5 text-[0.9375rem] leading-relaxed text-ink">
             <p>{AUDIT_TIP.body}</p>
-            <p className="mt-2 text-xs text-ink3">From {AUDIT_TIP.who}, a food-safety specialist in the Discord</p>
+            <p className="mt-2 text-xs text-ink3">From a food-safety specialist in the Discord</p>
           </div>
         </div>
 

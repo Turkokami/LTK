@@ -24,7 +24,7 @@ import { site } from '@/lib/site.config';
 export const metadata: Metadata = pageMeta({
   title: 'Tournaments',
   description:
-    'Competitive events for pest management professionals — identification speed runs, inspection challenges and the annual championship. Open to verified members.',
+    'Competitive events for pest management professionals: identification speed runs, field challenges and the LTK championship, on a different game each time.',
   path: '/arena/tournaments/',
 });
 
@@ -61,10 +61,11 @@ export default function TournamentsPage() {
             who treats a symptom. The events here are built to be genuinely hard and genuinely
             fun, in that order.
           </p>
-          <LabelBlock title="The championship" signal="warning" meta="Annual">
-            The annual championship carries the crew&rsquo;s name: the{' '}
-            <strong>{site.championship.name}</strong>. Bragging rights, a belt-worthy title, and
-            a year of being the one everybody tags in the pest ID channel.
+          <LabelBlock title="The championship" signal="warning" meta="Monthly to quarterly">
+            The championship carries the crew&rsquo;s name: the{' '}
+            <strong>{site.championship.name}</strong>. It runs monthly to quarterly on a different
+            game each time &mdash; bragging rights, and being the one everybody tags in the pest ID
+            channel.
           </LabelBlock>
         </div>
 
@@ -90,7 +91,7 @@ export default function TournamentsPage() {
         )}
 
         <div className="rule-t mt-12 pt-6">
-          <a href="/join/" className="btn">Verify my licence</a>
+          <a href="/join/" className="btn">Join LTK</a>
         </div>
       </div>
     </>

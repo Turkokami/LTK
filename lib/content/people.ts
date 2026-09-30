@@ -46,9 +46,9 @@ export const PEOPLE: SitePerson[] = [
     slug: 'marcus-scruggs',
     name: 'Marcus Scruggs',
     role: 'founder',
-    jobTitle: 'Founder, Licensed to Kill',
+    jobTitle: 'Founder, owner and director of LTK',
     bio:
-      'Pest management professional with more than ten years in the trade, specializing in food safety, audits, sanitation and public health, and a certified applicator. Created the Licensed to Kill Discord and hosts The Licensed to Kill Podcast.',
+      'Pest management professional with more than ten years in the trade, specializing in food safety, audits, sanitation and public health, and a certified applicator. Started LTK on 1 January 2025 and hosts The Licensed to Kill Podcast.',
     metaDescription:
       'Marcus Scruggs founded Licensed to Kill: 10+ years in pest management, specializing in food safety, audits and sanitation. Hear him on the podcast and Discord.',
     covers: ['community'],

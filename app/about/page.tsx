@@ -12,7 +12,7 @@ const HUB = getHub('about');
 export const metadata: Metadata = pageMeta({
   title: 'Who runs this and how it works',
   description:
-    'The team, the advisory board, how content is researched and reviewed, how product reviews are run, and how member licences are verified. All of it in public.',
+    'Who runs LTK and how it started, the house rules, how this site sources and dates what it publishes, how reviews are run, and where sponsorship stops.',
   path: HUB.path,
 });
 
@@ -29,12 +29,6 @@ export default function AboutPage() {
   const graph = buildGraph({ path: HUB.path, pageType: 'AboutPage', crumbs });
 
   const pages = [
-    {
-      href: '/about/verification/',
-      title: 'How licence verification works',
-      blurb:
-        'What we ask for, what we check it against, what appears publicly, and what we never publish or sell.',
-    },
     {
       href: '/about/editorial-standards/',
       title: 'Editorial standards',
@@ -55,15 +49,9 @@ export default function AboutPage() {
     },
     {
       href: '/about/code-of-conduct/',
-      title: 'Code of conduct',
+      title: 'House rules',
       blurb:
-        'What is expected, what gets a post removed, what gets an account removed, and how enforcement is decided and appealed.',
-    },
-    {
-      href: '/about/advisory-board/',
-      title: 'Advisory board',
-      blurb:
-        'The certified entomologists who review technical content and put their credential next to what we publish.',
+        'How the Discord actually runs: the written handbook, who moderates, what gets someone removed, and the line on unsafe advice.',
     },
     {
       href: '/about/press/',
@@ -95,9 +83,19 @@ export default function AboutPage() {
             </p>
           ))}
           <p className="mb-3 max-w-[70ch] text-ink2">
-            LTK was started by <strong className="text-ink">{site.founder.name}</strong>, who built
-            the Discord as a place for people in the trade to meet, talk shop and game together, and
-            hosts the Licensed to Kill Podcast. {site.founder.bio}{' '}
+            {site.community.origin} {site.community.difference} Today it has{' '}
+            <strong className="text-ink">{site.community.members} members</strong> (
+            {site.community.membersAsOf}), with {site.community.weeklyActive} active in a typical
+            week &mdash; technicians, managers, owners, entomologists, sales reps and office staff.
+          </p>
+          <p className="mb-3 max-w-[70ch] text-ink2">
+            LTK is an informal community of people in the trade. It isn&rsquo;t an accredited body,
+            a certifying organisation or a trade association, and nothing on this site should be
+            read as if it were.
+          </p>
+          <p className="mb-3 max-w-[70ch] text-ink2">
+            <strong className="text-ink">{site.founder.name}</strong> owns and runs it, and hosts
+            the Licensed to Kill Podcast. {site.founder.bio}{' '}
             <a href="/about/team/marcus-scruggs/" className="link">
               More about Marcus
             </a>{' '}

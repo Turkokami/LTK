@@ -162,14 +162,30 @@ export const site = {
     'Field service management software',
   ],
 
-  /** The LTK Discord server's creation date, decoded from its server ID (a Discord snowflake:
-   *  (id >> 22) + 1420070400000 ms). The community predates this website. */
-  founded: '2024-12-14',
+  /** Owner questionnaire (Marcus Scruggs, 2026-09-29): founded 1 January 2025. (The Discord
+   *  server itself was created 2024-12-14, per its snowflake ID — the owner's date wins.) */
+  founded: '2025-01-01',
+
+  /**
+   * Owner-reported facts from the questionnaire (2026-09-29). Owner-approved for the hub in
+   * principle; show Marcus each in place before relying on it. NEVER describe LTK as accredited,
+   * certified, a trade association or any other formal body — owner boundary (Section 11).
+   */
+  community: {
+    origin:
+      'Marcus Scruggs started LTK on 1 January 2025 because pest pros needed a way to get to know each other. What began as a video game group has become a full hub for people in pest control.',
+    difference: 'It puts everyone in the trade in the same room, casually, through gaming and hobbies.',
+    members: 545,
+    weeklyActive: '25–35',
+    membersAsOf: 'September 2026',
+    /** Channel of record for the rules. Summarised on /about/code-of-conduct/. */
+    rulesLiveIn: 'the handbook in the Discord',
+  },
 
   /** Source: his May 2025 podcast appearance (lib/content/podcast.ts). Add more only from him. */
   founder: {
     name: 'Marcus Scruggs',
-    role: 'Pest management professional and creator and host of Licensed to Kill',
+    role: 'Owner and director of LTK, and host of the Licensed to Kill Podcast',
     /** From his Pest Perspectives EP 36 bio (lib/content/podcast.ts). */
     bio: 'More than ten years as a pest management professional, specializing in food safety, audits, sanitation and public health, and a certified applicator.',
   },

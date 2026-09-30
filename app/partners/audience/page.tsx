@@ -3,6 +3,7 @@ import { pageMeta } from '@/lib/seo/metadata';
 import { buildGraph } from '@/lib/schema/graph';
 import { JsonLd } from '@/components/JsonLd';
 import { Breadcrumbs } from '@/components/site/Breadcrumbs';
+import { site } from '@/lib/site.config';
 import { LabelBlock } from '@/components/label/LabelBlock';
 
 /**
@@ -25,7 +26,7 @@ import { LabelBlock } from '@/components/label/LabelBlock';
 export const metadata: Metadata = pageMeta({
   title: 'Who you would be reaching',
   description:
-    'Audience composition, verification rate and reach for sponsors, from analytics and verified member records, never estimated. Updated quarterly and dated.',
+    'Audience size and reach for sponsors, from the Discord’s own member count and site analytics, never estimated. Each figure is dated and says where it came from.',
   path: '/partners/audience/',
 });
 
@@ -54,11 +55,10 @@ export default function AudiencePage() {
    */
   const PENDING = null;
   const rows: { label: string; value: string | null; source: string }[] = [
-    { label: 'Verified members', value: PENDING, source: 'Membership database — licence-verified only' },
+    { label: 'Discord members', value: String(site.community.members), source: `Owner-reported Discord count, ${site.community.membersAsOf}` },
+    { label: 'Active in a typical week', value: site.community.weeklyActive, source: `Owner-reported, ${site.community.membersAsOf}` },
     { label: 'Monthly readers', value: PENDING, source: 'Analytics property, 28-day rolling' },
-    { label: 'Verification rate', value: PENDING, source: 'Membership database' },
-    { label: 'Owners and decision-makers', value: PENDING, source: 'Self-reported at registration' },
-    { label: 'States represented', value: PENDING, source: 'Licence state on the verified record' },
+    { label: 'Owners and decision-makers', value: PENDING, source: 'Discord roles, once counted' },
   ];
 
   return (
@@ -74,8 +74,8 @@ export default function AudiencePage() {
           <h1 className="display mb-6 max-w-[18ch]">Who you would be reaching</h1>
 
           <p className="prose-bulletin mb-8">
-            Every figure on this page comes from an analytics property or a licence-verified
-            membership record. None of it is estimated, projected or rounded up, and the date it
+            Every figure on this page comes from the Discord&rsquo;s own member count or an
+            analytics property. None of it is estimated, projected or rounded up, and the date it
             was last pulled is printed beside it. If you want the raw export before signing
             anything, ask — we will send it.
           </p>

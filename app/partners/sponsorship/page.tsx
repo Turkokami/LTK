@@ -55,7 +55,7 @@ export default function SponsorshipPage() {
         <div className="grid gap-6 lg:grid-cols-[1.4fr_1fr]">
           <p className="prose-bulletin">
             Sponsorship here is visible, labelled and bounded. You get a clearly-marked presence
-            in front of an audience of licence-verified professionals. You do not get editorial
+            in front of an audience of working pest control professionals. You do not get editorial
             coverage, Lab placement, a review score, a forum presence, or anything shaped to look
             like a recommendation from us.
           </p>

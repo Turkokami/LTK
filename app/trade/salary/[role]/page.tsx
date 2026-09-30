@@ -152,7 +152,7 @@ export default async function SalaryPage({ params }: { params: Promise<{ role: s
               { label: 'Minimum cell', value: '5 responses' },
             ]}
           >
-            Responses come from licence-verified members only. Any region-and-tenure cell with
+            Responses come from LTK members only. Any region-and-tenure cell with
             fewer than five responses is suppressed rather than published — a median of two
             people is a rumour with a decimal point.
           </LabelBlock>

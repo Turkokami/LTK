@@ -75,18 +75,17 @@ export const HUBS: Hub[] = [
   {
     id: 'community',
     eyebrow: 'Community',
-    title: 'Forums, chapters and members',
+    title: 'Discord, events and the podcast',
     path: '/community/',
     blurb:
-      'Thirteen technical forums for verified working pros, state chapters, and member profiles that show credentials rather than follower counts.',
+      'Where the trade hangs out: the Discord, game nights and meetups, the podcast, topic forums and state chapters.',
     job: 'The moat. Self-producing indexable content.',
     primaryEntity: 'DiscussionForumPosting / ProfilePage',
     spokes: [
       { pattern: '/community/podcast/', label: 'The LTK podcast', count: 1, live: true },
+      { pattern: '/community/events/', label: 'Events and meetups', count: 1, live: true },
       { pattern: '/community/forums/:category/', label: 'Forum categories', count: 13, index: '/community/forums/' },
-      { pattern: '/community/forums/:category/:thread/', label: 'Forum threads', count: 'open' },
       { pattern: '/community/chapters/:state/', label: 'State chapters', count: 50, index: '/community/chapters/' },
-      { pattern: '/community/members/:handle/', label: 'Member profiles', count: 'open' },
     ],
   },
   {
@@ -181,16 +180,14 @@ export const HUBS: Hub[] = [
     title: 'Who runs this and how it works',
     path: '/about/',
     blurb:
-      'The team, the advisory board, how content is researched and reviewed, how reviews are conducted, and how licenses are verified.',
+      'Who runs LTK, the house rules, how content is researched and dated, how reviews are conducted, and where sponsorship stops.',
     job: 'E-E-A-T anchor. These pages ship before content, not after.',
     primaryEntity: 'AboutPage / Person',
     spokes: [
       { pattern: '/about/team/marcus-scruggs/', label: 'Founder: Marcus Scruggs', count: 1, live: true },
-      { pattern: '/about/advisory-board/', label: 'Advisory board', count: 1, live: true },
       { pattern: '/about/editorial-standards/', label: 'Editorial standards', count: 1, live: true },
       { pattern: '/about/review-methodology/', label: 'Review methodology', count: 1, live: true },
       { pattern: '/about/sponsorship-policy/', label: 'Sponsorship policy', count: 1, live: true },
-      { pattern: '/about/verification/', label: 'License verification', count: 1, live: true },
       { pattern: '/about/code-of-conduct/', label: 'Code of conduct', count: 1, live: true },
       { pattern: '/about/press/', label: 'Press', count: 1, live: true },
     ],

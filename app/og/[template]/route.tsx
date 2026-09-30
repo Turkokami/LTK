@@ -40,7 +40,7 @@ const SIGNAL: Record<string, string> = {
 const EYEBROW: Record<string, string> = {
   default: 'Pest pros helping pest pros',
   state: 'Academy · State reference',
-  thread: 'Community · Verified members only',
+  thread: 'Community · LTK Discord',
   lab: 'Lab · Independent review',
   wire: 'Wire · Regulatory',
   partners: 'Partners',

@@ -88,11 +88,10 @@ export default function SponsorshipPolicyPage() {
 
             <h2 className="h2 mt-10 mb-3">Member data</h2>
             <p>
-              Sponsors receive <strong>aggregate</strong> audience data: how many verified members,
-              in which states, holding which categories, at what tenure. They never receive
-              individual member records, contact details or licence numbers, and there is no tier
-              that unlocks them. Members gave us a licence number to prove they are real, not to
-              be sold.
+              Sponsors receive <strong>aggregate</strong> audience data only: how many members, and
+              what kinds of work they do. They never receive individual member records, names or
+              contact details, and there is no tier that unlocks them. Nobody joined LTK to be
+              sold.
             </p>
             <p>
               Where a member opts in to being contacted — for a job, a field trial, a research

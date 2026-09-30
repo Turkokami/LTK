@@ -75,6 +75,7 @@ export default async function sitemap({
       return [
         entry('/community/', 0.9),
         entry('/community/podcast/', 0.8),
+        entry('/community/events/', 0.7),
         entry('/community/forums/', 0.7),
         entry('/community/chapters/', 0.6),
         ...FORUM_CATEGORIES.map((c) => entry(`/community/forums/${c.slug}/`, 0.7)),
@@ -88,9 +89,7 @@ export default async function sitemap({
         entry('/about/editorial-standards/', 0.6),
         entry('/about/review-methodology/', 0.6),
         entry('/about/sponsorship-policy/', 0.6),
-        entry('/about/verification/', 0.6),
         entry('/about/code-of-conduct/', 0.6),
-        entry('/about/advisory-board/', 0.6),
         entry('/about/press/', 0.5),
         entry('/about/contact/', 0.5),
       ];

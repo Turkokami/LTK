@@ -8,16 +8,17 @@ import { site } from '@/lib/site.config';
 import { DiscordButton } from '@/components/community/Discord';
 
 export const metadata: Metadata = pageMeta({
-  title: 'Join — verified pest management professionals only',
+  title: 'Join LTK: free, and open to the whole trade',
   description:
-    'Membership is free for licensed applicators. We check your licence against the state register before you can post. Reading stays open to everyone, always.',
+    'LTK is a free Discord for people in pest control: techs, managers, owners, entomologists, sales reps and office staff. No licence check, just an open invite.',
   path: '/join/',
 });
 
 /**
  * Funnel 1 of 3: practitioners. Keep the other two funnels out of this page entirely.
- * The verification form itself is REGISTRY R-10 — this page ships the explanation first,
- * because the explanation is what makes people willing to hand over a licence number.
+ * Facts are from the owner questionnaire (2026-09-29): open public invite, no verification
+ * ("people interested in pest control wanting to join is fine"), roles picked by the mod team
+ * or owner. There is no licence verification — do not reintroduce one on this page.
  */
 export default function JoinPage() {
   const crumbs = [
@@ -25,6 +26,7 @@ export default function JoinPage() {
     { name: 'Join', href: '/join/' },
   ];
   const graph = buildGraph({ path: '/join/', crumbs });
+  const c = site.community;
 
   return (
     <>
@@ -36,43 +38,49 @@ export default function JoinPage() {
       <div className="shell grid gap-10 pb-16 lg:grid-cols-[1.1fr_1fr]">
         <div>
           <p className="eyebrow mb-3">Membership</p>
-          <h1 className="display mb-6 max-w-[15ch]">Free, if you hold a licence.</h1>
+          <h1 className="display mb-6 max-w-[15ch]">Free, and one click away.</h1>
           <p className="prose-bulletin">
-            Posting here requires a verified applicator licence. You give us your state, licence
-            number and categories; we check them against the state register; your posts carry a
-            verified badge from then on. It takes us a day or two and it costs you nothing.
+            LTK lives in the {site.discord.name}. Joining is an open invite &mdash; no application,
+            no licence check, no fee. It&rsquo;s built for people who work in pest control, and
+            anyone seriously interested in getting into the trade is welcome too.
           </p>
           <p className="prose-bulletin">
-            Reading is open to everyone and always will be. Threads need to be findable to be
-            worth writing.
+            {c.difference} Bug ID, treatment talk, gear reviews and job leads happen alongside game
+            nights, podcasts and meetups.
           </p>
 
-          {/* TODO(R-10): verification form. Server action, no client-side licence handling. */}
           <div className="card mt-8 p-6">
-            <p className="eyebrow mb-2">While you wait</p>
-            <p className="h3 mb-2">Verification opens with the founding cohort.</p>
-            <p className="mb-5 text-sm leading-relaxed text-ink2">
-              You don&rsquo;t need to wait to join in. Hop into the {site.discord.name} now &mdash;
-              founding members there get first crack at verification when it opens.
+            <p className="eyebrow mb-2">
+              {c.members} members &middot; {c.membersAsOf}
             </p>
-            <DiscordButton>Join the Discord now</DiscordButton>
+            <p className="h3 mb-2">Pull up a chair.</p>
+            <p className="mb-5 text-sm leading-relaxed text-ink2">
+              Say hi, post the bug you can&rsquo;t place, or lurk for a week. Read the handbook in
+              the Discord first &mdash; it&rsquo;s short.
+            </p>
+            <DiscordButton>Join the Discord</DiscordButton>
           </div>
         </div>
 
         <LabelBlock
-          title="What verification gets you"
+          title="Who you'll find in there"
           signal="field"
           specs={[
-            { label: 'Posting rights', value: 'All 13 technical forums' },
-            { label: 'Verified badge', value: 'State and category, on every post' },
-            { label: 'Arena entry', value: 'Leagues, tournaments, state leaderboards' },
-            { label: 'Sessions', value: 'Live entomologist lectures and the recordings' },
+            { label: 'In the room', value: 'Technicians, managers, owners, entomologists, sales reps and office staff' },
+            { label: 'Experience', value: 'A real mix, from first-year techs to veterans' },
+            { label: 'Busiest', value: 'Weekday working hours' },
+            { label: 'Roles', value: 'Members, mods and admins; mods are picked by the mod team or the owner' },
             { label: 'Cost', value: 'Free' },
           ]}
         >
-          Your licence number is used for verification and is never published. See{' '}
-          <a href="/about/verification/" className="text-field underline underline-offset-2">
-            how verification works
+          Competitors share the room &mdash; it&rsquo;s an informal hangout for professionals, and
+          it works. See the{' '}
+          <a href="/about/code-of-conduct/" className="text-field underline underline-offset-2">
+            house rules
+          </a>{' '}
+          and{' '}
+          <a href="/community/events/" className="text-field underline underline-offset-2">
+            what&rsquo;s on
           </a>
           .
         </LabelBlock>

@@ -11,7 +11,7 @@ const HUB = getHub('partners');
 export const metadata: Metadata = pageMeta({
   title: 'Sponsorship and partnership',
   description:
-    'Sponsorship for companies selling into pest management. Clearly labelled placement in front of verified pros. Editorial and Lab scores are never for sale.',
+    'Sponsorship for companies selling into pest management. Clearly labelled placement in front of working pros. Editorial and Lab scores are never for sale.',
   path: HUB.path,
 });
 

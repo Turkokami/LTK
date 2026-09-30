@@ -19,7 +19,7 @@ const PATH = '/trade/pay-and-pricing/';
 
 export const metadata: Metadata = pageMeta({
   title: 'Pest control pay and pricing: what the crew reports',
-  description: `What pest control pros in the ${site.discord.name} report about technician pay and job pricing, credited and dated, next to national BLS pay figures.`,
+  description: `What pest control pros in the ${site.discord.name} report about technician pay and job pricing, dated, next to the national government pay figures for the trade.`,
   path: PATH,
 });
 
@@ -59,7 +59,7 @@ export default function PayAndPricingPage() {
           Numbers members have shared in the {site.discord.name} about pay and pricing, next to the
           national BLS figures for the trade.
         </p>
-        <LabelBlock title="What members said, not market rates" signal="warning" meta="Credited and dated" className="mb-12 max-w-[52rem]">
+        <LabelBlock title="What members said, not market rates" signal="warning" meta="Dated, no names" className="mb-12 max-w-[52rem]">
           Every figure below is what one member posted on the date shown, for their market. Pay and
           pricing swing hard by region, company and season. Use these to start a conversation, not
           to quote a job or negotiate an offer.

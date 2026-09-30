@@ -2,8 +2,10 @@
  * community.ts — content contributed by LTK Discord members.
  *
  * Source: the LTK Discord content pack (scraped 2026-09-25). The owner confirmed on 2026-09-25
- * that the community has approved use of their photos and posts; credit is always by Discord
- * handle.
+ * that the community has approved use of their photos and posts. The owner questionnaire
+ * (2026-09-29) sets the public rule: no member names unless self-identified, and no verbatim
+ * Discord quotes. So `who` holds a role label (LTK member, LTK Director, a channel), never a
+ * handle, and `said` is always a paraphrase.
  *
  * EDITORIAL RULES for everything in this file (CLAUDE.md 2.5 still applies):
  *   - These are MEMBER REPORTS, not verified data or Lab reviews. Every item carries who said
@@ -60,57 +62,57 @@ export const CREW_PICKS: CrewPickGroup[] = [
         product: 'Lesco 4-gal electric backpack',
         said:
           'Ranked #1 of the 6–7 backpacks one member has run: Lesco, then FlowZone, Birchmeier pump, Birchmeier electric, B&G 2-gal pump, Ryobi, and Tomahawk last (burned up in 3 weeks). The adjustable tip handles cracks and deck boards. Downsides: the standard battery lasts about half a week (the larger one is ~$100), there is no pin-stream tip, and the holster breaks if it catches in a tailgate.',
-        who: 'Greg',
+        who: 'LTK member',
         when: 'Mar & Sep 2026',
       },
       {
         product: 'Lesco / Smith backpack',
-        said: '“Most comfortable backpack sprayer I’ve ever owned.”',
-        who: 'Vulkans Wrath',
+        said: 'Rated the most comfortable backpack sprayer they have owned.',
+        who: 'LTK member',
         when: 'Sep 2026',
       },
       {
         product: 'FlowZone Typhoon 3 / Storm 2',
         said:
           'Called the industry standard. One member runs 7–8 on shared batteries. Tips: pressure-washer fan tips make cheap fan nozzles, fan spray beats cone, and pulling the wand to use the green tip speeds up 3-up/3-out perimeter sprays.',
-        who: 'LTK Director, Kywon, mykninjazx6',
+        who: 'LTK Director and members',
         when: 'Jan 2025',
       },
       {
         product: 'FlowZone 1-gal handheld',
-        said: '“By far the best interior sprayer.” Worth one on every truck, and it runs on the same battery as the backpacks.',
-        who: 'Kywon',
+        said: 'Called the best interior sprayer by far. Worth one on every truck, and it runs on the same battery as the backpacks.',
+        who: 'LTK member',
         when: 'Jan 2025',
       },
       {
         product: 'FlowZone Vortex mosquito attachment',
         said: 'About $350. Quiet, with better range of motion than a blower. Rated 70+ minutes (32 on boost); the attachment battery dies before the backpack’s.',
-        who: 'Jeff',
+        who: 'LTK member',
         when: 'Apr 2026',
       },
       {
         product: 'FlowZone OG mosquito fogger',
         said: 'The $10 louvered circle piece is a must, or you only get about two-thirds of the height.',
-        who: 'Greg',
+        who: 'LTK member',
         when: 'Mar 2026',
       },
       {
         product: 'Milwaukee M18 4-gal Switch Tank',
-        said: 'Divided opinions: “gets a lot of hate but I love it.”',
-        who: 'Apollo_Justice, Agent',
+        said: 'Divided opinions: plenty of criticism, and some loyal fans.',
+        who: 'LTK members',
         when: 'Mar 2025',
         link: 'https://www.milwaukeetool.com/products/3019-20ps',
       },
       {
         product: 'AlienTabi (Amazon)',
-        said: 'Around $175 and “basically a FlowZone.”',
-        who: 'Jeff',
+        said: 'Around $175 and described as close to a FlowZone.',
+        who: 'LTK member',
         when: 'Apr 2025',
       },
       {
         product: 'Accuthor 1-gal stainless spray can',
         said: '$489 list, with a pressure-relief pull valve. The hose and wand connection is different from B&G. Was free with 5 cases of Bithor SC under an Ensystex promo that ran through August 2026.',
-        who: 'Greg',
+        who: 'LTK member',
         when: 'Apr–Aug 2026',
       },
       {
@@ -121,8 +123,8 @@ export const CREW_PICKS: CrewPickGroup[] = [
       },
       {
         product: 'Birchmeier backpack',
-        said: 'The worst of the ones Greg has run. The battery isn’t protected from rain.',
-        who: 'Greg',
+        said: 'The worst of the ones this member has run. The battery isn’t protected from rain.',
+        who: 'LTK member',
         when: 'Sep 2026',
       },
     ],
@@ -134,25 +136,25 @@ export const CREW_PICKS: CrewPickGroup[] = [
     picks: [
       {
         product: 'VectorFog H200SF-SS thermal fogger',
-        said: '“My baby… fun as hell to use.” Gas-powered.',
-        who: 'Jeff',
+        said: 'A favourite, and fun to run. Gas-powered.',
+        who: 'LTK member',
         when: 'Apr 2026',
         link: 'https://www.domyown.com/vectorfog-h200sf-ss-thermal-fogger-p-26635.html',
       },
-      { product: 'Golden Eagle and Vector thermal foggers', said: 'Also in the rotation.', who: 'Jeff', when: 'Apr 2025' },
+      { product: 'Golden Eagle and Vector thermal foggers', said: 'Also in the rotation.', who: 'LTK member', when: 'Apr 2025' },
       {
         product: 'Birchmeier DR-5 powder duster',
         said: 'The duster one member reaches for.',
-        who: 'Vulkans Wrath',
+        who: 'LTK member',
         when: 'Sep 2026',
         link: 'https://www.amazon.com/dp/B01GEI9VS8',
       },
-      { product: 'Dinftin electric DE duster', said: 'An electric option for diatomaceous earth.', who: 'Greg', when: 'Mar 2026' },
-      { product: 'B&G aerosol delivery unit', said: '“Absolute game changer.”', who: 'BallisticEnigma', when: 'Mar 2025' },
+      { product: 'Dinftin electric DE duster', said: 'An electric option for diatomaceous earth.', who: 'LTK member', when: 'Mar 2026' },
+      { product: 'B&G aerosol delivery unit', said: 'Called a game changer.', who: 'LTK member', when: 'Mar 2025' },
       {
         product: 'Telescoping wand with brush and scraper heads',
         said: 'For wasp and mud dauber nests out of reach. Watch your trigger finger when it collapses.',
-        who: 'Kywon, mykninjazx6, Łěğǐǒň',
+        who: 'LTK members',
         when: 'Jan 2025',
       },
     ],
@@ -165,27 +167,27 @@ export const CREW_PICKS: CrewPickGroup[] = [
       {
         product: 'Burrat Samurai Armor door sweep',
         said: 'Replaceable brush and cheaper than Xcluder. Selling a yearly brush replacement adds recurring revenue.',
-        who: 'Vulkans Wrath',
+        who: 'LTK member',
         when: 'Feb 2026',
         link: 'https://burrtecusa.com/burrat',
       },
-      { product: 'Duramor foam and 9/16" foam plugs', said: 'Used for concrete patching.', who: 'Greg', when: 'Apr 2026' },
+      { product: 'Duramor foam and 9/16" foam plugs', said: 'Used for concrete patching.', who: 'LTK member', when: 'Apr 2026' },
       {
         product: 'Temporary reusable roofing anchors',
         said: 'About $15 retail. One member charges $150–175 per installed anchor, seals it under the tiles and leaves it for renewals.',
-        who: 'Vulkans Wrath',
+        who: 'LTK member',
         when: 'Jul 2026',
       },
       {
         product: 'Hammer drills for slab drilling',
         said: 'Hilti has the best US service centers. Bosch is arguably the better tool but harder to get serviced.',
-        who: 'Ian, Vulkans Wrath',
+        who: 'LTK members',
         when: 'May–Jun 2025',
       },
       {
         product: '18-gauge sheet metal with a truck-bed bender',
         said: 'For rodent exclusion instead of mesh and foam.',
-        who: 'T Workman',
+        who: 'LTK member',
         when: 'Feb 2026',
       },
     ],
@@ -198,17 +200,17 @@ export const CREW_PICKS: CrewPickGroup[] = [
       {
         product: 'Duramor Raptor rat trap',
         said: 'On one member’s shortlist.',
-        who: 'Greg',
+        who: 'LTK member',
         when: 'Sep 2026',
         link: 'https://duramorusa.com/products/raptor-rat-trap',
       },
       {
         product: 'Gopher Hawk traps',
         said: 'Reusable, good for recurring mole programs. Talprid worms for small jobs; CO₂ or smoke in burrows.',
-        who: 'SasquatchPCTX, LTK Director',
+        who: 'LTK Director and members',
         when: 'Mar 2026',
       },
-      { product: 'Skyhawk / Trapmate sensors', said: '“Hit the mark every time.”', who: 'LTK Director', when: 'May 2026' },
+      { product: 'Skyhawk / Trapmate sensors', said: 'Reported as accurate every time.', who: 'LTK Director', when: 'May 2026' },
       {
         product: 'Digital monitoring, compared',
         said: 'Anticimex SMART drew mixed reviews from techs. Bell IQ is Bluetooth, so you have to be nearby, and it is modular with Protecta and T-Rex. Owl Sentry does automated deratization.',
@@ -218,14 +220,14 @@ export const CREW_PICKS: CrewPickGroup[] = [
       {
         product: 'Gloves on remote-monitored stations',
         said: 'Field finding: rats avoided stations touched with bare hands. Wear gloves.',
-        who: 'Vulkans Wrath',
+        who: 'LTK member',
         when: 'Oct 2025',
       },
-      { product: 'Green laser pointer', said: '“Best walk-around tool” for inspections.', who: 'LTK Director', when: 'Jul 2026' },
+      { product: 'Green laser pointer', said: 'Called the best walk-around tool for inspections.', who: 'LTK Director', when: 'Jul 2026' },
       {
         product: 'Field ID optics',
         said: 'The NCSU/NOCS SPERT field scope (profits fund NCSU extension). On a budget, a ~$10 jeweler’s loupe or a clip-on phone macro lens. Put a dime in the shot for scale.',
-        who: 'Topherdegrace, Saturniid, Vulkans Wrath',
+        who: 'LTK members',
         when: '2025–26',
         link: 'https://go.ncsu.edu/pesttools',
       },
@@ -240,7 +242,7 @@ export const CREW_PICKS: CrewPickGroup[] = [
       {
         product: 'Name Dat Bug',
         said: 'AI pest ID and inspection-report app from BCE Adam Holt, who was looking for Android beta testers. The site also has a free label/SDS library and technical articles.',
-        who: 'Hawkeyeholt',
+        who: 'LTK member',
         when: 'Jul 2026',
         link: 'https://app.namedatbug.com',
       },
@@ -255,19 +257,19 @@ export const CREW_PICKS: CrewPickGroup[] = [
     picks: [
       {
         product: 'Thorogood work boots',
-        said: 'Waterproof, 8" steel toe, factory refurbish at half price. “I walk 20–25k steps a day… they last 2–3 years.”',
+        said: 'Waterproof, 8" steel toe, factory refurbish at half price. One member walks 20–25k steps a day and gets 2–3 years from a pair.',
         who: 'LTK Director',
         when: 'Jan & Dec 2025',
       },
-      { product: 'Ergodyne Chill-Its 8937 cooling hat', said: 'Part of an OSHA heat plan.', who: 'Vulkans Wrath', when: 'Jun 2025' },
-      { product: 'Truewerk T3 WerkPant', said: 'Knee-pad pockets.', who: 'Łěğǐǒň', when: 'Oct 2025' },
+      { product: 'Ergodyne Chill-Its 8937 cooling hat', said: 'Part of an OSHA heat plan.', who: 'LTK member', when: 'Jun 2025' },
+      { product: 'Truewerk T3 WerkPant', said: 'Knee-pad pockets.', who: 'LTK member', when: 'Oct 2025' },
       {
         product: 'KORE Essentials ratcheting nylon belt',
         said: 'Lasted 4+ years. 5.11 makes a similar one.',
-        who: 'Matt, barkingowl',
+        who: 'LTK members',
         when: 'Sep 2025',
       },
-      { product: 'Bee suit and Kershaw work knives', said: 'Standard kit for stinging-insect calls.', who: 'Łěğǐǒň', when: '2025' },
+      { product: 'Bee suit and Kershaw work knives', said: 'Standard kit for stinging-insect calls.', who: 'LTK member', when: '2025' },
     ],
   },
 ];
@@ -288,13 +290,13 @@ export const CHEM_TALK: ChemNote[] = [
       'Baits the crew rotates: Advion Trio, Vendetta Nitro, Ultimatum, Vanecto (a newer mode of action).',
       'Let roaches “detox” from repellent residues before expecting them to take bait.',
     ],
-    who: 'Jeff, #the-hive-mind',
+    who: 'LTK members',
     when: '2025–26',
   },
   {
     pest: 'Ants',
     notes: ['Optigard gel, Alpine WSG.', 'Stop baiting when the soil cools; liquid into the nest works best in cold months.'],
-    who: 'Jeff, Vulkans Wrath',
+    who: 'LTK members',
     when: '2025–26',
   },
   {
@@ -335,13 +337,13 @@ export interface JobLead {
  * Excluded on purpose: the CERV post (a member later warned people to avoid the company).
  */
 export const JOB_LEADS: JobLead[] = [
-  { posted: '2026-09-01', role: 'Lead Technician', where: 'Wixom, Michigan', details: 'Requires Michigan certified applicator Core, 7F and 7A.', contact: 'DM 🥷🏽LT (regional manager) on Discord', who: '🥷🏽LT' },
-  { posted: '2026-08-27', role: 'Southeastern Territory Representative (sales)', where: 'MGK · Southeast / remote', details: 'Manufacturer sales territory.', contact: 'Apply on LinkedIn', link: 'https://www.linkedin.com/jobs/view/4458309433', who: 'Vulkans Wrath' },
+  { posted: '2026-09-01', role: 'Lead Technician', where: 'Wixom, Michigan', details: 'Requires Michigan certified applicator Core, 7F and 7A.', contact: 'Ask in #job-board on the LTK Discord', who: 'LTK member' },
+  { posted: '2026-08-27', role: 'Southeastern Territory Representative (sales)', where: 'MGK · Southeast / remote', details: 'Manufacturer sales territory.', contact: 'Apply on LinkedIn', link: 'https://www.linkedin.com/jobs/view/4458309433', who: 'LTK member' },
   { posted: '2026-08-18', role: 'Technician, part-time to full-time', where: 'Sasquatch Pest Control · Tomball / NW Houston, TX', details: 'Commission-based, competitive for the market. Licence a plus, will train; exclusion experience a big plus. Residential and commercial: rodents, exclusion, wildlife, mosquito, birds.', contact: 'DM Marcus (LTK Director) on Discord', who: 'LTK Director' },
-  { posted: '2026-08-14', role: 'Pest Control Technician', where: 'Tekton · Southeast', details: '“Fast-growing local company.” Listing on Indeed.', contact: 'DM Tekton on Discord', who: 'Tekton' },
-  { posted: '2026-06-10', role: 'Branch Manager', where: 'Fox Pest Control (a Rollins company) · Brewster, NY', details: '$87,000–$97,000/yr plus stock purchase, 401(k) and health, as posted.', contact: 'Listing on Indeed', who: 'Vulkans Wrath' },
+  { posted: '2026-08-14', role: 'Pest Control Technician', where: 'Tekton · Southeast', details: 'Described as a fast-growing local company. Listing on Indeed.', contact: 'Ask in #job-board on the LTK Discord', who: 'LTK member' },
+  { posted: '2026-06-10', role: 'Branch Manager', where: 'Fox Pest Control (a Rollins company) · Brewster, NY', details: '$87,000–$97,000/yr plus stock purchase, 401(k) and health, as posted.', contact: 'Listing on Indeed', who: 'LTK member' },
   { posted: '2026-03-11', role: 'Service / Sales Manager', where: 'Pest Control Guys · Kansas City', details: '2+ years of pest control experience.', contact: 'Email Ben@pestcontrolguys.com', who: 'Pest Control Guys' },
-  { posted: '2026-01-23', role: 'Pest Control Technician', where: 'Dallas–Fort Worth, TX', details: 'Put “LTK” next to your name for a guaranteed interview, per the poster.', contact: 'Listing on Indeed via Isaac', who: 'Isaac' },
+  { posted: '2026-01-23', role: 'Pest Control Technician', where: 'Dallas–Fort Worth, TX', details: 'Put “LTK” next to your name for a guaranteed interview, per the poster.', contact: 'Listing on Indeed', who: 'LTK member' },
 ];
 
 /* ------------------------------------------------------------------ Trade: pay & pricing talk */
@@ -353,8 +355,8 @@ export interface ReportedFigure extends Credit {
 
 /** What members said. Never market data — the page labels every item with who and when. */
 export const PAY_TALK: ReportedFigure[] = [
-  { topic: 'Master tech (runs a team of 3–5, handles callbacks)', figure: '~$65k', who: 'Vulkans Wrath', when: 'Aug 2026' },
-  { topic: 'Regular technician', figure: '$36–50k', who: 'Vulkans Wrath', when: 'Aug 2026' },
+  { topic: 'Master tech (runs a team of 3–5, handles callbacks)', figure: '~$65k', who: 'LTK member', when: 'Aug 2026' },
+  { topic: 'Regular technician', figure: '$36–50k', who: 'LTK member', when: 'Aug 2026' },
   { topic: 'Unlicensed new hires paid $5/hr more than a licensed tech', figure: '≈ $9,600/yr gap, as the thread worked it out — the case made for pay transparency', who: '#job-board thread', when: 'Jan 2025' },
   { topic: 'Technician salary bands in posted jobs (AZ, NM, TX)', figure: '$35–65k', who: '#job-board posts', when: '2025–26' },
   { topic: 'Commission technician roles in posted jobs (Michigan)', figure: '$70–100k', who: '#job-board posts', when: 'Nov 2025' },
@@ -362,10 +364,10 @@ export const PAY_TALK: ReportedFigure[] = [
 ];
 
 export const PRICING_TALK: ReportedFigure[] = [
-  { topic: 'Squirrel job on a steep (15/12) roof', figure: '$450 minimum trapping setup + $100 per animal; exclusion at 3× markup, 5× with access limits; add a spotter tech if needed', who: 'Senior Squatch', when: 'Feb 2026' },
-  { topic: 'Labor rate, height work', figure: '$250/hr, $350/hr when it’s “sketchy”; $175 per installed roof anchor', who: 'Vulkans Wrath', when: 'Feb 2026' },
-  { topic: 'Specialty work target', figure: '“Get to $150/hr labor for specialty work”', who: 'A manufacturer rep in the thread', when: 'Feb 2026' },
-  { topic: 'Termite, bait vs. liquid (a competitor example)', figure: 'Bait install $625 + $33/mo vs. trench-and-treat $350 + $350/yr renewal. One member’s position: a one-time liquid treatment beats bait.', who: 'Greg', when: 'Apr 2026' },
+  { topic: 'Squirrel job on a steep (15/12) roof', figure: '$450 minimum trapping setup + $100 per animal; exclusion at 3× markup, 5× with access limits; add a spotter tech if needed', who: 'LTK member', when: 'Feb 2026' },
+  { topic: 'Labor rate, height work', figure: '$250/hr, $350/hr for sketchy access; $175 per installed roof anchor', who: 'LTK member', when: 'Feb 2026' },
+  { topic: 'Specialty work target', figure: 'A target of $150/hr labor for specialty work', who: 'A manufacturer rep in the thread', when: 'Feb 2026' },
+  { topic: 'Termite, bait vs. liquid (a competitor example)', figure: 'Bait install $625 + $33/mo vs. trench-and-treat $350 + $350/yr renewal. One member’s position: a one-time liquid treatment beats bait.', who: 'LTK member', when: 'Apr 2026' },
 ];
 
 /* ------------------------------------------------------------------ Pest library */
@@ -382,14 +384,14 @@ export interface IdNote extends Credit {
  */
 export const ID_NOTES: Record<string, IdNote[]> = {
   ants: [
-    { title: 'Ant or termite? “AWW”', body: 'Antennae: ants elbowed, termites straight or beaded. Wings: ant pairs unequal, termite pairs equal. Waist: ants pinched, termites broad.', who: 'Topherdegrace', when: 'Sep 2026' },
+    { title: 'Ant or termite? “AWW”', body: 'Antennae: ants elbowed, termites straight or beaded. Wings: ant pairs unequal, termite pairs equal. Waist: ants pinched, termites broad.', who: 'LTK member', when: 'Sep 2026' },
     { title: 'Florida carpenter ant', body: 'Polymorphic workers with a smoothly rounded thorax. The look-alike Formica integra has a dip in the thorax, is aggressive and sprays acid. Management is the same either way.', who: '#the-hive-mind ID thread', when: '2025–26' },
     { title: 'Odorous house ant alates', body: 'Small, single node. When in doubt, sniff it out.', who: '#the-hive-mind', when: '2025–26' },
     { title: 'Fire ants', body: 'Red imported fire ants are brighter and more orange, and less two-toned than southern fire ants. They often turn up crawling on clothes in closets, and male Solenopsis alates get mistaken for other pests.', who: '#the-hive-mind', when: '2025–26' },
   ],
   'termites-wdo': [
-    { title: 'Ant or termite? “AWW”', body: 'Antennae: ants elbowed, termites straight or beaded. Wings: ant pairs unequal, termite pairs equal. Waist: ants pinched, termites broad.', who: 'Topherdegrace', when: 'Sep 2026' },
-    { title: 'Powderpost beetle taxonomy', body: 'The old Anobiidae now sit as Anobiinae within Ptinidae; lyctine powderpost beetles are in Bostrichidae. The lesser grain borer is a bostrichid tied to stored grain, not a wood-destroying organism.', who: 'Matt, Saturniid', when: '2025–26' },
+    { title: 'Ant or termite? “AWW”', body: 'Antennae: ants elbowed, termites straight or beaded. Wings: ant pairs unequal, termite pairs equal. Waist: ants pinched, termites broad.', who: 'LTK member', when: 'Sep 2026' },
+    { title: 'Powderpost beetle taxonomy', body: 'The old Anobiidae now sit as Anobiinae within Ptinidae; lyctine powderpost beetles are in Bostrichidae. The lesser grain borer is a bostrichid tied to stored grain, not a wood-destroying organism.', who: 'LTK members', when: '2025–26' },
   ],
   'stinging-insects': [
     { title: 'Yellowjackets vs. bald-faced hornets', body: 'Vespula yellowjackets nest in cavities — wall voids, firewood. Dolichovespula (bald-faced hornets) build open-air, round nests.', who: '#the-hive-mind', when: '2025–26' },
@@ -397,7 +399,7 @@ export const ID_NOTES: Record<string, IdNote[]> = {
     { title: 'Ground-nesting bees', body: 'Miner and ground bees fall under pollinator protection. Leave them unless they are causing harm.', who: '#the-hive-mind', when: '2025–26' },
   ],
   'stored-product-pests': [
-    { title: 'Sawtoothed vs. merchant grain beetle', body: 'Told apart by temple length. Sawtoothed doesn’t fly or come to light and lives up to a year; merchant flies, is drawn to light and prefers cereals.', who: 'Matt', when: '2025–26' },
+    { title: 'Sawtoothed vs. merchant grain beetle', body: 'Told apart by temple length. Sawtoothed doesn’t fly or come to light and lives up to a year; merchant flies, is drawn to light and prefers cereals.', who: 'LTK member', when: '2025–26' },
     { title: 'Dermestid larvae', body: 'Attagenus: long, slender, tail tuft (mistaken for silverfish). Dermestes: urogomphi. Anthrenus: V-shaped tuft. Trogoderma: the warehouse beetle.', who: '#the-hive-mind', when: '2025–26' },
     { title: 'Cigarette vs. drugstore beetle', body: 'Cigarette beetle antennae are serrated; drugstore beetle antennae are clubbed. Don’t trust stock-photo IDs — even an industry body once ran a mislabelled one.', who: '#the-hive-mind', when: '2025–26' },
   ],
@@ -429,13 +431,13 @@ export interface Resource extends Credit {
 }
 
 export const RESOURCES: Resource[] = [
-  { name: 'The BCE Podcast', what: 'Board Certified Entomologists Adam Holt and Chelle Hartzer. Episode 10 features Andrew Sutherland (UC IPM).', who: 'Hawkeyeholt', when: 'Jan 2026' },
-  { name: 'NPMA PRO Certified', what: 'A good step before moving into management.', who: 'Vulkans Wrath', when: 'May 2025' },
-  { name: 'PestPosse TV — Food Manufacturing course', what: '5 lessons, $30, with a certificate. An LTK collaboration. PestPosse also has a sales masterclass workbook.', who: 'LTK', when: 'Jan 2026' },
+  { name: 'The BCE Podcast', what: 'Board Certified Entomologists Adam Holt and Chelle Hartzer. Episode 10 features Andrew Sutherland (UC IPM).', who: 'LTK member', when: 'Jan 2026' },
+  { name: 'NPMA PRO Certified', what: 'A good step before moving into management.', who: 'LTK member', when: 'May 2025' },
+  { name: 'PestPosse TV — Food Manufacturing course', what: '5 lessons, $30, with a certificate. An LTK collaboration. PestPosse also has a sales masterclass workbook.', who: 'LTK member', when: 'Jan 2026' },
   { name: 'Pest Daily sales training', what: 'Good, and pricey.', who: '#training-grounds', when: '2025–26' },
-  { name: 'German roach walkthroughs by Ian “Old Ian” Terry', what: 'Video walkthroughs shared in #training-grounds.', who: 'Ian', when: '2025–26' },
-  { name: 'NCSU pest tools', what: 'Field optics including the SPERT scope; profits fund NCSU extension.', who: 'Topherdegrace', when: '2025–26', link: 'https://go.ncsu.edu/pesttools' },
-  { name: 'Name Dat Bug', what: 'AI pest ID and inspection reports, plus a free label/SDS library.', who: 'Hawkeyeholt', when: 'Jul 2026', link: 'https://app.namedatbug.com' },
+  { name: 'German roach video walkthroughs', what: 'Video walkthroughs shared in #training-grounds.', who: 'LTK member', when: '2025–26' },
+  { name: 'NCSU pest tools', what: 'Field optics including the SPERT scope; profits fund NCSU extension.', who: 'LTK member', when: '2025–26', link: 'https://go.ncsu.edu/pesttools' },
+  { name: 'Name Dat Bug', what: 'AI pest ID and inspection reports, plus a free label/SDS library.', who: 'LTK member', when: 'Jul 2026', link: 'https://app.namedatbug.com' },
   { name: 'Pomerix EPA pesticide search', what: 'Look up registered pesticides.', who: 'LTK Director', when: 'May 2025', link: 'https://pomerix.com/pesticides' },
   { name: 'BPCA UK job board', what: 'For anyone looking across the Atlantic.', who: '#job-board', when: '2025', link: 'https://bpca.org.uk/jobs' },
 ];
@@ -444,6 +446,6 @@ export const RESOURCES: Resource[] = [
 export const AUDIT_TIP: IdNote = {
   title: 'Rodent device site maps',
   body: 'Not legally required, but third-party auditors and large grocery chains expect them, and the FDA strongly encourages them.',
-  who: 'Evanovitz',
+  who: 'LTK member',
   when: 'Jun 2025',
 };

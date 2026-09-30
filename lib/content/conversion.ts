@@ -93,7 +93,7 @@ export const CONTRACTS: PageContract[] = [
   },
   {
     pattern: '/community/forums/:category/:thread/',
-    primaryAction: 'Verify my licence',
+    primaryAction: 'Join the Discord',
     actionHref: '/join/',
     snippetShape: 'paragraph',
     shapeMarkup: 'Opening post body as the answer. DiscussionForumPosting.articleBody.',

@@ -14,7 +14,7 @@ const HUB = getHub('community');
 export const metadata: Metadata = pageMeta({
   title: 'Forums, chapters and members',
   description:
-    `Join the ${site.discord.name} for shop talk, pest ID help, the podcast and group training, plus forums and state chapters for licence-verified pest management pros.`,
+    `Join the ${site.discord.name} for shop talk, pest ID help, the podcast and group training, plus events, meetups and state chapters for pest management pros.`,
   path: HUB.path,
 });
 
@@ -41,8 +41,8 @@ export default function Page() {
         </p>
         <div className="mb-14 flex flex-wrap gap-3">
           <DiscordButton size="lg">Jump into the Discord</DiscordButton>
-          <a href="/join/" className="btn btn--ghost btn--lg">
-            Get verified
+          <a href="/community/events/" className="btn btn--ghost btn--lg">
+            See what&rsquo;s on
           </a>
         </div>
 

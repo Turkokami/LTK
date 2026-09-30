@@ -12,7 +12,7 @@ const HUB = getHub('arena');
 export const metadata: Metadata = pageMeta({
   title: 'Competition and leaderboards',
   description:
-    'Identification speed runs, inspection challenges and the annual Licensed to Kill championship. Competition built to sharpen the skills the job actually needs.',
+    'Identification speed runs, inspection challenges and the Licensed to Kill championship. Competition built to sharpen the skills the job actually needs.',
   path: HUB.path,
 });
 

@@ -1,7 +1,7 @@
 /**
  * community-photos.ts — GENERATED from the LTK Discord photo pack (credits.csv + caption review).
- * Do not hand-edit; regenerate with the build script. Photos are credited by Discord handle; the
- * community approved their use (owner, 2026-09-25). Excluded during review: identifiable people,
+ * Do not hand-edit; regenerate with the build script. Photos are credited as "LTK member" (no handles, per the owner
+ * questionnaire of 2026-09-29); the community approved their use (owner, 2026-09-25). Excluded during review: identifiable people,
  * plates, business names and competitor labels, graphic content, screenshots/stock images,
  * blurry or off-topic shots. Mis-sorted photos were moved to the right section.
  */
@@ -32,7 +32,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": true,
   "width": 851,
   "height": 1130,
-  "credit": "BallisticEnigma",
+  "credit": "LTK member",
   "date": "2025-01-04",
   "note": null
  },
@@ -46,7 +46,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Oransofaraway",
+  "credit": "LTK member",
   "date": "2025-01-07",
   "note": null
  },
@@ -60,7 +60,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Oransofaraway",
+  "credit": "LTK member",
   "date": "2025-01-07",
   "note": null
  },
@@ -74,7 +74,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 1071,
   "height": 1280,
-  "credit": "Oransofaraway",
+  "credit": "LTK member",
   "date": "2025-01-20",
   "note": null
  },
@@ -88,7 +88,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": true,
   "width": 1013,
   "height": 1280,
-  "credit": "Oransofaraway",
+  "credit": "LTK member",
   "date": "2025-01-20",
   "note": null
  },
@@ -102,7 +102,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 720,
   "height": 1280,
-  "credit": "frenchboi4056",
+  "credit": "LTK member",
   "date": "2025-06-13",
   "note": null
  },
@@ -116,7 +116,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Jeff",
+  "credit": "LTK member",
   "date": "2025-11-04",
   "note": null
  },
@@ -130,7 +130,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Grateful",
+  "credit": "LTK member",
   "date": "2025-11-04",
   "note": null
  },
@@ -144,7 +144,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Grateful",
+  "credit": "LTK member",
   "date": "2025-11-04",
   "note": null
  },
@@ -158,7 +158,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Grateful",
+  "credit": "LTK member",
   "date": "2025-11-04",
   "note": null
  },
@@ -172,7 +172,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 995,
   "height": 1280,
-  "credit": "Isaac",
+  "credit": "LTK member",
   "date": "2025-11-08",
   "note": null
  },
@@ -186,7 +186,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Sam",
+  "credit": "LTK member",
   "date": "2026-08-17",
   "note": null
  },
@@ -200,7 +200,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": true,
   "width": 960,
   "height": 1280,
-  "credit": "Oransofaraway",
+  "credit": "LTK member",
   "date": "2025-07-08",
   "note": null
  },
@@ -214,7 +214,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": true,
   "width": 1280,
   "height": 960,
-  "credit": "Ian",
+  "credit": "LTK member",
   "date": "2025-07-02",
   "note": null
  },
@@ -228,7 +228,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 1280,
   "height": 960,
-  "credit": "Ian",
+  "credit": "LTK member",
   "date": "2025-07-02",
   "note": null
  },
@@ -242,7 +242,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Guy",
+  "credit": "LTK member",
   "date": "2025-11-19",
   "note": null
  },
@@ -256,7 +256,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Guy",
+  "credit": "LTK member",
   "date": "2025-11-19",
   "note": null
  },
@@ -270,7 +270,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Guy",
+  "credit": "LTK member",
   "date": "2025-11-19",
   "note": null
  },
@@ -284,7 +284,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Guy",
+  "credit": "LTK member",
   "date": "2025-11-19",
   "note": null
  },
@@ -298,7 +298,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": true,
   "width": 1280,
   "height": 1280,
-  "credit": "Francis",
+  "credit": "LTK member",
   "date": "2025-01-08",
   "note": null
  },
@@ -312,7 +312,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": true,
   "width": 960,
   "height": 1280,
-  "credit": "Hydro",
+  "credit": "LTK member",
   "date": "2025-01-13",
   "note": null
  },
@@ -326,7 +326,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Hydro",
+  "credit": "LTK member",
   "date": "2025-01-13",
   "note": null
  },
@@ -340,7 +340,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": true,
   "width": 960,
   "height": 1280,
-  "credit": "Agent",
+  "credit": "LTK member",
   "date": "2025-01-21",
   "note": null
  },
@@ -354,7 +354,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": true,
   "width": 1280,
   "height": 960,
-  "credit": "LTK",
+  "credit": "LTK member",
   "date": "2025-02-03",
   "note": null
  },
@@ -368,7 +368,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Jeff",
+  "credit": "LTK member",
   "date": "2025-11-06",
   "note": null
  },
@@ -382,7 +382,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Isaac",
+  "credit": "LTK member",
   "date": "2025-11-06",
   "note": null
  },
@@ -396,7 +396,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Isaac",
+  "credit": "LTK member",
   "date": "2025-11-15",
   "note": null
  },
@@ -410,7 +410,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 941,
   "height": 807,
-  "credit": "ThatTrapperGuy",
+  "credit": "LTK member",
   "date": "2026-03-09",
   "note": null
  },
@@ -424,7 +424,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": true,
   "width": 1138,
   "height": 1280,
-  "credit": "Ty",
+  "credit": "LTK member",
   "date": "2026-05-26",
   "note": null
  },
@@ -438,7 +438,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "ThatTrapperGuy",
+  "credit": "LTK member",
   "date": "2026-07-01",
   "note": null
  },
@@ -452,7 +452,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": true,
   "width": 960,
   "height": 1280,
-  "credit": "Oransofaraway",
+  "credit": "LTK member",
   "date": "2025-01-07",
   "note": null
  },
@@ -466,7 +466,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Oransofaraway",
+  "credit": "LTK member",
   "date": "2025-01-07",
   "note": null
  },
@@ -480,7 +480,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "frenchboi4056",
+  "credit": "LTK member",
   "date": "2025-09-04",
   "note": null
  },
@@ -494,7 +494,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "frenchboi4056",
+  "credit": "LTK member",
   "date": "2025-09-04",
   "note": null
  },
@@ -508,7 +508,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Guy",
+  "credit": "LTK member",
   "date": "2025-11-10",
   "note": null
  },
@@ -522,7 +522,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Guy",
+  "credit": "LTK member",
   "date": "2025-11-10",
   "note": null
  },
@@ -536,7 +536,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Guy",
+  "credit": "LTK member",
   "date": "2025-11-10",
   "note": null
  },
@@ -550,7 +550,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Guy",
+  "credit": "LTK member",
   "date": "2025-11-10",
   "note": null
  },
@@ -564,7 +564,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Ty",
+  "credit": "LTK member",
   "date": "2025-12-03",
   "note": null
  },
@@ -578,7 +578,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": true,
   "width": 960,
   "height": 1280,
-  "credit": "Ty",
+  "credit": "LTK member",
   "date": "2025-12-03",
   "note": null
  },
@@ -592,7 +592,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Senior",
+  "credit": "LTK member",
   "date": "2026-05-26",
   "note": null
  },
@@ -606,7 +606,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Senior",
+  "credit": "LTK member",
   "date": "2026-05-26",
   "note": null
  },
@@ -620,7 +620,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Senior",
+  "credit": "LTK member",
   "date": "2026-05-26",
   "note": null
  },
@@ -634,7 +634,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Lady",
+  "credit": "LTK member",
   "date": "2026-08-19",
   "note": null
  },
@@ -648,7 +648,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": true,
   "width": 788,
   "height": 1280,
-  "credit": "Ty",
+  "credit": "LTK member",
   "date": "2026-09-20",
   "note": null
  },
@@ -662,7 +662,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 720,
   "height": 1280,
-  "credit": "Evanovitz",
+  "credit": "LTK member",
   "date": "2025-01-31",
   "note": null
  },
@@ -676,7 +676,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "LTK",
+  "credit": "LTK member",
   "date": "2025-05-21",
   "note": null
  },
@@ -690,7 +690,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Oransofaraway",
+  "credit": "LTK member",
   "date": "2025-07-17",
   "note": null
  },
@@ -704,7 +704,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": true,
   "width": 960,
   "height": 1280,
-  "credit": "Jeff",
+  "credit": "LTK member",
   "date": "2025-11-04",
   "note": null
  },
@@ -718,7 +718,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Ty",
+  "credit": "LTK member",
   "date": "2026-04-23",
   "note": null
  },
@@ -732,7 +732,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Ty",
+  "credit": "LTK member",
   "date": "2026-04-23",
   "note": null
  },
@@ -746,7 +746,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Ty",
+  "credit": "LTK member",
   "date": "2026-04-23",
   "note": null
  },
@@ -760,7 +760,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Guy",
+  "credit": "LTK member",
   "date": "2026-01-29",
   "note": null
  },
@@ -774,7 +774,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Guy",
+  "credit": "LTK member",
   "date": "2026-01-29",
   "note": null
  },
@@ -788,7 +788,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Guy",
+  "credit": "LTK member",
   "date": "2026-01-29",
   "note": null
  },
@@ -802,7 +802,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Guy",
+  "credit": "LTK member",
   "date": "2026-01-29",
   "note": null
  },
@@ -816,7 +816,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 964,
   "height": 1280,
-  "credit": "Kampfümel",
+  "credit": "LTK member",
   "date": "2026-01-28",
   "note": null
  },
@@ -830,7 +830,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 964,
   "height": 1280,
-  "credit": "Kampfümel",
+  "credit": "LTK member",
   "date": "2026-01-28",
   "note": null
  },
@@ -844,7 +844,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 964,
   "height": 1280,
-  "credit": "Kampfümel",
+  "credit": "LTK member",
   "date": "2026-01-28",
   "note": null
  },
@@ -858,7 +858,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 964,
   "height": 1280,
-  "credit": "Kampfümel",
+  "credit": "LTK member",
   "date": "2026-01-28",
   "note": null
  },
@@ -872,7 +872,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Guy",
+  "credit": "LTK member",
   "date": "2026-05-06",
   "note": null
  },
@@ -886,7 +886,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Guy",
+  "credit": "LTK member",
   "date": "2026-05-06",
   "note": null
  },
@@ -900,7 +900,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": true,
   "width": 960,
   "height": 1280,
-  "credit": "Guy",
+  "credit": "LTK member",
   "date": "2026-05-06",
   "note": null
  },
@@ -914,7 +914,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 1280,
   "height": 960,
-  "credit": "Ty",
+  "credit": "LTK member",
   "date": "2026-05-17",
   "note": null
  },
@@ -928,7 +928,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Ty",
+  "credit": "LTK member",
   "date": "2026-05-17",
   "note": null
  },
@@ -942,7 +942,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Ty",
+  "credit": "LTK member",
   "date": "2026-05-17",
   "note": null
  },
@@ -956,7 +956,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Aionwolf",
+  "credit": "LTK member",
   "date": "2025-06-22",
   "note": null
  },
@@ -970,7 +970,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": true,
   "width": 1280,
   "height": 960,
-  "credit": "LTK",
+  "credit": "LTK member",
   "date": "2026-05-03",
   "note": null
  },
@@ -984,7 +984,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": true,
   "width": 1280,
   "height": 960,
-  "credit": "Isaac",
+  "credit": "LTK member",
   "date": "2026-05-07",
   "note": null
  },
@@ -998,7 +998,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": true,
   "width": 960,
   "height": 1280,
-  "credit": "Supreme",
+  "credit": "LTK member",
   "date": "2025-02-14",
   "note": null
  },
@@ -1012,7 +1012,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": true,
   "width": 960,
   "height": 1280,
-  "credit": "Supreme",
+  "credit": "LTK member",
   "date": "2025-02-19",
   "note": null
  },
@@ -1026,7 +1026,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Supreme",
+  "credit": "LTK member",
   "date": "2025-02-19",
   "note": null
  },
@@ -1040,7 +1040,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": true,
   "width": 960,
   "height": 1280,
-  "credit": "Supreme",
+  "credit": "LTK member",
   "date": "2025-03-11",
   "note": null
  },
@@ -1054,7 +1054,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Supreme",
+  "credit": "LTK member",
   "date": "2025-03-11",
   "note": null
  },
@@ -1068,7 +1068,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Supreme",
+  "credit": "LTK member",
   "date": "2025-03-20",
   "note": null
  },
@@ -1082,7 +1082,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Supreme",
+  "credit": "LTK member",
   "date": "2025-03-20",
   "note": null
  },
@@ -1096,7 +1096,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Supreme",
+  "credit": "LTK member",
   "date": "2025-10-03",
   "note": null
  },
@@ -1110,7 +1110,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 1280,
   "height": 960,
-  "credit": "Supreme",
+  "credit": "LTK member",
   "date": "2025-10-03",
   "note": null
  },
@@ -1124,7 +1124,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Supreme",
+  "credit": "LTK member",
   "date": "2025-10-29",
   "note": null
  },
@@ -1138,7 +1138,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": true,
   "width": 960,
   "height": 1280,
-  "credit": "Supreme",
+  "credit": "LTK member",
   "date": "2025-10-29",
   "note": null
  },
@@ -1152,7 +1152,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 720,
   "height": 1280,
-  "credit": "Tommythereaper",
+  "credit": "LTK member",
   "date": "2026-01-04",
   "note": null
  },
@@ -1166,7 +1166,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 720,
   "height": 1280,
-  "credit": "Tommythereaper",
+  "credit": "LTK member",
   "date": "2026-01-04",
   "note": null
  },
@@ -1180,7 +1180,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 720,
   "height": 1280,
-  "credit": "Tommythereaper",
+  "credit": "LTK member",
   "date": "2026-01-04",
   "note": null
  },
@@ -1194,7 +1194,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": true,
   "width": 720,
   "height": 1280,
-  "credit": "Tommythereaper",
+  "credit": "LTK member",
   "date": "2026-01-04",
   "note": null
  },
@@ -1208,7 +1208,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 720,
   "height": 1280,
-  "credit": "frenchboi4056",
+  "credit": "LTK member",
   "date": "2025-08-15",
   "note": null
  },
@@ -1222,7 +1222,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": true,
   "width": 1270,
   "height": 1280,
-  "credit": "Ty",
+  "credit": "LTK member",
   "date": "2026-05-23",
   "note": null
  },
@@ -1236,7 +1236,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 1280,
   "height": 720,
-  "credit": "DW",
+  "credit": "LTK member",
   "date": "2025-09-12",
   "note": null
  },
@@ -1250,7 +1250,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 1280,
   "height": 720,
-  "credit": "DW",
+  "credit": "LTK member",
   "date": "2025-09-12",
   "note": null
  },
@@ -1264,7 +1264,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": true,
   "width": 605,
   "height": 507,
-  "credit": "Łěğǐǒň",
+  "credit": "LTK member",
   "date": "2025-09-12",
   "note": null
  },
@@ -1278,7 +1278,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Ty",
+  "credit": "LTK member",
   "date": "2026-05-20",
   "note": null
  },
@@ -1292,7 +1292,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Ty",
+  "credit": "LTK member",
   "date": "2026-05-20",
   "note": null
  },
@@ -1306,7 +1306,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Ty",
+  "credit": "LTK member",
   "date": "2026-05-20",
   "note": null
  },
@@ -1320,7 +1320,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Ty",
+  "credit": "LTK member",
   "date": "2026-05-20",
   "note": null
  },
@@ -1334,7 +1334,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Ty",
+  "credit": "LTK member",
   "date": "2026-05-20",
   "note": null
  },
@@ -1348,7 +1348,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Ty",
+  "credit": "LTK member",
   "date": "2026-05-20",
   "note": null
  },
@@ -1362,7 +1362,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": true,
   "width": 960,
   "height": 1280,
-  "credit": "Ty",
+  "credit": "LTK member",
   "date": "2026-05-20",
   "note": null
  },
@@ -1376,7 +1376,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Ty",
+  "credit": "LTK member",
   "date": "2026-05-20",
   "note": null
  },
@@ -1390,7 +1390,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Ty",
+  "credit": "LTK member",
   "date": "2026-05-20",
   "note": null
  },
@@ -1404,7 +1404,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Saturniid",
+  "credit": "LTK member",
   "date": "2026-06-01",
   "note": null
  },
@@ -1418,7 +1418,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Saturniid",
+  "credit": "LTK member",
   "date": "2026-06-01",
   "note": null
  },
@@ -1432,7 +1432,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": true,
   "width": 1280,
   "height": 960,
-  "credit": "¢ђลž",
+  "credit": "LTK member",
   "date": "2025-05-01",
   "note": null
  },
@@ -1446,7 +1446,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 1280,
   "height": 960,
-  "credit": "¢ђลž",
+  "credit": "LTK member",
   "date": "2025-05-01",
   "note": null
  },
@@ -1460,7 +1460,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "¢ђลž",
+  "credit": "LTK member",
   "date": "2025-05-01",
   "note": null
  },
@@ -1474,7 +1474,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": true,
   "width": 960,
   "height": 1280,
-  "credit": "¢ђลž",
+  "credit": "LTK member",
   "date": "2025-05-01",
   "note": null
  },
@@ -1488,7 +1488,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Guy",
+  "credit": "LTK member",
   "date": "2025-07-12",
   "note": null
  },
@@ -1502,7 +1502,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Guy",
+  "credit": "LTK member",
   "date": "2025-07-12",
   "note": null
  },
@@ -1516,7 +1516,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 964,
   "height": 1280,
-  "credit": "Saturniid",
+  "credit": "LTK member",
   "date": "2025-06-23",
   "note": null
  },
@@ -1530,7 +1530,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": true,
   "width": 1161,
   "height": 1064,
-  "credit": "Isaac",
+  "credit": "LTK member",
   "date": "2026-03-25",
   "note": null
  },
@@ -1544,7 +1544,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Mune1615",
+  "credit": "LTK member",
   "date": "2025-06-24",
   "note": null
  },
@@ -1558,7 +1558,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Mune1615",
+  "credit": "LTK member",
   "date": "2025-06-24",
   "note": null
  },
@@ -1572,7 +1572,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": true,
   "width": 1280,
   "height": 960,
-  "credit": "Jeff",
+  "credit": "LTK member",
   "date": "2025-05-30",
   "note": null
  },
@@ -1586,7 +1586,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 1280,
   "height": 1253,
-  "credit": "Jeff",
+  "credit": "LTK member",
   "date": "2025-05-06",
   "note": null
  },
@@ -1600,7 +1600,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Jeff",
+  "credit": "LTK member",
   "date": "2025-05-06",
   "note": null
  },
@@ -1614,7 +1614,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Jeff",
+  "credit": "LTK member",
   "date": "2025-05-06",
   "note": null
  },
@@ -1628,7 +1628,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": true,
   "width": 1280,
   "height": 964,
-  "credit": "Saturniid",
+  "credit": "LTK member",
   "date": "2026-01-16",
   "note": null
  },
@@ -1642,7 +1642,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "frenchboi4056",
+  "credit": "LTK member",
   "date": "2025-08-11",
   "note": null
  },
@@ -1656,7 +1656,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": true,
   "width": 960,
   "height": 1280,
-  "credit": "LTK",
+  "credit": "LTK member",
   "date": "2025-10-26",
   "note": null
  },
@@ -1670,7 +1670,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "LTK",
+  "credit": "LTK member",
   "date": "2025-10-26",
   "note": null
  },
@@ -1684,7 +1684,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "LTK",
+  "credit": "LTK member",
   "date": "2025-10-29",
   "note": null
  },
@@ -1698,7 +1698,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Guy",
+  "credit": "LTK member",
   "date": "2026-01-13",
   "note": null
  },
@@ -1712,7 +1712,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Guy",
+  "credit": "LTK member",
   "date": "2026-01-13",
   "note": null
  },
@@ -1726,7 +1726,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": true,
   "width": 960,
   "height": 1280,
-  "credit": "Guy",
+  "credit": "LTK member",
   "date": "2026-01-13",
   "note": null
  },
@@ -1740,7 +1740,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Guy",
+  "credit": "LTK member",
   "date": "2026-01-13",
   "note": null
  },
@@ -1754,7 +1754,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Guy",
+  "credit": "LTK member",
   "date": "2026-01-13",
   "note": null
  },
@@ -1768,7 +1768,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Guy",
+  "credit": "LTK member",
   "date": "2026-01-13",
   "note": null
  },
@@ -1782,7 +1782,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Guy",
+  "credit": "LTK member",
   "date": "2026-01-13",
   "note": null
  },
@@ -1796,7 +1796,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 959,
   "height": 1280,
-  "credit": "ThatTrapperGuy",
+  "credit": "LTK member",
   "date": "2026-02-17",
   "note": null
  },
@@ -1810,7 +1810,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 959,
   "height": 1280,
-  "credit": "ThatTrapperGuy",
+  "credit": "LTK member",
   "date": "2026-02-17",
   "note": null
  },
@@ -1824,7 +1824,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 1063,
   "height": 1280,
-  "credit": "Isaac",
+  "credit": "LTK member",
   "date": "2026-05-21",
   "note": null
  },
@@ -1838,7 +1838,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 720,
   "height": 1280,
-  "credit": "Lady",
+  "credit": "LTK member",
   "date": "2026-05-30",
   "note": null
  },
@@ -1852,7 +1852,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 720,
   "height": 1280,
-  "credit": "Lady",
+  "credit": "LTK member",
   "date": "2026-05-30",
   "note": null
  },
@@ -1866,7 +1866,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Guy",
+  "credit": "LTK member",
   "date": "2026-06-26",
   "note": null
  },
@@ -1880,7 +1880,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Guy",
+  "credit": "LTK member",
   "date": "2026-06-26",
   "note": null
  },
@@ -1894,7 +1894,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": true,
   "width": 960,
   "height": 1280,
-  "credit": "Guy",
+  "credit": "LTK member",
   "date": "2026-06-26",
   "note": null
  },
@@ -1908,7 +1908,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Guy",
+  "credit": "LTK member",
   "date": "2026-06-26",
   "note": null
  },
@@ -1922,7 +1922,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Guy",
+  "credit": "LTK member",
   "date": "2026-06-26",
   "note": null
  },
@@ -1936,7 +1936,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Guy",
+  "credit": "LTK member",
   "date": "2026-06-26",
   "note": null
  },
@@ -1950,7 +1950,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Guy",
+  "credit": "LTK member",
   "date": "2026-06-26",
   "note": null
  },
@@ -1964,7 +1964,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Guy",
+  "credit": "LTK member",
   "date": "2026-06-26",
   "note": null
  },
@@ -1978,7 +1978,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": true,
   "width": 960,
   "height": 1280,
-  "credit": "Kywon",
+  "credit": "LTK member",
   "date": "2025-01-14",
   "note": null
  },
@@ -1992,7 +1992,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": true,
   "width": 1280,
   "height": 721,
-  "credit": "Vulkans",
+  "credit": "LTK member",
   "date": "2026-06-15",
   "note": null
  },
@@ -2006,7 +2006,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 721,
   "height": 1280,
-  "credit": "Vulkans",
+  "credit": "LTK member",
   "date": "2026-06-15",
   "note": null
  },
@@ -2020,7 +2020,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 721,
   "height": 1280,
-  "credit": "Vulkans",
+  "credit": "LTK member",
   "date": "2026-06-15",
   "note": null
  },
@@ -2034,7 +2034,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 1141,
   "height": 1036,
-  "credit": "Evanovitz",
+  "credit": "LTK member",
   "date": "2025-02-04",
   "note": null
  },
@@ -2048,7 +2048,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Oransofaraway",
+  "credit": "LTK member",
   "date": "2025-02-05",
   "note": null
  },
@@ -2062,7 +2062,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Guy",
+  "credit": "LTK member",
   "date": "2025-06-11",
   "note": null
  },
@@ -2076,7 +2076,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Guy",
+  "credit": "LTK member",
   "date": "2025-06-11",
   "note": null
  },
@@ -2090,7 +2090,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "LTK",
+  "credit": "LTK member",
   "date": "2025-10-17",
   "note": null
  },
@@ -2104,7 +2104,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": true,
   "width": 1280,
   "height": 960,
-  "credit": "LTK",
+  "credit": "LTK member",
   "date": "2025-10-17",
   "note": null
  },
@@ -2118,7 +2118,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 720,
   "height": 1280,
-  "credit": "Francis",
+  "credit": "LTK member",
   "date": "2025-10-17",
   "note": null
  },
@@ -2132,7 +2132,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "LTK",
+  "credit": "LTK member",
   "date": "2026-05-27",
   "note": null
  },
@@ -2146,7 +2146,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "LTK",
+  "credit": "LTK member",
   "date": "2026-05-27",
   "note": null
  },
@@ -2160,7 +2160,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": true,
   "width": 960,
   "height": 1280,
-  "credit": "BallisticEnigma",
+  "credit": "LTK member",
   "date": "2025-01-04",
   "note": null
  },
@@ -2174,7 +2174,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Agent",
+  "credit": "LTK member",
   "date": "2025-01-08",
   "note": null
  },
@@ -2188,7 +2188,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 1080,
   "height": 1250,
-  "credit": "sketchtheclown",
+  "credit": "LTK member",
   "date": "2025-03-07",
   "note": null
  },
@@ -2202,7 +2202,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": true,
   "width": 1280,
   "height": 961,
-  "credit": "Kampfümel",
+  "credit": "LTK member",
   "date": "2025-03-19",
   "note": null
  },
@@ -2216,7 +2216,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "BallisticEnigma",
+  "credit": "LTK member",
   "date": "2025-04-15",
   "note": null
  },
@@ -2230,7 +2230,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "TAiNT",
+  "credit": "LTK member",
   "date": "2025-05-06",
   "note": null
  },
@@ -2244,7 +2244,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Grateful",
+  "credit": "LTK member",
   "date": "2025-11-24",
   "note": null
  },
@@ -2258,7 +2258,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "BugMan33",
+  "credit": "LTK member",
   "date": "2025-11-25",
   "note": null
  },
@@ -2272,7 +2272,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "VɆⱤ₮Ɇ฿Ɽ₳₭ɆⱤ",
+  "credit": "LTK member",
   "date": "2025-11-25",
   "note": null
  },
@@ -2286,7 +2286,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 592,
   "height": 1280,
-  "credit": "Tommythereaper",
+  "credit": "LTK member",
   "date": "2025-11-30",
   "note": null
  },
@@ -2300,7 +2300,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": true,
   "width": 960,
   "height": 1280,
-  "credit": "frenchboi4056",
+  "credit": "LTK member",
   "date": "2026-05-27",
   "note": null
  },
@@ -2314,7 +2314,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": true,
   "width": 960,
   "height": 1280,
-  "credit": "LTK",
+  "credit": "LTK member",
   "date": "2025-02-14",
   "note": null
  },
@@ -2328,7 +2328,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "LTK",
+  "credit": "LTK member",
   "date": "2025-02-14",
   "note": null
  },
@@ -2342,7 +2342,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 1280,
   "height": 960,
-  "credit": "LTK",
+  "credit": "LTK member",
   "date": "2025-02-14",
   "note": null
  },
@@ -2356,7 +2356,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "LTK",
+  "credit": "LTK member",
   "date": "2025-02-14",
   "note": null
  },
@@ -2370,7 +2370,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "LTK",
+  "credit": "LTK member",
   "date": "2025-02-14",
   "note": null
  },
@@ -2384,7 +2384,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "LTK",
+  "credit": "LTK member",
   "date": "2025-02-14",
   "note": null
  },
@@ -2398,7 +2398,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "LTK",
+  "credit": "LTK member",
   "date": "2025-02-14",
   "note": null
  },
@@ -2412,7 +2412,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 480,
   "height": 640,
-  "credit": "Samo",
+  "credit": "LTK member",
   "date": "2025-02-15",
   "note": null
  },
@@ -2426,7 +2426,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 800,
   "height": 600,
-  "credit": "Samo",
+  "credit": "LTK member",
   "date": "2025-02-15",
   "note": null
  },
@@ -2440,7 +2440,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 360,
   "height": 480,
-  "credit": "Samo",
+  "credit": "LTK member",
   "date": "2025-02-15",
   "note": null
  },
@@ -2454,7 +2454,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 800,
   "height": 600,
-  "credit": "Samo",
+  "credit": "LTK member",
   "date": "2025-02-15",
   "note": null
  },
@@ -2468,7 +2468,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 640,
   "height": 480,
-  "credit": "Samo",
+  "credit": "LTK member",
   "date": "2025-02-15",
   "note": null
  },
@@ -2482,7 +2482,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": true,
   "width": 960,
   "height": 1280,
-  "credit": "LTK",
+  "credit": "LTK member",
   "date": "2025-03-14",
   "note": null
  },
@@ -2496,7 +2496,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": true,
   "width": 960,
   "height": 1280,
-  "credit": "BallisticEnigma",
+  "credit": "LTK member",
   "date": "2025-03-14",
   "note": null
  },
@@ -2510,7 +2510,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Jeff",
+  "credit": "LTK member",
   "date": "2025-05-13",
   "note": null
  },
@@ -2524,7 +2524,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 1080,
   "height": 1017,
-  "credit": "Jeff",
+  "credit": "LTK member",
   "date": "2025-05-13",
   "note": null
  },
@@ -2538,7 +2538,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Oransofaraway",
+  "credit": "LTK member",
   "date": "2025-05-15",
   "note": null
  },
@@ -2552,7 +2552,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Oransofaraway",
+  "credit": "LTK member",
   "date": "2025-05-15",
   "note": null
  },
@@ -2566,7 +2566,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": true,
   "width": 960,
   "height": 1280,
-  "credit": "Jeff",
+  "credit": "LTK member",
   "date": "2025-05-19",
   "note": null
  },
@@ -2580,7 +2580,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Oransofaraway",
+  "credit": "LTK member",
   "date": "2025-05-19",
   "note": null
  },
@@ -2594,7 +2594,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Ty",
+  "credit": "LTK member",
   "date": "2025-08-11",
   "note": null
  },
@@ -2608,7 +2608,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "LTK",
+  "credit": "LTK member",
   "date": "2026-05-27",
   "note": null
  },
@@ -2622,7 +2622,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Łěğǐǒň",
+  "credit": "LTK member",
   "date": "2025-01-14",
   "note": null
  },
@@ -2636,7 +2636,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Ian",
+  "credit": "LTK member",
   "date": "2026-01-30",
   "note": null
  },
@@ -2650,7 +2650,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": true,
   "width": 960,
   "height": 1280,
-  "credit": "Ian",
+  "credit": "LTK member",
   "date": "2026-01-30",
   "note": null
  },
@@ -2664,7 +2664,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Ian",
+  "credit": "LTK member",
   "date": "2026-01-30",
   "note": null
  },
@@ -2678,7 +2678,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 1280,
   "height": 960,
-  "credit": "Ian",
+  "credit": "LTK member",
   "date": "2026-01-30",
   "note": null
  },
@@ -2692,7 +2692,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 1280,
   "height": 960,
-  "credit": "Ian",
+  "credit": "LTK member",
   "date": "2026-01-30",
   "note": null
  },
@@ -2706,7 +2706,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": true,
   "width": 960,
   "height": 1280,
-  "credit": "LTK",
+  "credit": "LTK member",
   "date": "2026-09-03",
   "note": null
  },
@@ -2720,7 +2720,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "LTK",
+  "credit": "LTK member",
   "date": "2026-09-03",
   "note": null
  },
@@ -2734,7 +2734,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 1280,
   "height": 960,
-  "credit": "LTK",
+  "credit": "LTK member",
   "date": "2026-09-03",
   "note": null
  },
@@ -2748,7 +2748,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Ian",
+  "credit": "LTK member",
   "date": "2026-09-03",
   "note": null
  },
@@ -2762,7 +2762,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 1280,
   "height": 721,
-  "credit": "Vulkans",
+  "credit": "LTK member",
   "date": "2026-03-24",
   "note": null
  },
@@ -2776,7 +2776,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 1280,
   "height": 721,
-  "credit": "Vulkans",
+  "credit": "LTK member",
   "date": "2026-03-24",
   "note": null
  },
@@ -2790,7 +2790,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Vakko",
+  "credit": "LTK member",
   "date": "2025-03-03",
   "note": null
  },
@@ -2804,7 +2804,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Vakko",
+  "credit": "LTK member",
   "date": "2025-03-03",
   "note": null
  },
@@ -2818,7 +2818,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Vakko",
+  "credit": "LTK member",
   "date": "2025-03-03",
   "note": null
  },
@@ -2832,7 +2832,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Vakko",
+  "credit": "LTK member",
   "date": "2025-03-03",
   "note": null
  },
@@ -2846,7 +2846,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Vakko",
+  "credit": "LTK member",
   "date": "2025-03-03",
   "note": null
  },
@@ -2860,7 +2860,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 768,
   "height": 1024,
-  "credit": "Vakko",
+  "credit": "LTK member",
   "date": "2025-03-03",
   "note": null
  },
@@ -2874,7 +2874,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Vakko",
+  "credit": "LTK member",
   "date": "2025-03-03",
   "note": null
  },
@@ -2888,7 +2888,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Vakko",
+  "credit": "LTK member",
   "date": "2025-03-03",
   "note": null
  },
@@ -2902,7 +2902,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": true,
   "width": 960,
   "height": 1280,
-  "credit": "SasquatchPCTX",
+  "credit": "LTK member",
   "date": "2026-03-04",
   "note": null
  },
@@ -2916,7 +2916,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": true,
   "width": 960,
   "height": 1280,
-  "credit": "SasquatchPCTX",
+  "credit": "LTK member",
   "date": "2026-03-04",
   "note": null
  },
@@ -2930,7 +2930,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "SasquatchPCTX",
+  "credit": "LTK member",
   "date": "2026-03-04",
   "note": null
  },
@@ -2944,7 +2944,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "SasquatchPCTX",
+  "credit": "LTK member",
   "date": "2026-03-04",
   "note": null
  },
@@ -2958,7 +2958,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": true,
   "width": 960,
   "height": 1280,
-  "credit": "LTK",
+  "credit": "LTK member",
   "date": "2026-03-10",
   "note": null
  },
@@ -2972,7 +2972,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Isaac",
+  "credit": "LTK member",
   "date": "2026-03-14",
   "note": null
  },
@@ -2986,7 +2986,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Isaac",
+  "credit": "LTK member",
   "date": "2026-03-14",
   "note": null
  },
@@ -3000,7 +3000,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Isaac",
+  "credit": "LTK member",
   "date": "2026-03-14",
   "note": null
  },
@@ -3014,7 +3014,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Isaac",
+  "credit": "LTK member",
   "date": "2026-03-14",
   "note": null
  },
@@ -3028,7 +3028,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": true,
   "width": 960,
   "height": 1280,
-  "credit": "Isaac",
+  "credit": "LTK member",
   "date": "2026-03-14",
   "note": null
  },
@@ -3042,7 +3042,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Isaac",
+  "credit": "LTK member",
   "date": "2026-03-14",
   "note": null
  },
@@ -3056,7 +3056,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Isaac",
+  "credit": "LTK member",
   "date": "2026-03-14",
   "note": null
  },
@@ -3070,7 +3070,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": true,
   "width": 960,
   "height": 1280,
-  "credit": "Isaac",
+  "credit": "LTK member",
   "date": "2026-03-14",
   "note": null
  },
@@ -3084,7 +3084,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 589,
   "height": 786,
-  "credit": "Greg",
+  "credit": "LTK member",
   "date": "2026-03-14",
   "note": null
  },
@@ -3098,7 +3098,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 589,
   "height": 786,
-  "credit": "Greg",
+  "credit": "LTK member",
   "date": "2026-03-14",
   "note": null
  },
@@ -3112,7 +3112,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 589,
   "height": 786,
-  "credit": "Greg",
+  "credit": "LTK member",
   "date": "2026-03-14",
   "note": null
  },
@@ -3126,7 +3126,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 589,
   "height": 772,
-  "credit": "Greg",
+  "credit": "LTK member",
   "date": "2026-03-14",
   "note": null
  },
@@ -3140,7 +3140,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": true,
   "width": 960,
   "height": 1280,
-  "credit": "LTK",
+  "credit": "LTK member",
   "date": "2025-01-14",
   "note": null
  },
@@ -3154,7 +3154,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "LTK",
+  "credit": "LTK member",
   "date": "2025-01-14",
   "note": null
  },
@@ -3168,7 +3168,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "LTK",
+  "credit": "LTK member",
   "date": "2025-01-14",
   "note": null
  },
@@ -3182,7 +3182,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "LTK",
+  "credit": "LTK member",
   "date": "2025-01-14",
   "note": null
  },
@@ -3196,7 +3196,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 1280,
   "height": 960,
-  "credit": "LTK",
+  "credit": "LTK member",
   "date": "2025-01-14",
   "note": null
  },
@@ -3210,7 +3210,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Vakko",
+  "credit": "LTK member",
   "date": "2025-01-24",
   "note": null
  },
@@ -3224,7 +3224,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 768,
   "height": 1024,
-  "credit": "Vakko",
+  "credit": "LTK member",
   "date": "2025-01-24",
   "note": null
  },
@@ -3238,7 +3238,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Vakko",
+  "credit": "LTK member",
   "date": "2025-01-24",
   "note": null
  },
@@ -3252,7 +3252,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Vakko",
+  "credit": "LTK member",
   "date": "2025-01-24",
   "note": null
  },
@@ -3266,7 +3266,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Vakko",
+  "credit": "LTK member",
   "date": "2025-01-24",
   "note": null
  },
@@ -3280,7 +3280,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": true,
   "width": 1280,
   "height": 960,
-  "credit": "Francis",
+  "credit": "LTK member",
   "date": "2025-03-26",
   "note": null
  },
@@ -3294,7 +3294,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": true,
   "width": 1280,
   "height": 960,
-  "credit": "barkingowl",
+  "credit": "LTK member",
   "date": "2025-04-04",
   "note": null
  },
@@ -3308,7 +3308,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Jeff",
+  "credit": "LTK member",
   "date": "2025-05-07",
   "note": null
  },
@@ -3322,7 +3322,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "barkingowl",
+  "credit": "LTK member",
   "date": "2025-10-31",
   "note": null
  },
@@ -3336,7 +3336,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 1280,
   "height": 960,
-  "credit": "Oransofaraway",
+  "credit": "LTK member",
   "date": "2025-05-12",
   "note": null
  },
@@ -3350,7 +3350,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 1280,
   "height": 964,
-  "credit": "Ian",
+  "credit": "LTK member",
   "date": "2025-05-13",
   "note": null
  },
@@ -3364,7 +3364,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Ian",
+  "credit": "LTK member",
   "date": "2025-05-13",
   "note": null
  },
@@ -3378,7 +3378,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 1280,
   "height": 960,
-  "credit": "Ian",
+  "credit": "LTK member",
   "date": "2025-05-13",
   "note": null
  },
@@ -3392,7 +3392,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Ian",
+  "credit": "LTK member",
   "date": "2025-05-13",
   "note": null
  },
@@ -3406,7 +3406,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 1280,
   "height": 960,
-  "credit": "Ian",
+  "credit": "LTK member",
   "date": "2025-05-13",
   "note": null
  },
@@ -3420,7 +3420,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 1280,
   "height": 960,
-  "credit": "Ian",
+  "credit": "LTK member",
   "date": "2025-05-13",
   "note": null
  },
@@ -3434,7 +3434,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Ian",
+  "credit": "LTK member",
   "date": "2025-05-13",
   "note": null
  },
@@ -3448,7 +3448,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": true,
   "width": 1280,
   "height": 964,
-  "credit": "Ian",
+  "credit": "LTK member",
   "date": "2025-05-13",
   "note": null
  },
@@ -3462,7 +3462,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Agent",
+  "credit": "LTK member",
   "date": "2025-03-27",
   "note": null
  },
@@ -3476,7 +3476,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": true,
   "width": 960,
   "height": 1280,
-  "credit": "Doc",
+  "credit": "LTK member",
   "date": "2026-01-13",
   "note": null
  },
@@ -3490,7 +3490,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "MrShadyKills",
+  "credit": "LTK member",
   "date": "2026-03-04",
   "note": null
  },
@@ -3504,7 +3504,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": true,
   "width": 1280,
   "height": 960,
-  "credit": "Cosmicjello",
+  "credit": "LTK member",
   "date": "2026-03-05",
   "note": null
  },
@@ -3518,7 +3518,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Cosmicjello",
+  "credit": "LTK member",
   "date": "2026-07-16",
   "note": null
  },
@@ -3532,7 +3532,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 961,
   "height": 1280,
-  "credit": "Deleted",
+  "credit": "LTK member",
   "date": "2025-03-21",
   "note": null
  },
@@ -3546,7 +3546,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": true,
   "width": 960,
   "height": 1280,
-  "credit": "Oransofaraway",
+  "credit": "LTK member",
   "date": "2025-01-10",
   "note": null
  },
@@ -3560,7 +3560,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Kora",
+  "credit": "LTK member",
   "date": "2025-01-11",
   "note": null
  },
@@ -3574,7 +3574,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Łěğǐǒň",
+  "credit": "LTK member",
   "date": "2025-01-23",
   "note": null
  },
@@ -3588,7 +3588,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Łěğǐǒň",
+  "credit": "LTK member",
   "date": "2025-01-23",
   "note": null
  },
@@ -3602,7 +3602,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": true,
   "width": 960,
   "height": 1280,
-  "credit": "Ian",
+  "credit": "LTK member",
   "date": "2025-03-06",
   "note": null
  },
@@ -3616,7 +3616,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": true,
   "width": 960,
   "height": 1280,
-  "credit": "BallisticEnigma",
+  "credit": "LTK member",
   "date": "2025-03-14",
   "note": null
  },
@@ -3630,7 +3630,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Jeff",
+  "credit": "LTK member",
   "date": "2025-04-18",
   "note": null
  },
@@ -3644,7 +3644,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Łěğǐǒň",
+  "credit": "LTK member",
   "date": "2025-05-23",
   "note": null
  },
@@ -3658,7 +3658,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Trey",
+  "credit": "LTK member",
   "date": "2025-05-29",
   "note": null
  },
@@ -3672,7 +3672,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": true,
   "width": 960,
   "height": 1280,
-  "credit": "Trey",
+  "credit": "LTK member",
   "date": "2025-05-29",
   "note": null
  },
@@ -3686,7 +3686,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Łěğǐǒň",
+  "credit": "LTK member",
   "date": "2025-07-01",
   "note": null
  },
@@ -3700,7 +3700,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Łěğǐǒň",
+  "credit": "LTK member",
   "date": "2025-10-20",
   "note": null
  },
@@ -3714,7 +3714,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Łěğǐǒň",
+  "credit": "LTK member",
   "date": "2025-10-20",
   "note": null
  },
@@ -3728,7 +3728,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": true,
   "width": 960,
   "height": 1280,
-  "credit": "Greg",
+  "credit": "LTK member",
   "date": "2026-03-26",
   "note": null
  },
@@ -3742,7 +3742,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 1280,
   "height": 960,
-  "credit": "Greg",
+  "credit": "LTK member",
   "date": "2026-03-26",
   "note": null
  },
@@ -3756,7 +3756,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": true,
   "width": 960,
   "height": 1280,
-  "credit": "Greg",
+  "credit": "LTK member",
   "date": "2026-04-03",
   "note": null
  },
@@ -3770,7 +3770,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Greg",
+  "credit": "LTK member",
   "date": "2026-04-09",
   "note": null
  },
@@ -3784,7 +3784,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": true,
   "width": 960,
   "height": 1280,
-  "credit": "Jeff",
+  "credit": "LTK member",
   "date": "2026-04-13",
   "note": null
  },
@@ -3798,7 +3798,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Greg",
+  "credit": "LTK member",
   "date": "2026-04-13",
   "note": null
  },
@@ -3812,7 +3812,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": false,
   "width": 960,
   "height": 1280,
-  "credit": "Greg",
+  "credit": "LTK member",
   "date": "2026-09-21",
   "note": null
  },
@@ -3826,7 +3826,7 @@ export const COMMUNITY_PHOTOS: CommunityPhoto[] = [
   "featured": true,
   "width": 1280,
   "height": 960,
-  "credit": "Greg",
+  "credit": "LTK member",
   "date": "2026-09-23",
   "note": null
  }

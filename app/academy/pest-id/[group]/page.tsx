@@ -96,7 +96,7 @@ export default async function PestGroupPage({ params }: { params: Promise<{ grou
                   </div>
                   <div className="py-4 pl-[1.35rem] pr-5 text-[0.9375rem] leading-relaxed text-ink">
                     <p>{n.body}</p>
-                    <p className="mt-2 text-xs text-ink3">Confirmed in the {site.discord.name} by {n.who}</p>
+                    <p className="mt-2 text-xs text-ink3">Confirmed in the {site.discord.name} &middot; {n.who}</p>
                   </div>
                 </li>
               ))}
