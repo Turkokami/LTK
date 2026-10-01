@@ -19,8 +19,8 @@ export type PracticeExamQuestion = {
   }>;
   correctOptionId: "a" | "b" | "c";
   answerText: string;
-  /** Added with the 2026-10 expansion; older questions have none. */
-  difficulty?: "recall" | "id" | "applied";
+  /** recall = Easy, id = Medium, applied = Hard on the practice test. */
+  difficulty: "recall" | "id" | "applied";
 };
 
 export type PracticeExamChapter = {
@@ -55,7 +55,8 @@ export const acePracticeExamChapters: PracticeExamChapter[] = [
           }
         ],
         "correctOptionId": "b",
-        "answerText": "3 pairs (6 legs). This is one of the defining characteristics of insects (class Insecta)."
+        "answerText": "3 pairs (6 legs). This is one of the defining characteristics of insects (class Insecta).",
+        "difficulty": "recall"
       },
       {
         "id": "ace-1-q2",
@@ -75,7 +76,8 @@ export const acePracticeExamChapters: PracticeExamChapter[] = [
           }
         ],
         "correctOptionId": "b",
-        "answerText": "Complete metamorphosis (egg, larva, pupa, adult). Fleas are in Order Siphonaptera, which undergoes complete metamorphosis."
+        "answerText": "Complete metamorphosis (egg, larva, pupa, adult). Fleas are in Order Siphonaptera, which undergoes complete metamorphosis.",
+        "difficulty": "recall"
       },
       {
         "id": "ace-1-q3",
@@ -95,7 +97,8 @@ export const acePracticeExamChapters: PracticeExamChapter[] = [
           }
         ],
         "correctOptionId": "b",
-        "answerText": "Absorbing/abrading the waxy cuticle. Desiccants kill through a physical mode of action — disrupting water balance by damaging the exoskeleton."
+        "answerText": "Absorbing/abrading the waxy cuticle. Desiccants kill through a physical mode of action — disrupting water balance by damaging the exoskeleton.",
+        "difficulty": "recall"
       },
       {
         "id": "ace-1-q4",
@@ -115,7 +118,8 @@ export const acePracticeExamChapters: PracticeExamChapter[] = [
           }
         ],
         "correctOptionId": "c",
-        "answerText": "Blattodea. Termites are now classified inside Blattodea too (they used to be their own order, Isoptera). Grasshoppers and crickets are Orthoptera; true bugs are Hemiptera."
+        "answerText": "Blattodea. Termites are now classified inside Blattodea too (they used to be their own order, Isoptera). Grasshoppers and crickets are Orthoptera; true bugs are Hemiptera.",
+        "difficulty": "id"
       },
       {
         "id": "ace-1-q5",
@@ -135,7 +139,8 @@ export const acePracticeExamChapters: PracticeExamChapter[] = [
           }
         ],
         "correctOptionId": "b",
-        "answerText": "The insect with piercing-sucking mouthparts cannot cause chewing damage. Mouthpart type determines damage type — chewing damage requires chewing mouthparts."
+        "answerText": "The insect with piercing-sucking mouthparts cannot cause chewing damage. Mouthpart type determines damage type — chewing damage requires chewing mouthparts.",
+        "difficulty": "applied"
       },
       {
         "id": "ace-1-q6",
@@ -582,7 +587,8 @@ export const acePracticeExamChapters: PracticeExamChapter[] = [
           }
         ],
         "correctOptionId": "b",
-        "answerText": "The pest level at which control action becomes necessary. Thresholds vary by pest and setting and do not mean zero tolerance."
+        "answerText": "The pest level at which control action becomes necessary. Thresholds vary by pest and setting and do not mean zero tolerance.",
+        "difficulty": "recall"
       },
       {
         "id": "ace-2-q2",
@@ -602,7 +608,8 @@ export const acePracticeExamChapters: PracticeExamChapter[] = [
           }
         ],
         "correctOptionId": "c",
-        "answerText": "Prevention and cultural controls. Chemical control sits at the top of the pyramid — the smallest section — meaning it should be used least, not most."
+        "answerText": "Prevention and cultural controls. Chemical control sits at the top of the pyramid — the smallest section — meaning it should be used least, not most.",
+        "difficulty": "recall"
       },
       {
         "id": "ace-2-q3",
@@ -622,7 +629,8 @@ export const acePracticeExamChapters: PracticeExamChapter[] = [
           }
         ],
         "correctOptionId": "b",
-        "answerText": "EPA and FDA/USDA. EPA registers pesticides; FDA and USDA regulate their use in food handling facilities. OSHA governs worker safety."
+        "answerText": "EPA and FDA/USDA. EPA registers pesticides; FDA and USDA regulate their use in food handling facilities. OSHA governs worker safety.",
+        "difficulty": "recall"
       },
       {
         "id": "ace-2-q4",
@@ -642,7 +650,8 @@ export const acePracticeExamChapters: PracticeExamChapter[] = [
           }
         ],
         "correctOptionId": "b",
-        "answerText": "Pheromone traps. These use insect-produced chemical signals (sex or aggregation pheromones) to attract and trap target pests."
+        "answerText": "Pheromone traps. These use insect-produced chemical signals (sex or aggregation pheromones) to attract and trap target pests.",
+        "difficulty": "recall"
       },
       {
         "id": "ace-2-q5",
@@ -662,7 +671,8 @@ export const acePracticeExamChapters: PracticeExamChapter[] = [
           }
         ],
         "correctOptionId": "a",
-        "answerText": "Any one of the three sides. Reducing any pest requisite — food, water, shelter, or the pest population itself — reduces the problem."
+        "answerText": "Any one of the three sides. Reducing any pest requisite — food, water, shelter, or the pest population itself — reduces the problem.",
+        "difficulty": "recall"
       },
       {
         "id": "ace-2-q6",
@@ -1109,7 +1119,8 @@ export const acePracticeExamChapters: PracticeExamChapter[] = [
           }
         ],
         "correctOptionId": "a",
-        "answerText": "Wettable powder. Its particles stay on top of porous surfaces like concrete and brick, where insects contact them. Solutions and solvent-based liquids tend to soak in, and space sprays leave little residual."
+        "answerText": "Wettable powder. Its particles stay on top of porous surfaces like concrete and brick, where insects contact them. Solutions and solvent-based liquids tend to soak in, and space sprays leave little residual.",
+        "difficulty": "applied"
       },
       {
         "id": "ace-3-q2",
@@ -1129,7 +1140,8 @@ export const acePracticeExamChapters: PracticeExamChapter[] = [
           }
         ],
         "correctOptionId": "a",
-        "answerText": "Resistance develops to how a product kills, not to its label. Two brands from the same IRAC group act the same way, so a real rotation moves to a different mode-of-action group."
+        "answerText": "Resistance develops to how a product kills, not to its label. Two brands from the same IRAC group act the same way, so a real rotation moves to a different mode-of-action group.",
+        "difficulty": "applied"
       },
       {
         "id": "ace-3-q3",
@@ -1149,7 +1161,8 @@ export const acePracticeExamChapters: PracticeExamChapter[] = [
           }
         ],
         "correctOptionId": "b",
-        "answerText": "Organophosphates. Carbamates also inhibit cholinesterase but do so reversibly — this reversibility is considered a relative safety improvement over OPs."
+        "answerText": "Organophosphates. Carbamates also inhibit cholinesterase but do so reversibly — this reversibility is considered a relative safety improvement over OPs.",
+        "difficulty": "recall"
       },
       {
         "id": "ace-3-q4",
@@ -1169,7 +1182,8 @@ export const acePracticeExamChapters: PracticeExamChapter[] = [
           }
         ],
         "correctOptionId": "b",
-        "answerText": "High reproductive rate + most of the population exposed. These conditions accelerate natural selection for resistant individuals."
+        "answerText": "High reproductive rate + most of the population exposed. These conditions accelerate natural selection for resistant individuals.",
+        "difficulty": "applied"
       },
       {
         "id": "ace-3-q5",
@@ -1189,7 +1203,8 @@ export const acePracticeExamChapters: PracticeExamChapter[] = [
           }
         ],
         "correctOptionId": "b",
-        "answerText": "Application into inaccessible cracks, crevices, or voids. Spot applications (not to exceed 2 sq ft) are a separate, distinct application type."
+        "answerText": "Application into inaccessible cracks, crevices, or voids. Spot applications (not to exceed 2 sq ft) are a separate, distinct application type.",
+        "difficulty": "recall"
       },
       {
         "id": "ace-3-q6",
@@ -1209,7 +1224,8 @@ export const acePracticeExamChapters: PracticeExamChapter[] = [
           }
         ],
         "correctOptionId": "b",
-        "answerText": "Improved residual and lower exposure risk. The polymer capsules slow release of the AI, extending residual and reducing direct contact exposure."
+        "answerText": "Improved residual and lower exposure risk. The polymer capsules slow release of the AI, extending residual and reducing direct contact exposure.",
+        "difficulty": "recall"
       },
       {
         "id": "ace-3-q7",
@@ -1656,7 +1672,8 @@ export const acePracticeExamChapters: PracticeExamChapter[] = [
           }
         ],
         "correctOptionId": "a",
-        "answerText": "The amount (mg/kg) needed to kill half the test population. Lower LD50 = more acutely toxic."
+        "answerText": "The amount (mg/kg) needed to kill half the test population. Lower LD50 = more acutely toxic.",
+        "difficulty": "recall"
       },
       {
         "id": "ace-4-q2",
@@ -1676,7 +1693,8 @@ export const acePracticeExamChapters: PracticeExamChapter[] = [
           }
         ],
         "correctOptionId": "b",
-        "answerText": "Class I — most acutely toxic. WARNING = Class II; CAUTION = Classes III and IV (least toxic)."
+        "answerText": "Class I — most acutely toxic. WARNING = Class II; CAUTION = Classes III and IV (least toxic).",
+        "difficulty": "recall"
       },
       {
         "id": "ace-4-q3",
@@ -1696,7 +1714,8 @@ export const acePracticeExamChapters: PracticeExamChapter[] = [
           }
         ],
         "correctOptionId": "b",
-        "answerText": "Reducing toxicity or reducing exposure. Hazard = Toxicity × Exposure — either variable can be reduced."
+        "answerText": "Reducing toxicity or reducing exposure. Hazard = Toxicity × Exposure — either variable can be reduced.",
+        "difficulty": "recall"
       },
       {
         "id": "ace-4-q4",
@@ -1716,7 +1735,8 @@ export const acePracticeExamChapters: PracticeExamChapter[] = [
           }
         ],
         "correctOptionId": "a",
-        "answerText": "Federal Insecticide, Fungicide, and Rodenticide Act. This is the primary US federal pesticide law, administered by the EPA."
+        "answerText": "Federal Insecticide, Fungicide, and Rodenticide Act. This is the primary US federal pesticide law, administered by the EPA.",
+        "difficulty": "recall"
       },
       {
         "id": "ace-4-q5",
@@ -1736,7 +1756,8 @@ export const acePracticeExamChapters: PracticeExamChapter[] = [
           }
         ],
         "correctOptionId": "b",
-        "answerText": "Teratogenicity. Carcinogenicity = cancer; oncogenicity = tumors; teratogenicity = birth defects from fetal exposure."
+        "answerText": "Teratogenicity. Carcinogenicity = cancer; oncogenicity = tumors; teratogenicity = birth defects from fetal exposure.",
+        "difficulty": "recall"
       },
       {
         "id": "ace-4-q6",
@@ -2183,7 +2204,8 @@ export const acePracticeExamChapters: PracticeExamChapter[] = [
           }
         ],
         "correctOptionId": "b",
-        "answerText": "American cockroach. It commonly lives in sewers and drain lines and enters buildings through floor drains. German cockroaches stay in warm, moist areas near food and water indoors, and brownbanded cockroaches favour warm, drier rooms away from water."
+        "answerText": "American cockroach. It commonly lives in sewers and drain lines and enters buildings through floor drains. German cockroaches stay in warm, moist areas near food and water indoors, and brownbanded cockroaches favour warm, drier rooms away from water.",
+        "difficulty": "applied"
       },
       {
         "id": "ace-5-q2",
@@ -2203,7 +2225,8 @@ export const acePracticeExamChapters: PracticeExamChapter[] = [
           }
         ],
         "correctOptionId": "a",
-        "answerText": "German cockroach females carry the ootheca protruding from the abdomen until shortly before hatching, which protects the eggs and is one reason populations grow so fast. Brownbanded females glue theirs to surfaces."
+        "answerText": "German cockroach females carry the ootheca protruding from the abdomen until shortly before hatching, which protects the eggs and is one reason populations grow so fast. Brownbanded females glue theirs to surfaces.",
+        "difficulty": "id"
       },
       {
         "id": "ace-5-q3",
@@ -2223,7 +2246,8 @@ export const acePracticeExamChapters: PracticeExamChapter[] = [
           }
         ],
         "correctOptionId": "b",
-        "answerText": "Brown-banded cockroach. Unlike German cockroaches (kitchen/bathroom focused), brown-banded cockroaches distribute throughout the entire structure."
+        "answerText": "Brown-banded cockroach. Unlike German cockroaches (kitchen/bathroom focused), brown-banded cockroaches distribute throughout the entire structure.",
+        "difficulty": "applied"
       },
       {
         "id": "ace-5-q4",
@@ -2243,7 +2267,8 @@ export const acePracticeExamChapters: PracticeExamChapter[] = [
           }
         ],
         "correctOptionId": "b",
-        "answerText": "Asthma. Cockroach allergens (proteins in frass, shed skins, saliva) are a leading asthma trigger among inner-city youth."
+        "answerText": "Asthma. Cockroach allergens (proteins in frass, shed skins, saliva) are a leading asthma trigger among inner-city youth.",
+        "difficulty": "recall"
       },
       {
         "id": "ace-5-q5",
@@ -2263,7 +2288,8 @@ export const acePracticeExamChapters: PracticeExamChapter[] = [
           }
         ],
         "correctOptionId": "b",
-        "answerText": "Remain close to crevices and feed on older cockroach feces (coprophagy). This behavior means fresh bait placements near feces face competition in early infestations."
+        "answerText": "Remain close to crevices and feed on older cockroach feces (coprophagy). This behavior means fresh bait placements near feces face competition in early infestations.",
+        "difficulty": "id"
       },
       {
         "id": "ace-5-q6",
@@ -2710,7 +2736,8 @@ export const acePracticeExamChapters: PracticeExamChapter[] = [
           }
         ],
         "correctOptionId": "b",
-        "answerText": "Budding. Pharaoh ants respond to stress by fragmenting colonies — repellent sprays trigger this response, creating more colonies. Baiting is the only appropriate control method."
+        "answerText": "Budding. Pharaoh ants respond to stress by fragmenting colonies — repellent sprays trigger this response, creating more colonies. Baiting is the only appropriate control method.",
+        "difficulty": "applied"
       },
       {
         "id": "ace-6-q2",
@@ -2730,7 +2757,8 @@ export const acePracticeExamChapters: PracticeExamChapter[] = [
           }
         ],
         "correctOptionId": "b",
-        "answerText": "Insect fragments, pupal cases, and sawdust. Termite frass does not contain these. Hexagonal pellets are characteristic of drywood termites."
+        "answerText": "Insect fragments, pupal cases, and sawdust. Termite frass does not contain these. Hexagonal pellets are characteristic of drywood termites.",
+        "difficulty": "id"
       },
       {
         "id": "ace-6-q3",
@@ -2750,7 +2778,8 @@ export const acePracticeExamChapters: PracticeExamChapter[] = [
           }
         ],
         "correctOptionId": "a",
-        "answerText": "Ants have a distinct waist (petiole) and elbowed antennae; termite swarmers have no waist constriction and straight antennae. Both have 6 legs."
+        "answerText": "Ants have a distinct waist (petiole) and elbowed antennae; termite swarmers have no waist constriction and straight antennae. Both have 6 legs.",
+        "difficulty": "id"
       },
       {
         "id": "ace-6-q4",
@@ -2770,7 +2799,8 @@ export const acePracticeExamChapters: PracticeExamChapter[] = [
           }
         ],
         "correctOptionId": "b",
-        "answerText": "Most ant species. Queens and males often look similar across species. Workers carry the diagnostic characters (node number, antennal club, polymorphism) needed for ID."
+        "answerText": "Most ant species. Queens and males often look similar across species. Workers carry the diagnostic characters (node number, antennal club, polymorphism) needed for ID.",
+        "difficulty": "id"
       },
       {
         "id": "ace-6-q5",
@@ -2790,7 +2820,8 @@ export const acePracticeExamChapters: PracticeExamChapter[] = [
           }
         ],
         "correctOptionId": "b",
-        "answerText": "Multiple queens and satellite nests. Odorous house ants (Tapinoma sessile) have polygynous colonies with multiple queens and extensive satellite nesting — eliminating one visible nest rarely eliminates the colony."
+        "answerText": "Multiple queens and satellite nests. Odorous house ants (Tapinoma sessile) have polygynous colonies with multiple queens and extensive satellite nesting — eliminating one visible nest rarely eliminates the colony.",
+        "difficulty": "applied"
       },
       {
         "id": "ace-6-q6",
@@ -3237,7 +3268,8 @@ export const acePracticeExamChapters: PracticeExamChapter[] = [
           }
         ],
         "correctOptionId": "a",
-        "answerText": "Blow flies breed in carcasses. A sudden indoor emergence usually means a dead animal inside the structure, so finding and removing the carcass is the fix."
+        "answerText": "Blow flies breed in carcasses. A sudden indoor emergence usually means a dead animal inside the structure, so finding and removing the carcass is the fix.",
+        "difficulty": "applied"
       },
       {
         "id": "ace-7-q2",
@@ -3257,7 +3289,8 @@ export const acePracticeExamChapters: PracticeExamChapter[] = [
           }
         ],
         "correctOptionId": "a",
-        "answerText": "Drain flies (family Psychodidae) breed in the gelatinous organic film inside drains. Cleaning the film out of the drain line is the main control step."
+        "answerText": "Drain flies (family Psychodidae) breed in the gelatinous organic film inside drains. Cleaning the film out of the drain line is the main control step.",
+        "difficulty": "applied"
       },
       {
         "id": "ace-7-q3",
@@ -3277,7 +3310,8 @@ export const acePracticeExamChapters: PracticeExamChapter[] = [
           }
         ],
         "correctOptionId": "b",
-        "answerText": "Stable fly. The stable fly is visually similar to a house fly but has piercing-sucking mouthparts — if it looks like a house fly but bites, it's a stable fly."
+        "answerText": "Stable fly. The stable fly is visually similar to a house fly but has piercing-sucking mouthparts — if it looks like a house fly but bites, it's a stable fly.",
+        "difficulty": "id"
       },
       {
         "id": "ace-7-q4",
@@ -3297,7 +3331,8 @@ export const acePracticeExamChapters: PracticeExamChapter[] = [
           }
         ],
         "correctOptionId": "b",
-        "answerText": "Outdoor parasites of earthworms that overwinter in structures. Cluster flies do not breed indoors or in filth."
+        "answerText": "Outdoor parasites of earthworms that overwinter in structures. Cluster flies do not breed indoors or in filth.",
+        "difficulty": "id"
       },
       {
         "id": "ace-7-q5",
@@ -3317,7 +3352,8 @@ export const acePracticeExamChapters: PracticeExamChapter[] = [
           }
         ],
         "correctOptionId": "b",
-        "answerText": "Eliminating the breeding source. Without source elimination, small fly populations regenerate continuously regardless of adult kill."
+        "answerText": "Eliminating the breeding source. Without source elimination, small fly populations regenerate continuously regardless of adult kill.",
+        "difficulty": "applied"
       },
       {
         "id": "ace-7-q6",
@@ -3764,7 +3800,8 @@ export const acePracticeExamChapters: PracticeExamChapter[] = [
           }
         ],
         "correctOptionId": "a",
-        "answerText": "Live bugs or viable eggs confirm activity. Bite reactions vary from person to person and can have other causes, and odor alone is not diagnostic."
+        "answerText": "Live bugs or viable eggs confirm activity. Bite reactions vary from person to person and can have other causes, and odor alone is not diagnostic.",
+        "difficulty": "applied"
       },
       {
         "id": "ace-8-q2",
@@ -3784,7 +3821,8 @@ export const acePracticeExamChapters: PracticeExamChapter[] = [
           }
         ],
         "correctOptionId": "b",
-        "answerText": "Lives in the environment feeding on organic debris including dried blood from adult flea feces. Only adult fleas live on the host."
+        "answerText": "Lives in the environment feeding on organic debris including dried blood from adult flea feces. Only adult fleas live on the host.",
+        "difficulty": "id"
       },
       {
         "id": "ace-8-q3",
@@ -3804,7 +3842,8 @@ export const acePracticeExamChapters: PracticeExamChapter[] = [
           }
         ],
         "correctOptionId": "b",
-        "answerText": "Black widow. It produces neurotoxic venom. Brown recluse produces necrotic venom. Hobo spider is not currently considered a medically significant species."
+        "answerText": "Black widow. It produces neurotoxic venom. Brown recluse produces necrotic venom. Hobo spider is not currently considered a medically significant species.",
+        "difficulty": "id"
       },
       {
         "id": "ace-8-q4",
@@ -3824,7 +3863,8 @@ export const acePracticeExamChapters: PracticeExamChapter[] = [
           }
         ],
         "correctOptionId": "c",
-        "answerText": "Black-legged deer tick (Ixodes scapularis). American dog tick vectors Rocky Mountain spotted fever; lone star tick vectors tularemia."
+        "answerText": "Black-legged deer tick (Ixodes scapularis). American dog tick vectors Rocky Mountain spotted fever; lone star tick vectors tularemia.",
+        "difficulty": "id"
       },
       {
         "id": "ace-8-q5",
@@ -3844,7 +3884,8 @@ export const acePracticeExamChapters: PracticeExamChapter[] = [
           }
         ],
         "correctOptionId": "b",
-        "answerText": "Comb melt and secondary infestations. Dead comb releases wax and honey, creating odors, structural damage, and drawing secondary pests — including cockroaches, carpet beetles, wax moths, and rodents."
+        "answerText": "Comb melt and secondary infestations. Dead comb releases wax and honey, creating odors, structural damage, and drawing secondary pests — including cockroaches, carpet beetles, wax moths, and rodents.",
+        "difficulty": "applied"
       },
       {
         "id": "ace-8-q6",
@@ -3864,7 +3905,8 @@ export const acePracticeExamChapters: PracticeExamChapter[] = [
           }
         ],
         "correctOptionId": "b",
-        "answerText": "UV/black light. Scorpions fluoresce brightly under ultraviolet light — this is a practical field detection technique."
+        "answerText": "UV/black light. Scorpions fluoresce brightly under ultraviolet light — this is a practical field detection technique.",
+        "difficulty": "recall"
       },
       {
         "id": "ace-8-q7",
@@ -4311,7 +4353,8 @@ export const acePracticeExamChapters: PracticeExamChapter[] = [
           }
         ],
         "correctOptionId": "a",
-        "answerText": "These insects enter through gaps when they look for overwintering sites in fall. Exclusion before they aggregate prevents the problem; once they are inside wall voids, indoor treatments do little."
+        "answerText": "These insects enter through gaps when they look for overwintering sites in fall. Exclusion before they aggregate prevents the problem; once they are inside wall voids, indoor treatments do little.",
+        "difficulty": "applied"
       },
       {
         "id": "ace-9-q2",
@@ -4331,7 +4374,8 @@ export const acePracticeExamChapters: PracticeExamChapter[] = [
           }
         ],
         "correctOptionId": "a",
-        "answerText": "Boxelder bugs feed on the seeds of female boxelder trees and also use maples. Homes near these trees see the fall aggregations."
+        "answerText": "Boxelder bugs feed on the seeds of female boxelder trees and also use maples. Homes near these trees see the fall aggregations.",
+        "difficulty": "id"
       },
       {
         "id": "ace-9-q3",
@@ -4351,7 +4395,8 @@ export const acePracticeExamChapters: PracticeExamChapter[] = [
           }
         ],
         "correctOptionId": "b",
-        "answerText": "Exclusion before seasonal migration. Since occasional invaders don't breed indoors, keeping them out is far more effective than treating after they've entered."
+        "answerText": "Exclusion before seasonal migration. Since occasional invaders don't breed indoors, keeping them out is far more effective than treating after they've entered.",
+        "difficulty": "applied"
       },
       {
         "id": "ace-9-q4",
@@ -4371,7 +4416,8 @@ export const acePracticeExamChapters: PracticeExamChapter[] = [
           }
         ],
         "correctOptionId": "b",
-        "answerText": "Moisture reduction and organic debris removal. Millipedes require moisture and feed on decaying plant material — eliminating these conditions eliminates the millipede habitat."
+        "answerText": "Moisture reduction and organic debris removal. Millipedes require moisture and feed on decaying plant material — eliminating these conditions eliminates the millipede habitat.",
+        "difficulty": "applied"
       },
       {
         "id": "ace-9-q5",
@@ -4818,7 +4864,8 @@ export const acePracticeExamChapters: PracticeExamChapter[] = [
           }
         ],
         "correctOptionId": "a",
-        "answerText": "Indianmeal moth larvae spin silk as they feed on the surface of stored foods, leaving webbing and frass. Weevils develop inside kernels and leave no webbing."
+        "answerText": "Indianmeal moth larvae spin silk as they feed on the surface of stored foods, leaving webbing and frass. Weevils develop inside kernels and leave no webbing.",
+        "difficulty": "applied"
       },
       {
         "id": "ace-10-q2",
@@ -4838,7 +4885,8 @@ export const acePracticeExamChapters: PracticeExamChapter[] = [
           }
         ],
         "correctOptionId": "a",
-        "answerText": "Hairy larvae are typical of dermestids. Flour beetle larvae are smooth and wireworm-like, and weevil larvae are legless grubs that live inside kernels."
+        "answerText": "Hairy larvae are typical of dermestids. Flour beetle larvae are smooth and wireworm-like, and weevil larvae are legless grubs that live inside kernels.",
+        "difficulty": "id"
       },
       {
         "id": "ace-10-q3",
@@ -4858,7 +4906,8 @@ export const acePracticeExamChapters: PracticeExamChapter[] = [
           }
         ],
         "correctOptionId": "a",
-        "answerText": "Rice and granary weevils are internal feeders: the larva grows hidden inside a single kernel. Sawtoothed grain beetles feed externally on broken grain and processed foods."
+        "answerText": "Rice and granary weevils are internal feeders: the larva grows hidden inside a single kernel. Sawtoothed grain beetles feed externally on broken grain and processed foods.",
+        "difficulty": "id"
       },
       {
         "id": "ace-10-q4",
@@ -4878,7 +4927,8 @@ export const acePracticeExamChapters: PracticeExamChapter[] = [
           }
         ],
         "correctOptionId": "a",
-        "answerText": "About 130°F for at least 30 minutes kills stored product pests in a small package. Freezing at 0°F for about four days is the other common option."
+        "answerText": "About 130°F for at least 30 minutes kills stored product pests in a small package. Freezing at 0°F for about four days is the other common option.",
+        "difficulty": "recall"
       },
       {
         "id": "ace-10-q5",
@@ -4898,7 +4948,8 @@ export const acePracticeExamChapters: PracticeExamChapter[] = [
           }
         ],
         "correctOptionId": "b",
-        "answerText": "Locating and disposing of all infested material. Without source removal, populations regenerate from the source regardless of other treatments."
+        "answerText": "Locating and disposing of all infested material. Without source removal, populations regenerate from the source regardless of other treatments.",
+        "difficulty": "applied"
       },
       {
         "id": "ace-10-q6",
@@ -5345,7 +5396,8 @@ export const acePracticeExamChapters: PracticeExamChapter[] = [
           }
         ],
         "correctOptionId": "a",
-        "answerText": "Lower termites lose their gut symbionts with each molt and regain them by feeding on material passed from nestmates. Those microbes do much of the work of breaking down cellulose."
+        "answerText": "Lower termites lose their gut symbionts with each molt and regain them by feeding on material passed from nestmates. Those microbes do much of the work of breaking down cellulose.",
+        "difficulty": "applied"
       },
       {
         "id": "ace-11-q2",
@@ -5365,7 +5417,8 @@ export const acePracticeExamChapters: PracticeExamChapter[] = [
           }
         ],
         "correctOptionId": "a",
-        "answerText": "Drywood termites live entirely inside dry, sound wood with no soil contact and build no mud tubes. Subterranean termites need soil contact, and dampwood termites need wood with a high moisture content."
+        "answerText": "Drywood termites live entirely inside dry, sound wood with no soil contact and build no mud tubes. Subterranean termites need soil contact, and dampwood termites need wood with a high moisture content.",
+        "difficulty": "applied"
       },
       {
         "id": "ace-11-q3",
@@ -5385,7 +5438,8 @@ export const acePracticeExamChapters: PracticeExamChapter[] = [
           }
         ],
         "correctOptionId": "b",
-        "answerText": "Hardwoods only. True powderpost beetles need the large starch-filled pores of hardwoods. Other bostrichids (false powderpost beetles) and anobiids attack both."
+        "answerText": "Hardwoods only. True powderpost beetles need the large starch-filled pores of hardwoods. Other bostrichids (false powderpost beetles) and anobiids attack both.",
+        "difficulty": "id"
       },
       {
         "id": "ace-11-q4",
@@ -5405,7 +5459,8 @@ export const acePracticeExamChapters: PracticeExamChapter[] = [
           }
         ],
         "correctOptionId": "b",
-        "answerText": "10% soldiers with teardrop-shaped head. Reticulitermes soldiers have smooth mandibles and a rectangular head. Formosan termites also swarm at night (not day)."
+        "answerText": "10% soldiers with teardrop-shaped head. Reticulitermes soldiers have smooth mandibles and a rectangular head. Formosan termites also swarm at night (not day).",
+        "difficulty": "id"
       },
       {
         "id": "ace-11-q5",
@@ -5425,7 +5480,8 @@ export const acePracticeExamChapters: PracticeExamChapter[] = [
           }
         ],
         "correctOptionId": "b",
-        "answerText": "Excavate but do not eat wood. Termites consume wood for nutrition. Mud tubes are a termite behavior (subterranean), not a carpenter ant behavior."
+        "answerText": "Excavate but do not eat wood. Termites consume wood for nutrition. Mud tubes are a termite behavior (subterranean), not a carpenter ant behavior.",
+        "difficulty": "id"
       },
       {
         "id": "ace-11-q6",
@@ -5445,7 +5501,8 @@ export const acePracticeExamChapters: PracticeExamChapter[] = [
           }
         ],
         "correctOptionId": "b",
-        "answerText": "Hard, dry, elongate-oval pellets with six concave sides. These distinctive pellets are diagnostic for drywood termite activity and do not change in shape or size over time."
+        "answerText": "Hard, dry, elongate-oval pellets with six concave sides. These distinctive pellets are diagnostic for drywood termite activity and do not change in shape or size over time.",
+        "difficulty": "id"
       },
       {
         "id": "ace-11-q7",

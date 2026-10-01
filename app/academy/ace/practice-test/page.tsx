@@ -5,7 +5,7 @@ import { JsonLd } from '@/components/JsonLd';
 import { Breadcrumbs } from '@/components/site/Breadcrumbs';
 import { DiscordButton } from '@/components/community/Discord';
 import { AceNav } from '@/components/ace/AceNav';
-import { Quiz } from '@/components/ace/Quiz';
+import { ExamBuilder } from '@/components/ace/ExamBuilder';
 import { ACE_MODULES, ACE_PATH, ALL_QUESTIONS } from '@/lib/content/ace';
 import { site } from '@/lib/site.config';
 
@@ -45,14 +45,14 @@ export default function PracticeTestPage() {
 
         <div className="mb-8 flex flex-wrap items-center justify-between gap-4">
           <p className="lede">
-            {ALL_QUESTIONS.length} questions across all {ACE_MODULES.length} modules. Take the
-            whole thing, or pick one module to drill. Grading shows the reasoning behind every
-            answer.
+            {ALL_QUESTIONS.length} questions across all {ACE_MODULES.length} modules. Pick easy,
+            medium or hard, one module or all of them, untimed or against the clock. You get a
+            score by module and the reasoning behind every answer.
           </p>
           <DiscordButton variant="ghost">Compare scores on Discord</DiscordButton>
         </div>
 
-        <Quiz questions={ALL_QUESTIONS} modules={ACE_MODULES.map((m) => ({ n: m.n, name: m.name }))} />
+        <ExamBuilder questions={ALL_QUESTIONS} modules={ACE_MODULES.map((m) => ({ n: m.n, name: m.name }))} />
 
         <p className="mt-8 text-sm text-ink3">
           Got one wrong and the explanation didn&rsquo;t click?{' '}
