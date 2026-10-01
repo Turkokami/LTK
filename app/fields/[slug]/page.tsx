@@ -21,6 +21,20 @@ import { PayHighlight } from '@/components/ui/PayHighlight';
 import { Photo } from '@/components/ui/Photo';
 import { WildlifeRules, hasWildlifeRules } from '@/components/fields/WildlifeRules';
 import { CommunityGallery } from '@/components/community/CommunityGallery';
+import { FIELD_GUIDES_UPDATED, getFieldGuide } from '@/lib/content/field-guides';
+import {
+  GuideCareerPath,
+  GuideDuties,
+  GuideEnvironment,
+  GuideFaq,
+  GuideGoodHard,
+  GuideNav,
+  GuidePayBenefits,
+  GuideSkillsTools,
+  GuideSources,
+  GuideTraining,
+} from '@/components/fields/FieldGuide';
+import { K9Specialties } from '@/components/fields/K9Specialties';
 import { photosFor } from '@/lib/content/community-photos';
 import { PEST_ID_PATH } from '@/lib/content/pest-library';
 import { fieldPhotos } from '@/lib/content/photos';
@@ -84,14 +98,16 @@ export async function generateMetadata({
       d.name,
     ]),
     description: pickDescription(
-      `What ${d.name.toLowerCase()} work involves, who licenses it, and how people get in.`,
+      `${d.name}: the daily work, training and licensing, pay and benefits, and how people get in.`,
       [
-        `Plus state-by-state licensing, BLS pay data and a crew to ask in the ${site.discord.name}.`,
-        `Plus state-by-state licensing and BLS pay data, with a crew to ask on Discord.`,
+        `A career guide with state rules and a crew to ask in the ${site.discord.name}.`,
+        'A career guide with state rules, national pay data and where it leads next.',
+        'A career guide with state rules and national pay data.',
         'Plus state-by-state licensing, national pay data and where it leads next.',
         'Plus state-by-state licensing and national pay data.',
         'Plus state licensing and national pay data.',
         'Plus licensing and pay data.',
+        'A career guide.',
       ],
     ),
     path: `/fields/${d.slug}/`,
@@ -122,6 +138,7 @@ export default async function FieldPage({
   const from = routesInto(d.slug);
   const to = d.movesTo.map(getDiscipline).filter(Boolean) as Discipline[];
   const photos = fieldPhotos(d.slug);
+  const guide = getFieldGuide(d.slug);
   const crewPhotos = photosFor(...(FIELD_PHOTO_SECTIONS[d.slug] ?? []));
   const isPesticide = d.licensing === 'state-pesticide';
   const wildlifeView =
@@ -154,7 +171,21 @@ export default async function FieldPage({
         about: d.name,
         author: { '@id': ID.organization },
         publisher: { '@id': ID.organization },
+        ...(guide ? { dateModified: FIELD_GUIDES_UPDATED, citation: guide.sources.map((s) => s.url) } : {}),
       },
+      ...(guide
+        ? [
+            {
+              '@type': 'FAQPage',
+              '@id': `${abs(path)}#faq`,
+              mainEntity: guide.faq.map((f) => ({
+                '@type': 'Question',
+                name: f.q,
+                acceptedAnswer: { '@type': 'Answer', text: f.a },
+              })),
+            },
+          ]
+        : []),
     ],
   });
 
@@ -191,16 +222,39 @@ export default async function FieldPage({
             <DiscordButton>Ask on Discord</DiscordButton>
           </div>
 
-          <h2 className="h2 mb-3 mt-12">What the job is really like</h2>
+          {guide ? <GuideNav /> : null}
+
+          <h2 id="the-job" className="h2 mb-3 mt-12 scroll-mt-24">What the job is really like</h2>
           <div className="grid gap-6 md:grid-cols-[1.1fr_1fr] md:items-start">
-            <p className="prose-bulletin">{d.dayToDay}</p>
+            <div className="prose-bulletin">
+              {guide ? (
+                <>
+                  <p>{guide.intro}</p>
+                  {guide.dayInTheLife.map((para) => (
+                    <p key={para.slice(0, 40)}>{para}</p>
+                  ))}
+                </>
+              ) : (
+                <p>{d.dayToDay}</p>
+              )}
+            </div>
             {photos ? (
-              <Photo photo={photos.work} aspect="aspect-[4/3]" caption="On the job." />
+              <Photo photo={photos.work} aspect="aspect-[4/3]" caption="On the job." className="md:sticky md:top-24" />
             ) : null}
           </div>
 
+          {d.slug === 'k9-detection' ? <K9Specialties /> : null}
+
+          {guide ? (
+            <>
+              <GuideDuties g={guide} />
+              <GuideEnvironment g={guide} />
+            </>
+          ) : null}
+
           <h2 className="h2 mb-3 mt-12">How people get in</h2>
           <p className="prose-bulletin">{d.routeIn}</p>
+          {guide ? <GuideTraining g={guide} /> : null}
 
           <LabelBlock
             className="mt-8"
@@ -233,7 +287,15 @@ export default async function FieldPage({
 
           {/* Pay: this field's own BLS figures where it is counted as pest control workers,
               otherwise the same figures clearly labelled as the nearest benchmark. */}
+          {guide ? (
+            <>
+              <GuideSkillsTools g={guide} />
+              <GuideCareerPath g={guide} />
+              <h2 id="pay" className="h2 mb-3 mt-12 scroll-mt-24">Pay and benefits</h2>
+            </>
+          ) : null}
           <PayHighlight className="mt-6" fieldName={d.name} benchmark={!paysAsPestControl} />
+          {guide ? <GuidePayBenefits g={guide} /> : null}
 
           {/* State by state. */}
           <h2 className="h2 mb-3 mt-12">State-by-state licensing</h2>
@@ -299,6 +361,8 @@ export default async function FieldPage({
             </p>
           )}
 
+          {guide ? <GuideGoodHard g={guide} /> : null}
+
           {d.communityIsTheNetwork ? (
             <LabelBlock title="This one is small" signal="danger" className="mt-8">
               Few enough people do this work that no course, association chapter or magazine will
@@ -356,6 +420,20 @@ export default async function FieldPage({
                   </div>
                 ) : null}
               </div>
+            </>
+          ) : null}
+
+          {guide ? (
+            <>
+              <GuideFaq g={guide} />
+              <div className="card mt-10 flex flex-wrap items-center justify-between gap-4 p-5">
+                <p className="max-w-[46ch] text-ink2">
+                  <span className="font-semibold text-ink">Still deciding?</span> Ask the people doing
+                  {' '}{d.name.toLowerCase()} every day in the {site.discord.name}.
+                </p>
+                <DiscordButton>Ask on Discord</DiscordButton>
+              </div>
+              <GuideSources g={guide} updated={FIELD_GUIDES_UPDATED} />
             </>
           ) : null}
         </article>

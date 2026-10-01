@@ -180,11 +180,11 @@ export const DISCIPLINES: Discipline[] = [
   {
     slug: 'k9-detection',
     group: 'specialty',
-    name: 'K9 detection',
-    summary: 'Handler and dog teams scent-detecting bed bugs, termites, rodents or invasive species — used where visual inspection is unreliable or too slow.',
+    name: 'K9 work in pest control',
+    summary: 'Dog and handler teams that sniff out bed bugs, termites and rodents, and herding dogs that move Canada geese off lawns, ponds and fields — used where people and traps miss what a dog can find.',
     licensing: 'trade-certification',
     licensingNote:
-      'No state licence governs detection work itself. Credibility rests on third-party certification of the team, and standards vary enormously between certifying bodies — which is the live argument inside this discipline.',
+      'It depends on the state and the work. Some states treat detection as licensed pest control (North Carolina requires a structural pest control licence for bed bug dog work, and Maryland requires each dog and handler to be certified as a team every year). Goose herding falls under federal migratory bird rules instead. Private certification helps but is not a licence.',
     routeIn: 'Either a pest professional who takes on a dog, or a dog handler who enters pest. Both routes exist and they produce very different practitioners.',
     dayToDay: 'You have a colleague who lives with you. Training never stops, the dog has good and bad days, and your results are only as good as your own handling — which is the part newcomers underestimate.',
     movesTo: ['bed-bugs', 'management', 'ownership'],
