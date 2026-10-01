@@ -161,3 +161,20 @@ All 16 merged (exclusion, insulation, mosquito-vector and turf-ornamental added 
   - California vector control CE figures date from June 2019.
   - No agency answer was found on whether installing TAP insulation needs a pest licence; the guide says so.
 - **salary.ts:** 37-3012 median added ($46,340, May 2025, via the BLS Public Data API).
+
+## ACE question bank expansion (2026-10-01)
+
+277 practice questions (55 to 277): 20 new per module, written in original wording from the topics in the ESA ACE prep class decks (`Downloads/ACE-prep-extracted`).
+- **Copying:** the decks are © Entomological Society of America. Their "Read me" restricts them to ESA members and Certified Entomologists teaching classes, and says not to copy them for distribution. No deck wording, quiz items or images are used; a script check found no 5-word overlap.
+- **16 existing questions** that closely followed the decks' quiz slides were rewritten.
+- **Corrected:**
+  - German cockroaches prefer warm, moist places.
+  - Termites are now classified within Blattodea.
+  - True powderpost beetles are Lyctinae, within Bostrichidae.
+  - Bean weevils are Bruchinae.
+  - Silverfish are Zygentoma.
+  - Extension heat guidance is 130°F for 30 minutes.
+- **Deck errors rejected:** chitin as a protein; wings from the prothorax; Streptomyces as a fungus; "good management practices"; MSDS; "EPA established by Congress"; males producing moth pheromones; and others. See the agent report.
+
+**OPEN, needs the owner's decision:** the 12 NotebookLM slide decks served from ace-prep-app.vercel.app show the "Entomological Society of America Certification Corporation" seal as a background on slides. That implies ESA endorsement and may be derived from ESA's copyrighted decks.
+- **Fixed:** the deck page counts were also wrong in the data (56–195 listed; actual 7–15) and are now corrected.

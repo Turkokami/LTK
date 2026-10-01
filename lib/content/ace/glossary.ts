@@ -370,7 +370,7 @@ export const storedProductFlashcards: TrainingGlossaryTerm[] = [
   },
   {
     id: "sp-bean-weevil",
-    term: "Bean/Pea Weevils (Family Bruchidae)",
+    term: "Bean/Pea Weevils (subfamily Bruchinae)",
     definition: "Lack the long proboscis (snout) of true weevils. Leave round exit holes on infested beans.",
     fieldUse: "Round exit holes in beans or peas = bruchid weevil. No snout distinguishes them from curculionid weevils. Common in imported dry beans and bird seed.",
   },

@@ -69,7 +69,7 @@ export const aceStudyGuideSections: AceStudyGuideSection[] = [
       "Insects breathe through spiracles and tracheae. Oils kill small insects by clogging spiracles (physical mode of action).",
       "Gradual (incomplete) metamorphosis: 3 stages — egg, nymph, adult. Examples: cockroaches, termites, grasshoppers. Nymphs resemble adults.",
       "Complete metamorphosis: 4 stages — egg, larva, pupa, adult. Examples: flies, beetles, butterflies, fleas, ants, bees.",
-      "The 12 most important orders: Collembola (springtails), Thysanura (silverfish), Orthoptera (crickets/grasshoppers), Blattodea (cockroaches), Isoptera (termites), Dermaptera (earwigs), Hemiptera (true bugs), Coleoptera (beetles), Siphonaptera (fleas), Diptera (flies), Lepidoptera (moths/butterflies), Hymenoptera (ants/bees/wasps).",
+      "The orders that matter most in pest work: Collembola (springtails, now usually grouped with other hexapods outside the true insects), Zygentoma (silverfish, formerly Thysanura), Orthoptera (crickets/grasshoppers), Blattodea (cockroaches and termites; termites were formerly the order Isoptera), Dermaptera (earwigs), Hemiptera (true bugs), Coleoptera (beetles), Siphonaptera (fleas), Diptera (flies), Lepidoptera (moths/butterflies), Hymenoptera (ants/bees/wasps).",
       "Mouthpart types: chewing (beetles, caterpillars, termites), piercing/sucking (fleas, lice, true bugs), sponging (house fly), siphoning (moths/butterflies).",
       "Scientific naming: Genus species. Example: Blatella germanica. Common names vary by region; scientific names are universal.",
     ],

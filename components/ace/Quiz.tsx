@@ -9,6 +9,8 @@ import { cx } from '@/lib/utils';
  * lives in component state and resets on reload, which is fine for practice.
  */
 
+const MOCK_SIZE = 50;
+
 export interface QuizQuestion {
   id: string;
   prompt: string;
@@ -29,12 +31,17 @@ export function Quiz({
 }) {
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const [submitted, setSubmitted] = useState(false);
-  const [filter, setFilter] = useState<number | 'all'>('all');
+  const [filter, setFilter] = useState<number | 'all' | 'mock'>('all');
+  const [mockIds, setMockIds] = useState<string[]>([]);
 
-  const active = useMemo(
-    () => (filter === 'all' ? questions : questions.filter((q) => q.moduleN === filter)),
-    [filter, questions],
-  );
+  const active = useMemo(() => {
+    if (filter === 'all') return questions;
+    if (filter === 'mock') {
+      const byId = new Map(questions.map((q) => [q.id, q]));
+      return mockIds.map((id) => byId.get(id)).filter(Boolean) as QuizQuestion[];
+    }
+    return questions.filter((q) => q.moduleN === filter);
+  }, [filter, questions, mockIds]);
 
   const answered = active.filter((q) => answers[q.id]).length;
   const correct = active.filter((q) => answers[q.id] === q.correctOptionId).length;
@@ -54,12 +61,28 @@ export function Quiz({
     setSubmitted(false);
   }
 
+  /** A fresh random set every click — drawn in the event handler, so no hydration mismatch. */
+  function newMock() {
+    const ids = questions.map((q) => q.id);
+    for (let i = ids.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [ids[i], ids[j]] = [ids[j]!, ids[i]!];
+    }
+    setMockIds(ids.slice(0, MOCK_SIZE));
+    setAnswers({});
+    setFilter('mock');
+    setSubmitted(false);
+  }
+
   return (
     <div>
       {modules ? (
         <div className="mb-6 flex flex-wrap gap-2" role="group" aria-label="Choose a module">
+          <Chip active={filter === 'mock'} onClick={newMock}>
+            {filter === 'mock' ? 'New mock exam' : `Mock exam · ${Math.min(MOCK_SIZE, questions.length)} random`}
+          </Chip>
           <Chip active={filter === 'all'} onClick={() => pick('all')}>
-            Full exam ({questions.length})
+            Every question ({questions.length})
           </Chip>
           {modules.map((m) => (
             <Chip key={m.n} active={filter === m.n} onClick={() => pick(m.n)}>

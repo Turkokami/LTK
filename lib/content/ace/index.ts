@@ -53,18 +53,18 @@ export const PODCASTS: Podcast[] = [
 ];
 
 export const SLIDE_DECKS: SlideDeck[] = [
-  { file: 'ACE_Certification_Blueprint.pdf', title: 'ACE Certification Blueprint', pages: 56, category: 'Certification' },
-  { file: 'ACE_Insect_Biology.pdf', title: 'ACE Insect Biology', pages: 181, category: 'Biology' },
-  { file: 'ACE_Stored_Product_Dossier.pdf', title: 'ACE Stored Product Dossier', pages: 148, category: 'Stored products' },
-  { file: 'Ant_Identification_Field_Guide.pdf', title: 'Ant Identification Field Guide', pages: 110, category: 'Identification' },
-  { file: 'Arthropod_Diagnostic_Blueprint.pdf', title: 'Arthropod Diagnostic Blueprint', pages: 147, category: 'Diagnostics' },
-  { file: 'IPM_Strategic_Blueprint.pdf', title: 'IPM Strategic Blueprint', pages: 155, category: 'IPM' },
-  { file: 'Occasional_Invaders_Diagnostic_Guide.pdf', title: 'Occasional Invaders Diagnostic Guide', pages: 121, category: 'Identification' },
-  { file: 'Pesticide_Safety_Dossier.pdf', title: 'Pesticide Safety Dossier', pages: 123, category: 'Safety' },
-  { file: 'Structural_Cockroach_Diagnostic_Blueprint.pdf', title: 'Structural Cockroach Diagnostic Blueprint', pages: 135, category: 'Diagnostics' },
-  { file: 'Tactical_IPM_Blueprint.pdf', title: 'Tactical IPM Blueprint', pages: 195, category: 'IPM' },
-  { file: 'Urban_Fly_Diagnostics.pdf', title: 'Urban Fly Diagnostics', pages: 174, category: 'Diagnostics' },
-  { file: 'WDI_Inspector_Blueprint.pdf', title: 'WDI Inspector Blueprint', pages: 127, category: 'WDI' },
+  { file: 'ACE_Certification_Blueprint.pdf', title: 'ACE Certification Blueprint', pages: 7, category: 'Certification' },
+  { file: 'ACE_Insect_Biology.pdf', title: 'ACE Insect Biology', pages: 15, category: 'Biology' },
+  { file: 'ACE_Stored_Product_Dossier.pdf', title: 'ACE Stored Product Dossier', pages: 15, category: 'Stored products' },
+  { file: 'Ant_Identification_Field_Guide.pdf', title: 'Ant Identification Field Guide', pages: 13, category: 'Identification' },
+  { file: 'Arthropod_Diagnostic_Blueprint.pdf', title: 'Arthropod Diagnostic Blueprint', pages: 13, category: 'Diagnostics' },
+  { file: 'IPM_Strategic_Blueprint.pdf', title: 'IPM Strategic Blueprint', pages: 14, category: 'IPM' },
+  { file: 'Occasional_Invaders_Diagnostic_Guide.pdf', title: 'Occasional Invaders Diagnostic Guide', pages: 12, category: 'Identification' },
+  { file: 'Pesticide_Safety_Dossier.pdf', title: 'Pesticide Safety Dossier', pages: 12, category: 'Safety' },
+  { file: 'Structural_Cockroach_Diagnostic_Blueprint.pdf', title: 'Structural Cockroach Diagnostic Blueprint', pages: 14, category: 'Diagnostics' },
+  { file: 'Tactical_IPM_Blueprint.pdf', title: 'Tactical IPM Blueprint', pages: 15, category: 'IPM' },
+  { file: 'Urban_Fly_Diagnostics.pdf', title: 'Urban Fly Diagnostics', pages: 15, category: 'Diagnostics' },
+  { file: 'WDI_Inspector_Blueprint.pdf', title: 'WDI Inspector Blueprint', pages: 13, category: 'WDI' },
 ];
 
 export const VIDEOS: Video[] = [
