@@ -448,3 +448,30 @@
     text-transform: uppercase;
   }
 }
+
+/* ACE Prep — the one highlighted tool in the header. Field green so it never competes with the
+   red Discord button for "primary"; it reads as a free tool, not a call to join. */
+@layer components {
+  .btn--ace {
+    background: var(--field-tint);
+    border-color: var(--field);
+    color: var(--ink);
+  }
+  .btn--ace:hover {
+    background: var(--field);
+    border-color: var(--field);
+    color: var(--stock);
+  }
+  .ace-free {
+    border-radius: 999px;
+    background: var(--field);
+    color: var(--stock);
+    padding: 0.05rem 0.4rem;
+    font-size: 0.625rem;
+    letter-spacing: 0.06em;
+  }
+  .btn--ace:hover .ace-free {
+    background: var(--stock);
+    color: var(--field);
+  }
+}
