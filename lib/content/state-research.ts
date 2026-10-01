@@ -3858,5 +3858,950 @@ export const STATE_RESEARCH: Record<string, StateResearch> = /* BEGIN STATES */ 
       ]
     },
     notes: "Hawaii splits the job between two agencies: the DCCA Pest Control Board licenses operators, field representatives and entities; DAB (formerly HDOA, now Department of Agriculture and Biosecurity) certifies applicators. FEE CONFLICT: the Board page (2026 renewal) lists on-time renewal at $278 (PCO active) and $212 (PCFR active); the Board FAQ PDF (uploaded Jan 2026) still says $210 and $160. Publish the Board page figures or neither. The DAB recertification procedures PDF is footed \"Rev. 2/13/2019\" and says online credit is capped at half; the live DAB page says 75% — the live page is used. The DAB page quiz pass mark (over 90%) is for CET quizzes, not certification exams; no exam pass mark was found. DAB category descriptions PDF on hdoa.inforps.hi.gov not read."
+  },
+  ID: {
+    agency: "Idaho State Department of Agriculture (ISDA) — Agricultural Resources Division, Pesticide Applicator Licensing & Certification",
+    agencyUrl: "https://agri.idaho.gov/agricultural-resources/applicator-licensing-certification/",
+    verified: true,
+    regulatory: {
+      stateCode: "ID",
+      verifiedOn: "2026-10-01",
+      reviewedByPath: null,
+      sourceUrls: [
+        "https://adminrules.idaho.gov/rules/current/02/020303.pdf",
+        "https://agri.idaho.gov/agricultural-resources/applicator-licensing-certification/",
+        "https://agri.idaho.gov/agricultural-resources/applicator-licensing-certification/recertification-seminar-information/",
+        "https://agri.idaho.gov/wp-content/uploads/ag-resources/Documents/App_Lic_docs/Licensing-101-8.pdf",
+        "https://agri.idaho.gov/wp-content/uploads/ag-resources/Documents/App_Lic_docs/ISDA-LICENSING-APPLICATION-26.27.pdf",
+        "https://agri.idaho.gov/wp-content/uploads/2024/10/Pro-Applicator-2024-2025-2026.pdf"
+      ],
+      licenseCategories: [
+        {
+          code: "CO",
+          name: "Applicator Core Competency"
+        },
+        {
+          code: "IP",
+          name: "Industrial, Institutional, and Structural Pest Control – Non-Commodity"
+        },
+        {
+          code: "CP",
+          name: "Industrial, Institutional, and Structural Pest Control – Commodity"
+        },
+        {
+          code: "NS",
+          name: "Non-Soil Fumigation"
+        },
+        {
+          code: "OP",
+          name: "Ornamental Pest"
+        },
+        {
+          code: "RW",
+          name: "Right-of-Way Pest Control"
+        },
+        {
+          code: "WP",
+          name: "Wood Preservative"
+        },
+        {
+          code: "PH",
+          name: "Public Health Pest"
+        },
+        {
+          code: "AP",
+          name: "Aquatic Weed and Pest Control"
+        }
+      ],
+      examStructure: "Professional applicators must pass the Applicator Core Competency (CO) exam plus at least one category exam, each with a minimum score of 70%. Exams are proctored by ISDA staff or an authorized agent; a failed exam may be retaken after a one-day wait, and scores stay valid for 12 months. Examination fee is $10 per exam category. A Commercial Apprentice licence (CO exam only, 70%) allows general-use applications under limited supervision of a professional applicator — not AA, AU, NS or SF work — expires two years from issue and cannot be renewed.",
+      applicationFeeUsd: 300,
+      renewalCycleMonths: 60,
+      ceuHoursPerCycle: 40,
+      ceuHoursByCategory: [],
+      recertByTier: [
+        {
+          tier: "Professional Applicator",
+          requirement: "40 recertification credits per five-year licensing period, or retest",
+          note: "One credit per 50 minutes of instruction at Department-accredited seminars. The current rule sets no core/category split — the 40 is pooled. Excess credits may not be carried into the next period. Recertification by exam means passing CO plus every category you intend to hold, and can be done up to 12 months before the period ends."
+        },
+        {
+          tier: "Commercial Apprentice",
+          requirement: "None — the licence is non-renewable",
+          note: "Expires two years from issue. $120. No more than two apprentices per supervising applicator."
+        },
+        {
+          tier: "Private Applicator",
+          requirement: "15 recertification credits per five-year period",
+          note: "Private period runs to 31 March of the fifth year, not 31 December."
+        }
+      ],
+      acceptedFormats: [
+        "ISDA-accredited in-person seminars",
+        "ISDA-approved online recertification modules",
+        "Recertification by examination (CO plus each category held)"
+      ],
+      approvedProviders: [
+        {
+          name: "ISDA recertification seminar schedule (official)",
+          url: "https://applicatorlicensing.isda.idaho.gov/Seminar/SeminarLookup"
+        },
+        {
+          name: "ISDA approved online recertification modules",
+          url: "https://agri.idaho.gov/agricultural-resources/applicator-licensing-certification/recertification-seminar-information/approved-online-modules/"
+        }
+      ],
+      renewalDeadline: "The five-year period begins on the 1 January after the licence is first obtained and ends on 31 December of the fifth year. Credits must be in before expiry: a licence holder short of credits at expiration must retake and pass the exams before renewing. The licence itself may be renewed up to 12 months after its expiration date.",
+      reciprocity: [
+        "ISDA accepts a Letter of Good Standing from a reciprocal state in place of its exams. The 2024 professional application form named Montana, Oregon, Utah and Wyoming. Confirm the current list with ISDA: (208) 332-8600.",
+        "The Commercial Apprentice licence may not be reciprocated."
+      ]
+    },
+    notes: "Rule text is the current IDAPA 02.03.03 PDF from adminrules.idaho.gov with amendments marked (7-1-26); the ISDA licensing page says new and renewed licences follow the updated 2026 rule. The 2024 professional application form (Pro-Applicator-2024-2025-2026.pdf) shows a staggered $120/$60 fee by surname — superseded by the 2026 rule ($300, five-year term); do not publish the old fee. A 2023 ISDA rulemaking document floated \"16 credits, 8 core plus 2 per category\" — that option is NOT in the current rule (40 pooled credits) and must not be used. Industrial/structural work in Idaho is under ISDA, not a separate structural board. Passing score for recertification exams is the same 70%."
+  },
+  IL: {
+    agency: "Illinois Department of Public Health (IDPH) — Division of Environmental Health, Structural Pest Control Program",
+    agencyUrl: "https://dph.illinois.gov/topics-services/environmental-health-protection/structural-pest-control.html",
+    verified: true,
+    regulatory: {
+      stateCode: "IL",
+      verifiedOn: "2026-10-01",
+      reviewedByPath: null,
+      sourceUrls: [
+        "https://dph.illinois.gov/topics-services/environmental-health-protection/structural-pest-control.html",
+        "https://ilga.gov/ftp/JCAR/AdminCode/077/077008300C04100R.html",
+        "https://ilga.gov/ftp/JCAR/AdminCode/077/077008300B02000R.html",
+        "https://ilga.gov/ftp/JCAR/AdminCode/077/077008300B02200R.html",
+        "https://ilga.gov/ftp/JCAR/AdminCode/077/077008300B03000R.html",
+        "https://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=022502350K9",
+        "https://dph.illinois.gov/content/dam/soi/en/web/idph/files/forms/structural-pest-control-technician-application-restricteduse.pdf"
+      ],
+      licenseCategories: [
+        {
+          code: "General Standards",
+          name: "General Standards Examination (General Use Pesticides)"
+        },
+        {
+          code: "A",
+          name: "Insects, Rodents and Other Pests"
+        },
+        {
+          code: "B",
+          name: "Termites and Other Wood-Destroying Organisms"
+        },
+        {
+          code: "C",
+          name: "Birds"
+        },
+        {
+          code: "D",
+          name: "Fumigation"
+        },
+        {
+          code: "E",
+          name: "Food Processing, Manufacturing and Storage"
+        },
+        {
+          code: "F",
+          name: "Institutional and Multi-unit Residential Housing"
+        },
+        {
+          code: "G",
+          name: "Public Health Pest Control"
+        },
+        {
+          code: "H",
+          name: "Wood Products Pest Control"
+        }
+      ],
+      examStructure: "Every applicant takes the General Standards exam, which alone certifies a technician for general-use pesticides. Restricted-use certification needs General Standards plus at least one sub-category exam, and a qualifying education, approved course or experience record. 70% is required on each exam. IDPH schedules the exams from its Pest Control Exam Calendar; the application must reach IDPH at least 15 days before the chosen date. Commercial restricted-use work requires the matching sub-category from A–D or H; sub-categories E–G alone do not permit commercial restricted-use work. A business cannot be licensed until it employs at least one certified technician.",
+      applicationFeeUsd: 75,
+      renewalCycleMonths: 36,
+      ceuHoursPerCycle: 9,
+      ceuHoursByCategory: [],
+      recertByTier: [
+        {
+          tier: "Certified Structural Pest Control Technician",
+          requirement: "9 classroom contact hours at Department-approved seminars per three-year certificate, in blocks of 3 hours or more",
+          note: "Not per category — one pooled figure regardless of sub-categories held. The hours must be on file by 1 October of the expiry year for IDPH to mail the renewal form. Renewal fee $75. Source: 77 Ill. Adm. Code 830.200."
+        },
+        {
+          tier: "Non-certified employee",
+          requirement: "No certificate — works under the supervision of a certified technician",
+          note: "The certified technician is responsible for the non-certified employee’s applications (830.120(a))."
+        },
+        {
+          tier: "Commercial Structural Pest Control Business Licence",
+          requirement: "Annual renewal by 1 December; $150 renewal fee and insurance on file",
+          note: "Original licence $250. Each location needs a certified technician."
+        }
+      ],
+      acceptedFormats: [
+        "IDPH-approved pest control training seminars, counted as classroom contact hours in blocks of 3 hours or more"
+      ],
+      approvedProviders: [
+        {
+          name: "IDPH Pest Control Seminar List (official)",
+          url: "https://dph.illinois.gov/topics-services/environmental-health-protection/structural-pest-control/seminar-list.html"
+        }
+      ],
+      renewalDeadline: "Certificates run three years and expire 31 December. The renewal must be POSTMARKED by 1 December of the expiry year; after that a $75 late charge applies and the certificate lapses on 31 December even if the renewal is later processed. Up to one year after expiry you can still renew with the 9 hours, renewal fee and late charge. Lapsed more than one year (and under five) means re-examination plus application, renewal and late fees.",
+      reciprocity: [
+        "Non-residents certified by CLOSED-BOOK exam in a state with substantially equal requirements may be certified by reciprocity, only in the matching categories, on a letter from the home-state agency (77 Ill. Adm. Code 830.300). Illinois residents cannot use reciprocity. The current restricted-use application has a reciprocity checkbox for Indiana, Iowa, Wisconsin or Missouri.",
+        "Losing the home-state certificate cancels the Illinois reciprocal certificate."
+      ]
+    },
+    notes: "IDPH regulates STRUCTURAL pest control only. Lawn, turf and agricultural commercial applicators in Illinois are licensed by the Illinois Department of Agriculture under the Illinois Pesticide Act — not researched here and not to be conflated. Fee conflict resolved: the Act sets $75 for the exam application and original certificate plus $50 per sub-category; the restricted-use form (Rev. 6/19) asks for $125 total for General Standards plus sub-categories, which matches $75 + $50. The IDPH seminar list page loads its table by script, so individual courses could not be read. 830.200 says classroom contact hours; whether online courses count was not confirmed — ask IDPH before publishing anything about online CE. 830.180 still cites an obsolete idph.state.il.us URL."
+  },
+  IN: {
+    agency: "Office of Indiana State Chemist (OISC) — Pesticide Section, Purdue University",
+    agencyUrl: "https://oisc.purdue.edu/pesticide/commercial_pesticide_fertilizer_applicators.html",
+    verified: true,
+    regulatory: {
+      stateCode: "IN",
+      verifiedOn: "2026-10-01",
+      reviewedByPath: null,
+      sourceUrls: [
+        "https://oisc.purdue.edu/pesticide/commercial_pesticide_fertilizer_applicators.html",
+        "https://oisc.purdue.edu/pesticide/continuing_certification_program.html",
+        "https://oisc.purdue.edu/pesticide/exam_dates_and_sign_up.html",
+        "https://oisc.purdue.edu/pesticide/pdf/application_credentials.pdf",
+        "https://ag.purdue.edu/department/extension/ppp/commercial-applicators/recertification/cch-requirements.html"
+      ],
+      licenseCategories: [
+        {
+          code: "3a",
+          name: "Ornamental Pest Management"
+        },
+        {
+          code: "3b",
+          name: "Turf Management"
+        },
+        {
+          code: "6",
+          name: "Industrial Weed Management"
+        },
+        {
+          code: "7a",
+          name: "Industrial, Institutional, Structural and Health-Related Pest Management"
+        },
+        {
+          code: "7b",
+          name: "Termite Control"
+        },
+        {
+          code: "7d",
+          name: "Fumigation"
+        },
+        {
+          code: "8",
+          name: "Community-Wide Mosquito Control"
+        },
+        {
+          code: "12",
+          name: "Wood Destroying Pest Inspection"
+        },
+        {
+          code: "13",
+          name: "Limited Certification"
+        },
+        {
+          code: "RT",
+          name: "Registered Technician"
+        }
+      ],
+      examStructure: "Two steps: a written Core exam, then a category exam. Exams are scheduled through Metro Institute (indiana.metrosignup.com); no paper exams after training. No exam may be attempted more than three times in any 12-month period. For-hire certification in 7b (termite) or 12 (WDO inspection) also requires a State Chemist-approved practical hands-on training program first. Category 13 is Core exam only. Once certified you must ALSO hold an annual licence (credential) to buy, use or supervise pesticide use.",
+      applicationFeeUsd: 45,
+      renewalCycleMonths: 60,
+      ceuHoursPerCycle: null,
+      ceuHoursByCategory: [
+        {
+          category: "7a — Industrial, Institutional, Structural and Health-Related",
+          hours: 20
+        },
+        {
+          category: "7b — Termite Control",
+          hours: 15
+        },
+        {
+          category: "7d — Fumigation",
+          hours: 20
+        },
+        {
+          category: "3a — Ornamental",
+          hours: 15
+        },
+        {
+          category: "3b — Turf",
+          hours: 20
+        },
+        {
+          category: "6 — Industrial Weed",
+          hours: 15
+        },
+        {
+          category: "8 — Community-Wide Mosquito Control",
+          hours: 15
+        },
+        {
+          category: "12 — Wood Destroying Pest Inspection",
+          hours: 10
+        },
+        {
+          category: "13 — Limited Certification",
+          hours: 10
+        },
+        {
+          category: "RT — Registered Technician",
+          hours: 8
+        }
+      ],
+      recertByTier: [
+        {
+          tier: "Certified commercial applicator",
+          requirement: "The CCH total for each category held, per five-year certification, or retest Core and category",
+          note: "CCH = continuing certification hour, one hour of OISC-approved instruction. OISC lists the requirement \"in each category\", so a 7a + 7b holder should plan on both figures. No more than half the required CCHs may come from any single program — you cannot clear it at one event."
+        },
+        {
+          tier: "Registered Technician",
+          requirement: "8 CCHs per certification period, or repeat one of the RT qualifying options",
+          note: "Must be supervised by a fully certified applicator. RT credential $45 a year."
+        }
+      ],
+      acceptedFormats: [
+        "OISC-approved conferences, workshops and educational programs (university, government or industry)",
+        "Retesting (Core plus category) instead of CCHs"
+      ],
+      approvedProviders: [
+        {
+          name: "OISC CCH program locator (official)",
+          url: "https://inplants.oisc.purdue.edu/USAPlantsIN/PesticideApplicator/MeetingSearch.aspx"
+        },
+        {
+          name: "Purdue Pesticide Programs — recertification",
+          url: "https://ag.purdue.edu/department/extension/ppp/commercial-applicators/recertification/cch-requirements.html"
+        }
+      ],
+      renewalDeadline: "Certification is valid five years, expiring 31 December of the fourth year after the year you qualified. Earn the CCHs inside that window and certification renews automatically for five more years. Separately, the licence credential expires every 31 December and must be renewed annually.",
+      reciprocity: [
+        "OISC accepts out-of-state applicants for an Indiana licence based on a current licence from the home state (copy enclosed with the credential application). Confirm category equivalence with OISC: 765-494-1492."
+      ]
+    },
+    notes: "Passing score for OISC exams was not stated on any page read — left out of examStructure on purpose. There is no 7c on the current OISC list (numbering jumps 7b to 7d). The \"Required CCHs: 8\" line with no heading on the OISC page is the Registered Technician entry (confirmed in page source and on the Purdue PPP page). OISC pages still carried a Dec 2025 holiday-closure banner and a temporary-address notice when read. Business licence is also $45 a year."
+  },
+  IA: {
+    agency: "Iowa Department of Agriculture and Land Stewardship (IDALS) — Pesticide Bureau",
+    agencyUrl: "https://iowaagriculture.gov/pesticide-bureau/applicator-licensing-certification",
+    verified: true,
+    regulatory: {
+      stateCode: "IA",
+      verifiedOn: "2026-10-01",
+      reviewedByPath: null,
+      sourceUrls: [
+        "https://www.legis.iowa.gov/docs/iac/chapter/21.45.pdf",
+        "https://www.legis.iowa.gov/docs/code/206.5.pdf",
+        "https://iowaagriculture.gov/pesticide-bureau/applicator-licensing-certification",
+        "https://iowaagriculture.gov/sites/default/files/pesticides/CertificationCategoriesDescription.pdf",
+        "https://iowaagriculture.gov/sites/default/files/2025/Pesticide%20Applicator%20Rule%20Changes_Overview.pdf",
+        "https://iowaagriculture.gov/news/pesticide-applicator-testing-options"
+      ],
+      licenseCategories: [
+        {
+          code: "3OT",
+          name: "Ornamental and turf pest control"
+        },
+        {
+          code: "3T",
+          name: "Turf pest control"
+        },
+        {
+          code: "3O",
+          name: "Ornamental pest control"
+        },
+        {
+          code: "6",
+          name: "Right-of-way pest control"
+        },
+        {
+          code: "7A",
+          name: "General and household pest control"
+        },
+        {
+          code: "7B",
+          name: "Termite control"
+        },
+        {
+          code: "7C",
+          name: "Non-soil fumigation"
+        },
+        {
+          code: "7D",
+          name: "Community insect control"
+        },
+        {
+          code: "7E",
+          name: "Wood preservatives"
+        },
+        {
+          code: "7F",
+          name: "Antifouling paints"
+        },
+        {
+          code: "8",
+          name: "Public health pest control"
+        }
+      ],
+      examStructure: "All commercial applicators pass the Core exam plus each category exam, administered by IDALS. Free in-person testing runs monthly September–May at IDALS/ISU Extension sites; commercial exams can also be taken online with a third-party proctoring service for a fee paid to that service. From 1 January 2026 the oral examination option is discontinued and applicators applying RUPs must be at least 18. 7B also covers wood-destroying insect inspections for real estate reports.",
+      applicationFeeUsd: 75,
+      renewalCycleMonths: 36,
+      ceuHoursPerCycle: null,
+      ceuHoursByCategory: [
+        {
+          category: "Each certification category held — every year of the three-year cycle",
+          hours: 2
+        }
+      ],
+      recertByTier: [
+        {
+          tier: "Commercial, noncommercial and public applicator",
+          requirement: "2 hours of approved continuing instruction EACH YEAR for each category, or pass the exam every third year",
+          note: "Annual, not end-loaded: miss the 2 hours in any one year of the cycle and you must pass the exam to recertify. Credits from one year cannot be used in another year. A single 2-hour course may be approved for more than one category. Licensees keep the completion certificates on file for inspection. Source: 21 IAC 45.22(4)–(6)."
+        },
+        {
+          tier: "Certified handler",
+          requirement: "Pass the handler exam again every three years",
+          note: "Mixers/loaders working for a licensed applicator. 21-day grace period from initial employment."
+        },
+        {
+          tier: "Noncertified applicator",
+          requirement: "Up to 21 days from initial employment under direct supervision only",
+          note: "Direct supervision means the certified applicator is physically present, in sight or hearing distance."
+        }
+      ],
+      acceptedFormats: [
+        "IDALS-approved Continuing Instruction Courses (CIC), delivered with ISU Extension and Outreach",
+        "Examination every third year in place of CIC"
+      ],
+      approvedProviders: [
+        {
+          name: "ISU Extension PSEP — commercial applicator CIC information (linked by IDALS)",
+          url: "https://www.extension.iastate.edu/psep/commercial-pesticide-applicator-information"
+        },
+        {
+          name: "IDALS CIC agenda 2027–2029",
+          url: "https://iowaagriculture.gov/sites/default/files/pesticides/CIC%20Standards%20Commercial%20Agenda%2027-29_0.pdf"
+        }
+      ],
+      renewalDeadline: "Certification expires 31 December of the third year. The company licence expires every 31 December. Anyone first certified on or after 1 October starts the cycle the following 1 January. The CIC must be completed in each calendar year of the cycle.",
+      reciprocity: [
+        "Confirm with IDALS Pesticide Bureau (515-281-8591). The current rule only names reciprocal certification for aerial applicators."
+      ]
+    },
+    notes: "Category CODES come from the IDALS description sheet dated 1/12/2011 (which calls 7C \"Fumigation\"); NAMES come from the current 21 IAC 45 (IAC 4/30/25), which renames it \"Non-soil fumigation\" and numbers the subcategories 1–6 under category 7. Verify codes with IDALS before print. 2026 rule changes (age 18, 21-day supervision, no oral exams) are from IDALS overview PDF. Exam passing score not found in the rule text read. ISU PSEP pages returned 403 to automated fetch — URL taken from the IDALS licensing page link, content not read. Online exam proctoring fee amount not confirmed on an agency page read in full; omitted."
+  },
+  KS: {
+    agency: "Kansas Department of Agriculture (KDA) — Pesticide and Fertilizer Program",
+    agencyUrl: "https://www.agriculture.ks.gov/divisions-programs/pesticide-and-fertilizer",
+    verified: true,
+    regulatory: {
+      stateCode: "KS",
+      verifiedOn: "2026-10-01",
+      reviewedByPath: null,
+      sourceUrls: [
+        "https://www.law.cornell.edu/regulations/kansas/K-A-R-4-13-3",
+        "https://www.law.cornell.edu/regulations/kansas/K-A-R-4-13-13",
+        "https://www.law.cornell.edu/regulations/kansas/K-A-R-4-13-23",
+        "https://www.law.cornell.edu/regulations/kansas/K-A-R-4-13-33",
+        "https://extension.k-state.edu/pesticides-ipm/pesticide-applicators/commercial-applicators.html",
+        "https://portal.kda.ks.gov/PAF/PafTraining/TrainingEventList"
+      ],
+      licenseCategories: [
+        {
+          code: "3A",
+          name: "Ornamental pest control"
+        },
+        {
+          code: "3B",
+          name: "Turf pest control"
+        },
+        {
+          code: "3C",
+          name: "Interior landscape pest control"
+        },
+        {
+          code: "6",
+          name: "Right-of-way pest control"
+        },
+        {
+          code: "7A",
+          name: "Wood-destroying pest control"
+        },
+        {
+          code: "7B",
+          name: "Stored products pest control"
+        },
+        {
+          code: "7C",
+          name: "Industrial weed control"
+        },
+        {
+          code: "7D",
+          name: "Health-related pest control"
+        },
+        {
+          code: "7E",
+          name: "Structural pest control"
+        },
+        {
+          code: "7F",
+          name: "Wood preservation and wood products treatment"
+        },
+        {
+          code: "8",
+          name: "Public health pest control"
+        }
+      ],
+      examStructure: "General core exam plus a category or subcategory exam for each area of work, hosted by KDA. A grade of at least 75% is required on each commercial applicator exam (K.A.R. 4-13-13(c)) — higher than the 70% most states use.",
+      applicationFeeUsd: null,
+      renewalCycleMonths: 36,
+      ceuHoursPerCycle: null,
+      ceuHoursByCategory: [
+        {
+          category: "Core — once per certification period, however many subcategories held",
+          hours: 1
+        },
+        {
+          category: "7A wood-destroying, 7B, 7C, 7D, 7E structural, 3A, 3B, 6, 8 — each",
+          hours: 7
+        },
+        {
+          category: "3C interior landscape — each",
+          hours: 5
+        },
+        {
+          category: "7F wood preservation — each",
+          hours: 3
+        }
+      ],
+      recertByTier: [
+        {
+          tier: "Certified commercial applicator",
+          requirement: "1 core hour plus 7, 5 or 3 pest-management hours for EACH subcategory held, per three-year period, or retest",
+          note: "A typical 7A + 7E pest control certification is 1 core + 7 + 7 = 15 hours. Hours are added up per subcategory; extras do not carry forward. If your subcategories sit on different three-year clocks you may need more than one core hour."
+        },
+        {
+          tier: "Registered pest control technician",
+          requirement: "Registration under a licensed business — confirm current training requirement with KDA",
+          note: "Technician registration and renewal fees are set in K.A.R. 4-13-33."
+        }
+      ],
+      acceptedFormats: [
+        "KDA-approved training programs (K-State Research and Extension and other approved sponsors)",
+        "Retesting"
+      ],
+      approvedProviders: [
+        {
+          name: "KDA approved recertification training events (official)",
+          url: "https://portal.kda.ks.gov/PAF/PafTraining/TrainingEventList"
+        },
+        {
+          name: "K-State Pesticide Safety and IPM — commercial applicator recertification",
+          url: "https://extension.k-state.edu/pesticides-ipm/pesticide-applicators/commercial-applicators.html"
+        }
+      ],
+      renewalDeadline: "Credits must be earned by 31 December of the expiration year. The renewal window is October–December of that year, and renewal (application plus per-category fees to KDA) is separate from earning credits. Fail to renew within 30 days after expiry and ALL earned credits are forfeited — full examination is then required.",
+      reciprocity: [
+        "Confirm with KDA Pesticide and Fertilizer Program: 785-564-6688, KDA.PestFert@ks.gov."
+      ]
+    },
+    notes: "All agriculture.ks.gov pages and documents returned 403 (Akamai bot block) to both curl and WebFetch, so nothing was read directly from KDA; agencyUrl is the link K-State uses. Facts come from K.A.R. text on Cornell LII and the K-State land-grant PSEP page. Fees deliberately null: K.A.R. 4-13-20/23/33 contain \"$X through June 30, 2015, reverting to $Y unless modified by statute\" language, and a 2018 K-State booklet says $50 per category renewal — neither confirmed current. Kansas has no separate fumigation subcategory in 4-13-3. Technician 90-day training rule appears only in a K-State docx not read; left out."
+  },
+  KY: {
+    agency: "Kentucky Department of Agriculture (KDA) — Structural Pest Control Branch",
+    agencyUrl: "https://www.kyagr.com/Content.aspx?PageId=322",
+    verified: true,
+    regulatory: {
+      stateCode: "KY",
+      verifiedOn: "2026-10-01",
+      reviewedByPath: null,
+      sourceUrls: [
+        "https://apps.legislature.ky.gov/law/kar/titles/302/026/020/",
+        "https://apps.legislature.ky.gov/law/kar/titles/302/026/050/",
+        "https://apps.legislature.ky.gov/law/kar/titles/302/026/010/",
+        "https://www.kyagr.com/Content.aspx?PageId=322",
+        "https://www.kyagr.com/licensing/ag-licensing.aspx?program=29"
+      ],
+      licenseCategories: [
+        {
+          code: "3",
+          name: "Ornamental, turf and lawn care"
+        },
+        {
+          code: "6",
+          name: "Right-of-way pest control"
+        },
+        {
+          code: "7(a)",
+          name: "Structural pest management"
+        },
+        {
+          code: "7(b)",
+          name: "Structural fumigation"
+        },
+        {
+          code: "7(c)",
+          name: "Wood preservatives"
+        },
+        {
+          code: "8",
+          name: "Public health pest control"
+        },
+        {
+          code: "13",
+          name: "Non-soil fumigation"
+        }
+      ],
+      examStructure: "Written, proctored certification exam in each category sought, covering the core standards and the category standards; 70% minimum. $25 examination fee per sitting, charged pass or fail. After passing you have 30 days to pay the licence fee — $25 for an applicator, $100 for an operator — or you must retest. KDA gives the Pest Control Operator exam three times a year; the commercial and non-commercial certification exam monthly at sites across the state. 7(a) covers general pests AND wood-destroying organisms in one subcategory.",
+      applicationFeeUsd: 25,
+      renewalCycleMonths: 12,
+      ceuHoursPerCycle: 12,
+      ceuHoursByCategory: [
+        {
+          category: "Each category of licence held — minimum within the 12",
+          hours: 1
+        }
+      ],
+      recertByTier: [
+        {
+          tier: "Licensed operator and applicator",
+          requirement: "12 CEUs in the three-year period before the annual renewal, at least 1 specific to each category held",
+          note: "1 CEU = one 50-minute contact hour, awarded in full units only. Short of 12 and the licence is not reissued until you pass the competency exam for the deficient licence and pay any fines. Source: 302 KAR 26:020 Section 6."
+        },
+        {
+          tier: "Structural pest management company trainee",
+          requirement: "Registered with KDA before applying pesticides; registration lasts 90 days and cannot be renewed",
+          note: "$25 registration. Must be 18+, trained by a licensed operator or applicator under 302 KAR 26:050 Section 6, and work under direct supervision of someone licensed in the category."
+        }
+      ],
+      acceptedFormats: [
+        "KDA-approved continuing education training, in full 50-minute units"
+      ],
+      approvedProviders: [
+        {
+          name: "KDA Structural Branch — confirm approved CEU courses (502-573-0282)",
+          url: "https://www.kyagr.com/Content.aspx?PageId=322"
+        }
+      ],
+      renewalDeadline: "Every licence expires 31 December. Not renewed by 31 January and you retest as an initial applicant after paying any fines. CEUs are counted over the rolling three years before each renewal.",
+      reciprocity: [
+        "KDA may waive certification and license a holder of a valid licence from another state, tribal or federal agency whose requirements are substantially similar and which reciprocates with Kentucky, if the person is employed by a dealer registered in Kentucky. $25 reciprocal fee. 302 KAR 26:020 Section 1(5)–(6)."
+      ]
+    },
+    notes: "The regulations moved from 302 KAR 29 (repealed) to 302 KAR 26; 26:020 current version eff. 10-20-2022. The LRC page also shows a pre-engrossment \"alternate view\" — not the operative text. CONFLICT: UK Extension county newsletters still say \"9 general and 3 specific\" CEUs every three years; the current regulation says 12 total with at least 1 per category held. Use the regulation. KDA licensing page also lists $10 per additional category testing fee (not in the regulation). No public KDA CEU course search was found; UK PSEP page had no CEU list. Non-certified applicator rule 302 KAR 26:070 not read in detail."
+  },
+  LA: {
+    agency: "Louisiana Department of Agriculture and Forestry (LDAF) — Structural Pest Control Commission",
+    agencyUrl: "https://www.ldaf.la.gov/business/pest-control/pest-control-licensing",
+    verified: true,
+    regulatory: {
+      stateCode: "LA",
+      verifiedOn: "2026-10-01",
+      reviewedByPath: null,
+      sourceUrls: [
+        "https://www.ldaf.la.gov/business/pest-control/pest-control-licensing",
+        "https://www.ldaf.la.gov/business/pest-control/pest-control-training-opportunities",
+        "https://www.law.cornell.edu/regulations/louisiana/La-Admin-Code-tit-7-SS-XXV-107",
+        "https://www.law.cornell.edu/regulations/louisiana/La-Admin-Code-tit-7-SS-XXV-109",
+        "https://www.law.cornell.edu/regulations/louisiana/La-Admin-Code-tit-7-SS-XXV-113",
+        "https://www.law.cornell.edu/regulations/louisiana/La-Admin-Code-tit-7-SS-XXV-117",
+        "https://www.doa.la.gov/media/pzcl1u45/2506.pdf"
+      ],
+      licenseCategories: [
+        {
+          code: "LP1",
+          name: "General pest control"
+        },
+        {
+          code: "LP2",
+          name: "Commercial vertebrate control"
+        },
+        {
+          code: "LP3",
+          name: "Termite control"
+        },
+        {
+          code: "LP4",
+          name: "Structural fumigation"
+        },
+        {
+          code: "LP5",
+          name: "Ship fumigation"
+        },
+        {
+          code: "LP6",
+          name: "Commodity fumigation"
+        }
+      ],
+      examStructure: "You must QUALIFY before you may sit: an entomology degree; or a degree with 12 semester hours of entomology plus one year as a registered technician in the phase; or four years within the last six as a registered technician (or out-of-state technician) in the phase. Termite control also requires a commission-approved comprehensive termite program; structural fumigation 30 supervised jobs; ship fumigation 200. The Commission or its staff must approve the application first. Exams cost $50 per phase, need 70%, and may include oral or pest-identification parts. In-person testing is now only at the LDAF main office in Baton Rouge, or online through Everblue (extra vendor fee). The exam must have been passed no more than two years before the licence issues.",
+      applicationFeeUsd: null,
+      renewalCycleMonths: 36,
+      ceuHoursPerCycle: null,
+      ceuHoursByCategory: [
+        {
+          category: "General pest, termite and commercial vertebrate phases — minimum technical training",
+          hours: 6
+        },
+        {
+          category: "Fumigation phase — minimum technical training",
+          hours: 6
+        }
+      ],
+      recertByTier: [
+        {
+          tier: "Licensee",
+          requirement: "Attend an LDAF-approved recertification program at least once every three years",
+          note: "Minimum 6 hours technical training for general pest, termite and commercial vertebrate phases, and a further minimum 6 hours if you hold fumigation. You must attend the WHOLE program or get no credit for it. Source: LAC 7:XXV.117.E."
+        },
+        {
+          tier: "Registered technician",
+          requirement: "Annual approved training, at least 4 hours, each calendar year (1 Jan – 31 Dec)",
+          note: "Added by the June 2025 rule (LAC 7:XXV.113.P). LDAF adds at least 1 hour per category in which you are registered. Technicians must be registered within 30 days of hire and pass the technician exam (70%, $25, plus $25 registration) within 90 days; fail and you get one more 90 days, then you may not work until you pass."
+        }
+      ],
+      acceptedFormats: [
+        "LDAF-approved recertification meetings, in person",
+        "LDAF-approved virtual recertification (e.g. LPMA monthly virtual sessions)"
+      ],
+      approvedProviders: [
+        {
+          name: "LDAF USAPlants approved recertification meeting search (official)",
+          url: "https://usaplantsla.ldaf.state.la.us/USAPlantsLA/PesticideApplicator/MeetingSearch.aspx"
+        },
+        {
+          name: "LDAF structural pest control recertification opportunities",
+          url: "https://www.ldaf.la.gov/business/pest-control/pest-control-training-opportunities"
+        }
+      ],
+      renewalDeadline: "Licensee recertification must be completed by 31 December of the third year following the original certification or the most recent recertification (LAC 7:XXV.117.E.1.b). LDAF’s own web page words this deadline a year earlier, so confirm your date with LDAF before you plan around it. Technician training runs on the calendar year. Place of Business Permits expire 30 June and renew annually.",
+      reciprocity: [
+        "No reciprocity found. Out-of-state applicants must meet the education rule or show four years of experience in the last six under a recognised operator — verified with the other state’s regulator — and then pass the Louisiana exam. Confirm with LDAF: (225) 925-3763."
+      ]
+    },
+    notes: "June 2025 rule (Louisiana Register Vol. 51 No. 6, LR 51:776) removed the old \"continuing education program\" language from 113/117 and added annual registered-technician training; 117.E now ties recertification to 40 CFR 171.103. CONFLICT: the LDAF licensing page says recertify \"by December 31 of the year preceding the third anniversary\", while LAC 7:XXV.117.E.1.b says \"by December 31 of the third year following\" — a one-year difference; publish the rule text and flag it for LDAF confirmation. LDAF recert page also calls the requirement \"annual\" — that is the technician tier. The official LDAF-hosted LAC Title 7 Part XXV PDF (March 2026) is mostly non-extractable images; LII mirror used and cross-checked against the Louisiana Register amendment. Technician exam \"WDIR\" (wood destroying insect report) exists but is not a licensee phase. The Dec 2023 rule gives a six-year deadline to sit the exam after application approval."
+  },
+  ME: {
+    agency: "Maine Board of Pesticides Control (BPC), Department of Agriculture, Conservation and Forestry",
+    agencyUrl: "https://www.maine.gov/dacf/php/pesticides/applicators/licensing.html",
+    verified: true,
+    regulatory: {
+      stateCode: "ME",
+      verifiedOn: "2026-10-01",
+      reviewedByPath: null,
+      sourceUrls: [
+        "https://www.maine.gov/dacf/php/pesticides/applicators/licensing.html",
+        "https://www.maine.gov/sos/sites/maine.gov.sos/files/rules/026c031%20-%20JUL%202025.docx",
+        "https://www.maine.gov/dacf/php/pesticides/applicators/certification/commercial_applicators.shtml",
+        "https://www.maine.gov/dacf/php/pesticides/credit_calendar.shtml"
+      ],
+      licenseCategories: [
+        {
+          code: "3A",
+          name: "Outdoor Ornamentals"
+        },
+        {
+          code: "3B",
+          name: "Turf"
+        },
+        {
+          code: "3C",
+          name: "Indoor Ornamentals"
+        },
+        {
+          code: "6A",
+          name: "Right of Way Vegetation Management"
+        },
+        {
+          code: "6B",
+          name: "Industrial/Commercial/Municipal Vegetation Management"
+        },
+        {
+          code: "7A",
+          name: "Structural General Pest Control (Includes Food Processing)"
+        },
+        {
+          code: "7B",
+          name: "Structural Fumigation"
+        },
+        {
+          code: "7C1",
+          name: "Disinfectant and Biocide Treatments"
+        },
+        {
+          code: "7C2",
+          name: "Swimming Pool & Spa"
+        },
+        {
+          code: "7C3",
+          name: "Mold Remediation & Water Damage Restoration"
+        },
+        {
+          code: "7D",
+          name: "Wood Preserving"
+        },
+        {
+          code: "7E",
+          name: "Biting Fly & Other Arthropod Vectors (Ticks)"
+        },
+        {
+          code: "7F",
+          name: "Termite Pests"
+        }
+      ],
+      examStructure: "Two licence levels. Commercial Operator: closed-book Core exam plus at least one category exam. Commercial Master: the same plus a regulations exam and an oral exam by BPC staff. 80% is required on each exam (01-026 CMR Ch. 31). Fees: $10 each for Core, each category and the regulations exam; $40 for the Master oral. Exams are held monthly in Augusta or through Metro Institute test centres. Core and at least one category must both be passed within three years. Every company, branch or agency must have at least one licensed Master; an Operator licence is only valid while the employer has one.",
+      applicationFeeUsd: 105,
+      renewalCycleMonths: 36,
+      ceuHoursPerCycle: null,
+      ceuHoursByCategory: [],
+      recertByTier: [
+        {
+          tier: "Commercial Master",
+          requirement: "9 credit hours per three-year certification period",
+          note: "In subject areas relevant to your licensed categories. 1 credit = 1 hour."
+        },
+        {
+          tier: "Commercial Operator",
+          requirement: "6 credit hours per three-year certification period",
+          note: "The minimum licence for technicians working under a Master."
+        }
+      ],
+      acceptedFormats: [
+        "Board-approved meetings, seminars and workshops (BPC, UMaine Extension, industry and trade groups)",
+        "Board-approved home study courses",
+        "Out-of-state sessions, with proof of attendance (an agenda may be requested)",
+        "Presenters at approved meetings earn 2 credits per hour presented"
+      ],
+      approvedProviders: [
+        {
+          name: "BPC \"Need Credits?\" recertification credit calendar (official)",
+          url: "https://www.maine.gov/dacf/php/pesticides/credit_calendar.shtml"
+        }
+      ],
+      renewalDeadline: "Certification expires 31 December of the third year after you pass, then every third year, and the licence renews on the same 31 December. Fall short on credits in a period and you retake all the exams; fall short a second time and you must also make up the missing credits within a year or the licence is not renewed. You must attend the entire approved program to earn its credits.",
+      reciprocity: [
+        "Confirm with the Board of Pesticides Control: 207-287-2731, pesticides@maine.gov."
+      ]
+    },
+    notes: "CONFLICT, resolved in favour of the rule: BPC's older commercial_applicators.shtml page still says certification lasts SIX years, Master 18 / Operator 12 credits, $70 two-year licence and $50 master exams. The newer licensing.html page and 01-026 CMR Ch. 31 (July 2025 version) say three years, 9 / 6 credits, $105 three-year licence. Publish only the Ch. 31 figures. licensing.html also mentions \"Category 6D\" in a warning paragraph while its list shows 6A/6B — 6B used here. 8A/8B public health categories are for government officials only and were left off. No reciprocity language found in Ch. 31."
+  },
+  MD: {
+    agency: "Maryland Department of Agriculture (MDA) — Pesticide Regulation Section",
+    agencyUrl: "https://mda.prod.maryland.gov/plants-pests/pesticide-regulation/pesticide-business-licensing-certification",
+    verified: true,
+    regulatory: {
+      stateCode: "MD",
+      verifiedOn: "2026-10-01",
+      reviewedByPath: null,
+      sourceUrls: [
+        "https://mda.maryland.gov/plants-pests/SiteAssets/Pages/licensing_and_certification/Pesticide%20Applicator%20Certification%20and%20Business%20Licensing%20Requirements_Rev_07_06_2026%20%281%29%20%281%29.pdf",
+        "https://www.law.cornell.edu/regulations/maryland/COMAR-15-05-01-08",
+        "https://mda.prod.maryland.gov/plants-pests/pesticide-regulation/pesticide-business-licensing-certification",
+        "https://mda.prod.maryland.gov/plants-pests/pesticide-regulation/pesticide-business-licensing-certification/pest-control-categories"
+      ],
+      licenseCategories: [
+        {
+          code: "3A",
+          name: "Ornamental plants and shade trees-exterior"
+        },
+        {
+          code: "3B",
+          name: "Ornamental plants-interior"
+        },
+        {
+          code: "3C",
+          name: "Turf and lawn pest control"
+        },
+        {
+          code: "7A",
+          name: "General pest control"
+        },
+        {
+          code: "7B",
+          name: "Wood destroying insects"
+        },
+        {
+          code: "7C",
+          name: "Wildlife control"
+        },
+        {
+          code: "7D",
+          name: "Rodent control"
+        },
+        {
+          code: "7E",
+          name: "Fumigation"
+        },
+        {
+          code: "8",
+          name: "Public Health"
+        },
+        {
+          code: "12",
+          name: "Consultant"
+        }
+      ],
+      examStructure: "Eligibility first: 18+, plus one year of practical experience as a registered employee in the category, or a biological-science degree, or an MDA-approved initial certification course. Apply at least a month ahead. MDA gives the commercial exams every other month in Annapolis, Salisbury and Frederick: multiple-choice, closed book, the Core plus at least one category exam, 70% to pass. Unlimited retakes at $10 per exam retaken.",
+      applicationFeeUsd: 75,
+      renewalCycleMonths: 12,
+      ceuHoursPerCycle: null,
+      ceuHoursByCategory: [
+        {
+          category: "Category 7 (any subcategory) — 8 credits a year (1 credit = ½ hour)",
+          hours: 4
+        },
+        {
+          category: "Category 3 — 8 credits a year",
+          hours: 4
+        },
+        {
+          category: "Category 8 — 8 credits a year",
+          hours: 4
+        },
+        {
+          category: "Categories 2, 5 and 6 — 6 credits a year",
+          hours: 3
+        }
+      ],
+      recertByTier: [
+        {
+          tier: "Certified pest control applicator",
+          requirement: "Recertification training EVERY YEAR (1 July – 30 June), in each category held",
+          note: "MDA counts CREDITS, and 1 credit is half an hour — so \"8 credits\" is 4 hours, not 8. Holding more than one category means recertification for each. Applies to reciprocity holders too. No training and no proof on file means retaking the exams by 30 June to renew."
+        },
+        {
+          tier: "Registered employee",
+          requirement: "Complete an MDA-approved employer training program within 30 days of hire, then register",
+          note: "$30 registration, renewed annually (1 July – 30 June). Until trained, may only apply pesticides with a certified applicator or registered employee physically present."
+        },
+        {
+          tier: "Pesticide business licence",
+          requirement: "Annual, 1 July – 30 June; $150 plus proof of liability insurance",
+          note: "Must designate at least one certified applicator in each category of service offered."
+        }
+      ],
+      acceptedFormats: [
+        "MDA-approved recertification meetings, in or out of Maryland",
+        "Out-of-state or unsubmitted meetings: the applicator submits the agenda and proof of attendance for MDA approval"
+      ],
+      approvedProviders: [
+        {
+          name: "MDA Pesticide Regulation Section — confirm approved recertification meetings (410-841-5710)",
+          url: "https://mda.prod.maryland.gov/plants-pests/pesticide-regulation/pesticide-business-licensing-certification"
+        }
+      ],
+      renewalDeadline: "The training year and the certificate both run 1 July – 30 June, with renewal applications due 30 June (online at egov.maryland.gov/mda/pesticides). Renewal forms go out in April to those whose training is on record. A certificate not renewed within a year means retaking the exams.",
+      reciprocity: [
+        "One-time certification for NON-RESIDENTS based on exam-earned certification in their state of residence: submit the home-state certificate and driver’s licence. Maryland residents cannot use reciprocity. After that, Maryland’s annual recertification applies in full."
+      ]
+    },
+    notes: "Main source is MDA's \"Pesticide Applicator Certification and Business Licensing Requirements\" PDF, revised 7/2026 — its category page did not extract, so category names were taken from COMAR 15.05.01.08 on LII and the MDA categories web page. Wood treatment / TBT / sewer root sit in a miscellaneous category whose number was not visible on LII — left off rather than guessed. Credit table converted to hours in ceuHoursByCategory (half-hour credits); keep the credit wording on the page. Categories 4 and 11 need 4 credits once every three years; 10 and 12 must attend training relevant to their work. No public MDA recertification meeting list URL was found (the old Recertification-Meetings page 404s)."
   }
 } /* END STATES */;

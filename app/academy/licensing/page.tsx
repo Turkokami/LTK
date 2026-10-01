@@ -78,13 +78,15 @@ export default function LicensingIndexPage() {
           />
         </div>
 
-        <h2 className="h2 mb-2">Verified states</h2>
+        <h2 className="h2 mb-2">{pending.length ? 'Verified states' : 'All 50 states'}</h2>
         <p className="mb-5 max-w-[62ch] text-ink2">
           Each of these was checked against the state agency and dated. Open one for the licence
           categories, exam structure and renewal rules.
         </p>
         <StateGrid states={PUBLISHED_STATES} hrefFor={(s) => `/academy/licensing/${s.slug}/`} />
 
+        {pending.length ? (
+          <>
         <h2 className="h2 mb-2 mt-14">Being verified</h2>
         <p className="mb-5 max-w-[62ch] text-ink2">
           We publish a state only after checking every figure against its own regulator &mdash; a
@@ -98,6 +100,13 @@ export default function LicensingIndexPage() {
             </li>
           ))}
         </ul>
+          </>
+        ) : (
+          <p className="mb-6 mt-10 max-w-[62ch] text-ink2">
+            All 50 states are in. Rules change, so every page shows the date it was checked &mdash; if
+            something looks out of date for your state, flag it in the {site.discord.name}.
+          </p>
+        )}
         <DiscordButton variant="ghost">Ask about your state</DiscordButton>
       </div>
     </>

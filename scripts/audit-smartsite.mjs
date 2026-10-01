@@ -109,13 +109,13 @@ const MUST_404 = [
   // Verify against the regulator's OWN publication — never a third-party CEU vendor. Every
   // wrong figure found during Wave 1 came from a vendor page ranking on page one of Google.
   //
-  // Idaho is genuinely unverified while its research batch runs (Arizona was verified 2026-10-01). They are listed for a second reason: with
-  // Wave 1 complete this array would otherwise be EMPTY, and an empty array means the gate
-  // mechanism itself is never exercised. A regression that deleted the verified check
-  // entirely would sail through a green audit. Keeping real unverified states here means the
-  // harness proves, every run, that unverified data still 404s.
-  ['/academy/ceu/idaho/', 'R-14 — research batch ID-MD in progress'],
-  ['/academy/licensing/idaho/', 'R-14 — research batch ID-MD in progress'],
+  // ALL 50 STATES ARE VERIFIED (2026-10-01), so no real unverified state is left to exercise
+  // the verified gate. These routes still prove that state pages outside the verified
+  // registry 404 (dynamicParams = false): if someone switched the templates to render any
+  // slug, these would start returning 200. If a state is ever demoted to verified: false,
+  // add its routes here in the same commit.
+  ['/academy/ceu/puerto-rico/', 'not a published state'],
+  ['/academy/licensing/puerto-rico/', 'not a published state'],
 ];
 
 for (const [route, blocker] of MUST_404) {

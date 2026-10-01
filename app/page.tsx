@@ -3,7 +3,7 @@ import { pageMeta } from '@/lib/seo/metadata';
 import { buildGraph } from '@/lib/schema/graph';
 import { JsonLd } from '@/components/JsonLd';
 import { HUBS } from '@/lib/content/hubs';
-import { WAVE_1, WAVE_2 } from '@/lib/content/states';
+import { STATES } from '@/lib/content/states';
 import { site } from '@/lib/site.config';
 import { ASSETS } from '@/lib/brand';
 import { DiscordButton, DiscordChannels } from '@/components/community/Discord';
@@ -264,7 +264,7 @@ export default function HomePage() {
           </p>
 
           <ul className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-5">
-            {[...WAVE_1, ...WAVE_2].map((s) => (
+            {[...STATES].sort((a, b) => a.name.localeCompare(b.name)).map((s) => (
               <li key={s.code}>
                 <a
                   href={`/academy/ceu/${s.slug}/`}
@@ -278,7 +278,7 @@ export default function HomePage() {
           </ul>
 
           <p className="mt-4 text-sm text-ink3">
-            More states go up as each one is verified. Don&rsquo;t see yours? Ask in the{' '}
+            All 50 states, each checked against its own agency and dated. Questions about yours? Ask in the{' '}
             <a href={site.discord.invite} target="_blank" rel="noopener noreferrer" className="link">
               Discord
             </a>{' '}

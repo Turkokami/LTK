@@ -200,3 +200,12 @@ Recheck before relying on these:
   - HI renewal fee conflicts: $278/$212 on the Board page vs $210/$160 in the Jan 2026 FAQ. The record carries only the $30 DAB applicator fee.
   - DE admin code wouldn't extract.
   - GA has no public approved-course search.
+- **Batch ID–MD:**
+  - ME, KY and ID follow the current administrative code over older agency pages.
+  - LA's recert deadline differs by a year (LDAF page vs LAC 7:XXV.117); the reader caveat is on the page.
+  - KS fees are null (the K.A.R. fee sections have reversion clauses), and agriculture.ks.gov blocked everything.
+  - KS codes are reversed: 7A is wood-destroying, 7E is general structural.
+  - MD credits (half-hour) were converted by the research batch itself.
+  - IA's 7A–7F codes come from a 2011 IDALS sheet.
+
+**All 50 states verified as of 2026-10-01.** The audit gate now checks that non-state slugs 404.
