@@ -34,7 +34,7 @@ const HUB = getHub('fields');
 export const metadata: Metadata = pageMeta({
   title: 'Every field in pest control, explained',
   description:
-    'Pest control is fourteen trades: general pest, termite, wildlife, exclusion, insulation, K9 detection and more. What each job is, who licenses it, how to start.',
+    'Pest control is sixteen trades: general pest, termite, wildlife, exclusion, insulation, K9 detection and more. What each job is, who licenses it, how to start.',
   path: HUB.path,
 });
 

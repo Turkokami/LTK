@@ -409,6 +409,19 @@ export const FIELD_PHOTOS: Record<string, { hero: FieldPhoto; work: FieldPhoto }
   },
 };
 
+/**
+ * Front-page group cards. Chosen for how they read at a wide 2:1 crop, not just for the
+ * first field in the group. LTK library first; groups without an entry fall back to their
+ * lead field's hero photo.
+ */
+export const GROUP_PHOTOS: Record<string, FieldPhoto> = {
+  structural: { src: "/photos/community/termites-wdo/p358.jpg", alt: "A huge termite mud tube running up an interior wall from the floor", width: 1280, height: 960, credit: "LTK member photo", license: "Owner supplied", source: null, placeholder: false, position: "center 45%" },
+  wildlife: { src: "/photos/community/commercial-monitoring/p266-3.jpg", alt: "A squirrel caught in a cage trap set on a roof", width: 1280, height: 964, credit: "LTK member photo", license: "Owner supplied", source: null, placeholder: false, position: "center 50%" },
+  building: { src: "/photos/field/vent-screen-installed.jpg", alt: "A new steel mesh vent screen installed in a foundation vent", width: 1600, height: 1600, credit: "LTK member photo", license: "Owner supplied", source: null, placeholder: false, position: "center 50%" },
+  outdoor: { src: "/photos/community/gear/g37.jpg", alt: "A battery backpack mister ready for a mosquito treatment", width: 960, height: 1280, credit: "LTK member photo", license: "Owner supplied", source: null, placeholder: false, position: "center 45%" },
+  business: { src: "/photos/community/gear/g48.jpg", alt: "Four backpack sprayers lined up in a pickup bed, ready for the day", width: 1280, height: 960, credit: "LTK member photo", license: "Owner supplied", source: null, placeholder: false, position: "center 55%" },
+};
+
 export function fieldPhotos(slug: string) {
   return FIELD_PHOTOS[slug];
 }

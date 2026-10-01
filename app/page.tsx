@@ -7,8 +7,8 @@ import { WAVE_1, WAVE_2 } from '@/lib/content/states';
 import { site } from '@/lib/site.config';
 import { ASSETS } from '@/lib/brand';
 import { DiscordButton, DiscordChannels } from '@/components/community/Discord';
-import { FIELD_GROUPS, fieldsInGroup } from '@/lib/content/disciplines';
-import { FIELD_GALLERY, fieldPhotos } from '@/lib/content/photos';
+import { DISCIPLINES, FIELD_GROUPS, fieldsInGroup } from '@/lib/content/disciplines';
+import { FIELD_GALLERY, GROUP_PHOTOS, fieldPhotos } from '@/lib/content/photos';
 
 export const metadata: Metadata = pageMeta({
   title: 'Every field in pest control, plus the LTK Discord',
@@ -34,6 +34,8 @@ const STEPS = [
     body: 'Bug ID help, treatment talk, gear reviews from people who run it daily, and a league to see who’s sharpest.',
   },
 ];
+
+const NUMBER_WORDS: Record<number, string> = { 12: 'twelve', 13: 'thirteen', 14: 'fourteen', 15: 'fifteen', 16: 'sixteen', 17: 'seventeen', 18: 'eighteen', 19: 'nineteen', 20: 'twenty' };
 
 export default function HomePage() {
   const graph = buildGraph({
@@ -102,7 +104,7 @@ export default function HomePage() {
           <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
             <div>
               <p className="eyebrow mb-2">Pest control, field by field</p>
-              <h2 className="h2 mb-2 max-w-[26ch]">It&rsquo;s not one job. It&rsquo;s fourteen.</h2>
+              <h2 className="h2 mb-2 max-w-[26ch]">It&rsquo;s not one job. It&rsquo;s {NUMBER_WORDS[DISCIPLINES.length] ?? DISCIPLINES.length}.</h2>
               <p className="max-w-[60ch] text-ink2">
                 Each field has its own regulator, its own skills and its own route in. Pick one to
                 see what the work is really like and what it takes to get licensed.
@@ -116,7 +118,7 @@ export default function HomePage() {
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {FIELD_GROUPS.map((g) => {
               const lead = fieldsInGroup(g.id)[0];
-              const photo = lead ? fieldPhotos(lead.slug)?.hero : undefined;
+              const photo = GROUP_PHOTOS[g.id] ?? (lead ? fieldPhotos(lead.slug)?.hero : undefined);
               return (
               <div key={g.id} className="card overflow-hidden">
                 {photo ? (
