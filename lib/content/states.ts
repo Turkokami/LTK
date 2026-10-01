@@ -9,6 +9,8 @@
  * page whose record is unverified will not render in production — see REGISTRY.md R-14.
  */
 
+import { STATE_RESEARCH } from './state-research';
+
 export interface StateRecord {
   name: string;
   /** USPS two-letter code. Used in JobPosting addressRegion and mono spec columns. */
@@ -58,7 +60,7 @@ export interface StateRegulatory {
   reciprocity: string[];
 }
 
-export const STATES: StateRecord[] = [
+const BASE_STATES: StateRecord[] = [
   { name: 'Alabama', code: 'AL', slug: 'alabama', wave: 3, agency: null, agencyUrl: null, verified: false },
   { name: 'Alaska', code: 'AK', slug: 'alaska', wave: 3, agency: null, agencyUrl: null, verified: false },
   { name: 'Arizona', code: 'AZ', slug: 'arizona', wave: 2, agency: null, agencyUrl: null, verified: false },
@@ -111,6 +113,19 @@ export const STATES: StateRecord[] = [
   { name: 'Wyoming', code: 'WY', slug: 'wyoming', wave: 3, agency: null, agencyUrl: null, verified: false },
 ];
 
+/**
+ * Researched states (lib/content/state-research.ts, merged batch by batch) override the base
+ * records' agency, URL and verified flag. The five hand-built Wave 1 records stay as written.
+ */
+const HAND_BUILT = new Set(['CA', 'FL', 'SC', 'WA', 'TX']);
+
+export const STATES: StateRecord[] = BASE_STATES.map((s) => {
+  const r = STATE_RESEARCH[s.code];
+  return r && !HAND_BUILT.has(s.code)
+    ? { ...s, agency: r.agency ?? s.agency, agencyUrl: r.agencyUrl ?? s.agencyUrl, verified: r.verified }
+    : s;
+});
+
 export const WAVE_1 = STATES.filter((s) => s.wave === 1);
 export const WAVE_2 = STATES.filter((s) => s.wave === 2);
 export const WAVE_3 = STATES.filter((s) => s.wave === 3);
@@ -128,7 +143,7 @@ export function getState(slug: string): StateRecord | undefined {
  * Regulatory records live here as they are sourced. Empty until R-14 lands.
  * Add Wave 1 first: TX, WA, FL, CA, SC.
  */
-export const REGULATORY: Record<string, StateRegulatory> = {
+const BASE_REGULATORY: Record<string, StateRegulatory> = {
   /**
    * CALIFORNIA — Structural Pest Control Board (SPCB), inside the Department of Consumer Affairs.
    *
@@ -660,6 +675,12 @@ export const REGULATORY: Record<string, StateRegulatory> = {
       'agreements with TDA directly before relying on one.',
     ],
   },
+};
+
+/** Hand-built records win over researched ones for the same state. */
+export const REGULATORY: Record<string, StateRegulatory> = {
+  ...Object.fromEntries(Object.entries(STATE_RESEARCH).map(([code, r]) => [code, r.regulatory])),
+  ...BASE_REGULATORY,
 };
 
 export function getRegulatory(code: string): StateRegulatory | undefined {
