@@ -109,13 +109,13 @@ const MUST_404 = [
   // Verify against the regulator's OWN publication — never a third-party CEU vendor. Every
   // wrong figure found during Wave 1 came from a vendor page ranking on page one of Google.
   //
-  // These two are Wave 2 and genuinely unverified. They are listed for a second reason: with
+  // Idaho is genuinely unverified while its research batch runs (Arizona was verified 2026-10-01). They are listed for a second reason: with
   // Wave 1 complete this array would otherwise be EMPTY, and an empty array means the gate
   // mechanism itself is never exercised. A regression that deleted the verified check
   // entirely would sail through a green audit. Keeping real unverified states here means the
   // harness proves, every run, that unverified data still 404s.
-  ['/academy/ceu/arizona/', 'R-14 — Wave 2, not yet sourced'],
-  ['/academy/licensing/arizona/', 'R-14 — Wave 2, not yet sourced'],
+  ['/academy/ceu/idaho/', 'R-14 — research batch ID-MD in progress'],
+  ['/academy/licensing/idaho/', 'R-14 — research batch ID-MD in progress'],
 ];
 
 for (const [route, blocker] of MUST_404) {
