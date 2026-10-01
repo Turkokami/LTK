@@ -2808,6 +2808,968 @@ export const FIELD_GUIDES: Record<string, FieldGuide> = /* BEGIN GUIDES */ {
       }
     ],
     notes: "Deliberately does not duplicate owner-topics.ts (hiring, insurance, vehicles/hazmat, pesticide records, OSHA, buying/selling); the page should link to /trade/start/ and /trade/owners/<slug>/ (slugs: hiring-your-first-technician, business-insurance, vehicles-and-hazmat, pesticide-recordkeeping, osha-for-pest-companies, buying-and-selling-a-company). Census numbers: SUSB 2022 is employer firms only (excludes nonemployers); receipts in the file are in $1,000s. Average receipts per firm by size class are MY ARITHMETIC (receipts / firms) and the copy says 'about'. Average payroll per employee ($50,300) is also my arithmetic (7,039,610 / 139,917). 'About 36 percent of workers at 21 firms with 500+ employees' = 50,148 / 139,917. CBP 2023 (16,535 establishments, 139,150 employees, $7.44B payroll; 9,415 establishments under 5 employees) was read but not used in copy, to avoid mixing years; available if wanted. CBP legal-form codes suggest most establishments are S corporations (code Z = 10,044) but I did not verify the code key, so not used. Nonemployer Statistics 2023 US file only goes to 4-digit NAICS 5617, so I have no count of one-person pest firms. BED survival data is for the whole Administrative and Waste Services sector (NAICS 56), not pest control specifically; the copy says so. 'Very large national companies that buy smaller ones' rests on the owner-topics buying/selling page (Rollins SEC filings, FTC order) and is not re-sourced here. Texas qualifying-route details come from start-company.ts, not re-opened. SBA loan FAQ paraphrases sba.gov/loans ('Loans backed by SBA', 'SBA-guaranteed loan program', Lender Match); 'does not usually lend directly' is my framing of 'backed' loans, re-check wording. The startup-costs content (one-time vs monthly expenses, break-even) was read on sba.gov/counseling/plan-your-business/ after the old business-guide URL 301-redirected there. No source found for owner income, start-up cost ranges or owner hours; all phrased as unknowns."
+  },
+  exclusion: {
+    intro: "Exclusion is the work of keeping pests out of a building for good. You find the gaps that rodents, bats, birds, insects and other wildlife use to get in, and you close them with materials the animal cannot chew through or squeeze past. University of California IPM calls exclusion, or 'building them out', the most successful and longest-lasting strategy for rat control around structures. The job is closer to light construction than to spraying: ladders, rooflines, crawlspaces, hardware cloth, sheet metal and sealant. It suits people who like building and fixing things, who are comfortable at height and in tight spaces, who notice small details, and who want work they can point at when the day is done. It is also a field with an unusual legal position. In some states, exclusion done without pesticides sits outside pest control law altogether. In others it needs a pest licence or a limited certificate, and contractor licensing can come into play on bigger jobs. BLS does not track exclusion as its own occupation, so pay figures here are honest approximations, clearly labelled.",
+    dayInTheLife: [
+      "Most days start at the truck. Exclusion crews carry more hardware than a typical pest route: extension and step ladders, sheet metal, galvanized mesh, steel wool, sealants, a drill and fasteners, and the personal protective gear for attics and crawlspaces. BLS describes pest control work in general as travel to a client's home or business, indoors and outdoors, in all types of weather, and that is exactly what exclusion looks like.",
+      "A large share of the work is inspection. You walk the outside of the building looking at the roofline, eaves, soffits and rafters, the foundation, vents, doors and windows without weather stripping, and every place a pipe, cable, gas line or electrical line goes through a wall. Inside, you look in attics, basements, closets, under sinks and behind appliances. These are the same places the CDC tells homeowners to check. The reason it takes so long is the size of the target: the CDC notes a mouse can fit through a hole the width of a pencil, about a quarter of an inch. You photograph and measure what you find, and on many jobs you also write the estimate. BLS lists measuring the area to be treated, estimating the cost of services and creating barriers to prevent pests from entering among the core duties of pest control workers.",
+      "Install days are hands-on. Small holes get steel wool held in with caulk or foam; larger openings get lath screen or metal, cement, hardware cloth or metal sheeting, which is the material list the CDC gives. Material choice matters more than it looks. UC IPM warns that rats can chew through plastic, foam, wood and caulk, recommends sealing every hole larger than a quarter inch to keep out both rats and mice, specifies 18-gauge or 16-gauge galvanized half-inch mesh for vent grills, and says never to use lightweight chicken wire. Much of this is done on a ladder at the roofline or on your knees in a crawlspace.",
+      "Exclusion rarely works alone, and the crew has to coordinate with whoever handles trapping or baiting. UC IPM advises minimizing entry points before baiting outside, so poisoned rats do not come inside to die. Where wildlife is involved, timing is set by the animal and by state wildlife law. Bat exclusion is the clearest example: Wisconsin prohibits bat exclusions from June 1 to August 15 to protect mothers and flightless pups, and Georgia says bat exclusions should be avoided between April 1 and July 31, with any exclusion in that window done by a licensed Nuisance Wildlife Control Operator. The dates are different in each state, so the schedule on a bat job comes from the local rule, not from the sales calendar.",
+      "The rest of the week is follow-up and paperwork: return visits to check that sealed points held and that no new activity has appeared, photos for the customer file, and notes for the technician who services the account. Weather decides a lot. Roof and ladder work stops when it is unsafe, and OSHA requires fall protection at four feet in general industry and six feet in construction, so the job plan has to account for height from the start."
+    ],
+    duties: [
+      "Inspect the exterior of buildings for entry points: rooflines, eaves, soffits, rafters, vents, foundation gaps and utility penetrations",
+      "Inspect attics, crawlspaces, basements and interior voids for signs of activity such as droppings, nesting, rub marks and gnawing",
+      "Measure openings and work areas, photograph findings and record them on a diagram or report",
+      "Estimate materials, labour and cost, and explain the findings to the customer",
+      "Seal small gaps with steel wool and sealant or foam, following the CDC approach",
+      "Close larger openings with hardware cloth, galvanized mesh, sheet metal, lath or cement, choosing materials pests cannot chew through",
+      "Screen vents and grills with heavy-gauge galvanized mesh rather than lightweight wire",
+      "Install door sweeps, weather stripping and other barriers at doors and windows",
+      "Coordinate with trapping or baiting so entry points are closed in the right order",
+      "Time wildlife and bat exclusions around state maternity-season rules",
+      "Work safely on ladders and rooflines, using fall protection where required",
+      "Wear protective equipment around rodent, bird and bat droppings and follow cleanup procedures",
+      "Return to check sealed points and document any new activity",
+      "Keep records of work done, materials used and follow-up findings"
+    ],
+    workEnvironment: {
+      schedule: "BLS reports that most pest control workers are employed full time, that evenings and weekends are common, and that some work more than 40 hours a week. O*NET survey data for pest control workers shows 45 percent reporting more than 40 hours in a typical week. These figures cover pest control workers broadly, not exclusion crews specifically. Ask any employer how install days are scheduled and whether long roof jobs run into overtime.",
+      seasonality: "Seasonal limits come mainly from wildlife law and weather. Bat exclusion windows are set by state wildlife agencies (for example June 1 to August 15 prohibited in Wisconsin, April 1 to July 31 avoided in Georgia). Roof work stops in unsafe weather. No source we found measures how demand for exclusion rises and falls through the year, so ask employers what a slow month looks like.",
+      physical: "Expect ladders, rooflines, crawling and kneeling. BLS notes pest control workers may spend hours standing, bending, kneeling or crawling, and must withstand summer heat in attics and winter cold in crawl spaces. In O*NET data for pest control workers, 16 percent work in cramped spaces or awkward positions every day and 48 percent at least once a week, and 40 percent are exposed to high places at least monthly.",
+      hazards: "Falls are the headline risk: OSHA says falls are among the most common causes of serious work-related injuries and deaths, and requires fall protection at four feet in general industry and six feet in construction. Rodent droppings and nests carry disease risk; the CDC says not to sweep or vacuum them, to wet them with disinfectant first, and recommends a HEPA-filtered respirator for heavy infestations. Histoplasmosis comes from breathing spores in soil or material rich in bird or bat droppings, and disturbing those accumulations is a key factor in outbreaks. Attic heat is a real risk; OSHA lists heavy physical activity, hot conditions, lack of acclimatization and heat-holding clothing as risk factors.",
+      vehicleAndTravel: "You drive between job sites all day. O*NET data shows 95 percent of pest control workers work in an enclosed vehicle every day, and BLS notes many pest control companies require a driver's licence and a good driving record. Exclusion trucks also carry ladders and sheet goods, so ask whether you will be driving a larger vehicle or towing."
+    },
+    training: {
+      entry: "BLS says pest control workers typically need a high school diploma or equivalent, and that many companies require a driver's licence and a good driving record. Construction experience is a genuine advantage, because exclusion is about how buildings are put together. If the role also involves applying pesticides, federal rules set a minimum age of 18 for commercial applicator certification. Whether an employer runs background checks or drug tests is not something we found a neutral source for; ask.",
+      onTheJob: "There is no standard exclusion curriculum. Most people learn by working beside an experienced technician: inspecting, measuring, choosing materials and doing installs. BLS notes general pest control training can usually be completed in under three months, but learning to read a building well takes longer than that. Ask whether the employer provides ladder and fall-protection training, respirator fit testing, and time with a senior inspector before you write estimates on your own.",
+      licensing: "This is where exclusion differs most from the rest of pest control. Three examples show the range. Texas: the Structural Pest Control Act does not apply to the installation, maintenance or use of a nonpesticidal barrier to remove or prevent infestation by nuisance animals, when done without a pesticide (Occupations Code 1951.058). California: people doing live capture and removal or exclusion of vertebrate pests from a structure without pesticides are exempt from structural pest control licensing if they carry the required insurance, but the exemption defines vertebrate pests to exclude mice, rats and pigeons (Business and Professions Code 8555). Florida: anyone doing commercial wildlife trapping with nonchemical methods, including exclusionary techniques, to control commensal rodents needs a limited certificate under Florida Statutes 482.157, which does not allow pesticide use or running a pest control business. The moment a pesticide is used, normal state pesticide licensing applies. Bigger structural jobs can also touch contractor licensing: in California, CSLB requires a licence for work that needs a permit, uses employees, or totals $1,000 or more. Whether a given exclusion job counts as construction is a question for the state board. Bat and wildlife work adds state wildlife agency rules. Check your state's page on this site and the agency itself before quoting or doing work.",
+      certifications: [
+        {
+          name: "Certified Wildlife Control Professional (CWCP)",
+          body: "National Wildlife Control Operators Association (NWCOA)",
+          what: "Senior credential for wildlife control operators. Requires 5 years of WCO experience totalling 10,000 hours (or 10,000 hours over 8 years part-time), two NWCOA certifications or equivalent training, an 85 percent pass on the CWCP exam, and an ethics pledge.",
+          url: "https://nwcoa.com/Certified-Wildlife-Control-Professional"
+        },
+        {
+          name: "Bat Standards Certified / Rodent Standards Certified",
+          body: "National Wildlife Control Operators Association (NWCOA)",
+          what: "NWCOA training certifications covering bat management and exclusion, and rodent control. NWCOA also lists third-party courses in working at heights (W.A.H.S.P.) and sealants.",
+          url: "https://www.nwcoa.com/certifications/"
+        },
+        {
+          name: "Associate Certified Entomologist (ACE)",
+          body: "Entomological Society of America",
+          what: "For experienced pest professionals: at least 5 years of verifiable pest management experience, a current US pesticide applicator's licence, and a pass on an exam on structural pest control knowledge. ESA advises at least 40 hours of preparation.",
+          url: "https://www.entocert.org/ace"
+        },
+        {
+          name: "QualityPro (company accreditation)",
+          body: "QualityPro, endorsed by the National Pest Management Association",
+          what: "Accredits pest management companies, not individuals. Worth knowing because some employers advertise it.",
+          url: "https://www.npmaqualitypro.org/"
+        }
+      ]
+    },
+    skills: [
+      "Reading a building: how roofs, soffits, foundations and utility runs fit together",
+      "Spotting small entry points and signs of activity such as rub marks, gnawing and droppings",
+      "Knowing which materials each pest can and cannot chew through",
+      "Safe ladder and roofline work",
+      "Basic carpentry and sheet-metal skills with hand and power tools",
+      "Measuring and estimating materials and labour",
+      "Explaining findings plainly to customers, with photos",
+      "Knowing the wildlife rules that set timing, especially for bats",
+      "Careful record keeping"
+    ],
+    tools: [
+      "Extension ladders, step ladders and ladder stabilizers",
+      "Fall-protection harness and anchor points where required",
+      "Flashlight or headlamp and inspection mirror",
+      "Camera or phone for documenting entry points",
+      "Tape measure",
+      "Cordless drill, driver and fasteners",
+      "Tin snips and sheet-metal tools",
+      "Galvanized hardware cloth and expanded metal mesh (heavy gauge)",
+      "Sheet metal and flashing",
+      "Steel wool or copper mesh",
+      "Sealants, caulk guns and foam",
+      "Mortar or cement for foundation gaps",
+      "Door sweeps and weather stripping",
+      "Respirator, gloves, coveralls and eye protection"
+    ],
+    careerPath: [
+      {
+        stage: "Helper or new exclusion technician",
+        description: "Carry materials, learn ladders, do installs under a senior tech. People from construction often move fastest here."
+      },
+      {
+        stage: "Exclusion technician",
+        description: "Run installs on your own, choose materials, handle follow-ups. If the employer also applies pesticides, this is when many get a state licence."
+      },
+      {
+        stage: "Inspector or estimator",
+        description: "Do the inspections and write the quotes. This seat decides what the crew installs, so it needs both building knowledge and customer skills."
+      },
+      {
+        stage: "Wildlife or bat specialist",
+        description: "Add wildlife work, which brings state wildlife licensing and seasonal rules. NWCOA certifications, and later the CWCP after 5 years and 10,000 hours, mark this path."
+      },
+      {
+        stage: "Crew lead or manager",
+        description: "Schedule crews, check quality, train new techs and manage safety. BLS notes experienced pest control workers may become supervisors."
+      },
+      {
+        stage: "Owner",
+        description: "Some workers start their own business, BLS notes. Exclusion owners must work out which pest, wildlife and contractor licences their state requires before they open."
+      }
+    ],
+    pay: "BLS does not track exclusion as a separate occupation. Exclusion technicians employed by pest control companies are most likely counted as pest control workers (SOC 37-2021), so that is the closest honest figure. In May 2025 the median annual wage for pest control workers was $45,250 ($21.75 an hour). The lowest 10 percent earned less than $34,680 and the highest 10 percent more than $61,890. Inside the exterminating and pest control services industry, where 88 percent of these workers are employed, the median was $44,930. Two caveats matter. First, OEWS excludes self-employed workers and its annual figures assume 2,080 hours, so they leave out overtime, commission and production pay. Second, exclusion workers employed by construction or wildlife firms may be coded differently, and BLS publishes no figure for wildlife control operators. Treat these numbers as a reference point, not a promise, and ask employers whether pay is hourly, per job or includes a share of what you sell.",
+    benefits: "BLS measures benefits by occupational group, not by trade. Pest control workers fall in service occupations. In March 2026, among private industry workers in service occupations, 47 percent had access to employer medical care benefits, 47 percent to retirement benefits, 67 percent to paid sick leave, 57 percent to paid vacation and 56 percent to paid holidays. That is well below the figures for all private industry workers (71 percent medical, 72 percent retirement). If an exclusion job is classed as construction work, the private industry group for construction, extraction, farming, fishing and forestry occupations had 75 percent medical and 66 percent retirement access. Company vehicles, uniforms, paid training and paid licence fees are things to ask about directly; we found no neutral source measuring how often exclusion employers offer them.",
+    goodParts: [
+      "The result is permanent and visible. UC IPM calls exclusion the most successful and longest-lasting rat control around structures.",
+      "Hands-on building work rather than repeated chemical treatment.",
+      "Construction skills transfer straight in, and exclusion skills transfer straight back out.",
+      "Every building is a different puzzle, so the work rarely feels repetitive.",
+      "Often no pesticide licence is needed to start, depending on the state.",
+      "A clear path into wildlife work, inspection, estimating and ownership."
+    ],
+    hardParts: [
+      "Ladders and rooflines every week; falls are among the most common causes of serious work injuries.",
+      "Attics are hot and crawlspaces are cramped, dirty and cold.",
+      "Droppings and nesting material carry real disease risks (hantavirus, histoplasmosis) and demand proper protective gear.",
+      "The legal picture is confusing and different in every state, and getting it wrong is your problem.",
+      "Wildlife seasons and weather can push jobs back for weeks.",
+      "BLS does not track this job, so there is little public pay data to negotiate with."
+    ],
+    faq: [
+      {
+        q: "Do I need a pest control licence to do exclusion?",
+        a: "It depends on the state and on whether you use any pesticide. Texas exempts nonpesticidal barriers against nuisance animals. California exempts non-pesticide exclusion of vertebrate pests, but not mice, rats or pigeons. Florida requires a limited certificate for nonchemical rodent exclusion done for hire. Check your state's page on this site and the state agency."
+      },
+      {
+        q: "Is exclusion pest control or construction?",
+        a: "Both. It is regulated as pest control in some states and can also fall under contractor licensing on larger jobs. In California, for example, CSLB requires a contractor licence when a job needs a permit, uses employees or totals $1,000 or more. Ask the board whether your type of work counts."
+      },
+      {
+        q: "How small a gap actually matters?",
+        a: "Very small. The CDC says a mouse can fit through a hole about a quarter inch wide, and UC IPM advises sealing every hole larger than a quarter inch to exclude both rats and mice."
+      },
+      {
+        q: "Can I use foam or caulk on its own?",
+        a: "Not for rats. UC IPM warns rats can chew through plastic, foam, wood and caulk. The CDC uses caulk or foam only to hold steel wool in small holes, and metal, cement or hardware cloth for larger ones."
+      },
+      {
+        q: "Why can't we exclude bats in summer?",
+        a: "Because flightless pups would be trapped inside and die. States set the dates: Wisconsin prohibits bat exclusions June 1 to August 15, and Georgia says to avoid them April 1 to July 31, with exceptions handled by licensed Nuisance Wildlife Control Operators."
+      },
+      {
+        q: "Is it dangerous to work around droppings?",
+        a: "It can be. The CDC says not to sweep or vacuum rodent droppings, to wet them with disinfectant first, and recommends a HEPA-filtered respirator for heavy infestations. Bird and bat droppings can carry the fungus that causes histoplasmosis. Ask what protective equipment and procedures your employer provides."
+      },
+      {
+        q: "Do I need construction experience?",
+        a: "No, but it helps a great deal. BLS lists a high school diploma, a driver's licence and a good driving record as typical requirements for pest control work. Knowing how buildings are framed and roofed shortens the learning curve."
+      },
+      {
+        q: "What does it pay?",
+        a: "BLS does not track exclusion separately. The closest figure is pest control workers: a May 2025 median of $45,250 a year, with the middle 80 percent between about $34,680 and $61,890. That excludes commission and overtime."
+      }
+    ],
+    sources: [
+      {
+        label: "BLS Occupational Outlook Handbook: Pest Control Workers",
+        url: "https://www.bls.gov/ooh/building-and-grounds-cleaning/pest-control-workers.htm"
+      },
+      {
+        label: "O*NET OnLine: Pest Control Workers (37-2021.00), details",
+        url: "https://www.onetonline.org/link/details/37-2021.00"
+      },
+      {
+        label: "BLS OEWS May 2025 via BLS Public Data API (series OEUN000000000000037202113, OEUN000000056171037202113 and related)",
+        url: "https://api.bls.gov/publicAPI/v1/timeseries/data/"
+      },
+      {
+        label: "BLS Employee Benefits in the United States, March 2026: Table 1, Retirement benefits",
+        url: "https://www.bls.gov/news.release/ebs2.t01.htm"
+      },
+      {
+        label: "BLS Employee Benefits in the United States, March 2026: Table 2, Medical care benefits",
+        url: "https://www.bls.gov/news.release/ebs2.t02.htm"
+      },
+      {
+        label: "BLS Employee Benefits in the United States, March 2026: Table 6, Paid leave",
+        url: "https://www.bls.gov/news.release/ebs2.t06.htm"
+      },
+      {
+        label: "CDC: How to Seal Up to Prevent Rodents",
+        url: "https://www.cdc.gov/healthy-pets/rodent-control/seal-up.html"
+      },
+      {
+        label: "CDC: How to Clean Up After Rodents",
+        url: "https://www.cdc.gov/healthy-pets/rodent-control/clean-up.html"
+      },
+      {
+        label: "UC IPM Pest Notes: Rats",
+        url: "https://ipm.ucanr.edu/PMG/PESTNOTES/pn74106.html"
+      },
+      {
+        label: "Texas Occupations Code ch. 1951, sec. 1951.058 (activities not involving pesticides)",
+        url: "https://statutes.capitol.texas.gov/Docs/OC/htm/OC.1951.htm"
+      },
+      {
+        label: "California Business and Professions Code sec. 8555",
+        url: "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=BPC&sectionNum=8555."
+      },
+      {
+        label: "Florida Statutes sec. 482.157 (limited certification, commercial wildlife management)",
+        url: "https://flsenate.gov/laws/statutes/2024/482.157"
+      },
+      {
+        label: "CSLB Industry Bulletin 24-07: minor work exemption rises to $1,000",
+        url: "https://www.cslb.ca.gov/Resources/IndustryBulletins/2024/AB%202622%20Implementation.FINAL.pdf"
+      },
+      {
+        label: "Wisconsin DNR: bat exclusion maternity season",
+        url: "https://dnr.wisconsin.gov/newsroom/release/43551"
+      },
+      {
+        label: "Georgia DNR Wildlife Resources: Bats in Your House?",
+        url: "https://georgiawildlife.com/ExcludingBatsFromYourHouse"
+      },
+      {
+        label: "OSHA: Fall Protection",
+        url: "https://www.osha.gov/fall-protection"
+      },
+      {
+        label: "OSHA: Heat Exposure",
+        url: "https://www.osha.gov/heat-exposure"
+      },
+      {
+        label: "CDC/NIOSH: Histoplasmosis",
+        url: "https://www.cdc.gov/niosh/topics/histoplasmosis/"
+      },
+      {
+        label: "NWCOA: Certifications and Certified Wildlife Control Professional",
+        url: "https://www.nwcoa.com/certifications/"
+      },
+      {
+        label: "ESA: Associate Certified Entomologist",
+        url: "https://www.entocert.org/ace"
+      }
+    ],
+    notes: "Inferences: (1) Exclusion pay uses SOC 37-2021 on the assumption that exclusion techs at pest companies are coded there; BLS gives no guidance on this. (2) Applying the NCS 'service occupations' group assumes 37-2021 sits in that group (SOC major group 37 is a service group). (3) CSLB's $1,000 threshold is cited as an example of contractor licensing; we did not find a California source saying whether non-pesticide exclusion counts as construction. (4) The California 8555 reading (exemption excludes mice, rats, pigeons, so rodent exclusion likely falls back under SPCB) is our reading of the statute, not a board ruling. Blocked or unverified: no neutral source found on background checks, drug testing, company vehicles or commission for exclusion roles; no source on seasonal demand for exclusion. CDC NIOSH histoplasmosis page did not detail PPE; respirator guidance cited is the CDC rodent cleanup page. ESA ACE renewal/CEU rules were not on the page opened. NWCOA CWCP figures from nwcoa.com/Certified-Wildlife-Control-Professional (also linked from the certifications page). Bat dates are state examples only; other states differ. Tool list is descriptive, drawn from CDC and UC IPM material lists plus ordinary trade equipment."
+  },
+  insulation: {
+    intro: "In pest control, insulation work usually means attic restoration after an infestation. A crew removes insulation fouled by rodents, bats, birds or other animals, cleans and disinfects the space, seals entry points, and puts new insulation back. Some companies also install insulation that is itself a registered pesticide: TAP (sold as T•A•P) is a borate-treated cellulose insulation with EPA Registration Number 103652-1, labelled to control cockroaches, termites, ants, silverfish and other insects in the building voids where it is applied. The work sits between two trades. On the insulation side, BLS counts floor, ceiling and wall insulation workers as a construction occupation, and states like California license insulation contractors. On the pest side, installing a registered pesticide for hire may need a pesticide licence, depending on the state. It suits people who are strong, tolerate heat and dust, take protective equipment seriously, and like a job with a clear before and after.",
+    dayInTheLife: [
+      "A job starts with an attic inspection, often done by the same person who sells it. You check how deep the existing insulation is, how much of it is soiled with droppings, urine or nesting, where the animals got in, and how big the space is. One thing stops a job on the spot: vermiculite. EPA describes it as a pebble-like, pour-in product, usually gray-brown or silver-gold, and says a mine near Libby, Montana supplied over 70 percent of US vermiculite from 1919 to 1990 and was contaminated with asbestos. EPA's advice is to assume it contains asbestos, not disturb it, and hire a professional asbestos contractor.",
+      "Removal day is the dirty part. Crews suit up before going in. For heavy rodent infestations the CDC lists coveralls, rubber boots or disposable shoe covers, rubber or plastic gloves, goggles, and a half-mask air-purifying respirator with a HEPA filter or a powered air-purifying respirator. When a respirator is required at work, OSHA's respiratory protection standard makes the employer run a written program, provide a medical evaluation before fit testing or use, fit test before first use and at least once a year, and train workers. BLS lists removing and disposing of old insulation as a standard insulator duty; in pest work, the material is bagged and carried or removed from a contaminated attic.",
+      "Next comes cleanup and sealing. The CDC's household guidance is to ventilate first, never sweep or vacuum droppings dry, spray them with a bleach solution (1.5 cups of bleach per gallon of water, or 1 part bleach to 9 parts water) or an EPA-registered disinfectant until very wet, and let it soak for 5 minutes or as the label says. For heavy infestations the CDC says to contact the local or state health department and occupational safety authority. Entry points are sealed at this stage, often by an exclusion crew, so the new insulation is not ruined by the next animal.",
+      "Then the attic is rebuilt. O*NET's task list for insulation workers describes filling blower hoppers, using controls to regulate the flow of material through the hose, and distributing insulation evenly into ceilings and walls, as well as cutting and fitting batts. ENERGY STAR publishes recommended attic R-values by climate zone, roughly R30 to R60 for an uninsulated attic. If the product is a registered pesticide like TAP, the label governs: it lists long sleeves, long pants, socks and shoes, chemical-resistant gloves, a NIOSH-approved particulate respirator and dust goggles for applicators, says insulation should not cover attic ventilation or soffit vents, and states the product is not for use as sole protection against termites.",
+      "Heat shapes the week. Attics in summer are among the hottest places anyone in pest control works. OSHA names heavy physical activity, hot conditions, lack of acclimatization and heat-holding clothing (which describes a full protective suit) as risk factors, and stresses water, rest, shade and a gradual build-up for new workers. Ask any employer how they handle attic heat before you start."
+    ],
+    duties: [
+      "Inspect attics and crawlspaces for contaminated or damaged insulation, droppings and nesting",
+      "Measure the space and estimate removal and replacement",
+      "Identify vermiculite and stop work for an asbestos professional when it is found",
+      "Set up containment and put on protective equipment, including a fit-tested respirator",
+      "Remove and bag contaminated insulation and nesting material and dispose of it as required",
+      "Wet and disinfect droppings and soiled surfaces before cleanup",
+      "Seal animal entry points, or coordinate with the exclusion crew",
+      "Install baffles or vent chutes so new insulation does not block attic ventilation",
+      "Load blower hoppers and blow loose-fill insulation evenly to the planned depth",
+      "Cut and fit batt insulation where blown material is not suitable",
+      "Follow the pesticide label exactly when installing a registered pest control insulation",
+      "Document before and after conditions with photos and depth measurements",
+      "Clean, maintain and store blowing and removal equipment"
+    ],
+    workEnvironment: {
+      schedule: "BLS says most insulators work full time and more than 40 hours a week may be required to meet construction deadlines. O*NET data for floor, ceiling and wall insulators shows 67 percent working 40 hours and 16 percent more than 40. Pest company attic crews may run on the pest company's schedule instead; ask.",
+      seasonality: "BLS notes insulators working outdoors may not be able to work in bad weather. In attics the seasonal issue is heat: summer attic work is hard and needs a heat plan. We found no source measuring how demand for pest-related insulation work changes across the year.",
+      physical: "Heavy, cramped and repetitive. BLS says insulators spend most of the day standing, bending or kneeling in confined spaces and may work at height on ladders or scaffolds. In O*NET data, 39 percent of floor, ceiling and wall insulators work in cramped spaces or awkward positions every day, 20 percent kneel, crouch or crawl continually, and 29 percent face very hot or cold temperatures every day.",
+      hazards: "BLS reports floor, ceiling and wall insulators have one of the highest rates of injuries and illnesses of all occupations, with falls from ladders and knife cuts among the common hazards, and small particles that irritate eyes, skin and lungs. Pest work adds biological hazards: rodent droppings and nesting (CDC hantavirus cleanup guidance), and bird or bat droppings that can carry the fungus causing histoplasmosis. Vermiculite may contain asbestos. Attic heat is a serious hazard (OSHA). O*NET data shows 60 percent of insulators exposed to contaminants every day.",
+      vehicleAndTravel: "Crews travel to each home with a truck or trailer carrying the blowing machine and removal equipment. O*NET data shows 61 percent of insulators work in an enclosed vehicle or equipment every day. Ask whether you will drive a box truck or tow a trailer."
+    },
+    training: {
+      entry: "BLS says there are no specific education requirements for floor, ceiling and wall insulators, and that high school maths, mechanical drawing and science courses help. Pest companies usually also want a driver's licence and good driving record (BLS, pest control workers). If you will apply a registered pesticide product commercially, federal rules set 18 as the minimum age for commercial applicator certification. You must be medically cleared to wear a respirator under OSHA's standard.",
+      onTheJob: "BLS says most floor, ceiling and wall insulators learn on the job, get mandatory OSHA safety training on insulation handling and asbestos abatement, and work alongside experienced installers to learn the equipment. Respirator users must be medically evaluated, fit tested and trained before use, with fit testing at least yearly (29 CFR 1910.134). Expect to learn removal, cleanup and blowing as a helper before you run an attic yourself.",
+      licensing: "There is no single 'pest insulation' licence, and sources do not agree on one regime. Three things can apply. Contractor licensing: some states license insulation as a trade. California's CSLB has a C-2 Insulation and Acoustical classification for contractors who install insulating media for temperature or sound control, requires a licence for jobs that need a permit, use employees, or total $1,000 or more, and requires the licence qualifier to have four years of journey-level experience in the last ten. Pesticide licensing: a product like TAP is an EPA-registered pesticide, and EPA notes that many state agencies require applicator certification to use any pesticide commercially, restricted use or not. Whether installing it needs a pest licence, and in which category, depends on your state. Asbestos: EPA's Model Accreditation Plan requires trained, accredited professionals for asbestos work in schools and public and commercial buildings, and some states license asbestos abatement. Plain removal and replacement of ordinary insulation may need none of the pest licences at all. Ask your state pest regulator and your state contractor board, in writing, before you sell this work.",
+      certifications: [
+        {
+          name: "Air Leakage Control Installer",
+          body: "Building Performance Institute (BPI)",
+          what: "BPI certification for tightening the building envelope through proper air sealing and insulation installation. BPI lists its former Retrofit Installer Technician certification as retired.",
+          url: "https://www.bpi.org/certified-professionals"
+        },
+        {
+          name: "Asbestos worker or contractor/supervisor accreditation",
+          body: "US EPA Model Accreditation Plan, issued through state agencies or authorized training providers",
+          what: "Required to remove asbestos-containing material such as vermiculite in covered buildings. Initial training, an exam, and annual refresher training; states can add requirements.",
+          url: "https://www.epa.gov/asbestos/asbestos-professionals"
+        },
+        {
+          name: "Zoonotic Disease Awareness",
+          body: "National Wildlife Control Operators Association (NWCOA)",
+          what: "Online NWCOA training on how diseases pass from animals to people, relevant to anyone handling contaminated attic material.",
+          url: "https://www.nwcoa.com/certifications/"
+        },
+        {
+          name: "State pesticide applicator certification",
+          body: "Your state pesticide regulatory agency",
+          what: "Needed in many states before applying a registered pesticide product for hire. Category names differ by state.",
+          url: "https://www.epa.gov/pesticide-worker-safety/certification-standards-pesticide-applicators"
+        }
+      ]
+    },
+    skills: [
+      "Disciplined use of protective equipment, including respirators",
+      "Recognizing contamination, nesting and entry points in an attic",
+      "Recognizing vermiculite and knowing when to stop",
+      "Running blowing and removal equipment",
+      "Measuring, estimating square footage and calculating depth or R-value",
+      "Reading and following pesticide labels exactly",
+      "Working in heat and tight spaces without cutting corners",
+      "Explaining before-and-after findings to a homeowner"
+    ],
+    tools: [
+      "Insulation blowing machine with hopper and hose",
+      "Insulation removal equipment and heavy-duty disposal bags",
+      "Half-mask respirator with HEPA filters or a powered air-purifying respirator",
+      "Disposable coveralls, shoe covers, gloves and goggles",
+      "Sprayer for disinfectant",
+      "Utility knives, saws and staple guns",
+      "Baffles or vent chutes",
+      "Depth rulers or markers",
+      "Ladders and work lights",
+      "Camera or phone for documentation",
+      "Sealing materials for entry points"
+    ],
+    careerPath: [
+      {
+        stage: "Helper",
+        description: "Bagging, hauling, setup and cleanup. You learn PPE habits and the equipment here."
+      },
+      {
+        stage: "Installer or attic technician",
+        description: "Run removal and blowing on your own. BLS notes insulators learn mostly on the job alongside experienced workers."
+      },
+      {
+        stage: "Inspector or estimator",
+        description: "Inspect attics, write quotes, spot vermiculite and decide scope. Often paired with exclusion sales."
+      },
+      {
+        stage: "Crew lead or production manager",
+        description: "Schedule crews, run the safety program including respirator fit testing, and check quality."
+      },
+      {
+        stage: "Licensed contractor or owner",
+        description: "Where insulation is a licensed trade, the qualifier needs documented experience; in California, four years of journey-level work in the last ten. Owners also need to settle which pest licences apply."
+      }
+    ],
+    pay: "BLS tracks insulation workers, floor, ceiling and wall (SOC 47-2131), which is the closest occupation to attic insulation work. In May 2025 their median annual wage was $49,120 ($23.62 an hour), with the lowest 10 percent under $37,030 and the highest 10 percent over $78,190. OEWS counted 44,440 jobs. In drywall and insulation contractors, the largest employer, the median was $48,880. BLS does not publish a separate figure for insulation workers inside pest control companies, and attic technicians at pest companies may be coded as pest control workers (SOC 37-2021), whose median was $45,250. OEWS excludes the self-employed and does not capture overtime, commission or per-job pay, so ask employers how insulation work is paid.",
+    benefits: "Insulation workers are a construction occupation in BLS's benefits data. In March 2026, among private industry workers in construction, extraction, farming, fishing and forestry occupations, 75 percent had access to medical care benefits, 66 percent to retirement benefits, 71 percent to paid sick leave, 77 percent to paid vacation and 82 percent to paid holidays. If a pest company classes you as a pest control worker instead, the service occupations group applies: 47 percent medical, 47 percent retirement, 67 percent paid sick leave. These are group averages, not promises. Ask directly about respirators and protective gear, vehicle use and paid training.",
+    goodParts: [
+      "Clear, visible results: a filthy attic becomes a clean, insulated one.",
+      "Real trade skills that transfer to insulation and building-performance work outside pest control.",
+      "Often sold with exclusion, so there is a path into inspection and estimating.",
+      "Insulation workers' median pay ($49,120 in May 2025) is above pest control workers' ($45,250).",
+      "Benefit access in the construction group is higher than in service occupations."
+    ],
+    hardParts: [
+      "Summer attic heat, in a full suit and respirator.",
+      "BLS reports one of the highest injury and illness rates of all occupations for floor, ceiling and wall insulators.",
+      "Contaminated material carries disease risk, and vermiculite may contain asbestos.",
+      "Cramped spaces, kneeling and heavy lifting most of the day.",
+      "Licensing is unclear and may involve a contractor board, a pesticide regulator and asbestos rules at once."
+    ],
+    faq: [
+      {
+        q: "Is this pest control or construction?",
+        a: "Both. BLS counts insulators as construction workers, and some states license insulation contractors (California's C-2). If you install a product registered as a pesticide, pest control law may also apply."
+      },
+      {
+        q: "Do I need a pesticide licence to install pest control insulation?",
+        a: "It depends on your state. Products like TAP are EPA-registered pesticides, and EPA notes many states require certification to use any pesticide commercially. Ask your state pesticide agency which category, if any, covers it."
+      },
+      {
+        q: "What happens if the attic has vermiculite?",
+        a: "Stop. EPA says to assume vermiculite contains asbestos, not to disturb it, and to hire a professional asbestos contractor. Asbestos removal needs EPA-accredited training and sometimes a state licence."
+      },
+      {
+        q: "Will I have to wear a respirator?",
+        a: "Very likely. The CDC recommends a HEPA-filtered respirator for heavy rodent infestations, and the TAP label requires a particulate respirator for applicators. OSHA requires your employer to provide a medical evaluation, fit testing before use and yearly, and training."
+      },
+      {
+        q: "Is it safe to vacuum up droppings?",
+        a: "The CDC says not to sweep or vacuum droppings dry, but to wet them with disinfectant and let it soak first. For heavy infestations it says to involve the health department and occupational safety authority. Follow your employer's written procedures."
+      },
+      {
+        q: "Does pest control insulation replace termite treatment?",
+        a: "No. The TAP label says it is not for use as sole protection against termites and does not substitute for soil or foundation treatment."
+      },
+      {
+        q: "How hot does it get?",
+        a: "Hot enough to be a serious hazard. OSHA lists heavy work, hot conditions, protective clothing and lack of acclimatization as risk factors. Ask how the company manages water, breaks and new-worker acclimatization."
+      },
+      {
+        q: "What does it pay?",
+        a: "Floor, ceiling and wall insulation workers had a May 2025 median of $49,120 a year. BLS does not publish a pest-company-specific figure."
+      }
+    ],
+    sources: [
+      {
+        label: "BLS Occupational Outlook Handbook: Insulation Workers",
+        url: "https://www.bls.gov/ooh/construction-and-extraction/insulation-workers.htm"
+      },
+      {
+        label: "O*NET OnLine: Insulation Workers, Floor, Ceiling, and Wall (47-2131.00)",
+        url: "https://www.onetonline.org/link/details/47-2131.00"
+      },
+      {
+        label: "BLS OEWS May 2025 via BLS Public Data API (series OEUN000000000000047213113, OEUN000000023831047213113 and related)",
+        url: "https://api.bls.gov/publicAPI/v1/timeseries/data/"
+      },
+      {
+        label: "BLS Employee Benefits in the United States, March 2026: Table 2, Medical care benefits",
+        url: "https://www.bls.gov/news.release/ebs2.t02.htm"
+      },
+      {
+        label: "BLS Employee Benefits in the United States, March 2026: Table 1, Retirement benefits",
+        url: "https://www.bls.gov/news.release/ebs2.t01.htm"
+      },
+      {
+        label: "BLS Employee Benefits in the United States, March 2026: Table 6, Paid leave",
+        url: "https://www.bls.gov/news.release/ebs2.t06.htm"
+      },
+      {
+        label: "EPA pesticide label: T•A•P, EPA Reg. No. 103652-1 (notification, August 2025)",
+        url: "https://www3.epa.gov/pesticides/chem_search/ppls/103652-00001-20250805.pdf"
+      },
+      {
+        label: "Texas A&M AgriLife IPM House: T.A.P. pest control insulation",
+        url: "https://ipmhouse.tamu.edu/house-features/t-a-p-pest-control-insulation-at-ipm-house/"
+      },
+      {
+        label: "EPA: Protect Your Family from Asbestos-Contaminated Vermiculite Insulation",
+        url: "https://www.epa.gov/asbestos/protect-your-family-asbestos-contaminated-vermiculite-insulation"
+      },
+      {
+        label: "EPA: Asbestos Professionals (Model Accreditation Plan)",
+        url: "https://www.epa.gov/asbestos/asbestos-professionals"
+      },
+      {
+        label: "CDC: How to Clean Up After Rodents",
+        url: "https://www.cdc.gov/healthy-pets/rodent-control/clean-up.html"
+      },
+      {
+        label: "OSHA 29 CFR 1910.134 Respiratory Protection",
+        url: "https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.134"
+      },
+      {
+        label: "OSHA: Heat Exposure",
+        url: "https://www.osha.gov/heat-exposure"
+      },
+      {
+        label: "CDC/NIOSH: Histoplasmosis",
+        url: "https://www.cdc.gov/niosh/topics/histoplasmosis/"
+      },
+      {
+        label: "CSLB: Get Licensed to Build guide (includes C-2 Insulation and Acoustical)",
+        url: "https://www.cslb.ca.gov/Resources/GuidesAndPublications/GetLicensedToBuild_ENG0525_ADA.pdf"
+      },
+      {
+        label: "CSLB Industry Bulletin 24-07: minor work exemption rises to $1,000",
+        url: "https://www.cslb.ca.gov/Resources/IndustryBulletins/2024/AB%202622%20Implementation.FINAL.pdf"
+      },
+      {
+        label: "EPA: Certification Standards for Pesticide Applicators",
+        url: "https://www.epa.gov/pesticide-worker-safety/certification-standards-pesticide-applicators"
+      },
+      {
+        label: "BPI: Certified Professionals",
+        url: "https://www.bpi.org/certified-professionals"
+      },
+      {
+        label: "ENERGY STAR: Recommended Home Insulation R-Values",
+        url: "https://www.energystar.gov/saveathome/seal_insulate/identify-problems-you-want-fix/diy-checks-inspections/insulation-r-values"
+      }
+    ],
+    notes: "Key uncertainty: whether installing borate pest control insulation needs a pesticide licence is state-specific and we found no state agency page that answers it directly. A trade-magazine result claimed TAP needs only a pesticide licence and no insulation contractor licence; that is not a permitted source and was NOT used. EPA's 'many states require certification for all commercial pesticide use' line is the basis for the cautious wording. The CA SPCB 2008 minutes PDF that might have addressed insulation is a scanned image and could not be read. CDC household cleanup guidance (no dry sweeping/vacuuming) sits uneasily with professional removal methods; we present CDC's advice and defer to employer procedures rather than inventing a professional protocol. 'Insulation removal equipment' in tools is generic; no source describes removal machinery. ENERGY STAR R-value ranges were summarised by the fetch tool and may be truncated, hence 'roughly R30 to R60'. OOH quick-facts median ($51,330) is for all insulation workers including mechanical; we used the 47-2131 figure. OOH counts 45,100 floor/ceiling/wall jobs (projections base) vs OEWS 44,440; both are BLS, different programs. Applying NCS construction-group figures assumes 47-2131 sits in that group. OEWS returned no data for 47-2131 in NAICS 561710 (suppressed or not published)."
+  },
+  "mosquito-vector": {
+    intro: "Mosquito and vector control is really two careers that share a pest. On the public side, local governments and mosquito control districts run programs that the CDC describes as surveillance, removing standing water, killing larvae, spraying adult mosquitoes by backpack, truck or airplane when viruses are found, checking results, and teaching the public. The American Mosquito Control Association counts about 734 organized mosquito control organizations in the US. On the private side, pest control and lawn companies treat individual yards and businesses on a route. The stakes are real: the CDC calls West Nile virus the leading cause of mosquito-borne disease in the contiguous United States. Public work suits people drawn to biology, data, fieldwork and public service, and comfortable with early or late hours in season. Private work suits people who like route work, customers and being outdoors. The licences differ too: public programs often use a separate public health category, while private yard work usually runs through a state's general pest or lawn and ornamental licence. BLS does not track mosquito control as its own occupation.",
+    dayInTheLife: [
+      "In a public program, much of the job is surveillance. The CDC says programs track mosquito populations, identify species, find standing water and test mosquitoes for viruses to decide when, where and how to control them. AMCA calls surveillance the basis of the plan: it shows whether action is needed, what kind, and whether it worked. A field technician's morning may mean collecting traps set the night before, checking known breeding sites, sampling water for larvae and taking specimens back for identification.",
+      "Larval control is daytime work. The CDC notes larvicide spraying typically happens during the day, and lists storm drains and other water-holding structures as targets. O*NET's task list for pest control workers includes spraying or dusting chemicals over marshlands, ditches or catch basins. Source reduction is part of the same job: the CDC describes professionals removing standing water, collecting illegal tires and organizing community cleanups.",
+      "Adult mosquito control runs on a different clock. The CDC says adulticide spraying occurs when mosquitoes are most active and pollinating insects are not, and that programs spray adulticides by backpack, truck or airplane when viruses are detected. EPA describes ultra-low volume (ULV) sprayers that release very fine droplets, typically under 3 ounces of active ingredient per acre, using organophosphates such as malathion and naled or pyrethroids such as permethrin. Programs generally announce spray dates and times through local media, websites, social media or door-to-door, so a truck night is scheduled, mapped and public.",
+      "On the private side, a technician runs a route of homes and businesses. At each stop you look for standing water to remove and treat the shaded vegetation where adults rest. A 2019 peer-reviewed review of barrier treatment studies from 1944 to 2018 found they did lower mosquito numbers, with variation between studies and species, and flagged gaps in what is known about effects on non-target organisms and resistance. That is why label directions and pollinator precautions matter on every yard. The CDC does not recommend automatic misting systems for homes, noting there is no data on their effectiveness and that they spray on a timer whether mosquitoes are present or not.",
+      "The season sets the year. The CDC says people get West Nile virus during mosquito season, which starts in summer and runs through fall, typically June through October. Expect long weeks in peak season. Ask any employer, public or private, what off-season work looks like and whether the job is year-round or seasonal."
+    ],
+    duties: [
+      "Set, collect and service mosquito traps and record counts",
+      "Sample standing water for larvae and identify species or send specimens for identification",
+      "Collect mosquito samples for virus testing",
+      "Map breeding sites and update surveillance records",
+      "Apply larvicides to storm drains, catch basins, ditches and other standing water",
+      "Remove or reduce breeding habitat, including tire collection and cleanups",
+      "Operate truck-mounted ULV sprayers or backpack sprayers for adult control when surveillance calls for it",
+      "Follow notification and timing rules for adulticide applications",
+      "Respond to public service requests and educate residents on removing standing water",
+      "On private routes, inspect yards, remove standing water and apply barrier treatments according to the label",
+      "Calibrate and maintain spray equipment",
+      "Record every pesticide application as required by the state",
+      "Keep up continuing education to hold certification"
+    ],
+    workEnvironment: {
+      schedule: "Adult mosquito spraying happens when mosquitoes are most active and pollinators are not, per the CDC, so expect some early-morning, evening or night work in a public program. Larviciding and surveillance are mostly daytime. For pest control workers generally, BLS says evenings and weekends are common and some work more than 40 hours a week.",
+      seasonality: "Strongly seasonal. The CDC puts mosquito season in summer through fall, typically June to October, for West Nile virus. Season length varies by place; ask locally. Some public positions are seasonal hires; check the posting.",
+      physical: "Walking wet ground, ditches and marsh edges, carrying sampling gear or backpack sprayers, and driving. O*NET data for pest control workers shows 81 percent working outdoors in all weather every day.",
+      hazards: "Pesticide exposure is the main chemical hazard; O*NET shows 52 percent of pest control workers exposed to hazardous conditions every day and 66 percent to contaminants every day. You also work among the insects you are controlling, in the same season people catch West Nile virus. Heat (OSHA) and night driving with spray equipment add risk. Ask for the employer's PPE and repellent policy.",
+      vehicleAndTravel: "Lots of driving. Public programs run trucks with mounted sprayers on set routes and visit breeding sites across the district; private techs drive a residential route. O*NET shows 95 percent of pest control workers in an enclosed vehicle every day, and BLS notes many employers require a driver's licence and good driving record."
+    },
+    training: {
+      entry: "For private pest control work, BLS says a high school diploma is typical and many companies require a driver's licence and good driving record. Public agencies set their own requirements in each job posting. Federal rules require commercial applicators to be at least 18. Some public roles, such as vector ecologist or biologist, are science positions; check postings for degree requirements, since we found no national source setting them.",
+      onTheJob: "New public staff usually start under supervision. In California, only people already employed at a government public health agency that does vector control may sit the state Vector Control Technician exam, and until fully certified a technician may apply pesticides only under the direct supervision of a certified technician. Federal rules allow noncertified applicators to work under direct supervision if they complete required training. AMCA publishes Best Management Practices for Integrated Mosquito Management (updated 2021, with CDC funding) as a training reference for the vector control workforce.",
+      licensing: "Federal rules (40 CFR part 171) create a public health pest control category for state, tribal, federal or other government employees and contractors who use restricted use pesticides in government-sponsored public health programs, with core plus category exams and recertification at least every five years. States build on this. California: CDPH certifies Public Health Vector Control Technicians, with a core pesticide safety category plus specialty categories including mosquito control, exams on the third Thursday of May and November, and continuing education every two years (12 units in pesticide use and safety plus 8 per specialty). California DPR's separate Health Related category is not required for VCT certificate holders employed at a government agency. Florida: government employees and contractors doing community-wide mosquito control need a Public Health Pest Control licence (core plus public health exams, four-year certification, 16 CEUs with no more than four in core). Florida private companies treating individual homes need a pest control business licence and a certified operator in General Household Pest Control or Lawn and Ornamental. The pattern elsewhere is similar but the names differ; check your state's page on this site and the state agency.",
+      certifications: [
+        {
+          name: "Public Health Vector Control Technician (state certification)",
+          body: "California Department of Public Health",
+          what: "State certification for government vector control employees. Core pesticide safety plus specialty categories (mosquito, terrestrial invertebrates, vertebrates), with continuing education every two years. Other states use their own public health category.",
+          url: "https://www.cdph.ca.gov/Programs/CID/DCDC/Pages/Vector-Control-Technician-Certification-Program.aspx"
+        },
+        {
+          name: "Public Health Pest Control licence",
+          body: "Florida Department of Agriculture and Consumer Services",
+          what: "Florida licence for government and contracted mosquito control applicators: core plus public health exams, four-year term, 16 CEUs.",
+          url: "https://www.fdacs.gov/Business-Services/Mosquito-Control/Mosquito-Control-Licensing"
+        },
+        {
+          name: "Associate Certified Entomologist (ACE)",
+          body: "Entomological Society of America",
+          what: "For pest professionals with at least 5 years of verifiable experience and a current US pesticide applicator's licence who pass ESA's exam.",
+          url: "https://www.entocert.org/ace"
+        },
+        {
+          name: "QualityPro Public Health (company accreditation)",
+          body: "QualityPro, endorsed by the National Pest Management Association",
+          what: "One of QualityPro's company-level service certifications. It accredits companies, not individuals.",
+          url: "https://www.npmaqualitypro.org/"
+        }
+      ]
+    },
+    skills: [
+      "Identifying mosquito species and life stages",
+      "Careful data collection and record keeping",
+      "Reading maps and working with location data",
+      "Calibrating and running spray equipment",
+      "Reading and following pesticide labels, including pollinator precautions",
+      "Judging weather and timing for applications",
+      "Explaining the program to residents clearly and calmly",
+      "Working safely around water and at odd hours"
+    ],
+    tools: [
+      "Mosquito traps and collection containers",
+      "Larval dippers and sample vials",
+      "Hand lens or microscope for identification",
+      "Truck-mounted ULV sprayer",
+      "Backpack sprayer or mist blower",
+      "Granular and liquid larvicide applicators",
+      "GPS unit, tablet or phone for mapping and records",
+      "Personal protective equipment as the label requires",
+      "Insect repellent and protective clothing",
+      "Waders or boots for wet sites"
+    ],
+    careerPath: [
+      {
+        stage: "Seasonal field technician (public) or route technician (private)",
+        description: "Trap checks, larval sampling and source reduction in a district, or yard treatments on a private route. Work under a certified applicator while you train."
+      },
+      {
+        stage: "Certified technician or licensed applicator",
+        description: "Pass the state's public health exams (or the general pest or lawn category on the private side) and apply on your own."
+      },
+      {
+        stage: "Senior technician or specialist",
+        description: "Take on surveillance, lab identification, spray operations or public education. Continuing education keeps the certification alive."
+      },
+      {
+        stage: "Supervisor or operations manager",
+        description: "Plan routes, schedule spray operations, manage crews and records. BLS notes experienced pest control workers may become supervisors."
+      },
+      {
+        stage: "District manager, biologist, or business owner",
+        description: "Public programs have management and science roles; science roles usually ask for a degree. On the private side, some technicians start their own business."
+      }
+    ],
+    pay: "BLS does not track mosquito or vector control as a separate occupation. Field staff are most likely counted as pest control workers (SOC 37-2021), whose May 2025 median annual wage was $45,250, with the lowest 10 percent under $34,680 and the highest 10 percent over $61,890. In local government (OEWS industry 999300), BLS counted 1,850 pest control workers with a median of $50,870. Some district staff may instead be coded as pesticide handlers, sprayers and applicators, vegetation (SOC 37-3012); in local government that group had 2,050 jobs and a median of $46,920. These industry figures are our best approximation of public program pay, not a direct measure. OEWS excludes the self-employed and does not capture overtime or seasonal swings. Check public job postings for the pay scale; private route pay may include commission, so ask.",
+    benefits: "This is where public and private differ most. In BLS's March 2026 benefits data, state and local government workers in service occupations had 82 percent access to medical care, 85 percent to retirement benefits, 89 percent to paid sick leave, 78 percent to paid vacation and 80 percent to paid holidays. Private industry workers in service occupations had 47 percent medical, 47 percent retirement, 67 percent paid sick leave, 57 percent paid vacation and 56 percent paid holidays. Seasonal public positions may not carry full benefits; check the posting. Ask private employers about vehicles, uniforms and paid licensing.",
+    goodParts: [
+      "Public health work with a clear purpose: West Nile virus is the leading mosquito-borne disease in the contiguous US.",
+      "Real science in the public programs: surveillance, species identification and virus testing.",
+      "Public sector benefit access is far higher than the private service average.",
+      "Mostly outdoors and varied, from ditches to trucks to classrooms.",
+      "Skills carry across into general pest control, lawn care and public health roles."
+    ],
+    hardParts: [
+      "Seasonal: peak weeks are long and some public jobs are seasonal only.",
+      "Adult spraying happens when mosquitoes are active, so evenings, nights or very early mornings are common.",
+      "Regular pesticide handling, and working among mosquitoes in disease season.",
+      "Public and private sides use different licences, so moving between them can mean new exams.",
+      "Residential yard spraying draws pollinator concerns, and the evidence base has gaps."
+    ],
+    faq: [
+      {
+        q: "Public district or private company: which should I aim for?",
+        a: "Public programs do surveillance, larval control, spraying and education, with higher benefit access in BLS data. Private work is route-based yard and commercial treatment. Many people start on whichever side is hiring locally."
+      },
+      {
+        q: "Do I need a degree?",
+        a: "Not for most field technician roles; BLS lists a high school diploma as typical for pest control work. Biologist and vector ecologist roles are science jobs and usually ask for a degree; check postings."
+      },
+      {
+        q: "Which licence do I need?",
+        a: "Public program applicators usually need a state public health category, such as California's Vector Control Technician certification or Florida's Public Health Pest Control licence. Private residential work usually needs your state's general pest or lawn and ornamental licence; in Florida, a pest control business licence with a certified operator in one of those categories."
+      },
+      {
+        q: "Can I take the California VCT exam before I am hired?",
+        a: "No. CDPH says only people currently employed at a government public health agency that does vector control may apply to take it."
+      },
+      {
+        q: "Will I work nights?",
+        a: "Possibly, in a public program. The CDC says adult mosquito spraying happens when mosquitoes are most active and pollinators are not. Larviciding is usually daytime."
+      },
+      {
+        q: "Is it year-round?",
+        a: "Mosquito season, by the CDC's description, runs summer through fall, typically June to October. Some positions are seasonal. Ask what off-season work exists."
+      },
+      {
+        q: "Do backyard barrier treatments and misting systems work?",
+        a: "A 2019 review found barrier treatments reduced mosquitoes, with variation between studies and species. The CDC does not recommend residential misting systems and says there is no data on their effectiveness."
+      },
+      {
+        q: "What does it pay?",
+        a: "BLS does not track mosquito control separately. Pest control workers had a May 2025 median of $45,250; those in local government had a median of $50,870."
+      }
+    ],
+    sources: [
+      {
+        label: "CDC: Mosquito Control Programs",
+        url: "https://www.cdc.gov/mosquitoes/mosquito-control/mosquito-control-programs.html"
+      },
+      {
+        label: "CDC: Truck Spraying",
+        url: "https://www.cdc.gov/mosquitoes/mosquito-control/truck-spraying.html"
+      },
+      {
+        label: "CDC: Misting Systems for Mosquitoes",
+        url: "https://www.cdc.gov/mosquitoes/mosquito-control/misting-systems-for-mosquitoes.html"
+      },
+      {
+        label: "CDC: About West Nile Virus",
+        url: "https://www.cdc.gov/west-nile-virus/about/index.html"
+      },
+      {
+        label: "EPA: Controlling Adult Mosquitoes",
+        url: "https://www.epa.gov/mosquitocontrol/controlling-adult-mosquitoes"
+      },
+      {
+        label: "AMCA: Mosquito Control",
+        url: "https://www.mosquito.org/mosquito-control/"
+      },
+      {
+        label: "AMCA: Best Management Practices for Integrated Mosquito Management",
+        url: "https://www.mosquito.org/bmp/"
+      },
+      {
+        label: "CDPH: Vector Control Technician Certification Program",
+        url: "https://www.cdph.ca.gov/Programs/CID/DCDC/Pages/Vector-Control-Technician-Certification-Program.aspx"
+      },
+      {
+        label: "CDPH: California Vector Control Technician Certification and Training Program guidelines (updated June 2019)",
+        url: "https://www.cdph.ca.gov/Programs/CID/DCDC/CDPH%20Document%20Library/CAVCTCertandTrainPgmGuidelines.pdf"
+      },
+      {
+        label: "California DPR: Qualified Applicator License packet",
+        url: "https://www.cdpr.ca.gov/wp-content/uploads/2025/06/qal.pdf"
+      },
+      {
+        label: "FDACS: Mosquito Control Licensing",
+        url: "https://www.fdacs.gov/Business-Services/Mosquito-Control/Mosquito-Control-Licensing"
+      },
+      {
+        label: "eCFR: 40 CFR part 171, Certification of Pesticide Applicators",
+        url: "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-E/part-171"
+      },
+      {
+        label: "EPA: Certification Standards for Pesticide Applicators",
+        url: "https://www.epa.gov/pesticide-worker-safety/certification-standards-pesticide-applicators"
+      },
+      {
+        label: "Stoops et al. (2019), A Review of Studies Evaluating Insecticide Barrier Treatments for Mosquito Control From 1944 to 2018, Environmental Health Insights",
+        url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC6595667"
+      },
+      {
+        label: "BLS Occupational Outlook Handbook: Pest Control Workers",
+        url: "https://www.bls.gov/ooh/building-and-grounds-cleaning/pest-control-workers.htm"
+      },
+      {
+        label: "O*NET OnLine: Pest Control Workers (37-2021.00)",
+        url: "https://www.onetonline.org/link/details/37-2021.00"
+      },
+      {
+        label: "BLS OEWS May 2025 via BLS Public Data API (series OEUN000000099930037202113, OEUN000000099930037301213 and related)",
+        url: "https://api.bls.gov/publicAPI/v1/timeseries/data/"
+      },
+      {
+        label: "BLS Employee Benefits in the United States, March 2026: Tables 1, 2 and 6",
+        url: "https://www.bls.gov/news.release/ebs2.toc.htm"
+      },
+      {
+        label: "QualityPro",
+        url: "https://www.npmaqualitypro.org/"
+      },
+      {
+        label: "ESA: Associate Certified Entomologist",
+        url: "https://www.entocert.org/ace"
+      }
+    ],
+    notes: "Inferences: (1) Local-government pay uses OEWS industry code 999300; we believe BLS labels it 'Local Government, excluding Schools and Hospitals (OEWS Designation)' but could not open an OEWS page to confirm the label (OEWS profile pages redirect; download.bls.gov is blocked). (2) That mosquito district field staff are coded 37-2021 or 37-3012 is an assumption. (3) The NCS 'service occupations' group is applied to both sides. CDPH guidelines are dated June 2019; CEU numbers may have changed since. The AMCA dipper-size detail appeared only in a search snippet and was NOT used. NIOSH tick-borne disease page redirected to the CDC homepage, so worker tick guidance was not used. CDC truck spraying page says adulticiding happens when mosquitoes are most active; 'evenings, nights or early mornings' is our gloss on that. The AMCA '734 organized mosquito control organizations' figure comes from AMCA's page and is undated. Pollinator risk is presented only as the Stoops review's stated knowledge gap plus label directions; we did not open the stronger claims in search snippets about honeybee thresholds. Tools list is descriptive from CDC/EPA program descriptions."
+  },
+  "turf-ornamental": {
+    intro: "Turf and ornamental work is pest management for lawns, shrubs, flower beds and trees. You identify weeds, insects and plant diseases, then mix and apply herbicides, insecticides and fungicides, and often fertilizer, on a route of homes, businesses or grounds. BLS counts this work as pesticide handlers, sprayers and applicators, vegetation (SOC 37-3012), a detailed occupation inside grounds maintenance workers. O*NET's sample job titles for it include Lawn Specialist, Spray Technician, Shrub Technician, IPM Technician and Pesticide Applicator. It is a pesticide-licensed job almost everywhere: federal rules name ornamental and turf pest control as its own certification category, and states license it under names like 'Lawn and Ornamental' or 'Landscape Maintenance'. Employers include lawn care companies, pest control companies with lawn divisions, landscapers, golf courses and government grounds. It suits people who like plants, want to work outside, can handle a busy spring and summer, and are careful with chemicals and paperwork.",
+    dayInTheLife: [
+      "The day starts at the shop. You fill the truck's spray tank with water and product according to the mixing formula, which O*NET rates among the most important tasks of the job, along with mixing pesticides for trees, shrubs and lawns. Before the season and whenever anything changes, the sprayer is calibrated. Texas A&M AgriLife Extension calls a properly calibrated sprayer one of the most fundamental things in managing turf pests, and says to recalibrate whenever a factor such as nozzle, pressure or walking speed changes.",
+      "Then you run the route. O*NET lists establishing driving routes for applications as a core task. At each property you walk the lawn and beds and look for problems: weeds, insect damage, disease. Identifying lawn and plant diseases to choose a treatment is part of the job. EPA's integrated pest management framework asks you to set action thresholds, monitor and identify pests correctly, prevent problems where possible, and only then choose the control, starting with less risky options.",
+      "Weather decides what you can spray. Pesticide drift, the movement of spray away from the target, depends on wind speed, droplet size, release height and buffer zones, according to the National Pesticide Information Center, and temperature inversions make it worse. Applicators reduce drift by using nozzles that make larger droplets, spraying in calm weather, directing spray away from property lines and following label restrictions. O*NET describes applying with attention to weather, droplet size and obstructions, and lifting, pushing and swinging hoses and nozzles to cover the target area.",
+      "Records go with every stop. O*NET rates recording the type and amount of pesticide used as one of the two most important tasks in this occupation. Many stops also involve talking to the customer about what you found and what they should do about watering or mowing.",
+      "At the end of the day you clean and service the equipment, restock and finish paperwork. The year has a strong rhythm. BLS says grounds maintenance workers are busier and may work longer hours in spring, summer and fall, some jobs are seasonal, and some workers do other work such as snow removal in winter. O*NET data shows 64 percent of pesticide handlers, sprayers and applicators working more than 40 hours in a typical week."
+    ],
+    duties: [
+      "Fill sprayer tanks and mix pesticides according to label and company formulas",
+      "Calibrate sprayers and spreaders and recalibrate when equipment or conditions change",
+      "Plan and drive an efficient route of properties",
+      "Inspect turf, shrubs, beds and trees for weeds, insects and disease",
+      "Identify plant diseases and pests and choose the right treatment",
+      "Apply herbicides, insecticides and fungicides with hose reels, backpacks or spreaders",
+      "Apply fertilizer where licensed and required",
+      "Check wind and weather and adjust or postpone to prevent drift",
+      "Post notices or leave paperwork as the state requires",
+      "Record product, rate, amount and location for every application",
+      "Explain findings and care instructions to customers",
+      "Clean, service and maintain spray equipment",
+      "Keep pesticide storage and the truck organized and secure",
+      "Complete continuing education to keep the licence current"
+    ],
+    workEnvironment: {
+      schedule: "Full-time in season with long weeks. O*NET data shows 64 percent of pesticide handlers, sprayers and applicators work more than 40 hours a week. BLS says grounds maintenance workers may work longer hours in spring, summer and fall.",
+      seasonality: "Strongly seasonal. BLS says some grounds maintenance jobs are seasonal, available mainly in spring, summer and fall, and some workers do snow removal in winter. How long the season runs depends on your climate; ask employers whether the job is year-round.",
+      physical: "On your feet and walking most of the day, dragging hose and carrying equipment. O*NET data shows 66 percent making repetitive motions more than half the time and 68 percent standing more than half the time. 56 percent work in very hot or very cold temperatures at least once a week.",
+      hazards: "Chemical exposure is the main hazard. BLS says applicators of pesticides or fertilizers must wear protective gear such as appropriate clothing, gloves, goggles and sometimes respirators. O*NET data shows 29 percent exposed to hazardous conditions every day and 44 percent at least weekly, and 55 percent wearing protective equipment every day. Heat is a risk in summer (OSHA). Drift is a hazard to other people, pets and plants, not only to you.",
+      vehicleAndTravel: "You drive a truck with spray equipment from property to property. O*NET lists truck-based spray equipment among the tools of this occupation and establishing driving routes as a core task. Ask whether the job needs a particular driver's licence class for the truck you will drive."
+    },
+    training: {
+      entry: "O*NET places this occupation in Job Zone 1-2: a high school diploma or GED is usually needed, with little or no prior experience. Federal rules set 18 as the minimum age for commercial applicator certification. A horticulture, agronomy or turf background helps; in Florida a degree with 20 semester hours in horticulture, botany or agronomy can count toward the Lawn and Ornamental operator exam.",
+      onTheJob: "BLS says pesticide handlers, sprayers and applicators may need additional training lasting up to a year. New hires usually apply under the direct supervision of a licensed applicator while they learn. Federal rules allow noncertified applicators to use restricted use pesticides under direct supervision if they complete required training, and Texas legislation (H.B. 1070, 2021) codified the state's long-standing practice of allowing licensed applicators to directly supervise unlicensed employees. Expect to learn mixing, calibration, plant and pest identification and record keeping in your first season.",
+      licensing: "BLS says most states require licensing for workers who apply pesticides, usually by passing a test on proper use and disposal, while licensing for fertilizer handling varies. Federal rules (40 CFR part 171) set an ornamental and turf pest control category, require a core exam plus category exams, and make certification expire after five years unless renewed, with states free to set shorter cycles. EPA notes many states require certification for any commercial pesticide use, not just restricted use products. Which program licenses you varies. Texas puts 'Lawn and ornamental' and 'Weed control' inside its Structural Pest Control Service. Florida puts 'Lawn and Ornamental Pest Control' under its structural pest control law, and has a Limited Commercial Landscape Maintenance certificate that allows pesticides on plant beds and ornamentals only, with hand-held or backpack sprayers up to 5 gallons, and never on turf; Florida lawn maintenance companies may apply only fertilizer to turf. California runs landscape work through the Department of Pesticide Regulation: a Qualified Applicator License (its official name) in Category B (Landscape Maintenance) after passing the laws and regulations exam and a category exam at 70 percent, with 20 hours of continuing education every two years, four of them on laws and regulations. Check your state's page on this site and your state agency.",
+      certifications: [
+        {
+          name: "Landscape Industry Certified Technician (Turf Maintenance or Ornamental Maintenance specialty)",
+          body: "National Association of Landscape Professionals (NALP)",
+          what: "Two-part exam: a common core (communication, safety and first aid, vehicles, tools and equipment, basic maths) plus a specialty exam. Specialties include Turf Maintenance and Ornamental Maintenance.",
+          url: "https://www.landscapeprofessionals.org/LP/LP/Certification/exterior.aspx"
+        },
+        {
+          name: "ISA Certified Arborist",
+          body: "International Society of Arboriculture",
+          what: "ISA's credential for tree care professionals; relevant if your work moves into tree and shrub health. Eligibility and exam details are in ISA's program guide.",
+          url: "https://www.isa-arbor.com/Credentials/Types-of-Credentials/ISA-Certified-Arborist"
+        },
+        {
+          name: "Associate Certified Entomologist (ACE)",
+          body: "Entomological Society of America",
+          what: "For pest professionals with at least 5 years of verifiable experience and a current US pesticide applicator's licence who pass ESA's exam.",
+          url: "https://www.entocert.org/ace"
+        }
+      ]
+    },
+    skills: [
+      "Identifying turf and ornamental weeds, insects and diseases",
+      "Accurate mixing and rate calculations",
+      "Sprayer and spreader calibration",
+      "Reading pesticide labels and following them exactly",
+      "Judging wind and weather to prevent drift",
+      "Route planning and time management",
+      "Customer communication",
+      "Thorough application records",
+      "Physical stamina for long, hot days"
+    ],
+    tools: [
+      "Truck-mounted spray tank with pump and agitator",
+      "Hose reel and spray gun",
+      "Backpack sprayer",
+      "Granular rotary spreader",
+      "Measuring containers and scales for mixing",
+      "Calibration tools: measuring tape, stopwatch, collection jar",
+      "Hand lens and soil probe for diagnosis",
+      "Wind meter",
+      "Tablet or phone for route and application records",
+      "Gloves, eye protection and other PPE required by the label",
+      "Seed spreader (listed by O*NET as a supplemental tool)"
+    ],
+    careerPath: [
+      {
+        stage: "Seasonal applicator or trainee",
+        description: "Apply under the direct supervision of a licensed applicator while you learn mixing, calibration and identification. BLS says training can take up to a year."
+      },
+      {
+        stage: "Licensed applicator or lawn specialist",
+        description: "Pass your state's core and turf and ornamental category exams and run your own route."
+      },
+      {
+        stage: "Senior technician, diagnostician or trainer",
+        description: "Handle problem accounts, diagnose disease and insect issues, train new hires. NALP certification or an ISA credential can mark this step."
+      },
+      {
+        stage: "Supervisor",
+        description: "Lead crews and routes. BLS counts first-line supervisors of landscaping, lawn service and groundskeeping workers separately: a May 2025 median of $58,430."
+      },
+      {
+        stage: "Branch manager or owner",
+        description: "Run a branch or your own company. In Florida, for example, a certified operator needs a high school diploma and three years as a service employee of a licensee, or a qualifying degree plus one year."
+      }
+    ],
+    pay: "BLS tracks this field directly as pesticide handlers, sprayers and applicators, vegetation (SOC 37-3012). In May 2025 the median annual wage was $46,340 ($22.28 an hour); the lowest 10 percent earned under $35,570 and the highest 10 percent over $61,420. The mean was $47,070. OEWS counted 27,050 jobs. In landscaping services, the largest employer with 13,080 of these jobs, the median was $46,290; in exterminating and pest control services (2,240 jobs) it was $41,390; in local government (2,050 jobs) it was $46,920. For comparison, pest control workers had a median of $45,250. BLS projects 4 percent growth for this occupation from 2025 to 2035, from 25,700 to 26,700 jobs (the projections use a slightly different employment base than OEWS). Supervisors of landscaping, lawn service and groundskeeping workers earned a median of $58,430. OEWS excludes the self-employed and does not capture overtime, commission or seasonal swings, which matter a lot in this field.",
+    benefits: "Pesticide applicators fall in BLS's service occupations group for benefits. In March 2026, private industry workers in service occupations had 47 percent access to medical care benefits, 47 percent to retirement benefits, 67 percent to paid sick leave, 57 percent to paid vacation and 56 percent to paid holidays. State and local government workers in service occupations had much higher access (82 percent medical, 85 percent retirement). Seasonal jobs may carry fewer benefits. Ask employers about vehicles, uniforms, paid licensing and training, and any production or commission pay; we found no neutral source measuring these for lawn care.",
+    goodParts: [
+      "Outdoor work with plants, and a clear, visible result on the lawns you treat.",
+      "BLS tracks this job directly, so you can see real pay data: a May 2025 median of $46,340.",
+      "A recognized licence category almost everywhere, which travels between employers.",
+      "Plenty of independence on a route; O*NET reports most workers have a lot of freedom to set priorities.",
+      "Clear steps up to supervisor (median $58,430) and ownership."
+    ],
+    hardParts: [
+      "Seasonal, with long weeks in spring and summer and possible slow winters.",
+      "Daily pesticide handling and protective gear.",
+      "Weather controls your schedule; wind and inversions can stop applications.",
+      "Repetitive, physical work: dragging hose, walking and standing most of the day.",
+      "Licensing names and rules differ by state and sometimes sit in a different agency than pest control."
+    ],
+    faq: [
+      {
+        q: "Is this pest control or landscaping?",
+        a: "Both. BLS counts it as a grounds maintenance occupation, but it is licensed as pesticide work. In some states (Texas, Florida) the licence sits in the structural pest control program; in California it is under the Department of Pesticide Regulation."
+      },
+      {
+        q: "Can a mowing company spray weeds in the lawn?",
+        a: "Not without the right licence. In Florida, for example, lawn maintenance companies may apply only fertilizer to turf, and the limited landscape certificate covers plant beds and ornamentals only, never turf."
+      },
+      {
+        q: "Do I need a degree?",
+        a: "No. O*NET says a high school diploma or GED is usually required. Horticulture, agronomy or botany coursework helps and can count toward some licences."
+      },
+      {
+        q: "Which licence category is it?",
+        a: "Federal rules call it ornamental and turf pest control. States use names like Lawn and Ornamental (Texas, Florida) or Landscape Maintenance, Category B (California). Check your state."
+      },
+      {
+        q: "Is the work year-round?",
+        a: "Often not. BLS says some grounds jobs are seasonal and busiest in spring, summer and fall, with some workers doing snow removal in winter."
+      },
+      {
+        q: "Is it bad for my health?",
+        a: "Pesticide exposure is a real hazard, which is why labels require protective gear and BLS notes applicators wear gloves, goggles and sometimes respirators. Follow the label every time and ask what PPE your employer supplies."
+      },
+      {
+        q: "Does it pay better than pest control?",
+        a: "Slightly, on BLS numbers: a May 2025 median of $46,340 for vegetation pesticide applicators versus $45,250 for pest control workers. Commission and overtime are not included in either."
+      },
+      {
+        q: "How long before I can work alone?",
+        a: "BLS says pesticide applicators may need up to a year of training. You will need your state licence before applying without supervision."
+      }
+    ],
+    sources: [
+      {
+        label: "BLS Occupational Outlook Handbook: Grounds Maintenance Workers",
+        url: "https://www.bls.gov/ooh/building-and-grounds-cleaning/grounds-maintenance-workers.htm"
+      },
+      {
+        label: "O*NET OnLine: Pesticide Handlers, Sprayers, and Applicators, Vegetation (37-3012.00)",
+        url: "https://www.onetonline.org/link/details/37-3012.00"
+      },
+      {
+        label: "BLS OEWS May 2025 via BLS Public Data API (series OEUN000000000000037301213, OEUN000000056173037301213, OEUN000000000000037101213 and related)",
+        url: "https://api.bls.gov/publicAPI/v1/timeseries/data/"
+      },
+      {
+        label: "BLS Employee Benefits in the United States, March 2026: Table 2, Medical care benefits",
+        url: "https://www.bls.gov/news.release/ebs2.t02.htm"
+      },
+      {
+        label: "BLS Employee Benefits in the United States, March 2026: Table 1, Retirement benefits",
+        url: "https://www.bls.gov/news.release/ebs2.t01.htm"
+      },
+      {
+        label: "BLS Employee Benefits in the United States, March 2026: Table 6, Paid leave",
+        url: "https://www.bls.gov/news.release/ebs2.t06.htm"
+      },
+      {
+        label: "eCFR: 40 CFR part 171, Certification of Pesticide Applicators",
+        url: "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-E/part-171"
+      },
+      {
+        label: "EPA: Certification Standards for Pesticide Applicators",
+        url: "https://www.epa.gov/pesticide-worker-safety/certification-standards-pesticide-applicators"
+      },
+      {
+        label: "FDACS: Pest Control Licensing and Certification",
+        url: "https://www.fdacs.gov/Business-Services/Pest-Control/Licensing-and-Certification"
+      },
+      {
+        label: "FDACS: Can lawn maintenance companies make pesticide applications on my property?",
+        url: "https://www.fdacs.gov/Consumer-Resources/Consumer-Rights-and-Responsibilities/Pest-Control/Pest-Control-FAQ/Can-lawn-maintenance-companies-make-pesticide-applications-on-my-property"
+      },
+      {
+        label: "California DPR: Qualified Applicator License packet",
+        url: "https://www.cdpr.ca.gov/wp-content/uploads/2025/06/qal.pdf"
+      },
+      {
+        label: "Texas House Research Organization bill analysis, H.B. 1070 (87R)",
+        url: "https://capitol.texas.gov/tlodocs/87R/analysis/html/HB01070E.htm"
+      },
+      {
+        label: "National Pesticide Information Center: Pesticide Drift",
+        url: "https://npic.orst.edu/reg/drift.html"
+      },
+      {
+        label: "Texas A&M AgriLife Extension: Lawn care requires proper spray applicator calibration",
+        url: "https://schoolipm.tamu.edu/?p=2057"
+      },
+      {
+        label: "EPA: Integrated Pest Management (IPM) Principles",
+        url: "https://www.epa.gov/safepestcontrol/integrated-pest-management-ipm-principles"
+      },
+      {
+        label: "NALP: Landscape Industry Certified Technician",
+        url: "https://www.landscapeprofessionals.org/LP/LP/Certification/exterior.aspx"
+      },
+      {
+        label: "ISA: Certified Arborist",
+        url: "https://www.isa-arbor.com/Credentials/Types-of-Credentials/ISA-Certified-Arborist"
+      },
+      {
+        label: "OSHA: Heat Exposure",
+        url: "https://www.osha.gov/heat-exposure"
+      },
+      {
+        label: "ESA: Associate Certified Entomologist",
+        url: "https://www.entocert.org/ace"
+      }
+    ],
+    notes: "SOC 37-3012 verified as right: BLS OOH Grounds Maintenance Workers lists 'Pesticide handlers, sprayers, and applicators, vegetation' (37-3012) as a detailed occupation that applies herbicides, fungicides and insecticides to plants or soil, and O*NET sample titles include Lawn Specialist and Spray Technician. salary.ts currently has medianAnnualUsd: null for 37-3012; May 2025 figures are now available (median $46,340, $22.28/hr, p10 $35,570, p90 $61,420, mean $47,070, employment 27,050). OOH projections base (25,700) differs from OEWS employment (27,050). Texas 'Lawn and ornamental' and 'Weed control' under SPCS come from the site's own verified states.ts, not re-opened here. California DPR categories from the 2024-25 QAL packet. ISA eligibility not on the page opened, so described generically. NALP recertification rules (24 CEUs every two years) appeared only in search snippets and were NOT used. The EPA Worker Protection Standard covers farms, forests, nurseries and greenhouses; we infer it does not cover residential lawn care and left it out of the text. The Texas A&M calibration source names an individual extension specialist; we cite the institution only. Applying NCS 'service occupations' assumes 37-3012 sits in that group. O*NET 'freedom' figure: 58 percent report a lot of freedom to determine tasks, priorities or goals."
   }
 } /* END GUIDES */;
 

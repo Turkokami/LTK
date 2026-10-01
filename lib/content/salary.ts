@@ -109,7 +109,9 @@ export const NATIONAL_BASELINE = {
     {
       socCode: '37-3012',
       name: 'Pesticide handlers, sprayers and applicators, vegetation',
-      medianAnnualUsd: null,
+      /** BLS OEWS May 2025 via the BLS Public Data API (2026-10-01): $22.28/hr, p10 $35,570,
+       *  p90 $61,420, 27,050 jobs; OOH projects 4% growth 2025–35. */
+      medianAnnualUsd: 46340,
       note:
         'The adjacent SOC code covering turf and ornamental work. Listed because people in this ' +
         'lane are frequently misclassified as 37-2021 and then cannot find their own pay data.',

@@ -141,7 +141,7 @@ Recheck:
 
 ## Field career guides (lib/content/field-guides.ts), researched 2026-10-01
 
-12 of 16 merged: wildlife-control, falconry-abatement, bird-abatement, k9-detection, general-pest, termite-wdo, bed-bugs, fumigation, commercial-food-safety, management, auditor, ownership. Per-field gaps are in each guide's `notes`. Recheck before launch:
+All 16 merged (exclusion, insulation, mosquito-vector and turf-ornamental added last). Per-field gaps are in each guide's `notes`. Recheck before launch:
 - **BLS National Compensation Survey (March 2026), private industry service occupations:** medical and retirement both came back as 47/23/49 (access, participation, take-up). Possibly a real coincidence; verify both rows by hand in a browser.
 - **Mapping pest control workers to NCS "service occupations":** inferred from SOC major groups 31–39.
 - **Management pay:** the combined supervisor group in NAICS 561710 (37-1011 + 37-1012). That pest supervisors are coded mostly as 37-1011 is inferred from employment counts.
@@ -153,3 +153,11 @@ Recheck:
 - **Fixed during review:**
   - salary.ts wrongly said OEWS excludes commission. Per the BLS OEWS FAQ, commissions and production bonuses are included; overtime premium, shift differentials and non-production bonuses are not.
   - Removed the unsourced claims "termite pays better than general pest" and "commercial pays accordingly".
+
+- **Last batch:**
+  - Exclusion pay uses 37-2021 as a stand-in.
+  - Mosquito pay is matched to industry code 999300; confirm that code's label.
+  - California rodent-exclusion licensing under B&P 8555 is our own reading of the statute.
+  - California vector control CE figures date from June 2019.
+  - No agency answer was found on whether installing TAP insulation needs a pest licence; the guide says so.
+- **salary.ts:** 37-3012 median added ($46,340, May 2025, via the BLS Public Data API).
