@@ -6,13 +6,15 @@ import { cx } from '@/lib/utils';
 /**
  * Community up/down votes. <VotesProvider> fetches every tally on the page in one request;
  * <VoteButtons> reads from it. One vote per device (a random id kept in localStorage), which
- * the server hashes. If voting is unavailable the buttons render nothing — the page is
- * complete without them.
+ * the server hashes. If voting storage isn't connected yet, the buttons render disabled with a
+ * "voting opens soon" note, so the feature is visible but can't record anything.
  */
 
 type Tally = { up: number; down: number };
 type Ctx = {
   ready: boolean;
+  /** True once we know voting is unavailable (storage not configured or blocked). */
+  off: boolean;
   counts: Record<string, Tally>;
   mine: Record<string, number>;
   cast: (id: string, vote: 1 | -1 | 0) => void;
@@ -36,6 +38,7 @@ function deviceId(): string | null {
 
 export function VotesProvider({ ids, children }: { ids: string[]; children: React.ReactNode }) {
   const [ready, setReady] = useState(false);
+  const [off, setOff] = useState(false);
   const [counts, setCounts] = useState<Record<string, Tally>>({});
   const [mine, setMine] = useState<Record<string, number>>({});
   const [device, setDevice] = useState<string | null>(null);
@@ -43,7 +46,10 @@ export function VotesProvider({ ids, children }: { ids: string[]; children: Reac
   useEffect(() => {
     const d = deviceId();
     setDevice(d);
-    if (!d) return;
+    if (!d) {
+      setOff(true);
+      return;
+    }
     const q = new URLSearchParams({ ids: ids.join(','), device: d });
     fetch(`/api/votes/?${q}`)
       .then((r) => (r.ok ? r.json() : Promise.reject()))
@@ -52,7 +58,10 @@ export function VotesProvider({ ids, children }: { ids: string[]; children: Reac
         setMine(data.mine);
         setReady(true);
       })
-      .catch(() => setReady(false));
+      .catch(() => {
+        setReady(false);
+        setOff(true);
+      });
   }, [ids]);
 
   const cast = useCallback(
@@ -85,7 +94,7 @@ export function VotesProvider({ ids, children }: { ids: string[]; children: Reac
     [device, mine],
   );
 
-  return <VotesCtx.Provider value={{ ready, counts, mine, cast }}>{children}</VotesCtx.Provider>;
+  return <VotesCtx.Provider value={{ ready, off, counts, mine, cast }}>{children}</VotesCtx.Provider>;
 }
 
 function Thumb({ down = false }: { down?: boolean }) {
@@ -98,6 +107,22 @@ function Thumb({ down = false }: { down?: boolean }) {
 
 export function VoteButtons({ id, label }: { id: string; label: string }) {
   const ctx = useContext(VotesCtx);
+  if (ctx?.off) {
+    return (
+      <div className="flex flex-wrap items-center gap-2" title="Voting opens soon">
+        {[1, -1].map((dir) => (
+          <span
+            key={dir}
+            aria-hidden="true"
+            className="inline-flex cursor-not-allowed items-center gap-1.5 rounded-full border border-rule px-2.5 py-1 text-xs font-bold text-ink3 opacity-60"
+          >
+            <Thumb down={dir === -1} />
+          </span>
+        ))}
+        <span className="text-xs text-ink3">Community voting opens soon</span>
+      </div>
+    );
+  }
   if (!ctx?.ready) return null;
   const t = ctx.counts[id] ?? { up: 0, down: 0 };
   const my = ctx.mine[id] ?? 0;
