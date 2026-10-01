@@ -55,8 +55,9 @@ export interface Role {
  *
  * BLS caveats that must stay visible on the page, because omitting them is how wage pages
  * mislead: OEWS EXCLUDES self-employed workers, and annual figures for hourly occupations are
- * computed at 2,080 hours — so they do not reflect overtime, commission or seasonal swing,
- * all three of which are substantial in this industry.
+ * computed at 2,080 hours. OEWS wages INCLUDE commissions and production bonuses but EXCLUDE
+ * overtime premium, shift differentials and non-production bonuses (BLS OEWS FAQ,
+ * bls.gov/oes/oes_ques.htm), so overtime and seasonal swing are not reflected.
  */
 export const NATIONAL_BASELINE = {
   source: 'US Bureau of Labor Statistics, Occupational Employment and Wage Statistics (OEWS)',
@@ -116,8 +117,8 @@ export const NATIONAL_BASELINE = {
   ],
   excludes: [
     'Self-employed workers — so owner-operators are absent entirely',
-    'Commission, bonus and production pay',
-    'Overtime and seasonal variation (annual figures assume 2,080 hours)',
+    'Overtime premium pay, shift differentials and non-production bonuses (commissions and production bonuses are included)',
+    'Seasonal variation (annual figures assume 2,080 hours)',
   ],
 } as const;
 

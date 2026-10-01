@@ -138,3 +138,18 @@ Recheck:
 - SC SGAR restriction: sourced to Clemson releases; no final State Register order found.
 - EPA rodenticide interim decision: expected in 2026, not yet issued. Add it when it lands.
 - OSHA heat rule: supplemental proposal on the agenda for Dec 2026.
+
+## Field career guides (lib/content/field-guides.ts), researched 2026-10-01
+
+12 of 16 merged: wildlife-control, falconry-abatement, bird-abatement, k9-detection, general-pest, termite-wdo, bed-bugs, fumigation, commercial-food-safety, management, auditor, ownership. Per-field gaps are in each guide's `notes`. Recheck before launch:
+- **BLS National Compensation Survey (March 2026), private industry service occupations:** medical and retirement both came back as 47/23/49 (access, participation, take-up). Possibly a real coincidence; verify both rows by hand in a browser.
+- **Mapping pest control workers to NCS "service occupations":** inferred from SOC major groups 31–39.
+- **Management pay:** the combined supervisor group in NAICS 561710 (37-1011 + 37-1012). That pest supervisors are coded mostly as 37-1011 is inferred from employment counts.
+- **Fumigation label details:** taken from the 2014 EPA-accepted Vikane label; recheck against the current label.
+- **K9:**
+  - Maryland COMAR 15.05.01.14(C) was read from an Oct 2022 printout; check for later amendments.
+  - Its test protocol differs from NPMA's guidance.
+  - Pay, insurance and dog cost are unsourced and written as questions to ask.
+- **Fixed during review:**
+  - salary.ts wrongly said OEWS excludes commission. Per the BLS OEWS FAQ, commissions and production bonuses are included; overtime premium, shift differentials and non-production bonuses are not.
+  - Removed the unsourced claims "termite pays better than general pest" and "commercial pays accordingly".

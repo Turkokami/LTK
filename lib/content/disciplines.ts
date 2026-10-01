@@ -133,7 +133,7 @@ export const DISCIPLINES: Discipline[] = [
     licensingNote:
       'A separate licence category in most states. Several states additionally regulate who may sign a WDI/WDO report, because a real estate transaction rests on it.',
     routeIn: 'Usually a lateral move from general pest after a year or two, adding the termite category. Some companies hire directly into termite.',
-    dayToDay: 'Crawlspaces, attics, foundations and a lot of writing. The inspection report is a legal document and the liability is real, which is why it pays better than general pest.',
+    dayToDay: 'Crawlspaces, attics, foundations and a lot of writing. The inspection report is a legal document and the liability is real.',
     movesTo: ['fumigation', 'exclusion', 'management', 'ownership'],
     socCode: '37-2021',
     communityIsTheNetwork: false,
@@ -238,7 +238,7 @@ export const DISCIPLINES: Discipline[] = [
     licensingNote:
       'Standard licence, but the real gate is audit literacy. The scheme requirements, not the state, drive what you document and how.',
     routeIn: 'From general pest, usually by being the technician who did not mind the paperwork.',
-    dayToDay: 'Documentation, trend analysis, device maps and auditors. More desk work than any other technical lane, and it pays accordingly.',
+    dayToDay: 'Documentation, trend analysis, device maps and auditors. More desk work than any other technical lane.',
     movesTo: ['fumigation', 'auditor', 'management', 'ownership'],
     communityIsTheNetwork: false,
   },

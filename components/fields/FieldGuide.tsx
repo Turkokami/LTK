@@ -82,11 +82,11 @@ export function GuideTraining({ g }: { g: FieldGuide }) {
       <h2 className="h2 mb-4">Training and licensing</h2>
       <div className="prose-bulletin">
         <h3 className="h3 mb-2 mt-6">Getting hired</h3>
-        <p>{t.entry}</p>
+        <p className="whitespace-pre-line">{t.entry}</p>
         <h3 className="h3 mb-2 mt-6">Learning on the job</h3>
-        <p>{t.onTheJob}</p>
+        <p className="whitespace-pre-line">{t.onTheJob}</p>
         <h3 className="h3 mb-2 mt-6">Licensing</h3>
-        <p>{t.licensing}</p>
+        <p className="whitespace-pre-line">{t.licensing}</p>
       </div>
       {t.certifications.length ? (
         <>
