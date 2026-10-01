@@ -194,3 +194,9 @@ Recheck before relying on these:
 - **VT:** unclear whether 16 credits is per category or a total.
 - **RI:** 8 credits per category per the rule (DEM pages just say "8 credits").
 - **WY:** follows the rule s.28-3(h); recert options are alternatives, not cumulative.
+- **Batch AL–HI:**
+  - AZ category codes are rule references (no card codes found).
+  - AR renewal date conflicts: "prior to June 30" in the rule vs "prior to July 1" in the 2026 overview.
+  - HI renewal fee conflicts: $278/$212 on the Board page vs $210/$160 in the Jan 2026 FAQ. The record carries only the $30 DAB applicator fee.
+  - DE admin code wouldn't extract.
+  - GA has no public approved-course search.

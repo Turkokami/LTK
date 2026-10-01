@@ -2868,5 +2868,995 @@ export const STATE_RESEARCH: Record<string, StateResearch> = /* BEGIN STATES */ 
       ]
     },
     notes: "Category numbers and credit table from Penn State Extension PSEP page (updated 26 June 2025), which reproduces PDA requirements; 7 Pa. Code 128.45 defers credit totals to the \"Pennsylvania State Plan for Certification of Pesticide Applicators\" (plan itself not opened). PA uses CREDITS of 30 minutes — the ceuHoursByCategory values are credits, not clock hours; render with that label. No category 14 exists in the current list. pa.gov did not state reciprocity; NY lists PA as a reciprocal state (PA applicants need two years verifiable experience for NY). Online credit limits not stated."
+  },
+  AL: {
+    agency: "Alabama Department of Agriculture and Industries (ADAI) — Pesticide Management Division",
+    agencyUrl: "https://agi.alabama.gov/pesticidemanagement/programs/professional-services/",
+    verified: true,
+    regulatory: {
+      stateCode: "AL",
+      verifiedOn: "2026-10-01",
+      reviewedByPath: null,
+      sourceUrls: [
+        "https://agi.alabama.gov/pesticidemanagement/programs/professional-services/",
+        "https://agi.alabama.gov/pesticidemanagement/programs/commercial-applicators/",
+        "https://agi.alabama.gov/pesticidemanagement/wp-content/uploads/sites/10/2026/07/Professional-Services-Exam-Application.pdf",
+        "https://agi.alabama.gov/pesticidemanagement/wp-content/uploads/sites/10/2025/12/Professional-Services-Exam-Schedule.pdf",
+        "https://agi.alabama.gov/pesticidemanagement/wp-content/uploads/sites/10/2022/02/applicaton_for_commercial_pesticide_applicator_permit_renewal.pdf",
+        "https://admincode.legislature.state.al.us/api/chapter/80-10-9",
+        "https://admincode.legislature.state.al.us/api/chapter/80-1-13",
+        "https://www.aces.edu/blog/topics/commercial-applicator/commercial-applicator-frequently-asked-questions/"
+      ],
+      licenseCategories: [
+        {
+          code: "HPC",
+          name: "Household, Institutional and Industrial Pest Control (Certified Operator)"
+        },
+        {
+          code: "WDC",
+          name: "Control and/or Eradication of Wood Destroying Organisms (Certified Operator)"
+        },
+        {
+          code: "FC",
+          name: "Fumigation Pest Control (Certified Operator)"
+        },
+        {
+          code: "HPB",
+          name: "Household, Institutional and Industrial Pest Control (Branch Supervisor)"
+        },
+        {
+          code: "WDS",
+          name: "Control and/or Eradication of Wood Destroying Organisms (Branch Supervisor)"
+        },
+        {
+          code: "FB",
+          name: "Fumigation Pest Control (Branch Supervisor)"
+        },
+        {
+          code: "OTPS",
+          name: "Ornamental and Turf Pest Control Supervisor"
+        },
+        {
+          code: "IIHC",
+          name: "Industrial, Institutional and Health Related Pest Control (Custodial)"
+        },
+        {
+          code: "OTPC",
+          name: "Ornamental and Turf Pest Control (Custodial)"
+        }
+      ],
+      examStructure: "Written exams set by the examining board, $75 per exam. Paper exams are held in Montgomery on the third Tuesday of March, June, September and December, with pre-approval required. Computer-based testing runs weekly at sites across the state through apply.adaitesting.com for $125 per exam ($75 ADAI fee + $50 administrative fee); the Fumigation Certified Operator exam (FC) is not offered at the online sites. Certified Operator and Branch Supervisor candidates need one year of structural pest control experience, an entomology-inclusive college degree, or equivalent institutional training. Only a Certified Operator may supervise a main office or run their own business; a Branch Supervisor may supervise a branch office only.",
+      applicationFeeUsd: 45,
+      renewalCycleMonths: 36,
+      ceuHoursPerCycle: null,
+      ceuHoursByCategory: [],
+      recertByTier: [
+        {
+          tier: "Commercial applicator permit holder (Certified Operator, Branch Supervisor, Supervisor, Custodial)",
+          requirement: "30 points in each three-year permit period, or pass a recertification exam",
+          note: "Points must come from ADAI-approved training in a category the permit holder actually holds; training in a category you do not hold earns nothing. Passing the recertification exam ($75 paper, $125 computer-based) counts as the full 30 points."
+        },
+        {
+          tier: "Business (structural professional services licence)",
+          requirement: "Annual licence: $175 main office, $75 per branch office, $50 per suboffice plus $100 per category",
+          note: "Requires a Certified Operator who holds a current commercial applicator permit in the matching category."
+        }
+      ],
+      acceptedFormats: [
+        "ADAI-approved recertification meetings and training sessions",
+        "A small number of ADAI-approved online recertification courses",
+        "Recertification exam in place of points"
+      ],
+      approvedProviders: [
+        {
+          name: "Alabama Cooperative Extension System — commercial applicator recertification information",
+          url: "https://www.aces.edu/blog/topics/commercial-applicator/recertification-permit-information-for-commercial-applicators-recert/"
+        }
+      ],
+      renewalDeadline: "The commercial applicator permit renews three years from date of issue. It can be renewed for up to one year after it expires; a recertification exam must be passed within 12 months of the expiry date. After more than a year expired it cannot be renewed and you start again from the initial exam. Business licences run 1 October to 30 September.",
+      reciprocity: [
+        "ADAI grants reciprocal commercial applicator certification to holders from Florida, Georgia, Indiana, Louisiana, Mississippi, Ohio, South Carolina and Tennessee ($120 per category, $75 General Standards). The structural categories (HPC, WDC, FC) are not among the categories listed on the reciprocal application — confirm with ADAI before relying on reciprocity for structural work."
+      ]
+    },
+    notes: "Codified rules served by admincode.legislature.state.al.us are marked Supp. 6/30/12 (80-10-9) and Supp. 12/31/12 (80-1-13); fees on the 2022–2026 ADAI forms match them. The 30-point / 3-year rule is 80-1-13-.10. Points-per-course is not stated on any ADAI page I could read; an ACES (land-grant) FAQ points to an approved online list at usaplants.tnatc.org, not linked here because it is not an ADAI page. ssl.acesag.auburn.edu recertification pages returned 403. No exam passing score is published. No technician/employee-level credential or training-hour requirement was found for Alabama structural employees — confirm with ADAI (334-240-7243) before publishing anything about technicians. ADAI exam application PDF is dated July 2026; exam schedule covers 2026–2027."
+  },
+  AK: {
+    agency: "Alaska Department of Environmental Conservation (DEC) — Pesticide Control Program",
+    agencyUrl: "https://dec.alaska.gov/eh/pest/certified-applicators/",
+    verified: true,
+    regulatory: {
+      stateCode: "AK",
+      verifiedOn: "2026-10-01",
+      reviewedByPath: null,
+      sourceUrls: [
+        "https://dec.alaska.gov/eh/pest/certified-applicators/",
+        "https://dec.alaska.gov/eh/pest/certified-applicators/becoming-certified/",
+        "https://dec.alaska.gov/eh/pest/certified-applicators/preparing-for-exam/",
+        "https://dec.alaska.gov/eh/pest/certified-applicators/categories/",
+        "https://dec.alaska.gov/eh/pest/certified-applicators/recertification/",
+        "https://www.akleg.gov/basis/aac.asp#18.90.300"
+      ],
+      licenseCategories: [
+        {
+          code: "4",
+          name: "Ornamental and turf pest control"
+        },
+        {
+          code: "7",
+          name: "Structural pest control"
+        },
+        {
+          code: "8",
+          name: "Public health pest control"
+        },
+        {
+          code: "9",
+          name: "Right-of-way and industrial grounds pest control"
+        },
+        {
+          code: "10",
+          name: "Mosquito and biting fly pest control"
+        },
+        {
+          code: "16",
+          name: "Non-soil fumigation"
+        },
+        {
+          code: "17A",
+          name: "Full vertebrate pest control"
+        },
+        {
+          code: "17B",
+          name: "Limited vertebrate pest control - rodents"
+        },
+        {
+          code: "19",
+          name: "Pesticide technician"
+        }
+      ],
+      examStructure: "Core Exam in three sections (General Knowledge, State Regulations, Label Comprehension), all passed at 70% or higher in one sitting, plus at least one Category Exam at 70% on every section. Exams are taken at online testing centres around the state (paper exams by arrangement) and must be taken within 100 days of DEC approval. Testing centres charge their own fee, generally $30–$50 per test. Three failures in a year means a 12-month wait. After passing: $25 DEC fee and proof of liability insurance before the card is issued.",
+      applicationFeeUsd: 25,
+      renewalCycleMonths: 36,
+      ceuHoursPerCycle: 12,
+      ceuHoursByCategory: [],
+      recertByTier: [
+        {
+          tier: "Certified applicator (all categories)",
+          requirement: "12 DEC-approved CEUs before the current certification expires, or retest",
+          note: "CEUs must be finished BEFORE expiry — once expired, the only route back is the exams. Renewal also needs the $25 fee and proof of liability insurance. Any certified applicator who fails the Core Exam loses certification."
+        },
+        {
+          tier: "Pesticide technician (Category 19)",
+          requirement: "Certified like other categories; applies general-use pesticides only under a certified applicator",
+          note: "Must carry the directing applicator's written instructions for each application. DEC does not publish a separate technician CEU figure."
+        }
+      ],
+      acceptedFormats: [
+        "DEC-approved classes, conferences and meetings",
+        "DEC-approved online courses (one CEU per course)",
+        "Alaska Certified Applicator Conference (UAF Cooperative Extension) — up to 6 CEUs"
+      ],
+      approvedProviders: [
+        {
+          name: "DEC re-certification page (approved CEU sources)",
+          url: "https://dec.alaska.gov/eh/pest/certified-applicators/recertification/"
+        },
+        {
+          name: "University of Alaska Fairbanks Cooperative Extension Service — Pesticide Safety Education",
+          url: "https://www.uaf.edu/ces/agriculture/psep/"
+        }
+      ],
+      renewalDeadline: "Certification is valid for up to three years (one, two or three years on initial certification, depending on test scores). All CEU coursework must be completed before the current certification expires; the renewed certification runs three years from the reissue date.",
+      reciprocity: [
+        "Confirm with Alaska DEC Pesticide Control Program."
+      ]
+    },
+    notes: "dec.alaska.gov returns 403 to scripted fetches; pages were read through a real browser. The DEC category page lists names without numbers — numbers taken from 18 AAC 90.300(c) on akleg.gov. Category 7 explicitly excludes fumigants and general-use antimicrobials; structural fumigation is Category 16. The DEC 18 AAC 90 PDF (dec.alaska.gov/media/drgngwgy/18-aac-90.pdf) was blocked; the akleg.gov text was used instead. No reciprocity statement found on DEC pages. DEC newsletter \"On the Cidelines 2026\" not reviewed."
+  },
+  AZ: {
+    agency: "Arizona Department of Agriculture — Office of Pest Management (OPM), formerly the Pest Management Division (PMD)",
+    agencyUrl: "https://agriculture.az.gov/divisions/environmental-consumer-protection-division/office-of-pest-management",
+    verified: true,
+    regulatory: {
+      stateCode: "AZ",
+      verifiedOn: "2026-10-01",
+      reviewedByPath: null,
+      sourceUrls: [
+        "https://agriculture.az.gov/divisions/environmental-consumer-protection-division/office-of-pest-management",
+        "https://agriculture.az.gov/divisions/environmental-consumer-protection-division/office-of-pest-management/pesticide-continuing-education",
+        "https://agriculture.az.gov/sites/default/files/2026-07/AZDA%20-%20PMD%20Licensing%20Information.pdf",
+        "https://apps.azsos.gov/public_services/Title_03/3-08.pdf"
+      ],
+      licenseCategories: [
+        {
+          code: "171.101(c)",
+          name: "Ornamental and turf pest control"
+        },
+        {
+          code: "171.101(e)",
+          name: "Aquatic pest control"
+        },
+        {
+          code: "171.101(f)",
+          name: "Right-of-way pest control"
+        },
+        {
+          code: "171.101(g)",
+          name: "Industrial, institutional, structural and health related pest control"
+        },
+        {
+          code: "171.101(h)",
+          name: "Public health pest control"
+        },
+        {
+          code: "171.101(n)",
+          name: "Non-soil fumigation"
+        },
+        {
+          code: "R3-8-102(3)(a)(i)",
+          name: "Wood-destroying organism treatment"
+        },
+        {
+          code: "R3-8-102(3)(a)(ii)",
+          name: "Wood-destroying insect inspection"
+        },
+        {
+          code: "R3-8-102(3)(b)",
+          name: "Wood preservation"
+        }
+      ],
+      examStructure: "Core (general standards) exam plus a category exam for each category sought, 75% to pass each (R3-8-211). Arranged through OPM or its contracted testing vendor. A failed exam cannot be retaken for seven days, nor more than twice in six months. Scores are valid for 12 months. Certified Applicator and Qualified Applicator both require fingerprint clearance and lawful presence; a QA also needs 24 months as a certified applicator in the category within the last 10 years (or 12 months plus 12 semester hours / a relevant degree).",
+      applicationFeeUsd: 55,
+      renewalCycleMonths: 12,
+      ceuHoursPerCycle: null,
+      ceuHoursByCategory: [],
+      recertByTier: [
+        {
+          tier: "Certified Applicator (not a QA)",
+          requirement: "6 CEUs to renew for one year, or 12 CEUs to renew for two years",
+          note: "One CEU is at least 50 minutes of approved instruction."
+        },
+        {
+          tier: "Qualified Applicator (QA)",
+          requirement: "12 CEUs to renew for one year, or 24 CEUs to renew for two years",
+          note: "Meeting the QA figure also satisfies the Certified Applicator requirement for someone holding both."
+        },
+        {
+          tier: "Business licensee",
+          requirement: "Licence renewal with a registered Qualifying Party and proof of financial security",
+          note: "Applicator registration with the business is $0 per applicator."
+        }
+      ],
+      acceptedFormats: [
+        "OPM-approved continuing education courses (classroom, in-house and online)",
+        "Teaching an approved course — one unit per hour taught, once per calendar year"
+      ],
+      approvedProviders: [
+        {
+          name: "AZDA Pesticide Continuing Education (CEU class look-up and CEU portal)",
+          url: "https://agriculture.az.gov/divisions/environmental-consumer-protection-division/office-of-pest-management/pesticide-continuing-education"
+        }
+      ],
+      renewalDeadline: "Renewal applications are due 1 May of the year the licence or certification expires. CEUs must be earned before the current certification expires and do not carry forward. A late renewal pays a late fee; a certification expired more than 11 months cannot be renewed and the exams must be retaken. No CEU credit for repeating the same course in one licensing period, or for an incomplete course.",
+      reciprocity: [
+        "Under R3-8-212 the Director may waive the exams for an applicator certified by another state, federal or tribal agency under an EPA-approved plan, after verifying like competency standards for each category. Confirm with AZDA OPM (licensing@azda.gov, 602-542-3578)."
+      ]
+    },
+    notes: "agriculture.az.gov and apps.azsos.gov return 403 to scripted fetches; both were read via a browser. The old PMD URLs (node/80, node/1172) are dead. The OPM licensing PDF is footed \"2023.06 – PMD CL\" though stored under /2026-07/. A.A.C. Title 3 Ch. 8 read at Supp. 26-1 (31 March 2026). Licence-card category abbreviations (older material uses B1–B4 style codes) were NOT found on any OPM page, so rule references are used as codes — replace if OPM confirms card codes. Exact expiry date (as opposed to the 1 May filing date) not found. Renewal fee amounts in R3-8-103 beyond initial fees not extracted."
+  },
+  AR: {
+    agency: "Arkansas Department of Agriculture — Pest Control Program (Arkansas State Plant Board rules)",
+    agencyUrl: "https://agriculture.arkansas.gov/crops-industry/regulatory-services/pest-control-program/",
+    verified: true,
+    regulatory: {
+      stateCode: "AR",
+      verifiedOn: "2026-10-01",
+      reviewedByPath: null,
+      sourceUrls: [
+        "https://agriculture.arkansas.gov/crops-industry/regulatory-services/pest-control-program/",
+        "https://media.ark.org/agri/Pest-Control-What-We-Do-1-16-2026.2.pdf",
+        "https://media.ark.org/agri/02AG-SPB_54PestControl_Final.pdf"
+      ],
+      licenseCategories: [
+        {
+          code: "1",
+          name: "Termite and Other (Wood Destroying) Structural Pest Control"
+        },
+        {
+          code: "2",
+          name: "Household Pest and Rodent Control"
+        },
+        {
+          code: "3",
+          name: "General Fumigation"
+        },
+        {
+          code: "4",
+          name: "Tree and Turf Pest Control"
+        },
+        {
+          code: "5",
+          name: "Weed Control"
+        },
+        {
+          code: "6",
+          name: "Golf Course Pest Control"
+        },
+        {
+          code: "7",
+          name: "Non-Commercial Pest Control"
+        },
+        {
+          code: "8",
+          name: "Non-Commercial Fumigation"
+        },
+        {
+          code: "9",
+          name: "Non-Commercial Tree & Turf Pest Control"
+        },
+        {
+          code: "10",
+          name: "Non-Commercial Golf Course Pest Control"
+        }
+      ],
+      examStructure: "Commercial operators and non-commercial applicators pass the Basic Core exam (no charge) plus a classification exam, $100 per classification. In-house testing for Classifications 1–3 is the second Monday of odd months; 4–10 the second Monday of even months. Online exams are available year-round through Everblue for an extra proctoring fee of about $30 per exam. Applications must be in five working days before the exam; a failed classification exam means a 14-day wait. Classifications 1 and 2 need at least one year of experience and/or two years of college credit including a basic entomology course. Agents take a separate department exam ($30, includes registration).",
+      applicationFeeUsd: 150,
+      renewalCycleMonths: 12,
+      ceuHoursPerCycle: null,
+      ceuHoursByCategory: [],
+      recertByTier: [
+        {
+          tier: "Registered agent (technician)",
+          requirement: "6 hours of continuing education each year",
+          note: "Must cover applicator safety (2 h), IPM (1 h), equipment and application methods (1 h), environmental concerns (1 h) and laws and rules (1 h). In-house training by the licence holder counts. Entry requires 40 hours of documented on-the-job training before the agent exam; records kept for as long as the agent is employed."
+        },
+        {
+          tier: "Commercial operator / non-commercial applicator",
+          requirement: "Attend a University of Arkansas Cooperative Extension Service-approved pest control program each three-year certification period, or re-examine",
+          note: "Certification expires three years after issuance unless recertified (2 CAR § 54-210). The program must cover safety, IPM, application equipment, environmental concerns and laws and rules. No hour figure is set in the rule."
+        },
+        {
+          tier: "Licence holder (business)",
+          requirement: "Annual licence: $100 (0–30 agents), $250 (31–60), $500 (61+)",
+          note: "Classifications 1 and 2 need bond and insurance; Classification 3 needs insurance. One operator may supervise no more than 30 agents."
+        }
+      ],
+      acceptedFormats: [
+        "Department-approved seminars (associations, manufacturers, suppliers, Cooperative Extension)",
+        "Licence holder's in-house training — agents only",
+        "University of Arkansas CES-approved programs — operators and non-commercial applicators"
+      ],
+      approvedProviders: [
+        {
+          name: "Arkansas Department of Agriculture Pest Control Program (approved recertification course listing)",
+          url: "https://agriculture.arkansas.gov/crops-industry/regulatory-services/pest-control-program/"
+        },
+        {
+          name: "University of Arkansas Cooperative Extension — pesticide training and licensing",
+          url: "https://uaex.uada.edu/pat"
+        }
+      ],
+      renewalDeadline: "Licences and certificates run one state fiscal year (July–June) and must be renewed before 1 July. The three-year recertification clock for operators runs separately from the annual licence.",
+      reciprocity: [
+        "Confirm with the Arkansas Department of Agriculture Pest Control Program (pestcontrol@arkansas.gov, 501-225-1598)."
+      ]
+    },
+    notes: "Rules read from the codified 2 CAR Part 54 (media.ark.org PDF, undated; codification post-dates the 2018 federal rule). Minor conflict: the rule says licences \"must be renewed prior to June 30\"; the January 2026 program overview says \"prior to July 1\". A WebFetch summary of the program page mentioned category pass marks of 70–75% and a 70% core pass mark, but I did not see this text verbatim, so no passing score is published here. Non-commercial certificate fee is $70. Agricultural, forestry, aquatic and public-health work is licensed separately by the Pesticide Section under the Pesticide Use and Application Act."
+  },
+  CO: {
+    agency: "Colorado Department of Agriculture (CDA) — Pesticide Applicator Certification and Licensing Program",
+    agencyUrl: "https://ag.colorado.gov/pesticide-licensing-faqs/qualified-supervisor-and-certified-operator-licensing-information",
+    verified: true,
+    regulatory: {
+      stateCode: "CO",
+      verifiedOn: "2026-10-01",
+      reviewedByPath: null,
+      sourceUrls: [
+        "https://ag.colorado.gov/plants/pesticides/pesticide-license-categories",
+        "https://ag.colorado.gov/plants/pesticides/qs-co-testing-information",
+        "https://ag.colorado.gov/pesticide-licensing-faqs/qualified-supervisor-and-certified-operator-licensing-information",
+        "https://ag.colorado.gov/plants/pesticides/cec-workshops-for-qualified-supervisors-certified-operators-and-private",
+        "https://ag.colorado.gov/plants/pesticides/technician-training-and-non-certified-applicator-resources"
+      ],
+      licenseCategories: [
+        {
+          code: "206",
+          name: "Turf Pest Control"
+        },
+        {
+          code: "207",
+          name: "Ornamental Pest Control"
+        },
+        {
+          code: "301",
+          name: "Wood Destroying Organism Pest Control"
+        },
+        {
+          code: "302",
+          name: "Outdoor Vertebrate Pest Control"
+        },
+        {
+          code: "303",
+          name: "Structural Fumigation"
+        },
+        {
+          code: "304",
+          name: "Residential/Commercial Pest Control"
+        },
+        {
+          code: "305",
+          name: "Stored Commodities Treatment"
+        },
+        {
+          code: "306",
+          name: "Wood Preservation and Wood Products Treatment"
+        },
+        {
+          code: "307",
+          name: "Interior Plant Pest Control"
+        },
+        {
+          code: "309B",
+          name: "Non-Soil Fumigation Pest Control"
+        },
+        {
+          code: "109",
+          name: "Industrial and Right-of-Way Weed Control"
+        },
+        {
+          code: "110",
+          name: "Public Health Pest Control"
+        }
+      ],
+      examStructure: "Qualified Supervisor (QS) and Certified Operator (CO) both pass a General Core exam and at least one pest management category exam. Exams are online at proctor locations, run with Metro Institute and CSU Extension; $41.50 per test, booked and paid at least two days ahead. Results are valid one year. Anyone may sit the QS exams, but a QS licence is issued only with documented field experience (8 CCR 1203-2 Parts 8–10); otherwise a CO licence is issued and can be upgraded later without retesting.",
+      applicationFeeUsd: 100,
+      renewalCycleMonths: 36,
+      ceuHoursPerCycle: null,
+      ceuHoursByCategory: [
+        {
+          category: "LR — Applicable State, Federal, and Local Laws and Regulations",
+          hours: 2
+        },
+        {
+          category: "PF — Pesticides and Their Families",
+          hours: 1
+        },
+        {
+          category: "AS — Applicator Safety",
+          hours: 1
+        },
+        {
+          category: "PS — Public Safety",
+          hours: 1
+        },
+        {
+          category: "EP — Environmental Protection",
+          hours: 1
+        },
+        {
+          category: "UP — Use of Pesticides",
+          hours: 1
+        },
+        {
+          category: "Pest Management — each licensed category (QS/CO)",
+          hours: 1
+        },
+        {
+          category: "Pest Management — 206 Turf, 207 Ornamental, 304 Residential/Commercial (QS/CO)",
+          hours: 2
+        }
+      ],
+      recertByTier: [
+        {
+          tier: "Qualified Supervisor / Certified Operator",
+          requirement: "7 core credits plus pest-management credits per licensed category, before the licence expires, or retest",
+          note: "There is no grace period for credits. Late renewal is possible up to 30 days after expiry ($110) or up to six months by reinstatement ($200) — but only if the credits were earned before expiry."
+        },
+        {
+          tier: "Technician",
+          requirement: "Verifiable training by the employing commercial applicator to CDA standards (8 CCR 1203-2 Part 5.02(k), incorporating 40 CFR 171.201(d))",
+          note: "Documented on the CDA Technician Training Documentation Form. Not a CEC requirement."
+        }
+      ],
+      acceptedFormats: [
+        "CDA-approved CEC workshops (in person)",
+        "CDA-approved webinars and online courses from approved workshop providers",
+        "Retesting in place of credits"
+      ],
+      approvedProviders: [
+        {
+          name: "CDA approved CEC workshops (monthly list; list resets 1 July)",
+          url: "https://ag.colorado.gov/plants/pesticides/cec-workshops-for-qualified-supervisors-certified-operators-and-private"
+        },
+        {
+          name: "CDA approved workshop providers",
+          url: "https://ag.colorado.gov/plants/pesticides/workshops-continuing-education-credits-cec/workshop-providers"
+        }
+      ],
+      renewalDeadline: "Licence valid three years. All CECs must be obtained before the licence expires; there is no grace period for credits. Renewal up to 30 days late with a 10% ($10) late fee; 30 days to six months late requires reinstatement and an extra $100.",
+      reciprocity: [
+        "CDA issues a reciprocal licence at Certified Operator level only, without exams, for the unexpired term of the other jurisdiction's licence ($150, plus a letter of good standing). Reciprocal licences are not renewed and CECs do not apply to them; a new application is needed each time."
+      ]
+    },
+    notes: "ag.colorado.gov returns 403 to scripted fetches; read via browser. Passing score for QS/CO exams is not stated on the pages read — check the CDA Licensing and Examination Guide. Commercial applicator BUSINESS licence fee not captured. Categories 206/207/301–309B confirmed on the CDA category page; the Cornell LII copy of 6 CCR 1007-1 Part 10 is marked superseded (effective until 8/14/2024) and was not used. CEC list on the workshop page \"expire 6/30\" each year."
+  },
+  CT: {
+    agency: "Connecticut Department of Energy and Environmental Protection (DEEP) — Pesticide Management Program",
+    agencyUrl: "https://portal.ct.gov/deep/pesticides/pesticide-certification-general/pesticide-certificationlicensing",
+    verified: true,
+    regulatory: {
+      stateCode: "CT",
+      verifiedOn: "2026-10-01",
+      reviewedByPath: null,
+      sourceUrls: [
+        "https://portal.ct.gov/deep/pesticides/pesticide-certification-general/pesticide-certificationlicensing",
+        "https://portal.ct.gov/deep/pesticides/supervisor-certification/certification-process-and-requirements-for-supervisors",
+        "https://portal.ct.gov/deep/pesticides/operator-certification/commercial-junior-operator-certification",
+        "https://portal.ct.gov/deep/pesticides/pesticide-training"
+      ],
+      licenseCategories: [
+        {
+          code: "3A",
+          name: "Ornamental and Turf"
+        },
+        {
+          code: "3C",
+          name: "Interior Plantscape"
+        },
+        {
+          code: "6",
+          name: "Right of Way"
+        },
+        {
+          code: "7A",
+          name: "General Pest Control"
+        },
+        {
+          code: "7B",
+          name: "Termite and Wood Destroying Organisms"
+        },
+        {
+          code: "7C",
+          name: "Fumigation"
+        },
+        {
+          code: "7Ci",
+          name: "Structural (Fumigation)"
+        },
+        {
+          code: "7Cii",
+          name: "Soil (Fumigation)"
+        },
+        {
+          code: "7Ciii",
+          name: "Pipe (Fumigation)"
+        },
+        {
+          code: "7D",
+          name: "Rodent Control"
+        },
+        {
+          code: "7E",
+          name: "Bird Control"
+        },
+        {
+          code: "7F",
+          name: "Mosquitoes and Biting Flies"
+        },
+        {
+          code: "7G",
+          name: "Wood Preservation"
+        },
+        {
+          code: "7I",
+          name: "Cooling Tower"
+        },
+        {
+          code: "8",
+          name: "Public Health (governmental only)"
+        }
+      ],
+      examStructure: "Supervisor: written exam with core and safety questions combined into each category exam, 75% to pass, up to three hours, up to three categories per $200 registration. Delivered online through Everblue (separate proctoring fee, about $21–$29). Most categories then have an in-person oral exam in Hartford before 2–4 board members. Junior Operator: 60-question multiple-choice exam, 80% to pass, $200 exam fee plus Everblue fee. 30 days between attempts.",
+      applicationFeeUsd: 285,
+      renewalCycleMonths: 60,
+      ceuHoursPerCycle: null,
+      ceuHoursByCategory: [],
+      recertByTier: [
+        {
+          tier: "Commercial Supervisor",
+          requirement: "12 continuing education credits per certification category every five years",
+          note: "Credits do not stack across categories — three core credits count as three credits total, not three per category. Renewal also requires all annual Pesticide Use Summary Reports and the $285 fee. Credits must be earned before expiry."
+        },
+        {
+          tier: "Commercial Junior Operator",
+          requirement: "$80 renewal every five years; annual pesticide safety training before handling pesticides",
+          note: "Works only under a certified supervisor with written instructions for every application. DEEP does not list a credit-hour requirement for operators; the annual training (e.g. PERC \"Pesticide Safety Training for Non-certified Applicators\") must be recorded by the trainer."
+        }
+      ],
+      acceptedFormats: [
+        "DEEP-approved in-person seminars and meetings",
+        "DEEP-approved online and ongoing courses",
+        "Credits approved by another state, if approved there for pesticide credit in the matching category"
+      ],
+      approvedProviders: [
+        {
+          name: "DEEP Continuing Education Opportunities (spreadsheet linked from the training page)",
+          url: "https://portal.ct.gov/deep/pesticides/pesticide-training"
+        }
+      ],
+      renewalDeadline: "Supervisory certifications renew every five years and expire on 31 January of the renewal year. All 12 credits per category must be obtained before the expiration date.",
+      reciprocity: [
+        "DEEP accepts continuing education credits approved by another state for the matching category. For reciprocal certification itself, confirm with DEEP (860-424-3369)."
+      ]
+    },
+    notes: "Supervisor page last updated 20 July 2026; operator page 8 May 2026; training page 17 September 2026. Categories 3B (Golf Course Superintendent) and 3D (Arborist) exist but are omitted here as non-structural; agricultural, forest, aquatic, regulatory and demonstration categories also omitted. Category list shows no 7H. Business registration fee not captured (page not read). Reciprocal certification process not found on the pages read."
+  },
+  DE: {
+    agency: "Delaware Department of Agriculture (DDA) — Pesticides Section",
+    agencyUrl: "https://agriculture.delaware.gov/pesticide-management/applicators/",
+    verified: true,
+    regulatory: {
+      stateCode: "DE",
+      verifiedOn: "2026-10-01",
+      reviewedByPath: null,
+      sourceUrls: [
+        "https://agriculture.delaware.gov/pesticide-management/applicators/",
+        "https://agriculture.delaware.gov/wp-content/uploads/sites/108/2025/11/Pesticide-Certification-FAQs-2025.pdf",
+        "https://agriculture.delaware.gov/wp-content/uploads/sites/108/2025/11/2026-Pesticide-Exam-Schedule-and-Procedures.pdf"
+      ],
+      licenseCategories: [
+        {
+          code: "03",
+          name: "Ornamental & Turf"
+        },
+        {
+          code: "06",
+          name: "Right-of-Way"
+        },
+        {
+          code: "5C",
+          name: "Mosquito"
+        },
+        {
+          code: "7A",
+          name: "General Pest Control"
+        },
+        {
+          code: "7B",
+          name: "Wood Destroying Pest Control"
+        },
+        {
+          code: "7C",
+          name: "Fumigation Pest Control"
+        },
+        {
+          code: "7D",
+          name: "Wood Preservation"
+        },
+        {
+          code: "7E",
+          name: "Institutional and Main. Pest Cntrl."
+        },
+        {
+          code: "7F",
+          name: "Cooling Tower Pest Ctrl"
+        },
+        {
+          code: "08",
+          name: "Public Health"
+        }
+      ],
+      examStructure: "Commercial applicators pass the core exam and the category exam(s), 70% or higher on all exams. Exams are given in person at the Delaware State Fairgrounds (Harrington) at least every 45 days, pre-registered through the DDA Pesticide Management online services site. $30 exam fee for commercial candidates, applied toward certification if all scheduled exams are passed. Three hours maximum, closed book. Only one re-examination of commercial categories in any 12-month period.",
+      applicationFeeUsd: null,
+      renewalCycleMonths: 12,
+      ceuHoursPerCycle: null,
+      ceuHoursByCategory: [
+        {
+          category: "7A — General Pest Control",
+          hours: 18
+        },
+        {
+          category: "7B — Wood Destroying Pest Control",
+          hours: 18
+        },
+        {
+          category: "7C — Fumigation Pest Control",
+          hours: 4
+        },
+        {
+          category: "7D — Wood Preservation",
+          hours: 4
+        },
+        {
+          category: "7E — Institutional and Main. Pest Cntrl.",
+          hours: 18
+        },
+        {
+          category: "7F — Cooling Tower Pest Ctrl",
+          hours: 4
+        },
+        {
+          category: "03 — Ornamental & Turf",
+          hours: 8
+        },
+        {
+          category: "06 — Right-of-Way",
+          hours: 4
+        },
+        {
+          category: "08 — Public Health",
+          hours: 4
+        },
+        {
+          category: "5C — Mosquito",
+          hours: 4
+        }
+      ],
+      recertByTier: [
+        {
+          tier: "Commercial and Government Applicator",
+          requirement: "Annual renewal with the category credits above banked, or retake the exam",
+          note: "Credits are held in a rolling three-year bank and can support more than one annual renewal; each new year, credits from the oldest year of the window expire. One credit is 50 minutes of pre-approved instruction."
+        },
+        {
+          tier: "Registered Service Employee",
+          requirement: "Works under a certified commercial applicator; DDA offers online Registered Service Employee pesticide safety training",
+          note: "Applies to commercial certification only. Hour requirements not published on the pages read."
+        }
+      ],
+      acceptedFormats: [
+        "DDA pre-approved in-person events (e.g. Delaware Ag Week, DPCA annual meeting)",
+        "DDA pre-approved virtual and online courses",
+        "Programs not pre-approved, if DDA accepts the program, timed agenda and proof of attendance (submit within 30 days)"
+      ],
+      approvedProviders: [
+        {
+          name: "DDA Pesticide Management Online Services — Upcoming Courses (searchable by category)",
+          url: "https://dda.my.site.com/pesticide"
+        }
+      ],
+      renewalDeadline: "Commercial and government certification is good for one year. Exact expiry date not stated on the pages read.",
+      reciprocity: [
+        "A commercial applicator certified under another state's plan may become a reciprocal commercial applicator in Delaware without a written exam, by online application and fee."
+      ]
+    },
+    notes: "FAQ sheet is the 2025 edition (uploaded Nov 2025); exam schedule covers 2026. Delaware Admin Code 3 DE Admin. Code 601 (regulations.delaware.gov) is a JavaScript app and did not render for extraction, so the commercial certification fee and expiry date are null. Category 7E name reproduced exactly as abbreviated on the DDA FAQ (\"Institutional and Main. Pest Cntrl.\") — expand only once confirmed in the regulation. Registered Service Employee requirements not verified beyond the FAQ."
+  },
+  GA: {
+    agency: "Georgia Department of Agriculture — Structural Pest Control Section (Georgia Structural Pest Control Commission)",
+    agencyUrl: "https://agr.georgia.gov/licensing-certification-and-employee-registration",
+    verified: true,
+    regulatory: {
+      stateCode: "GA",
+      verifiedOn: "2026-10-01",
+      reviewedByPath: null,
+      sourceUrls: [
+        "https://agr.georgia.gov/licensing-certification-and-employee-registration",
+        "https://agr.georgia.gov/certified-operator-license",
+        "https://agr.georgia.gov/registered-employee-credential",
+        "https://agr.georgia.gov/structural-pest-instructors-training-providers"
+      ],
+      licenseCategories: [
+        {
+          code: "HPC",
+          name: "Household Pest Control (Category 29)"
+        },
+        {
+          code: "WDO",
+          name: "Wood-destroying Organism Control (Category 30)"
+        },
+        {
+          code: "FUM",
+          name: "Fumigation (Category 28)"
+        },
+        {
+          code: "HBR",
+          name: "Honey Bee Control and Removal"
+        }
+      ],
+      examStructure: "Certified Operator: core (general competency) exam plus an exam in each qualified category, $45 per category, applied for through GAPestExam.com; approval can take up to 45 days. Requires two years of verifiable structural pest control experience (one within the last five years), or a relevant degree plus one year. Certification must be completed within 90 days of passing. Registered Employee: 10 hours classroom training plus 70 hours on-the-job training, then a computer-based exam ($45) at technical college testing centres.",
+      applicationFeeUsd: 100,
+      renewalCycleMonths: 60,
+      ceuHoursPerCycle: null,
+      ceuHoursByCategory: [
+        {
+          category: "HPC — Certified Operator (5-year period)",
+          hours: 25
+        },
+        {
+          category: "WDO — Certified Operator (5-year period)",
+          hours: 25
+        },
+        {
+          category: "FUM — Certified Operator (5-year period)",
+          hours: 12
+        },
+        {
+          category: "HPC — Registered Employee (2-year period)",
+          hours: 8
+        },
+        {
+          category: "WDO — Registered Employee (2-year period)",
+          hours: 8
+        },
+        {
+          category: "FUM — Registered Employee (2-year period)",
+          hours: 3
+        }
+      ],
+      recertByTier: [
+        {
+          tier: "Registered Employee",
+          requirement: "8 credits HPC, 8 WDO, 3 FUM per two-year period, or re-examination",
+          note: "Training period runs 1 March to 28 February of odd-numbered years. Computer-based credit capped at 4 (HPC, WDO) and 1 (FUM). $10 registration fee."
+        },
+        {
+          tier: "Certified Operator",
+          requirement: "25 credits HPC, 25 WDO, 12 FUM per five-year period, or re-examination",
+          note: "Credits must be earned at least 90 days before the five-year period ends and cannot be carried forward. Computer-based credit capped at 10 (HPC, WDO) and 5 (FUM). The old conference cap was removed 1 April 2025. $100 renewal fee."
+        }
+      ],
+      acceptedFormats: [
+        "SPCC-approved courses — one credit per hour of approved training",
+        "Computer-based training, within the per-category caps",
+        "Conferences and workshops (cap removed from 1 April 2025)"
+      ],
+      approvedProviders: [
+        {
+          name: "GDA Structural Pest Instructors & Training Providers (course approval rules)",
+          url: "https://agr.georgia.gov/structural-pest-instructors-training-providers"
+        },
+        {
+          name: "Credit transcript look-up by SP number (Kelly Solutions for GDA)",
+          url: "https://www.kellysolutions.com/ga/structural/searchbyLicense.asp"
+        }
+      ],
+      renewalDeadline: "All structural credentials expire 30 June of odd-numbered years and are not prorated. Certified Operator credits are due 90 days before the end of the five-year recertification period. Allow 6–8 weeks after a course for credits to post.",
+      reciprocity: [
+        "The Georgia Structural Pest Control Commission does not have reciprocal certification agreements with other states."
+      ]
+    },
+    notes: "All figures from GDA pages fetched 2026-10-01. Category numbers 28/29/30 come from the GDA credentials page; the HBR category has its own requirements (separate GDA page, not read). Company licence fees not captured. Exam passing score not published on the pages read. Note the two clocks: the card expires every odd-numbered June, while Certified Operator recertification runs on a five-year period shown on the transcript. GDA does not publish a public, searchable approved-course list on the pages read; the provider page is aimed at course sponsors."
+  },
+  HI: {
+    agency: "Hawaii Pest Control Board, Department of Commerce and Consumer Affairs (DCCA) Professional and Vocational Licensing — with applicator certification by the Hawaii Department of Agriculture and Biosecurity (DAB) Pesticides Branch",
+    agencyUrl: "https://cca.hawaii.gov/pvl/boards/pestcontrol/",
+    verified: true,
+    regulatory: {
+      stateCode: "HI",
+      verifiedOn: "2026-10-01",
+      reviewedByPath: null,
+      sourceUrls: [
+        "https://cca.hawaii.gov/pvl/boards/pestcontrol/",
+        "https://cca.hawaii.gov/wp-content/uploads/2026/01/PCO-FAQs.pdf",
+        "https://dab.hawaii.gov/pi/pest/pesticide-applicator-certificationrecertification-2/",
+        "https://dab.hawaii.gov/pi/files/2020/09/Recertification-Procedures-no-card-space-Includes-Rule-Changes9-20.pdf"
+      ],
+      licenseCategories: [
+        {
+          code: "BR-1",
+          name: "Fumigation"
+        },
+        {
+          code: "BR-2",
+          name: "General Pest"
+        },
+        {
+          code: "BR-3",
+          name: "Termite"
+        },
+        {
+          code: "7A",
+          name: "Fumigation Pest Control"
+        },
+        {
+          code: "7B",
+          name: "Termite Pest Control"
+        },
+        {
+          code: "7C",
+          name: "General Pest Control"
+        },
+        {
+          code: "7D",
+          name: "Institutional Pest Control"
+        },
+        {
+          code: "7E",
+          name: "Vault Fumigation Pest Control"
+        },
+        {
+          code: "7F",
+          name: "Specialty Categories"
+        },
+        {
+          code: "3",
+          name: "Ornamental & Turf Pest Control"
+        },
+        {
+          code: "6",
+          name: "Right-of-Way Pest Control"
+        },
+        {
+          code: "8",
+          name: "Public Health Pest Control"
+        }
+      ],
+      examStructure: "Pest Control Board: exam fee $50 per part; most classifications have two parts (Part I Business & Law, Part II Specialty). A Pest Control Operator needs one year as a commercial applicator within the past four years, one year of on-site supervision, 100 jobs in the branch, and at least one year of current DAB commercial applicator certification in that branch. A Field Representative needs 60 hours of supervised training and 25 jobs per branch. DAB: Core exam first, then category exams, $50 per exam (Core fee waived when taken with a category exam), booked through the DAB Pesticides Education Portal.",
+      applicationFeeUsd: 30,
+      renewalCycleMonths: 24,
+      ceuHoursPerCycle: null,
+      ceuHoursByCategory: [
+        {
+          category: "7A — Fumigation Pest Control",
+          hours: 25
+        },
+        {
+          category: "7B — Termite Pest Control",
+          hours: 20
+        },
+        {
+          category: "7C — General Pest Control",
+          hours: 30
+        },
+        {
+          category: "7D — Institutional Pest Control",
+          hours: 30
+        },
+        {
+          category: "7E — Vault Fumigation Pest Control",
+          hours: 25
+        },
+        {
+          category: "7F — Specialty Categories",
+          hours: 20
+        },
+        {
+          category: "3 — Ornamental & Turf Pest Control",
+          hours: 30
+        },
+        {
+          category: "6 — Right-of-Way Pest Control",
+          hours: 30
+        },
+        {
+          category: "8 — Public Health Pest Control",
+          hours: 24
+        }
+      ],
+      recertByTier: [
+        {
+          tier: "DAB certified commercial applicator",
+          requirement: "Category credit hours above within the five-year certification, or retake the exam; $100 renewal",
+          note: "For 7A and 7E, five of the hours must be specific to the category. Online courses and quizzes count toward at most 75% of each category requirement (rounded down); webinars count as in-person. A class earns credit only once per five-year period. Renew no earlier than three months before and no later than 30 days after expiry."
+        },
+        {
+          tier: "Pest Control Operator (PCO) / Responsible Managing Employee",
+          requirement: "Biennial Board licence renewal by 30 June of even-numbered years",
+          note: "No Board continuing-education requirement found; competence is maintained through the DAB applicator certification."
+        },
+        {
+          tier: "Pest Control Field Representative (PCFR)",
+          requirement: "Biennial Board licence renewal by 30 June of even-numbered years",
+          note: "Works under a PCO/RME who is responsible for the PCFR's conduct."
+        }
+      ],
+      acceptedFormats: [
+        "DAB-approved Continuation Education Training (CET) classes, seminars, conferences and workshops",
+        "DAB online courses and open-book quizzes (pass mark over 90%), capped at 75% of each category requirement",
+        "Webinars, counted as in-person"
+      ],
+      approvedProviders: [
+        {
+          name: "DAB Pesticides Education Portal (credit check and scheduled CET classes)",
+          url: "https://hdoa.inforps.hi.gov/PesticidesEducation/#/homepage"
+        }
+      ],
+      renewalDeadline: "Board licences expire 30 June of even-numbered years (current cycle 1 July 2026 – 30 June 2028); an unrenewed licence is forfeited but can be restored within one year with a late fee. DAB certifications are valid five years and renew from three months before to 30 days after expiry.",
+      reciprocity: [
+        "The Pest Control Board states Hawaii has no reciprocal agreements: all applicants meet the same licensing and examination requirements."
+      ]
+    },
+    notes: "Hawaii splits the job between two agencies: the DCCA Pest Control Board licenses operators, field representatives and entities; DAB (formerly HDOA, now Department of Agriculture and Biosecurity) certifies applicators. FEE CONFLICT: the Board page (2026 renewal) lists on-time renewal at $278 (PCO active) and $212 (PCFR active); the Board FAQ PDF (uploaded Jan 2026) still says $210 and $160. Publish the Board page figures or neither. The DAB recertification procedures PDF is footed \"Rev. 2/13/2019\" and says online credit is capped at half; the live DAB page says 75% — the live page is used. The DAB page quiz pass mark (over 90%) is for CET quizzes, not certification exams; no exam pass mark was found. DAB category descriptions PDF on hdoa.inforps.hi.gov not read."
   }
 } /* END STATES */;
