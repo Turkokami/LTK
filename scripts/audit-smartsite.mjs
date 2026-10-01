@@ -56,6 +56,7 @@ const ROUTES = [
   '/join/',
   '/trade/start/texas/',
   '/trade/owners/',
+  '/wire/regulatory/florida/',
   '/trade/owners/buying-and-selling-a-company/',
   '/arena/field-challenges/',
   '/arena/games/photo-id-sprint/',

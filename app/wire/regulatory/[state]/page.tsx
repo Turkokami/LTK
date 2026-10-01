@@ -6,8 +6,10 @@ import { JsonLd } from '@/components/JsonLd';
 import { Breadcrumbs } from '@/components/site/Breadcrumbs';
 import { LabelBlock } from '@/components/label/LabelBlock';
 import { STATES, getState } from '@/lib/content/states';
-import { updatesForState } from '@/lib/content/wire';
-import { formatVerified } from '@/lib/utils';
+import { FEDERAL_UPDATES, updatesForState } from '@/lib/content/wire';
+import { UpdateCard } from '@/components/wire/UpdateCard';
+import { DiscordButton } from '@/components/community/Discord';
+import { site } from '@/lib/site.config';
 
 /**
  * Geo layer 5 — regulatory updates by state.
@@ -56,6 +58,7 @@ export default async function StateRegulatoryPage({
 
   const path = `/wire/regulatory/${st.slug}/`;
   const updates = updatesForState(st.code);
+  const today = new Date().toISOString().slice(0, 10);
   const crumbs = [
     { name: 'Home', href: '/' },
     { name: 'Wire', href: '/wire/' },
@@ -83,29 +86,48 @@ export default async function StateRegulatoryPage({
             wins — tell us and we will correct this page.
           </p>
 
+          <h2 className="h2 mb-4">{st.name} changes</h2>
           {updates.length === 0 ? (
             <LabelBlock title={`Nothing logged for ${st.name} yet`} signal="warning">
               We publish an item when there is a sourced document behind it, not on a schedule.
-              An empty page here means nothing has been logged, not that nothing has happened —
-              always check with {st.agency ?? 'your state agency'} directly for anything
-              time-critical.
+              An empty list means nothing has been logged, not that nothing has happened &mdash;
+              check with {st.agency ?? 'your state agency'} directly for anything time-critical,
+              and flag what you find in the {site.discord.name}.
             </LabelBlock>
           ) : (
-            <ul className="grid gap-px bg-rule">
+            <ul className="grid gap-4">
               {updates.map((u) => (
-                <li key={u.slug} className="bg-paper p-5">
-                  <p className="mono mb-1 text-ink3">{formatVerified(u.effectiveOn)}</p>
-                  <h2 className="h3 mb-2">{u.headline}</h2>
-                  <p className="text-sm text-ink2">{u.summary}</p>
-                  <p className="mono mt-3">
-                    <a href={u.sourceUrl} rel="noopener" className="text-field underline underline-offset-2">
-                      {u.sourceLabel}
-                    </a>
-                  </p>
+                <li key={u.slug}>
+                  <UpdateCard u={u} stateName={st.name} today={today} />
                 </li>
               ))}
             </ul>
           )}
+
+          {FEDERAL_UPDATES.length ? (
+            <>
+              <h2 className="h2 mb-2 mt-12">Federal changes that apply in {st.name}</h2>
+              <p className="mb-4 text-sm text-ink3">
+                EPA, USDA and other federal actions apply in every state. Your state can be stricter,
+                never looser.
+              </p>
+              <ul className="grid gap-4">
+                {FEDERAL_UPDATES.map((u) => (
+                  <li key={u.slug}>
+                    <UpdateCard u={u} stateName="Federal" today={today} />
+                  </li>
+                ))}
+              </ul>
+            </>
+          ) : null}
+
+          <div className="card mt-12 flex flex-wrap items-center justify-between gap-4 p-5">
+            <p className="max-w-[46ch] text-sm text-ink2">
+              <span className="font-semibold text-ink">Heard about a change in {st.name}?</span> Drop
+              the agency notice in the {site.discord.name}.
+            </p>
+            <DiscordButton>Flag a rule change</DiscordButton>
+          </div>
         </article>
 
         <aside className="mono space-y-6 pt-10 text-ink3">

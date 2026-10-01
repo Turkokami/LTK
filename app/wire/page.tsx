@@ -5,6 +5,9 @@ import { JsonLd } from '@/components/JsonLd';
 import { Breadcrumbs } from '@/components/site/Breadcrumbs';
 import { getHub } from '@/lib/content/hubs';
 import { HubSpokes } from '@/components/site/HubSpokes';
+import { UpdateCard } from '@/components/wire/UpdateCard';
+import { ALL_UPDATES } from '@/lib/content/wire';
+import { STATES } from '@/lib/content/states';
 
 const HUB = getHub('wire');
 
@@ -33,6 +36,30 @@ export default function Page() {
         <p className="eyebrow mb-3">{HUB.eyebrow}</p>
         <h1 className="display mb-5 max-w-[18ch]">{HUB.title}</h1>
         <p className="lede mb-10">{HUB.blurb}</p>
+
+        {ALL_UPDATES.length ? (
+          <section className="mb-14" aria-labelledby="latest">
+            <div className="mb-5 flex flex-wrap items-baseline justify-between gap-3">
+              <h2 id="latest" className="h2">
+                Latest changes
+              </h2>
+              <a href="/wire/regulatory/" className="link text-sm">
+                All {ALL_UPDATES.length} updates, by state
+              </a>
+            </div>
+            <ul className="grid gap-4 md:grid-cols-2">
+              {ALL_UPDATES.filter((u) => u.effectiveOn <= new Date().toISOString().slice(0, 10)).slice(0, 4).map((u) => (
+                <li key={u.slug}>
+                  <UpdateCard
+                    u={u}
+                    stateName={u.stateCode === 'US' ? 'Federal' : STATES.find((s) => s.code === u.stateCode)?.name ?? u.stateCode}
+                    today={new Date().toISOString().slice(0, 10)}
+                  />
+                </li>
+              ))}
+            </ul>
+          </section>
+        ) : null}
 
         <HubSpokes hub={HUB} />
       </div>

@@ -124,3 +124,17 @@ Six topics live; per-topic gaps are in each entry's `notes` in `lib/content/owne
 - FTC v. Rollins non-compete order (2026-04-15, final 2026-06-22). The 2024 FTC rule was vacated and the appeal dropped 2025-09-05.
 - Texas insurance: a 2020 TDA PDF shows $200k/$300k, but the live TDA page (used on /trade/start/texas/) shows $500k/$1M. The owner topic cites the live page and states no Texas amount.
 - 7(i) commission exemption: whether pest control counts as a retail or service establishment is unresolved. The page tells owners to get a wage-hour attorney's opinion.
+
+## Regulatory wire (/wire/regulatory/): 26 items, compiled 2026-10-01
+
+Items: 9 federal; TX 3; WA 2; FL 3; CA 5; SC 4. Per-item certainty is in `notes` in `lib/content/wire.ts`.
+Dropped at review:
+- WA HB 2516 rodenticide moratorium: died in committee; details came from an unofficial copy.
+- EPA 2026 Pesticide General Permit: applies only where EPA issues the permit, none of the five states.
+
+Recheck:
+- FL FWC 68A-9.010: hearing held 2026-07-08, proposed effective 2026-12-31. The summary is kept general until the adopted text can be checked.
+- CA SPCB items: details assume the rules were adopted as proposed.
+- SC SGAR restriction: sourced to Clemson releases; no final State Register order found.
+- EPA rodenticide interim decision: expected in 2026, not yet issued. Add it when it lands.
+- OSHA heat rule: supplemental proposal on the agenda for Dec 2026.
