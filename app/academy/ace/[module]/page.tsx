@@ -9,7 +9,7 @@ import { DiscordButton } from '@/components/community/Discord';
 import { AceNav } from '@/components/ace/AceNav';
 import { Quiz } from '@/components/ace/Quiz';
 import { VideoEmbed } from '@/components/ace/VideoEmbed';
-import { ACE_MODULES, ACE_PATH, ACE_UPDATED, getAceModule, mediaUrl } from '@/lib/content/ace';
+import { ACE_MODULES, ACE_PATH, ACE_UPDATED, getAceModule, mediaUrl, deckPath } from '@/lib/content/ace';
 import { abs, ID, site } from '@/lib/site.config';
 import { EDITOR } from '@/lib/content/editorial';
 
@@ -162,13 +162,8 @@ export default async function AceModulePage({
                   <div key={d.file} className="card flex flex-col p-5">
                     <p className="eyebrow mb-2">Slide deck &middot; {d.pages} slides</p>
                     <p className="h3 mb-3">{d.title}</p>
-                    <a
-                      href={mediaUrl('reference-pdfs', d.file)}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="btn btn--ghost mt-auto self-start"
-                    >
-                      Open the deck (PDF)
+                    <a href={deckPath(d.file)} className="btn btn--ghost mt-auto self-start">
+                      View the slides
                     </a>
                   </div>
                 ))}

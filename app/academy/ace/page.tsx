@@ -18,8 +18,7 @@ import {
   aceExamTips,
   aceGlossaryTerms,
   mediaUrl,
-  storedProductFlashcards,
-} from '@/lib/content/ace';
+  storedProductFlashcards, deckPath } from '@/lib/content/ace';
 import { abs, ID, site } from '@/lib/site.config';
 import { EDITOR } from '@/lib/content/editorial';
 
@@ -233,13 +232,8 @@ export default function AcePrepPage() {
               {ACE_OVERVIEW.deck.pages} slides covering what the certification is and how the
               exam is built.
             </p>
-            <a
-              href={mediaUrl('reference-pdfs', ACE_OVERVIEW.deck.file)}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn--ghost mt-auto self-start"
-            >
-              Open the deck (PDF)
+            <a href={deckPath(ACE_OVERVIEW.deck.file)} className="btn btn--ghost mt-auto self-start">
+              View the slides
             </a>
           </div>
         </div>

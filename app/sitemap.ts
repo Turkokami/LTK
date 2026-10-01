@@ -3,7 +3,7 @@ import { abs } from '@/lib/site.config';
 import { HUBS, FORUM_CATEGORIES, type HubId } from '@/lib/content/hubs';
 import { PUBLISHED_STATES } from '@/lib/content/states';
 import { DISCIPLINES } from '@/lib/content/disciplines';
-import { ACE_MODULES, ACE_PATH } from '@/lib/content/ace';
+import { ACE_MODULES, ACE_PATH, SLIDE_DECKS, deckPath } from '@/lib/content/ace';
 import { EXAM_CATEGORIES } from '@/lib/content/exam-prep';
 import { TECHNOLOGY } from '@/lib/content/lab';
 import { OWNER_TOPICS } from '@/lib/content/owner-topics';
@@ -64,6 +64,7 @@ export default async function sitemap({
         entry(`${ACE_PATH}flashcards/`, 0.7),
         entry(`${ACE_PATH}glossary/`, 0.7),
         entry(`${ACE_PATH}library/`, 0.7),
+        ...SLIDE_DECKS.map((d) => entry(deckPath(d.file), 0.6)),
         ...ACE_MODULES.map((m) => entry(`${ACE_PATH}${m.slug}/`, 0.8)),
         // Geo layers 1 and 2. Only verified states ship — CLAUDE.md 2.5.
         ...PUBLISHED_STATES.flatMap((s) => [

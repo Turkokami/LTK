@@ -190,3 +190,14 @@ export const ACE_OVERVIEW = {
   podcast: PODCASTS[0]!,
   deck: SLIDE_DECKS[0]!,
 };
+
+/** In-site slide viewer: /academy/ace/decks/:slug/ */
+export const deckSlug = (file: string) => file.replace(/\.pdf$/i, '').toLowerCase().replace(/_/g, '-');
+export const deckPath = (file: string) => `${ACE_PATH}decks/${deckSlug(file)}/`;
+export function getDeck(slug: string): SlideDeck | undefined {
+  return SLIDE_DECKS.find((d) => deckSlug(d.file) === slug);
+}
+/** Study modules that list this deck, for "back to the module" links. */
+export function modulesForDeck(file: string): AceModule[] {
+  return ACE_MODULES.filter((m) => MODULE_MEDIA[m.slug]?.decks.includes(file));
+}

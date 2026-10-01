@@ -6,7 +6,7 @@ import { Breadcrumbs } from '@/components/site/Breadcrumbs';
 import { DiscordButton } from '@/components/community/Discord';
 import { AceNav } from '@/components/ace/AceNav';
 import { VideoEmbed } from '@/components/ace/VideoEmbed';
-import { ACE_PATH, PODCASTS, SLIDE_DECKS, VIDEOS, mediaUrl } from '@/lib/content/ace';
+import { ACE_PATH, PODCASTS, SLIDE_DECKS, VIDEOS, mediaUrl, deckPath } from '@/lib/content/ace';
 
 /**
  * ACE media library: podcast episodes and slide decks (hosted on the ACE Prep app deployment,
@@ -89,18 +89,13 @@ export default function LibraryPage() {
           <ul className="grid gap-3 md:grid-cols-2 lg:grid-cols-3">
             {SLIDE_DECKS.map((d) => (
               <li key={d.file}>
-                <a
-                  href={mediaUrl('reference-pdfs', d.file)}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="card group flex h-full flex-col p-5"
-                >
+                <a href={deckPath(d.file)} className="card group flex h-full flex-col p-5">
                   <span className="mono mb-2 text-ink3">
                     {d.category} &middot; {d.pages} slides
                   </span>
                   <span className="h3 mb-3 group-hover:text-blood">{d.title}</span>
                   <span className="mt-auto text-sm text-blood">
-                    Open PDF &rarr;<span className="sr-only"> (opens in a new tab)</span>
+                    View the slides &rarr;
                   </span>
                 </a>
               </li>
