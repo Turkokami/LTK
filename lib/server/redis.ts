@@ -13,11 +13,20 @@ export const redisConfigured = Boolean(URL_ && TOKEN);
 
 export type Cmd = (string | number)[];
 
+/**
+ * Every LTK key is namespaced: the Upstash database is shared with another project (the free
+ * plan allows one database per account), so nothing here may touch keys outside `ltk:`.
+ * Every command this app sends takes its key as the first argument, which is what gets
+ * prefixed. Do not send multi-key or keyless commands through this helper.
+ */
+export const KEY_PREFIX = 'ltk:';
+
 export async function redis(cmds: Cmd[]): Promise<unknown[]> {
+  const scoped = cmds.map(([op, key, ...rest]) => [op, `${KEY_PREFIX}${key}`, ...rest]);
   const res = await fetch(`${URL_}/pipeline`, {
     method: 'POST',
     headers: { Authorization: `Bearer ${TOKEN}`, 'Content-Type': 'application/json' },
-    body: JSON.stringify(cmds),
+    body: JSON.stringify(scoped),
     cache: 'no-store',
   });
   if (!res.ok) throw new Error(`redis ${res.status}`);
