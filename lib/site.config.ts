@@ -76,6 +76,7 @@ export const site = {
   social: {
     linkedin: 'https://www.linkedin.com/in/ltk-licensed-to-kill-824690368/',
     spotify: 'https://open.spotify.com/show/032iBDHKytatvGWMxtj20h',
+    youtube: 'https://www.youtube.com/@LTKpodcast',
   },
 
   /**
@@ -145,6 +146,7 @@ export const site = {
     'https://discord.com/invite/3DpNzdEtvs',
     'https://www.linkedin.com/in/ltk-licensed-to-kill-824690368/',
     'https://open.spotify.com/show/032iBDHKytatvGWMxtj20h',
+    'https://www.youtube.com/@LTKpodcast',
   ] as string[],
 
   /**

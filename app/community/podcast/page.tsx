@@ -5,7 +5,8 @@ import { JsonLd } from '@/components/JsonLd';
 import { Breadcrumbs } from '@/components/site/Breadcrumbs';
 import { DiscordButton } from '@/components/community/Discord';
 import { VideoEmbed } from '@/components/ace/VideoEmbed';
-import { EPISODES, LTK_SHOW, PODCAST_PATH, formatLength, isoDuration } from '@/lib/content/podcast';
+import { EPISODES, LTK_EPISODES, LTK_SHOW, LTK_YOUTUBE, PODCAST_PATH, SERIES, formatLength, isoDuration } from '@/lib/content/podcast';
+import { EpisodeBrowser } from '@/components/community/EpisodeBrowser';
 import { abs, ID, site } from '@/lib/site.config';
 
 /**
@@ -35,7 +36,21 @@ export default function PodcastPage() {
     path: PODCAST_PATH,
     pageType: 'CollectionPage',
     crumbs,
-    primary: EPISODES.map((e) => ({
+    primary: [
+      ...LTK_EPISODES.map((e) => ({
+        '@type': 'VideoObject',
+        '@id': `${abs(PODCAST_PATH)}#ltk-${e.youtubeId}`,
+        name: e.title,
+        description: e.summary,
+        thumbnailUrl: `https://i.ytimg.com/vi/${e.youtubeId}/hqdefault.jpg`,
+        uploadDate: e.published,
+        duration: isoDuration(e.lengthSeconds),
+        embedUrl: `https://www.youtube-nocookie.com/embed/${e.youtubeId}`,
+        contentUrl: `https://www.youtube.com/watch?v=${e.youtubeId}`,
+        publisher: { '@id': ID.organization },
+        partOfSeries: { '@type': 'CreativeWorkSeries', name: LTK_SHOW.name, url: LTK_YOUTUBE.url },
+      })),
+      ...EPISODES.map((e) => ({
       '@type': 'VideoObject',
       '@id': `${abs(PODCAST_PATH)}#${e.slug}`,
       name: e.title,
@@ -48,6 +63,7 @@ export default function PodcastPage() {
       publisher: { '@type': 'Organization', name: e.show, url: e.showUrl },
       about: { '@id': ID.organization },
     })),
+    ],
   });
 
   const [featured, ...rest] = EPISODES;
@@ -84,7 +100,10 @@ export default function PodcastPage() {
                 .
               </p>
               <div className="flex flex-wrap gap-2">
-                <a href={LTK_SHOW.spotifyUrl} target="_blank" rel="noopener noreferrer" className="btn">
+                <a href={LTK_YOUTUBE.url} target="_blank" rel="noopener noreferrer" className="btn">
+                  Watch on YouTube<span className="sr-only"> (opens in a new tab)</span>
+                </a>
+                <a href={LTK_SHOW.spotifyUrl} target="_blank" rel="noopener noreferrer" className="btn btn--ghost">
                   Listen on Spotify<span className="sr-only"> (opens in a new tab)</span>
                 </a>
                 <DiscordButton variant="ghost">Join the live recordings</DiscordButton>
@@ -100,6 +119,18 @@ export default function PodcastPage() {
               className="w-full rounded-[var(--radius)] border-0"
             />
           </div>
+        </section>
+
+        <section aria-labelledby="all-episodes" className="mb-16">
+          <div className="mb-5 flex flex-wrap items-baseline justify-between gap-3">
+            <h2 id="all-episodes" className="h2">
+              Every episode
+            </h2>
+            <a href={LTK_YOUTUBE.url} target="_blank" rel="noopener noreferrer" className="link text-sm">
+              Subscribe on YouTube ({LTK_YOUTUBE.handle})
+            </a>
+          </div>
+          <EpisodeBrowser episodes={LTK_EPISODES} series={SERIES} />
         </section>
 
         <h2 className="h2 mb-5">Marcus on other shows</h2>

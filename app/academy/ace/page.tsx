@@ -5,6 +5,8 @@ import { JsonLd } from '@/components/JsonLd';
 import { Breadcrumbs } from '@/components/site/Breadcrumbs';
 import { QuickAnswer } from '@/components/ui/QuickAnswer';
 import { DiscordButton } from '@/components/community/Discord';
+import { RelatedEpisodes } from '@/components/community/RelatedEpisodes';
+import { episodesFor } from '@/lib/content/podcast';
 import { AceNav } from '@/components/ace/AceNav';
 import {
   ACE_MODULES,
@@ -237,6 +239,7 @@ export default function AcePrepPage() {
             </a>
           </div>
         </div>
+        <RelatedEpisodes episodes={episodesFor('ace')} title="ACE talk on the LTK podcast" />
       </section>
     </>
   );

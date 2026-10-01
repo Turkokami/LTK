@@ -35,6 +35,8 @@ import {
   GuideTraining,
 } from '@/components/fields/FieldGuide';
 import { K9Specialties } from '@/components/fields/K9Specialties';
+import { RelatedEpisodes } from '@/components/community/RelatedEpisodes';
+import { episodesFor } from '@/lib/content/podcast';
 import { photosFor } from '@/lib/content/community-photos';
 import { PEST_ID_PATH } from '@/lib/content/pest-library';
 import { fieldPhotos } from '@/lib/content/photos';
@@ -386,6 +388,8 @@ export default async function FieldPage({
               <CommunityGallery photos={crewPhotos} limit={8} className="lg:grid-cols-4" />
             </section>
           ) : null}
+
+          <RelatedEpisodes episodes={episodesFor(d.slug)} />
 
           {from.length || to.length ? (
             <>
