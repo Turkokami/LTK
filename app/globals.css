@@ -475,3 +475,33 @@
     color: var(--field);
   }
 }
+
+/* Flip cards (ACE glossary). Both faces share one grid cell, so the card is as tall as the
+   longer face; the back is rotated out of view, not removed, so its text stays in the HTML. */
+@layer components {
+  .flip {
+    perspective: 1200px;
+  }
+  .flip-inner {
+    display: grid;
+    transform-style: preserve-3d;
+    transition: transform 0.45s cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+  .flip-inner.is-flipped {
+    transform: rotateY(180deg);
+  }
+  .flip-face {
+    grid-area: 1 / 1;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+  .flip-back {
+    transform: rotateY(180deg);
+    border-color: var(--field);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .flip-inner {
+      transition: none;
+    }
+  }
+}

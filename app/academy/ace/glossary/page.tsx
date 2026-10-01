@@ -4,6 +4,7 @@ import { buildGraph } from '@/lib/schema/graph';
 import { JsonLd } from '@/components/JsonLd';
 import { Breadcrumbs } from '@/components/site/Breadcrumbs';
 import { AceNav } from '@/components/ace/AceNav';
+import { GlossaryCards } from '@/components/ace/GlossaryCards';
 import { ACE_PATH, aceGlossaryTerms, storedProductFlashcards, type TrainingGlossaryTerm } from '@/lib/content/ace';
 import { abs } from '@/lib/site.config';
 
@@ -60,39 +61,21 @@ export default function GlossaryPage() {
         <Breadcrumbs crumbs={crumbs} />
       </div>
 
-      <div className="shell max-w-[56rem] pb-8">
+      <div className="shell max-w-[72rem] pb-8">
         <p className="eyebrow mb-3">ACE Prep &middot; Glossary</p>
         <h1 className="display mb-6">ACE glossary</h1>
         <AceNav current="glossary" />
         <p className="lede mb-8">
-          Every term, what it means, and where it shows up on the job. Want to drill them instead?{' '}
+          Every term on a flip card: the term on the front, what it means and where it shows up
+          on the job on the back. Mark the ones you know and hide them to focus on the rest. Prefer
+          one card at a time?{' '}
           <a href={`${ACE_PATH}flashcards/`} className="link">
-            Use the flashcards
+            Use the flashcard deck
           </a>
           .
         </p>
 
-        {GROUPS.map((g) => (
-          <section key={g.id} aria-labelledby={g.id} className="mb-12">
-            <h2 id={g.id} className="h2 mb-5">
-              {g.name}
-            </h2>
-            <dl className="space-y-3">
-              {g.terms.map((t) => (
-                <div key={t.id} id={t.id} className="card scroll-mt-24 p-5">
-                  <dt className="h3 mb-2">{t.term}</dt>
-                  <dd className="m-0 text-[0.9375rem] leading-relaxed text-ink">{t.definition}</dd>
-                  <dd className="m-0 mt-3 text-sm leading-relaxed text-ink2">
-                    <span className="mr-2 font-semibold uppercase tracking-wide text-blood">
-                      In the field
-                    </span>
-                    {t.fieldUse}
-                  </dd>
-                </div>
-              ))}
-            </dl>
-          </section>
-        ))}
+        <GlossaryCards groups={GROUPS} />
       </div>
     </>
   );
