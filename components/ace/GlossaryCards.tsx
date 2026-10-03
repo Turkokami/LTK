@@ -2,6 +2,8 @@
 
 import { useEffect, useMemo, useState } from 'react';
 import { cx } from '@/lib/utils';
+import { award } from '@/lib/agent/store';
+import { XP } from '@/lib/agent/config';
 
 /**
  * The ACE glossary as a grid of flip cards. Both faces are in the server HTML (the back face is
@@ -48,6 +50,7 @@ export function GlossaryCards({ groups }: { groups: { id: string; name: string; 
   }
 
   function toggleKnown(id: string) {
+    if (!known.has(id)) award({ xp: XP.glossaryKnown, label: 'Glossary card known', once: `glossary:${id}`, stats: { glossaryKnown: 1 }, event: { kind: 'glossary' } });
     setKnown((cur) => {
       const next = new Set(cur);
       if (next.has(id)) next.delete(id);

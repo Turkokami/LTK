@@ -10,6 +10,8 @@ import { QuickAnswer } from '@/components/ui/QuickAnswer';
 import { PUBLISHED_STATES, getState, getRegulatory } from '@/lib/content/states';
 import { formatVerified } from '@/lib/utils';
 import { EDITOR } from '@/lib/content/editorial';
+import { TrackXp } from '@/components/agent/Track';
+import { XP } from '@/lib/agent/config';
 
 /** Geo layer 1. Same shape as the CEU template — keep them structurally parallel. */
 
@@ -94,6 +96,7 @@ export default async function StateLicensingPage({
   return (
     <>
       <JsonLd graph={graph} />
+      <TrackXp once={`state:${st.code}`} xp={XP.stateViewed} label={`${st.name} licensing`} stat="states" kind="state" onMount />
       <div className="shell">
         <Breadcrumbs crumbs={crumbs} />
       </div>

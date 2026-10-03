@@ -1,6 +1,8 @@
 'use client';
 
 import { useState } from 'react';
+import { award } from '@/lib/agent/store';
+import { XP } from '@/lib/agent/config';
 
 /**
  * Click-to-load YouTube embed. A page with a dozen iframes loads a dozen YouTube players up
@@ -23,7 +25,10 @@ export function VideoEmbed({ id, title, duration }: { id: string; title: string;
         ) : (
           <button
             type="button"
-            onClick={() => setPlay(true)}
+            onClick={() => {
+              setPlay(true);
+              award({ xp: XP.videoPlayed, label: 'Episode played', once: `video:${id}`, stats: { videos: 1 }, event: { kind: 'video' } });
+            }}
             className="group absolute inset-0 h-full w-full"
             aria-label={`Play video: ${title} (${duration})`}
           >

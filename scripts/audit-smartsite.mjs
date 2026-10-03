@@ -53,6 +53,8 @@ const ROUTES = [
   '/trade/start/',
   '/community/events/',
   '/arena/leaderboards/',
+  '/arena/daily/',
+  '/arena/agent/',
   '/join/',
   '/trade/start/texas/',
   '/trade/owners/',

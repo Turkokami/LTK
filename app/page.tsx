@@ -98,6 +98,22 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* The daily habit: two minutes, one streak. */}
+      <section className="rule-b">
+        <div className="shell py-6">
+          <a href="/arena/daily/" className="group flex flex-wrap items-center justify-between gap-4 rounded-[var(--radius)] border border-ruleStrong bg-stock px-5 py-4 hover:border-ink3">
+            <span>
+              <span className="eyebrow mb-1 block">Daily Drop &middot; new every day</span>
+              <span className="block font-semibold text-ink group-hover:text-blood">
+                Name today&rsquo;s pest, answer one ACE question, keep your streak.
+              </span>
+              <span className="block text-sm text-ink3">Earn XP and rank up from Recruit to Licensed to Kill.</span>
+            </span>
+            <span className="btn">Play today&rsquo;s drop</span>
+          </a>
+        </div>
+      </section>
+
       {/* The industry map: Pest control → fields. The spine of the site. */}
       <section className="rule-b">
         <div className="shell py-14">

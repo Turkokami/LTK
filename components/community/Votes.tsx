@@ -2,6 +2,8 @@
 
 import { createContext, useCallback, useContext, useEffect, useState } from 'react';
 import { cx } from '@/lib/utils';
+import { award } from '@/lib/agent/store';
+import { XP } from '@/lib/agent/config';
 
 /**
  * Community up/down votes. <VotesProvider> fetches every tally on the page in one request;
@@ -85,6 +87,7 @@ export function VotesProvider({ ids, children }: { ids: string[]; children: Reac
       })
         .then((r) => (r.ok ? r.json() : Promise.reject()))
         .then((t: Tally & { mine: number }) => {
+          if (vote !== 0) award({ xp: XP.vote, label: 'Gear vote', once: `vote:${id}`, stats: { votes: 1 }, event: { kind: 'vote' } });
           setCounts((c) => ({ ...c, [id]: { up: t.up, down: t.down } }));
         })
         .catch(() => {

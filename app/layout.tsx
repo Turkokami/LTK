@@ -5,6 +5,7 @@ import { site, abs } from '@/lib/site.config';
 import { ASSETS } from '@/lib/brand';
 import { SiteHeader } from '@/components/site/Header';
 import { SiteFooter } from '@/components/site/Footer';
+import { AgentToaster } from '@/components/agent/AgentToaster';
 import { DiscordBand } from '@/components/community/Discord';
 
 /**
@@ -74,6 +75,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <DiscordBand />
         </div>
         <SiteFooter />
+        <AgentToaster />
       </body>
     </html>
   );

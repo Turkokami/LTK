@@ -5,8 +5,8 @@ import { JsonLd } from '@/components/JsonLd';
 import { Breadcrumbs } from '@/components/site/Breadcrumbs';
 import { DiscordButton } from '@/components/community/Discord';
 import { PhotoSprint, type SprintPhoto } from '@/components/arena/PhotoSprint';
-import { COMMUNITY_PHOTOS } from '@/lib/content/community-photos';
-import { PEST_GROUPS, PEST_ID_PATH } from '@/lib/content/pest-library';
+import { ID_GROUPS, ID_PHOTOS } from '@/lib/content/id-photos';
+import { PEST_ID_PATH } from '@/lib/content/pest-library';
 import { abs, ID, site } from '@/lib/site.config';
 
 /**
@@ -17,7 +17,6 @@ import { abs, ID, site } from '@/lib/site.config';
  */
 
 const PATH = '/arena/games/photo-id-sprint/';
-const NOT_A_PEST = /station|trap|trench|drill|foam|mesh|sealed|sprayer|tool|ladder|equipment|treatment|cage|truck|vehicle|void/i;
 
 export const metadata: Metadata = pageMeta({
   title: 'Photo ID Sprint: name the pest from real job photos',
@@ -46,14 +45,8 @@ export default function PhotoSprintPage() {
     ],
   });
 
-  const bySection = new Map<string, { slug: string; name: string }>();
-  for (const g of PEST_GROUPS) for (const s of g.sections) bySection.set(s, { slug: g.slug, name: g.name });
-  const photos: SprintPhoto[] = COMMUNITY_PHOTOS.flatMap((p) => {
-    const g = bySection.get(p.section);
-    if (!g || !p.id || NOT_A_PEST.test(`${p.id} ${p.caption}`)) return [];
-    return [{ src: p.src, width: p.width, height: p.height, group: g.slug, groupName: g.name, caption: p.caption, credit: p.credit }];
-  });
-  const groups = PEST_GROUPS.filter((g) => photos.some((p) => p.group === g.slug)).map((g) => ({ slug: g.slug, name: g.name }));
+  const photos: SprintPhoto[] = ID_PHOTOS;
+  const groups = ID_GROUPS;
 
   return (
     <>

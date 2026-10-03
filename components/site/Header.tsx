@@ -1,4 +1,5 @@
 import { site } from '@/lib/site.config';
+import { HeaderAgent } from '@/components/agent/HeaderAgent';
 import { HUBS, PRIMARY_NAV, getHub } from '@/lib/content/hubs';
 import { ASSETS } from '@/lib/brand';
 import { DiscordButton } from '@/components/community/Discord';
@@ -34,7 +35,7 @@ export function SiteHeader() {
   return (
     <header className="rule-b sticky top-0 z-40 bg-stock">
       <div className="shell flex items-center justify-between gap-x-4 py-3 xl:gap-x-6">
-        <a href="/" className="flex min-w-0 items-center gap-3" aria-label={`${site.name} — home`}>
+        <a href="/" className="flex min-w-0 items-center gap-3 xl:shrink-0" aria-label={`${site.name} — home`}>
           {/* The badge is decorative here; the wordmark beside it carries the name. */}
           <img
             src={ASSETS.mark}
@@ -45,10 +46,11 @@ export function SiteHeader() {
           />
           <span className="min-w-0 leading-none">
             <span className="block whitespace-nowrap font-sans text-[0.9375rem] font-extrabold uppercase leading-tight tracking-tight sm:text-lg">
-              <span className="sm:hidden">{site.shortName}</span>
-              <span className="hidden sm:inline">{site.name}</span>
+              {/* Short name on phones and once the full desktop nav needs the room. */}
+              <span className="sm:hidden xl:inline">{site.shortName}</span>
+              <span className="hidden sm:inline xl:hidden">{site.name}</span>
             </span>
-            <span className="mono mt-1 hidden whitespace-nowrap text-ink3 sm:block">Pest pros helping pest pros</span>
+            <span className="mono mt-1 hidden whitespace-nowrap text-ink3 sm:block xl:hidden">Pest pros helping pest pros</span>
           </span>
         </a>
 
@@ -77,6 +79,7 @@ export function SiteHeader() {
             </span>
             <span className="ace-free hidden md:inline">Free</span>
           </a>
+          <HeaderAgent />
           <a
             href="/search/"
             className="btn btn--ghost !px-3"
@@ -105,6 +108,7 @@ export function SiteHeader() {
                   Study guide, {ALL_QUESTIONS.length} practice questions, flashcards and a speed round.
                 </span>
               </a>
+              <HeaderAgent variant="card" />
               <nav aria-label="Primary (mobile)">
                 <ul className="mb-3 space-y-0.5">
                   {nav.map((hub) => (

@@ -2,6 +2,8 @@
 
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { cx } from '@/lib/utils';
+import { award } from '@/lib/agent/store';
+import { XP } from '@/lib/agent/config';
 import { Leaderboard } from '@/components/arena/Leaderboard';
 
 /**
@@ -116,6 +118,12 @@ export function SpeedRound({
   // Record the personal best once, when the round ends.
   useEffect(() => {
     if (phase !== 'done') return;
+    award({
+      xp: Math.min(XP.gameCap, score / XP.gameScoreDivisor),
+      label: `Speed Round: ${score.toLocaleString('en-US')} pts`,
+      max: { bestSpeed: score },
+      event: { kind: 'speed-round', score },
+    });
     if (score > best) {
       writeBest(score);
       setBest(score);

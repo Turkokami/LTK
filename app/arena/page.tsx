@@ -35,6 +35,33 @@ export default function Page() {
         <h1 className="display mb-5 max-w-[18ch]">{HUB.title}</h1>
         <p className="lede mb-10">{HUB.blurb}</p>
 
+        {/* The daily habit and the profile it feeds. */}
+        <div className="mb-12 grid gap-4 md:grid-cols-[2fr_1fr]">
+          <a href="/arena/daily/" className="discord-band group block">
+            <div className="flex h-full flex-col justify-between gap-4 p-6 sm:p-8">
+              <div>
+                <p className="eyebrow mb-2">New every day &middot; 2 minutes</p>
+                <p className="h2 mb-2 group-hover:text-blood">Daily Drop</p>
+                <p className="max-w-[56ch] text-ink2">
+                  One photo from a real job, one ACE question. Same drop for everyone. Keep your streak
+                  alive and post your result in the Discord.
+                </p>
+              </div>
+              <span className="btn btn--lg self-start">Play today&rsquo;s drop</span>
+            </div>
+          </a>
+          <a href="/arena/agent/" className="card group flex flex-col justify-between gap-4 p-6">
+            <span>
+              <span className="eyebrow mb-1 block">Your Agent file</span>
+              <span className="h3 block group-hover:text-blood">Recruit to Licensed to Kill</span>
+              <span className="mt-1 block text-sm text-ink2">
+                Every exam, game, guide and drop earns XP. Rank up and unlock achievements.
+              </span>
+            </span>
+            <span className="btn btn--ghost self-start">See your rank</span>
+          </a>
+        </div>
+
         {/* Featured: the first playable game. */}
         <a href="/arena/games/speed-round/" className="discord-band group mb-12 block">
           <div className="grid items-center gap-6 p-6 sm:p-8 md:grid-cols-[1fr_auto]">

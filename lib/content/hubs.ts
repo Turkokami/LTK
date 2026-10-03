@@ -116,6 +116,8 @@ export const HUBS: Hub[] = [
     job: 'Retention, and the most cleanly sponsorable inventory on the site.',
     primaryEntity: 'Event / ItemList',
     spokes: [
+      { pattern: '/arena/daily/', label: 'Daily Drop', count: 1, live: true },
+      { pattern: '/arena/agent/', label: 'Your Agent file: ranks and achievements', count: 1, live: true },
       { pattern: '/arena/games/speed-round/', label: 'ACE Speed Round', count: 1, live: true },
       { pattern: '/arena/games/photo-id-sprint/', label: 'Photo ID Sprint', count: 1, live: true },
       { pattern: '/arena/field-challenges/', label: 'Field challenges', count: 1, live: true },

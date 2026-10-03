@@ -505,3 +505,25 @@
     }
   }
 }
+
+/* Agent toasts slide in from the right; reduced motion just shows them. */
+@layer components {
+  .agent-toast {
+    animation: agent-in 0.28s cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+  @keyframes agent-in {
+    from {
+      transform: translateX(1.5rem);
+      opacity: 0;
+    }
+    to {
+      transform: none;
+      opacity: 1;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .agent-toast {
+      animation: none;
+    }
+  }
+}

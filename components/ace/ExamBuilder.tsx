@@ -2,6 +2,8 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { cx } from '@/lib/utils';
+import { award } from '@/lib/agent/store';
+import { XP } from '@/lib/agent/config';
 
 /**
  * ACE practice exam builder: pick a difficulty, topic, length and timer, then take the exam one
@@ -163,6 +165,13 @@ export function ExamBuilder({ questions, modules }: { questions: ExamQuestion[];
   const pct = exam.length ? Math.round((correct / exam.length) * 100) : 0;
   useEffect(() => {
     if (phase !== 'results' || !exam.length) return;
+    const earned = exam.reduce((sum, x) => (answers[x.id] === x.correctOptionId ? sum + (XP.examPerCorrect[x.difficulty] ?? 8) : sum), 0);
+    award({
+      xp: earned * (XP.examTimerMultiplier[timer] ?? 1),
+      label: `ACE exam: ${correct}/${exam.length}`,
+      stats: { examsDone: 1 },
+      event: { kind: 'exam', level, timer, correct, total: exam.length },
+    });
     setBest((b) => {
       if ((b[setupKey] ?? -1) >= pct) return b;
       const next = { ...b, [setupKey]: pct };

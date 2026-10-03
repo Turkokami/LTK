@@ -2,6 +2,8 @@
 
 import { useCallback, useEffect, useRef, useState } from 'react';
 import type { PDFDocumentProxy, RenderTask } from 'pdfjs-dist';
+import { award } from '@/lib/agent/store';
+import { XP } from '@/lib/agent/config';
 
 /**
  * In-page slide viewer for the ACE decks. PDF.js renders one page at a time onto a canvas,
@@ -115,6 +117,11 @@ export function DeckViewer({ url, title, pages, storageKey }: { url: string; tit
       document.removeEventListener('fullscreenchange', onFull);
     };
   }, [page, state, render]);
+
+  // Reaching the last slide finishes the deck (paid once per deck).
+  useEffect(() => {
+    if (total > 1 && page === total) award({ xp: XP.deckFinished, label: `Finished: ${title}`, once: `deck:${storageKey}`, stats: { decks: 1 }, event: { kind: 'deck' } });
+  }, [page, total, title, storageKey]);
 
   const go = useCallback((n: number) => setPage((p) => Math.max(1, Math.min(total, Number.isFinite(n) ? n : p))), [total]);
 

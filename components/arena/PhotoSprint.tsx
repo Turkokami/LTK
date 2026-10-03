@@ -2,6 +2,8 @@
 
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { cx } from '@/lib/utils';
+import { award } from '@/lib/agent/store';
+import { XP } from '@/lib/agent/config';
 import { Leaderboard } from '@/components/arena/Leaderboard';
 
 /**
@@ -108,6 +110,12 @@ export function PhotoSprint({
 
   useEffect(() => {
     if (phase !== 'done') return;
+    award({
+      xp: Math.min(XP.gameCap, score / XP.gameScoreDivisor),
+      label: `Photo ID Sprint: ${score.toLocaleString('en-US')} pts`,
+      max: { bestSprint: score },
+      event: { kind: 'photo-id-sprint', score },
+    });
     if (score > best) {
       setBest(score);
       try {

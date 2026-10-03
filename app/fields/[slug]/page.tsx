@@ -42,6 +42,8 @@ import { PEST_ID_PATH } from '@/lib/content/pest-library';
 import { fieldPhotos } from '@/lib/content/photos';
 import { abs, ID, site } from '@/lib/site.config';
 import { EDITOR } from '@/lib/content/editorial';
+import { TrackXp } from '@/components/agent/Track';
+import { XP } from '@/lib/agent/config';
 
 /**
  * One field guide: Pest control → Fields → this field.
@@ -438,6 +440,7 @@ export default async function FieldPage({
                 <DiscordButton>Ask on Discord</DiscordButton>
               </div>
               <GuideSources g={guide} updated={FIELD_GUIDES_UPDATED} />
+              <TrackXp once={`field:${d.slug}`} xp={XP.fieldGuideRead} label={`Field guide read: ${d.name}`} stat="fieldGuides" kind="field" />
             </>
           ) : null}
         </article>
