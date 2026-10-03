@@ -1,77 +1,80 @@
-import { ACHIEVEMENTS, rankFor, type AgentEvent, type StatKey } from './config';
+import { applyAward, applyDaily, EMPTY_AGENT, hasProgress, normalize, type AgentNotice, type AgentState, type AwardOpts } from './engine';
+
+export type { AgentNotice, AgentState, DailyRecord } from './engine';
 
 /**
- * The Agent file: XP, stats, achievements and Daily Drop history, kept in this browser's
- * localStorage. Nothing is sent anywhere — it's a per-device convenience, and the site works
- * the same with storage blocked (awards just don't persist).
+ * The Agent file in the browser.
  *
- * `award()` is idempotent per `key` when `once` is set, so "read this field guide" can fire on
- * every visit and only ever pay out once. Every change notifies subscribers and dispatches an
- * `ltk-agent` window event the toaster listens to.
+ * Signed out, it lives in localStorage only. Signed in with Discord, the server's copy is the
+ * record: every award is applied here straight away (so toasts are instant), queued, and sent
+ * to the server, which validates it and returns the authoritative state. The queue survives a
+ * reload, so an award made offline is sent on the next visit.
+ *
+ * Every change notifies subscribers and dispatches an `ltk-agent` window event the toaster
+ * listens to.
  */
 
 const KEY = 'ltk-agent-v1';
+const QUEUE_KEY = 'ltk-agent-queue-v1';
 
-export interface DailyRecord {
-  /** Results per question: true = correct. */
-  answers: boolean[];
-  doneAt: number;
+export interface AgentUser {
+  id: string;
+  name: string;
+  avatar: string | null;
+  /** Shows the Discord name on leaderboards; otherwise the codename is used. */
+  public: boolean;
+  codename: string;
+  member: boolean;
 }
 
-export interface AgentState {
-  xp: number;
-  stats: Record<StatKey, number>;
-  achievements: Record<string, number>;
-  once: Record<string, 1>;
-  daily: Record<string, DailyRecord>;
-  streak: { last: string | null; count: number };
+export interface AgentSession {
+  /** Discord sign-in is set up on this deploy. */
+  configured: boolean;
+  user: AgentUser | null;
+  /** The first /api/agent/ check has finished. */
+  ready: boolean;
 }
 
-export type AgentNotice =
-  | { type: 'xp'; amount: number; label: string }
-  | { type: 'rank'; name: string }
-  | { type: 'achievement'; id: string; name: string };
-
-const EMPTY: AgentState = {
-  xp: 0,
-  stats: { dailyDone: 0, dailyBestStreak: 0, examsDone: 0, fieldGuides: 0, states: 0, glossaryKnown: 0, decks: 0, votes: 0, videos: 0, bestSprint: 0, bestSpeed: 0 },
-  achievements: {},
-  once: {},
-  daily: {},
-  streak: { last: null, count: 0 },
-};
+type Pending =
+  | { type: 'award'; opts: AwardOpts }
+  | { type: 'daily'; day: string; picks: { photo: string; q: string }; localHour: number };
 
 let state: AgentState | null = null;
+let session: AgentSession = { configured: false, user: null, ready: false };
+const SERVER_SESSION: AgentSession = session;
 const subs = new Set<() => void>();
+
+const notify = () => subs.forEach((f) => f());
 
 function load(): AgentState {
   if (state) return state;
-  if (typeof window === 'undefined') return EMPTY;
+  if (typeof window === 'undefined') return EMPTY_AGENT;
   try {
     const raw = window.localStorage.getItem(KEY);
-    const parsed = raw ? (JSON.parse(raw) as Partial<AgentState>) : {};
-    state = { ...EMPTY, ...parsed, stats: { ...EMPTY.stats, ...(parsed.stats ?? {}) }, streak: { ...EMPTY.streak, ...(parsed.streak ?? {}) } };
+    state = normalize(raw ? JSON.parse(raw) : {});
   } catch {
-    state = { ...EMPTY };
+    state = normalize({});
   }
   return state;
 }
 
-function save(next: AgentState, notices: AgentNotice[]) {
+function save(next: AgentState, notices: AgentNotice[] = []) {
   state = next;
   try {
     window.localStorage.setItem(KEY, JSON.stringify(next));
   } catch {
     /* storage blocked: progress lasts for this page view only */
   }
-  subs.forEach((f) => f());
+  notify();
   for (const n of notices) window.dispatchEvent(new CustomEvent<AgentNotice>('ltk-agent', { detail: n }));
 }
 
 export function getAgent(): AgentState {
   return load();
 }
-export const SERVER_AGENT = EMPTY;
+export const SERVER_AGENT = EMPTY_AGENT;
+export const getAgentSession = () => session;
+export const getServerAgentSession = () => SERVER_SESSION;
 
 export function subscribeAgent(f: () => void) {
   subs.add(f);
@@ -88,62 +91,133 @@ export function subscribeAgent(f: () => void) {
   };
 }
 
-/**
- * Pay out XP and update stats. Returns the XP actually awarded (0 if `once` already paid).
- */
-export function award(opts: {
-  xp: number;
-  label: string;
-  once?: string;
-  stats?: Partial<Record<StatKey, number>>;
-  /** Stats to raise to at least this value (personal bests). */
-  max?: Partial<Record<StatKey, number>>;
-  event?: AgentEvent;
-}): number {
-  if (typeof window === 'undefined') return 0;
-  const cur = load();
-  if (opts.once && cur.once[opts.once]) return 0;
-  const next: AgentState = {
-    ...cur,
-    stats: { ...cur.stats },
-    achievements: { ...cur.achievements },
-    once: opts.once ? { ...cur.once, [opts.once]: 1 } : cur.once,
-  };
-  for (const [k, v] of Object.entries(opts.stats ?? {})) next.stats[k as StatKey] += v ?? 0;
-  for (const [k, v] of Object.entries(opts.max ?? {})) next.stats[k as StatKey] = Math.max(next.stats[k as StatKey], v ?? 0);
-  const before = rankFor(cur.xp).index;
-  const amount = Math.max(0, Math.round(opts.xp));
-  next.xp = cur.xp + amount;
+/* ------------------------------------------------------------------ server sync */
 
-  const notices: AgentNotice[] = [];
-  if (amount > 0) notices.push({ type: 'xp', amount, label: opts.label });
-  const after = rankFor(next.xp);
-  if (after.index > before) notices.push({ type: 'rank', name: after.rank.name });
-  for (const a of ACHIEVEMENTS) {
-    if (!next.achievements[a.id] && a.test(next.stats, opts.event)) {
-      next.achievements[a.id] = Date.now();
-      notices.push({ type: 'achievement', id: a.id, name: a.name });
-    }
+function readQueue(): Pending[] {
+  try {
+    return JSON.parse(window.localStorage.getItem(QUEUE_KEY) ?? '[]') as Pending[];
+  } catch {
+    return [];
   }
+}
+function writeQueue(q: Pending[]) {
+  try {
+    window.localStorage.setItem(QUEUE_KEY, JSON.stringify(q));
+  } catch {
+    /* ignore */
+  }
+}
+function enqueue(p: Pending) {
+  if (!session.user) return;
+  writeQueue([...readQueue(), p].slice(-50));
+  void flush();
+}
+
+async function post(path: string, body: unknown): Promise<Response> {
+  return fetch(path, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
+}
+
+let flushing = false;
+/** Send queued awards one at a time; adopt the server's state once the queue is empty. */
+async function flush() {
+  if (flushing || !session.user) return;
+  flushing = true;
+  let latest: AgentState | null = null;
+  try {
+    for (;;) {
+      const item = readQueue()[0];
+      if (!item) break;
+      let res: Response;
+      try {
+        res = item.type === 'award' ? await post('/api/agent/award/', item.opts) : await post('/api/agent/daily/', item);
+      } catch {
+        break; // offline: keep the queue for next time
+      }
+      if (res.status === 401) {
+        session = { ...session, user: null };
+        notify();
+        break;
+      }
+      if (res.status >= 500 || res.status === 429) break;
+      if (res.ok) {
+        const data = (await res.json()) as { state?: unknown };
+        if (data.state) latest = normalize(data.state);
+      }
+      writeQueue(readQueue().slice(1)); // 2xx applied, other 4xx rejected: either way, done
+    }
+  } finally {
+    flushing = false;
+  }
+  if (latest && !readQueue().length) save(latest);
+}
+
+let started = false;
+/** Called once per page load (AgentSync): who is signed in, and pull their saved file. */
+export async function startAgentSync() {
+  if (started || typeof window === 'undefined') return;
+  started = true;
+  try {
+    const res = await fetch('/api/agent/', { cache: 'no-store' });
+    const data = (await res.json()) as { configured?: boolean; user?: AgentUser | null; state?: unknown; imported?: boolean };
+    session = { configured: Boolean(data.configured), user: data.user ?? null, ready: true };
+    notify();
+    if (!session.user) return;
+    let server = normalize(data.state);
+    // First sign-in on an account: carry this browser's progress over.
+    if (!data.imported && hasProgress(load())) {
+      const r = await post('/api/agent/import/', load());
+      if (r.ok) server = normalize(((await r.json()) as { state: unknown }).state);
+    }
+    if (!readQueue().length) save(server);
+    else void flush();
+  } catch {
+    session = { ...session, ready: true };
+    notify();
+  }
+}
+
+export async function setLeaderboardName(isPublic: boolean) {
+  const res = await fetch('/api/agent/', { method: 'PATCH', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ public: isPublic }) });
+  if (res.ok && session.user) {
+    session = { ...session, user: { ...session.user, public: isPublic } };
+    notify();
+  }
+}
+
+export async function signOut() {
+  await fetch('/api/auth/logout/', { method: 'POST' }).catch(() => undefined);
+  writeQueue([]);
+  session = { ...session, user: null };
+  // The signed-in file stays on the account; this browser starts fresh.
+  save(normalize({}));
+}
+
+/* ------------------------------------------------------------------ actions */
+
+/** Pay out XP and update stats. Returns the XP actually awarded (0 if `once` already paid). */
+export function award(opts: AwardOpts): number {
+  if (typeof window === 'undefined') return 0;
+  const { next, amount, notices } = applyAward(load(), opts);
+  if (next === load()) return 0;
   save(next, notices);
+  enqueue({ type: 'award', opts });
   return amount;
 }
 
-/** Record a finished Daily Drop for `day` (YYYY-MM-DD in DAILY_TZ) and update the streak. */
-export function recordDaily(day: string, yesterday: string, answers: boolean[], xp: number, localHour: number) {
-  const cur = load();
-  if (cur.daily[day]) return;
-  const count = cur.streak.last === yesterday ? cur.streak.count + 1 : 1;
-  state = { ...cur, daily: { ...cur.daily, [day]: { answers, doneAt: Date.now() } }, streak: { last: day, count } };
-  award({
-    xp,
-    label: 'Daily Drop',
-    stats: { dailyDone: 1 },
-    max: { dailyBestStreak: count },
-    event: { kind: 'daily', localHour },
-  });
+/**
+ * Record a finished Daily Drop. Graded here for the instant result; when signed in, the picks
+ * go to the server, which grades them again for the leaderboard.
+ */
+export function recordDaily(
+  d: { day: string; yesterday: string; answers: boolean[]; localHour: number },
+  picks: { photo: string; q: string },
+) {
+  const { next, notices } = applyDaily(load(), d);
+  if (next === load()) return;
+  save(next, notices);
+  enqueue({ type: 'daily', day: d.day, picks, localHour: d.localHour });
 }
 
 export function resetAgent() {
-  save({ ...EMPTY }, []);
+  save(normalize({}));
 }

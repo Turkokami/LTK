@@ -56,7 +56,7 @@ export default function AgentPage() {
           to Licensed to Kill.
         </p>
 
-        <AgentProfile />
+        <AgentProfile discordInvite={site.discord.invite} />
 
         <h2 className="h2 mb-4 mt-12">The ranks</h2>
         <ol className="mb-12 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
@@ -81,6 +81,22 @@ export default function AgentPage() {
             </div>
           ))}
         </dl>
+
+        <h2 className="h2 mb-4">Signing in with Discord</h2>
+        <div className="mb-12 max-w-[68ch] space-y-3 text-ink2">
+          <p>
+            Signing in is optional. Without it your Agent file stays in this browser and nothing is sent to us.
+          </p>
+          <p>
+            If you sign in, we keep your Discord user ID, display name, profile picture, whether you&rsquo;re in the
+            LTK server, and your Agent file (XP, stats, achievements and Daily Drop results). We never see your email,
+            password, messages or friends list, and we don&rsquo;t keep your Discord login token.
+          </p>
+          <p>
+            Leaderboards show a codename unless you switch your name on. To have your Agent file deleted, ask a
+            moderator in the {site.discord.name}.
+          </p>
+        </div>
 
         <div className="card flex flex-wrap items-center justify-between gap-4 p-5">
           <p className="max-w-[48ch] text-sm text-ink2">

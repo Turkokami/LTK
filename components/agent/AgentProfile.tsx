@@ -3,13 +3,15 @@
 import { useState } from 'react';
 import { ACHIEVEMENTS, RANKS, rankFor } from '@/lib/agent/config';
 import { resetAgent } from '@/lib/agent/store';
-import { useAgent } from './useAgent';
+import { useAgent, useAgentSession } from './useAgent';
+import { AgentAccount } from './AgentAccount';
 import { Insignia } from './Insignia';
 import { cx } from '@/lib/utils';
 
 /** The Agent file: rank, XP, streak, achievements and stats, all from this device. */
-export function AgentProfile() {
+export function AgentProfile({ discordInvite }: { discordInvite: string }) {
   const a = useAgent();
+  const session = useAgentSession();
   const { rank, index, next, progress } = rankFor(a.xp);
   const [confirm, setConfirm] = useState(false);
   const unlocked = ACHIEVEMENTS.filter((x) => a.achievements[x.id]).length;
@@ -17,6 +19,8 @@ export function AgentProfile() {
 
   return (
     <div>
+      <AgentAccount discordInvite={discordInvite} />
+
       <section className="label-panel mb-8" aria-labelledby="rank">
         <div className="label-bar">
           <span>Agent file</span>
@@ -92,26 +96,32 @@ export function AgentProfile() {
         ))}
       </dl>
 
-      <div className="rounded-md border border-rule p-4 text-sm text-ink3">
-        Your Agent file lives in this browser only. Nothing is sent to us, and it won&rsquo;t follow
-        you to another phone or computer.{' '}
-        {confirm ? (
-          <>
-            Really wipe it?{' '}
-            <button type="button" className="link" onClick={() => { resetAgent(); setConfirm(false); }}>
-              Yes, reset
-            </button>{' '}
-            &middot;{' '}
-            <button type="button" className="link" onClick={() => setConfirm(false)}>
-              Cancel
+      {session.user ? (
+        <div className="rounded-md border border-rule p-4 text-sm text-ink3">
+          Your Agent file is saved to your Discord account and follows you to any device you sign in on.
+        </div>
+      ) : (
+        <div className="rounded-md border border-rule p-4 text-sm text-ink3">
+          Your Agent file lives in this browser only. Nothing is sent to us, and it won&rsquo;t follow
+          you to another phone or computer.{' '}
+          {confirm ? (
+            <>
+              Really wipe it?{' '}
+              <button type="button" className="link" onClick={() => { resetAgent(); setConfirm(false); }}>
+                Yes, reset
+              </button>{' '}
+              &middot;{' '}
+              <button type="button" className="link" onClick={() => setConfirm(false)}>
+                Cancel
+              </button>
+            </>
+          ) : (
+            <button type="button" className="link" onClick={() => setConfirm(true)}>
+              Reset my Agent file
             </button>
-          </>
-        ) : (
-          <button type="button" className="link" onClick={() => setConfirm(true)}>
-            Reset my Agent file
-          </button>
-        )}
-      </div>
+          )}
+        </div>
+      )}
     </div>
   );
 }

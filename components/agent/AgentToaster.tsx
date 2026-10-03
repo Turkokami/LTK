@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import type { AgentNotice } from '@/lib/agent/store';
+import { startAgentSync, type AgentNotice } from '@/lib/agent/store';
 import { cx } from '@/lib/utils';
 
 /**
@@ -12,6 +12,11 @@ type Toast = AgentNotice & { key: number };
 
 export function AgentToaster() {
   const [toasts, setToasts] = useState<Toast[]>([]);
+
+  // Mounted once in the root layout, so this is also where the signed-in sync starts.
+  useEffect(() => {
+    void startAgentSync();
+  }, []);
 
   useEffect(() => {
     let n = 0;

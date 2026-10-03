@@ -1,10 +1,11 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { XP, DAILY_TZ } from '@/lib/agent/config';
+import { DAILY_TZ } from '@/lib/agent/config';
 import { recordDaily } from '@/lib/agent/store';
 import type { DailyDrop as Drop } from '@/lib/agent/daily';
 import { useAgent } from './useAgent';
+import { AgentBoards } from './AgentBoards';
 import { cx } from '@/lib/utils';
 
 /**
@@ -48,10 +49,10 @@ export function DailyDrop({ drop, discordInvite, siteUrl }: { drop: Drop; discor
   const qRight = pickQ === drop.question.correctOptionId;
 
   function finish() {
-    const answers = [photoRight, qRight];
-    const streak = agent.streak.last === drop.yesterday ? agent.streak.count + 1 : 1;
-    const xp = XP.dailyComplete + answers.filter(Boolean).length * XP.dailyCorrect + Math.min(streak * XP.dailyStreakPerDay, XP.dailyStreakCap);
-    recordDaily(drop.day, drop.yesterday, answers, xp, new Date().getHours());
+    recordDaily(
+      { day: drop.day, yesterday: drop.yesterday, answers: [photoRight, qRight], localHour: new Date().getHours() },
+      { photo: pickPhoto ?? '', q: pickQ ?? '' },
+    );
     setStep(2);
   }
 
@@ -124,6 +125,9 @@ export function DailyDrop({ drop, discordInvite, siteUrl }: { drop: Drop; discor
             <a href="/arena/agent/" className="btn btn--ghost">
               Your Agent file
             </a>
+          </div>
+          <div className="mt-8">
+            <AgentBoards only="today" title={`Today's board · Drop #${drop.number}`} next="/arena/daily/" />
           </div>
           <div className="mt-8 grid gap-4 md:grid-cols-2">
             <div className="rounded-md border border-rule p-4">

@@ -5,6 +5,7 @@ import { JsonLd } from '@/components/JsonLd';
 import { Breadcrumbs } from '@/components/site/Breadcrumbs';
 import { DiscordButton } from '@/components/community/Discord';
 import { Leaderboard } from '@/components/arena/Leaderboard';
+import { AgentBoards } from '@/components/agent/AgentBoards';
 import { site } from '@/lib/site.config';
 
 /**
@@ -49,6 +50,11 @@ export default function LeaderboardsPage() {
         <p className="lede mb-4 max-w-[60ch]">
           Best score per device, top 20 per game. Finish a round to post yours.
         </p>
+
+        {/* Agent XP, streaks and the Daily Drop: signed-in Discord accounts, graded on the server. */}
+        <div className="mb-8 mt-8">
+          <AgentBoards />
+        </div>
 
         <div className="grid gap-x-8 lg:grid-cols-2">
           {GAMES.map((g) => (
