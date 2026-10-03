@@ -279,6 +279,21 @@
     color: var(--ink-3);
     padding-top: 0.2rem;
   }
+  /* Rows follow the width of their own panel, not the window: a panel squeezed into a narrow
+     column (two-up beside a sidebar, desktop mode on a phone) stacks label over value. */
+  .label-panel dl {
+    container-type: inline-size;
+  }
+  .spec-row > dd {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+  @container (max-width: 34rem) {
+    .spec-row {
+      grid-template-columns: 1fr;
+      gap: 0.2rem;
+    }
+  }
   @media (max-width: 40rem) {
     .spec-row {
       grid-template-columns: 1fr;

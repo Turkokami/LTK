@@ -1,4 +1,5 @@
 import { site } from '@/lib/site.config';
+import { SponsorStrip } from '@/components/community/Sponsors';
 import { HUBS } from '@/lib/content/hubs';
 import { ASSETS } from '@/lib/brand';
 import { DiscordButton } from '@/components/community/Discord';
@@ -60,6 +61,16 @@ export function SiteFooter() {
         <FooterCol title="Explore" links={HUBS.map((h) => ({ href: h.path, label: h.title }))} />
         <FooterCol title="How we work" links={TRUST} />
         <FooterCol title="Partners" links={COMMERCIAL} />
+      </div>
+
+      {/* Sponsors on every page: the thank-you, and the proof for the next sponsor. */}
+      <div className="rule-t">
+        <div className="shell py-8">
+          <SponsorStrip label="LTK is backed by" />
+          <a href="/partners/" className="link mt-3 inline-block text-sm">
+            Become a sponsor
+          </a>
+        </div>
       </div>
 
       <div className="rule-t">

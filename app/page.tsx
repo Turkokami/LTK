@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { FeaturedIn } from '@/components/community/Timeline';
 import { pageMeta } from '@/lib/seo/metadata';
 import { buildGraph } from '@/lib/schema/graph';
 import { JsonLd } from '@/components/JsonLd';
@@ -81,6 +82,7 @@ export default function HomePage() {
               </a>{' '}
               &mdash; game nights, the championship and meetups.
             </p>
+            <FeaturedIn className="mt-4" />
           </div>
 
           <div className="relative mx-auto w-full max-w-[22rem]">

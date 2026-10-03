@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { PRESS } from '@/lib/content/timeline';
 import { pageMeta } from '@/lib/seo/metadata';
 import { buildGraph } from '@/lib/schema/graph';
 import { JsonLd } from '@/components/JsonLd';
@@ -93,6 +94,14 @@ export default function PressPage() {
                 label: 'Coverage',
                 value: (
                   <>
+                    {PRESS.map((p) => (
+                      <span key={p.url}>
+                        <a href={p.url} target="_blank" rel="noopener noreferrer" className="link">
+                          {p.outlet} ({p.issue})
+                        </a>
+                        {' · '}
+                      </span>
+                    ))}
                     {EPISODES.map((e, i) => (
                       <span key={e.slug}>
                         {i ? ' · ' : ''}

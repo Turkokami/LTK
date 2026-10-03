@@ -163,7 +163,7 @@ export default async function StateCeuPage({
             reviewer={{ name: EDITOR.name, href: EDITOR.path }}
           />
 
-          <div className="mt-8 grid gap-6 md:grid-cols-2">
+          <div className="mt-8 grid gap-6 xl:grid-cols-2">
             <LabelBlock
               title="Renewal requirements"
               signal="warning"

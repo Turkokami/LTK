@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { FeaturedIn, Timeline } from '@/components/community/Timeline';
 import { pageMeta } from '@/lib/seo/metadata';
 import { buildGraph } from '@/lib/schema/graph';
 import { JsonLd } from '@/components/JsonLd';
@@ -118,6 +119,12 @@ export default function AboutPage() {
             </a>
           </div>
         </div>
+        <section className="mb-12" aria-labelledby="since">
+          <h2 id="since" className="h2 mb-2">LTK since 2025</h2>
+          <FeaturedIn className="mb-6" />
+          <Timeline />
+        </section>
+
         <p className="prose-bulletin mb-10">
           This site publishes regulatory guidance that people act on and reviews that influence
           real purchase decisions. Everything about how that gets made — sourcing, review,

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { Timeline } from '@/components/community/Timeline';
 import { pageMeta } from '@/lib/seo/metadata';
 import { buildGraph } from '@/lib/schema/graph';
 import { JsonLd } from '@/components/JsonLd';
@@ -178,6 +179,10 @@ export default function EventsPage() {
             </li>
           ))}
         </ul>
+
+        <h2 className="h2 mb-2 mt-14">LTK since 2025</h2>
+        <p className="mb-6 max-w-[60ch] text-ink2">Tournaments, leagues, the podcast and the sponsors who back them, in order.</p>
+        <Timeline />
 
         <div className="card mt-12 flex flex-wrap items-center justify-between gap-4 p-5">
           <p className="max-w-[48ch] text-sm text-ink2">
