@@ -6,6 +6,8 @@ import { HUBS } from '@/lib/content/hubs';
 import { STATES } from '@/lib/content/states';
 import { site } from '@/lib/site.config';
 import { ASSETS } from '@/lib/brand';
+import { RUNNING } from '@/lib/content/events-feed';
+import { SponsorStrip } from '@/components/community/Sponsors';
 import { DiscordButton, DiscordChannels } from '@/components/community/Discord';
 import { DISCIPLINES, FIELD_GROUPS, fieldsInGroup } from '@/lib/content/disciplines';
 import { FIELD_GALLERY, GROUP_PHOTOS, fieldPhotos } from '@/lib/content/photos';
@@ -341,6 +343,32 @@ export default function HomePage() {
               </a>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* What's running now (the newest update leads) and the sponsors who back it. */}
+      <section className="rule-b">
+        <div className="shell py-12">
+          {RUNNING.map((ev) => {
+            const u = ev.updates?.[0];
+            return (
+              <a key={ev.id} href="/community/events/" className="group mb-10 grid items-center gap-6 md:grid-cols-[3fr_2fr]">
+                {u?.image ? <img src={u.image.src} alt={u.image.alt} width={u.image.width} height={u.image.height} loading="lazy" className="w-full rounded-md ring-1 ring-ruleStrong" /> : null}
+                <span>
+                  <span className="eyebrow mb-2 block">Running now &middot; {ev.when.split(' · ')[0]}</span>
+                  <span className="h2 block group-hover:text-blood">{ev.name}</span>
+                  {u ? <span className="mt-2 block font-semibold text-ink">{u.title}</span> : null}
+                  {u ? <span className="mt-1 block text-ink2">{u.body[0]}</span> : null}
+                  <span className="btn btn--ghost mt-4">Events and results</span>
+                </span>
+              </a>
+            );
+          })}
+          <SponsorStrip label="LTK sponsors" />
+          <p className="mt-3 text-sm text-ink3">
+            Sponsors back LTK events and never touch editorial.{' '}
+            <a href="/partners/" className="link">Meet the sponsors</a>
+          </p>
         </div>
       </section>
 

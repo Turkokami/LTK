@@ -77,6 +77,10 @@ export const site = {
     linkedin: 'https://www.linkedin.com/in/ltk-licensed-to-kill-824690368/',
     spotify: 'https://open.spotify.com/show/032iBDHKytatvGWMxtj20h',
     youtube: 'https://www.youtube.com/@LTKpodcast',
+    /** From LTK's own QR cards (2026-10-03); the same group the YouTube descriptions link. */
+    facebook: 'https://www.facebook.com/groups/601019825855418/',
+    /** LTK merch shop, from the owner's merch QR card. */
+    merch: 'https://www.etsy.com/shop/TheEmberMerchant',
   },
 
   /**
@@ -147,6 +151,7 @@ export const site = {
     'https://www.linkedin.com/in/ltk-licensed-to-kill-824690368/',
     'https://open.spotify.com/show/032iBDHKytatvGWMxtj20h',
     'https://www.youtube.com/@LTKpodcast',
+    'https://www.facebook.com/groups/601019825855418/',
   ] as string[],
 
   /**

@@ -6,6 +6,7 @@ import { Breadcrumbs } from '@/components/site/Breadcrumbs';
 import { LabelBlock } from '@/components/label/LabelBlock';
 import { site } from '@/lib/site.config';
 import { DiscordButton } from '@/components/community/Discord';
+import { ConnectQr } from '@/components/community/ConnectQr';
 
 export const metadata: Metadata = pageMeta({
   title: 'Join LTK: free, and open to the whole trade',
@@ -84,6 +85,12 @@ export default function JoinPage() {
           </a>
           .
         </LabelBlock>
+
+        <h2 className="h2 mb-2 mt-14">On your phone? Scan to join</h2>
+        <p className="mb-5 max-w-[60ch] text-ink2">
+          The Discord is where LTK lives. The Facebook group, YouTube channel and merch shop are the other ways in.
+        </p>
+        <ConnectQr />
       </div>
     </>
   );

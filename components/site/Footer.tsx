@@ -43,6 +43,18 @@ export function SiteFooter() {
               <span className="sr-only">(opens in a new tab)</span>
             </a>
           </div>
+          <p className="mt-4 flex flex-wrap gap-x-4 gap-y-1 text-sm">
+            {[
+              ['Facebook group', site.social.facebook],
+              ['YouTube', site.social.youtube],
+              ['Merch', site.social.merch],
+            ].map(([label, href]) => (
+              <a key={label} href={href} target="_blank" rel="noopener noreferrer" className="link">
+                {label}
+                <span className="sr-only"> (opens in a new tab)</span>
+              </a>
+            ))}
+          </p>
         </div>
 
         <FooterCol title="Explore" links={HUBS.map((h) => ({ href: h.path, label: h.title }))} />

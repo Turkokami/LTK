@@ -84,6 +84,8 @@ export default function PressPage() {
                     <a href="/brand/logo-1200.jpg" className="link">Badge logo, 1200px</a>
                     {' · '}
                     <a href="/brand/ltk-banner.jpg" className="link">Banner</a>
+                    {' · '}
+                    <a href="/brand/ltk-wordmark-1920.jpg" className="link">Wordmark, 1920px</a>
                   </>
                 ),
               },

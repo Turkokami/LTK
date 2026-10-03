@@ -132,8 +132,7 @@ export const HEX = {
 
 /**
  * Brand assets. The mark is the LTK badge: the rat in the scope with the "Licensed to Kill"
- * ribbon. Cropped from the owner-supplied banner (public/brand/ltk-banner.jpg), which is only
- * ~200px tall — swap in a high-resolution original when one exists.
+ * ribbon. Sized down from the owner's 1280px original (supplied 2026-10-03).
  */
 export const ASSETS = {
   /** Square badge. Header, hero, cards. */
@@ -142,6 +141,8 @@ export const ASSETS = {
   favicon: '/brand/favicon-64.png',
   /** Full-width banner with the smoky background. */
   banner: '/brand/ltk-banner.jpg',
+  /** "Licensed to Kill · Pest Control" wordmark on the smoky background, 1920×1080. */
+  wordmark: '/brand/ltk-wordmark-1920.jpg',
   /** Raster for the schema ImageObject node. Must be square and ≥ 1200px. */
   logoRaster: '/brand/logo-1200.jpg',
   appleTouchIcon: '/brand/apple-touch-icon.png',
