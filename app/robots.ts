@@ -25,7 +25,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/investors/data-room/', '/api/', '/search/', '/og/'],
       },
     ],
-    sitemap: segments.map((s) => abs(`/sitemap/${s}.xml`)),
+    sitemap: [abs('/sitemap.xml'), ...segments.map((s) => abs(`/sitemap/${s}.xml`))],
     host: abs('/'),
   };
 }
