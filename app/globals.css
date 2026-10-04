@@ -55,6 +55,9 @@
 
     --focus: #39ff88;
 
+    /* Labels and data use the friendly sans too (was JetBrains Mono). */
+    --font-mono: var(--font-archivo);
+
     --radius: 10px;
     --measure: 68ch;
   }
@@ -674,6 +677,11 @@
     inset: 0 0 0 auto;
     width: min(62%, 52rem);
     z-index: -2;
+    /* Fade the photo itself (not a colour overlay) so no edge shows against the page glow. */
+    -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 38%), linear-gradient(0deg, transparent 0%, #000 28%);
+    -webkit-mask-composite: source-in;
+    mask-image: linear-gradient(90deg, transparent 0%, #000 38%), linear-gradient(0deg, transparent 0%, #000 28%);
+    mask-composite: intersect;
   }
   .hero-hud__photo img {
     width: 100%;
@@ -686,16 +694,15 @@
     position: absolute;
     inset: 0;
     background:
-      linear-gradient(90deg, var(--stock) 0%, rgba(18, 20, 18, 0.85) 22%, rgba(18, 20, 18, 0.25) 60%, rgba(18, 20, 18, 0.55) 100%),
-      linear-gradient(0deg, var(--stock) 0%, transparent 30%),
+      linear-gradient(90deg, rgba(18, 20, 18, 0.55) 0%, rgba(18, 20, 18, 0.2) 60%, rgba(18, 20, 18, 0.5) 100%),
       radial-gradient(40rem 28rem at 70% 40%, rgba(225, 29, 46, 0.38), transparent 70%);
   }
   .hero-hud__title {
     font-family: var(--font-archivo), sans-serif;
     font-weight: 900;
-    font-size: clamp(2.8rem, 7.4vw, 5.8rem);
-    line-height: 0.95;
-    letter-spacing: -0.03em;
+    font-size: clamp(2.6rem, 7vw, 5.4rem);
+    line-height: 0.98;
+    letter-spacing: -0.02em;
     color: #fff;
     text-shadow: 0 2px 30px rgba(0, 0, 0, 0.6);
   }

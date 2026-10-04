@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next';
-import { Archivo, Newsreader, JetBrains_Mono } from 'next/font/google';
+import { Rubik, Newsreader } from 'next/font/google';
 import './globals.css';
 import { site, abs } from '@/lib/site.config';
 import { ASSETS } from '@/lib/brand';
@@ -10,12 +10,13 @@ import { Analytics } from '@vercel/analytics/next';
 import { DiscordBand } from '@/components/community/Discord';
 
 /**
- * Type pairing (docs/DESIGN.md):
- *   Archivo       — display + UI. Industrial grotesque, the closest thing to label typography.
- *   Newsreader    — long-form reference only. Reads as a technical bulletin, not a blog post.
- *   JetBrains Mono— data, spec labels, credential numbers, state codes.
+ * Type pairing (2026-10 refresh — softer and friendlier than the old industrial set):
+ *   Rubik       — display, UI and labels. Rounded corners, friendly, still punchy at 800–900.
+ *                 It keeps the old CSS variable names (--font-archivo, and --font-mono maps to
+ *                 it in globals.css) so every existing class picks it up.
+ *   Newsreader  — long-form reference only.
  */
-const archivo = Archivo({
+const archivo = Rubik({
   subsets: ['latin'],
   variable: '--font-archivo',
   weight: ['400', '500', '600', '700', '800', '900'],
@@ -27,13 +28,6 @@ const newsreader = Newsreader({
   weight: ['400', '500', '600'],
   display: 'swap',
 });
-const mono = JetBrains_Mono({
-  subsets: ['latin'],
-  variable: '--font-mono',
-  weight: ['400', '500'],
-  display: 'swap',
-});
-
 /**
  * CLAUDE.md 2.6 — `maximum-scale` is banned. It was the original prototype's WCAG 1.4.4 defect
  * and it is not coming back.
@@ -74,7 +68,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${archivo.variable} ${newsreader.variable} ${mono.variable}`}>
+    <html lang="en" className={`${archivo.variable} ${newsreader.variable}`}>
       <body className="min-h-screen antialiased">
         <a
           href="#main"

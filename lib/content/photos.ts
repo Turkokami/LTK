@@ -33,15 +33,15 @@ export interface FieldPhoto {
 export const FIELD_PHOTOS: Record<string, { hero: FieldPhoto; work: FieldPhoto }> = {
   'general-pest': {
     hero: {
-      src: "/photos/field/tech-respirator.jpg",
-      alt: "A technician in a respirator, headlamp cap and Tyvek suit beside a hose reel outside a house",
-      width: 1202,
-      height: 1600,
+      src: "/photos/community/gear/g48.jpg",
+      alt: "Four backpack sprayers lined up in a pickup bed, ready for the day",
+      width: 1280,
+      height: 960,
       credit: "LTK member photo",
       license: "Owner supplied",
       source: null,
       placeholder: false,
-      position: "center 30%",
+      position: "center 55%",
     },
     work: {
       src: "/photos/field/rat-bait-station.jpg",

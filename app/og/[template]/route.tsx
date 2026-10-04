@@ -42,8 +42,8 @@ export async function GET(request: Request, { params }: { params: Promise<{ temp
   const host = new URL(site.url).host.replace(/^www\./, '');
 
   const [bold, semi] = await Promise.all([
-    fetch(`${origin}/fonts/archivo-800.woff`).then((r) => r.arrayBuffer()),
-    fetch(`${origin}/fonts/archivo-600.woff`).then((r) => r.arrayBuffer()),
+    fetch(`${origin}/fonts/rubik-800.woff`).then((r) => r.arrayBuffer()),
+    fetch(`${origin}/fonts/rubik-600.woff`).then((r) => r.arrayBuffer()),
   ]);
 
   const size = title.length > 70 ? 52 : title.length > 40 ? 62 : 74;
@@ -51,7 +51,7 @@ export async function GET(request: Request, { params }: { params: Promise<{ temp
 
   return new ImageResponse(
     (
-      <div style={{ width: '1200px', height: '630px', display: 'flex', background: HEX.stock, fontFamily: 'Archivo', position: 'relative' }}>
+      <div style={{ width: '1200px', height: '630px', display: 'flex', background: HEX.stock, fontFamily: 'Rubik', position: 'relative' }}>
         {/* Soft red glow, like the dot in the scope. */}
         <div
           style={{
@@ -99,8 +99,8 @@ export async function GET(request: Request, { params }: { params: Promise<{ temp
       width: 1200,
       height: 630,
       fonts: [
-        { name: 'Archivo', data: bold, weight: 800, style: 'normal' },
-        { name: 'Archivo', data: semi, weight: 600, style: 'normal' },
+        { name: 'Rubik', data: bold, weight: 800, style: 'normal' },
+        { name: 'Rubik', data: semi, weight: 600, style: 'normal' },
       ],
       headers: { 'Cache-Control': 'public, max-age=86400, s-maxage=604800' },
     },

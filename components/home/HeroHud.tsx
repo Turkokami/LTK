@@ -44,7 +44,8 @@ function DiscordGlyph() {
 }
 
 export function HeroHud({ stats }: { stats: DiscordStats }) {
-  const tech = fieldPhotos('general-pest')?.hero;
+  // Hero photo: the roof rat in a bait station — on brand with the badge, no people.
+  const tech = fieldPhotos('general-pest')?.work;
   return (
     <>
       {/* Live status strip */}
@@ -118,8 +119,7 @@ export function HeroHud({ stats }: { stats: DiscordStats }) {
         <div className="shell grid grid-cols-2 gap-3 py-8 sm:grid-cols-3 lg:grid-cols-5">
           {TILES.map((t) => {
             const d = DISCIPLINES.find((x) => x.slug === t.slug);
-            // The hero already uses the general-pest hero photo; its tile shows the field's second photo.
-            const p = t.slug === 'general-pest' ? fieldPhotos(t.slug)?.work : fieldPhotos(t.slug)?.hero;
+            const p = fieldPhotos(t.slug)?.hero;
             if (!d) return null;
             return (
               <TiltLink key={t.slug} href={`/fields/${t.slug}/`} className="field-tile">
