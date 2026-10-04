@@ -1,5 +1,8 @@
 import type { Metadata } from 'next';
 import { FeaturedIn } from '@/components/community/Timeline';
+import { DropCountdown } from '@/components/agent/DropCountdown';
+import { HeroHud } from '@/components/home/HeroHud';
+import { discordStats } from '@/lib/server/discord-stats';
 import { pageMeta } from '@/lib/seo/metadata';
 import { buildGraph } from '@/lib/schema/graph';
 import { JsonLd } from '@/components/JsonLd';
@@ -40,7 +43,11 @@ const STEPS = [
 
 const NUMBER_WORDS: Record<number, string> = { 12: 'twelve', 13: 'thirteen', 14: 'fourteen', 15: 'fifteen', 16: 'sixteen', 17: 'seventeen', 18: 'eighteen', 19: 'nineteen', 20: 'twenty' };
 
-export default function HomePage() {
+// Hourly: the live Discord counter in the hero.
+export const revalidate = 3600;
+
+export default async function HomePage() {
+  const stats = await discordStats();
   const graph = buildGraph({
     path: '/',
     pageType: 'WebPage',
@@ -51,61 +58,13 @@ export default function HomePage() {
     <>
       <JsonLd graph={graph} />
 
-      {/* Hero. The badge leads — this is a crew with an identity, not a directory. */}
-      <section className="rule-b">
-        <div className="shell grid items-center gap-12 py-14 lg:grid-cols-[1.25fr_1fr] lg:py-20">
-          <div>
-            <p className="eyebrow mb-5">Pest pros helping pest pros</p>
-            <h1 className="display max-w-[15ch]">
-              Every field in pest control. One crew.
-            </h1>
-
-            {/* Answer-first. CLAUDE.md 2.3 — this paragraph must stand alone out of context. */}
-            <p className="lede mt-6">
-              {site.name} is a community for the whole pest control industry &mdash; general
-              pest, termite, wildlife, exclusion, insulation and every field in between. Learn what
-              each job really involves and what your state requires, then join the conversation
-              in our Discord: shop talk, pest ID help, the podcast and group training.
-            </p>
-
-            <div className="mt-8 flex flex-wrap gap-3">
-              <DiscordButton size="lg">Join the Discord &mdash; it&rsquo;s free</DiscordButton>
-              <a href="/fields/" className="btn btn--ghost btn--lg">
-                Explore the fields
-              </a>
-            </div>
-
-            <p className="mt-6 text-sm text-ink3">
-              Already hanging out with us?{' '}
-              <a href="/community/events/" className="link">
-                See what&rsquo;s on
-              </a>{' '}
-              &mdash; game nights, the championship and meetups.
-            </p>
-            <FeaturedIn className="mt-4" />
-          </div>
-
-          <div className="relative mx-auto w-full max-w-[22rem]">
-            {/* Soft red glow behind the badge, like the dot in the scope. */}
-            <div
-              aria-hidden="true"
-              className="absolute inset-6 rounded-full bg-danger opacity-25 blur-3xl"
-            />
-            <img
-              src={ASSETS.mark}
-              alt={`${site.name} badge: a rat framed in a rifle scope above a ribbon reading Licensed to Kill`}
-              width={396}
-              height={396}
-              className="relative w-full rounded-full ring-1 ring-ruleStrong"
-            />
-          </div>
-        </div>
-      </section>
+      {/* Hero: red brand, neon highlights (2026-10 refresh). */}
+      <HeroHud stats={stats} />
 
       {/* The daily habit: two minutes, one streak. */}
       <section className="rule-b">
         <div className="shell py-6">
-          <a href="/arena/daily/" className="group flex flex-wrap items-center justify-between gap-4 rounded-[var(--radius)] border border-ruleStrong bg-stock px-5 py-4 hover:border-ink3">
+          <a href="/arena/daily/" className="group flex flex-wrap items-center justify-between gap-4 rounded-[var(--radius)] border border-field/40 bg-fieldTint/40 px-5 py-4 transition-shadow hover:border-field hover:shadow-[var(--glow-green)]">
             <span>
               <span className="eyebrow mb-1 block">Daily Drop &middot; new every day</span>
               <span className="block font-semibold text-ink group-hover:text-blood">
@@ -113,7 +72,13 @@ export default function HomePage() {
               </span>
               <span className="block text-sm text-ink3">Earn XP and rank up from Recruit to Licensed to Kill.</span>
             </span>
-            <span className="btn">Play today&rsquo;s drop</span>
+            <span className="flex flex-wrap items-center gap-4">
+              <span className="text-right">
+                <span className="mono block text-[0.625rem] uppercase tracking-[0.14em] text-ink3">Next drop in</span>
+                <DropCountdown className="font-sans text-2xl font-extrabold tabular-nums text-neon" />
+              </span>
+              <span className="btn">Play today&rsquo;s drop</span>
+            </span>
           </a>
         </div>
       </section>

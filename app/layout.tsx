@@ -18,7 +18,7 @@ import { DiscordBand } from '@/components/community/Discord';
 const archivo = Archivo({
   subsets: ['latin'],
   variable: '--font-archivo',
-  weight: ['400', '500', '600', '700', '800'],
+  weight: ['400', '500', '600', '700', '800', '900'],
   display: 'swap',
 });
 const newsreader = Newsreader({

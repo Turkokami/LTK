@@ -318,7 +318,7 @@ export function InspectionHunt({ discordInvite }: { discordInvite: string }) {
                         height={h}
                         rx="10"
                         fill="transparent"
-                        stroke={isFound ? '#6cc49a' : missed ? '#f05a63' : 'transparent'}
+                        stroke={isFound ? '#39ff88' : missed ? '#ff5a66' : 'transparent'}
                         strokeWidth="4"
                         strokeDasharray={missed ? '8 6' : undefined}
                         className={cx(phase === 'playing' && 'cursor-crosshair focus:outline-none')}
@@ -334,7 +334,7 @@ export function InspectionHunt({ discordInvite }: { discordInvite: string }) {
                         }}
                       />
                       {isFound ? (
-                        <text x={x + w - 6} y={y + 22} textAnchor="end" fontSize="24" fontWeight="800" fill="#6cc49a">
+                        <text x={x + w - 6} y={y + 22} textAnchor="end" fontSize="24" fontWeight="800" fill="#39ff88">
                           ✓
                         </text>
                       ) : null}

@@ -1,0 +1,156 @@
+import { site } from '@/lib/site.config';
+import { ASSETS } from '@/lib/brand';
+import { DISCIPLINES } from '@/lib/content/disciplines';
+import { fieldPhotos } from '@/lib/content/photos';
+import { LTK_EPISODES } from '@/lib/content/podcast';
+import { TiltLink } from '@/components/ui/Tilt';
+import type { DiscordStats } from '@/lib/server/discord-stats';
+
+/**
+ * Home hero, red/neon refresh (2026-10). Red carries the brand — the headline accent and the
+ * primary button; neon green is the highlight — live status, hover glow, icons. The photo is
+ * a real member photo (tech in a respirator), not stock or AI art.
+ */
+
+const TILES: { slug: string; label: string; icon: string }[] = [
+  { slug: 'general-pest', label: 'General pest', icon: 'M12 4c-1.5 0-2.5 1-2.5 2.2 0 .8.4 1.4 1 1.8-1.6.5-2.6 1.7-2.6 3.1 0 .7.2 1.3.6 1.8-1.4.6-2.3 1.9-2.3 3.4 0 2.2 2.6 3.7 5.8 3.7s5.8-1.5 5.8-3.7c0-1.5-.9-2.8-2.3-3.4.4-.5.6-1.1.6-1.8 0-1.4-1-2.6-2.6-3.1.6-.4 1-1 1-1.8C14.5 5 13.5 4 12 4zM5 9l3 2M19 9l-3 2M4 15h4M20 15h-4M5 21l3-2M19 21l-3-2' },
+  { slug: 'termite-wdo', label: 'Termite', icon: 'M12 3c-1.2 0-2 .9-2 2s.8 2 2 2 2-.9 2-2-.8-2-2-2zm0 5c-1.7 0-3 1.3-3 3v1c0 1.7 1.3 3 3 3s3-1.3 3-3v-1c0-1.7-1.3-3-3-3zm0 8c-1.4 0-2.5 1.3-2.5 3s1.1 3 2.5 3 2.5-1.3 2.5-3-1.1-3-2.5-3zM9 10H5M15 10h4M9 13l-4 2M15 13l4 2' },
+  { slug: 'wildlife-control', label: 'Wildlife', icon: 'M7 9a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm10 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM4.5 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm15 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM12 12c-2.8 0-5 2.6-5 5 0 1.7 1.2 3 3 3 .8 0 1.4-.3 2-.3s1.2.3 2 .3c1.8 0 3-1.3 3-3 0-2.4-2.2-5-5-5z' },
+  { slug: 'exclusion', label: 'Exclusion', icon: 'M3 11l9-7 9 7M5 10v10h14V10M9 20v-6h6v6' },
+  { slug: 'insulation', label: 'Insulation', icon: 'M4 20L20 4M4 14L14 4M10 20L20 10M4 8l4-4M16 20l4-4' },
+];
+
+const STATS = (members: number, online: number | null) => [
+  { top: `${members.toLocaleString('en-US')} pest pros`, sub: 'in the community', icon: 'M16 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM2 20c0-3 2.7-5 6-5s6 2 6 5M14 15.5c.6-.3 1.3-.5 2-.5 3.3 0 6 2 6 5' },
+  { top: 'Real-world knowledge', sub: 'from the field', icon: 'M3 5h7a2 2 0 0 1 2 2v13a2 2 0 0 0-2-2H3zM21 5h-7a2 2 0 0 0-2 2v13a2 2 0 0 1 2-2h7z' },
+  { top: 'Podcast & training', sub: `${LTK_EPISODES.length} episodes`, icon: 'M12 3a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3zM5 11a7 7 0 0 0 14 0M12 18v3' },
+  { top: online ? `${online} online now` : 'Active discussions', sub: online ? 'in the Discord' : 'get answers', icon: 'M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z' },
+];
+
+function Icon({ d, className = '' }: { d: string; className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden="true">
+      <path d={d} />
+    </svg>
+  );
+}
+
+function DiscordGlyph() {
+  return (
+    <svg viewBox="0 0 24 24" width="34" height="34" fill="currentColor" aria-hidden="true">
+      <path d="M20.3 4.4A19.8 19.8 0 0 0 15.4 3l-.6 1.3a18.4 18.4 0 0 0-5.6 0L8.6 3a19.7 19.7 0 0 0-4.9 1.5C.6 9.1-.3 13.6.1 18.1a19.9 19.9 0 0 0 6 3l1.3-2.1a12.9 12.9 0 0 1-2-1l.5-.4a14.2 14.2 0 0 0 12.2 0l.5.4c-.6.4-1.3.7-2 1l1.3 2.1a19.8 19.8 0 0 0 6-3c.5-5.2-.8-9.7-3.6-13.7ZM8 15.4c-1.2 0-2.2-1.1-2.2-2.4S6.8 10.6 8 10.6s2.2 1.1 2.2 2.4-1 2.4-2.2 2.4Zm8 0c-1.2 0-2.2-1.1-2.2-2.4s1-2.4 2.2-2.4 2.2 1.1 2.2 2.4-1 2.4-2.2 2.4Z" />
+    </svg>
+  );
+}
+
+export function HeroHud({ stats }: { stats: DiscordStats }) {
+  const tech = fieldPhotos('general-pest')?.hero;
+  return (
+    <>
+      {/* Live status strip */}
+      <div className="hud-strip">
+        <div className="shell flex items-center justify-between gap-4 py-2">
+          <a href={site.discord.invite} className="flex items-center gap-2 text-blood hover:text-ink">
+            <span className="live-dot live-dot--red" aria-hidden="true" />
+            Live community
+            {stats.online ? <span className="text-neon">· {stats.online} online</span> : null}
+          </a>
+          <span className="hidden text-ink2 md:inline">Pest pros helping pest pros</span>
+          <span className="hidden items-center gap-3 text-ink3 sm:flex">
+            {stats.members.toLocaleString('en-US')} agents · est. 2025
+            <span className="hud-slashes" aria-hidden="true" />
+          </span>
+        </div>
+      </div>
+
+      {/* Hero */}
+      <section className="hero-hud hud-grid">
+        {tech ? (
+          <div className="hero-hud__photo" aria-hidden="true">
+            <img src={tech.src} alt="" width={tech.width} height={tech.height} style={tech.position ? { objectPosition: tech.position } : undefined} />
+          </div>
+        ) : null}
+        <div className="shell relative py-14 lg:py-24">
+          <div className="max-w-[40rem]">
+            <p className="eyebrow mb-5">Pest pros helping pest pros</p>
+            <h1 className="hero-hud__title">
+              Every field in <span className="hero-hud__red">pest control.</span> One crew.
+            </h1>
+            <p className="lede mt-6 max-w-[36rem] text-ink">
+              {site.name} is a community for the whole pest control industry &mdash; general pest, termite, wildlife,
+              exclusion, insulation and every field in between. Learn what each job really involves and what your state
+              requires, then join the conversation in our Discord: shop talk, pest ID help, the podcast and group training.
+            </p>
+
+            <div className="mt-8 grid max-w-[34rem] gap-3">
+              <a href={site.discord.invite} className="cta-hud cta-hud--red" target="_blank" rel="noopener noreferrer">
+                <span className="cta-hud__icon">
+                  <DiscordGlyph />
+                </span>
+                <span className="cta-hud__text">
+                  <span className="cta-hud__title">Join the Discord &mdash; it&rsquo;s free</span>
+                  <span className="cta-hud__sub">Enter community // get support // learn // grow</span>
+                </span>
+                <span className="cta-hud__chev" aria-hidden="true">›</span>
+                <span className="sr-only"> (opens in a new tab)</span>
+              </a>
+              <a href="/fields/" className="cta-hud cta-hud--dark">
+                <span className="cta-hud__icon">
+                  <Icon d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z" className="h-8 w-8" />
+                </span>
+                <span className="cta-hud__text">
+                  <span className="cta-hud__title">Explore the fields</span>
+                  <span className="cta-hud__sub">Discover topics // training // resources</span>
+                </span>
+                <span className="cta-hud__chev" aria-hidden="true">›</span>
+              </a>
+            </div>
+          </div>
+
+          {tech ? (
+            <img src={ASSETS.mark} alt="" width={396} height={396} className="hero-hud__patch" aria-hidden="true" />
+          ) : null}
+        </div>
+      </section>
+
+      {/* Field tiles */}
+      <section className="rule-b">
+        <div className="shell grid grid-cols-2 gap-3 py-8 sm:grid-cols-3 lg:grid-cols-5">
+          {TILES.map((t) => {
+            const d = DISCIPLINES.find((x) => x.slug === t.slug);
+            // The hero already uses the general-pest hero photo; its tile shows the field's second photo.
+            const p = t.slug === 'general-pest' ? fieldPhotos(t.slug)?.work : fieldPhotos(t.slug)?.hero;
+            if (!d) return null;
+            return (
+              <TiltLink key={t.slug} href={`/fields/${t.slug}/`} className="field-tile">
+                {p ? <img src={p.src} alt="" width={p.width} height={p.height} loading="lazy" style={p.position ? { objectPosition: p.position } : undefined} /> : null}
+                <span className="field-tile__label">
+                  <Icon d={t.icon} className="h-7 w-7 shrink-0 text-blood" />
+                  <span>{t.label}</span>
+                  <span className="field-tile__chev" aria-hidden="true">›</span>
+                </span>
+              </TiltLink>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* Stat tiles */}
+      <section className="rule-b">
+        <div className="shell grid grid-cols-1 gap-3 py-8 min-[440px]:grid-cols-2 lg:grid-cols-4">
+          {STATS(stats.members, stats.online).map((s) => (
+            <div key={s.top} className="stat-tile">
+              <span className="stat-tile__icon">
+                <Icon d={s.icon} className="h-7 w-7" />
+              </span>
+              <span className="min-w-0">
+                <span className="block break-words font-extrabold uppercase tracking-wide text-ink">{s.top}</span>
+                <span className="mono block text-[0.6875rem] uppercase tracking-[0.12em] text-ink3">{s.sub}</span>
+              </span>
+            </div>
+          ))}
+        </div>
+      </section>
+    </>
+  );
+}
