@@ -22,7 +22,9 @@ export default function robots(): MetadataRoute.Robots {
         userAgent: '*',
         allow: '/',
         // Gated and non-content surfaces only. Never disallow anything that should compound.
-        disallow: ['/investors/data-room/', '/api/', '/search/', '/og/'],
+        // /og/ (share cards) stays crawlable: X, LinkedIn and others obey robots.txt when they
+        // fetch the preview image, so blocking it strips the image from every shared link.
+        disallow: ['/investors/data-room/', '/api/', '/search/'],
       },
     ],
     sitemap: [abs('/sitemap.xml'), ...segments.map((s) => abs(`/sitemap/${s}.xml`))],

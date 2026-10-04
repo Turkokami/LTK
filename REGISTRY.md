@@ -13,7 +13,7 @@ Status: `BLOCKED` · `IN PROGRESS` · `RESOLVED`
 
 | ID | Item | Status | Owner | Notes |
 |---|---|---|---|---|
-| **R-01** | **Parent brand legal name** | OPEN | Kristofer | Owner chose **LTK Community Hub / Licensed to Kill** on 2026-09-24, matching the Discord community and badge logo. Still needs USPTO clearance in classes 35/41/42 plus state and common-law search by a trademark attorney — the audit flagged collisions with an operating NM pest company, LikeToKnow.it ("LTK") and the Bond franchise. `BRAND_STATUS` stays PROVISIONAL until cleared. |
+| **R-01** | **Parent brand legal name** | RESOLVED 2026-10-04 | Kristofer | **LTK Community Hub / Licensed to Kill** (chosen 2026-09-24). Kristofer confirmed on 2026-10-04 that the brand is cleared; production `NEXT_PUBLIC_BRAND_STATUS=CLEARED` and indexing opened the same day. The earlier audit had flagged possible collisions (an operating NM pest company, LikeToKnow.it "LTK", the Bond franchise). |
 | **R-02** | Registered entity + jurisdiction | BLOCKED | Kristofer | Determines `Organization.legalName`, footer, terms. Consider whether this sits under LOKES ONE or a separate entity — the audit's valuation guidance was to keep the media asset's books clean and separate. |
 | **R-03** | Apex domain | BLOCKED | Kristofer | Everything canonical depends on this. `site.config.ts` currently uses a placeholder that will fail the build. |
 | **R-04** | Logo + brand mark (SVG, 1200×1200 raster) | BLOCKED | Kristofer | Feeds `#logo` ImageObject node and OG generation. |
