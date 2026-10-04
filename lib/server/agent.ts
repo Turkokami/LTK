@@ -118,14 +118,25 @@ export function price(body: Partial<AwardOpts>): AwardOpts | null {
       };
     }
     case 'speed-round':
-    case 'photo-id-sprint': {
+    case 'photo-id-sprint':
+    case 'inspection-hunt':
+    case 'lookalike': {
       const score = int(e.score, 0, 60000);
       if (score === null) return null;
+      const total = e.total === undefined ? undefined : int(e.total, 0, 200) ?? undefined;
+      const correct = total === undefined ? undefined : int(e.correct, 0, total) ?? undefined;
+      const GAME = {
+        'speed-round': { label: 'Speed Round', best: 'bestSpeed' },
+        'photo-id-sprint': { label: 'Photo ID Sprint', best: 'bestSprint' },
+        'inspection-hunt': { label: 'Inspection Hunt', best: 'bestHunt' },
+        lookalike: { label: 'Lookalike Showdown', best: 'bestLookalike' },
+      } as const;
+      const g = GAME[e.kind];
       return {
         xp: Math.min(XP.gameCap, score / XP.gameScoreDivisor),
-        label: e.kind === 'speed-round' ? 'Speed Round' : 'Photo ID Sprint',
-        max: { [e.kind === 'speed-round' ? 'bestSpeed' : 'bestSprint']: score },
-        event: { kind: e.kind, score },
+        label: g.label,
+        max: { [g.best]: score },
+        event: { kind: e.kind, score, correct, total },
       };
     }
     default:
@@ -138,8 +149,9 @@ export async function serverAward(id: string, opts: AwardOpts): Promise<AgentSta
   const cur = await getState(id);
   if (opts.once && cur.once[opts.once]) return cur;
   const xp = await allowance(id, day, Math.round(opts.xp));
-  const { next, amount } = applyAward(cur, { ...opts, xp });
-  await commit(id, cur, next, amount, day);
+  const { next } = applyAward(cur, { ...opts, xp });
+  // Paid = base award + any weekly mission it completed.
+  await commit(id, cur, next, next.xp - cur.xp, day);
   return next;
 }
 
@@ -149,10 +161,11 @@ export async function serverDaily(id: string, picks: { photo?: unknown; q?: unkn
   const cur = await getState(id);
   if (cur.daily[drop.day]) return cur;
   const answers = [picks.photo === drop.photo.group, picks.q === drop.question.correctOptionId];
-  const { next, amount } = applyDaily(cur, { day: drop.day, yesterday: drop.yesterday, answers, localHour: int(localHour, 0, 23) ?? 12 });
-  // The Daily Drop always pays in full (it's at most 225), but counts toward the cap.
-  await allowance(id, drop.day, amount);
-  await commit(id, cur, next, amount, drop.day);
+  const { next } = applyDaily(cur, { day: drop.day, yesterday: drop.yesterday, answers, localHour: int(localHour, 0, 23) ?? 12 });
+  const paid = next.xp - cur.xp;
+  // The Daily Drop always pays in full (at most 225 plus a mission bonus), but counts toward the cap.
+  await allowance(id, drop.day, paid);
+  await commit(id, cur, next, paid, drop.day);
   await redis([['ZADD', `agents:daily:${drop.day}`, answers.filter(Boolean).length * 1000 + Math.min(next.streak.count, 999), id], ['EXPIRE', `agents:daily:${drop.day}`, 60 * 60 * 24 * 40]]);
   return next;
 }
@@ -170,6 +183,8 @@ export async function importState(id: string, raw: unknown): Promise<AgentState>
     once: { ...local.once, ...cur.once },
     daily: { ...local.daily, ...cur.daily },
     streak: cur.streak.last ? cur.streak : { last: local.streak.last, count: Math.min(local.streak.count, 400) },
+    // Mission progress isn't imported: the server's week is the record.
+    week: cur.week,
   };
   await commit(id, cur, next, Math.max(0, next.xp - cur.xp), dailyDrop().day);
   await saveProfile(id, { imported: true });

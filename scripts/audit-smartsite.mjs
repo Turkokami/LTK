@@ -54,6 +54,8 @@ const ROUTES = [
   '/community/events/',
   '/arena/leaderboards/',
   '/arena/daily/',
+  '/arena/games/inspection-hunt/',
+  '/arena/games/lookalike-showdown/',
   '/arena/agent/',
   '/join/',
   '/trade/start/texas/',

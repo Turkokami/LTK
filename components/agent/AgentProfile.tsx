@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { Missions } from './Missions';
 import { ACHIEVEMENTS, RANKS, rankFor } from '@/lib/agent/config';
 import { resetAgent } from '@/lib/agent/store';
 import { useAgent, useAgentSession } from './useAgent';
@@ -56,6 +57,10 @@ export function AgentProfile({ discordInvite }: { discordInvite: string }) {
         </div>
       </section>
 
+      <div className="mb-10">
+        <Missions />
+      </div>
+
       <h2 className="h2 mb-4">Achievements</h2>
       <ul className="mb-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {ACHIEVEMENTS.map((x) => {
@@ -88,6 +93,8 @@ export function AgentProfile({ discordInvite }: { discordInvite: string }) {
           ['Episodes played', s.videos],
           ['Best Photo Sprint', s.bestSprint],
           ['Best Speed Round', s.bestSpeed],
+          ['Best Inspection Hunt', s.bestHunt],
+          ['Best Lookalike Showdown', s.bestLookalike],
         ].map(([k, v]) => (
           <div key={k as string} className="rounded-md border border-rule p-3">
             <dt className="mono text-ink3">{k}</dt>

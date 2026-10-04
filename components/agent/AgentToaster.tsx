@@ -41,12 +41,18 @@ export function AgentToaster() {
             t.type === 'xp' && 'border-ruleStrong',
             t.type === 'rank' && 'border-field',
             t.type === 'achievement' && 'border-blood',
+            t.type === 'mission' && 'border-warning',
           )}
         >
           {t.type === 'xp' ? (
             <p className="text-sm text-ink2">
               <span className="font-bold text-field">+{t.amount} XP</span> &middot; {t.label}
             </p>
+          ) : t.type === 'mission' ? (
+            <>
+              <p className="eyebrow mb-0.5">Mission complete &middot; +{t.amount} XP</p>
+              <p className="font-bold text-ink">{t.name}</p>
+            </>
           ) : t.type === 'rank' ? (
             <>
               <p className="eyebrow mb-0.5">Rank up</p>

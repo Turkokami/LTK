@@ -18,6 +18,8 @@ export const dynamic = 'force-dynamic';
 const GAMES: Record<string, { max: number }> = {
   'speed-round': { max: 60000 },
   'photo-id-sprint': { max: 60000 },
+  'inspection-hunt': { max: 60000 },
+  lookalike: { max: 60000 },
 };
 const NAME_RE = /^[A-Za-z0-9][A-Za-z0-9 _.\-]{1,19}$/;
 const BLOCK = ['fuck', 'shit', 'nigg', 'fag', 'cunt', 'bitch', 'retard', 'nazi', 'whore', 'slut'];

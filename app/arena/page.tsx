@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { Missions } from '@/components/agent/Missions';
 import { pageMeta } from '@/lib/seo/metadata';
 import { buildGraph } from '@/lib/schema/graph';
 import { JsonLd } from '@/components/JsonLd';
@@ -62,6 +63,10 @@ export default function Page() {
           </a>
         </div>
 
+        <div className="mb-12">
+          <Missions />
+        </div>
+
         {/* Featured: the first playable game. */}
         <a href="/arena/games/speed-round/" className="discord-band group mb-12 block">
           <div className="grid items-center gap-6 p-6 sm:p-8 md:grid-cols-[1fr_auto]">
@@ -85,6 +90,25 @@ export default function Page() {
           </span>
           <span className="btn btn--ghost btn--lg">Play</span>
         </a>
+
+        <div className="mb-12 grid gap-4 md:grid-cols-2">
+          <a href="/arena/games/inspection-hunt/" className="card group flex flex-col justify-between gap-3 p-6">
+            <span>
+              <span className="eyebrow mb-1 block">Game 3 &middot; New</span>
+              <span className="h2 block group-hover:text-blood">Inspection Hunt</span>
+              <span className="mt-1 block text-ink2">Six pest problems hidden on a house. Find them in 75 seconds.</span>
+            </span>
+            <span className="btn btn--ghost self-start">Inspect</span>
+          </a>
+          <a href="/arena/games/lookalike-showdown/" className="card group flex flex-col justify-between gap-3 p-6">
+            <span>
+              <span className="eyebrow mb-1 block">Game 4 &middot; New</span>
+              <span className="h2 block group-hover:text-blood">Lookalike Showdown</span>
+              <span className="mt-1 block text-ink2">Termite swarmer or flying ant? One clue, two lookalikes, ten seconds.</span>
+            </span>
+            <span className="btn btn--ghost self-start">Play</span>
+          </a>
+        </div>
 
         <HubSpokes hub={HUB} />
       </div>

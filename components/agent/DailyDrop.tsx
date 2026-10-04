@@ -6,6 +6,7 @@ import { recordDaily } from '@/lib/agent/store';
 import type { DailyDrop as Drop } from '@/lib/agent/daily';
 import { useAgent } from './useAgent';
 import { AgentBoards } from './AgentBoards';
+import { Missions } from './Missions';
 import { cx } from '@/lib/utils';
 
 /**
@@ -125,6 +126,9 @@ export function DailyDrop({ drop, discordInvite, siteUrl }: { drop: Drop; discor
             <a href="/arena/agent/" className="btn btn--ghost">
               Your Agent file
             </a>
+          </div>
+          <div className="mt-8">
+            <Missions />
           </div>
           <div className="mt-8">
             <AgentBoards only="today" title={`Today's board · Drop #${drop.number}`} next="/arena/daily/" />

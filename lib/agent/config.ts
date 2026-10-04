@@ -61,7 +61,9 @@ export type StatKey =
   | 'votes'
   | 'videos'
   | 'bestSprint'
-  | 'bestSpeed';
+  | 'bestSpeed'
+  | 'bestHunt'
+  | 'bestLookalike';
 
 export interface Achievement {
   id: string;
@@ -73,7 +75,7 @@ export interface Achievement {
 
 /** What just happened, for achievements that look at a single result. */
 export interface AgentEvent {
-  kind: 'daily' | 'exam' | 'speed-round' | 'photo-id-sprint' | 'field' | 'state' | 'glossary' | 'deck' | 'vote' | 'video';
+  kind: 'daily' | 'exam' | 'speed-round' | 'photo-id-sprint' | 'inspection-hunt' | 'lookalike' | 'field' | 'state' | 'glossary' | 'deck' | 'vote' | 'video';
   score?: number;
   total?: number;
   correct?: number;

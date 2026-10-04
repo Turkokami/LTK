@@ -102,7 +102,7 @@ export default async function sitemap({
     // Hubs whose spokes have not shipped yet. Index only — do not pad a sitemap with
     // routes that 404. Add spokes here as each phase lands.
     case 'arena':
-      return [entry('/arena/', 0.8), entry('/arena/daily/', 0.8), entry('/arena/agent/', 0.5), entry('/arena/games/speed-round/', 0.8), entry('/arena/games/photo-id-sprint/', 0.8), entry('/arena/field-challenges/', 0.7), entry('/arena/leaderboards/', 0.6)];
+      return [entry('/arena/', 0.8), entry('/arena/daily/', 0.8), entry('/arena/agent/', 0.5), entry('/arena/games/speed-round/', 0.8), entry('/arena/games/photo-id-sprint/', 0.8), entry('/arena/games/inspection-hunt/', 0.8), entry('/arena/games/lookalike-showdown/', 0.8), entry('/arena/field-challenges/', 0.7), entry('/arena/leaderboards/', 0.6)];
 
     case 'trade':
       return [entry('/trade/', 0.8), entry('/trade/jobs/', 0.7), entry('/trade/pay-and-pricing/', 0.7), entry('/trade/start/', 0.7), entry('/trade/owners/', 0.7), ...OWNER_TOPICS.map((o) => entry(`/trade/owners/${o.slug}/`, 0.6)), ...['texas', 'washington', 'florida', 'california', 'south-carolina'].map((s) => entry(`/trade/start/${s}/`, 0.6))];

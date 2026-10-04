@@ -1,4 +1,5 @@
 import { ACHIEVEMENTS, XP, rankFor, type AgentEvent, type StatKey } from './config';
+import { missionKeys, missionsFor, weekKey } from './missions';
 
 /**
  * The Agent rules as pure functions, shared by the browser (signed-out play and optimistic
@@ -18,12 +19,15 @@ export interface AgentState {
   once: Record<string, 1>;
   daily: Record<string, DailyRecord>;
   streak: { last: string | null; count: number };
+  /** This mission week (Monday, US Central): event counters and missions already paid. */
+  week: { key: string; counts: Record<string, number>; done: Record<string, number> };
 }
 
 export type AgentNotice =
   | { type: 'xp'; amount: number; label: string }
   | { type: 'rank'; name: string }
-  | { type: 'achievement'; id: string; name: string };
+  | { type: 'achievement'; id: string; name: string }
+  | { type: 'mission'; name: string; amount: number };
 
 export interface AwardOpts {
   xp: number;
@@ -37,11 +41,12 @@ export interface AwardOpts {
 
 export const EMPTY_AGENT: AgentState = {
   xp: 0,
-  stats: { dailyDone: 0, dailyBestStreak: 0, examsDone: 0, fieldGuides: 0, states: 0, glossaryKnown: 0, decks: 0, votes: 0, videos: 0, bestSprint: 0, bestSpeed: 0 },
+  stats: { dailyDone: 0, dailyBestStreak: 0, examsDone: 0, fieldGuides: 0, states: 0, glossaryKnown: 0, decks: 0, votes: 0, videos: 0, bestSprint: 0, bestSpeed: 0, bestHunt: 0, bestLookalike: 0 },
   achievements: {},
   once: {},
   daily: {},
   streak: { last: null, count: 0 },
+  week: { key: '', counts: {}, done: {} },
 };
 
 /** Fill in anything missing from a stored or uploaded state. */
@@ -56,6 +61,7 @@ export function normalize(raw: unknown): AgentState {
     once: { ...(p.once ?? {}) },
     daily: { ...(p.daily ?? {}) },
     streak: { ...EMPTY_AGENT.streak, ...(p.streak ?? {}) },
+    week: { key: p.week?.key ?? '', counts: { ...(p.week?.counts ?? {}) }, done: { ...(p.week?.done ?? {}) } },
   };
 }
 
@@ -78,6 +84,19 @@ export function applyAward(cur: AgentState, opts: AwardOpts, now = Date.now()): 
 
   const notices: AgentNotice[] = [];
   if (amount > 0) notices.push({ type: 'xp', amount, label: opts.label });
+
+  // Weekly missions: count the event, pay any mission it completes (once per week).
+  const wk = weekKey(new Date(now));
+  const week = cur.week.key === wk ? { key: wk, counts: { ...cur.week.counts }, done: { ...cur.week.done } } : { key: wk, counts: {}, done: {} };
+  for (const k of missionKeys(opts.event)) week.counts[k] = (week.counts[k] ?? 0) + 1;
+  for (const m of missionsFor(wk)) {
+    if (!week.done[m.id] && (week.counts[m.key] ?? 0) >= m.target) {
+      week.done[m.id] = now;
+      next.xp += m.xp;
+      notices.push({ type: 'mission', name: m.title, amount: m.xp });
+    }
+  }
+  next.week = week;
   const after = rankFor(next.xp);
   if (after.index > before) notices.push({ type: 'rank', name: after.rank.name });
   for (const a of ACHIEVEMENTS) {
@@ -104,7 +123,7 @@ export function applyDaily(
   const withDay: AgentState = { ...cur, daily: { ...cur.daily, [d.day]: { answers: d.answers, doneAt: now } }, streak: { last: d.day, count } };
   return applyAward(
     withDay,
-    { xp: dailyXp(d.answers, count), label: 'Daily Drop', stats: { dailyDone: 1 }, max: { dailyBestStreak: count }, event: { kind: 'daily', localHour: d.localHour } },
+    { xp: dailyXp(d.answers, count), label: 'Daily Drop', stats: { dailyDone: 1 }, max: { dailyBestStreak: count }, event: { kind: 'daily', localHour: d.localHour, correct: d.answers.filter(Boolean).length, total: d.answers.length } },
     now,
   );
 }

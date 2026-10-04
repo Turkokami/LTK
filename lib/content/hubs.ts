@@ -120,6 +120,8 @@ export const HUBS: Hub[] = [
       { pattern: '/arena/agent/', label: 'Your Agent file: ranks and achievements', count: 1, live: true },
       { pattern: '/arena/games/speed-round/', label: 'ACE Speed Round', count: 1, live: true },
       { pattern: '/arena/games/photo-id-sprint/', label: 'Photo ID Sprint', count: 1, live: true },
+      { pattern: '/arena/games/inspection-hunt/', label: 'Inspection Hunt', count: 1, live: true },
+      { pattern: '/arena/games/lookalike-showdown/', label: 'Lookalike Showdown', count: 1, live: true },
       { pattern: '/arena/field-challenges/', label: 'Field challenges', count: 1, live: true },
       { pattern: '/arena/games/:slug/', label: 'More games', count: 10 },
       { pattern: '/arena/tournaments/:slug/', label: 'Tournaments and the championship', count: 16, index: '/arena/tournaments/' },
