@@ -69,7 +69,7 @@ export default async function HomePage() {
       {/* The daily habit: two minutes, one streak. */}
       <section className="rule-b">
         <div className="shell py-6">
-          <a href="/arena/daily/" className="group flex flex-wrap items-center justify-between gap-4 rounded-[var(--radius)] border border-field/40 bg-fieldTint/40 px-5 py-4 transition-shadow hover:border-field hover:shadow-[var(--glow-green)]">
+          <a href="/arena/daily/" className="group flex flex-wrap items-center justify-between gap-4 rounded-[var(--radius)] border border-[rgba(255,42,61,0.55)] bg-[rgba(225,29,46,0.07)] px-5 py-4 transition-shadow hover:border-[#ff2a3d] hover:shadow-[var(--glow-hot)]">
             <span>
               <span className="eyebrow mb-1 block">Daily Drop &middot; new every day</span>
               <span className="block font-semibold text-ink group-hover:text-blood">

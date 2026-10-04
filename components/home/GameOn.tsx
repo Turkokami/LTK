@@ -57,7 +57,7 @@ export function GameOn() {
             <ul className="mb-8 space-y-4">
               {WHY.map((w) => (
                 <li key={w.title} className="flex gap-4">
-                  <span aria-hidden="true" className="mt-1.5 h-3 w-3 flex-none rotate-45 border-2 border-field shadow-[0_0_10px_rgba(57,255,136,0.6)]" />
+                  <span aria-hidden="true" className="mt-1.5 h-3 w-3 flex-none rotate-45 border-2 border-[#ff2a3d] shadow-[0_0_10px_rgba(225,29,46,0.7)]" />
                   <span>
                     <span className="block font-bold text-ink">{w.title}</span>
                     <span className="block text-ink2">{w.body}</span>
@@ -77,7 +77,7 @@ export function GameOn() {
 
           <div>
             {running ? (
-              <a href={`/arena/tournaments/${running.id}/`} className="mb-4 flex items-center gap-3 rounded-[var(--radius)] border border-field/50 bg-fieldTint/50 px-4 py-3 hover:shadow-[var(--glow-green)]">
+              <a href={`/arena/tournaments/${running.id}/`} className="mb-4 flex items-center gap-3 rounded-[var(--radius)] border border-[rgba(255,42,61,0.5)] bg-[rgba(225,29,46,0.07)] px-4 py-3 hover:shadow-[var(--glow-hot)]">
                 <span className="live-dot" aria-hidden="true" />
                 <span className="text-sm">
                   <span className="font-bold text-ink">Running now: {running.name}</span>
@@ -87,7 +87,7 @@ export function GameOn() {
             ) : null}
             <div className="grid grid-cols-[1.6fr_1fr] items-start gap-3">
               {posters.map(({ e, img }) => (
-                <TiltLink key={e.id} href={`/arena/tournaments/${e.id}/`} className="block overflow-hidden rounded-md border border-[rgba(225,29,46,0.55)] hover:border-field hover:shadow-[var(--glow-green)]">
+                <TiltLink key={e.id} href={`/arena/tournaments/${e.id}/`} className="block overflow-hidden rounded-md border border-[rgba(225,29,46,0.55)] hover:border-[#ff2a3d] hover:shadow-[var(--glow-hot)]">
                   <OptImg src={img.src} alt={img.alt} width={img.width} height={img.height} sizes="(max-width: 1023px) 60vw, 400px" widths={[384, 640, 828]} className="w-full" />
                 </TiltLink>
               ))}
@@ -110,7 +110,7 @@ export function GameOn() {
             {ARENA.map((g) => (
               <li key={g.name}>
                 <TiltLink href={g.href} className="card block h-full p-5">
-                  <span className="mono block text-[0.6875rem] uppercase tracking-[0.14em] text-field">Play &rsaquo;</span>
+                  <span className="mono block text-[0.6875rem] uppercase tracking-[0.14em] text-blood">Play &rsaquo;</span>
                   <span className="mt-1 block text-lg font-extrabold text-ink">{g.name}</span>
                   <span className="mt-1 block text-sm text-ink2">{g.skill}</span>
                 </TiltLink>

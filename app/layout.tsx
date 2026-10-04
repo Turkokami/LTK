@@ -16,10 +16,11 @@ import { DiscordBand } from '@/components/community/Discord';
  *                 it in globals.css) so every existing class picks it up.
  *   Newsreader  — long-form reference only.
  */
+// Variable font: one file covers every weight (400-900), instead of six separate downloads
+// competing with the hero headline (the page's LCP element).
 const archivo = Rubik({
   subsets: ['latin'],
   variable: '--font-archivo',
-  weight: ['400', '500', '600', '700', '800', '900'],
   display: 'swap',
 });
 const newsreader = Newsreader({

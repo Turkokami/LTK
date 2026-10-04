@@ -5,6 +5,8 @@ import { LTK_EPISODES } from '@/lib/content/podcast';
 import { EVENTS } from '@/lib/content/events-feed';
 import { TiltLink } from '@/components/ui/Tilt';
 import { OptImg } from '@/components/ui/OptImg';
+import { SponsorRotator } from '@/components/community/SponsorRotator';
+import { SPONSORS } from '@/lib/content/sponsors';
 import type { DiscordStats } from '@/lib/server/discord-stats';
 
 /**
@@ -66,6 +68,9 @@ export function HeroHud({ stats }: { stats: DiscordStats }) {
         </div>
       </div>
 
+      {/* Rotating sponsor strip, right under the live bar. */}
+      <SponsorRotator sponsors={SPONSORS} />
+
       {/* Hero */}
       <section className="hero-hud hud-grid">
         {tech ? (
@@ -120,7 +125,7 @@ export function HeroHud({ stats }: { stats: DiscordStats }) {
             <div>
               <p className="eyebrow mb-2">Pick your field</p>
               <h2 id="pick-field" className="h2">
-                What do you want to <span className="text-neon">get good at?</span>
+                What do you want to <span className="text-hot">get good at?</span>
               </h2>
             </div>
             <a href="/fields/" className="link text-sm">
