@@ -8,6 +8,7 @@ import { HubSpokes } from '@/components/site/HubSpokes';
 import { UpdateCard } from '@/components/wire/UpdateCard';
 import { ALL_UPDATES } from '@/lib/content/wire';
 import { STATES } from '@/lib/content/states';
+import { NEWS_ARTICLES } from '@/lib/content/news';
 
 const HUB = getHub('wire');
 
@@ -36,6 +37,25 @@ export default function Page() {
         <p className="eyebrow mb-3">{HUB.eyebrow}</p>
         <h1 className="display mb-5 max-w-[18ch]">{HUB.title}</h1>
         <p className="lede mb-10">{HUB.blurb}</p>
+
+        <section className="mb-14" aria-labelledby="news">
+          <h2 id="news" className="h2 mb-5">
+            Industry news
+          </h2>
+          <ul className="grid gap-4 md:grid-cols-2">
+            {NEWS_ARTICLES.map((a) => (
+              <li key={a.slug}>
+                <a href={`/wire/${a.slug}/`} className="card group block h-full p-5">
+                  <p className="mono mb-1 text-ink3">
+                    {new Date(`${a.date}T12:00:00Z`).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' })}
+                  </p>
+                  <p className="h3 group-hover:text-blood">{a.title}</p>
+                  <p className="mt-1 text-sm text-ink2">{a.dek}</p>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
 
         {ALL_UPDATES.length ? (
           <section className="mb-14" aria-labelledby="latest">

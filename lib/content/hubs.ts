@@ -101,7 +101,7 @@ export const HUBS: Hub[] = [
       { pattern: '/lab/crew-picks/', label: 'Crew picks: gear members run', count: 1, live: true },
       { pattern: '/lab/technology/:slug/', label: 'Technology explainers', count: 25, index: '/lab/technology/' },
       { pattern: '/lab/reviews/:product/', label: 'Product reviews', count: 60 },
-      { pattern: '/lab/software/:slug/', label: 'Software reviews', count: 18 },
+      { pattern: '/lab/software/:slug/', label: 'Software guides', count: 8, live: true, index: '/lab/software/' },
       { pattern: '/lab/compare/:slug/', label: 'Head-to-head comparisons', count: 24 },
       { pattern: '/lab/field-trials/:slug/', label: 'Field trials', count: 8 },
     ],
@@ -156,7 +156,7 @@ export const HUBS: Hub[] = [
     job: 'News velocity. The fastest route to habitual return visits.',
     primaryEntity: 'NewsArticle',
     spokes: [
-      { pattern: '/wire/:slug/', label: 'News articles', count: 'open' },
+      { pattern: '/wire/:slug/', label: 'Industry news', count: 'open', live: true, index: '/wire/' },
       { pattern: '/wire/regulatory/:state/', label: 'State regulatory', count: 50, index: '/wire/regulatory/' },
     ],
   },

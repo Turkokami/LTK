@@ -9,6 +9,8 @@ import { TECHNOLOGY } from '@/lib/content/lab';
 import { OWNER_TOPICS } from '@/lib/content/owner-topics';
 import { PEOPLE } from '@/lib/content/people';
 import { PEST_GROUPS, PEST_ID_PATH } from '@/lib/content/pest-library';
+import { NEWS_ARTICLES } from '@/lib/content/news';
+import { SOFTWARE_GUIDES } from '@/lib/content/software';
 
 /**
  * Segmented sitemaps — one per hub, plus a `core` segment.
@@ -108,12 +110,19 @@ export default async function sitemap({
       return [entry('/trade/', 0.8), entry('/trade/jobs/', 0.7), entry('/trade/pay-and-pricing/', 0.7), entry('/trade/start/', 0.7), entry('/trade/owners/', 0.7), ...OWNER_TOPICS.map((o) => entry(`/trade/owners/${o.slug}/`, 0.6)), ...['texas', 'washington', 'florida', 'california', 'south-carolina'].map((s) => entry(`/trade/start/${s}/`, 0.6))];
 
     case 'wire':
-      return [entry('/wire/', 0.8), entry('/wire/regulatory/', 0.7)];
+      return [
+        entry('/wire/', 0.8),
+        entry('/wire/regulatory/', 0.7),
+        ...PUBLISHED_STATES.map((s) => entry(`/wire/regulatory/${s.slug}/`, 0.5)),
+        ...NEWS_ARTICLES.map((a) => entry(`/wire/${a.slug}/`, 0.6)),
+      ];
 
     case 'lab':
       return [
         entry('/lab/', 0.8),
         entry('/lab/technology/', 0.7),
+        entry('/lab/software/', 0.7),
+        ...SOFTWARE_GUIDES.map((g) => entry(`/lab/software/${g.slug}/`, 0.6)),
         entry('/lab/crew-picks/', 0.8),
         ...TECHNOLOGY.map((t) => entry(`/lab/technology/${t.slug}/`, 0.7)),
       ];
