@@ -78,7 +78,7 @@ export function HeroHud({ stats }: { stats: DiscordStats }) {
             <OptImg src={tech.src} width={tech.width} height={tech.height} priority quality={62} sizes="(max-width: 899px) 100vw, 62rem" widths={[640, 828, 1080, 1200, 1920]} style={{ objectPosition: tech.position }} />
           </div>
         ) : null}
-        <div className="shell relative py-14 lg:py-24">
+        <div className="shell relative pb-14 pt-6 min-[900px]:pt-14 lg:py-24">
           <div className="max-w-[40rem]">
             <p className="eyebrow mb-5">Pest pros helping pest pros</p>
             <h1 className="hero-hud__title">

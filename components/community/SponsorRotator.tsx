@@ -53,7 +53,7 @@ export function SponsorRotator({ sponsors }: { sponsors: Sponsor[] }) {
       <div className="shell flex items-center gap-4 py-2.5 sm:gap-6">
         <p className="sponsor-rotator__label">
           <span className="live-dot" aria-hidden="true" />
-          Sponsored by
+          <span className="max-[359px]:sr-only">Sponsored by</span>
         </p>
 
         <div className="relative min-w-0 flex-1">
@@ -66,7 +66,9 @@ export function SponsorRotator({ sponsors }: { sponsors: Sponsor[] }) {
             <span className={cx('sponsor-rotator__plate', s.plate === 'dark' && 'sponsor-rotator__plate--dark')}>
               <img src={s.logo.src} alt="" width={s.logo.width} height={s.logo.height} />
             </span>
-            <span className="min-w-0">
+            {/* Phones: the logo carries the name; the text name shows from sm up. Screen readers get
+                the name from the Visit link below. */}
+            <span className="hidden min-w-0 sm:block">
               <span className="block truncate font-bold text-ink">{s.name}</span>
               <span className="hidden truncate text-xs text-ink3 md:block">{s.what}</span>
             </span>

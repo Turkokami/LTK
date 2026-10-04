@@ -45,7 +45,7 @@ export function SiteHeader() {
             height={44}
             className="shrink-0 rounded-full ring-1 ring-ruleStrong"
           />
-          <span className="min-w-0 leading-none">
+          <span className="min-w-0 leading-none max-[379px]:hidden">
             <span className="block whitespace-nowrap font-sans text-[0.9375rem] font-extrabold uppercase leading-tight tracking-tight sm:text-lg">
               {/* Short name on phones and once the full desktop nav needs the room. */}
               <span className="sm:hidden xl:inline">{site.shortName}</span>
