@@ -54,6 +54,7 @@ const ROUTES = [
   '/community/events/',
   '/arena/leaderboards/',
   '/arena/daily/',
+  '/about/privacy/',
   '/partners/inventory/',
   '/partners/media-kit/',
   '/partners/swarm/',

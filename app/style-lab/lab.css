@@ -1,0 +1,107 @@
+/* Style lab — three visual directions for the gamer refresh. Scoped under .sl so nothing leaks
+   into the live site. Every animation stops under prefers-reduced-motion. */
+
+.sl { --r: 14px; }
+.sl section { position: relative; overflow: hidden; }
+.sl .sl-wrap { max-width: 76rem; margin: 0 auto; padding: 4.5rem 1.25rem; position: relative; z-index: 1; }
+.sl .sl-kicker { font: 600 .75rem/1 ui-monospace, monospace; letter-spacing: .2em; text-transform: uppercase; }
+.sl .sl-cards { display: grid; gap: 1.1rem; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); margin-top: 2.5rem; }
+.sl .sl-card { border-radius: var(--r); padding: 1.4rem; transition: transform .18s ease, box-shadow .18s ease; will-change: transform; transform-style: preserve-3d; cursor: pointer; }
+.sl .sl-row { display: grid; gap: 1.5rem; grid-template-columns: 1fr; margin-top: 2.5rem; }
+@media (min-width: 900px) { .sl .sl-row { grid-template-columns: 1.2fr 1fr; } }
+.sl .sl-xp { height: 14px; border-radius: 999px; overflow: hidden; }
+.sl .sl-xp > i { display: block; height: 100%; transition: width .9s cubic-bezier(.2,.9,.2,1); }
+.sl .sl-swatches { display: flex; gap: .5rem; flex-wrap: wrap; margin-top: 1rem; }
+.sl .sl-swatches span { width: 44px; height: 44px; border-radius: 10px; display: inline-block; box-shadow: inset 0 0 0 1px rgba(255,255,255,.15); }
+.sl .sl-btn { display: inline-flex; align-items: center; gap: .5rem; font-weight: 800; text-transform: uppercase; letter-spacing: .06em; padding: .85rem 1.4rem; border-radius: 10px; transition: transform .12s ease, box-shadow .12s ease, filter .12s ease; }
+.sl .sl-btn:active { transform: translateY(2px); }
+.sl .sl-toast { position: absolute; right: 1.25rem; bottom: 1.25rem; z-index: 5; padding: .9rem 1.1rem; border-radius: 12px; animation: sl-pop .5s cubic-bezier(.2,1.4,.4,1) both; max-width: 18rem; }
+@keyframes sl-pop { from { transform: translateY(20px) scale(.9); opacity: 0; } to { transform: none; opacity: 1; } }
+.sl .sl-ticker { white-space: nowrap; overflow: hidden; }
+.sl .sl-ticker > div { display: inline-block; padding-left: 100%; animation: sl-marquee 28s linear infinite; }
+@keyframes sl-marquee { to { transform: translateX(-100%); } }
+
+/* ───────────── 1. Neon Ops ───────────── */
+.sl-neon { background: #06080d; color: #e7f6ff; font-family: 'Rajdhani', system-ui, sans-serif; }
+.sl-neon::before { content: ''; position: absolute; inset: 0; background:
+  linear-gradient(rgba(57,255,136,.07) 1px, transparent 1px) 0 0 / 42px 42px,
+  linear-gradient(90deg, rgba(57,255,136,.07) 1px, transparent 1px) 0 0 / 42px 42px;
+  mask-image: radial-gradient(ellipse at 50% 30%, #000 30%, transparent 75%); }
+.sl-neon::after { content: ''; position: absolute; inset: 0; pointer-events: none; background: repeating-linear-gradient(0deg, rgba(255,255,255,.025) 0 1px, transparent 1px 3px); }
+.sl-neon .sl-kicker { color: #22d3ee; }
+.sl-neon h2 { font-family: 'Orbitron', sans-serif; font-weight: 900; font-size: clamp(2.4rem, 6vw, 4.8rem); line-height: 1; margin: .8rem 0 1rem; letter-spacing: .02em;
+  background: linear-gradient(90deg, #39ff88, #22d3ee 50%, #ff2bd6); -webkit-background-clip: text; background-clip: text; color: transparent; filter: drop-shadow(0 0 18px rgba(57,255,136,.35)); }
+.sl-neon h2:hover { animation: sl-glitch .35s steps(2) 2; }
+@keyframes sl-glitch { 0% { transform: translate(0); } 25% { transform: translate(-3px, 2px) skewX(-6deg); } 50% { transform: translate(3px, -2px); } 75% { transform: translate(-2px, 0) skewX(4deg); } 100% { transform: none; } }
+.sl-neon p.lead { font-size: 1.25rem; color: #a9c3d6; max-width: 38rem; }
+.sl-neon .sl-btn { background: #39ff88; color: #04110a; box-shadow: 0 0 0 1px #39ff88, 0 0 24px rgba(57,255,136,.55); }
+.sl-neon .sl-btn:hover { box-shadow: 0 0 0 1px #39ff88, 0 0 40px rgba(57,255,136,.9); }
+.sl-neon .sl-btn.ghost { background: transparent; color: #ff2bd6; box-shadow: 0 0 0 1px #ff2bd6, 0 0 18px rgba(255,43,214,.35); }
+.sl-neon .sl-card { background: linear-gradient(160deg, rgba(34,211,238,.08), rgba(255,43,214,.06)); border: 1px solid rgba(34,211,238,.35); position: relative; }
+.sl-neon .sl-card::before, .sl-neon .sl-card::after { content: ''; position: absolute; width: 18px; height: 18px; border: 2px solid #39ff88; }
+.sl-neon .sl-card::before { top: -1px; left: -1px; border-right: 0; border-bottom: 0; }
+.sl-neon .sl-card::after { bottom: -1px; right: -1px; border-left: 0; border-top: 0; }
+.sl-neon .sl-card:hover { box-shadow: 0 0 0 1px #22d3ee, 0 0 34px rgba(34,211,238,.45); }
+.sl-neon .sl-card h3 { font-family: 'Orbitron', sans-serif; font-size: 1.15rem; margin: .6rem 0 .3rem; color: #fff; }
+.sl-neon .sl-card .tag { font: 700 .7rem/1 ui-monospace, monospace; color: #ff2bd6; letter-spacing: .15em; }
+.sl-neon .sl-panel { border: 1px solid rgba(57,255,136,.35); border-radius: var(--r); padding: 1.4rem; background: rgba(6,14,10,.6); backdrop-filter: blur(4px); }
+.sl-neon .sl-xp { background: #0f1d16; box-shadow: inset 0 0 0 1px rgba(57,255,136,.4); }
+.sl-neon .sl-xp > i { background: linear-gradient(90deg, #39ff88, #22d3ee); box-shadow: 0 0 16px #39ff88; }
+.sl-neon .sl-toast { background: #0b1220; border: 1px solid #ff2bd6; box-shadow: 0 0 30px rgba(255,43,214,.5); }
+.sl-neon .live-dot { width: 10px; height: 10px; border-radius: 50%; background: #39ff88; box-shadow: 0 0 12px #39ff88; display: inline-block; animation: sl-pulse 1.4s ease-in-out infinite; }
+@keyframes sl-pulse { 50% { opacity: .35; transform: scale(.8); } }
+
+/* ───────────── 2. Arcade Pop ───────────── */
+.sl-arcade { background: #1b0b33; color: #fff7e6; font-family: system-ui, sans-serif; }
+.sl-arcade::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 15% 20%, rgba(255,79,154,.35), transparent 40%), radial-gradient(circle at 85% 70%, rgba(58,134,255,.35), transparent 45%), radial-gradient(circle at 60% 10%, rgba(255,210,63,.22), transparent 35%); }
+.sl-arcade .sl-kicker { font-family: 'Press Start 2P', monospace; font-size: .62rem; color: #ffd23f; letter-spacing: .08em; }
+.sl-arcade h2 { font-family: 'Bungee', sans-serif; font-size: clamp(2.4rem, 6.5vw, 5rem); line-height: .95; margin: 1rem 0; color: #ffd23f; text-shadow: 4px 4px 0 #ff4f9a, 8px 8px 0 #3a86ff; }
+.sl-arcade p.lead { font-size: 1.2rem; color: #e9dcff; max-width: 38rem; }
+.sl-arcade .sl-btn { background: #ffd23f; color: #1b0b33; border: 3px solid #1b0b33; box-shadow: 6px 6px 0 #ff4f9a; border-radius: 14px; }
+.sl-arcade .sl-btn:hover { transform: translate(-2px,-2px); box-shadow: 9px 9px 0 #ff4f9a; }
+.sl-arcade .sl-btn.ghost { background: #3a86ff; color: #fff; box-shadow: 6px 6px 0 #9ef01a; }
+.sl-arcade .sl-card { border: 3px solid #1b0b33; color: #1b0b33; box-shadow: 8px 8px 0 #000; }
+.sl-arcade .sl-card:nth-child(1) { background: #ffd23f; }
+.sl-arcade .sl-card:nth-child(2) { background: #ff4f9a; }
+.sl-arcade .sl-card:nth-child(3) { background: #9ef01a; }
+.sl-arcade .sl-card:nth-child(4) { background: #3a86ff; color: #fff; }
+.sl-arcade .sl-card:hover { transform: translate(-4px,-6px) rotate(-1deg); box-shadow: 12px 14px 0 #000; }
+.sl-arcade .sl-card h3 { font-family: 'Bungee', sans-serif; font-size: 1.3rem; margin: .5rem 0 .3rem; }
+.sl-arcade .sl-card .tag { font-family: 'Press Start 2P', monospace; font-size: .55rem; }
+.sl-arcade .sticker { display: inline-block; font-family: 'Press Start 2P', monospace; font-size: .55rem; background: #fff; color: #1b0b33; padding: .45rem .6rem; border: 2px solid #1b0b33; border-radius: 8px; transform: rotate(-6deg); box-shadow: 3px 3px 0 #000; }
+.sl-arcade .sl-panel { background: #2a1450; border: 3px solid #ffd23f; border-radius: 18px; padding: 1.4rem; box-shadow: 8px 8px 0 #ff4f9a; }
+.sl-arcade .sl-xp { background: #12062a; border: 3px solid #fff7e6; height: 22px; border-radius: 6px; }
+.sl-arcade .sl-xp > i { background: repeating-linear-gradient(90deg, #9ef01a 0 14px, #7ac70f 14px 18px); }
+.sl-arcade .sl-toast { background: #ffd23f; color: #1b0b33; border: 3px solid #1b0b33; box-shadow: 6px 6px 0 #ff4f9a; }
+.sl-arcade .confetti { position: absolute; width: 10px; height: 14px; top: 40%; left: 50%; z-index: 6; animation: sl-confetti 1.1s ease-out forwards; }
+@keyframes sl-confetti { to { transform: translate(var(--dx), var(--dy)) rotate(var(--rot)); opacity: 0; } }
+
+/* ───────────── 3. Tactical HUD ───────────── */
+.sl-hud { background: #0b0d0c; color: #ecebe4; font-family: 'Share Tech Mono', ui-monospace, monospace; }
+.sl-hud::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 75% 35%, rgba(225,29,46,.25), transparent 45%); }
+.sl-hud .hazard { height: 12px; background: repeating-linear-gradient(-45deg, #ffcc00 0 16px, #0b0d0c 16px 32px); }
+.sl-hud .sl-kicker { color: #ffcc00; }
+.sl-hud h2 { font-family: 'Orbitron', sans-serif; font-weight: 900; font-size: clamp(2.3rem, 6vw, 4.6rem); line-height: 1; margin: .8rem 0 1rem; color: #fff; text-transform: uppercase; }
+.sl-hud h2 em { font-style: normal; color: #e11d2e; text-shadow: 0 0 22px rgba(225,29,46,.6); }
+.sl-hud p.lead { font-size: 1.05rem; color: #b9b8ae; max-width: 38rem; }
+.sl-hud .sl-btn { background: #e11d2e; color: #fff; clip-path: polygon(10px 0, 100% 0, calc(100% - 10px) 100%, 0 100%); border-radius: 0; padding-inline: 1.8rem; }
+.sl-hud .sl-btn:hover { filter: brightness(1.15); }
+.sl-hud .sl-btn.ghost { background: #ffcc00; color: #0b0d0c; }
+.sl-hud .sl-card { background: #121513; border: 1px solid #2c312d; border-radius: 4px; position: relative; }
+.sl-hud .sl-card:hover { border-color: #7cfc00; box-shadow: inset 0 0 0 1px #7cfc00, 0 0 24px rgba(124,252,0,.18); }
+.sl-hud .sl-card h3 { font-family: 'Orbitron', sans-serif; font-size: 1.05rem; margin: .5rem 0 .3rem; color: #fff; text-transform: uppercase; }
+.sl-hud .sl-card .tag { color: #7cfc00; font-size: .75rem; }
+.sl-hud .sl-card .stamp { position: absolute; top: .8rem; right: .8rem; border: 2px solid #e11d2e; color: #e11d2e; font-size: .6rem; padding: .1rem .35rem; transform: rotate(8deg); letter-spacing: .1em; }
+.sl-hud .sl-panel { border: 1px solid #2c312d; background: #101311; padding: 1.4rem; border-radius: 4px; }
+.sl-hud .sl-xp { background: #1b1f1c; border-radius: 0; height: 12px; }
+.sl-hud .sl-xp > i { background: repeating-linear-gradient(90deg, #7cfc00 0 8px, transparent 8px 11px); }
+.sl-hud .sl-toast { background: #101311; border: 1px solid #ffcc00; border-left: 6px solid #ffcc00; }
+.sl-hud .scope { position: relative; width: min(340px, 80vw); aspect-ratio: 1; border-radius: 50%; overflow: hidden; border: 3px solid #2c312d; background: #000; }
+.sl-hud .scope img { width: 100%; height: 100%; object-fit: cover; opacity: .9; }
+.sl-hud .scope .ret { position: absolute; inset: 0; pointer-events: none; }
+.sl-hud .radar { position: absolute; inset: 0; background: conic-gradient(from 0deg, rgba(124,252,0,.35), transparent 25%); animation: sl-spin 3.5s linear infinite; mix-blend-mode: screen; }
+@keyframes sl-spin { to { transform: rotate(360deg); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .sl *, .sl *::before, .sl *::after { animation: none !important; transition: none !important; }
+}

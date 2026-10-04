@@ -11,6 +11,7 @@ const TRUST = [
   { href: '/about/sponsorship-policy/', label: 'Sponsorship policy' },
   { href: '/join/', label: 'Who can join' },
   { href: '/about/code-of-conduct/', label: 'Code of conduct' },
+  { href: '/about/privacy/', label: 'Privacy policy' },
 ];
 
 /** Partners and Investors live here, not in primary nav. The three funnels stay separated. */

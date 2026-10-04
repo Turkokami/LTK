@@ -20,7 +20,7 @@ Status: `BLOCKED` · `IN PROGRESS` · `RESOLVED`
 | **R-05** | **Advisory board — 3–5 credentialed entomologists** | BLOCKED | Kristofer | Name, ACE/BCE number, issuing body, institution, headshot, bio, LinkedIn/Scholar `sameAs`, signed participation agreement. **Longest lead time in the entire plan.** Moves E-E-A-T from 1 to 4 on its own. |
 | **R-06** | Editorial lead (named, bylined, accountable) | BLOCKED | Kristofer | Every Academy and Wire page needs a named author and a named reviewer. Anonymous content does not compete in a YMYL-adjacent regulatory vertical. |
 | **R-07** | Contact addresses — join@, partners@, ir@, press@ | BLOCKED | — | Depends on R-03. |
-| **R-08** | Legal text: privacy, terms, community code of conduct, member data policy | BLOCKED | Kristofer | Code of conduct is read first by every sponsor's brand-safety review. Member data policy matters more than usual because of R-10. |
+| **R-08** | Legal text: privacy, terms, community code of conduct, member data policy | PARTLY RESOLVED | Kristofer | Privacy policy approved by Marcus 2026-10-04 and live at /about/privacy/ (still to add: legal entity, R-02, and contact email, R-07). Code of conduct live. Terms of use still open. |
 
 ## Blocking specific phases
 

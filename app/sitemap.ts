@@ -96,6 +96,7 @@ export default async function sitemap({
         entry('/about/review-methodology/', 0.6),
         entry('/about/sponsorship-policy/', 0.6),
         entry('/about/code-of-conduct/', 0.6),
+        entry('/about/privacy/', 0.5),
         entry('/about/press/', 0.5),
         entry('/about/contact/', 0.5),
       ];
