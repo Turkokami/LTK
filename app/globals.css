@@ -697,6 +697,33 @@
       linear-gradient(90deg, rgba(18, 20, 18, 0.55) 0%, rgba(18, 20, 18, 0.2) 60%, rgba(18, 20, 18, 0.5) 100%),
       radial-gradient(40rem 28rem at 70% 40%, rgba(225, 29, 46, 0.38), transparent 70%);
   }
+  /* The owner's banner art is already lit and graded: wider, lighter overlay. */
+  .hero-hud__photo--art {
+    width: min(70%, 62rem);
+  }
+  .hero-hud__photo--art img {
+    filter: saturate(1.05) contrast(1.05) brightness(0.92);
+  }
+  .hero-hud__photo--art::after {
+    background: linear-gradient(90deg, rgba(18, 20, 18, 0.45) 0%, rgba(18, 20, 18, 0) 45%);
+  }
+  /* Phones and tablets: the art becomes a full-width banner above the headline instead of a
+     background behind it, so the text stays crisp. */
+  @media (max-width: 899px) {
+    .hero-hud__photo.hero-hud__photo--art {
+      position: relative;
+      inset: auto;
+      z-index: auto;
+      width: 100%;
+      aspect-ratio: 1993 / 789;
+      opacity: 1;
+      -webkit-mask-image: linear-gradient(0deg, transparent 0%, #000 22%);
+      mask-image: linear-gradient(0deg, transparent 0%, #000 22%);
+    }
+    .hero-hud__photo.hero-hud__photo--art::after {
+      background: none;
+    }
+  }
   .hero-hud__title {
     font-family: var(--font-archivo), sans-serif;
     font-weight: 900;

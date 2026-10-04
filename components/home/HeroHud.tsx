@@ -1,5 +1,4 @@
 import { site } from '@/lib/site.config';
-import { ASSETS } from '@/lib/brand';
 import { DISCIPLINES } from '@/lib/content/disciplines';
 import { fieldPhotos } from '@/lib/content/photos';
 import { LTK_EPISODES } from '@/lib/content/podcast';
@@ -44,8 +43,9 @@ function DiscordGlyph() {
 }
 
 export function HeroHud({ stats }: { stats: DiscordStats }) {
-  // Hero photo: the roof rat in a bait station — on brand with the badge, no people.
-  const tech = fieldPhotos('general-pest')?.work;
+  // Hero art (owner-supplied, 2026-10-04): gamer on one side, pest tech on the other, under the
+  // LTK scope badge — the whole community in one picture.
+  const tech = { src: '/brand/hero-gamer-tech.webp', width: 1993, height: 789, position: 'center 40%' };
   return (
     <>
       {/* Live status strip */}
@@ -67,8 +67,8 @@ export function HeroHud({ stats }: { stats: DiscordStats }) {
       {/* Hero */}
       <section className="hero-hud hud-grid">
         {tech ? (
-          <div className="hero-hud__photo" aria-hidden="true">
-            <img src={tech.src} alt="" width={tech.width} height={tech.height} style={tech.position ? { objectPosition: tech.position } : undefined} />
+          <div className="hero-hud__photo hero-hud__photo--art" aria-hidden="true">
+            <img src={tech.src} alt="" width={tech.width} height={tech.height} fetchPriority="high" style={{ objectPosition: tech.position }} />
           </div>
         ) : null}
         <div className="shell relative py-14 lg:py-24">
@@ -108,9 +108,6 @@ export function HeroHud({ stats }: { stats: DiscordStats }) {
             </div>
           </div>
 
-          {tech ? (
-            <img src={ASSETS.mark} alt="" width={396} height={396} className="hero-hud__patch" aria-hidden="true" />
-          ) : null}
         </div>
       </section>
 
