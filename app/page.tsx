@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { FeaturedIn } from '@/components/community/Timeline';
 import { DropCountdown } from '@/components/agent/DropCountdown';
 import { HeroHud } from '@/components/home/HeroHud';
+import { GameOn } from '@/components/home/GameOn';
 import { discordStats } from '@/lib/server/discord-stats';
 import { pageMeta } from '@/lib/seo/metadata';
 import { buildGraph } from '@/lib/schema/graph';
@@ -60,6 +61,9 @@ export default async function HomePage() {
 
       {/* Hero: red brand, neon highlights (2026-10 refresh). */}
       <HeroHud stats={stats} />
+
+      {/* Why a pest control crew games: tournaments, the league, and games that build skills. */}
+      <GameOn />
 
       {/* The daily habit: two minutes, one streak. */}
       <section className="rule-b">
