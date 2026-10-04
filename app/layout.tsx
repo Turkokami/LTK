@@ -28,6 +28,8 @@ const newsreader = Newsreader({
   variable: '--font-newsreader',
   weight: ['400', '500', '600'],
   display: 'swap',
+  // Long-form pages only: don't preload it on every page and compete with the hero headline.
+  preload: false,
 });
 /**
  * CLAUDE.md 2.6 — `maximum-scale` is banned. It was the original prototype's WCAG 1.4.4 defect

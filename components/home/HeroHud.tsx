@@ -75,7 +75,7 @@ export function HeroHud({ stats }: { stats: DiscordStats }) {
       <section className="hero-hud hud-grid">
         {tech ? (
           <div className="hero-hud__photo hero-hud__photo--art" aria-hidden="true">
-            <OptImg src={tech.src} width={tech.width} height={tech.height} priority sizes="(max-width: 899px) 100vw, 62rem" widths={[640, 828, 1080, 1200, 1920]} style={{ objectPosition: tech.position }} />
+            <OptImg src={tech.src} width={tech.width} height={tech.height} priority quality={62} sizes="(max-width: 899px) 100vw, 62rem" widths={[640, 828, 1080, 1200, 1920]} style={{ objectPosition: tech.position }} />
           </div>
         ) : null}
         <div className="shell relative py-14 lg:py-24">
