@@ -1,4 +1,5 @@
 import { site } from '@/lib/site.config';
+import { badgeSrc } from '@/components/ui/OptImg';
 import { cx } from '@/lib/utils';
 import { ASSETS } from '@/lib/brand';
 
@@ -87,10 +88,11 @@ export function DiscordBand({
     <section className="discord-band" aria-labelledby="discord-band-heading">
       <div className="grid items-center gap-6 p-6 sm:p-8 md:grid-cols-[auto_1fr_auto] md:gap-8">
         <img
-          src={ASSETS.mark}
+          {...badgeSrc(ASSETS.mark, 96)}
           alt=""
           width={96}
           height={96}
+          loading="lazy"
           className="hidden rounded-full md:block"
         />
         <div>

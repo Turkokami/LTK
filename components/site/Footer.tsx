@@ -1,4 +1,5 @@
 import { site } from '@/lib/site.config';
+import { badgeSrc } from '@/components/ui/OptImg';
 import { SponsorStrip } from '@/components/community/Sponsors';
 import { HUBS } from '@/lib/content/hubs';
 import { ASSETS } from '@/lib/brand';
@@ -27,7 +28,7 @@ export function SiteFooter() {
       <div className="shell grid gap-10 py-12 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
         <div>
           <div className="flex items-center gap-3">
-            <img src={ASSETS.mark} alt="" width={56} height={56} className="rounded-full" />
+            <img {...badgeSrc(ASSETS.mark, 56)} alt="" width={56} height={56} loading="lazy" className="rounded-full" />
             <div className="font-sans text-lg font-extrabold uppercase tracking-tight">
               {site.name}
             </div>

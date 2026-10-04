@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { OptImg, badgeSrc } from '@/components/ui/OptImg';
 import { FeaturedIn } from '@/components/community/Timeline';
 import { DropCountdown } from '@/components/agent/DropCountdown';
 import { HeroHud } from '@/components/home/HeroHud';
@@ -112,13 +113,13 @@ export default async function HomePage() {
               <div key={g.id} className="card overflow-hidden">
                 {photo ? (
                   <div className="aspect-[16/8] overflow-hidden border-b border-rule bg-stock2">
-                    <img
+                    <OptImg
                       src={photo.src}
                       alt={photo.alt}
                       width={photo.width}
                       height={photo.height}
-                      loading="lazy"
-                      decoding="async"
+                      sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 400px"
+                      widths={[384, 640, 828]}
                       className="h-full w-full object-cover opacity-90"
                       style={photo.position ? { objectPosition: photo.position } : undefined}
                     />
@@ -176,13 +177,13 @@ export default async function HomePage() {
             {FIELD_GALLERY.map((p) => (
               <li key={p.src}>
                 <figure className="group relative m-0 h-full overflow-hidden rounded-[var(--radius)] border border-rule bg-stock2">
-                  <img
+                  <OptImg
                     src={p.src}
                     alt={p.alt}
                     width={p.width}
                     height={p.height}
-                    loading="lazy"
-                    decoding="async"
+                    sizes="(max-width: 767px) 50vw, 300px"
+                    widths={[256, 384, 640]}
                     className="aspect-[4/5] h-full w-full object-cover transition duration-300 group-hover:scale-[1.03] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
                     style={p.position ? { objectPosition: p.position } : undefined}
                   />
@@ -280,10 +281,11 @@ export default async function HomePage() {
       <section className="rule-b">
         <div className="shell grid items-center gap-10 py-14 lg:grid-cols-[auto_1fr]">
           <img
-            src={ASSETS.mark}
+            {...badgeSrc(ASSETS.mark, 200)}
             alt=""
             width={200}
             height={200}
+            loading="lazy"
             className="mx-auto hidden rounded-full ring-1 ring-ruleStrong lg:block"
           />
           <div>
@@ -324,7 +326,7 @@ export default async function HomePage() {
             const u = ev.updates?.[0];
             return (
               <a key={ev.id} href="/community/events/" className="group mb-10 grid items-center gap-6 md:grid-cols-[3fr_2fr]">
-                {u?.image ? <img src={u.image.src} alt={u.image.alt} width={u.image.width} height={u.image.height} loading="lazy" className="w-full rounded-md ring-1 ring-ruleStrong" /> : null}
+                {u?.image ? <OptImg src={u.image.src} alt={u.image.alt} width={u.image.width} height={u.image.height} sizes="(max-width: 767px) 100vw, 60vw" widths={[640, 828, 1080]} className="w-full rounded-md ring-1 ring-ruleStrong" /> : null}
                 <span>
                   <span className="eyebrow mb-2 block">Running now &middot; {ev.when.split(' · ')[0]}</span>
                   <span className="h2 block group-hover:text-blood">{ev.name}</span>

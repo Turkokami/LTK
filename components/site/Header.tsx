@@ -1,4 +1,5 @@
 import { site } from '@/lib/site.config';
+import { badgeSrc } from '@/components/ui/OptImg';
 import { HeaderAgent } from '@/components/agent/HeaderAgent';
 import { HUBS, PRIMARY_NAV, getHub } from '@/lib/content/hubs';
 import { ASSETS } from '@/lib/brand';
@@ -38,7 +39,7 @@ export function SiteHeader() {
         <a href="/" className="flex min-w-0 items-center gap-3 xl:shrink-0" aria-label={`${site.name} — home`}>
           {/* The badge is decorative here; the wordmark beside it carries the name. */}
           <img
-            src={ASSETS.mark}
+            {...badgeSrc(ASSETS.mark, 44)}
             alt=""
             width={44}
             height={44}

@@ -1,4 +1,5 @@
 import { EVENTS, RUNNING } from '@/lib/content/events-feed';
+import { OptImg } from '@/components/ui/OptImg';
 import { SponsorStrip } from '@/components/community/Sponsors';
 import { TiltLink } from '@/components/ui/Tilt';
 import { site } from '@/lib/site.config';
@@ -87,7 +88,7 @@ export function GameOn() {
             <div className="grid grid-cols-[1.6fr_1fr] items-start gap-3">
               {posters.map(({ e, img }) => (
                 <TiltLink key={e.id} href={`/arena/tournaments/${e.id}/`} className="block overflow-hidden rounded-md border border-[rgba(225,29,46,0.55)] hover:border-field hover:shadow-[var(--glow-green)]">
-                  <img src={img.src} alt={img.alt} width={img.width} height={img.height} loading="lazy" className="w-full" />
+                  <OptImg src={img.src} alt={img.alt} width={img.width} height={img.height} sizes="(max-width: 1023px) 60vw, 400px" widths={[384, 640, 828]} className="w-full" />
                 </TiltLink>
               ))}
             </div>

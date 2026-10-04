@@ -4,6 +4,7 @@ import { fieldPhotos } from '@/lib/content/photos';
 import { LTK_EPISODES } from '@/lib/content/podcast';
 import { EVENTS } from '@/lib/content/events-feed';
 import { TiltLink } from '@/components/ui/Tilt';
+import { OptImg } from '@/components/ui/OptImg';
 import type { DiscordStats } from '@/lib/server/discord-stats';
 
 /**
@@ -69,7 +70,7 @@ export function HeroHud({ stats }: { stats: DiscordStats }) {
       <section className="hero-hud hud-grid">
         {tech ? (
           <div className="hero-hud__photo hero-hud__photo--art" aria-hidden="true">
-            <img src={tech.src} alt="" width={tech.width} height={tech.height} fetchPriority="high" style={{ objectPosition: tech.position }} />
+            <OptImg src={tech.src} width={tech.width} height={tech.height} priority sizes="(max-width: 899px) 100vw, 62rem" widths={[640, 828, 1080, 1200, 1920]} style={{ objectPosition: tech.position }} />
           </div>
         ) : null}
         <div className="shell relative py-14 lg:py-24">
@@ -112,24 +113,46 @@ export function HeroHud({ stats }: { stats: DiscordStats }) {
         </div>
       </section>
 
-      {/* Field tiles */}
-      <section className="rule-b">
-        <div className="shell grid grid-cols-2 gap-3 py-8 sm:grid-cols-3 lg:grid-cols-5">
-          {TILES.map((t) => {
-            const d = DISCIPLINES.find((x) => x.slug === t.slug);
-            const p = fieldPhotos(t.slug)?.hero;
-            if (!d) return null;
-            return (
-              <TiltLink key={t.slug} href={`/fields/${t.slug}/`} className="field-tile">
-                {p ? <img src={p.src} alt="" width={p.width} height={p.height} loading="lazy" style={p.position ? { objectPosition: p.position } : undefined} /> : null}
-                <span className="field-tile__label">
-                  <Icon d={t.icon} className="h-7 w-7 shrink-0 text-blood" />
-                  <span>{t.label}</span>
-                  <span className="field-tile__chev" aria-hidden="true">›</span>
-                </span>
-              </TiltLink>
-            );
-          })}
+      {/* Field cards: neon frame, photo, and a plain explainer of the job. */}
+      <section className="rule-b hud-grid" aria-labelledby="pick-field">
+        <div className="shell py-12">
+          <div className="mb-6 flex flex-wrap items-end justify-between gap-3">
+            <div>
+              <p className="eyebrow mb-2">Pick your field</p>
+              <h2 id="pick-field" className="h2">
+                What do you want to <span className="text-neon">get good at?</span>
+              </h2>
+            </div>
+            <a href="/fields/" className="link text-sm">
+              All {DISCIPLINES.length} fields
+            </a>
+          </div>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+            {TILES.map((t) => {
+              const d = DISCIPLINES.find((x) => x.slug === t.slug);
+              const p = fieldPhotos(t.slug)?.hero;
+              if (!d) return null;
+              return (
+                <TiltLink key={t.slug} href={`/fields/${t.slug}/`} className="field-card">
+                  <span className="field-card__photo">
+                    {p ? (
+                      <OptImg src={p.src} width={p.width} height={p.height} sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, (max-width: 1279px) 33vw, 240px" widths={[384, 640, 828]} style={p.position ? { objectPosition: p.position } : undefined} />
+                    ) : null}
+                    <span className="field-card__name">
+                      <Icon d={t.icon} className="h-6 w-6 shrink-0" />
+                      {t.label}
+                    </span>
+                  </span>
+                  <span className="field-card__body">
+                    <span className="block text-sm leading-relaxed text-ink2">{d.summary}</span>
+                    <span className="field-card__go">
+                      Explore {t.label.toLowerCase()} <span aria-hidden="true">›</span>
+                    </span>
+                  </span>
+                </TiltLink>
+              );
+            })}
+          </div>
         </div>
       </section>
 
