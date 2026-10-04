@@ -4,6 +4,7 @@ import { SponsorStrip } from '@/components/community/Sponsors';
 import { TiltLink } from '@/components/ui/Tilt';
 import { site } from '@/lib/site.config';
 import { PromoVideo } from './PromoVideo';
+import { PodcastClips } from '@/components/community/PodcastClips';
 
 /**
  * Home: why a pest control community games. LTK started as a video game group (site.community
@@ -121,6 +122,38 @@ export function GameOn() {
               </li>
             ))}
           </ul>
+        </div>
+
+        <div className="mt-14">
+          <div className="mb-4 flex flex-wrap items-end justify-between gap-3">
+            <div>
+              <p className="eyebrow mb-1">The LTK Podcast</p>
+              <h3 className="h2">Clips from the show</h3>
+            </div>
+            <a href="/community/podcast/" className="link text-sm">
+              Every episode
+            </a>
+          </div>
+          <PodcastClips />
+        </div>
+
+        <div className="mt-14 grid gap-4 md:grid-cols-3">
+          <a href="/community/gallery/#pestworld-2025" className="card group overflow-hidden md:col-span-2">
+            <OptImg src="/gallery/pestworld-2025-crew.webp" alt="Six LTK members in front of the LTK badge at the LTK house during PestWorld 2025" width={1200} height={900} sizes="(max-width: 767px) 100vw, 66vw" widths={[640, 828, 1080]} className="aspect-[16/8] w-full object-cover" />
+            <span className="block p-4">
+              <span className="eyebrow mb-1 block">LTK in pictures</span>
+              <span className="block text-lg font-extrabold text-ink group-hover:text-blood">The LTK house at PestWorld 2025</span>
+              <span className="block text-sm text-ink2">Meetups, gamer art, memes and the crew on the route.</span>
+            </span>
+          </a>
+          <a href="/community/gallery/#merch" className="card group overflow-hidden">
+            <OptImg src="/gallery/merch-tumbler.webp" alt="A black LTK tumbler with the Licensed to Kill badge" width={972} height={1645} sizes="(max-width: 767px) 100vw, 33vw" widths={[384, 640]} className="aspect-[16/8] w-full object-cover md:aspect-auto md:h-[calc(100%-6.5rem)]" />
+            <span className="block p-4">
+              <span className="eyebrow mb-1 block">Merch</span>
+              <span className="block text-lg font-extrabold text-ink group-hover:text-blood">Rep the crew</span>
+              <span className="block text-sm text-ink2">Tumblers, patches and more.</span>
+            </span>
+          </a>
         </div>
       </div>
     </section>

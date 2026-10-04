@@ -84,6 +84,7 @@ export const HUBS: Hub[] = [
     spokes: [
       { pattern: '/community/podcast/', label: 'The LTK podcast', count: 1, live: true },
       { pattern: '/community/events/', label: 'Events and meetups', count: 1, live: true },
+      { pattern: '/community/gallery/', label: 'LTK in pictures', count: 1, live: true },
       { pattern: '/community/forums/:category/', label: 'Forum categories', count: 13, index: '/community/forums/' },
       { pattern: '/community/chapters/:state/', label: 'State chapters', count: 50, index: '/community/chapters/' },
     ],

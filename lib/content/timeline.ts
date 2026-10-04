@@ -38,11 +38,39 @@ export const MILESTONES: Milestone[] = [
     href: '/community/podcast/',
   },
   {
+    date: '2025-05-24',
+    title: 'Helldivers 2 Kill Race',
+    body: 'A weekend Helldivers 2 kill race, backed by Nisus.',
+    kind: 'gaming',
+    href: '/arena/tournaments/kill-race-2025/',
+  },
+  {
+    date: '2025-06-01',
+    title: 'First in-person tournament',
+    body: 'A Warhammer 40,000 Kill Team tournament and painting contest at Dragon’s Lair Comics & Fantasy in Houston, backed by Nisus.',
+    kind: 'community',
+    href: '/arena/tournaments/warhammer-kill-team-2025/',
+  },
+  {
     date: '2025-06-21',
     title: 'Halo 3 tournament',
     body: 'A members-only Halo 3 tournament, streamed live and sponsored by Pest Patrol and Steri-Fab.',
     kind: 'gaming',
     href: 'https://www.youtube.com/watch?v=ouDDiWHdpco',
+  },
+  {
+    date: '2025-07-18',
+    title: 'Old School RuneScape Ironman Challenge',
+    body: 'A month-long challenge backed by three sponsors: Steri-Fab, Swarm and Pest Patrol.',
+    kind: 'gaming',
+    href: '/arena/tournaments/osrs-ironman-2025/',
+  },
+  {
+    date: '2025-10',
+    title: 'The LTK house at PestWorld 2025',
+    body: 'Members from across the country meet face to face at the LTK house during PestWorld 2025.',
+    kind: 'community',
+    href: '/community/gallery/',
   },
   {
     date: '2025-11-04',
@@ -57,6 +85,13 @@ export const MILESTONES: Milestone[] = [
     body: 'Polaris Pest Group comes on as a sponsor.',
     kind: 'sponsor',
     href: '/partners/',
+  },
+  {
+    date: '2026-01-18',
+    title: 'Marcus on Insight Radio',
+    body: 'Marcus joins Insight Radio’s Pest Xperience to talk about how AI, evolving pests and smart strategies are shaping pest management in 2026.',
+    kind: 'press',
+    href: '/community/gallery/#podcast',
   },
   {
     date: '2026-02',

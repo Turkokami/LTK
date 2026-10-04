@@ -8,7 +8,7 @@ import { getHub } from '@/lib/content/hubs';
 import { HubSpokes } from '@/components/site/HubSpokes';
 import { SponsorWall } from '@/components/community/Sponsors';
 import { DiscordButton } from '@/components/community/Discord';
-import { SPONSORS } from '@/lib/content/sponsors';
+import { CURRENT_SPONSORS as SPONSORS } from '@/lib/content/sponsors';
 import { EVENTS } from '@/lib/content/events-feed';
 import { LTK_EPISODES } from '@/lib/content/podcast';
 import { discordStats } from '@/lib/server/discord-stats';

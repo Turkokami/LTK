@@ -1,4 +1,4 @@
-import { SPONSORS, getSponsor, type Sponsor } from '@/lib/content/sponsors';
+import { CURRENT_SPONSORS, getSponsor, type Sponsor } from '@/lib/content/sponsors';
 import { EVENTS } from '@/lib/content/events-feed';
 import { cx } from '@/lib/utils';
 
@@ -28,7 +28,7 @@ function Wrap({ s, children, className }: { s: Sponsor; children: React.ReactNod
 
 /** A row of logos. `ids` limits it to an event's sponsors. */
 export function SponsorStrip({ ids, label = 'Sponsors', className }: { ids?: string[]; label?: string; className?: string }) {
-  const list = ids ? ids.map(getSponsor).filter((s): s is Sponsor => !!s) : SPONSORS;
+  const list = ids ? ids.map(getSponsor).filter((s): s is Sponsor => !!s) : CURRENT_SPONSORS;
   return (
     <div className={className}>
       <p className="eyebrow mb-3">{label}</p>
@@ -50,7 +50,7 @@ export function SponsorWall() {
   const eventName = (id: string) => EVENTS.find((e) => e.id === id)?.name.replace(/^LTK /, '') ?? id;
   return (
     <ul className="grid gap-4 sm:grid-cols-2">
-      {SPONSORS.map((s) => (
+      {CURRENT_SPONSORS.map((s) => (
         <li key={s.id} className="card flex flex-col gap-4 p-4">
           <Wrap s={s} className="block">
             <Plate s={s} className="h-28" />

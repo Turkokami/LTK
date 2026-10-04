@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { PodcastClips } from '@/components/community/PodcastClips';
 import { pageMeta } from '@/lib/seo/metadata';
 import { buildGraph } from '@/lib/schema/graph';
 import { JsonLd } from '@/components/JsonLd';
@@ -119,6 +120,14 @@ export default function PodcastPage() {
               className="w-full rounded-[var(--radius)] border-0"
             />
           </div>
+        </section>
+
+        <section aria-labelledby="clips" className="mb-16">
+          <h2 id="clips" className="h2 mb-2">
+            Clips
+          </h2>
+          <p className="mb-5 text-ink2">Quick hits from the show. Tap to play.</p>
+          <PodcastClips />
         </section>
 
         <section aria-labelledby="all-episodes" className="mb-16">

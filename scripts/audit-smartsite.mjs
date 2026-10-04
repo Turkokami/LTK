@@ -54,6 +54,8 @@ const ROUTES = [
   '/community/events/',
   '/arena/leaderboards/',
   '/arena/daily/',
+  '/community/gallery/',
+  '/arena/tournaments/warhammer-kill-team-2025/',
   '/about/privacy/',
   '/partners/inventory/',
   '/partners/media-kit/',

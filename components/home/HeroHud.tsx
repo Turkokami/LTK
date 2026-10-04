@@ -6,7 +6,7 @@ import { EVENTS } from '@/lib/content/events-feed';
 import { TiltLink } from '@/components/ui/Tilt';
 import { OptImg } from '@/components/ui/OptImg';
 import { SponsorRotator } from '@/components/community/SponsorRotator';
-import { SPONSORS } from '@/lib/content/sponsors';
+import { CURRENT_SPONSORS } from '@/lib/content/sponsors';
 import type { DiscordStats } from '@/lib/server/discord-stats';
 
 /**
@@ -69,7 +69,7 @@ export function HeroHud({ stats }: { stats: DiscordStats }) {
       </div>
 
       {/* Rotating sponsor strip, right under the live bar. */}
-      <SponsorRotator sponsors={SPONSORS} />
+      <SponsorRotator sponsors={CURRENT_SPONSORS} />
 
       {/* Hero */}
       <section className="hero-hud hud-grid">

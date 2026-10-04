@@ -21,6 +21,8 @@ export interface Sponsor {
   what: string;
   /** LTK events they've backed, newest first (event ids from events-feed.ts). */
   backed: string[];
+  /** Current sponsor (banner, footer, partners wall). Past backers keep their page and event credit. */
+  current?: boolean;
 }
 
 export const SPONSORS: Sponsor[] = [
@@ -31,7 +33,7 @@ export const SPONSORS: Sponsor[] = [
     logo: { src: '/sponsors/swarm.webp', width: 869, height: 360 },
     plate: 'light',
     what: 'A Tucson, Arizona agency doing digital marketing only for pest control companies: SEO, websites and paid ads.',
-    backed: ['fantasy-football-2026', 'apex-legends-2026'],
+    backed: ['fantasy-football-2026', 'apex-legends-2026', 'osrs-ironman-2025', 'college-football-2025'],
   },
   {
     id: 'pest-patrol',
@@ -40,7 +42,7 @@ export const SPONSORS: Sponsor[] = [
     logo: { src: '/sponsors/pest-patrol.webp', width: 718, height: 360 },
     plate: 'light',
     what: 'Locally owned pest control for homes and businesses around Portland and Salem, Oregon.',
-    backed: ['fantasy-football-2026', 'apex-legends-2026', 'halo-3-2025'],
+    backed: ['fantasy-football-2026', 'apex-legends-2026', 'osrs-ironman-2025', 'halo-3-2025'],
   },
   {
     id: 'polaris',
@@ -58,8 +60,22 @@ export const SPONSORS: Sponsor[] = [
     logo: { src: '/sponsors/steri-fab.webp', width: 1188, height: 360 },
     plate: 'light',
     what: 'Insecticide and disinfectant in one spray, a bed bug staple for decades.',
-    backed: ['apex-legends-2026', 'halo-3-2025'],
+    backed: ['apex-legends-2026', 'osrs-ironman-2025', 'halo-3-2025'],
   },
 ];
+
+// Past backers: credited on their events and their own page, not in the current-sponsor rotation.
+SPONSORS.push({
+  id: 'nisus',
+  name: 'Nisus',
+  url: 'https://nisuscorp.com/',
+  logo: { src: '/sponsors/nisus.png', width: 758, height: 662 },
+  plate: 'dark',
+  what: 'Pest control product maker behind the Helldivers 2 Kill Race and the Warhammer painting contest.',
+  backed: ['warhammer-kill-team-2025', 'kill-race-2025'],
+  current: false,
+});
+
+export const CURRENT_SPONSORS = SPONSORS.filter((s) => s.current !== false);
 
 export const getSponsor = (id: string) => SPONSORS.find((s) => s.id === id);

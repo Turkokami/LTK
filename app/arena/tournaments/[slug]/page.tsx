@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const sponsors = e.sponsors.map((id) => getSponsor(id)?.name).filter(Boolean).join(', ');
   return pageMeta({
     title: fitTitle([`${e.name}: results, poster and sponsors`, `${e.name}: results and sponsors`, e.name]),
-    description: pickDescription(`${e.name} (${e.when.split(' · ')[0]}): ${e.summary}`, [
+    description: e.seoDescription ?? pickDescription(`${e.name} (${e.when.split(' · ')[0]}): ${e.summary}`, [
       ` Sponsored by ${sponsors}.`,
       ' Posters, sponsors and results.',
       ' Sponsors and results.',
