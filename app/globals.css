@@ -41,7 +41,7 @@
     --signal-caution: #b9b096;
 
     /* red used as text on dark grounds */
-    --blood-text: #ff5a66;
+    --blood-text: #ff4040;
 
     /* neon green — the gamer accent (2026-10 refresh): anything earned, anything to play,
        hover and focus. Used as an accent, never as a big fill. */
@@ -593,9 +593,10 @@
     color: var(--field);
     text-shadow: 0 0 22px rgba(57, 255, 136, 0.45);
   }
+  /* Big headline words: the same true red as the hero's "pest control." */
   .text-hot {
-    color: var(--blood-text);
-    text-shadow: 0 0 22px rgba(225, 29, 46, 0.55);
+    color: #ff2a3d;
+    text-shadow: 0 0 28px rgba(255, 42, 61, 0.5);
   }
 
   /* Live indicator: pulsing neon dot. */

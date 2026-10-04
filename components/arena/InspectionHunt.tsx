@@ -318,7 +318,7 @@ export function InspectionHunt({ discordInvite }: { discordInvite: string }) {
                         height={h}
                         rx="10"
                         fill="transparent"
-                        stroke={isFound ? '#39ff88' : missed ? '#ff5a66' : 'transparent'}
+                        stroke={isFound ? '#39ff88' : missed ? '#ff4040' : 'transparent'}
                         strokeWidth="4"
                         strokeDasharray={missed ? '8 6' : undefined}
                         className={cx(phase === 'playing' && 'cursor-crosshair focus:outline-none')}

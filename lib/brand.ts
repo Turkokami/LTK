@@ -78,7 +78,7 @@ export const PALETTE: Swatch[] = [
   },
   {
     name: 'Red dot',
-    hex: '#ff5a66',
+    hex: '#ff4040',
     token: '--blood-text',
     use: 'Red used AS text on dark grounds — links, highlights, the scope’s dot.',
     contrast: '5.2:1 on Crawlspace — AA',
@@ -125,7 +125,7 @@ export const HEX = {
   ink3: '#948e80',
   rule: '#34362f',
   danger: '#e11d2e',
-  bloodText: '#ff5a66',
+  bloodText: '#ff4040',
   warning: '#ffcc00',
   field: '#39ff88',
 } as const;
