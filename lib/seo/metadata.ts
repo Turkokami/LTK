@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { site, abs } from '@/lib/site.config';
+import { HUBS } from '@/lib/content/hubs';
 
 /**
  * The only place page metadata is assembled. CLAUDE.md §5 audit gate checks:
@@ -15,6 +16,8 @@ export interface PageMetaInput {
   /** Gated or thin-value pages only. Default is indexable. */
   noindex?: boolean;
   ogTemplate?: string;
+  /** A local JPEG/PNG for the right side of the share card (field photo, event poster). */
+  ogImage?: string;
 }
 
 export function pageMeta({
@@ -23,6 +26,7 @@ export function pageMeta({
   path,
   noindex = false,
   ogTemplate = 'default',
+  ogImage,
 }: PageMetaInput): Metadata {
   const url = abs(path);
   if (process.env.NODE_ENV !== 'production') {
@@ -31,6 +35,7 @@ export function pageMeta({
       console.warn(`[seo] description ${description.length} chars (want 140-160): ${path}`);
     }
   }
+  const card = ogCard({ title, path, template: ogTemplate, image: ogImage });
   return {
     title,
     description,
@@ -43,9 +48,9 @@ export function pageMeta({
       siteName: site.name,
       type: 'website',
       locale: site.locale,
-      images: [{ url: abs(`/og/${ogTemplate}/`), width: 1200, height: 630, alt: title }],
+      images: [{ url: card, width: 1200, height: 630, alt: title }],
     },
-    twitter: { card: 'summary_large_image', title, description },
+    twitter: { card: 'summary_large_image', title, description, images: [{ url: card, alt: title }] },
   };
 }
 
@@ -132,4 +137,15 @@ export function pickDescription(
     .filter((s) => s.length <= max)
     .sort((a, b) => b.length - a.length);
   return under[0] ?? trimmed;
+}
+
+/**
+ * The share-card URL for a page: its title, the section it sits in (from the hub its path
+ * starts with) and, optionally, a photo. Rendered by app/og/[template]/route.tsx.
+ */
+export function ogCard({ title, path, template = 'default', image }: { title: string; path: string; template?: string; image?: string }): string {
+  const hub = HUBS.find((h) => h.path !== '/' && path.startsWith(h.path));
+  const q = new URLSearchParams({ t: title, e: hub ? hub.eyebrow : 'Pest pros helping pest pros' });
+  if (image && /\.(jpe?g|png)$/i.test(image)) q.set('img', image);
+  return abs(`/og/${template}/?${q.toString()}`);
 }

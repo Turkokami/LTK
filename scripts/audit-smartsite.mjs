@@ -175,6 +175,12 @@ for (const route of ROUTES) {
 
   // 3. Canonical.
   if (!/rel="canonical"/.test(html)) fail(route, 'no canonical');
+  // Share cards: every page needs its own image for Facebook, Discord, X and texts.
+  const ogImg = /property="og:image" content="([^"]+)"/.exec(html)?.[1];
+  if (!ogImg) fail(route, 'no og:image');
+  else if (!/[?&]t=/.test(ogImg.replace(/&amp;/g, '&'))) fail(route, 'og:image is not the per-page card');
+  if (!/name="twitter:image"/.test(html)) fail(route, 'no twitter:image');
+  if (!/property="og:url"/.test(html)) fail(route, 'no og:url');
 
   // 4. Title and description length.
   const title = html.match(/<title>([^<]*)<\/title>/)?.[1] ?? '';

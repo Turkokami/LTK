@@ -53,9 +53,22 @@ export const metadata: Metadata = {
   description: site.description,
   alternates: { canonical: abs('/') },
   icons: {
-    icon: [{ url: ASSETS.favicon, type: 'image/png' }],
-    apple: ASSETS.appleTouchIcon,
+    // Small sizes use a close crop of the rat in the scope; large ones the full badge.
+    icon: [
+      { url: '/favicon.ico', sizes: '16x16 32x32 48x48' },
+      { url: '/brand/icon-32.png', type: 'image/png', sizes: '32x32' },
+      { url: '/brand/icon-192.png', type: 'image/png', sizes: '192x192' },
+    ],
+    apple: { url: ASSETS.appleTouchIcon, sizes: '180x180' },
   },
+  manifest: '/site.webmanifest',
+  // Fallback share card for any page that doesn't set its own (pageMeta sets one per page).
+  openGraph: {
+    siteName: site.name,
+    type: 'website',
+    images: [{ url: '/og/default/', width: 1200, height: 630, alt: site.name }],
+  },
+  twitter: { card: 'summary_large_image', images: ['/og/default/'] },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

@@ -115,6 +115,7 @@ export async function generateMetadata({
       ],
     ),
     path: `/fields/${d.slug}/`,
+    ogImage: fieldPhotos(d.slug)?.hero.src,
   });
 }
 

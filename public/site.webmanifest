@@ -1,0 +1,14 @@
+{
+  "name": "LTK Community Hub",
+  "short_name": "LTK",
+  "description": "Pest pros helping pest pros: every field in pest control, state licensing, ACE prep and the LTK Discord.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#121412",
+  "theme_color": "#121412",
+  "icons": [
+    { "src": "/brand/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/brand/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/brand/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

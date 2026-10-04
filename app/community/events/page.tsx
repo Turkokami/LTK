@@ -25,6 +25,7 @@ export const metadata: Metadata = pageMeta({
   description:
     'What LTK runs: daily field talk, the podcast, game nights, a championship on a rotating game, specialist sessions, quarterly meetups and trade show appearances.',
   path: PATH,
+  ogImage: '/events/apex-legends-2026-og.jpg',
 });
 
 const REGULAR: { name: string; when: string; body: string; href?: string }[] = [
