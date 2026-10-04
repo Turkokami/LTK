@@ -124,9 +124,9 @@ export const HUBS: Hub[] = [
       { pattern: '/arena/games/lookalike-showdown/', label: 'Lookalike Showdown', count: 1, live: true },
       { pattern: '/arena/field-challenges/', label: 'Field challenges', count: 1, live: true },
       { pattern: '/arena/games/:slug/', label: 'More games', count: 10 },
-      { pattern: '/arena/tournaments/:slug/', label: 'Tournaments and the championship', count: 16, index: '/arena/tournaments/' },
+      { pattern: '/arena/tournaments/:slug/', label: 'Tournaments and leagues', count: 3, live: true, index: '/arena/tournaments/' },
       { pattern: '/arena/leaderboards/', label: 'Leaderboards', count: 1, live: true },
-      { pattern: '/arena/season/:n/', label: 'Season archives', count: 'open' },
+      { pattern: '/arena/season/', label: 'Monthly seasons', count: 1, live: true },
     ],
   },
   {
@@ -172,9 +172,9 @@ export const HUBS: Hub[] = [
     spokes: [
       { pattern: '/partners/audience/', label: 'Audience data', count: 1, live: true },
       { pattern: '/partners/sponsorship/', label: 'Tiers and pricing', count: 1, live: true },
-      { pattern: '/partners/inventory/', label: 'Sponsorable inventory', count: 1 },
-      { pattern: '/partners/:brand/', label: 'Partner pages', count: 'open' },
-      { pattern: '/partners/media-kit/', label: 'Media kit', count: 1 },
+      { pattern: '/partners/inventory/', label: 'What you can sponsor', count: 1, live: true },
+      { pattern: '/partners/:brand/', label: 'Sponsor pages', count: 4, live: true, index: '/partners/' },
+      { pattern: '/partners/media-kit/', label: 'Media kit', count: 1, live: true },
     ],
   },
   {

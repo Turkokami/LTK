@@ -6,6 +6,7 @@ import { ASSETS } from '@/lib/brand';
 import { SiteHeader } from '@/components/site/Header';
 import { SiteFooter } from '@/components/site/Footer';
 import { AgentToaster } from '@/components/agent/AgentToaster';
+import { Analytics } from '@vercel/analytics/next';
 import { DiscordBand } from '@/components/community/Discord';
 
 /**
@@ -89,6 +90,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </div>
         <SiteFooter />
         <AgentToaster />
+        {/* Vercel Web Analytics: cookieless page counts. Inert until enabled in the Vercel project. */}
+        <Analytics />
       </body>
     </html>
   );

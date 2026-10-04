@@ -56,7 +56,9 @@ export function SponsorWall() {
             <Plate s={s} className="h-28" />
           </Wrap>
           <div>
-            <p className="font-semibold text-ink">{s.name}</p>
+            <a href={`/partners/${s.id}/`} className="font-semibold text-ink hover:text-blood">
+              {s.name}
+            </a>
             <p className="mt-1 text-sm text-ink2">{s.what}</p>
             <p className="mono mt-2 text-ink3">Backed: {s.backed.map(eventName).join(' · ')}</p>
             {s.url ? (

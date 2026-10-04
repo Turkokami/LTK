@@ -24,6 +24,10 @@ export interface LtkEvent {
   name: string;
   /** Plain-language timing, as LTK announced it. */
   when: string;
+  /** ISO start date when known exactly (for Event schema); omitted when only the season is known. */
+  startDate?: string;
+  /** The game played. */
+  game: string;
   status: 'running' | 'past';
   summary: string;
   sponsors: string[];
@@ -39,6 +43,7 @@ export const EVENTS: LtkEvent[] = [
     id: 'fantasy-football-2026',
     name: 'LTK Fantasy Football',
     when: '2026 season · running now',
+    game: 'Fantasy football (NFL)',
     status: 'running',
     summary: 'The LTK league runs all NFL season in the Discord, with weekly results posted here and in the server.',
     sponsors: ['swarm', 'pest-patrol', 'polaris'],
@@ -62,6 +67,8 @@ export const EVENTS: LtkEvent[] = [
     id: 'apex-legends-2026',
     name: 'LTK Apex Legends tournament',
     when: 'Weekend of February 21, 2026',
+    startDate: '2026-02-21',
+    game: 'Apex Legends',
     status: 'past',
     summary: 'A weekend Apex Legends tournament for LTK Discord members.',
     sponsors: ['steri-fab', 'pest-patrol', 'polaris', 'swarm'],
@@ -76,6 +83,8 @@ export const EVENTS: LtkEvent[] = [
     id: 'halo-3-2025',
     name: 'LTK Halo 3 tournament',
     when: 'June 21, 2025',
+    startDate: '2025-06-21',
+    game: 'Halo 3',
     status: 'past',
     summary: 'A Halo 3 tournament streamed live on the LTK YouTube channel.',
     sponsors: ['pest-patrol', 'steri-fab'],

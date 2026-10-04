@@ -168,7 +168,11 @@ export default function EventsPage() {
               ) : null}
               <div className="p-5">
                 <p className="mono mb-1 text-ink3">{ev.when}</p>
-                <h3 className="h3 mb-2">{ev.name}</h3>
+                <h3 className="h3 mb-2">
+                  <a href={`/arena/tournaments/${ev.id}/`} className="hover:text-blood">
+                    {ev.name}
+                  </a>
+                </h3>
                 <p className="text-sm text-ink2">{ev.summary}</p>
                 {ev.watch ? (
                   <a href={ev.watch} target="_blank" rel="noopener noreferrer" className="link mt-2 inline-block text-sm">

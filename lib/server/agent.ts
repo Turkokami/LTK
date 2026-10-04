@@ -230,6 +230,11 @@ async function board(key: string, me: string | null, n = 15, filter?: (id: strin
   return out.slice(0, n);
 }
 
+/** One month's season board (YYYY-MM), top `n`. */
+export function seasonBoard(month: string, n = 10) {
+  return board(`agents:season:${month}`, null, n);
+}
+
 export async function boards(me: string | null) {
   const drop = dailyDrop();
   const [season, allTime, streaks, today] = await Promise.all([

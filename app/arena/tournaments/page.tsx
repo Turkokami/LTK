@@ -5,41 +5,47 @@ import { eventEntities } from '@/lib/schema/entities';
 import { JsonLd } from '@/components/JsonLd';
 import { Breadcrumbs } from '@/components/site/Breadcrumbs';
 import { LabelBlock } from '@/components/label/LabelBlock';
-import { TOURNAMENTS } from '@/lib/content/arena';
+import { DiscordButton } from '@/components/community/Discord';
+import { SponsorStrip } from '@/components/community/Sponsors';
+import { EVENTS } from '@/lib/content/events-feed';
 import { site } from '@/lib/site.config';
 
 /**
- * Arena → Tournaments.
+ * Arena → Tournaments: LTK's competitions, running and past, each with its own page.
  *
- * The championship carries the parent brand's name (site.championship). The owner chose
- * Licensed to Kill as the parent brand on 2026-09-24; the trademark collisions flagged in the
- * audit (an operating NM pest company, the LikeToKnow.it "LTK" brand, the Bond franchise) are
- * still open under REGISTRY R-01.
+ * The championship carries the parent brand's name (site.championship); the trademark
+ * question is still open under REGISTRY R-01.
  *
- * R-18 BLOCKS THE FIRST REAL TOURNAMENT. Skill-based contest rules vary by state and prize
- * promotions can trip lottery statutes where consideration, chance and prize all coincide.
- * Needs legal review before any prize of value is offered. Play-for-fun ladders do not.
+ * R-18: skill-based contest rules vary by state and prize promotions can trip lottery
+ * statutes. Prize details stay in the Discord and are never promoted here until the contest
+ * rules have had legal review.
  */
 
+const PATH = '/arena/tournaments/';
+
 export const metadata: Metadata = pageMeta({
-  title: 'Tournaments',
+  title: 'LTK tournaments: past events and what’s running',
   description:
-    'Competitive events for pest management professionals: identification speed runs, field challenges and the LTK championship, on a different game each time.',
-  path: '/arena/tournaments/',
+    'LTK’s gaming tournaments and leagues for pest control pros: fantasy football, Apex Legends, Halo 3 and the championship, with posters, sponsors and streams.',
+  path: PATH,
 });
 
 export default function TournamentsPage() {
   const crumbs = [
     { name: 'Home', href: '/' },
     { name: 'Arena', href: '/arena/' },
-    { name: 'Tournaments', href: '/arena/tournaments/' },
+    { name: 'Tournaments', href: PATH },
   ];
+  const dated = EVENTS.filter((e) => e.startDate);
   const graph = buildGraph({
-    path: '/arena/tournaments/',
+    path: PATH,
     pageType: 'CollectionPage',
     crumbs,
-    primary: TOURNAMENTS.length
-      ? eventEntities({ path: '/arena/tournaments/', events: TOURNAMENTS })
+    primary: dated.length
+      ? eventEntities({
+          path: PATH,
+          events: dated.map((e) => ({ slug: e.id, name: e.name, description: e.summary, startDate: e.startDate!, online: true })),
+        })
       : undefined,
   });
 
@@ -52,46 +58,59 @@ export default function TournamentsPage() {
 
       <div className="shell pb-16">
         <p className="eyebrow mb-3">Arena · Tournaments</p>
-        <h1 className="display mb-6 max-w-[16ch]">Tournaments</h1>
+        <h1 className="display mb-6 max-w-[18ch]">Tournaments and leagues</h1>
 
-        <div className="grid gap-6 lg:grid-cols-[1.4fr_1fr]">
+        <div className="mb-12 grid gap-6 lg:grid-cols-[1.4fr_1fr]">
           <p className="prose-bulletin">
-            Competition is the fastest way to make people practise identification, and
-            identification is the skill that separates a technician who solves a problem from one
-            who treats a symptom. The events here are built to be genuinely hard and genuinely
-            fun, in that order.
+            LTK started as a video game group, and competition is still the glue. Tournaments run in the{' '}
+            {site.discord.name} on a different game each time, streamed on YouTube, backed by sponsors from the trade
+            &mdash; and the fantasy football league runs all season.
           </p>
           <LabelBlock title="The championship" signal="warning" meta="Monthly to quarterly">
-            The championship carries the crew&rsquo;s name: the{' '}
-            <strong>{site.championship.name}</strong>. It runs monthly to quarterly on a different
-            game each time &mdash; bragging rights, and being the one everybody tags in the pest ID
-            channel.
+            The championship carries the crew&rsquo;s name: the <strong>{site.championship.name}</strong>. It runs on a
+            different game each time &mdash; bragging rights, and being the one everybody tags in the pest ID channel.
           </LabelBlock>
         </div>
 
-        {TOURNAMENTS.length === 0 ? (
-          <div className="mt-10">
-            {/* R-18 gate. Do not remove until legal review of contest rules is complete. */}
-            <LabelBlock title="No tournaments scheduled yet" signal="warning">
-              Skill-based contest rules vary by state, and prize promotions need legal review
-              before the first one runs. Ladders and practice runs open first; the championship
-              follows once the rules are cleared.
-            </LabelBlock>
-          </div>
-        ) : (
-          <ul className="mt-10 grid gap-px bg-rule md:grid-cols-2">
-            {TOURNAMENTS.map((t) => (
-              <li key={t.slug} className="bg-paper p-5">
-                <p className="mono mb-1 text-ink3">{t.startDate}</p>
-                <h2 className="h3 mb-2">{t.name}</h2>
-                <p className="text-sm text-ink2">{t.description}</p>
+        <ul className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          {EVENTS.map((e) => {
+            const img = e.image ?? e.updates?.[0]?.image;
+            return (
+              <li key={e.id} className="card overflow-hidden">
+                <a href={`${PATH}${e.id}/`} className="group block">
+                  {img ? (
+                    <img src={img.src} alt={img.alt} width={img.width} height={img.height} loading="lazy" className="aspect-[4/3] w-full object-cover object-top" />
+                  ) : (
+                    <div className="flex aspect-[4/3] items-center justify-center bg-stock2 p-6 text-center">
+                      <span className="h2 text-ink3">{e.game}</span>
+                    </div>
+                  )}
+                  <div className="p-5">
+                    <p className="mono mb-1 text-ink3">
+                      {e.status === 'running' ? 'Running now' : 'Past'} &middot; {e.when.split(' · ')[0]}
+                    </p>
+                    <h2 className="h3 group-hover:text-blood">{e.name}</h2>
+                    <p className="mt-1 text-sm text-ink2">{e.summary}</p>
+                  </div>
+                </a>
+                <div className="px-5 pb-5">
+                  <SponsorStrip ids={e.sponsors} label="Sponsored by" />
+                </div>
               </li>
-            ))}
-          </ul>
-        )}
+            );
+          })}
+        </ul>
 
-        <div className="rule-t mt-12 pt-6">
-          <a href="/join/" className="btn">Join LTK</a>
+        <p className="mt-8 max-w-[64ch] text-sm text-ink3">
+          Brackets, sign-ups and prize details are posted in the Discord. Contest rules differ by state, so prizes are
+          never promoted on this site.
+        </p>
+
+        <div className="card mt-10 flex flex-wrap items-center justify-between gap-4 p-5">
+          <p className="max-w-[46ch] text-sm text-ink2">
+            <span className="font-semibold text-ink">Next tournament?</span> Sign-ups go out in the Discord first.
+          </p>
+          <DiscordButton>Join the Discord</DiscordButton>
         </div>
       </div>
     </>
