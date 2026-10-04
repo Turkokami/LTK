@@ -1,4 +1,5 @@
 import { ImageResponse } from 'next/og';
+import sharp from 'sharp';
 import { site } from '@/lib/site.config';
 import { HEX } from '@/lib/brand';
 
@@ -15,7 +16,9 @@ import { HEX } from '@/lib/brand';
  * from this deployment's own origin.
  */
 
-export const runtime = 'edge';
+// Node runtime so the PNG can be re-encoded as JPEG: WhatsApp and some SMS apps drop preview
+// images over ~300 KB, and the PNG cards ran ~400 KB. JPEG lands around 100 KB.
+export const runtime = 'nodejs';
 
 const SIGNAL: Record<string, string> = {
   default: HEX.danger,
@@ -49,7 +52,7 @@ export async function GET(request: Request, { params }: { params: Promise<{ temp
   const size = title.length > 70 ? 52 : title.length > 40 ? 62 : 74;
   const badge = `${origin}/brand/badge-600.jpg`;
 
-  return new ImageResponse(
+  const png = new ImageResponse(
     (
       <div style={{ width: '1200px', height: '630px', display: 'flex', background: HEX.stock, fontFamily: 'Rubik', position: 'relative' }}>
         {/* Soft red glow, like the dot in the scope. */}
@@ -102,7 +105,13 @@ export async function GET(request: Request, { params }: { params: Promise<{ temp
         { name: 'Rubik', data: bold, weight: 800, style: 'normal' },
         { name: 'Rubik', data: semi, weight: 600, style: 'normal' },
       ],
-      headers: { 'Cache-Control': 'public, max-age=86400, s-maxage=604800' },
     },
   );
+  const jpg = await sharp(Buffer.from(await png.arrayBuffer())).jpeg({ quality: 82, mozjpeg: true }).toBuffer();
+  return new Response(new Uint8Array(jpg), {
+    headers: {
+      'Content-Type': 'image/jpeg',
+      'Cache-Control': 'public, max-age=86400, s-maxage=604800',
+    },
+  });
 }

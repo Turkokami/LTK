@@ -1066,3 +1066,47 @@
     }
   }
 }
+
+/* ---------------------------------------------------------------- promo video (home) */
+@layer components {
+  .promo-video__frame {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 42, 61, 0.6);
+    box-shadow: 0 0 0 1px rgba(225, 29, 46, 0.15), 0 0 30px -8px rgba(225, 29, 46, 0.75);
+    background: #000;
+  }
+  .promo-video__play {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    background: radial-gradient(circle at 50% 45%, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.6) 75%);
+    cursor: pointer;
+  }
+  .promo-video__btn {
+    display: grid;
+    place-items: center;
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 999px;
+    background: var(--signal-danger);
+    color: #fff;
+    padding-left: 4px;
+    box-shadow: 0 0 0 6px rgba(225, 29, 46, 0.25), 0 0 34px rgba(225, 29, 46, 0.8);
+    transition: transform 0.15s ease, box-shadow 0.2s ease;
+  }
+  .promo-video__play:hover .promo-video__btn,
+  .promo-video__play:focus-visible .promo-video__btn {
+    transform: scale(1.08);
+    box-shadow: 0 0 0 8px rgba(225, 29, 46, 0.3), 0 0 44px rgba(225, 29, 46, 1);
+  }
+  .promo-video__label {
+    text-align: center;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+  }
+}

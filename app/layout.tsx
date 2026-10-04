@@ -64,7 +64,7 @@ export const metadata: Metadata = {
   openGraph: {
     siteName: site.name,
     type: 'website',
-    images: [{ url: '/og/default/', width: 1200, height: 630, alt: site.name }],
+    images: [{ url: '/og/default/', width: 1200, height: 630, alt: site.name, type: 'image/jpeg' }],
   },
   twitter: { card: 'summary_large_image', images: ['/og/default/'] },
 };

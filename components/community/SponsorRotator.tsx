@@ -6,7 +6,9 @@ import { cx } from '@/lib/utils';
 
 /**
  * Rotating "Sponsored by" strip near the top of the home page. One sponsor at a time, a
- * digital glitch-in every few seconds; pauses on hover/focus and when the tab is hidden.
+ * digital glitch-in every few seconds. Pauses only for a real mouse hover or keyboard focus —
+ * on phones a tap fires mouseenter with no mouseleave, which used to pause it for good, and
+ * some in-app browsers (Messenger) misreport page visibility, so neither is used to pause.
  * Reduced motion: no animation, slower swap. Links are rel="sponsored" (sponsorship policy).
  */
 
@@ -29,10 +31,7 @@ export function SponsorRotator({ sponsors }: { sponsors: Sponsor[] }) {
   useEffect(() => {
     if (paused || sponsors.length < 2) return;
     const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    timer.current = window.setTimeout(() => {
-      if (document.visibilityState === 'visible') go(i + 1);
-      else setTick((t) => t + 1);
-    }, reduce ? INTERVAL * 2 : INTERVAL);
+    timer.current = window.setTimeout(() => go(i + 1), reduce ? INTERVAL * 2 : INTERVAL);
     return () => {
       if (timer.current) window.clearTimeout(timer.current);
     };
@@ -45,9 +44,9 @@ export function SponsorRotator({ sponsors }: { sponsors: Sponsor[] }) {
     <section
       className="sponsor-rotator"
       aria-label="Our sponsors"
-      onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
-      onFocus={() => setPaused(true)}
+      onPointerEnter={(e) => e.pointerType === 'mouse' && setPaused(true)}
+      onPointerLeave={(e) => e.pointerType === 'mouse' && setPaused(false)}
+      onFocus={(e) => (e.target as HTMLElement).matches(':focus-visible') && setPaused(true)}
       onBlur={() => setPaused(false)}
     >
       <div className="shell flex items-center gap-4 py-2.5 sm:gap-6">

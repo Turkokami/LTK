@@ -48,7 +48,7 @@ export function pageMeta({
       siteName: site.name,
       type: 'website',
       locale: site.locale,
-      images: [{ url: card, width: 1200, height: 630, alt: title }],
+      images: [{ url: card, width: 1200, height: 630, alt: title, type: 'image/jpeg' }],
     },
     twitter: { card: 'summary_large_image', title, description, images: [{ url: card, alt: title }] },
   };

@@ -3,6 +3,7 @@ import { OptImg } from '@/components/ui/OptImg';
 import { SponsorStrip } from '@/components/community/Sponsors';
 import { TiltLink } from '@/components/ui/Tilt';
 import { site } from '@/lib/site.config';
+import { PromoVideo } from './PromoVideo';
 
 /**
  * Home: why a pest control community games. LTK started as a video game group (site.community
@@ -76,6 +77,9 @@ export function GameOn() {
           </div>
 
           <div>
+            <div className="mb-5">
+              <PromoVideo />
+            </div>
             {running ? (
               <a href={`/arena/tournaments/${running.id}/`} className="mb-4 flex items-center gap-3 rounded-[var(--radius)] border border-[rgba(255,42,61,0.5)] bg-[rgba(225,29,46,0.07)] px-4 py-3 hover:shadow-[var(--glow-hot)]">
                 <span className="live-dot" aria-hidden="true" />
