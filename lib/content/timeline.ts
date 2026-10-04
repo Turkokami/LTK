@@ -101,6 +101,13 @@ export const MILESTONES: Milestone[] = [
     href: '/community/events/',
   },
   {
+    date: '2026',
+    title: 'Career days and college fairs',
+    body: 'LTK takes the trade to schools: a middle school career day and a college and career fair, showing students the jobs pest control really offers.',
+    kind: 'community',
+    href: '/community/gallery/#outreach',
+  },
+  {
     date: '2026-06-29',
     title: 'Featured in Professional Pest Controller',
     body: 'The British Pest Control Association’s magazine runs “Licensed to connect”, an interview with Marcus about how LTK works (issue 123).',
@@ -137,6 +144,7 @@ export const PRESS = [
 
 export function formatMilestoneDate(d: string): string {
   const [y, m, day] = d.split('-').map(Number);
+  if (!m) return String(y);
   const date = new Date(Date.UTC(y!, (m ?? 1) - 1, day ?? 1));
   return date.toLocaleDateString('en-US', { timeZone: 'UTC', month: 'long', year: 'numeric', ...(day ? { day: 'numeric' } : {}) });
 }

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { PhotoStrip } from '@/components/ui/PhotoStrip';
 import { pageMeta } from '@/lib/seo/metadata';
 import { buildGraph } from '@/lib/schema/graph';
 import { JsonLd } from '@/components/JsonLd';
@@ -75,6 +76,12 @@ export default function Page() {
           <span className="btn btn--ghost">Watch</span>
         </a>
         ) : null}
+
+        <PhotoStrip
+          title="LTK in pictures"
+          srcs={['/gallery/pestworld-2025-crew.webp', '/gallery/pests-and-pixels.webp', '/gallery/clocking-in-meme.webp', '/gallery/merch-lab-coat-patch.webp']}
+          className="mb-12"
+        />
 
         <HubSpokes hub={HUB} />
       </div>

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { PhotoStrip } from '@/components/ui/PhotoStrip';
 import { FeaturedIn, Timeline } from '@/components/community/Timeline';
 import { pageMeta } from '@/lib/seo/metadata';
 import { buildGraph } from '@/lib/schema/graph';
@@ -119,6 +120,13 @@ export default function AboutPage() {
             </a>
           </div>
         </div>
+        <PhotoStrip
+          eyebrow="The crew, in real life"
+          title="Meetups, career days and the stage"
+          srcs={['/gallery/pestworld-2025-crew.webp', '/gallery/careerday-gms-table.webp', '/gallery/college-fair-table.webp', '/gallery/speaking-swarm-mastermind.webp']}
+          className="mb-12"
+        />
+
         <section className="mb-12" aria-labelledby="since">
           <h2 id="since" className="h2 mb-2">LTK since 2025</h2>
           <FeaturedIn className="mb-6" />

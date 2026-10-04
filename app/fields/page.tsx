@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { PhotoStrip } from '@/components/ui/PhotoStrip';
 import { pageMeta } from '@/lib/seo/metadata';
 import { buildGraph } from '@/lib/schema/graph';
 import { JsonLd } from '@/components/JsonLd';
@@ -109,6 +110,13 @@ export default function FieldsPage() {
             <DiscordButton variant="ghost">Ask the crew on Discord</DiscordButton>
           </div>
         </div>
+
+        <PhotoStrip
+          eyebrow="On the route"
+          title="The work, up close"
+          srcs={['/gallery/route-bait-station.webp', '/gallery/route-kitchen.webp', '/gallery/route-ready.webp']}
+          className="mt-10"
+        />
       </div>
 
       {FIELD_GROUPS.map((g) => {

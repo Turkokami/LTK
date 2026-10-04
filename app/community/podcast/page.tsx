@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { PhotoStrip } from '@/components/ui/PhotoStrip';
 import { PodcastClips } from '@/components/community/PodcastClips';
 import { pageMeta } from '@/lib/seo/metadata';
 import { buildGraph } from '@/lib/schema/graph';
@@ -141,6 +142,12 @@ export default function PodcastPage() {
           </div>
           <EpisodeBrowser episodes={LTK_EPISODES} series={SERIES} />
         </section>
+
+        <PhotoStrip
+          title="From the show"
+          srcs={['/gallery/podcast-godfroid.webp', '/gallery/podcast-cryptids.webp', '/gallery/insight-radio-2026.webp', '/gallery/spotify-wrapped.webp']}
+          className="mb-16"
+        />
 
         <h2 className="h2 mb-5">Marcus on other shows</h2>
 

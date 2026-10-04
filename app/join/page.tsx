@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { PhotoStrip } from '@/components/ui/PhotoStrip';
 import { pageMeta } from '@/lib/seo/metadata';
 import { buildGraph } from '@/lib/schema/graph';
 import { JsonLd } from '@/components/JsonLd';
@@ -85,6 +86,13 @@ export default function JoinPage() {
           </a>
           .
         </LabelBlock>
+
+        <PhotoStrip
+          eyebrow="What you’re joining"
+          title="Game nights, meetups and the crew"
+          srcs={['/gallery/pestworld-2025-ltk-house.webp', '/gallery/squad-vs-mosquitoes.webp', '/gallery/ltk-diver-meme.webp', '/gallery/merch-tumbler.webp']}
+          className="mt-14"
+        />
 
         <h2 className="h2 mb-2 mt-14">On your phone? Scan to join</h2>
         <p className="mb-5 max-w-[60ch] text-ink2">

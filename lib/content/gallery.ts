@@ -30,6 +30,29 @@ export const GALLERY: GallerySection[] = [
     ],
   },
   {
+    id: 'outreach',
+    title: 'Career days & outreach',
+    blurb: 'Showing students that pest control is a real career — no college debt required.',
+    images: [
+      { src: '/gallery/careerday-gms-table.webp', width: 1100, height: 1467, alt: 'Marcus at the LTK table at a middle school career day, with live traps, mouse traps and a crocheted rat dissection', caption: 'Middle school career day' },
+      { src: '/gallery/careerday-gms-crowd.webp', width: 1100, height: 825, alt: 'Students gathered at the LTK pest management table in a school gym', caption: 'Questions from the next generation' },
+      { src: '/gallery/careerday-title.webp', width: 1100, height: 619, alt: 'Career day slide: Licensed to Kill — the coolest career you never knew about', caption: 'The career day presentation' },
+      { src: '/gallery/careerday-cool-jobs.webp', width: 1100, height: 619, alt: 'Slide: the coolest jobs you didn’t know existed — falcon handler, aviation pilot, dog handler, race car driver, entomologist, podcast host', caption: 'Jobs you didn’t know existed' },
+      { src: '/gallery/careerday-what-is.webp', width: 1100, height: 619, alt: 'Slide: what even is pest control? We protect people, homes and the planet from pests', caption: 'What even is pest control?' },
+      { src: '/gallery/careerday-pays.webp', width: 1100, height: 619, alt: 'Slide: this job pays — and you don’t need college debt', caption: 'This job pays' },
+      { src: '/gallery/college-fair-table.webp', width: 1100, height: 825, alt: 'The LTK table at a college and career fair: Licensed to Kill banner, Game On sign, traps and the LTK PestWorld House poster', caption: 'College & career fair' },
+      { src: '/gallery/college-fair-detail.webp', width: 1100, height: 825, alt: 'Close-up of the LTK table: the LTK PestWorld House poster, Game On sign and bug stickers and keychains', caption: 'The table setup' },
+    ],
+  },
+  {
+    id: 'speaking',
+    title: 'On stage',
+    blurb: 'Marcus speaking for LTK at industry events.',
+    images: [
+      { src: '/gallery/speaking-swarm-mastermind.webp', width: 1100, height: 733, alt: 'Marcus Scruggs presenting LTK on stage at the Swarm Pest Control Marketing mastermind', caption: 'Speaking at the Swarm mastermind' },
+    ],
+  },
+  {
     id: 'route',
     title: 'On the route',
     blurb: 'The day job: bait stations, kitchens and a bucket of tools.',
@@ -57,6 +80,7 @@ export const GALLERY: GallerySection[] = [
     images: [
       { src: '/gallery/pests-and-pixels.webp', width: 1000, height: 1003, alt: 'Licensed to Kill — where pests and pixels meet: a bug in a scope over a neon gaming setup with a controller and the Discord logo', caption: 'Where pests and pixels meet' },
       { src: '/gallery/squad-vs-mosquitoes.webp', width: 1000, height: 1000, alt: 'An LTK squad in tactical gear with headsets taking on giant glowing-eyed mosquitoes in a neon city', caption: 'Squad up' },
+      { src: '/gallery/license-to-kill-tournament-siteone.webp', width: 1024, height: 1536, alt: 'License to Kill tournament poster: Fall Guys–style spies in an explosion, sponsored by SiteOne Landscape Supply', caption: 'License to Kill tournament, sponsored by SiteOne' },
       { src: '/events/ltk-tournament.webp', width: 1000, height: 1000, alt: 'Licensed to Kill Tournament: a soldier in front of giant red-eyed insects', caption: 'Licensed to Kill Tournament' },
       { src: '/gallery/xp-tech.webp', width: 1000, height: 1250, alt: 'An illustrated pest tech with a sprayer surrounded by game HUD panels: XP, missions, power-ups', caption: 'Every route is a mission' },
     ],

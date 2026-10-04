@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { PhotoStrip } from '@/components/ui/PhotoStrip';
 import { FeaturedIn } from '@/components/community/Timeline';
 import { pageMeta } from '@/lib/seo/metadata';
 import { buildGraph } from '@/lib/schema/graph';
@@ -76,6 +77,13 @@ export default async function Page() {
 
         <h2 className="h2 mb-5">Our sponsors</h2>
         <SponsorWall />
+
+        <PhotoStrip
+          eyebrow="Where sponsors show up in person"
+          title="Trade shows, schools and the stage"
+          srcs={['/gallery/swarm-partner.webp', '/gallery/speaking-swarm-mastermind.webp', '/gallery/college-fair-detail.webp', '/gallery/nisus-gear.webp']}
+          className="mt-14"
+        />
 
         <section className="mt-16" aria-labelledby="why">
           <p className="eyebrow mb-2">For companies thinking about it</p>

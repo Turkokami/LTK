@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { PhotoStrip } from '@/components/ui/PhotoStrip';
 import { pageMeta } from '@/lib/seo/metadata';
 import { buildGraph } from '@/lib/schema/graph';
 import { JsonLd } from '@/components/JsonLd';
@@ -33,6 +34,13 @@ export default function Page() {
         <p className="eyebrow mb-3">{HUB.eyebrow}</p>
         <h1 className="display mb-5 max-w-[18ch]">{HUB.title}</h1>
         <p className="lede mb-10">{HUB.blurb}</p>
+
+        <PhotoStrip
+          eyebrow="Why it’s a great career"
+          title="What we tell students at career day"
+          srcs={['/gallery/careerday-cool-jobs.webp', '/gallery/careerday-pays.webp', '/gallery/careerday-what-is.webp', '/gallery/route-ready.webp']}
+          className="mb-12"
+        />
 
         <HubSpokes hub={HUB} />
       </div>
