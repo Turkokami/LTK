@@ -29,6 +29,7 @@ function Wrap({ s, children, className }: { s: Sponsor; children: React.ReactNod
 /** A row of logos. `ids` limits it to an event's sponsors. */
 export function SponsorStrip({ ids, label = 'Sponsors', className }: { ids?: string[]; label?: string; className?: string }) {
   const list = ids ? ids.map(getSponsor).filter((s): s is Sponsor => !!s) : CURRENT_SPONSORS;
+  if (!list.length) return null;
   return (
     <div className={className}>
       <p className="eyebrow mb-3">{label}</p>

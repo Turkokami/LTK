@@ -472,3 +472,7 @@ export function episodesFor(key: string): LtkEpisode[] {
   const ids = EPISODES_FOR[key] ?? [];
   return ids.map((id) => LTK_EPISODES.find((e) => e.youtubeId === id)).filter(Boolean) as LtkEpisode[];
 }
+
+/** Podcast and interview uploads, not counting tournament livestreams. */
+export const PODCAST_UPLOADS = LTK_EPISODES.filter((e) => e.series !== 'live').length;
+export const STREAM_UPLOADS = LTK_EPISODES.length - PODCAST_UPLOADS;

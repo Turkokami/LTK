@@ -8,7 +8,7 @@ import { SponsorStrip } from '@/components/community/Sponsors';
 import { FeaturedIn } from '@/components/community/Timeline';
 import { EVENTS } from '@/lib/content/events-feed';
 import { INVENTORY } from '@/lib/content/inventory';
-import { LTK_EPISODES } from '@/lib/content/podcast';
+import { PODCAST_UPLOADS, STREAM_UPLOADS } from '@/lib/content/podcast';
 import { discordStats } from '@/lib/server/discord-stats';
 import { site } from '@/lib/site.config';
 
@@ -41,8 +41,8 @@ export default async function MediaKitPage() {
   const facts: [string, string, string][] = [
     [stats.members.toLocaleString('en-US'), 'Discord members', stats.live ? 'Live from Discord' : `Owner-reported, ${site.community.membersAsOf}`],
     [stats.online ? stats.online.toLocaleString('en-US') : site.community.weeklyActive, stats.online ? 'Online right now' : 'Active in a typical week', stats.online ? 'Live from Discord' : 'Owner-reported'],
-    [String(LTK_EPISODES.length), 'Podcast episodes and streams', 'LTK YouTube channel'],
-    ['Jan 2025', 'Founded', 'by Marcus Scruggs'],
+    [String(PODCAST_UPLOADS), 'Podcast episodes and interviews', `On YouTube, plus ${STREAM_UPLOADS} tournament stream`],
+    ['Dec 2024', 'Discord opened', 'by Marcus Scruggs'],
   ];
 
   return (

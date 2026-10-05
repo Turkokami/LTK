@@ -128,7 +128,7 @@ export default function AboutPage() {
         />
 
         <section className="mb-12" aria-labelledby="since">
-          <h2 id="since" className="h2 mb-2">LTK since 2025</h2>
+          <h2 id="since" className="h2 mb-2">LTK so far</h2>
           <FeaturedIn className="mb-6" />
           <Timeline />
         </section>

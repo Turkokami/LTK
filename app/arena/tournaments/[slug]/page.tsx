@@ -7,7 +7,7 @@ import { JsonLd } from '@/components/JsonLd';
 import { Breadcrumbs } from '@/components/site/Breadcrumbs';
 import { DiscordButton } from '@/components/community/Discord';
 import { SponsorStrip } from '@/components/community/Sponsors';
-import { EVENTS } from '@/lib/content/events-feed';
+import { EVENTS, statusLabel } from '@/lib/content/events-feed';
 import { getSponsor } from '@/lib/content/sponsors';
 import { site } from '@/lib/site.config';
 
@@ -62,7 +62,7 @@ export default async function TournamentPage({ params }: { params: Promise<{ slu
       </div>
       <div className="shell pb-16">
         <p className="eyebrow mb-3">
-          Arena &middot; {e.status === 'running' ? 'Running now' : 'Past event'} &middot; {e.game}
+          Arena &middot; {statusLabel(e)} &middot; {e.game}
         </p>
         <h1 className="display mb-3 max-w-[20ch]">{e.name}</h1>
         <p className="mono mb-4 text-ink3">{e.when}</p>

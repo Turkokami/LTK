@@ -13,7 +13,7 @@ import { LabelBlock } from '@/components/label/LabelBlock';
  * primary action is a banned lead magnet regardless.
  *
  * Every number on this page is either a cited industry figure with a visible source, or absent.
- * The traction numbers live at /investors/traction/ behind R-17 for the same reason the sponsor
+ * Traction numbers will get their own page once R-17 is met (not built yet), for the same reason the sponsor
  * audience page does — an investor who catches one invented figure correctly discounts all of
  * them.
  *
@@ -24,7 +24,7 @@ import { LabelBlock } from '@/components/label/LabelBlock';
 export const metadata: Metadata = pageMeta({
   title: 'Why this business exists',
   description:
-    'The investment thesis — a fragmented, consolidating, licence-gated industry with no independent hub, and what a verified professional community is worth in it.',
+    'The investment thesis — a fragmented, consolidating, licence-gated industry with no independent hub, and what a trusted professional community is worth in it.',
   path: '/investors/thesis/',
 });
 
@@ -58,7 +58,7 @@ export default function ThesisPage() {
           <p className="lede mb-10">
             A licence-gated, consolidating, highly fragmented industry has no independent place
             where its professionals gather. The existing options are association gatekeeping,
-            vendor-funded trade press, and unmoderated social groups. A verified professional
+            vendor-funded trade press, and unmoderated social groups. A trusted professional
             community owns the audience every vendor in the category needs to reach — on
             infrastructure nobody else controls.
           </p>
@@ -72,8 +72,9 @@ export default function ThesisPage() {
             <p>
               <strong>The audience is licence-gated.</strong> Applicator licensing is a state
               requirement with continuing-education obligations attached. That is a recurring,
-              calendar-driven reason to return that no lifestyle community has, and it gives us a
-              membership test nobody can fake at scale.
+              calendar-driven reason to return that no lifestyle community has, and it could one day
+              support an optional licence check for members. That is a future plan: today LTK is an
+              open community with no licence verification.
             </p>
             <p>
               <strong>The industry is fragmenting and consolidating at once.</strong> Roll-ups

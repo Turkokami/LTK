@@ -7,7 +7,7 @@ import { Breadcrumbs } from '@/components/site/Breadcrumbs';
 import { LabelBlock } from '@/components/label/LabelBlock';
 import { DiscordButton } from '@/components/community/Discord';
 import { SponsorStrip } from '@/components/community/Sponsors';
-import { EVENTS } from '@/lib/content/events-feed';
+import { EVENTS, statusLabel } from '@/lib/content/events-feed';
 import { site } from '@/lib/site.config';
 
 /**
@@ -87,7 +87,7 @@ export default function TournamentsPage() {
                   )}
                   <div className="p-5">
                     <p className="mono mb-1 text-ink3">
-                      {e.status === 'running' ? 'Running now' : 'Past'} &middot; {e.when.split(' · ')[0]}
+                      {statusLabel(e)} &middot; {e.when.split(' · ')[0]}
                     </p>
                     <h2 className="h3 group-hover:text-blood">{e.name}</h2>
                     <p className="mt-1 text-sm text-ink2">{e.summary}</p>

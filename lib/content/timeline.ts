@@ -17,9 +17,9 @@ export interface Milestone {
 
 export const MILESTONES: Milestone[] = [
   {
-    date: '2025-01-01',
-    title: 'LTK starts',
-    body: 'Marcus Scruggs starts Licensed to Kill so pest pros on different routes can get to know each other. It begins as a video game group.',
+    date: '2024-12-14',
+    title: 'The LTK Discord opens',
+    body: 'Marcus Scruggs sets up the Licensed to Kill Discord so techs on different routes can game and get to know each other.',
     kind: 'community',
     href: '/about/',
   },
@@ -36,6 +36,13 @@ export const MILESTONES: Milestone[] = [
     body: 'The podcast starts sitting down with people across the trade, from technicians and owners to the VP of Steri-Fab.',
     kind: 'podcast',
     href: '/community/podcast/',
+  },
+  {
+    date: '2025-03-28',
+    title: 'First sponsored tournament: Fall Guys',
+    body: 'SiteOne Landscape Supply presents the Licensed to Kill Fall Guys Tournament.',
+    kind: 'gaming',
+    href: '/arena/tournaments/fall-guys-siteone-2025/',
   },
   {
     date: '2025-05-24',
@@ -87,6 +94,13 @@ export const MILESTONES: Milestone[] = [
     href: '/partners/',
   },
   {
+    date: '2025-12-12',
+    title: 'Battlefield 6 Competition',
+    body: 'A weekend Battlefield 6 competition backed by all four sponsors: Steri-Fab, Swarm, Pest Patrol and Polaris.',
+    kind: 'gaming',
+    href: '/arena/tournaments/battlefield-6-2025/',
+  },
+  {
     date: '2026-01-18',
     title: 'Marcus on Insight Radio',
     body: 'Marcus joins Insight Radio’s Pest Xperience to talk about how AI, evolving pests and smart strategies are shaping pest management in 2026.',
@@ -106,6 +120,13 @@ export const MILESTONES: Milestone[] = [
     body: 'LTK takes the trade to schools: a middle school career day and a college and career fair, showing students the jobs pest control really offers.',
     kind: 'community',
     href: '/community/gallery/#outreach',
+  },
+  {
+    date: '2026-06-28',
+    title: 'Rocket League tournament',
+    body: 'Rocket-powered soccer night, sponsored by Swarm, Pest Patrol and Polaris Pest Group.',
+    kind: 'gaming',
+    href: '/arena/tournaments/rocket-league-2026/',
   },
   {
     date: '2026-06-29',

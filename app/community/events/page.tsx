@@ -6,7 +6,7 @@ import { JsonLd } from '@/components/JsonLd';
 import { Breadcrumbs } from '@/components/site/Breadcrumbs';
 import { DiscordButton } from '@/components/community/Discord';
 import { site } from '@/lib/site.config';
-import { PAST, RUNNING } from '@/lib/content/events-feed';
+import { PAST, RUNNING, statusLabel } from '@/lib/content/events-feed';
 import { SponsorStrip } from '@/components/community/Sponsors';
 
 /**
@@ -95,7 +95,7 @@ export default function EventsPage() {
         {RUNNING.map((ev) => (
           <section key={ev.id} className="label-panel mb-14" aria-labelledby={`ev-${ev.id}`}>
             <div className="label-bar">
-              <span>Running now</span>
+              <span>{statusLabel(ev)}</span>
               <span>{ev.when}</span>
             </div>
             <div className="py-6 pl-[1.35rem] pr-5">
@@ -185,7 +185,7 @@ export default function EventsPage() {
           ))}
         </ul>
 
-        <h2 className="h2 mb-2 mt-14">LTK since 2025</h2>
+        <h2 className="h2 mb-2 mt-14">LTK so far</h2>
         <p className="mb-6 max-w-[60ch] text-ink2">Tournaments, leagues, the podcast and the sponsors who back them, in order.</p>
         <Timeline />
 

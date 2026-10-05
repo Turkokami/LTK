@@ -1,7 +1,7 @@
 import { site } from '@/lib/site.config';
 import { DISCIPLINES } from '@/lib/content/disciplines';
 import { fieldPhotos } from '@/lib/content/photos';
-import { LTK_EPISODES } from '@/lib/content/podcast';
+import { PODCAST_UPLOADS } from '@/lib/content/podcast';
 import { EVENTS } from '@/lib/content/events-feed';
 import { TiltLink } from '@/components/ui/Tilt';
 import { OptImg } from '@/components/ui/OptImg';
@@ -26,7 +26,7 @@ const TILES: { slug: string; label: string; icon: string }[] = [
 const STATS = (members: number, online: number | null) => [
   { top: `${members.toLocaleString('en-US')} pest pros`, sub: 'in the community', icon: 'M16 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM2 20c0-3 2.7-5 6-5s6 2 6 5M14 15.5c.6-.3 1.3-.5 2-.5 3.3 0 6 2 6 5' },
   { top: `${EVENTS.length} tournaments & leagues`, sub: 'backed by the trade', icon: 'M6 9h4M8 7v4M15 10h.01M17 8h.01M7.5 5h9A4.5 4.5 0 0 1 21 9.5v4a3.5 3.5 0 0 1-6.3 2.1L14 15h-4l-.7.6A3.5 3.5 0 0 1 3 13.5v-4A4.5 4.5 0 0 1 7.5 5z' },
-  { top: 'Podcast & training', sub: `${LTK_EPISODES.length} episodes`, icon: 'M12 3a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3zM5 11a7 7 0 0 0 14 0M12 18v3' },
+  { top: 'Podcast & training', sub: `${PODCAST_UPLOADS} episodes on YouTube`, icon: 'M12 3a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3zM5 11a7 7 0 0 0 14 0M12 18v3' },
   { top: online ? `${online} online now` : 'Active discussions', sub: online ? 'in the Discord' : 'get answers', icon: 'M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z' },
 ];
 
@@ -62,7 +62,7 @@ export function HeroHud({ stats }: { stats: DiscordStats }) {
           </a>
           <span className="hidden text-ink2 md:inline">Pest pros helping pest pros</span>
           <span className="hidden items-center gap-3 text-ink3 sm:flex">
-            {stats.members.toLocaleString('en-US')} agents · est. 2025
+            {stats.members.toLocaleString('en-US')} members · live from Discord
             <span className="hud-slashes" aria-hidden="true" />
           </span>
         </div>

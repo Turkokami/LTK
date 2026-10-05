@@ -26,7 +26,7 @@ import { LabelBlock } from '@/components/label/LabelBlock';
 export const metadata: Metadata = pageMeta({
   title: 'Who you would be reaching',
   description:
-    'Audience size and reach for sponsors, from the Discord’s own member count and site analytics, never estimated. Each figure is dated and says where it came from.',
+    'Who LTK reaches, for sponsors: a dated Discord member snapshot, the owner’s weekly activity estimate labelled as one, and the figures not measured yet.',
   path: '/partners/audience/',
 });
 
@@ -55,8 +55,8 @@ export default function AudiencePage() {
    */
   const PENDING = null;
   const rows: { label: string; value: string | null; source: string }[] = [
-    { label: 'Discord members', value: String(site.community.members), source: `Owner-reported Discord count, ${site.community.membersAsOf}` },
-    { label: 'Active in a typical week', value: site.community.weeklyActive, source: `Owner-reported, ${site.community.membersAsOf}` },
+    { label: 'Discord members (snapshot)', value: String(site.community.members), source: `Discord member count reported by the owner, ${site.community.membersAsOf}. The home page shows Discord’s live count, so the two can differ.` },
+    { label: 'Active in a typical week', value: site.community.weeklyActive, source: `Owner’s estimate, ${site.community.membersAsOf} — not a measured figure` },
     { label: 'Monthly readers', value: PENDING, source: 'Analytics property, 28-day rolling' },
     { label: 'Owners and decision-makers', value: PENDING, source: 'Discord roles, once counted' },
   ];
@@ -74,17 +74,17 @@ export default function AudiencePage() {
           <h1 className="display mb-6 max-w-[18ch]">Who you would be reaching</h1>
 
           <p className="prose-bulletin mb-8">
-            Every figure on this page comes from the Discord&rsquo;s own member count or an
-            analytics property. None of it is estimated, projected or rounded up, and the date it
-            was last pulled is printed beside it. If you want the raw export before signing
-            anything, ask — we will send it.
+            Each figure below says where it came from and when. Member counts come from
+            Discord; weekly activity is the owner&rsquo;s estimate and is labelled as one. Nothing
+            here is projected or rounded up. If you want the details before signing anything,
+            ask.
           </p>
 
-          <LabelBlock title="These figures are not published yet" signal="warning">
-            We have not opened membership, so there is nothing real to report. Rather than show
-            you a projection, the table below shows you what we will measure and where each
-            number will come from. Every row fills in from a system, on a date, or it stays
-            empty.
+          <LabelBlock title="What we can show today" signal="warning">
+            LTK is an open community: anyone can join the Discord, and there is no licence check.
+            The member count is a dated snapshot; weekly activity is an estimate. Reader numbers and
+            the share of owners and decision-makers aren&rsquo;t measured yet, so those rows stay
+            empty until they come from a system, on a date.
           </LabelBlock>
           <div className="h-8" />
 

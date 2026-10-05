@@ -74,7 +74,7 @@ export default function Page() {
               <p className="eyebrow mb-2">Now playing &middot; Game 1</p>
               <p className="h2 mb-2 group-hover:text-blood">ACE Speed Round</p>
               <p className="max-w-[60ch] text-ink2">
-                Sixty seconds, {ALL_QUESTIONS.length} ACE exam questions, one streak. Beat your best,
+                Sixty seconds, {ALL_QUESTIONS.length} ACE-style practice questions, one streak. Beat your best,
                 then post your score in the Discord and call out your crew.
               </p>
             </div>

@@ -12,7 +12,7 @@ import { HUBS } from '@/lib/content/hubs';
 import { STATES } from '@/lib/content/states';
 import { site } from '@/lib/site.config';
 import { ASSETS } from '@/lib/brand';
-import { RUNNING } from '@/lib/content/events-feed';
+import { RUNNING, statusLabel } from '@/lib/content/events-feed';
 import { SponsorStrip } from '@/components/community/Sponsors';
 import { DiscordButton, DiscordChannels } from '@/components/community/Discord';
 import { DISCIPLINES, FIELD_GROUPS, fieldsInGroup } from '@/lib/content/disciplines';
@@ -328,7 +328,7 @@ export default async function HomePage() {
               <a key={ev.id} href="/community/events/" className="group mb-10 grid items-center gap-6 md:grid-cols-[3fr_2fr]">
                 {u?.image ? <OptImg src={u.image.src} alt={u.image.alt} width={u.image.width} height={u.image.height} sizes="(max-width: 767px) 100vw, 60vw" widths={[640, 828, 1080]} className="w-full rounded-md ring-1 ring-ruleStrong" /> : null}
                 <span>
-                  <span className="eyebrow mb-2 block">Running now &middot; {ev.when.split(' · ')[0]}</span>
+                  <span className="eyebrow mb-2 block">{statusLabel(ev)} &middot; {ev.when.split(' · ')[0]}</span>
                   <span className="h2 block group-hover:text-blood">{ev.name}</span>
                   {u ? <span className="mt-2 block font-semibold text-ink">{u.title}</span> : null}
                   {u ? <span className="mt-1 block text-ink2">{u.body[0]}</span> : null}

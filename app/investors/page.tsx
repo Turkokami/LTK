@@ -52,8 +52,6 @@ export default function InvestorsPage() {
 
         <ul className="mono mt-10 space-y-2 text-ink2">
           <li><a className="hover:text-ink" href="/investors/thesis/">The thesis in full</a></li>
-          <li><a className="hover:text-ink" href="/investors/traction/">Traction</a></li>
-          <li><a className="hover:text-ink" href="/investors/team/">Team</a></li>
         </ul>
       </div>
     </>

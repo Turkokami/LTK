@@ -180,7 +180,7 @@ export const site = {
    */
   community: {
     origin:
-      'Marcus Scruggs started LTK on 1 January 2025 because pest pros needed a way to get to know each other. What began as a video game group has become a full hub for people in pest control.',
+      'Built by a technician, for technicians: LTK brings the pest control community together for learning, connection and competition. It began in late 2024 as a Discord where techs on different routes could game and get to know each other.',
     difference: 'It puts everyone in the trade in the same room, casually, through gaming and hobbies.',
     members: 545,
     weeklyActive: '25–35',

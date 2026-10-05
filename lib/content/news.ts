@@ -114,7 +114,7 @@ export const NEWS_ARTICLES: NewsArticle[] = [
     slug: "pestworld-2026-grapevine-texas",
     title: "PestWorld 2026 Heads to Grapevine, Texas",
     description: "NPMA’s PestWorld 2026 runs October 20–23 at the Gaylord Texan in Grapevine, Texas, with more than 250 exhibitors and CEU-eligible education sessions.",
-    dek: "The industry’s biggest annual show returns this month under the theme “Built for This Business.”",
+    dek: "The industry’s biggest annual show runs October 20–23, 2026, at the Gaylord Texan in Grapevine, Texas, under the theme “Built for This Business.”",
     date: "2026-05-11",
     topic: "industry",
     body: [

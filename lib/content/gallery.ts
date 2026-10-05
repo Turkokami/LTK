@@ -21,7 +21,7 @@ export interface GallerySection {
 export const GALLERY: GallerySection[] = [
   {
     id: 'pestworld-2025',
-    title: 'The LTK house at PestWorld 2025',
+    title: 'The LTK house at PestWorld 2025 (October 2025)',
     blurb: 'Members from across the country, finally in the same room.',
     images: [
       { src: '/gallery/pestworld-2025-crew.webp', width: 1200, height: 900, alt: 'Six LTK members standing in front of a TV showing the LTK badge at the LTK house during PestWorld 2025', caption: 'The crew at the LTK house' },
@@ -67,7 +67,7 @@ export const GALLERY: GallerySection[] = [
     title: 'The LTK Podcast',
     blurb: 'Interviews, debates and the Between Sprays episodes.',
     images: [
-      { src: '/gallery/podcast-godfroid.webp', width: 1000, height: 667, alt: 'LTK Podcast episode art: Marcus Scruggs, LTK Director, and Nick Godfroid, BCE, of Rockwell Labs — pest control future and innovation', caption: 'Future & innovation, with Nick Godfroid, BCE' },
+      { src: '/gallery/podcast-godfroid.webp', width: 1000, height: 667, alt: 'LTK Podcast episode art: Marcus Scruggs, LTK Director, and Nick Godfroid, BCE, of Rockwell Labs — pest control future and innovation', caption: 'Episode art: Marcus with Nick Godfroid, BCE' },
       { src: '/gallery/podcast-cryptids.webp', width: 1000, height: 667, alt: 'Between Sprays edition episode art: Hunting Cryptids, with Bigfoot, a vampire and a chupacabra around the LTK badge', caption: 'Between Sprays: Hunting Cryptids' },
       { src: '/gallery/spotify-wrapped.webp', width: 1000, height: 1778, alt: 'Spotify for Creators Wrapped card: Licensed to Kill top episode, Industry Interview: Sylvia Kenmuir', caption: 'Spotify Wrapped top episode' },
       { src: '/gallery/insight-radio-2026.webp', width: 1000, height: 1000, alt: 'Insight Radio poster: Pest Control 2026 — how AI, evolving pests and smart strategies are shaping pest management, with guest Marcus Scruggs, January 18, 2026', caption: 'Marcus on Insight Radio, January 2026' },

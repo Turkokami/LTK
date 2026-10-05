@@ -20,7 +20,7 @@ const PATH = '/arena/games/speed-round/';
 export const metadata: Metadata = pageMeta({
   title: 'ACE Speed Round: a 60-second pest control quiz game',
   description:
-    `Sixty seconds, as many ACE exam questions as you can answer. Build a streak, beat your best, then post your score in the ${site.discord.name}. Free for pest pros.`,
+    `Sixty seconds, as many ACE-style practice questions as you can answer. Build a streak, beat your best, then post your score in the ${site.discord.name}. Free to play.`,
   path: PATH,
 });
 

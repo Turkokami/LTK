@@ -9,6 +9,8 @@
  * /about/sponsorship-policy/. Sponsors never touch editorial, the Lab or the pest library.
  */
 
+import { EVENTS } from './events-feed';
+
 export interface Sponsor {
   id: string;
   name: string;
@@ -75,6 +77,20 @@ SPONSORS.push({
   backed: ['warhammer-kill-team-2025', 'kill-race-2025'],
   current: false,
 });
+
+SPONSORS.push({
+  id: 'siteone',
+  name: 'SiteOne Landscape Supply',
+  url: 'https://www.siteone.com/',
+  logo: { src: '/sponsors/siteone-logo.png', width: 1138, height: 298 },
+  plate: 'dark',
+  what: 'Landscape and pest control supply distributor, and presenter of the LTK Fall Guys Tournament.',
+  backed: [],
+  current: false,
+});
+
+// Every sponsor's "backed" list comes from the events themselves, newest first.
+for (const sp of SPONSORS) sp.backed = EVENTS.filter((e) => e.sponsors.includes(sp.id)).map((e) => e.id);
 
 export const CURRENT_SPONSORS = SPONSORS.filter((s) => s.current !== false);
 

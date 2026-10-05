@@ -1,4 +1,4 @@
-import { EVENTS, RUNNING } from '@/lib/content/events-feed';
+import { EVENTS, RUNNING, statusLabel } from '@/lib/content/events-feed';
 import { OptImg } from '@/components/ui/OptImg';
 import { SponsorStrip } from '@/components/community/Sponsors';
 import { TiltLink } from '@/components/ui/Tilt';
@@ -17,7 +17,7 @@ const ARENA = [
   { name: 'Daily Drop', skill: 'Pest ID + one ACE question a day', href: '/arena/daily/' },
   { name: 'Inspection Hunt', skill: 'Spot conducive conditions on a house', href: '/arena/games/inspection-hunt/' },
   { name: 'Lookalike Showdown', skill: 'Tell confused pests apart', href: '/arena/games/lookalike-showdown/' },
-  { name: 'ACE Speed Round', skill: 'Real ACE exam questions, 60 seconds', href: '/arena/games/speed-round/' },
+  { name: 'ACE Speed Round', skill: 'ACE-style practice questions, 60 seconds', href: '/arena/games/speed-round/' },
 ];
 
 const WHY = [
@@ -85,7 +85,7 @@ export function GameOn() {
               <a href={`/arena/tournaments/${running.id}/`} className="mb-4 flex items-center gap-3 rounded-[var(--radius)] border border-[rgba(255,42,61,0.5)] bg-[rgba(225,29,46,0.07)] px-4 py-3 hover:shadow-[var(--glow-hot)]">
                 <span className="live-dot" aria-hidden="true" />
                 <span className="text-sm">
-                  <span className="font-bold text-ink">Running now: {running.name}</span>
+                  <span className="font-bold text-ink">{statusLabel(running)}: {running.name}</span>
                   {running.updates?.[0] ? <span className="text-ink2"> &middot; {running.updates[0].title}</span> : null}
                 </span>
               </a>

@@ -11,7 +11,7 @@ import { SponsorWall } from '@/components/community/Sponsors';
 import { DiscordButton } from '@/components/community/Discord';
 import { CURRENT_SPONSORS as SPONSORS } from '@/lib/content/sponsors';
 import { EVENTS } from '@/lib/content/events-feed';
-import { LTK_EPISODES } from '@/lib/content/podcast';
+import { PODCAST_UPLOADS, STREAM_UPLOADS } from '@/lib/content/podcast';
 import { discordStats } from '@/lib/server/discord-stats';
 import { site } from '@/lib/site.config';
 
@@ -56,8 +56,8 @@ export default async function Page() {
     stats.online
       ? { value: stats.online.toLocaleString('en-US'), label: 'Online right now', note: 'Live from Discord' }
       : { value: site.community.weeklyActive, label: 'Active in a typical week', note: 'Owner-reported' },
-    { value: String(LTK_EPISODES.length), label: 'Podcast episodes and streams', note: 'On the LTK YouTube channel' },
-    { value: String(backedEvents), label: 'Sponsored events', note: 'Since 2025, and counting' },
+    { value: String(PODCAST_UPLOADS), label: 'Podcast episodes and interviews', note: `On YouTube, plus ${STREAM_UPLOADS} tournament stream` },
+    { value: String(backedEvents), label: 'Sponsored events', note: 'Listed in the tournament archive' },
   ];
 
   return (
