@@ -715,7 +715,7 @@
       inset: auto;
       z-index: auto;
       width: 100%;
-      aspect-ratio: 1993 / 789;
+      aspect-ratio: 2 / 1;
       opacity: 1;
       -webkit-mask-image: linear-gradient(0deg, transparent 0%, #000 22%);
       mask-image: linear-gradient(0deg, transparent 0%, #000 22%);

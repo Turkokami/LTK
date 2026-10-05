@@ -49,7 +49,7 @@ function DiscordGlyph() {
 export function HeroHud({ stats }: { stats: DiscordStats }) {
   // Hero art (owner-supplied, 2026-10-04): gamer on one side, pest tech on the other, under the
   // LTK scope badge — the whole community in one picture.
-  const tech = { src: '/brand/hero-gamer-tech.webp', width: 1993, height: 789, position: 'center 40%' };
+  const tech = { src: '/brand/hero-gamer-tech-v2.webp', width: 2000, height: 1000, position: 'center 20%' };
   return (
     <>
       {/* Live status strip */}
