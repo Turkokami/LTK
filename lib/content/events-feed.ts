@@ -55,6 +55,12 @@ export const EVENTS: LtkEvent[] = [
     seoDescription: "LTK is heading to PestWorld 2026, October 20 to 23 at the Gaylord Texan in Grapevine, Texas. Meet the crew behind the community; details in the Discord.",
     summary: 'LTK is heading to PestWorld 2026, our first full organizational PestWorld. Explore the community, meet the people behind it, and discover new ways to learn and connect. Meetup details go out in the Discord.',
     sponsors: [],
+    image: {
+      src: '/events/pestworld-2026-house.webp',
+      width: 1100,
+      height: 1467,
+      alt: 'LTK PestWorld House XXVI: GTA-style art of pest pros, a raccoon, a cockroach and a work truck under palm trees, with Swarm, Pest Patrol, Polaris, Skyhawk Trapmate, Nisus, Pest AI and Rockwell Labs logos',
+    },
   },
   {
     id: 'fantasy-football-2026',

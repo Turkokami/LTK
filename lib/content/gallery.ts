@@ -105,8 +105,10 @@ export const GALLERY: GallerySection[] = [
   {
     id: 'merch',
     title: 'Merch',
-    blurb: 'Rep the crew on the route.',
+    blurb: 'Rep the crew on the route. New for PestWorld 2026: the PestWorld House shirt, with its store coming soon.',
     images: [
+      { src: '/gallery/pestworld-2026-shirt.webp', width: 1400, height: 933, alt: 'The black LTK PestWorld House 2026 shirt: GTA-style XXVI back art with sponsor logos, the PestWorld House badge on the left chest and a QR code on the left sleeve', caption: 'New: the PestWorld House 2026 shirt' },
+      { src: '/events/pestworld-2026-house.webp', width: 1100, height: 1467, alt: 'The PestWorld House XXVI back art: GTA-style panels of pest pros, a raccoon, a cockroach and a work truck under palm trees', caption: 'The back art, up close' },
       { src: '/gallery/merch-tumbler.webp', width: 972, height: 1645, alt: 'A black LTK tumbler with the Licensed to Kill rat-in-the-scope badge and Discord lettering', caption: 'The LTK tumbler' },
       { src: '/gallery/nisus-gear.webp', width: 1000, height: 1333, alt: 'An LTK prize jug with the Licensed to Kill badge, sponsored by Nisus', caption: 'Event gear, sponsored by Nisus' },
       { src: '/gallery/merch-lab-coat-patch.webp', width: 944, height: 1120, alt: 'An embroidered Licensed to Kill rat-in-the-scope patch on a white lab coat', caption: 'The LTK patch' },
