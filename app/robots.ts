@@ -2,6 +2,33 @@ import type { MetadataRoute } from 'next';
 import { abs, INDEXABLE } from '@/lib/site.config';
 import { HUBS } from '@/lib/content/hubs';
 
+/** AI assistants and AI search crawlers, named explicitly and allowed under the same rules as everyone else. Site guide: /llms.txt */
+const AI_BOTS = [
+  'GPTBot',
+  'OAI-SearchBot',
+  'ChatGPT-User',
+  'ClaudeBot',
+  'Claude-SearchBot',
+  'Claude-User',
+  'anthropic-ai',
+  'PerplexityBot',
+  'Perplexity-User',
+  'Google-Extended',
+  'GoogleOther',
+  'Applebot',
+  'Applebot-Extended',
+  'Bingbot',
+  'DuckAssistBot',
+  'Amazonbot',
+  'Meta-ExternalAgent',
+  'Meta-ExternalFetcher',
+  'MistralAI-User',
+  'cohere-ai',
+  'YouBot',
+  'CCBot',
+  'Bytespider',
+]
+
 /**
  * Sitemap URLs must match what generateSitemaps() in app/sitemap.ts produces.
  * If you add a segment there, add it here in the same commit.
@@ -26,6 +53,7 @@ export default function robots(): MetadataRoute.Robots {
         // fetch the preview image, so blocking it strips the image from every shared link.
         disallow: ['/investors/data-room/', '/api/', '/search/'],
       },
+      { userAgent: AI_BOTS, allow: '/', disallow: ['/investors/data-room/', '/api/', '/search/'] },
     ],
     sitemap: [abs('/sitemap.xml'), ...segments.map((s) => abs(`/sitemap/${s}.xml`))],
     host: abs('/'),
