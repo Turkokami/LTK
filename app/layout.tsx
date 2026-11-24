@@ -8,6 +8,7 @@ import { SiteFooter } from '@/components/site/Footer';
 import { AgentToaster } from '@/components/agent/AgentToaster';
 import { Analytics } from '@vercel/analytics/next';
 import { DiscordBand } from '@/components/community/Discord';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 /**
  * Type pairing (2026-10 refresh — softer and friendlier than the old industrial set):
@@ -89,6 +90,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <AgentToaster />
         {/* Vercel Web Analytics: cookieless page counts. Inert until enabled in the Vercel project. */}
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
