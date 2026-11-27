@@ -7,7 +7,7 @@ import { JsonLd } from '@/components/JsonLd';
 import { Breadcrumbs } from '@/components/site/Breadcrumbs';
 import { LabelBlock } from '@/components/label/LabelBlock';
 import { QuickAnswer } from '@/components/ui/QuickAnswer';
-import { PUBLISHED_STATES, getState, getRegulatory } from '@/lib/content/states';
+import { PUBLISHED_STATES, getState, getRegulatory, isIndexedState } from '@/lib/content/states';
 import { formatVerified } from '@/lib/utils';
 import { EDITOR } from '@/lib/content/editorial';
 import { TrackXp } from '@/components/agent/Track';
@@ -41,6 +41,7 @@ export async function generateMetadata({
       ],
     ),
     path: `/academy/licensing/${st.slug}/`,
+    noindex: !isIndexedState(st.slug),
     ogTemplate: 'state',
   });
 }

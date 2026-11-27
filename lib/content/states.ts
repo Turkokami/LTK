@@ -135,6 +135,17 @@ export const PUBLISHED_STATES = STATES.filter(
   (s) => s.verified || process.env.NODE_ENV !== 'production',
 );
 
+/**
+ * Crawl-focus gate. Published states stay live for visitors, but only Wave 1 is indexed and
+ * listed in the sitemap until Google has indexed Wave 1 (CLAUDE.md §3: confirm indexation,
+ * then scale). Promote a wave by widening this filter.
+ */
+export const INDEXED_STATES = PUBLISHED_STATES.filter((s) => s.wave === 1);
+
+export function isIndexedState(slug: string): boolean {
+  return INDEXED_STATES.some((s) => s.slug === slug);
+}
+
 export function getState(slug: string): StateRecord | undefined {
   return STATES.find((s) => s.slug === slug);
 }

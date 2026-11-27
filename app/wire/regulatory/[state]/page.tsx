@@ -5,7 +5,7 @@ import { buildGraph } from '@/lib/schema/graph';
 import { JsonLd } from '@/components/JsonLd';
 import { Breadcrumbs } from '@/components/site/Breadcrumbs';
 import { LabelBlock } from '@/components/label/LabelBlock';
-import { STATES, getState } from '@/lib/content/states';
+import { STATES, getState, isIndexedState } from '@/lib/content/states';
 import { FEDERAL_UPDATES, updatesForState } from '@/lib/content/wire';
 import { UpdateCard } from '@/components/wire/UpdateCard';
 import { DiscordButton } from '@/components/community/Discord';
@@ -44,6 +44,7 @@ export async function generateMetadata({
       `Label changes, product restrictions and rule updates affecting pest management ` +
       `professionals in ${st.name}. Every item linked to the agency document it came from.`,
     path: `/wire/regulatory/${st.slug}/`,
+    noindex: !isIndexedState(st.slug),
   });
 }
 

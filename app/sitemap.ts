@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next';
 import { abs } from '@/lib/site.config';
 import { HUBS, FORUM_CATEGORIES, type HubId } from '@/lib/content/hubs';
-import { PUBLISHED_STATES } from '@/lib/content/states';
+import { INDEXED_STATES } from '@/lib/content/states';
 import { DISCIPLINES } from '@/lib/content/disciplines';
 import { ACE_MODULES, ACE_PATH, SLIDE_DECKS, deckPath } from '@/lib/content/ace';
 import { EXAM_CATEGORIES } from '@/lib/content/exam-prep';
@@ -31,10 +31,11 @@ export async function generateSitemaps(): Promise<{ id: SegmentId }[]> {
   return [{ id: 'core' as const }, ...HUBS.map((h) => ({ id: h.id }))];
 }
 
-const now = new Date();
+// lastModified is deliberately omitted: stamping every URL with the request time tells Google
+// everything changed on every read, so it ignores lastmod site-wide and burns crawl on refreshes.
+// Only add it back with a real per-page content date.
 const entry = (path: string, priority = 0.6): MetadataRoute.Sitemap[number] => ({
   url: abs(path),
-  lastModified: now,
   priority,
 });
 
@@ -70,8 +71,8 @@ export default async function sitemap({
         entry(`${ACE_PATH}library/`, 0.7),
         ...SLIDE_DECKS.map((d) => entry(deckPath(d.file), 0.6)),
         ...ACE_MODULES.map((m) => entry(`${ACE_PATH}${m.slug}/`, 0.8)),
-        // Geo layers 1 and 2. Only verified states ship — CLAUDE.md 2.5.
-        ...PUBLISHED_STATES.flatMap((s) => [
+        // Geo layers 1 and 2. Only indexed (Wave 1) states are listed — see INDEXED_STATES.
+        ...INDEXED_STATES.flatMap((s) => [
           entry(`/academy/ceu/${s.slug}/`, 0.7),
           entry(`/academy/licensing/${s.slug}/`, 0.7),
         ]),
@@ -124,7 +125,7 @@ export default async function sitemap({
       return [
         entry('/wire/', 0.8),
         entry('/wire/regulatory/', 0.7),
-        ...PUBLISHED_STATES.map((s) => entry(`/wire/regulatory/${s.slug}/`, 0.5)),
+        ...INDEXED_STATES.map((s) => entry(`/wire/regulatory/${s.slug}/`, 0.5)),
         ...NEWS_ARTICLES.map((a) => entry(`/wire/${a.slug}/`, 0.6)),
       ];
 

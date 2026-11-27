@@ -7,7 +7,7 @@ import { JsonLd } from '@/components/JsonLd';
 import { Breadcrumbs } from '@/components/site/Breadcrumbs';
 import { LabelBlock } from '@/components/label/LabelBlock';
 import { QuickAnswer } from '@/components/ui/QuickAnswer';
-import { STATES, PUBLISHED_STATES, getState, getRegulatory } from '@/lib/content/states';
+import { STATES, PUBLISHED_STATES, getState, getRegulatory, isIndexedState } from '@/lib/content/states';
 import { formatVerified } from '@/lib/utils';
 import { EDITOR } from '@/lib/content/editorial';
 
@@ -51,6 +51,7 @@ export async function generateMetadata({
       ],
     ),
     path: `/academy/ceu/${st.slug}/`,
+    noindex: !isIndexedState(st.slug),
     ogTemplate: 'state',
   });
 }
